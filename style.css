@@ -741,10 +741,10 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   text-decoration: underline;
 }
 
-/* Badge de note dans la liste */
+/* Badge de note /10 dans la liste */
 .listing-badge {
   display: inline-block;
-  min-width: 32px;
+  min-width: 36px;
   height: 28px;
   line-height: 28px;
   border-radius: 4px;
@@ -752,11 +752,11 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   font-weight: 700;
   font-size: 0.8rem;
   font-family: var(--font-mono);
+  padding: 0 4px;
 }
-.listing-badge.badge-A { background: var(--color-green-bg); color: var(--color-green); }
-.listing-badge.badge-B { background: var(--color-blue-bg);  color: var(--color-blue); }
-.listing-badge.badge-C { background: var(--color-amber-bg); color: var(--color-amber); }
-.listing-badge.badge-D, .listing-badge.badge-E { background: var(--color-red-bg); color: var(--color-red); }
+.listing-badge.note-high { background: var(--color-green-bg); color: var(--color-green); }
+.listing-badge.note-mid  { background: var(--color-amber-bg); color: var(--color-amber); }
+.listing-badge.note-low  { background: var(--color-red-bg);   color: var(--color-red); }
 
 /* Badge de verdict */
 .listing-verdict {
@@ -766,9 +766,9 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   font-size: 0.8rem;
   font-weight: 600;
 }
-.listing-verdict.v-buy  { background: var(--color-green-bg); color: var(--color-green); }
-.listing-verdict.v-nego { background: var(--color-amber-bg); color: var(--color-amber); }
-.listing-verdict.v-pass { background: var(--color-red-bg);   color: var(--color-red); }
+.listing-verdict.v-acheter    { background: var(--color-green-bg); color: var(--color-green); }
+.listing-verdict.v-negocier   { background: var(--color-amber-bg); color: var(--color-amber); }
+.listing-verdict.v-fuir       { background: var(--color-red-bg);   color: var(--color-red); }
 
 .listing-empty {
   text-align: center;
