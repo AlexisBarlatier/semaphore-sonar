@@ -1,0 +1,17 @@
+# Sensitive
+.env
+*.key
+*.pem
+credentials.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documents sources (gardés en local)
+analyses/*/documents/*
+!analyses/*/documents/.gitkeep
+
+# Notes perso
+notes.md
+*.log
