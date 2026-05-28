@@ -309,7 +309,8 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
 
 /* Badges faisabilité / risque */
 .badge-faisabilite,
-.badge-risque {
+.badge-risque,
+.ratio-badge {
   display: inline-block;
   padding: 0.15rem 0.5rem;
   border-radius: 3px;
@@ -323,6 +324,9 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
 .risque-faible  { background: var(--color-green-bg); color: var(--color-green); }
 .risque-modere   { background: var(--color-amber-bg); color: var(--color-amber); }
 .risque-eleve    { background: var(--color-red-bg);   color: var(--color-red); }
+.ratio-bon     { background: var(--color-green-bg); color: var(--color-green); }
+.ratio-ok      { background: var(--color-blue-bg);  color: var(--color-blue); }
+.ratio-mauvais { background: var(--color-red-bg);   color: var(--color-red); }
 
 .strategy-rationale {
   background: var(--color-accent-light);
@@ -368,7 +372,7 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
     overflow-x: auto;
   }
   .strategy-table {
-    min-width: 750px;
+    min-width: 950px;
   }
 }
 
