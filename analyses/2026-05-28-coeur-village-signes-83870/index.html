@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Signes, cœur de village (83870)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Signes, cœur de village (83870)</p>
+  <p class="report-date">Analyse générée le 28 mai 2026</p>
+  <p class="report-source">Source : Leboncoin — LA REGIONALE IMMOBILIERE (réf. 1228)</p>
+</header>
+
+<main>
+
+  <!-- === Cartes de synthèse === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix de vente</span>
+      <span class="card-value">320 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">270 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 185 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur après tx</span>
+      <span class="card-value">~621 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rendement brut</span>
+      <span class="card-value">8,0 %</span>
+    </div>
+    <div class="card card-verdict score-orange">
+      <span class="card-label">Note</span>
+      <span class="card-value">6,5 / 10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.2917" data-lon="5.8625" data-address="Signes, cœur de village (83870)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Signes est un village provençal perché de 3 126 habitants (INSEE 2022), à 25 km de Toulon et à seulement 3,4 km du Circuit Paul Ricard. La commune connaît une croissance démographique soutenue (+1,8 %/an entre 2016 et 2022), portée par un solde migratoire positif et un dynamisme économique fort : 237 établissements, emploi en hausse de +4,3 %/an.</p>
+    <div class="attractiveness-grid">
+      
+    <div class="attr-card"><div class="attr-header"><span class="attr-label">Transports</span><span class="attr-score">4/10</span></div><div class="attr-bar"><div class="attr-bar-fill orange" style="width:40%"></div></div><p class="attr-detail">Bus Zou! ligne 888 vers Toulon (30 min), navette vers Le Beausset et gare SNCF de Saint-Cyr. Pas de gare à Signes. Accès A50 à ~15 km. Dépendance forte à la voiture.</p></div>
+    <div class="attr-card"><div class="attr-header"><span class="attr-label">Commerces & services</span><span class="attr-score">6/10</span></div><div class="attr-bar"><div class="attr-bar-fill orange" style="width:60%"></div></div><p class="attr-detail">Commerces de proximité, médecin, pharmacie, station essence. Marché provençal. Manque certains services spécialisés. Supermarché à proximité.</p></div>
+    <div class="attr-card"><div class="attr-header"><span class="attr-label">Écoles & crèches</span><span class="attr-score">5/10</span></div><div class="attr-bar"><div class="attr-bar-fill orange" style="width:50%"></div></div><p class="attr-detail">École élémentaire sur la commune. Collège et lycée à Saint-Cyr-sur-Mer ou Le Beausset (~10 km). Offre scolaire de base correcte pour les familles.</p></div>
+    <div class="attr-card"><div class="attr-header"><span class="attr-label">Sécurité & cadre de vie</span><span class="attr-score">8/10</span></div><div class="attr-bar"><div class="attr-bar-fill blue" style="width:80%"></div></div><p class="attr-detail">Village perché paisible, cadre provençal authentique. Avis habitants très positifs : « ville très agréable ». Patrimoine riche, environnement calme et arboré. Taux de résidences secondaires modéré (8%).</p></div>
+    <div class="attr-card"><div class="attr-header"><span class="attr-label">Demande locative</span><span class="attr-score">6/10</span></div><div class="attr-bar"><div class="attr-bar-fill orange" style="width:60%"></div></div><p class="attr-detail">Croissance démographique (+1,8%/an) et emploi dynamique (+4,3%/an) soutiennent la demande. Proximité Circuit Paul Ricard (saisonniers, mécaniciens). Taux de vacance logement à 10% — un peu élevé.</p></div>
+    <div class="attr-card"><div class="attr-header"><span class="attr-label">Dynamisme économique</span><span class="attr-score">7/10</span></div><div class="attr-bar"><div class="attr-bar-fill blue" style="width:70%"></div></div><p class="attr-detail">237 établissements (19% industrie). Revenu médian 26 450 € (2023). Emploi total en hausse de +4,3%/an. Zone d'activité communale et Circuit Paul Ricard comme moteurs.</p></div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Travailleurs de la zone d'activité (techniciens, mécaniciens Circuit Paul Ricard) et jeunes actifs de la région toulonnaise en recherche de grand volume à prix accessible. Colocation possible.</p>
+      <p><strong>Conclusion :</strong> Signes n'est pas une ville étudiante ni un pôle tertiaire, mais le dynamisme économique local (+4,3 % d'emploi/an) et la proximité du Circuit créent un bassin locatif spécifique, orienté « actifs avec véhicule ». Le bien de 270 m² ne trouvera pas son locataire sur une location mono-logement classique — la division ou la colocation ciblée sont indispensables.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+    <tr><td>Division 2 lots (location nue)</td><td>2</td><td>5,1%</td><td>600 000 €</td><td>0,63</td><td>Moyenne</td><td>Moyen</td><td><div class="adeq-bar"><div class="adeq-bar-fill blue" style="width:60%">6,0</div></div></td></tr>
+    <tr class="strategy-selected"><td>Colocation meublée LMNP</td><td>5 ch.</td><td>6,2%</td><td>621 000 €</td><td>0,60</td><td>Bonne</td><td>Faible</td><td><div class="adeq-bar"><div class="adeq-bar-fill blue" style="width:65%">6,5</div></div></td></tr>
+    <tr><td>Saisonnier Circuit Paul Ricard</td><td>1</td><td>5,0%</td><td>640 000 €</td><td>0,59</td><td>Bonne</td><td>Élevé</td><td><div class="adeq-bar"><div class="adeq-bar-fill blue" style="width:70%">7,0</div></div></td></tr>
+    <tr><td>Mono-location classique</td><td>1</td><td>3,2%</td><td>520 000 €</td><td>0,72</td><td>Bonne</td><td>Très élevé</td><td><div class="adeq-bar"><div class="adeq-bar-fill orange" style="width:45%">4,5</div></div></td></tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La colocation meublée LMNP est retenue : elle maximise le rendement locatif (6,2 % net), offre la meilleure adéquation quartier (nombreuses zones d'emploi à proximité immédiate), et bénéficie d'une fiscalité LMNP avantageuse grâce à l'amortissement. Le risque de vacance est dilué sur 5 chambres plutôt que concentré sur 2 lots. La division en 2 lots est une alternative solide si la colocation n'est pas souhaitée.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        
+    <tr><th>Type</th><td>Maison de village (1800, rénové)</td></tr>
+    <tr><th>Surface habitable</th><td>270 m² (loi Carrez à confirmer)</td></tr>
+    <tr><th>Pièces</th><td>6 pièces — 5 chambres, 2 salles de bain</td></tr>
+    <tr><th>Niveaux</th><td>RDC + 3 étages</td></tr>
+    <tr><th>Chauffage</th><td>Électrique</td></tr>
+    <tr><th>DPE</th><td>Non affiché (E ou F estimé)</td></tr>
+    <tr><th>Entrées</th><td>2 entrées indépendantes sur 2 rues</td></tr>
+    <tr><th>Exposition</th><td>Traversante, lumineuse</td></tr>
+    <tr><th>Menuiseries</th><td>Double vitrage neuf, volets PVC récents</td></tr>
+    <tr><th>État</th><td>Rénové, bon état général</td></tr>
+    <tr><th>Vendeur</th><td>Professionnel — LA REGIONALE IMMOBILIERE</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+            
+    <tr><td>Revenu brut annuel</td><td class="num">30 000 €</td></tr>
+    <tr><td>Vacance (5%)</td><td class="num neg">−1 500 €</td></tr>
+    <tr><td>Charges non récupérables</td><td class="num neg">−1 200 €</td></tr>
+    <tr><td>Taxe foncière</td><td class="num neg">−2 000 €</td></tr>
+    <tr><td>Assurance PNO</td><td class="num neg">−350 €</td></tr>
+    <tr><td>Provision travaux</td><td class="num neg">−1 500 €</td></tr>
+    <tr class="total-row"><td>Cash-flow net annuel</td><td class="num pos">23 450 €</td></tr>
+    <tr class="total-row"><td>Rendement net</td><td class="num pos">6,2 %</td></tr>
+    <tr><td colspan="2" class="note">Amortissement LMNP ~10 500 €/an → imposition nulle</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges -10%</p>
+        <table class="projection-table">
+          <tbody>
+            
+    <tr><td>Revenu brut annuel</td><td class="num">31 500 €</td></tr>
+    <tr><td>Vacance (2%)</td><td class="num neg">−630 €</td></tr>
+    <tr><td>Charges non récupérables</td><td class="num neg">−1 080 €</td></tr>
+    <tr><td>Taxe foncière</td><td class="num neg">−1 800 €</td></tr>
+    <tr><td>Assurance PNO</td><td class="num neg">−315 €</td></tr>
+    <tr><td>Provision travaux</td><td class="num neg">−1 200 €</td></tr>
+    <tr class="total-row"><td>Cash-flow net annuel</td><td class="num pos">26 475 €</td></tr>
+    <tr class="total-row"><td>Rendement net</td><td class="num pos">7,0 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer -10% — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+            
+    <tr><td>Revenu brut annuel</td><td class="num">27 000 €</td></tr>
+    <tr><td>Vacance (12%)</td><td class="num neg">−3 240 €</td></tr>
+    <tr><td>Charges non récupérables</td><td class="num neg">−1 440 €</td></tr>
+    <tr><td>Taxe foncière</td><td class="num neg">−2 400 €</td></tr>
+    <tr><td>Assurance PNO</td><td class="num neg">−420 €</td></tr>
+    <tr><td>Provision travaux</td><td class="num neg">−2 000 €</td></tr>
+    <tr class="total-row"><td>Cash-flow net annuel</td><td class="num pos">17 500 €</td></tr>
+    <tr class="total-row"><td>Rendement net</td><td class="num pos">4,7 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+    <tr><td>Rendement net</td><td class="num">6,2 %</td><td class="num pos">7,0 %</td><td class="num neg">4,7 %</td></tr>
+    <tr><td>Cash-flow annuel</td><td class="num">23 450 €</td><td class="num pos">26 475 €</td><td class="num">17 500 €</td></tr>
+    <tr><td>Cash-flow mensuel</td><td class="num">1 954 €</td><td class="num pos">2 206 €</td><td class="num">1 458 €</td></tr>
+    <tr><td>Imposition (LMNP)</td><td class="num">~0 €</td><td class="num pos">~0 €</td><td class="num">~0 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+    <tr><td>DPE E ou F non affiché</td><td>Le DPE est volontairement absent de l'annonce. Avec chauffage électrique et 270 m² en pierre, le classement E ou F est probable. Interdiction locative à horizon 2034 (E) ou 2028 (F).</td><td><span class="risk-severity risk-4">4/5</span></td></tr>
+    <tr><td>Coût rénovation énergétique</td><td>Isolation d'un bâti du 18ᵉ en zone de caractère : contraintes ABF possibles. Budget estimé 40-80 k€. Impact direct sur la rentabilité.</td><td><span class="risk-severity risk-4">4/5</span></td></tr>
+    <tr><td>Faisabilité de la colocation</td><td>Les 2 entrées indépendantes facilitent l'aménagement, mais la division informelle en colocation doit respecter les normes de décence. RDC + 3 sans ascenseur → pénibilité.</td><td><span class="risk-severity risk-3">3/5</span></td></tr>
+    <tr><td>Vacance locative en zone rurale</td><td>Signes n'est pas une zone tendue. La colocation réduit le risque unitaire mais 270 m² à remplir reste un défi.</td><td><span class="risk-severity risk-3">3/5</span></td></tr>
+    <tr><td>Chauffage électrique</td><td>Facture énergétique 3 000-4 000 €/an. En colocation, ce coût est répercuté aux locataires mais peut rebuter à la visite.</td><td><span class="risk-severity risk-3">3/5</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict verdict-neutral">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">La maison de Signes présente un couple rendement/risque intéressant sous réserve de trois vérifications : le DPE réel (à obtenir avant toute offre), le coût chiffré d'une rénovation énergétique, et la confirmation que les 2 entrées permettent une division fonctionnelle. Le prix facial est attractif (1 185 €/m² contre 3 200 € en moyenne sur la commune) mais cette décote reflète les travaux à prévoir. Si le DPE est F, une négociation à 270-280 k€ est justifiée pour intégrer le coût de la mise aux normes.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 280 000 € si DPE F — 300 000 € si DPE E</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        
+    <li>Absence de DPE dans l'annonce → exiger sa communication avant la visite, l'utiliser comme levier prix</li>
+    <li>Coût estimé de la rénovation énergétique (40-80 k€) à déduire du prix facial</li>
+    <li>Prix au m² déjà sous le marché, mais la surface élevée et le caractère « paquebot » limitent le nombre d'acheteurs → pouvoir de négociation renforcé</li>
+    <li>Annonce publiée depuis le 8 avril 2026 (50 jours) → marge de négociation supplémentaire</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> LMNP Réel (colocation meublée) — amortissement du bâti sur 30 ans et des meubles sur 7 ans</p>
+      <p><strong>Estimation frais de notaire :</strong> 25 600 €</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 30 000 € (aménagement colocation : cloisons, compteurs, électricité) + 40-80 k€ (rénovation énergétique à provisionner selon DPE)</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
