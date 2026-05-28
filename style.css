@@ -237,6 +237,93 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   color: var(--color-accent);
 }
 
+/* --- Stratégies d'exploitation --- */
+.strategy-exploration { margin-bottom: 2rem; }
+.strategy-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.strategy-table thead th {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  font-weight: 600;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.strategy-table tbody td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+.strategy-table .strategy-selected {
+  background: #f0f7ee;
+}
+.strategy-table .strategy-selected td:first-child {
+  font-weight: 700;
+}
+.strategy-table .strategy-selected td:first-child::before {
+  content: "✓ ";
+  color: var(--color-green);
+}
+
+.strategy-name {
+  font-weight: 500;
+  color: var(--color-text);
+}
+.strategy-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  display: block;
+  margin-top: 0.15rem;
+}
+
+/* Badges faisabilité / risque */
+.badge-faisabilite,
+.badge-risque {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.faisabilite-haute  { background: var(--color-green-bg); color: var(--color-green); }
+.faisabilite-moyenne { background: var(--color-amber-bg); color: var(--color-amber); }
+.faisabilite-faible  { background: var(--color-red-bg);   color: var(--color-red); }
+.risque-faible  { background: var(--color-green-bg); color: var(--color-green); }
+.risque-modere   { background: var(--color-amber-bg); color: var(--color-amber); }
+.risque-eleve    { background: var(--color-red-bg);   color: var(--color-red); }
+
+.strategy-rationale {
+  background: var(--color-accent-light);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.strategy-rationale strong {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .strategy-exploration {
+    overflow-x: auto;
+  }
+  .strategy-table {
+    min-width: 650px;
+  }
+}
+
 /* --- Projections --- */
 .financial-projections { margin-bottom: 2rem; }
 .projections-grid {
