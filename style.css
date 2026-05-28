@@ -89,6 +89,27 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   margin-top: 0.25rem;
 }
 
+/* Badge type de bien (Résidentiel / Professionnel) */
+.badge-type {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+.badge-residentiel {
+  background: var(--color-blue-bg);
+  color: var(--color-blue);
+}
+.badge-professionnel {
+  background: var(--color-amber-bg);
+  color: var(--color-amber);
+}
+
 /* --- Cards de synthèse --- */
 .summary-cards {
   display: grid;
@@ -430,6 +451,51 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   text-align: right;
   font-family: var(--font-mono);
 }
+
+/* --- Valorisation institutionnelle (pro uniquement) --- */
+.institutional-valuation {
+  margin-bottom: 2rem;
+}
+.institutional-valuation h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.institutional-valuation .valuation-intro {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.cap-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.cap-table thead th {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  font-weight: 600;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+}
+.cap-table tbody td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+.cap-table tbody td:not(:first-child) {
+  text-align: right;
+  font-family: var(--font-mono);
+}
+.cap-table .cap-selected {
+  background: var(--color-green-bg);
+  font-weight: 600;
+}
+.cap-positive { color: var(--color-green); }
+.cap-negative { color: var(--color-red); }
 
 /* --- Matrice de risques --- */
 .risk-matrix { margin-bottom: 2rem; }
