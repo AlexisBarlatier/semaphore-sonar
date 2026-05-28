@@ -149,7 +149,7 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
 }
 
 /* --- Fiche d'identité --- */
-.identity-sheet { margin-bottom: 2rem; }
+.identity-sheet { margin-bottom: 2rem; overflow-x: auto; }
 .identity-table {
   width: 100%;
   border-collapse: collapse;
@@ -418,6 +418,71 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   }
   .projections-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =============================================================
+   Responsive — Mobile (max-width: 768px)
+   ============================================================= */
+@media (max-width: 768px) {
+  html { font-size: 14px; }
+
+  body {
+    padding: 1.25rem 1rem 3rem;
+  }
+
+  .report-header h1 { font-size: 1.4rem; }
+  .report-address { font-size: 1rem; }
+
+  .summary-cards {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.5rem;
+  }
+  .card {
+    padding: 0.8rem 0.5rem;
+  }
+  .card-value {
+    font-size: 1.1rem;
+  }
+
+  .attractiveness-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
+  .attr-card {
+    padding: 0.75rem;
+  }
+
+  .projections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projection-summary {
+    overflow-x: auto;
+  }
+
+  .risk-matrix {
+    overflow-x: auto;
+  }
+  .risk-table {
+    min-width: 600px;
+  }
+
+  .verdict {
+    padding: 1rem;
+  }
+
+  .listing-hero {
+    padding: 1.5rem 0 1rem;
+  }
+  .listing-hero h1 {
+    font-size: 1.5rem;
+  }
+  .listing-table {
+    min-width: 600px;
+  }
+  main {
+    overflow-x: auto;
   }
 }
 
