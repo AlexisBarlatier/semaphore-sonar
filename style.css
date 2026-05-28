@@ -315,12 +315,39 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   color: var(--color-accent);
 }
 
+/* Barre d'adéquation quartier/stratégie */
+.adeq-cell {
+  white-space: nowrap;
+}
+.adeq-bar-track {
+  display: inline-block;
+  width: 50px;
+  height: 6px;
+  background: #e7e5e4;
+  border-radius: 3px;
+  margin-right: 0.4rem;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.adeq-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+.adeq-bar-fill.adeq-high  { background: var(--color-green); }
+.adeq-bar-fill.adeq-mid   { background: var(--color-amber); }
+.adeq-bar-fill.adeq-low   { background: var(--color-red); }
+.adeq-score {
+  font-size: 0.85rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
 @media (max-width: 768px) {
   .strategy-exploration {
     overflow-x: auto;
   }
   .strategy-table {
-    min-width: 650px;
+    min-width: 750px;
   }
 }
 
