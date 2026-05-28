@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Les Aygalades, Marseille 15ᵉ (13015)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Les Aygalades, Marseille 15ᵉ (13015)</p>
+  <p class="report-date">Analyse générée le 28 mai 2026</p>
+  <p class="report-source">Source : Leboncoin — A la Lucarne de l'Immobilier (réf. 85076)</p>
+</header>
+
+<main>
+
+  <!-- === Cartes de synthèse === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix de vente</span>
+      <span class="card-value">160 350 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">191 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">840 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur après tx</span>
+      <span class="card-value">~287 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rendement brut</span>
+      <span class="card-value">7,4 %</span>
+    </div>
+    <div class="card card-verdict note-C">
+      <span class="card-label">Note</span>
+      <span class="card-value">C/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.3461" data-lon="5.3850" data-address="Les Aygalades, Marseille 15ᵉ (13015)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Les Aygalades est un quartier prioritaire (QPV) du 15ᵉ arrondissement de Marseille, avec 57 % de la population en zone prioritaire. Le quartier compte environ 6 600 habitants et souffre d'un enclavement chronique : pas de métro, pas de tramway, transports en commun insuffisants. Le taux de chômage y est très élevé et la pauvreté marquée. Les prix immobiliers y sont les plus bas de Marseille (1 680 €/m² en moyenne dans le 15ᵉ, contre 2 237 € spécifiquement aux Aygalades). La demande locative est soutenue par la solvabilité faible des ménages. L'atout principal du bien est son prix d'entrée extrêmement bas (840 €/m², soit -50 % vs la moyenne du quartier).</p>
+    <div class="attractiveness-grid">
+      
+      <div class="attr-card"><span class="attr-label">Transports</span><div class="attr-bar-track"><div class="attr-bar-fill score-2" style="width:20%"></div></div><span class="attr-score"><strong>2/10</strong> — Pas de métro, pas de tramway. Bus RTM insuffisants. Gare SNCF Saint-Antoine à 1,5 km. Voiture quasi obligatoire. Enclavement chronique.</span></div>
+<div class="attr-card"><span class="attr-label">Commerces & services</span><div class="attr-bar-track"><div class="attr-bar-fill score-3" style="width:30%"></div></div><span class="attr-score"><strong>3/10</strong> — Très peu de commerces de proximité. Supérette, boulangerie. Services publics limités. Hypermarché à proximité en voiture.</span></div>
+<div class="attr-card"><span class="attr-label">Écoles & crèches</span><div class="attr-bar-track"><div class="attr-bar-fill score-4" style="width:40%"></div></div><span class="attr-score"><strong>4/10</strong> — Écoles élémentaires et collège REP. Lycées dans les arrondissements voisins. Offre scolaire de base en zone d'éducation prioritaire.</span></div>
+<div class="attr-card"><span class="attr-label">Sécurité & cadre de vie</span><div class="attr-bar-track"><div class="attr-bar-fill score-3" style="width:30%"></div></div><span class="attr-score"><strong>3/10</strong> — Quartier prioritaire, incivisme signalé. Cadre de vie dégradé. « Cité enclavée » selon les médias. Sécurité moyenne selon les avis habitants.</span></div>
+<div class="attr-card"><span class="attr-label">Demande locative</span><div class="attr-bar-track"><div class="attr-bar-fill score-5" style="width:50%"></div></div><span class="attr-score"><strong>5/10</strong> — Forte demande de logements abordables (57 % en QPV, chômage élevé). Solvabilité des locataires très faible → risque d'impayés élevé.</span></div>
+<div class="attr-card"><span class="attr-label">Dynamisme économique</span><div class="attr-bar-track"><div class="attr-bar-fill score-2" style="width:20%"></div></div><span class="attr-score"><strong>2/10</strong> — Quartier parmi les plus pauvres de Marseille. Chômage élevé, peu d'activité économique locale. Dépendance aux transferts sociaux.</span></div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Familles modestes et ménages à faibles revenus, bénéficiaires d'APL. Étudiants (campus Saint-Jérôme à 3 km). La division en petites surfaces (T2) élargit le bassin. Attention : taux d'impayés structurellement élevé dans ce type de quartier.</p>
+      <p><strong>Conclusion :</strong> Les Aygalades est un quartier dur, sans amélioration notable attendue à court terme. L'investissement n'a de sens que si le prix d'entrée compense très largement le risque locatif. À 840 €/m², ce bien coche cette case. La stratégie doit impérativement passer par une division en petites surfaces pour diluer le risque d'impayés et maximiser le rendement — une location mono-lot à une famille serait trop exposée.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+  <td><span class="strategy-name">A. Location en l'état</span><span class="strategy-desc">T5 191m² loué brut à une famille</span></td>
+  <td>1</td>
+  <td>3,2 %</td>
+  <td>~180 k€</td>
+  <td><span class="ratio-badge ratio-mauvais">0,96</span></td>
+  <td><span class="badge-faisabilite faisabilite-haute">Haute</span></td>
+  <td><span class="badge-risque risque-eleve">Très élevé</span></td>
+  <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-low" style="width:45%"></span></span><span class="adeq-score">4,5/10</span></span></td>
+</tr>
+<tr class="strategy-selected">
+  <td><span class="strategy-name">B. Division 4 T2 meublés LMNP</span><span class="strategy-desc">4 T2 de 35-40 m² + parties communes, meublés</span></td>
+  <td>4</td>
+  <td>5,8 %</td>
+  <td>~287 k€</td>
+  <td><span class="ratio-badge ratio-bon">0,81</span></td>
+  <td><span class="badge-faisabilite faisabilite-moyenne">Moyenne</span></td>
+  <td><span class="badge-risque risque-eleve">Élevé</span></td>
+  <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:55%"></span></span><span class="adeq-score">5,5/10</span></span></td>
+</tr>
+<tr>
+  <td><span class="strategy-name">C. Colocation 6 chambres</span><span class="strategy-desc">6 chambres meublées, bail individuel, LMNP</span></td>
+  <td>6</td>
+  <td>6,5 %</td>
+  <td>~280 k€</td>
+  <td><span class="ratio-badge ratio-bon">0,83</span></td>
+  <td><span class="badge-faisabilite faisabilite-moyenne">Moyenne</span></td>
+  <td><span class="badge-risque risque-eleve">Très élevé</span></td>
+  <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:50%"></span></span><span class="adeq-score">5,0/10</span></span></td>
+</tr>
+<tr>
+  <td><span class="strategy-name">D. Marchand de biens</span><span class="strategy-desc">Rénovation + division → revente des 4 lots</span></td>
+  <td>4</td>
+  <td>N/A (revente)</td>
+  <td>~300 k€</td>
+  <td><span class="ratio-badge ratio-bon">0,82</span></td>
+  <td><span class="badge-faisabilite faisabilite-faible">Faible</span></td>
+  <td><span class="badge-risque risque-eleve">Élevé</span></td>
+  <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-low" style="width:40%"></span></span><span class="adeq-score">4,0/10</span></span></td>
+</tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Stratégie B retenue — Division en 4 T2 meublés LMNP.</strong> C'est le meilleur compromis rendement/risque/faisabilité. La division en 4 lots dilue le risque d'impayés (un locataire défaillant = 25 % du revenu, pas 100 %). Le LMNP permet d'amortir le bâti et les meubles pour neutraliser l'imposition. La stratégie A (location en l'état) est la plus simple mais trop risquée sur un seul locataire à faible solvabilité. La C (colocation) maximise le rendement mais la gestion de 6 colocataires dans ce quartier est un cauchemar opérationnel. La D (revente) est peu réaliste : qui achète un T2 aux Aygalades ?</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+                <tr><td>Type</td><td>Appartement T5 en rez-de-chaussée</td></tr>
+<tr><td>Surface habitable</td><td>191 m² (dont 158 m² loi Carrez)</td></tr>
+<tr><td>Pièces</td><td>5 pièces — 4 chambres, séjour, cuisine</td></tr>
+<tr><td>Étage</td><td>Rez-de-chaussée — sans ascenseur</td></tr>
+<tr><td>Stratégie retenue</td><td>Division en 4 T2 meublés — LMNP Réel</td></tr>
+<tr><td>Quartier</td><td>Les Aygalades — Marseille 15ᵉ (13015), QPV</td></tr>
+<tr><td>DPE</td><td>Non renseigné ⚠ — facture estimée 1 320-1 820 €</td></tr>
+<tr><td>Vendeur</td><td>Professionnel (A la Lucarne de l'Immobilier)</td></tr>
+<tr><td>Taxe foncière estimée</td><td>~1 500 €/an</td></tr>
+<tr><td>Charges copropriété</td><td>Non précisées — à vérifier</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+                        <tr><td>Loyer annuel brut (4 T2 × 590 €)</td><td>28 320 €</td></tr>
+<tr><td>Vacance (5 %)</td><td>−1 416 €</td></tr>
+<tr><td>Taxe foncière</td><td>−1 500 €</td></tr>
+<tr><td>Assurance PNO</td><td>−400 €</td></tr>
+<tr><td>Entretien</td><td>−2 000 €</td></tr>
+<tr><td>Charges copro (est.)</td><td>−1 200 €</td></tr>
+<tr><td>Revenu net avant impôt</td><td>21 804 €</td></tr>
+<tr><td>Amortissement LMNP</td><td>−9 000 €</td></tr>
+<tr><td>Impôt (IR 30% + PS)</td><td>−6 045 €</td></tr>
+<tr><td><strong>Net après impôt</strong></td><td><strong>15 759 €</strong></td></tr>
+<tr><td>Cash flow / mois</td><td>1 313 €</td></tr>
+<tr><td>Rendement net/net</td><td>6,78 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges -10%</p>
+        <table class="projection-table">
+          <tbody>
+                        <tr><td>Loyer annuel brut (4 T2 × 620 €)</td><td>29 760 €</td></tr>
+<tr><td>Vacance (2 %)</td><td>−595 €</td></tr>
+<tr><td>Taxe foncière</td><td>−1 350 €</td></tr>
+<tr><td>Assurance PNO</td><td>−360 €</td></tr>
+<tr><td>Entretien</td><td>−1 600 €</td></tr>
+<tr><td>Charges copro (est.)</td><td>−1 080 €</td></tr>
+<tr><td>Revenu net avant impôt</td><td>24 775 €</td></tr>
+<tr><td>Amortissement LMNP</td><td>−9 000 €</td></tr>
+<tr><td>Impôt (IR 30% + PS)</td><td>−7 448 €</td></tr>
+<tr><td><strong>Net après impôt</strong></td><td><strong>17 327 €</strong></td></tr>
+<tr><td>Cash flow / mois</td><td>1 444 €</td></tr>
+<tr><td>Rendement net/net</td><td>7,45 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer -10% — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+                        <tr><td>Loyer annuel brut (4 T2 × 520 €)</td><td>24 960 €</td></tr>
+<tr><td>Vacance (12 %)</td><td>−2 995 €</td></tr>
+<tr><td>Taxe foncière</td><td>−1 800 €</td></tr>
+<tr><td>Assurance PNO</td><td>−480 €</td></tr>
+<tr><td>Entretien</td><td>−3 000 €</td></tr>
+<tr><td>Charges copro (est.)</td><td>−1 440 €</td></tr>
+<tr><td>Travaux imprévus</td><td>−5 000 €</td></tr>
+<tr><td>Revenu net avant impôt</td><td>10 245 €</td></tr>
+<tr><td>Amortissement LMNP</td><td>−9 000 €</td></tr>
+<tr><td>Impôt (IR 30% + PS)</td><td>−588 €</td></tr>
+<tr><td><strong>Net après impôt</strong></td><td><strong>9 657 €</strong></td></tr>
+<tr><td>Cash flow / mois</td><td>805 €</td></tr>
+<tr><td>Rendement net/net</td><td>4,15 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+                    <tr><td>Loyer annuel brut</td><td>28 320 €</td><td>29 760 €</td><td>24 960 €</td></tr>
+<tr><td>Revenu net avant impôt</td><td>21 804 €</td><td>24 775 €</td><td>10 245 €</td></tr>
+<tr><td>Résultat net après impôt</td><td>15 759 €</td><td>17 327 €</td><td>9 657 €</td></tr>
+<tr><td>Cash flow mensuel</td><td>1 313 €</td><td>1 444 €</td><td>805 €</td></tr>
+<tr><td>Rendement net/net</td><td>6,78 %</td><td>7,45 %</td><td>4,15 %</td></tr>
+<tr><td>Cash flow après crédit (70%)</td><td class="text-negative">−440 €/mois</td><td class="text-negative">−310 €/mois</td><td class="text-negative">−950 €/mois</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+                <tr><td>Quartier prioritaire (QPV)</td><td>57 % de la population en zone prioritaire. Chômage et pauvreté structurels. Le risque d'impayés est très supérieur à la moyenne nationale.</td><td><span class="severity severity-5">5</span></td></tr>
+<tr><td>Gestion locative lourde</td><td>4 lots dans un quartier difficile = turnover élevé, impayés fréquents, dégradations possibles. Gestion déléguée recommandée mais coûteuse (7-8 %).</td><td><span class="severity severity-4">4</span></td></tr>
+<tr><td>DPE inconnu</td><td>Non renseigné. Facture énergétique estimée entre 1 320 et 1 820 €/an. Si DPE F ou G, interdiction de location à horizon 2028.</td><td><span class="severity severity-4">4</span></td></tr>
+<tr><td>Rez-de-chaussée</td><td>Moins recherché, plus exposé aux nuisances (bruit, vis-à-vis, sécurité). Loyer inférieur de 10-15 % vs étages supérieurs.</td><td><span class="severity severity-3">3</span></td></tr>
+<tr><td>Faisabilité de la division</td><td>Créer 4 T2 avec cuisines et salles d'eau dans un appartement existant nécessite des autorisations (déclaration préalable ou PC). Vérifier le règlement de copropriété.</td><td><span class="severity severity-3">3</span></td></tr>
+<tr><td>Liquidité de sortie quasi nulle</td><td>Revendre un bien divisé aux Aygalades est très difficile. L'investissement doit être pensé comme un portage long terme (10+ ans) sans espoir de plus-value.</td><td><span class="severity severity-4">4</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À n'envisager que si le rendement net/net > 8 % est atteignable, soit un prix d'achat autour de 130 000 € — et avec une gestion déléguée budgétée</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> ~130 000 € net vendeur (pour atteindre 8 % net/net en base case et compenser le risque QPV)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+                <li>Quartier prioritaire : le prix facial est déjà bas (840 €/m²) mais le risque locatif justifie un prix encore plus bas</li>
+<li>Rez-de-chaussée dans un quartier difficile : argument fort pour une décote supplémentaire</li>
+<li>DPE non communiqué : exiger sa transmission, clause suspensive si F ou G</li>
+<li>Travaux de division à chiffrer (60 k€) : chaque euro économisé améliore le rendement</li>
+<li>Liquidité de sortie inexistante : l'acheteur s'engage pour du très long terme, ça se paie</li>
+<li>Charges de copropriété non précisées : à vérifier avant toute offre</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> LMNP Réel (amortissement bâti 30 ans + meubles 10 ans, 4 lots meublés)</p>
+      <p><strong>Estimation frais de notaire :</strong> 12 000 € (7,8 % — ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> ~60 000 € (division en 4 T2 : cloisons, 4 cuisines, 4 SdB, électricité, plomberie) + 15 % provision imprévus = 69 k€</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
