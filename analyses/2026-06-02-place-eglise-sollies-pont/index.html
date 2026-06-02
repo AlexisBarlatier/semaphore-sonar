@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Place de l'Église, Solliès-Pont (83210)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Place de l'Église, Centre, Solliès-Pont (83210)</p>
+  <p class="report-date">Analyse générée le 02/06/2026</p>
+  <p class="report-source">Source : Logic-Immo — iad France (Camille Calegari)</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">📍 Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location meublée après rénovation</strong> — 3 lots indépendants, SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">175 k€</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">112 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 562 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">218 k€</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">336 k€</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">1 792 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">7.8% / 5.1%</span>
+    </div>
+    <div class="card card-verdict note-8">
+      <span class="card-label">Note</span>
+      <span class="card-value">8.0/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.191" data-lon="6.042" data-address="Place de l'Église, Solliès-Pont (83210)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Solliès-Pont (~11 000 hab.) est une commune du Var située dans la vallée du Gapeau, entre Toulon et Hyères. Le bien est implanté Place de l'Église, en plein centre-ville historique.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">🚌 Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:40%"></div></div>
+        <span class="attr-score">4/10</span>
+        <span class="attr-detail">Gare SNCF (ligne Toulon-Hyères) sur la commune, mais desserte limitée. Bus départementaux. Mal noté par les habitants (1.6/5).</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">🛒 Commerces &amp; services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <span class="attr-detail">Centre-ville vivant, 833 commerces et services, centre médical récent, marché provençal. Supérette à pied.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">🎓 Écoles &amp; crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <span class="attr-detail">6 écoles publiques + 1 privée, collège à Solliès-Pont, lycées à Toulon (20 min).</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">🛡️ Sécurité &amp; cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:40%"></div></div>
+        <span class="attr-score">4/10</span>
+        <span class="attr-detail">Avis habitants partagés : incivilités et petite délinquance signalées. Dette municipale élevée. Police municipale présente.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">🏠 Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-score">5/10</span>
+        <span class="attr-detail">Loyer médian 16 €/m² (+8% sur 1 an). Taux de chômage 12.8% freine la solvabilité. Population en baisse (-0.4%/an).</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">📈 Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:40%"></div></div>
+        <span class="attr-score">4/10</span>
+        <span class="attr-detail">Chômage 12.8% (supérieur à la moyenne nationale). Revenu médian modeste. Décroissance démographique. Peu de grands projets économiques.</span>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs, couples sans enfants, retraités modestes recherchant un logement abordable proche des commodités du centre-ville et de la gare.</p>
+      <p><strong>Conclusion :</strong> Quartier de centre-bourg provençal, correctement doté en services du quotidien. L'attractivité est pénalisée par un tissu économique fragile (chômage élevé, population en déclin) et une sécurité perçue comme médiocre. La gare est un atout différenciant pour capter des actifs travaillant sur Toulon. Score global d'adéquation : 5.0/10.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Trois stratégies ont été évaluées. La ligne verte indique celle retenue pour les projections financières.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-retained">
+          <td><strong>Location meublée</strong></td>
+          <td>3</td>
+          <td>5.1%</td>
+          <td>336 k€</td>
+          <td><span class="ratio-badge ratio-good">0.65</span></td>
+          <td><span class="badge-faisabilite">Bonne</span></td>
+          <td><span class="severity severity-3">3/5</span></td>
+          <td>
+            <div class="adeq-cell">
+              <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-5" style="width:50%"></div></div>
+              <span>5.0</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Location nue</td>
+          <td>3</td>
+          <td>5.0%</td>
+          <td>336 k€</td>
+          <td><span class="ratio-badge ratio-good">0.63</span></td>
+          <td><span class="badge-faisabilite">Bonne</span></td>
+          <td><span class="severity severity-2">2/5</span></td>
+          <td>
+            <div class="adeq-cell">
+              <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-5" style="width:50%"></div></div>
+              <span>5.0</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Marchand de biens</td>
+          <td>3</td>
+          <td>32% PV</td>
+          <td>336 k€</td>
+          <td><span class="ratio-badge ratio-good">0.68</span></td>
+          <td><span class="badge-faisabilite">Moyenne</span></td>
+          <td><span class="severity severity-4">4/5</span></td>
+          <td>
+            <div class="adeq-cell">
+              <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-5" style="width:50%"></div></div>
+              <span>5.0</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location meublée en SCI IS est retenue. Elle offre le meilleur rendement net (5.1% sur valeur après travaux) grâce à l'amortissement des meubles qui réduit le résultat fiscal. Le ratio coût/valeur de 0.65 est excellent et crée une plus-value latente immédiate de ~118 k€. Le marchand de biens dégage une PV nette estimée à 71 k€, mais le risque d'exécution (travaux sur le duplex sans compteur) et le marché local moins dynamique rendent cette stratégie plus incertaine que la location longue durée.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Place de l'Église, Centre, Solliès-Pont (83210)</td></tr>
+        <tr><th>Type</th><td>Immeuble de rapport — copropriété de 5 lots, vente de 4 lots</td></tr>
+        <tr><th>Surface habitable</th><td>112 m² (Lot 2 : 40 m², Lot 3 : 40 m², Lot 4 : 32 m²)</td></tr>
+        <tr><th>Surface totale</th><td>129.7 m² (dont 17.7 m² de combles, Lot 5)</td></tr>
+        <tr><th>Année de construction</th><td>1945</td></tr>
+        <tr><th>DPE / GES</th><td>C (176 kWh/m²/an) / B (6 kgCO₂/m²/an)</td></tr>
+        <tr><th>État</th><td>Mixte : lot 3 rénové, lot 2 propre, lot 4 travaux importants (pas de compteur électrique)</td></tr>
+        <tr><th>Charges copropriété</th><td>0 €/mois déclaré (syndic bénévole probable) — estimé 300 €/an</td></tr>
+        <tr><th>Taxe foncière</th><td>~1 200 €/an (estimé, taux communal 48.79%)</td></tr>
+        <tr><th>Occupation</th><td>Lot 3 loué 415 €/mois (bail jusqu'en 2030, locataires souhaitent partir). Lots 2 et 4 vacants.</td></tr>
+        <tr><th>Procédures</th><td>Aucune procédure en cours (art. L.721-1 CCH)</td></tr>
+        <tr><th>Vendeur</th><td>Agent commercial — iad France (Camille Calegari). Honoraires charge vendeur.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché (16 €/m²) — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>20 429 €</td></tr>
+            <tr><td>Charges (TF + copro + PNO)</td><td>-1 800 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td>18 629 €</td></tr>
+            <tr><td>Amortissement (bâti + travaux + meubles)</td><td>-7 862 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>10 767 €</td></tr>
+            <tr><td>IS (15%)</td><td>-1 615 €</td></tr>
+            <tr class="projection-net"><td><strong>Net après IS</strong></td><td><strong>17 014 €</strong></td></tr>
+            <tr><td>Cash flow mensuel</td><td>1 418 €/mois</td></tr>
+            <tr><td>Rendement net / prix revient</td><td>7.8%</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td>5.1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% (16.8 €/m²) — Charges -10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>22 136 €</td></tr>
+            <tr><td>Charges (TF + copro + PNO)</td><td>-1 620 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td>20 516 €</td></tr>
+            <tr><td>Amortissement</td><td>-7 862 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>12 654 €</td></tr>
+            <tr><td>IS (15%)</td><td>-1 898 €</td></tr>
+            <tr class="projection-net"><td><strong>Net après IS</strong></td><td><strong>18 618 €</strong></td></tr>
+            <tr><td>Cash flow mensuel</td><td>1 551 €/mois</td></tr>
+            <tr><td>Rendement net / prix revient</td><td>8.5%</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td>5.5%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer -10% (14.4 €/m²) — Charges +20% + provision tx 2 k€/an</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>17 036 €</td></tr>
+            <tr><td>Charges (TF + copro + PNO + provision)</td><td>-4 160 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td>12 876 €</td></tr>
+            <tr><td>Amortissement</td><td>-7 862 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>5 014 €</td></tr>
+            <tr><td>IS (15%)</td><td>-752 €</td></tr>
+            <tr class="projection-net"><td><strong>Net après IS</strong></td><td><strong>12 124 €</strong></td></tr>
+            <tr><td>Cash flow mensuel</td><td>1 010 €/mois</td></tr>
+            <tr><td>Rendement net / prix revient</td><td>5.6%</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td>3.6%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu net après IS</td><td>17 014 €</td><td>18 618 €</td><td>12 124 €</td></tr>
+          <tr><td>Cash flow mensuel</td><td>1 418 €</td><td>1 551 €</td><td>1 010 €</td></tr>
+          <tr><td>Rendement net / prix revient</td><td>7.8%</td><td>8.5%</td><td>5.6%</td></tr>
+          <tr><td>Rendement net / valeur marché</td><td>5.1%</td><td>5.5%</td><td>3.6%</td></tr>
+          <tr><td>Taux d'effort (net/revenu brut)</td><td>83%</td><td>84%</td><td>71%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Travaux lot 4 (duplex)</td>
+          <td>Travaux importants annoncés, pas de compteur électrique, demande urbanisme en cours. Budget estimé 25 k€, risque de dépassement.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance locative</td>
+          <td>Marché locatif correct mais population en baisse. Taux de chômage 12.8% réduit le bassin de locataires solvables.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Décote du marché local</td>
+          <td>Solliès-Pont est une commune modeste du Var intérieur. Moins recherchée que le littoral. Population en déclin. Liquidité limitée à la revente.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Charges copropriété sous-estimées</td>
+          <td>Déclarées à 0 € mais un immeuble de 1945 aura forcément des charges d'entretien (toiture, ravalement, parties communes).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Âge du bâti (1945)</td>
+          <td>Réseaux potentiellement vétustes (électricité, plomberie). Risque de diagnostics amiante/plomb.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>DPE C — pas de risque réglementaire</td>
+          <td>DPE classe C, au-dessus du seuil d'interdiction de location. Pas de travaux énergétiques obligatoires à court terme.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict verdict-acheter">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À l'achat au prix affiché. Note 8.0/10. Le ratio coût/valeur de 0.65 est excellent : chaque euro investi génère 1.54 € de valeur de marché. Le rendement net de 5.1% sur valeur après travaux reste modeste, mais la création de valeur latente (prix de revient 218 k€ vs valeur marché 336 k€) offre un coussin de sécurité confortable. Le levier principal de performance est la relocation du lot 3 au prix de marché : de 415 € actuellement à 640 € projetés (+54%). Le risque travaux sur le duplex (lot 4) est le seul point d'attention sérieux — une visite approfondie avec un professionnel du bâtiment est indispensable avant toute offre.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 175 000 € (prix affiché acceptable)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Travaux sur le duplex (lot 4) : absence de compteur électrique et travaux importants — argumenter un devis à 30 k€ pour obtenir 5–10 k€ de baisse</li>
+        <li>DPE C correct mais bâti de 1945 : risque de travaux de copropriété futurs (ravalement, toiture) non provisionnés</li>
+        <li>Locataire du lot 3 payant 415 € — le rendement facial est faible tant que le bail court</li>
+        <li>Possibilité d'offrir 160–165 k€ en mettant en avant les travaux du lot 4 et l'incertitude sur le compteur</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15% sur les bénéfices, amortissement du bâti sur 40 ans, des travaux sur 10 ans, des meubles sur 7 ans)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~13 125 € (7.5% du prix d'achat)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> ~30 000 € (5 k€ lot 2 + 25 k€ lot 4)</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
