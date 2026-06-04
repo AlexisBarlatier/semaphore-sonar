@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Rue des trois frères Carasso, Marseille 13004</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Rue des trois frères Carasso, Quartier Chartreux, Marseille 13004</p>
+  <p class="report-date">Analyse générée le 05/06/2026</p>
+  <p class="report-source">Source : LeBonCoin — Particulier (didierroux)</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">📍 Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Colocation 3 chambres meublées + Airbnb chambre de bonne</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">180 k€</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">80 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">2 250 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">272 k€</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">235 k€</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">2 400 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">8.2% / 9.5%</span>
+    </div>
+    <div class="card card-verdict note-7">
+      <span class="card-label">Note</span>
+      <span class="card-value">7.0/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.303" data-lon="5.397" data-address="Rue des trois frères Carasso, Quartier Chartreux, Marseille 13004"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Le quartier Chartreux / Cinq Avenues (Marseille 4ᵉ, ~9 300 hab.) est un secteur dynamique de jeunes cadres (59 %), très bien desservi par le métro (stations Cinq Avenues et Chartreux) et riche en commerces (10 pour 100 m). Proche du parc Longchamp et à 10 min du centre-ville. Population majoritairement locataire (57 %). Revenu médian modeste (20 836 €/ménage), taux de chômage élevé (20,8 %).</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">🚌 Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <span class="attr-detail">Métro Cinq Avenues et Chartreux à moins de 300 m. Tramway Longchamp. 20,7 arrêts TC/km² — excellente desserte. 38 % des ménages sans voiture.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">🛒 Commerces &amp; services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <span class="attr-detail">10 commerces pour 100 m, Monoprix, marché Place Sébastopol, Picard, nombreux restaurants. Très bonne densité commerciale.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">🎓 Écoles &amp; crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <span class="attr-detail">Plusieurs établissements (collège Chape, lycée Saint-Joseph), 20,7 établissements/km². Résultats bac 90 %. Offre scolaire correcte sans être exceptionnelle.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">🛡️ Sécurité &amp; cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <span class="attr-detail">Avis habitants partagés : quartier agréable à vivre mais bruit, stationnement difficile, propreté inégale. Note sécurité 3/5 sur KelQuartier.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">📈 Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <span class="attr-detail">57 % de locataires, majorité de petites surfaces (45 % en T1/T2). 9,9 % de vacance structurelle (élevé, à surveiller). Forte demande étudiante et jeunes actifs.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">💼 Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <span class="attr-detail">59 % de cadres, mais chômage à 20,8 % et revenu médian modeste. Croissance établissements +16 %. Économie mixte, polarisée.</span>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Étudiants et jeunes actifs (métro direct vers centre-ville et facultés), colocataires recherchant un logement bien desservi à prix accessible. Le quartier est prisé par les CSP+ débutantes qui ne peuvent pas encore acheter.</p>
+      <p><strong>Conclusion :</strong> Bonne attractivité globale pour de la colocation étudiante/jeunes actifs. Le point faible est le taux de chômage élevé qui peut fragiliser certains dossiers de locataires. La vacance à 10 % est un signal de prudence — le loyer devra être compétitif.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Quatre stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row strategy-selected">
+          <td><strong>Coloc 3 ch + Airbnb CDB</strong></td>
+          <td>4</td>
+          <td>8.2%</td>
+          <td>235 k€</td>
+          <td><span class="ratio-badge ratio-bad">1.16</span></td>
+          <td><span class="badge-faisabilite badge-faisabilite-ok">Bonne</span></td>
+          <td><span class="badge-risque badge-risque-moyen">Moyen</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-good" style="width:70%">7.0</div></div></div></td>
+        </tr>
+        <tr>
+          <td>Location meublée T4 classique</td>
+          <td>2</td>
+          <td>4.1%</td>
+          <td>225 k€</td>
+          <td><span class="ratio-badge ratio-ok">1.02</span></td>
+          <td><span class="badge-faisabilite badge-faisabilite-facile">Facile</span></td>
+          <td><span class="badge-risque badge-risque-faible">Faible</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-good" style="width:65%">6.5</div></div></div></td>
+        </tr>
+        <tr>
+          <td>Division 3 studios + Airbnb</td>
+          <td>4</td>
+          <td>7.8%</td>
+          <td>240 k€</td>
+          <td><span class="ratio-badge ratio-bad">1.20</span></td>
+          <td><span class="badge-faisabilite badge-faisabilite-difficile">Difficile</span></td>
+          <td><span class="badge-risque badge-risque-eleve">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-medium" style="width:55%">5.5</div></div></div></td>
+        </tr>
+        <tr>
+          <td>Achat-revente (marchand de biens)</td>
+          <td>1</td>
+          <td>—</td>
+          <td>210 k€</td>
+          <td><span class="ratio-badge ratio-bad">1.11</span></td>
+          <td><span class="badge-faisabilite badge-faisabilite-ok">Bonne</span></td>
+          <td><span class="badge-risque badge-risque-moyen">Moyen</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-medium" style="width:60%">6.0</div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Choix de la stratégie :</strong> La colocation 3 chambres + Airbnb chambre de bonne maximise le rendement (8.2 % net) tout en exploitant intelligemment les annexes (cave, grenier, chambre de bonne). C'est la seule stratégie qui tire parti de la totalité des 80 m². Le ratio coût/valeur de 1.16 est le point noir : à 180 k€, on investit 272 k€ pour un bien qui en vaut 235 k€ rénové. <strong>Ce ratio ne devient acceptable (&lt; 1.05) qu'avec un prix d'achat négocié autour de 155 k€.</strong> La division en 3 studios est techniquement plus risquée (création de réseaux, copropriété, réglementation) et n'offre pas un meilleur ratio.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Type</th><td>Appartement ancien — 4 pièces (2 chambres) + chambre de bonne</td></tr>
+        <tr><th>Surface</th><td>70 m² habitable + 10 m² chambre de bonne + cave + grenier</td></tr>
+        <tr><th>Étage</th><td>2ᵉ sur 3 — sans ascenseur</td></tr>
+        <tr><th>Exposition</th><td>Ouest / Traversant est-ouest</td></tr>
+        <tr><th>Chauffage</th><td>Individuel électrique</td></tr>
+        <tr><th>État</th><td>Travaux à prévoir (années 60-70, rénovation intégrale)</td></tr>
+        <tr><th>DPE</th><td>Non soumis (construction ancienne)</td></tr>
+        <tr><th>Charges copropriété</th><td>1 100 €/an</td></tr>
+        <tr><th>Taxe foncière</th><td>324 €/an</td></tr>
+        <tr><th>Vendeur</th><td>Particulier (didierroux) — Membre depuis 2017</td></tr>
+        <tr><th>Transports</th><td>Métro Chartreux (150 m), Cinq Avenues (300 m)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — Colocation + Airbnb (SCI à l'IS)</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">28 800 €</td></tr>
+            <tr><td>Vacance locative (5 %)</td><td class="num neg">−1 440 €</td></tr>
+            <tr><td>Revenu net après vacance</td><td class="num">27 360 €</td></tr>
+            <tr><td>Charges copro + TF</td><td class="num neg">−1 424 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num neg">−250 €</td></tr>
+            <tr><td>Comptabilité</td><td class="num neg">−800 €</td></tr>
+            <tr><td>Amortissement bâti (35 ans)</td><td class="num neg">−5 711 €</td></tr>
+            <tr><td>Amortissement meubles (8 ans)</td><td class="num neg">−1 438 €</td></tr>
+            <tr class="total-row"><td>Résultat fiscal</td><td class="num">17 737 €</td></tr>
+            <tr><td>IS 15 %</td><td class="num neg">−2 660 €</td></tr>
+            <tr class="cashflow-row"><td>Cash-flow annuel après IS</td><td class="num pos">22 226 €</td></tr>
+            <tr><td>Cash-flow mensuel</td><td class="num pos">1 852 €/mois</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges -10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">32 280 €</td></tr>
+            <tr><td>Vacance locative (2 %)</td><td class="num neg">−646 €</td></tr>
+            <tr><td>Revenu net après vacance</td><td class="num">31 634 €</td></tr>
+            <tr><td>Charges copro + TF (−10 %)</td><td class="num neg">−1 282 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num neg">−250 €</td></tr>
+            <tr><td>Comptabilité</td><td class="num neg">−800 €</td></tr>
+            <tr><td>Amortissement bâti (35 ans)</td><td class="num neg">−5 711 €</td></tr>
+            <tr><td>Amortissement meubles (8 ans)</td><td class="num neg">−1 438 €</td></tr>
+            <tr class="total-row"><td>Résultat fiscal</td><td class="num">22 153 €</td></tr>
+            <tr><td>IS 15 %</td><td class="num neg">−3 323 €</td></tr>
+            <tr class="cashflow-row"><td>Cash-flow annuel après IS</td><td class="num pos">25 980 €</td></tr>
+            <tr><td>Cash-flow mensuel</td><td class="num pos">2 165 €/mois</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer -10% — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">21 960 €</td></tr>
+            <tr><td>Vacance locative (12 %)</td><td class="num neg">−2 635 €</td></tr>
+            <tr><td>Revenu net après vacance</td><td class="num">19 325 €</td></tr>
+            <tr><td>Charges copro + TF (+20 %)</td><td class="num neg">−1 709 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num neg">−250 €</td></tr>
+            <tr><td>Comptabilité</td><td class="num neg">−800 €</td></tr>
+            <tr><td>Provision travaux imprévus</td><td class="num neg">−5 000 €</td></tr>
+            <tr><td>Amortissement bâti (35 ans)</td><td class="num neg">−5 711 €</td></tr>
+            <tr><td>Amortissement meubles (8 ans)</td><td class="num neg">−1 438 €</td></tr>
+            <tr class="total-row"><td>Résultat fiscal</td><td class="num">4 417 €</td></tr>
+            <tr><td>IS 15 %</td><td class="num neg">−663 €</td></tr>
+            <tr class="cashflow-row"><td>Cash-flow annuel après IS</td><td class="num pos">10 904 €</td></tr>
+            <tr><td>Cash-flow mensuel</td><td class="num pos">909 €/mois</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut mensuel</td><td>2 400 €</td><td>2 690 €</td><td>1 830 €</td></tr>
+          <tr><td>Cash-flow mensuel après IS</td><td>1 852 €</td><td>2 165 €</td><td>909 €</td></tr>
+          <tr><td>Rendement net / investissement</td><td>8.2 %</td><td>9.5 %</td><td>4.0 %</td></tr>
+          <tr><td>Rendement net / valeur marché</td><td>9.5 %</td><td>11.1 %</td><td>4.6 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ratio coût/valeur</td>
+          <td>À 180 k€, 1,16 € investi pour 1 € de valeur créée. Structurellement déficitaire sans négociation.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Réglementation Airbnb</td>
+          <td>Marseille impose une compensation (rachat de surface commerciale) pour les locations courte durée en résidence secondaire. La chambre de bonne de 10 m² est une surface modeste mais le risque réglementaire existe.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Travaux lourds</td>
+          <td>Rénovation intégrale : électricité, plomberie, cloisons, sols, cuisine, SdB. Budget estimé 78 500 € HT (850 €/m²). Risque de dépassement : 15-20 %.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>DPE non soumis</td>
+          <td>Immeuble ancien exempté de DPE. Pas de pression réglementaire immédiate mais aucune information sur la performance énergétique. Isolation probablement inexistante.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance Airbnb</td>
+          <td>Sensibilité à la saisonnalité touristique marseillaise. Un hiver creux ou une mauvaise conjoncture peut faire chuter le taux d'occupation de 18 à 10 nuits/mois.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Colocation : rotation</td>
+          <td>Turnover élevé en colocation étudiante. Prévoir 1 à 2 changements de colocataires par an. Risque de vacance partielle entre deux locataires.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>2ᵉ étage sans ascenseur</td>
+          <td>Filtre une partie de la demande locative (personnes âgées, PMR, familles avec poussette). Acceptable pour la cible étudiante/jeunes actifs.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À négocier. Le projet de colocation + Airbnb est pertinent et le cash-flow est largement positif (1 852 €/mois en base, 8.2 % net). Mais à 180 000 €, le ratio coût/valeur de 1.16 est structurellement perdant : chaque euro investi crée moins d'un euro de valeur de marché. L'opération ne devient créatrice de valeur qu'avec un prix d'achat de 155 000 € maximum (ratio 1.04, rendement net 9.0 %). La négociation est d'autant plus légitime que le bien nécessite une rénovation intégrale — les photos confirment un état « dans son jus » qui justifie une décote significative par rapport au prix moyen du quartier (3 019 €/m²).</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 155 000 € (soit −14 % / −25 000 €)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Travaux de rénovation intégrale à prévoir : 78 500 € de budget minimum, justifiant une décote</li>
+        <li>2ᵉ étage sans ascenseur : critère rédhibitoire pour une partie des acheteurs</li>
+        <li>DPE non soumis = passoire thermique probable : factures énergétiques élevées en perspective</li>
+        <li>58 favoris en 24h : signe d'intérêt mais aussi de surévaluation possible (les gens mettent en favori sans acheter)</li>
+        <li>Prix au m² (2 250 €) déjà sous la moyenne quartier (3 019 €) mais justifié par l'état — ne pas se laisser berner par cet écart apparent</li>
+        <li>Vendeur particulier, marge de négociation généralement plus large qu'avec une agence</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices, amortissement du bâti sur 35 ans et des meubles sur 8 ans)</p>
+      <p><strong>Estimation frais de notaire :</strong> 13 500 € (~7,5 % du prix d'achat)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 78 500 € (dont 67 000 € de rénovation et 11 500 € de meubles)</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
