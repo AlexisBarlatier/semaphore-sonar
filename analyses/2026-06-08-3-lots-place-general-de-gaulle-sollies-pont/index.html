@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — 3 lots, Place Général de Gaulle, Solliès-Pont</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">3 lots — Place Général de Gaulle, 83210 Solliès-Pont</p>
+  <p class="report-date">Analyse générée le 8 juin 2026</p>
+  <p class="report-source">Source : Logic-Immo (I@D France, Camille Calegari)</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Rénovation complète + location longue durée (3 lots)</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">95 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">89,7 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 059 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">141 340 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">215 280 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">1 076 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">6,9% / 4,5%</span>
+    </div>
+    <div class="card card-verdict note-7">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,8/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.19068" data-lon="6.04081" data-address="Place Général de Gaulle, 83210 Solliès-Pont"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Solliès-Pont, commune de 11 000 habitants dans la Vallée du Gapeau (Var), à 15 km de Toulon. La Place Général de Gaulle est le cœur du centre-ville, avec commerces et services de proximité. Profil résidentiel recherché pour son cadre de vie et ses prix inférieurs au littoral toulonnais.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p class="attr-note">Gare SNCF (ligne Marseille–Toulon–Hyères), bus Zou!, accès D554 vers Toulon en 15 min. Pas de tramway ni métro.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces &amp; services</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-note">Boulangeries, pharmacie, supermarché, marché provençal, services publics. Centre-ville vivant et fonctionnel.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles &amp; crèches</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p class="attr-note">Écoles primaires (Jean Jaurès, Saint-Joseph), collège La Vallée du Gapeau. Lycée à La Farlède ou Toulon.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité &amp; cadre de vie</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-note">Commune résidentielle calme, place de village. Tissu associatif actif, environnement préservé au pied du massif.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-note">Bassin d'emploi toulonnais à 15 min. Prix 30–40 % inférieurs à Toulon, forte attractivité pour les ménages cherchant à se loger moins cher.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p class="attr-note">Commune à dominante résidentielle. Économie tirée par la proximité de Toulon et de la zone d'activités de La Farlède.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs travaillant sur Toulon, familles modestes, étudiants</p>
+      <p><strong>Conclusion :</strong> Quartier central offrant un bon équilibre entre qualité de vie et accessibilité. La demande locative est soutenue par l'écart de prix avec Toulon. Le profil « petits loyers » correspond bien à des surfaces de 18–40 m², mais impose de rester sous les 13 €/m² pour ne pas concurrencer le neuf toulonnais.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-retained">
+          <td>Rénovation complète + location LD</td>
+          <td>3</td>
+          <td>6,9%</td>
+          <td>215 280 €</td>
+          <td><span class="ratio-badge ratio-vert">0,66</span></td>
+          <td><span class="badge-faisabilite">Élevée</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-7" style="width:65%"></div></div><span>6,5</span></div></td>
+        </tr>
+        <tr>
+          <td>Location sans aménager les combles</td>
+          <td>2</td>
+          <td>7,2%</td>
+          <td>172 800 €</td>
+          <td><span class="ratio-badge ratio-bleu">0,69</span></td>
+          <td><span class="badge-faisabilite">Élevée</span></td>
+          <td><span class="badge-risque">Faible</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-7" style="width:65%"></div></div><span>6,5</span></div></td>
+        </tr>
+        <tr>
+          <td>Marchand de biens (revente après travaux)</td>
+          <td>3</td>
+          <td>—</td>
+          <td>215 280 €</td>
+          <td><span class="ratio-badge ratio-vert">0,66</span></td>
+          <td><span class="badge-faisabilite">Modérée</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-5" style="width:55%"></div></div><span>5,5</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La rénovation complète avec aménagement des combles est retenue. Le ratio coût/valeur de 0,66 signifie que chaque euro investi génère 1,52 € de valeur vénale — c'est exceptionnel. La location longue durée en SCI IS permet d'amortir le bâti (30 ans) et les meubles (10 ans), ce qui efface l'IS en Base et Best. Le marchand de biens est écarté : la plus-value brute (~75 k€) serait lourdement fiscalisée (30 % flat tax + prélèvements sociaux) et le marché de la revente à Solliès-Pont est moins liquide que la location.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><td>Type</td><td>Ensemble immobilier (3 lots dans copropriété de 5)</td></tr>
+        <tr><td>Adresse</td><td>Place Général de Gaulle, 83210 Solliès-Pont</td></tr>
+        <tr><td>Prix affiché</td><td>95 000 €</td></tr>
+        <tr><td>Prix / m²</td><td>1 059 €/m²</td></tr>
+        <tr><td>Surface totale</td><td>89,7 m² (40 m² appartement + 32 m² duplex + 17,7 m² combles)</td></tr>
+        <tr><td>DPE</td><td>C (176 kWh/m²/an) — GES B (6 kg CO₂/m²/an)</td></tr>
+        <tr><td>Charges copro</td><td>20 €/mois (240 €/an)</td></tr>
+        <tr><td>Vendeur</td><td>Particulier via I@D France (mandataire Camille Calegari)</td></tr>
+        <tr><td>Honoraires</td><td>À la charge du vendeur</td></tr>
+        <tr><td>Travaux</td><td>Duplex : rénovation à prévoir. Combles : à aménager. Compteur duplex : à créer.</td></tr>
+        <tr><td>Occupation</td><td>Libre (les 3 lots)</td></tr>
+        <tr><td>Type d'opération</td><td>Investissement locatif</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>12 917 €</td></tr>
+            <tr><td>Vacance (5%)</td><td>−646 €</td></tr>
+            <tr><td>Charges copro + TF + assurance</td><td>−1 190 €</td></tr>
+            <tr><td>Frais de gestion (5%)</td><td>−646 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td class="highlight">10 435 €</td></tr>
+            <tr><td>Amortissement bâti + meubles</td><td>−5 418 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>5 017 €</td></tr>
+            <tr><td>IS (15%)</td><td>−753 €</td></tr>
+            <tr><td>Résultat net</td><td class="highlight">9 683 €</td></tr>
+            <tr><td>Cash-flow mensuel</td><td class="highlight">807 €/mois</td></tr>
+            <tr><td>Rendement net / prix revient</td><td>6,9%</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td>4,5%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>13 563 €</td></tr>
+            <tr><td>Vacance (2%)</td><td>−271 €</td></tr>
+            <tr><td>Charges copro + TF + assurance</td><td>−1 071 €</td></tr>
+            <tr><td>Frais de gestion (5%)</td><td>−678 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td class="highlight">11 542 €</td></tr>
+            <tr><td>Amortissement bâti + meubles</td><td>−5 418 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>6 124 €</td></tr>
+            <tr><td>IS (15%)</td><td>−919 €</td></tr>
+            <tr><td>Résultat net</td><td class="highlight">10 624 €</td></tr>
+            <tr><td>Cash-flow mensuel</td><td class="highlight">885 €/mois</td></tr>
+            <tr><td>Rendement net / prix revient</td><td>7,5%</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td>4,9%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer −10% — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>11 625 €</td></tr>
+            <tr><td>Vacance (12%)</td><td>−1 395 €</td></tr>
+            <tr><td>Charges copro + TF + assurance</td><td>−1 428 €</td></tr>
+            <tr><td>Frais de gestion (5%)</td><td>−581 €</td></tr>
+            <tr><td>Travaux imprévus</td><td>−5 000 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td class="highlight">3 221 €</td></tr>
+            <tr><td>Amortissement bâti + meubles</td><td>−5 418 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>−2 197 €</td></tr>
+            <tr><td>IS (15%)</td><td>0 €</td></tr>
+            <tr><td>Résultat net</td><td class="highlight">3 221 €</td></tr>
+            <tr><td>Cash-flow mensuel</td><td class="highlight">268 €/mois</td></tr>
+            <tr><td>Rendement net / prix revient</td><td>2,3%</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td>1,5%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut annuel</td><td>12 917 €</td><td>13 563 €</td><td>11 625 €</td></tr>
+          <tr><td>Charges totales</td><td>2 482 €</td><td>2 020 €</td><td>8 404 €</td></tr>
+          <tr><td>Résultat net</td><td>9 683 €</td><td>10 624 €</td><td>3 221 €</td></tr>
+          <tr><td>Cash-flow mensuel</td><td>807 €</td><td>885 €</td><td>268 €</td></tr>
+          <tr><td>Rendement net / revient</td><td>6,9%</td><td>7,5%</td><td>2,3%</td></tr>
+          <tr><td>Rendement net / valeur</td><td>4,5%</td><td>4,9%</td><td>1,5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dépassement budget travaux</td>
+          <td>Rénovation duplex + aménagement combles : budget estimé 38 740 €. Risque de surcoût si mauvaise surprise (électricité, plomberie, structure).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance locative</td>
+          <td>3 lots à louer dans une commune de 11 000 habitants. La demande existe mais le marché n'est pas hyper-tendu comme à Toulon.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Aménagement des combles</td>
+          <td>Nécessite une déclaration préalable ou un permis. Hauteur sous plafond et accès à vérifier avant achat. Surface Carrez réelle inconnue.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Absence de compteur individuel duplex</td>
+          <td>Demande en cours auprès de l'urbanisme. Coût de création estimé à 1 500 €. Peut retarder la mise en location.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Copropriété (3 lots sur 5)</td>
+          <td>L'acquéreur détiendrait la majorité des lots (3/5). Pouvoir de décision important en AG. Risque limité mais les 2 autres lots existent.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>DPE C — Pas de risque d'interdiction</td>
+          <td>Classe C (176 kWh/m²/an), bien au-dessus des seuils de la loi Climat. Aucun risque réglementaire à horizon 2034.</td>
+          <td><span class="severity severity-1">1/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict verdict-acheter">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À 95 000 €, cet ensemble de 3 lots présente un ratio coût/valeur exceptionnel (0,66) et un cash-flow positif même dans le pire scénario. Le prix facial de 1 059 €/m² masque le vrai potentiel : une fois rénové, le bien vaut 2 400 €/m². La création de valeur par les travaux (près de 75 k€ de plus-value latente) compense largement le rendement net modeste sur valeur marché (4,5 %). L'absence de compteur sur le duplex et l'incertitude sur les combles sont les deux points de vigilance à lever avant signature. Note : 7,8/10 — À acheter.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 110 000 € (avec un rendement net/valeur cible de 4,0 %)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Absence de compteur individuel sur le duplex — coût de création à faire baisser du prix</li>
+        <li>Travaux de rénovation lourds dans le duplex (32 m²) — devis à chiffrer précisément</li>
+        <li>Combles : surface Carrez réelle inconnue — à faire vérifier avant de valoriser à 12 €/m²</li>
+        <li>3 lots dans une petite copropriété = liquidité réduite à la revente</li>
+        <li>Mandataire I@D France : les honoraires sont à la charge du vendeur, mais la marge de négociation du mandataire est généralement limitée</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices après amortissement)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~7 600 € (8 % dans l'ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 38 740 € (duplex 16 000 € + combles 21 240 € + compteur 1 500 €)</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
