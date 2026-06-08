@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — 2 appartements, Centre, Solliès-Pont (83210)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">2 appartements — Centre, Solliès-Pont (83210)</p>
+  <p class="report-date">Analyse générée le 8 juin 2026</p>
+  <p class="report-source">Source : Logic-Immo — iad France / Camille Calegari</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Rénovation du duplex + location meublée des 2 lots</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">95 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">72 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 319 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">134 100 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">~208 800 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">1 120 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">7,7% / 5,0%</span>
+    </div>
+    <div class="card card-verdict note-8">
+      <span class="card-label">Note</span>
+      <span class="card-value">8,0/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1912" data-lon="6.0420" data-address="Centre, Solliès-Pont (83210)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Solliès-Pont (11 768 hab.) est un bourg périurbain de la vallée du Gapeau, à 14 km de Toulon. Commune résidentielle à l'écart de l'agitation toulonnaise, elle bénéficie d'un cadre de vie calme et d'un bon maillage scolaire, mais son offre de transports reste modeste et sa dépendance à la voiture est forte. La demande locative est soutenue (tension 9/10 selon Trackstone) avec 33,8 % de locataires.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:45%"></div></div>
+        <span class="attr-score">4,5/10</span>
+        <p class="attr-detail">Gare TER, bus ZOU, autoroute A57 à proximité. Pas de transport en commun urbain dense.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6,0/10</span>
+        <p class="attr-detail">Centre-ville avec commerces de proximité, marché, services de santé. Offre correcte sans excès.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7,0/10</span>
+        <p class="attr-detail">6 écoles publiques, 1 école privée, 2 collèges, 1 crèche. Excellent maillage scolaire.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6,0/10</span>
+        <p class="attr-detail">Bourg calme, sentiment de sécurité correct. Ville-dortoir sans problème majeur signalé.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6,0/10</span>
+        <p class="attr-detail">Tension immobilière 9/10, 33,8% de locataires. Bonne demande mais petite ville au bassin limité.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-score">5,0/10</span>
+        <p class="attr-detail">Périurbain, dépendant de l'aire toulonnaise. Revenu médian modeste, peu de grands employeurs locaux.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs travaillant sur Toulon, couples avec enfants cherchant un cadre de vie calme, étudiants en colocation (proximité Université de Toulon à 20 min).</p>
+      <p><strong>Conclusion :</strong> Quartier sans éclat mais sans point noir. L'attractivité est portée par l'équipement scolaire et la demande locative du bassin toulonnais. Le centre-ville est un atout pour la location par rapport aux zones pavillonnaires excentrées.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Location nue en l'état</td>
+          <td>2</td>
+          <td>8,7% / 4,8%</td>
+          <td>~180 000 €</td>
+          <td>0,57</td>
+          <td><span class="badge-faisabilite">Élevée</span></td>
+          <td><span class="badge-risque">Faible</span></td>
+          <td>
+            <div class="adeq-cell">
+              <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:60%"></div></div>
+              <span>6,0</span>
+            </div>
+          </td>
+        </tr>
+        <tr class="strategy-selected">
+          <td>Rénovation duplex + meublé 2 lots</td>
+          <td>2</td>
+          <td>7,7% / 5,0%</td>
+          <td>~208 800 €</td>
+          <td>0,64</td>
+          <td><span class="badge-faisabilite">Élevée</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td>
+            <div class="adeq-cell">
+              <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:60%"></div></div>
+              <span>6,0</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Aménagement combles + 3 lots</td>
+          <td>3</td>
+          <td>7,9% / 5,2%</td>
+          <td>~243 600 €</td>
+          <td>0,66</td>
+          <td><span class="badge-faisabilite">Moyenne</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td>
+            <div class="adeq-cell">
+              <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:60%"></div></div>
+              <span>6,0</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Marchand de biens (rénovation + revente)</td>
+          <td>—</td>
+          <td>Marge ~36%</td>
+          <td>~208 800 €</td>
+          <td>0,64</td>
+          <td><span class="badge-faisabilite">Élevée</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td>
+            <div class="adeq-cell">
+              <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-7" style="width:70%"></div></div>
+              <span>7,0</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La stratégie de rénovation du duplex + location meublée des deux lots offre le meilleur équilibre entre rendement (7,7 % sur prix de revient), création de valeur (ratio 0,64 → forte décote valorisable) et risque maîtrisé. L'option marchand de biens est séduisante sur le papier (marge théorique de 36 %) mais la fiscalité sur la plus-value à court terme et les frais de revente (~5 % d'agence) réduisent significativement le gain net. L'aménagement des combles est trop incertain sans visite préalable. La location nue sans travaux maximise le rendement immédiat mais laisse de la valeur sur la table.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><td>Type</td><td>Immeuble — 2 appartements</td></tr>
+        <tr><td>Adresse</td><td>Centre, Solliès-Pont (83210)</td></tr>
+        <tr><td>Prix affiché</td><td>95 000 € (1 319 €/m²)</td></tr>
+        <tr><td>Surface totale</td><td>72 m²</td></tr>
+        <tr><td>Composition</td><td>1 appartement 40 m² (balcon, bon état) + 1 duplex 32 m² (terrasse, travaux à prévoir)</td></tr>
+        <tr><td>Combles</td><td>17,7 m² (non aménagés)</td></tr>
+        <tr><td>Année de construction</td><td>1945</td></tr>
+        <tr><td>DPE / GES</td><td>C (176 kWh/m²/an) / B (6 kgCO₂/m²/an)</td></tr>
+        <tr><td>Charges copropriété</td><td>240 €/an — Copropriété de 5 lots, pas de procédure en cours</td></tr>
+        <tr><td>Vendeur</td><td>Particulier — Mandat iad France (Camille Calegari)</td></tr>
+        <tr><td>Honoraires</td><td>Charge vendeur</td></tr>
+        <tr><td>Spécificités</td><td>Le duplex n'a pas de compteur électrique individuel (demande en cours auprès de l'urbanisme)</td></tr>
+        <tr><td>Inter-agence</td><td>Accepté</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>13 440 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td>−672 €</td></tr>
+            <tr><td>Charges copropriété</td><td>−240 €</td></tr>
+            <tr><td>Taxe foncière (estimée)</td><td>−800 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−200 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td>11 528 €</td></tr>
+            <tr><td>Amortissement bâti + meubles</td><td>−3 935 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>7 593 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−1 139 €</td></tr>
+            <tr><td><strong>Résultat net annuel</strong></td><td><strong>10 389 €</strong></td></tr>
+            <tr><td>Cash flow mensuel</td><td>866 €</td></tr>
+            <tr><td>Rendement net / prix revient</td><td>7,7 %</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td>5,0 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>14 112 €</td></tr>
+            <tr><td>Vacance (2 %)</td><td>−282 €</td></tr>
+            <tr><td>Charges</td><td>−1 116 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td>12 714 €</td></tr>
+            <tr><td>Amortissement</td><td>−3 935 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>8 779 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−1 317 €</td></tr>
+            <tr><td><strong>Résultat net annuel</strong></td><td><strong>11 397 €</strong></td></tr>
+            <tr><td>Cash flow mensuel</td><td>950 €</td></tr>
+            <tr><td>Rendement net / prix revient</td><td>8,5 %</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td>5,5 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer −10% — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>12 096 €</td></tr>
+            <tr><td>Vacance (12 %)</td><td>−1 452 €</td></tr>
+            <tr><td>Charges (+ travaux imprévus)</td><td>−1 988 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td>8 656 €</td></tr>
+            <tr><td>Amortissement</td><td>−3 935 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>4 721 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−708 €</td></tr>
+            <tr><td><strong>Résultat net annuel</strong></td><td><strong>7 948 €</strong></td></tr>
+            <tr><td>Cash flow mensuel</td><td>662 €</td></tr>
+            <tr><td>Rendement net / prix revient</td><td>5,9 %</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td>3,8 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut annuel</td><td>13 440 €</td><td>14 112 €</td><td>12 096 €</td></tr>
+          <tr><td>Résultat net annuel</td><td>10 389 €</td><td>11 397 €</td><td>7 948 €</td></tr>
+          <tr><td>Cash flow mensuel</td><td>866 €</td><td>950 €</td><td>662 €</td></tr>
+          <tr><td>Rendement net / prix revient</td><td>7,7 %</td><td>8,5 %</td><td>5,9 %</td></tr>
+          <tr><td>Rendement net / valeur marché</td><td>5,0 %</td><td>5,5 %</td><td>3,8 %</td></tr>
+          <tr><td>Taux d'effort (cash flow / loyer)</td><td>77 %</td><td>81 %</td><td>70 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Absence de compteur individuel</td>
+          <td>Le duplex n'a pas de compteur électrique individuel. La demande en cours auprès de l'urbanisme pourrait être refusée ou prendre plusieurs mois, rendant la location impossible en l'état.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Travaux de rénovation</td>
+          <td>Le duplex nécessite des travaux dont l'ampleur réelle n'est pas documentée. Risque de dépassement budgétaire (amiante dans un bâti de 1945, plomberie, électricité).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance locative</td>
+          <td>Solliès-Pont est un marché secondaire avec un bassin de locataires limité (~4 000 locataires). La relocation peut prendre du temps, surtout pour le duplex atypique.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Bâti ancien (1945)</td>
+          <td>DPE C correct, mais un immeuble de 1945 peut cacher des vices structurels ou des coûts d'entretien élevés à moyen terme (ravalement, toiture).</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Marché local limité</td>
+          <td>Le marché immobilier de Solliès-Pont a un indice de représentativité faible (2/5 selon Le Figaro). La revente pourrait être plus longue qu'anticipé.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Urbanisme — compteur</td>
+          <td>La demande de compteur individuel pour le duplex est une alerte : le lot n'a peut-être pas été créé réglementairement ou la division n'est pas conforme au PLU.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict acheter">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À acheter au prix affiché — la décote de 55 % par rapport au prix du marché (1 319 €/m² contre 2 912 €/m²) intègre largement le risque travaux et le problème de compteur. Même dans le scénario pessimiste, le cash flow reste positif (662 €/mois). Le rendement net de 7,7 % sur prix de revient est très au-dessus de la moyenne de Solliès-Pont (4,5 %). À condition de visiter et de chiffrer précisément les travaux du duplex avant l'offre, ce bien coche toutes les cases du value-add locatif.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 115 000 € (au-delà, le rendement net sur prix de revient tombe sous 6,5 %)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Le duplex n'a pas de compteur individuel : coût d'installation à chiffrer et à déduire du prix</li>
+        <li>Travaux de rénovation non chiffrés : obtenir un devis avant l'offre pour calibrer la négociation</li>
+        <li>Ancienneté du bien (1945) : risque de diagnostics complémentaires (amiante, plomb)</li>
+        <li>Marché local peu liquide : argument pour une décote supplémentaire de 5-8 %</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices, amortissement du bâti sur 35 ans et des meubles sur 7 ans)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~7 100 € (7,5 % dans l'ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 32 000 € (rénovation complète du duplex : électricité, plomberie, isolation, finitions)</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
