@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Collobrières, immeuble 4 appartements</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Cœur de village — Collobrières (83610)</p>
+  <p class="report-date">Analyse générée le 9 juin 2026</p>
+  <p class="report-source">Source : SAFTI — Marylène LAURENT (EI, RSAC Draguignan 881 512 990)</p>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location meublée LMNP — 4 lots indépendants</strong> — SCI à l'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">297 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">193 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 539 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">379 275 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">386 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">2 540 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">6,3% / 6,1%</span>
+    </div>
+    <div class="card card-verdict note-7">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,0/10</span>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.2375" data-lon="6.3089" data-address="Collobrières (83610)"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Collobrières est un village médiéval d'environ 1 800 habitants au cœur du Massif des Maures, à 30 minutes d'Hyères et de la côte. Capitale de la châtaigne, le village vit principalement du tourisme saisonnier, de l'artisanat et de la viticulture. Le cadre de vie est exceptionnel mais l'éloignement des bassins d'emploi pèse sur la demande locative annuelle.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:30%"></div></div>
+        <span class="attr-score">3,0</span>
+        <span class="attr-detail">Voiture indispensable. 30 min d'Hyères, 45 min de Toulon. Pas de gare.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-score">5,0</span>
+        <span class="attr-detail">Boulangerie, épicerie, pharmacie, restaurants. Marché provençal en saison.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:40%"></div></div>
+        <span class="attr-score">4,0</span>
+        <span class="attr-detail">École primaire dans le village. Collège à Bormes-les-Mimosas (25 min).</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:90%"></div></div>
+        <span class="attr-score">9,0</span>
+        <span class="attr-detail">Village paisible, nature omniprésente, authenticité préservée. Aucun problème d'incivilité.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:40%"></div></div>
+        <span class="attr-score">4,0</span>
+        <span class="attr-detail">Faible hors saison. Demande saisonnière l'été (tourisme, châtaigne). Marché étroit.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:30%"></div></div>
+        <span class="attr-score">3,0</span>
+        <span class="attr-detail">Peu d'emplois locaux. Économie saisonnière (tourisme, artisanat, châtaigneraie).</span>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs travaillant à Hyères ou Cuers acceptant 30 min de trajet, retraités en quête de calme, saisonniers été, ou résidence secondaire en location longue durée.</p>
+      <p><strong>Conclusion :</strong> Le cadre de vie est un atout indéniable, mais le marché locatif annuel est structurellement étroit. La rentabilité dépendra de la capacité à capter la demande saisonnière ou à proposer un positionnement prix attractif pour compenser l'éloignement. L'adéquation quartier/bien est moyenne (4,7/10) — le village est magnifique, mais le bassin d'emploi est trop éloigné pour une location longue durée classique.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-retained">
+          <td>LMNP 4 lots</td>
+          <td>4</td>
+          <td>6,3%</td>
+          <td>386 000 €</td>
+          <td><span class="ratio-badge ratio-good">0,98</span></td>
+          <td><span class="badge-faisabilite">Haute</span></td>
+          <td><span class="badge-risque">Moyen</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-4-5" style="width:47%"></div></div><span>4,7</span></div></td>
+        </tr>
+        <tr>
+          <td>Location nue</td>
+          <td>4</td>
+          <td>5,5%</td>
+          <td>386 000 €</td>
+          <td><span class="ratio-badge ratio-good">0,98</span></td>
+          <td><span class="badge-faisabilite">Très haute</span></td>
+          <td><span class="badge-risque">Faible</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-4-5" style="width:45%"></div></div><span>4,5</span></div></td>
+        </tr>
+        <tr>
+          <td>Airbnb saisonnier</td>
+          <td>4</td>
+          <td>8,0% – 10,0%</td>
+          <td>396 000 €</td>
+          <td><span class="ratio-badge ratio-good">0,96</span></td>
+          <td><span class="badge-faisabilite">Moyenne</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-5-5" style="width:55%"></div></div><span>5,5</span></div></td>
+        </tr>
+        <tr>
+          <td>Marchand de biens</td>
+          <td>4</td>
+          <td>Marge ~2%</td>
+          <td>386 000 €</td>
+          <td><span class="ratio-badge ratio-good">0,98</span></td>
+          <td><span class="badge-faisabilite">Haute</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-4" style="width:40%"></div></div><span>4,0</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La stratégie LMNP en 4 lots indépendants est retenue car elle offre le meilleur compromis rendement/risque/gestion. Chaque lot possède ses propres compteurs (eau, électricité), ce qui simplifie la refacturation aux locataires. L'amortissement LMNP permet d'optimiser la fiscalité sur un bien ancien. La location saisonnière (Airbnb) offrirait un rendement supérieur en haute saison mais avec une gestion chronophage, une dépendance à la météo et un risque réglementaire (commune touristique non tendue, quota de 120 jours). Le marchand de biens est exclu : la marge brute potentielle (7 k€) est trop faible — une seule mauvaise surprise en travaux efface le gain.</p>
+    </div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Type</th><td>Immeuble entier, monopropriété</td></tr>
+        <tr><th>Surface totale</th><td>193 m² (42 + 47 + 50 + 54 m²)</td></tr>
+        <tr><th>Lots</th><td>4 appartements : Studio RDC (42 m²), T2 1er (47 m²), T2 2e (50 m²), T3 3e avec mezzanine (54 m²)</td></tr>
+        <tr><th>Construction</th><td>Avant 1945 (pierre traditionnelle probable)</td></tr>
+        <tr><th>État</th><td>Double vitrage (bois et PVC), compteurs séparés, tout à l'égout. Travaux à prévoir (montant non précisé).</td></tr>
+        <tr><th>DPE</th><td>Non communiqué (bâti ancien → probablement E, F ou G)</td></tr>
+        <tr><th>Charges</th><td>Monopropriété — pas de charges de copropriété. Entretien à la charge du propriétaire.</td></tr>
+        <tr><th>Loyers estimés (agent)</th><td>Studio 540 €, T2 1er 600 €, T2 2e 610 €, T3 790 € → Total 2 540 €/mois</td></tr>
+        <tr><th>Vendeur</th><td>Professionnel — SAFTI (Marylène LAURENT, EI)</td></tr>
+        <tr><th>Prix</th><td>297 000 € FAI (honoraires charge vendeur)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 7% — Loyer marché (90% agent) — Provisions standard</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel retenu</td><td>2 286 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>27 432 €</td></tr>
+            <tr><td>Vacance locative (7%)</td><td>−1 920 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−1 000 €</td></tr>
+            <tr><td>Entretien &amp; divers</td><td>−500 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−300 €</td></tr>
+            <tr class="total-row"><td>Résultat net annuel</td><td>23 712 €</td></tr>
+            <tr class="yield-row"><td>Rendement / prix revient</td><td>6,3%</td></tr>
+            <tr class="yield-row"><td>Rendement / valeur marché</td><td>6,1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 3% — Loyer agent — Travaux légers</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel retenu</td><td>2 540 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>30 480 €</td></tr>
+            <tr><td>Vacance locative (3%)</td><td>−914 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−1 000 €</td></tr>
+            <tr><td>Entretien &amp; divers</td><td>−500 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−300 €</td></tr>
+            <tr class="total-row"><td>Résultat net annuel</td><td>27 766 €</td></tr>
+            <tr class="yield-row"><td>Rendement / prix revient</td><td>7,7%</td></tr>
+            <tr class="yield-row"><td>Rendement / valeur marché</td><td>7,2%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 15% — Loyer −25% — Travaux supplémentaires</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel retenu</td><td>1 905 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>22 860 €</td></tr>
+            <tr><td>Vacance locative (15%)</td><td>−3 429 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−1 000 €</td></tr>
+            <tr><td>Entretien &amp; divers</td><td>−500 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−300 €</td></tr>
+            <tr><td>Imprévus travaux</td><td>−3 000 €</td></tr>
+            <tr class="total-row"><td>Résultat net annuel</td><td>14 631 €</td></tr>
+            <tr class="yield-row"><td>Rendement / prix revient</td><td>3,6%</td></tr>
+            <tr class="yield-row"><td>Rendement / valeur marché</td><td>3,8%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Prix de revient</td><td>379 275 €</td><td>359 275 €</td><td>409 275 €</td></tr>
+          <tr><td>Loyer mensuel</td><td>2 286 €</td><td>2 540 €</td><td>1 905 €</td></tr>
+          <tr><td>Vacance</td><td>7%</td><td>3%</td><td>15%</td></tr>
+          <tr><td>Résultat net annuel</td><td>23 712 €</td><td>27 766 €</td><td>14 631 €</td></tr>
+          <tr><td>Rendement net / revient</td><td>6,3%</td><td>7,7%</td><td>3,6%</td></tr>
+          <tr><td>Rendement net / marché</td><td>6,1%</td><td>7,2%</td><td>3,8%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Marché locatif étroit</td><td>Village de 1 800 habitants. Délai de relocation potentiellement long (3-6 mois en hiver).</td><td><span class="severity severity-4">4/5</span></td></tr>
+        <tr><td>Travaux non chiffrés</td><td>« À prévoir » sans devis. Bâti pré-1945 : risque de mauvaise surprise (toiture, structure, électricité).</td><td><span class="severity severity-4">4/5</span></td></tr>
+        <tr><td>DPE probablement dégradé</td><td>Bâti ancien non rénové thermiquement. Risque d'interdiction de location à moyen terme (G en 2025, F en 2028).</td><td><span class="severity severity-4">4/5</span></td></tr>
+        <tr><td>Marché de revente étroit</td><td>Peu d'acheteurs pour un immeuble entier dans un petit village. Liquidité faible.</td><td><span class="severity severity-4">4/5</span></td></tr>
+        <tr><td>Dépendance saisonnière</td><td>L'été masque la réalité du marché annuel. Rentabilité hivernale potentiellement très inférieure.</td><td><span class="severity severity-3">3/5</span></td></tr>
+        <tr><td>Éloignement bassin d'emploi</td><td>30 min minimum pour tout emploi. Filtre fort sur le profil des locataires.</td><td><span class="severity severity-3">3/5</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict verdict-acheter">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">Le bien présente un rendement net correct (6,3% en base) pour un immeuble entier en village médiéval, avec un ratio coût/valeur équilibré (0,98). Le prix au m² (1 539 €) est attractif pour la région. Cependant, trois réserves majeures tempèrent l'enthousiasme : les travaux non chiffrés (« à prévoir » est un euphémisme dangereux sur un bâti pré-1945), le marché locatif structurellement étroit en dehors de la saison estivale, et le DPE probablement dégradé qui pourrait gripper la location à horizon 2028. La note de 7,0/10 reflète un potentiel réel mais un prix d'achat qui n'intègre pas suffisamment ces incertitudes. À titre personnel, je considérerais ce dossier uniquement après une visite approfondie avec un professionnel du bâtiment capable de chiffrer les travaux — et avec une décote sur le prix demandé.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 260 000 € (pour viser 7% de rendement net sur prix de revient en scénario base)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Travaux non chiffrés : exiger un devis ou intégrer une décote de 30-50 k€ dans l'offre</li>
+        <li>DPE probablement mauvais : chiffrer le coût d'une rénovation thermique partielle (isolation combles, VMC)</li>
+        <li>Marché locatif étroit : vérifier le taux de vacance réel dans le village en consultant les annonces de location actives</li>
+        <li>Comparables de vente : rechercher les transactions récentes à Collobrières pour étayer une offre inférieure au prix affiché</li>
+        <li>Bâti pré-1945 : faire vérifier la toiture, l'électricité et la plomberie par un expert avant toute offre ferme</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15% sur les bénéfices, amortissement du bâti)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~22 275 € (7,5% du prix de vente)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 60 000 € (base) — rénovation moyenne : électricité, plomberie, finitions</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
