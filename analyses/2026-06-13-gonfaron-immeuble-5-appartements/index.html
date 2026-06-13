@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Gonfaron, immeuble 5 appartements</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Cœur de village — Gonfaron (83590)</p>
+  <p class="report-date">Analyse générée le 13 juin 2026</p>
+  <p class="report-source">Source : Agence Immobilière Côté Place — Cécile Senejoux Fotsy (RSAC 797 943 974 Draguignan)</p>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location nue longue durée — 5 T2 indépendants</strong> — SCI à l'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">187 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">192 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">974 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">301 960 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">294 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">2 300 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">7,3% / 7,5%</span>
+    </div>
+    <div class="card card-verdict note-7">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,2/10</span>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.3257" data-lon="6.2942" data-address="Gonfaron (83590)"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Gonfaron est un village d'environ 4 350 habitants niché au pied du Massif des Maures, à 12 km du Luc-en-Provence. À mi-chemin entre Toulon (40 km) et Draguignan (35 km), le village vit de l'agriculture (viticulture, oléiculture), de l'artisanat et d'une économie présentielle modeste. Le cadre de vie est paisible mais la dépendance à la voiture et l'éloignement des bassins d'emploi limitent l'attractivité locative permanente.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:30%"></div></div>
+        <span class="attr-score">3,0</span>
+        <span class="attr-detail">Voiture indispensable. Autoroute A57 à 12 km (sortie Le Luc). Pas de gare SNCF dans le village.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-score">5,0</span>
+        <span class="attr-detail">Commerces de proximité en centre-village (boulangerie, épicerie, pharmacie, tabac). Supermarché à Le Luc (12 km).</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-score">5,0</span>
+        <span class="attr-detail">École primaire dans le village. Collège à Le Luc (12 km), lycée à Draguignan (35 km).</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8,0</span>
+        <span class="attr-detail">Village paisible au pied des Maures. Très faible criminalité, environnement naturel préservé.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:40%"></div></div>
+        <span class="attr-score">4,0</span>
+        <span class="attr-detail">Marché locatif étroit (4 350 hab.). Demande modeste, portée par les actifs locaux et saisonniers agricoles.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:30%"></div></div>
+        <span class="attr-score">3,0</span>
+        <span class="attr-detail">Économie villageoise, peu de grands employeurs. Revenu médian modeste. Taux de chômage structurellement élevé.</span>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs, ouvriers agricoles et viticoles, saisonniers, retraités modestes, ménages mono-revenu cherchant un loyer accessible.</p>
+      <p><strong>Conclusion :</strong> Gonfaron n'est pas un marché porteur — la demande locative est structurellement faible et le bassin d'emploi limité. Le positionnement prix bas (loyer < 500 € pour un T2) est adapté au pouvoir d'achat local et constitue le principal levier pour limiter la vacance. La localisation en centre-village améliore l'attractivité pour les locataires sans véhicule.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-retained">
+          <td>Location nue LD</td>
+          <td>5 T2</td>
+          <td>7,5%</td>
+          <td>294 000 €</td>
+          <td><span class="ratio-badge ratio-warning">1,03</span></td>
+          <td><span class="badge-faisabilite good">Haute</span></td>
+          <td><span class="badge-risque medium">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-5-0" style="width:50%"></div></div><span>5,0</span></div></td>
+        </tr>
+        <tr>
+          <td>Location meublée LMNP</td>
+          <td>5 T2</td>
+          <td>7,8%</td>
+          <td>300 000 €</td>
+          <td><span class="ratio-badge ratio-warning">1,05</span></td>
+          <td><span class="badge-faisabilite good">Haute</span></td>
+          <td><span class="badge-risque medium">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-4-5" style="width:45%"></div></div><span>4,5</span></div></td>
+        </tr>
+        <tr>
+          <td>Marchand de biens</td>
+          <td>5 lots</td>
+          <td>N/A</td>
+          <td>294 000 €</td>
+          <td><span class="ratio-badge ratio-danger">1,03*</span></td>
+          <td><span class="badge-faisabilite poor">Faible</span></td>
+          <td><span class="badge-risque high">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-3-0" style="width:30%"></div></div><span>3,0</span></div></td>
+        </tr>
+        <tr>
+          <td>Colocation T2</td>
+          <td>10 chambres</td>
+          <td>8,5%</td>
+          <td>300 000 €</td>
+          <td><span class="ratio-badge ratio-danger">1,06</span></td>
+          <td><span class="badge-faisabilite medium">Moyenne</span></td>
+          <td><span class="badge-risque high">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-4-0" style="width:40%"></div></div><span>4,0</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location nue longue durée est la stratégie la plus adaptée au profil du bien et du marché. La division en 5 T2 indépendants avec compteurs séparés permet une gestion locative simple et un risque de vacance mutualisé (un départ ne vide pas l'immeuble). Le meublé LMNP améliorerait le rendement via des loyers majorés et l'amortissement du mobilier, mais dans un village rural, la demande pour du meublé est structurellement plus faible et le turn-over plus élevé. La revente à la découpe est exclue : le ratio coût/valeur montre qu'on investit déjà plus que la valeur de marché post-rénovation — pas de marge de revente. La colocation aggraverait encore un ratio déjà tendu tout en complexifiant la gestion.</p>
+    </div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Gonfaron (83590) — Centre village</td></tr>
+        <tr><th>Type</th><td>Immeuble de rapport — R+2 + combles + cave</td></tr>
+        <tr><th>Surface totale</th><td>192 m² (dont ~140 m² habitables répartis en 5 T2 de ~28 m²)</td></tr>
+        <tr><th>Année de construction</th><td>1900</td></tr>
+        <tr><th>DPE</th><td>Vierge (bien antérieur à 1948)</td></tr>
+        <tr><th>Étage</th><td>R+2 — Sans ascenseur</td></tr>
+        <tr><th>Composition</th><td>5 appartements T2 d'environ 28 m² : 1 au RDC avec accès cour, 2 au 1er étage, 2 au 2e étage</td></tr>
+        <tr><th>Annexes</th><td>Cave en sous-sol, cour extérieure traversante d'environ 40 m²</td></tr>
+        <tr><th>Combles</th><td>Non aménageables</td></tr>
+        <tr><th>Compteurs</th><td>4 compteurs électriques indépendants, 1 compteur d'eau unique</td></tr>
+        <tr><th>Occupation</th><td>1 appartement loué 400 €/mois — départ prévu septembre 2026</td></tr>
+        <tr><th>Toiture</th><td>Très bon état (selon annonce)</td></tr>
+        <tr><th>État général</th><td>Rénovation nécessaire — travaux d'ampleur à prévoir</td></tr>
+        <tr><th>Vendeur</th><td>Particulier — Agence Côté Place</td></tr>
+        <tr><th>Honoraires</th><td>À la charge du vendeur</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché — Charges estimées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">27 600 €</td></tr>
+            <tr><td>Vacance locative (5%)</td><td class="num">−1 380 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num">−1 200 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">−400 €</td></tr>
+            <tr><td>Entretien courant</td><td class="num">−1 500 €</td></tr>
+            <tr class="separator"><td>Résultat avant amortissement</td><td class="num">23 120 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td class="num">−8 556 €</td></tr>
+            <tr><td>Amortissement travaux (15 ans)</td><td class="num">−6 667 €</td></tr>
+            <tr class="separator"><td>Résultat fiscal</td><td class="num">7 897 €</td></tr>
+            <tr><td>IS (15%)</td><td class="num">−1 185 €</td></tr>
+            <tr class="total"><td>Cash flow net annuel</td><td class="num">21 935 €</td></tr>
+            <tr class="total"><td>Rendement net / valeur marché</td><td class="num">7,5%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% (484 €/mois) — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">29 040 €</td></tr>
+            <tr><td>Vacance locative (2%)</td><td class="num">−581 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num">−1 080 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">−360 €</td></tr>
+            <tr><td>Entretien courant</td><td class="num">−1 350 €</td></tr>
+            <tr class="separator"><td>Résultat avant amortissement</td><td class="num">25 669 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td class="num">−8 556 €</td></tr>
+            <tr><td>Amortissement travaux (15 ans)</td><td class="num">−6 667 €</td></tr>
+            <tr class="separator"><td>Résultat fiscal</td><td class="num">10 446 €</td></tr>
+            <tr><td>IS (15%)</td><td class="num">−1 567 €</td></tr>
+            <tr class="total"><td>Cash flow net annuel</td><td class="num">24 102 €</td></tr>
+            <tr class="total"><td>Rendement net / valeur marché</td><td class="num">8,2%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer −10% (414 €/mois) — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">24 840 €</td></tr>
+            <tr><td>Vacance locative (12%)</td><td class="num">−2 981 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num">−1 440 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">−480 €</td></tr>
+            <tr><td>Entretien courant</td><td class="num">−1 800 €</td></tr>
+            <tr><td>Provisions travaux imprévus</td><td class="num">−5 000 €</td></tr>
+            <tr class="separator"><td>Résultat avant amortissement</td><td class="num">13 139 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td class="num">−8 556 €</td></tr>
+            <tr><td>Amortissement travaux (15 ans)</td><td class="num">−6 667 €</td></tr>
+            <tr class="separator"><td>Résultat fiscal</td><td class="num">−2 084 €</td></tr>
+            <tr><td>IS (15%)</td><td class="num">0 €</td></tr>
+            <tr class="total"><td>Cash flow net annuel</td><td class="num">13 139 €</td></tr>
+            <tr class="total"><td>Rendement net / valeur marché</td><td class="num">4,5%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut annuel</td><td>27 600 €</td><td>29 040 €</td><td>24 840 €</td></tr>
+          <tr><td>Résultat net avant IS</td><td>23 120 €</td><td>25 669 €</td><td>13 139 €</td></tr>
+          <tr><td>Cash flow après IS</td><td>21 935 €</td><td>24 102 €</td><td>13 139 €</td></tr>
+          <tr><td>Rendement net / prix de revient</td><td>7,3%</td><td>8,0%</td><td>4,4%</td></tr>
+          <tr><td>Rendement net / valeur marché</td><td>7,5%</td><td>8,2%</td><td>4,5%</td></tr>
+          <tr><td>Taux d'effort locataire*</td><td>29%</td><td>30%</td><td>26%</td></tr>
+        </tbody>
+      </table>
+      <p class="table-footnote">* Taux d'effort estimé sur un SMIC net (1 426 €/mois). Un taux > 33% signalerait un risque de solvabilité.</p>
+    </div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vacance locative</td>
+          <td>Marché locatif étroit dans un village de 4 350 habitants. Un T2 peut rester vide plusieurs mois, surtout les lots en étage sans ascenseur.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Sous-estimation des travaux</td>
+          <td>Immeuble de 1900. Mauvaises surprises probables (plomb, structure, amiante, normes électriques). L'enveloppe de 100 000 € est un budget fonctionnel — tout dépassement dégrade directement le ratio coût/valeur.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>DPE & interdiction locative</td>
+          <td>DPE vierge. Après rénovation, le classement pourrait être D ou E. Sans isolation thermique lourde (non budgétée), le bien reste exposé au risque d'interdiction de location à horizon 2028-2034 selon le calendrier DPE.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Liquidité de revente</td>
+          <td>Gonfaron n'est pas un marché liquide. Revendre un immeuble de rapport rénové dans un village rural peut prendre 12-24 mois. La valeur de marché estimée à 294 000 € est théorique — le prix réel dépendra de la rencontre d'un acheteur.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Entretien structurel</td>
+          <td>Immeuble entier = pas de copropriété pour mutualiser les gros travaux. Toiture, façade, parties communes : 100% à la charge du propriétaire. La toiture est annoncée en bon état, ce qui réduit le risque à court terme.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict acheter">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À 187 000 €, le prix est proche de l'équilibre. Le ratio coût/valeur de 1,03 signifie qu'on investit légèrement plus que la valeur de marché post-rénovation — ce n'est pas une création de valeur immédiate, mais le rendement locatif net de 7,5% (sur valeur marché) compense ce léger surcoût. Le vrai levier est la maîtrise du budget travaux : chaque tranche de 10 000 € économisée améliore le ratio de 0,03 point et fait gagner 0,3 point de rendement. La négociation du prix d'achat à 175 000-180 000 € offrirait une marge de sécurité appréciable. Dans un marché où les immeubles de rapport à moins de 200 000 € sont rares, le bien mérite une visite pour affiner le diagnostic travaux.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 180 000 € (ratio coût/valeur = 1,00)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Immeuble nécessitant une rénovation lourde — chiffrer les travaux et présenter un devis pour justifier une offre à 175 000 €</li>
+        <li>DPE vierge = incertitude réglementaire — l'acheteur prend le risque d'une interdiction locative future</li>
+        <li>Marché de Gonfaron peu liquide — le vendeur peut attendre longtemps un autre acheteur pour un immeuble entier à rénover</li>
+        <li>1 seul compteur d'eau = individualisation à prévoir en travaux</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15% sur les bénéfices, amortissement du bâti sur 30 ans et des travaux sur 15 ans)</p>
+      <p><strong>Estimation frais de notaire :</strong> 14 960 € (8% — achat dans l'ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 100 000 € (rénovation fonctionnelle de 140 m² habitables à ~714 €/m² — électricité, plomberie, cloisons, sols, peinture, 5 salles d'eau, 5 cuisines)</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
