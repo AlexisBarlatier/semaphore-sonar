@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Saint-Jean-du-Var, Toulon (83000)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Saint-Jean-du-Var, 83000 Toulon</p>
+  <p class="report-date">Analyse générée le 15 juin 2026</p>
+  <p class="report-source">Source : LeBonCoin — Particulier</p>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Colocation meublée 3 chambres — étudiants</strong> — SCI à l'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">132 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">85 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 553 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">201 240 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">204 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">1 380 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">5,2% / 5,1%</span>
+    </div>
+    <div class="card card-verdict note-7">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,1/10</span>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.13" data-lon="5.98" data-address="Saint-Jean-du-Var, 83000 Toulon"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité du quartier — Focus colocation étudiante</h2>
+    <p class="attractiveness-intro">Saint-Jean-du-Var est un quartier résidentiel de l'est toulonnais, stratégiquement situé entre le centre-ville (3 km), le campus de La Garde (6 km) et l'hôpital Sainte-Musse. Commerces, bus et commodités à pied — un positionnement pertinent pour de la colocation étudiante, notamment pour les étudiants en médecine (stages à l'hôpital) et les filières universitaires.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Bus Réseau Mistral vers centre et campus La Garde</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces &amp; services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p class="attr-detail">Nombreux commerces, supermarché, boulangeries</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Proximité universitaire</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p class="attr-detail">Campus La Garde à 15-20 min, Fac de Droit à 10 min, Hôpital à 5 min</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité &amp; cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Quartier résidentiel calme, bonne réputation</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative étudiante</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p class="attr-detail">Université de Toulon ~10 000 étudiants, marché tendu</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Toulon, pôle régional, hôpital comme employeur de proximité</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Étudiants de l'Université de Toulon (toutes filières), étudiants en médecine/stages à l'hôpital Sainte-Musse, jeunes actifs. Colocation de 3 avec budget ~450-500 €/mois par chambre.</p>
+      <p><strong>Conclusion :</strong> Adéquation coloc étudiante de 7,4/10. Saint-Jean-du-Var coche les bonnes cases : bus directs vers les campus, commerces à pied, loyer abordable pour des étudiants. Le seul bémol est l'absence de métro/tram — le bus reste le mode de transport principal, ce qui peut freiner certains étudiants habitués aux grandes villes universitaires.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Le bien est vendu « à rénover entièrement », ce qui ouvre plusieurs stratégies. La ligne verte indique celle retenue.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Location nue classique</td>
+          <td>1</td>
+          <td>3,5%</td>
+          <td>204 000 €</td>
+          <td><span class="ratio-badge ratio-good">0,91</span></td>
+          <td><span class="badge-faisabilite">3-4 mois</span></td>
+          <td><span class="badge-risque">Faible</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-orange" style="width:62%"></span></span>6,2</span></td>
+        </tr>
+        <tr class="strategy-selected">
+          <td>Colocation meublée 3 chambres</td>
+          <td>1</td>
+          <td>5,2%</td>
+          <td>204 000 €</td>
+          <td><span class="ratio-badge ratio-neutral">0,99</span></td>
+          <td><span class="badge-faisabilite">4-6 mois</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-green" style="width:74%"></span></span>7,4</span></td>
+        </tr>
+        <tr>
+          <td>Colocation meublée 2 chambres</td>
+          <td>1</td>
+          <td>3,8%</td>
+          <td>204 000 €</td>
+          <td><span class="ratio-badge ratio-neutral">1,01</span></td>
+          <td><span class="badge-faisabilite">3-5 mois</span></td>
+          <td><span class="badge-risque">Faible</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-green" style="width:72%"></span></span>7,2</span></td>
+        </tr>
+        <tr>
+          <td>Marchand de biens</td>
+          <td>1</td>
+          <td>—</td>
+          <td>221 000 €</td>
+          <td><span class="ratio-badge ratio-neutral">0,96</span></td>
+          <td><span class="badge-faisabilite">4-6 mois</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-orange" style="width:65%"></span></span>6,5</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La <strong>colocation meublée 3 chambres</strong> est la seule stratégie qui donne un rendement acceptable (5,2%) sur cet appartement. La location nue classique tombe à 3,5% — insuffisant. Le secret est dans le différentiel de loyer : 1 105 €/mois en nu contre 1 380 € en coloc meublée (+25%), pour un surcoût travaux d'environ 15 k€. L'aménagement consiste à convertir le salon de 20+ m² en 3ᵉ chambre (le séjour devient la cuisine ouverte sur l'entrée), équiper les 3 chambres en meublé, et refaire cuisine + SdB. Le régime SCI à l'IS est retenu car il offre un cash flow supérieur de 69 €/mois au LMNP Réel dans notre simulation (869 € vs 800 €). Le ratio coût/valeur de 0,99 est neutre — on ne crée pas de valeur mais on n'en détruit pas non plus, ce qui est acceptable pour du locatif pur.</p>
+    </div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Saint-Jean-du-Var, 83000 Toulon (adresse exacte non communiquée)</td></tr>
+        <tr><th>Type</th><td>Appartement T2 — 3ᵉ étage avec ascenseur</td></tr>
+        <tr><th>Surface</th><td>85 m²</td></tr>
+        <tr><th>Composition actuelle</th><td>Entrée 13 m², 2 chambres (15 m² + 11,5 m²) sur balcon, salon plein sud, cuisine séparée + loggia, SdB</td></tr>
+        <tr><th>Projet coloc</th><td>3 chambres meublées (~15 m², 13 m², 14 m²) + cuisine ouverte + SdB</td></tr>
+        <tr><th>Étage</th><td>3ᵉ avec ascenseur</td></tr>
+        <tr><th>État</th><td>À rénover entièrement</td></tr>
+        <tr><th>DPE</th><td>Non communiqué</td></tr>
+        <tr><th>Annexes</th><td>Cave + possibilité garage en supplément</td></tr>
+        <tr><th>Charges copro estimées</th><td>~1 800 €/an (immeuble avec ascenseur)</td></tr>
+        <tr><th>Taxe foncière estimée</th><td>~1 200 €/an</td></tr>
+        <tr><th>Prix affiché</th><td>132 000 € (1 553 €/m²) — vendeur particulier</td></tr>
+        <tr><th>Source</th><td>LeBonCoin</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS (Colocation meublée 3 ch.)</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — 3×460 €/mois — Charges standard</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>1 380 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>16 560 €</td></tr>
+            <tr><td>Vacance (5%)</td><td>−828 €</td></tr>
+            <tr><td>Charges copropriété</td><td>−1 800 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−1 200 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−400 €</td></tr>
+            <tr><td>Gestion (6%)</td><td>−994 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−4 968 €</td></tr>
+            <tr class="result-line"><td>Résultat fiscal</td><td>6 370 €</td></tr>
+            <tr><td>IS (15%)</td><td>−956 €</td></tr>
+            <tr class="result-line"><td>Cash flow annuel net</td><td>10 382 €</td></tr>
+            <tr class="result-line highlight"><td>Cash flow mensuel</td><td>865 €</td></tr>
+            <tr><td>Rendement / prix revient</td><td>5,2%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td>5,1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 3% — Loyer +8% (3×497 €) — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>1 490 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>17 885 €</td></tr>
+            <tr><td>Vacance (3%)</td><td>−537 €</td></tr>
+            <tr><td>Charges</td><td>−3 955 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−4 968 €</td></tr>
+            <tr class="result-line"><td>Résultat fiscal</td><td>8 425 €</td></tr>
+            <tr><td>IS (15%)</td><td>−1 264 €</td></tr>
+            <tr class="result-line"><td>Cash flow annuel net</td><td>12 129 €</td></tr>
+            <tr class="result-line highlight"><td>Cash flow mensuel</td><td>1 011 €</td></tr>
+            <tr><td>Rendement / prix revient</td><td>6,0%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td>5,9%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 15% — Loyer −12% — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>1 214 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>14 573 €</td></tr>
+            <tr><td>Vacance (15%)</td><td>−2 186 €</td></tr>
+            <tr><td>Charges</td><td>−5 273 €</td></tr>
+            <tr><td>Travaux imprévus</td><td>−2 000 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−4 968 €</td></tr>
+            <tr class="result-line"><td>Résultat fiscal</td><td>146 €</td></tr>
+            <tr><td>IS (15%)</td><td>−22 €</td></tr>
+            <tr class="result-line"><td>Cash flow annuel net</td><td>5 092 €</td></tr>
+            <tr class="result-line highlight"><td>Cash flow mensuel</td><td>424 €</td></tr>
+            <tr><td>Rendement / prix revient</td><td>2,5%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td>2,5%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Loyer mensuel</td><td>1 380 €</td><td>1 490 €</td><td>1 214 €</td></tr>
+          <tr><td>Cash flow mensuel après IS</td><td>865 €</td><td>1 011 €</td><td>424 €</td></tr>
+          <tr><td>Rendement net / prix revient</td><td>5,2%</td><td>6,0%</td><td>2,5%</td></tr>
+          <tr><td>Rendement net / valeur marché</td><td>5,1%</td><td>5,9%</td><td>2,5%</td></tr>
+          <tr><td>Loyer / chambre / mois</td><td>460 €</td><td>497 €</td><td>405 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DPE inconnu</td>
+          <td>Aucun DPE communiqué. Si le bien est classé E, F ou G, obligation de travaux énergétiques qui alourdiraient le budget rénovation. Exiger le diagnostic avant offre.</td>
+          <td><span class="severity severity-3">● ● ● ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Rotation locative étudiante</td>
+          <td>La colocation étudiante implique un turnover annuel ou bisannuel. Vacance structurelle de 5% en Base Case, mais un scénario à 15% est plausible en cas de départ simultané des 3 colocataires hors période de rentrée.</td>
+          <td><span class="severity severity-3">● ● ● ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Rénovation complète — dépassement</td>
+          <td>« À rénover entièrement » sur 85 m². Budget estimé à 60 000 € (706 €/m²). Si électricité, plomberie ou fenêtres sont à reprendre intégralement, l'enveloppe peut grimper à 85 000 €, ce qui ferait basculer le ratio au-dessus de 1,0.</td>
+          <td><span class="severity severity-2">● ● ○ ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Ratio coût/valeur limite</td>
+          <td>À 0,99, le ratio est neutre. Toute dérive du budget travaux fait passer l'opération en destruction de valeur. La marge de sécurité est inexistante.</td>
+          <td><span class="severity severity-2">● ● ○ ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Charges copropriété</td>
+          <td>Immeuble avec ascenseur : charges estimées à 1 800 €/an mais peuvent être plus élevées si travaux de copropriété votés ou ascenseur vieillissant. À vérifier sur les 3 derniers PV d'AG.</td>
+          <td><span class="severity severity-2">● ● ○ ○ ○</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict acheter">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">On achète — mais avec une maîtrise stricte du budget travaux. À 132 000 € (1 553 €/m²), cet appartement de 85 m² à Toulon Saint-Jean-du-Var a un vrai potentiel en colocation étudiante. La localisation est pertinente : à mi-chemin entre le campus de La Garde (6 km) et la Fac de Droit du centre-ville (3 km), avec l'hôpital Sainte-Musse à 5 min pour les étudiants en médecine. Une fois rénové et aménagé en 3 chambres meublées, le loyer projeté de 1 380 €/mois (3×460 €) délivre un rendement net de 5,2% en SCI IS et un cash flow de 865 €/mois.</p>
+      <p>Le point critique est la rénovation : le budget de 60 000 € (706 €/m²) est tendu pour du « tout à refaire ». Une offre à <strong>125 000 €</strong> (−5%) sécuriserait l'opération en ramenant le ratio à 0,94 et le rendement à 5,5%. Le DPE est le grand inconnu — s'il sort en E ou pire, provisionner 10-15 k€ supplémentaires pour l'isolation. La rotation étudiante est un risque structurel mais maîtrisable si le bien est bien positionné (propreté, prix, proximité bus).</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 125 000 € (offre conseillée), acceptable jusqu'à 132 000 € si DPE &ge; D et travaux maîtrisés</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li><strong>« À rénover entièrement » :</strong> le vendeur l'écrit lui-même. Chiffrer le coût réel des travaux (60-80 k€) et le présenter comme argument de négociation frontal.</li>
+        <li><strong>DPE manquant :</strong> exiger le diagnostic. L'absence de DPE dans l'annonce pour un bien à rénover est un signal faible — le vendeur anticipe probablement une mauvaise note.</li>
+        <li><strong>Charges de copropriété :</strong> demander les 3 derniers PV d'AG pour vérifier l'absence de gros travaux votés et le niveau réel des charges.</li>
+        <li><strong>Garage :</strong> s'il est disponible à prix raisonnable (&lt; 10 000 €), l'acquérir pour le louer séparément (~50-80 €/mois) ou le revendre.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'Impôt sur les Sociétés (IS 15% + amortissement du bâti)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~9 240 € (7%)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 60 000 € (rénovation complète + aménagement 3 chambres meublées)</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
