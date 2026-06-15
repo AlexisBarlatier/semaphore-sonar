@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Centre, Le Luc (83340)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Centre, 83340 Le Luc</p>
+  <p class="report-date">Analyse générée le 15 juin 2026</p>
+  <p class="report-source">Source : Logic-Immo — iad France, Cendrine Boucly</p>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location nue en l'état (3 appartements, 2 déjà loués)</strong> — SCI à l'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">215 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">167,8 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 281 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">245 050 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">302 040 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">1 755 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">5,3% / 4,3%</span>
+    </div>
+    <div class="card card-verdict note-8">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,9/10</span>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.39" data-lon="6.31" data-address="Centre, 83340 Le Luc"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Le Luc-en-Provence (11 000 hab.) est une commune du Var intérieur, entre Brignoles et Draguignan. Centre-ville calme avec commerces de proximité, gare SNCF sur l'axe Marseille-Nice et accès direct à l'A8. Marché immobilier abordable, adapté à un investissement locatif de rendement.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Gare SNCF Le Luc-et-Le Cannet, A8 à 5 min</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces &amp; services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Centre-ville avec commerces de base, supermarché</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles &amp; crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Écoles dans la commune, collège à proximité</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité &amp; cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p class="attr-detail">Petite ville provençale tranquille, rue calme</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Demande de logements abordables, 2 lots déjà loués</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-score">5/10</span>
+        <p class="attr-detail">Économie rurale et résidentielle, peu dynamique</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Actifs modestes, ouvriers, employés, jeunes ménages — public recherchant un logement abordable avec accès gare et autoroute pour les trajets domicile-travail.</p>
+      <p><strong>Conclusion :</strong> Quartier sans éclat mais fonctionnel (6,8/10). L'attractivité modérée est compensée par un prix d'entrée très bas (1 281 €/m²) qui permet d'atteindre un rendement net supérieur à 5%. Le risque de vacance est maîtrisé : 2 lots sur 3 sont déjà occupés avec des baux récents.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-selected">
+          <td>Location nue en l'état</td>
+          <td>3</td>
+          <td>5,3%</td>
+          <td>302 040 €</td>
+          <td><span class="ratio-badge ratio-good">0,81</span></td>
+          <td><span class="badge-faisabilite">Immédiate</span></td>
+          <td><span class="badge-risque">Faible</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-green" style="width:71%"></span></span>7,1</span></td>
+        </tr>
+        <tr>
+          <td>Rénovation + location nue</td>
+          <td>3</td>
+          <td>4,7%</td>
+          <td>302 040 €</td>
+          <td><span class="ratio-badge ratio-neutral">0,93</span></td>
+          <td><span class="badge-faisabilite">3-6 mois</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-green" style="width:71%"></span></span>7,1</span></td>
+        </tr>
+        <tr>
+          <td>Rénovation + meublé</td>
+          <td>3</td>
+          <td>5,5%</td>
+          <td>302 040 €</td>
+          <td><span class="ratio-badge ratio-neutral">0,96</span></td>
+          <td><span class="badge-faisabilite">4-8 mois</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-green" style="width:71%"></span></span>7,1</span></td>
+        </tr>
+        <tr>
+          <td>Marchand de biens</td>
+          <td>3</td>
+          <td>—</td>
+          <td>335 600 €</td>
+          <td><span class="ratio-badge ratio-good">0,83</span></td>
+          <td><span class="badge-faisabilite">6-9 mois</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-orange" style="width:66%"></span></span>6,6</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La stratégie <strong>location nue en l'état</strong> est la gagnante : 2 appartements sont déjà loués avec des baux récents (déc. 2024 et avril 2025), le 3ᵉ est à relouer rapidement. Les loyers actuels (1 755 €/mois) sont déjà alignés sur le marché (10,5 €/m²). Investir 50 k€ de rénovation pour gagner ~7 €/mois de loyer supplémentaire serait une erreur d'allocation de capital — le ratio coût/valeur passerait de 0,81 à 0,93 sans amélioration du rendement. La piste meublée (S3) est séduisante fiscalement (amortissement meubles) mais les 10 k€ de mobilier dégradent le ratio à 0,96 pour un gain de rendement marginal (+0,2 points). Le marchand de biens offre une plus-value théorique de ~55 k€ mais expose à la fiscalité des plus-values et au risque de marché — à réserver pour un second temps si le marché local s'apprécie.</p>
+    </div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Centre, 83340 Le Luc (adresse exacte non communiquée)</td></tr>
+        <tr><th>Type</th><td>Immeuble 3 niveaux — 3 appartements</td></tr>
+        <tr><th>Surface habitable</th><td>167,8 m²</td></tr>
+        <tr><th>Année construction</th><td>1949</td></tr>
+        <tr><th>Composition</th><td>T4 duplex 76,5 m² (RDC) + T2 47,5 m² (1ᵉʳ) + T2 43,8 m² (2ᵉ)</td></tr>
+        <tr><th>Annexes</th><td>Garage 24 m², terrasse, jardin ~50 m², remise, cave</td></tr>
+        <tr><th>Occupation</th><td>2 lots loués (T4 750 € + T2 520 €), 1 T2 vacant (ex-485 €)</td></tr>
+        <tr><th>DPE</th><td>D (246 kWh/m²/an) — GES B (7 kgCO₂/m²/an)</td></tr>
+        <tr><th>État</th><td>Rénovation nécessaire — double vitrage bois et tableaux électriques récents déjà posés</td></tr>
+        <tr><th>Taxe foncière</th><td>2 847 €/an</td></tr>
+        <tr><th>Prix affiché</th><td>215 000 € (1 281 €/m²) — honoraires vendeur</td></tr>
+        <tr><th>Agence</th><td>iad France — Cendrine Boucly (RSAC 850056078)</td></tr>
+        <tr><th>Référence</th><td>251KU9JRWURB</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer 1 755 €/mois — Charges standard</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>1 755 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>21 060 €</td></tr>
+            <tr><td>Vacance (5%)</td><td>−1 053 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−2 847 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−300 €</td></tr>
+            <tr><td>Entretien courant</td><td>−1 500 €</td></tr>
+            <tr><td>Gestion (5%)</td><td>−1 053 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−5 700 €</td></tr>
+            <tr class="result-line"><td>Résultat fiscal</td><td>8 607 €</td></tr>
+            <tr><td>IS (15%)</td><td>−1 291 €</td></tr>
+            <tr class="result-line"><td>Cash flow annuel net</td><td>13 016 €</td></tr>
+            <tr class="result-line highlight"><td>Cash flow mensuel</td><td>1 085 €</td></tr>
+            <tr><td>Rendement / prix revient</td><td>5,3%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td>4,3%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>1 843 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>22 113 €</td></tr>
+            <tr><td>Vacance (2%)</td><td>−442 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−2 562 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−270 €</td></tr>
+            <tr><td>Entretien courant</td><td>−1 350 €</td></tr>
+            <tr><td>Gestion (5%)</td><td>−1 106 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−5 700 €</td></tr>
+            <tr class="result-line"><td>Résultat fiscal</td><td>10 683 €</td></tr>
+            <tr><td>IS (15%)</td><td>−1 602 €</td></tr>
+            <tr class="result-line"><td>Cash flow annuel net</td><td>14 781 €</td></tr>
+            <tr class="result-line highlight"><td>Cash flow mensuel</td><td>1 232 €</td></tr>
+            <tr><td>Rendement / prix revient</td><td>6,0%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td>4,9%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer −10% — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>1 580 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>18 954 €</td></tr>
+            <tr><td>Vacance (12%)</td><td>−2 274 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−3 416 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−360 €</td></tr>
+            <tr><td>Entretien courant</td><td>−1 800 €</td></tr>
+            <tr><td>Gestion (5%)</td><td>−948 €</td></tr>
+            <tr><td>Travaux imprévus</td><td>−3 000 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−5 700 €</td></tr>
+            <tr class="result-line"><td>Résultat fiscal</td><td>1 456 €</td></tr>
+            <tr><td>IS (15%)</td><td>−218 €</td></tr>
+            <tr class="result-line"><td>Cash flow annuel net</td><td>6 238 €</td></tr>
+            <tr class="result-line highlight"><td>Cash flow mensuel</td><td>520 €</td></tr>
+            <tr><td>Rendement / prix revient</td><td>2,5%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td>2,1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Loyer mensuel</td><td>1 755 €</td><td>1 843 €</td><td>1 580 €</td></tr>
+          <tr><td>Cash flow mensuel après IS</td><td>1 085 €</td><td>1 232 €</td><td>520 €</td></tr>
+          <tr><td>Rendement net / prix revient</td><td>5,3%</td><td>6,0%</td><td>2,5%</td></tr>
+          <tr><td>Rendement net / valeur marché</td><td>4,3%</td><td>4,9%</td><td>2,1%</td></tr>
+          <tr><td>Taux d'effort locataire (est.)</td><td>~28%</td><td>~28%</td><td>~25%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DPE D — travaux énergétiques</td>
+          <td>DPE D (246 kWh/m²/an), sous le seuil d'interdiction de location mais à surveiller. Un passage en E ou F d'ici 2028 ou 2034 imposerait des travaux d'isolation.</td>
+          <td><span class="severity severity-2">● ● ○ ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Vacance du T2 1ᵉʳ étage</td>
+          <td>Le T2 de 47,5 m² est actuellement vacant (ex-locataire à 485 €). Remise en location rapide probable compte tenu du prix abordable, mais le délai de relocation et le loyer effectif sont incertains.</td>
+          <td><span class="severity severity-3">● ● ● ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Marché du Luc peu profond</td>
+          <td>11 000 habitants, bassin d'emploi modeste. En cas de départ simultané de 2 locataires, la relocation peut prendre plusieurs mois.</td>
+          <td><span class="severity severity-2">● ● ○ ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Travaux de remise en état</td>
+          <td>15 000 € provisionnés pour travaux légers. Si des défauts structurels sont découverts (charpente 1949, plomberie), l'enveloppe pourrait doubler.</td>
+          <td><span class="severity severity-2">● ● ○ ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Saisonnalité / débroussaillement</td>
+          <td>Le Var impose une obligation légale de débroussaillement. Avec un jardin de 50 m², le risque est faible mais le coût annuel est à prévoir (~200 €).</td>
+          <td><span class="severity severity-1">● ○ ○ ○ ○</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict acheter">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">On achète. À 215 000 € (1 281 €/m²), cet immeuble de 3 appartements au Luc offre un rendement net de 5,3% sur prix de revient après frais et fiscalité — un niveau rare dans le Var actuel. Le prix demandé est déjà sous le plafond théorique de 229 000 € pour un rendement de 5%. Le ratio coût/valeur de 0,81 signifie que l'achat crée 57 000 € de valeur latente dès la signature. Avec 2 lots déjà loués (baux récents déc. 2024 et avril 2025), les revenus sont immédiats et le risque de vacance est contenu. Le DPE D est correct pour un bien de 1949 et les menuiseries double vitrage sont déjà posées. Les travaux nécessaires sont modestes (15 000 € provisionnés). Le point de vigilance principal est la relocation du T2 vacant du 1ᵉʳ étage — une offre à 200 000 € peut se justifier pour couvrir ce risque, mais le prix facial est déjà honnête.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 229 000 € (le prix demandé est déjà 6,6% en dessous)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li><strong>T2 vacant :</strong> un appartement sur trois n'a pas de locataire. Proposer 200 000 € (−7%) en argumentant le manque à gagner immédiat et le risque de relocation.</li>
+        <li><strong>DPE D :</strong> anticiper un renforcement réglementaire futur. Un DPE D en 2026 pourrait passer E en 2034 avec l'évolution des seuils — provisionner 10-15 k€ de travaux énergétiques à moyen terme.</li>
+        <li><strong>Travaux de remise en état :</strong> l'annonce mentionne explicitement « rénovation nécessaire » — utiliser ce terme pour appuyer une décote, même si les travaux réels sont légers.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'Impôt sur les Sociétés (IS 15% + amortissement du bâti)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~15 050 € (7%)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 15 000 € (remise en état légère)</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
