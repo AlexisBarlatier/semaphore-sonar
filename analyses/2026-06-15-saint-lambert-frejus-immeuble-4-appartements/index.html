@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Saint Lambert, Fréjus (83600)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Saint Lambert, 83600 Fréjus</p>
+  <p class="report-date">Analyse générée le 15 juin 2026</p>
+  <p class="report-source">Source : Logic-Immo — ACS IMMOBILIER SAINT-RAPHAEL</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Rénovation + location meublée longue durée (4 appartements)</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">880 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">307 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">2 866 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">1 091 600 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">1 381 500 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">4 912 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">4,0% / 3,2%</span>
+    </div>
+    <div class="card card-verdict note-7">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,4/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.44" data-lon="6.74" data-address="Saint Lambert, 83600 Fréjus"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Saint-Lambert est un quartier résidentiel prisé de Fréjus, à proximité immédiate du centre-ville, des plages et des axes autoroutiers. Le secteur bénéficie d'un cadre de vie méditerranéen recherché, avec commerces, écoles et transports à pied.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p class="attr-detail">Gare SNCF et accès A8 à 5 min, bus urbains</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces &amp; services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p class="attr-detail">Supermarchés, pharmacies, restaurants à proximité</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles &amp; crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p class="attr-detail">Maternelle au lycée dans le quartier, collège à 10 min</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité &amp; cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:75%"></div></div>
+        <span class="attr-score">7,5/10</span>
+        <p class="attr-detail">Quartier calme, police/gendarmerie à proximité</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p class="attr-detail">Ville de 55 000 hab., marché locatif tendu</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Économie résidentielle et touristique, saisonnalité</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs, couples CSP+, retraités aisés — public recherchant un cadre de vie méditerranéen avec accès rapide aux commodités.</p>
+      <p><strong>Conclusion :</strong> Quartier résidentiel établi, bonne attractivité globale (7,8/10). La demande locative est solide, portée par la double dynamique résidentielle et touristique de Fréjus. Le risque principal est la saisonnalité — les rotations peuvent être plus longues en hiver.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Location nue en l'état</td>
+          <td>4</td>
+          <td>3,5%</td>
+          <td>1 289 400 €</td>
+          <td><span class="ratio-badge ratio-good">0,75</span></td>
+          <td><span class="badge-faisabilite">Immédiate</span></td>
+          <td><span class="badge-risque">Faible</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-green" style="width:78%"></span></span>7,8</span></td>
+        </tr>
+        <tr class="strategy-selected">
+          <td>Rénovation + location meublée</td>
+          <td>4</td>
+          <td>4,0%</td>
+          <td>1 381 500 €</td>
+          <td><span class="ratio-badge ratio-good">0,79</span></td>
+          <td><span class="badge-faisabilite">6-9 mois</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-green" style="width:78%"></span></span>7,8</span></td>
+        </tr>
+        <tr>
+          <td>Création 5ᵉ lot (dépendances → studio)</td>
+          <td>5</td>
+          <td>~4,2%</td>
+          <td>1 516 500 €</td>
+          <td><span class="ratio-badge ratio-good">0,74</span></td>
+          <td><span class="badge-faisabilite">Sous autorisation</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-green" style="width:77%"></span></span>7,7</span></td>
+        </tr>
+        <tr>
+          <td>Marchand de biens (revente découpe)</td>
+          <td>4</td>
+          <td>—</td>
+          <td>1 473 600 €</td>
+          <td><span class="ratio-badge ratio-good">0,74</span></td>
+          <td><span class="badge-faisabilite">9-12 mois</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-green" style="width:76%"></span></span>7,6</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La stratégie <strong>rénovation + location meublée</strong> offre le meilleur équilibre rendement/risque/faisabilité. La location nue en l'état est trop peu valorisante pour un bien de ce standing et laisse un rendement anémique (~3,5%). La création d'un 5ᵉ lot est séduisante sur le papier (ratio 0,74) mais dépend d'autorisations d'urbanisme incertaines — à étudier dans un second temps. Le marchand de biens capte bien la valeur mais expose à la fiscalité des plus-values (IR + prélèvements sociaux) et à un risque de marché à la revente. La rénovation complète avec mise en meublé permet d'activer l'amortissement en SCI IS, d'augmenter le loyer au m² (+2 € vs nu), et de positionner le bien sur le segment le plus porteur du marché fréjusien.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Saint Lambert, 83600 Fréjus (adresse exacte non communiquée par l'agence)</td></tr>
+        <tr><th>Type</th><td>Immeuble entier — 4 appartements</td></tr>
+        <tr><th>Surface habitable</th><td>307 m² (306,80 m² après retrait paliers)</td></tr>
+        <tr><th>Surface de plancher</th><td>~330 m²</td></tr>
+        <tr><th>Terrain</th><td>~1 087 m²</td></tr>
+        <tr><th>Terrasses</th><td>79,1 m²</td></tr>
+        <tr><th>Dépendances</th><td>Cuisine extérieure, remises, garage, caves, surfaces annexes</td></tr>
+        <tr><th>Étage</th><td>R+? (immeuble avec tropézienne au dernier niveau)</td></tr>
+        <tr><th>État</th><td>Bon état général d'entretien — travaux de modernisation nécessaires</td></tr>
+        <tr><th>DPE</th><td>Non communiqué par l'agence</td></tr>
+        <tr><th>Prix affiché</th><td>880 000 € (2 866 €/m²) — honoraires vendeur</td></tr>
+        <tr><th>Agence</th><td>ACS IMMOBILIER SAINT-RAPHAEL (RCS 982138588)</td></tr>
+        <tr><th>Référence</th><td>ACS-SR-1198</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer 16 €/m² — Charges standard</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>4 912 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>58 944 €</td></tr>
+            <tr><td>Vacance (5%)</td><td>−2 947 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−3 000 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−500 €</td></tr>
+            <tr><td>Entretien courant</td><td>−2 000 €</td></tr>
+            <tr><td>Gestion (5%)</td><td>−2 947 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−20 400 €</td></tr>
+            <tr><td>Amortissement meubles</td><td>−3 000 €</td></tr>
+            <tr class="result-line"><td>Résultat fiscal</td><td>24 150 €</td></tr>
+            <tr><td>IS (15%)</td><td>−3 622 €</td></tr>
+            <tr class="result-line"><td>Cash flow annuel net</td><td>43 927 €</td></tr>
+            <tr class="result-line highlight"><td>Cash flow mensuel</td><td>3 661 €</td></tr>
+            <tr><td>Rendement / prix revient</td><td>4,0%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td>3,2%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer 17,5 €/m² — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>5 372 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>64 470 €</td></tr>
+            <tr><td>Vacance (2%)</td><td>−1 289 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−2 700 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−450 €</td></tr>
+            <tr><td>Entretien courant</td><td>−1 800 €</td></tr>
+            <tr><td>Gestion (5%)</td><td>−3 224 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−20 400 €</td></tr>
+            <tr><td>Amortissement meubles</td><td>−3 000 €</td></tr>
+            <tr class="result-line"><td>Résultat fiscal</td><td>31 608 €</td></tr>
+            <tr><td>IS (15%)</td><td>−4 741 €</td></tr>
+            <tr class="result-line"><td>Cash flow annuel net</td><td>50 267 €</td></tr>
+            <tr class="result-line highlight"><td>Cash flow mensuel</td><td>4 189 €</td></tr>
+            <tr><td>Rendement / prix revient</td><td>4,6%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td>3,6%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer 13,5 €/m² — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>4 144 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>49 734 €</td></tr>
+            <tr><td>Vacance (12%)</td><td>−5 968 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−3 600 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−600 €</td></tr>
+            <tr><td>Entretien courant</td><td>−2 400 €</td></tr>
+            <tr><td>Gestion (5%)</td><td>−2 487 €</td></tr>
+            <tr><td>Travaux imprévus</td><td>−5 000 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−20 400 €</td></tr>
+            <tr><td>Amortissement meubles</td><td>−3 000 €</td></tr>
+            <tr class="result-line"><td>Résultat fiscal</td><td>6 279 €</td></tr>
+            <tr><td>IS (15%)</td><td>−942 €</td></tr>
+            <tr class="result-line"><td>Cash flow annuel net</td><td>26 937 €</td></tr>
+            <tr class="result-line highlight"><td>Cash flow mensuel</td><td>2 245 €</td></tr>
+            <tr><td>Rendement / prix revient</td><td>2,5%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td>1,9%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Loyer mensuel</td><td>4 912 €</td><td>5 372 €</td><td>4 144 €</td></tr>
+          <tr><td>Cash flow mensuel après IS</td><td>3 661 €</td><td>4 189 €</td><td>2 245 €</td></tr>
+          <tr><td>Rendement net / prix revient</td><td>4,0%</td><td>4,6%</td><td>2,5%</td></tr>
+          <tr><td>Rendement net / valeur marché</td><td>3,2%</td><td>3,6%</td><td>1,9%</td></tr>
+          <tr><td>Taux d'effort locataire (est.)</td><td>~30%</td><td>~33%</td><td>~25%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DPE non communiqué</td>
+          <td>L'agence n'affiche pas le DPE. Si le bien est classé F ou G, des travaux de rénovation énergétique obligatoires pourraient s'ajouter aux 150 k€ prévus, et la location pourrait être restreinte à terme.</td>
+          <td><span class="severity severity-3">● ● ● ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Travaux plus lourds que prévu</td>
+          <td>Immeuble ancien : risques de surprises (amiante, plomb, électricité vétuste, charpente). L'enveloppe de 150 k€ (490 €/m²) est confortable mais un dépassement de 20-30% est possible sur ce type de bien.</td>
+          <td><span class="severity severity-3">● ● ● ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Saisonnalité du marché locatif</td>
+          <td>Fréjus connaît une saisonnalité marquée : rotation plus lente en hiver, tension estivale. La vacance structurelle de 5% en base pourrait être optimiste si les 4 appartements se libèrent simultanément hors saison.</td>
+          <td><span class="severity severity-2">● ● ○ ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Réglementation meublé touristique</td>
+          <td>Évolution du cadre réglementaire sur la location meublée (compensation, quotas, fiscalité). Risque modéré pour de la location longue durée mais à surveiller si une partie du bien bascule en saisonnier.</td>
+          <td><span class="severity severity-2">● ● ○ ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Adresse non communiquée</td>
+          <td>L'agence ne donne pas l'adresse exacte. Impossible de vérifier la localisation précise, l'exposition, le vis-à-vis, ou les nuisances éventuelles avant visite.</td>
+          <td><span class="severity severity-2">● ● ○ ○ ○</span></td>
+        </tr>
+        <tr>
+          <td>Rendement structurellement faible</td>
+          <td>Même en Base Case, le rendement net de 4,0% est inférieur au seuil de 5% généralement recherché pour un investissement locatif avec travaux. Le bien se valorise plus par son potentiel patrimonial que par son cash flow.</td>
+          <td><span class="severity severity-3">● ● ● ○ ○</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">On négocie. Le bien est objectivement de qualité — emplacement recherché, immeuble entier avec cachet, jardin rare sur le secteur, ratio coût/valeur très favorable (0,79). Mais à 880 k€, le rendement locatif net plafonne à 4,0% après travaux, ce qui est insuffisant pour un investisseur qui mobilise plus d'1 M€ de capital. Le prix d'achat absorbe l'essentiel de la valeur créée par la rénovation. Pour atteindre un rendement net de 5% sur prix de revient, il faut ramener le prix d'achat autour de 680 k€ — une décote de 23% que le vendeur n'acceptera probablement pas. Une offre à 735 k€ (−16%) donnerait un rendement de ~4,5%, ce qui est plus défendable compte tenu de la qualité du bien et de son potentiel de valorisation à long terme. En dessous de 735 k€, l'opération commence à avoir du sens pour un investisseur patrimonial qui accepte un rendement modéré en échange d'un actif de qualité dans un quartier établi.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 735 000 € (offre à formuler après visite et vérification du DPE)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li><strong>DPE manquant :</strong> exiger le diagnostic avant toute offre. Un DPE D ou E justifie une décote supplémentaire de 20-30 k€ pour provisionner des travaux énergétiques.</li>
+        <li><strong>Travaux de modernisation :</strong> chiffrer le coût réel des travaux (électricité, plomberie, isolation, cuisine/SDB ×4) et le présenter comme argument de négociation — le vendeur vend un bien « bon état » mais qui nécessite 150 k€ de travaux pour être loué au prix du marché.</li>
+        <li><strong>Rendement facial trompeur :</strong> le prix de 2 866 €/m² semble attractif comparé aux 4 500 €/m² du quartier, mais ce delta est entièrement consommé par les travaux. Le vrai prix de revient au m² est de 3 555 €.</li>
+        <li><strong>Dépendances non valorisées :</strong> le potentiel de création d'un 5ᵉ lot dans les dépendances est un atout, mais conditionné aux autorisations d'urbanisme — ne pas le payer d'avance.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'Impôt sur les Sociétés (IS 15% + amortissement bâti et meubles)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~61 600 € (7%)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 150 000 € (modernisation complète, ~490 €/m²)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
