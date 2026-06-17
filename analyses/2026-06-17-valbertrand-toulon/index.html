@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Valbertrand, Toulon</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Valbertrand, Toulon (83100)</p>
+  <p class="report-date">Analyse générée le 17 juin 2026</p>
+  <p class="report-source">Source : Logic-Immo — Copié-collé par l'utilisateur</p>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location nue 9 lots — immeuble de rapport</strong> — SCI à l'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">652 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">360 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 811 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">730 900 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">1 044 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">5 040 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">5,7% / 4,0%</span>
+    </div>
+    <div class="card card-verdict note-7">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,5/10</span>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.125" data-lon="5.920" data-address="Valbertrand, Toulon (83100)"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Valbertrand est un quartier résidentiel de l'ouest toulonnais, bien desservi et proche du centre-ville. Secteur prisé des familles et actifs pour son cadre de vie et sa proximité avec les commodités.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <span class="attr-score score-8">8/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Bus urbains, gare SNCF Toulon à 10 min, accès A50 rapide. Proximité immédiate des transports selon l'annonce.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <span class="attr-score score-8">8/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Proche centre-ville de Toulon, tous commerces et services accessibles à pied ou en transport.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <span class="attr-score score-8">8/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">École à proximité immédiate selon l'annonce. Crèches et établissements scolaires dans le secteur.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <span class="attr-score score-7">7/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Quartier résidentiel calme. Jardin commun et cabanons = cadre de vie agréable. Valbertrand bien noté sur Ville-Idéale.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <span class="attr-score score-8">8/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Toulon : marché locatif tendu, forte demande. Mix T1-T2-T3 adapté à une large cible (étudiants, actifs, familles).</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <span class="attr-score score-7">7/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Toulon : bassin d'emploi majeur du Var, base navale, hôpital, université. Économie diversifiée.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Étudiants (T1), jeunes actifs et couples (T2), familles (T3). Mix attractif grâce à la diversité des typologies.</p>
+      <p><strong>Conclusion :</strong> Quartier résidentiel bien positionné, proche du centre-ville, avec une forte demande locative. L'immeuble bénéficie d'un emplacement cohérent avec son positionnement de rapport.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour cet immeuble de rapport. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#e8f5e9;">
+          <td><strong>Location nue (SCI IS)</strong></td>
+          <td>9</td>
+          <td>5,7%</td>
+          <td>1 044 000 €</td>
+          <td><span class="ratio-badge ratio-excellent">0,70</span></td>
+          <td><span class="badge-faisabilite green">Excellente</span></td>
+          <td><span class="badge-risque low">Faible</span></td>
+          <td class="adeq-cell">
+            <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-8" style="width:50%"></div></div>
+            <span>7,5</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Revente à la découpe</td>
+          <td>9</td>
+          <td>—</td>
+          <td>1 044 000 €</td>
+          <td><span class="ratio-badge ratio-excellent">0,70</span></td>
+          <td><span class="badge-faisabilite green">Bonne</span></td>
+          <td><span class="badge-risque medium">Modéré</span></td>
+          <td class="adeq-cell">
+            <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-8" style="width:50%"></div></div>
+            <span>7,5</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Colocation meublée</td>
+          <td>9</td>
+          <td>~7,0%</td>
+          <td>1 044 000 €</td>
+          <td><span class="ratio-badge ratio-excellent">0,70</span></td>
+          <td><span class="badge-faisabilite orange">Moyenne</span></td>
+          <td><span class="badge-risque medium">Modéré</span></td>
+          <td class="adeq-cell">
+            <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-7" style="width:50%"></div></div>
+            <span>7,0</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Justification :</strong> La location nue est la stratégie la plus robuste : rendement net de 5,7 % sur prix de revient, cash flow mensuel de ~3 470 €, ratio coût/valeur exceptionnel de 0,70. La revente à la découpe dégagerait une plus-value théorique de ~313 000 € (+43 %), mais impose de gérer la vacance et les frais de commercialisation. La colocation meublée améliorerait le rendement mais complexifie la gestion (9 lots en meublé). La location nue est le meilleur équilibre rendement/simplicité. <strong>Les projections sont calculées sur cette stratégie.</strong></p>
+    </div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Valbertrand, Toulon (83100)</td></tr>
+        <tr><th>Type de bien</th><td>Immeuble de rapport — 9 appartements</td></tr>
+        <tr><th>Type d'opération</th><td>Investissement locatif</td></tr>
+        <tr><th>Prix affiché</th><td>652 000 €</td></tr>
+        <tr><th>Surface totale</th><td>360 m²</td></tr>
+        <tr><th>Prix / m²</th><td>1 811 €/m²</td></tr>
+        <tr><th>Lots</th><td>9 — T1, T2, T3 sur 4 niveaux</td></tr>
+        <tr><th>Extérieurs</th><td>Jardin commun, cabanons</td></tr>
+        <tr><th>État</th><td>Bon état général</td></tr>
+        <tr><th>DPE</th><td>Non communiqué</td></tr>
+        <tr><th>Niveaux</th><td>4</td></tr>
+        <tr><th>Vendeur</th><td>Professionnel (source : Logic-Immo)</td></tr>
+        <tr><th>Occupation</th><td>Non précisée — à vérifier</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières — Location nue (SCI IS)</h2>
+    <p class="attractiveness-intro">Projections basées sur un loyer de 14 €/m² (estimation marché Valbertrand). Les charges incluent taxe foncière, assurance PNO, entretien et gestion. Amortissement du bâti sur 30 ans.</p>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer 14 €/m² — Charges standard</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>60 480 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td>−3 024 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−4 200 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−800 €</td></tr>
+            <tr><td>Entretien (jardin, communs)</td><td>−3 000 €</td></tr>
+            <tr><td>Gestion (5 %)</td><td>−3 024 €</td></tr>
+            <tr><td>Charges totales</td><td>−14 048 €</td></tr>
+            <tr><td>Résultat avant amort.</td><td>43 408 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−14 720 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>28 688 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−4 303 €</td></tr>
+            <tr class="highlight-row"><td>Cash flow net</td><td>39 105 €/an</td></tr>
+            <tr class="highlight-row"><td>/mois</td><td>3 259 €</td></tr>
+            <tr class="highlight-row"><td>Rendement net (revient)</td><td>5,4 %</td></tr>
+            <tr class="highlight-row"><td>Rendement net (marché)</td><td>3,7 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>63 504 €</td></tr>
+            <tr><td>Vacance (2 %)</td><td>−1 270 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−3 780 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−720 €</td></tr>
+            <tr><td>Entretien</td><td>−2 700 €</td></tr>
+            <tr><td>Gestion</td><td>−2 722 €</td></tr>
+            <tr><td>Charges totales</td><td>−11 192 €</td></tr>
+            <tr><td>Résultat avant amort.</td><td>51 042 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−14 720 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>36 322 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−5 448 €</td></tr>
+            <tr class="highlight-row"><td>Cash flow net</td><td>45 594 €/an</td></tr>
+            <tr class="highlight-row"><td>/mois</td><td>3 799 €</td></tr>
+            <tr class="highlight-row"><td>Rendement net (marché)</td><td>4,4 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer −10% — Charges +20% + provisions</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>54 432 €</td></tr>
+            <tr><td>Vacance (12 %)</td><td>−6 532 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−5 040 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−960 €</td></tr>
+            <tr><td>Entretien</td><td>−3 600 €</td></tr>
+            <tr><td>Gestion</td><td>−3 629 €</td></tr>
+            <tr><td>Prov. gros travaux</td><td>−3 000 €</td></tr>
+            <tr><td>Charges totales</td><td>−22 761 €</td></tr>
+            <tr><td>Résultat avant amort.</td><td>25 139 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−14 720 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>10 419 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−1 563 €</td></tr>
+            <tr class="highlight-row"><td>Cash flow net</td><td>23 576 €/an</td></tr>
+            <tr class="highlight-row"><td>/mois</td><td>1 965 €</td></tr>
+            <tr class="highlight-row"><td>Rendement net (marché)</td><td>2,3 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Loyer mensuel brut</td><td>5 040 €</td><td>5 292 €</td><td>4 536 €</td></tr>
+          <tr><td>Charges mensuelles</td><td>1 171 €</td><td>933 €</td><td>1 897 €</td></tr>
+          <tr><td>Cash flow mensuel</td><td>3 259 €</td><td>3 799 €</td><td>1 965 €</td></tr>
+          <tr><td>Rendement net (revient)</td><td>5,4 %</td><td>6,2 %</td><td>3,2 %</td></tr>
+          <tr><td>Rendement net (marché)</td><td>3,7 %</td><td>4,4 %</td><td>2,3 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DPE inconnu</td>
+          <td>Pas de DPE communiqué. Un immeuble ancien peut cacher des passoires thermiques (F/G) → risque d'interdiction de location.</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+        <tr>
+          <td>Situation locative actuelle</td>
+          <td>Non précisée. Si occupé avec des loyers sous le marché, la relocation prendra du temps. Si vacant, risque de vacance initiale.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>Travaux cachés</td>
+          <td>« Bon état global » à faire confirmer par visite. Toiture, façade, installation électrique des parties communes : points de vigilance.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>Gestion multi-lots</td>
+          <td>9 lots = turnover régulier. Charge de gestion significative si géré en direct. Déléguer coûte 5% du revenu brut.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>Prix au m² très attractif</td>
+          <td>1 811 €/m² vs ~2 900 €/m² marché → décote de 38 %. Une décote aussi forte peut cacher un problème (travaux, nuisances, copro). À investiguer.</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict acheter">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>À acheter, sous réserve de visite.</strong> Au prix de 652 000 €, l'immeuble affiche un ratio coût/valeur exceptionnel de 0,70 et un rendement net de 5,4 % sur prix de revient (3 260 €/mois de cash flow). La décote de 38 % sur le prix au m² du marché toulonnais est significative et offre une marge de sécurité confortable. Même en scénario pessimiste (12 % de vacance, charges +20 %), le cash flow reste positif à 1 965 €/mois. La revente à la découpe dégagerait une plus-value potentielle de ~313 000 €. Points de vigilance avant engagement : obtenir le DPE des 9 lots, vérifier la situation locative actuelle, évaluer l'état réel de la toiture et des parties communes, et confirmer l'absence de nuisances expliquant la décote.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> Jusqu'à 750 000 € (le prix demandé laisse une marge de 100 k€)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>DPE probablement médiocre sur un immeuble ancien non rénové → argument pour une décote</li>
+        <li>Travaux de façade/toiture si nécessaires → chiffrer et déduire</li>
+        <li>Situation locative : si locataires en place avec loyers bas → valoriser le manque à gagner</li>
+        <li>Le prix est déjà attractif, la marge de négociation est limitée mais possible (objectif 620-640 k€)</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~48 900 € (7,5 % dans l'ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 30 000 € (rafraîchissement léger, bon état annoncé)</p>
+      <p class="verdict-disclaimer">⚠️ Prix de marché estimés sur la base de la connaissance du secteur — données MeilleursAgents/DVF non disponibles lors de l'analyse. À corroborer avant décision. Visite impérative pour valider l'état réel et la situation locative.</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
