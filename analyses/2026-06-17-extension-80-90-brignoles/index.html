@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Extension Années 80-90, Brignoles</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Extension Années 80-90, Brignoles (83170)</p>
+  <p class="report-date">Analyse générée le 17 juin 2026</p>
+  <p class="report-source">Source : Logic-Immo — Agence Nestenn Brignoles</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Promotion</span>
+    <p>Stratégie retenue : <strong>Promotion — construction 6 lots avec PC accordé</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">650 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">376 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 729 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">1 352 750 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">1 128 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">4 963 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">3,3% / 4,0%</span>
+    </div>
+    <div class="card card-verdict note-5">
+      <span class="card-label">Note</span>
+      <span class="card-value">5,1/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.407" data-lon="6.070" data-address="Extension Années 80-90, Brignoles (83170)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Le quartier Extension Années 80-90 est une zone résidentielle pavillonnaire de Brignoles, calme et familiale (~2 600 habitants). La commune bénéficie d'un bon positionnement dans le Var intérieur, avec accès autoroutier (A8) et gare SNCF.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <span class="attr-score score-6">6/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Gare SNCF à 2 km, accès A8 à 5 km. Bus urbains. Pas de transport en commun lourd.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <span class="attr-score score-7">7/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Centre-ville et zone commerciale à moins de 3 km. Commerces de proximité dans le quartier.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <span class="attr-score score-7">7/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Écoles maternelles et primaires à Brignoles, collège et lycée. Crèches disponibles.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <span class="attr-score score-7">7/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Quartier calme selon KelQuartier. Cadre de vie agréable, majorité de couples et célibataires.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <span class="attr-score score-6">6/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Marché locatif modérément tendu. Brignoles n'est pas en pénurie mais la demande est stable.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <span class="attr-score score-5">5/10</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Brignoles : sous-préfecture du Var, 17 000 hab. Économie locale modérée, taux de chômage ~12%.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Familles, jeunes actifs et couples recherchant un cadre de vie calme à prix modéré dans le Var intérieur.</p>
+      <p><strong>Conclusion :</strong> Quartier résidentiel correct sans être premium. L'attractivité est suffisante pour de la location longue durée classique mais ne justifie pas une valorisation « neuf » élevée. Le prix de revente au m² sera probablement plus proche de l'ancien rénové (~2 700 €/m²) que du neuf pur (> 3 400 €/m²).</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Promotion pure (revente 6 lots)</td>
+          <td>6</td>
+          <td>—</td>
+          <td>1 128 000 €</td>
+          <td><span class="ratio-badge ratio-danger">1,20</span></td>
+          <td><span class="badge-faisabilite orange">Moyenne</span></td>
+          <td><span class="badge-risque high">Élevé</span></td>
+          <td class="adeq-cell">
+            <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:30%"></div></div>
+            <span>6,5</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Location longue durée (SCI IS)</td>
+          <td>6</td>
+          <td>4,0%</td>
+          <td>1 128 000 €</td>
+          <td><span class="ratio-badge ratio-danger">1,20</span></td>
+          <td><span class="badge-faisabilite green">Bonne</span></td>
+          <td><span class="badge-risque medium">Modéré</span></td>
+          <td class="adeq-cell">
+            <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:50%"></div></div>
+            <span>6,5</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Mixte (revente 4 lots + conservation 2)</td>
+          <td>6</td>
+          <td>—</td>
+          <td>1 128 000 €</td>
+          <td><span class="ratio-badge ratio-danger">1,20</span></td>
+          <td><span class="badge-faisabilite orange">Moyenne</span></td>
+          <td><span class="badge-risque high">Élevé</span></td>
+          <td class="adeq-cell">
+            <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:50%"></div></div>
+            <span>6,5</span>
+          </td>
+        </tr>
+        <tr style="background:#e8f5e9;">
+          <td><strong>Négociation à ≤ 493 k€</strong></td>
+          <td>6</td>
+          <td>—</td>
+          <td>1 128 000 €</td>
+          <td><span class="ratio-badge ratio-ok">1,05</span></td>
+          <td><span class="badge-faisabilite orange">Conditionnelle</span></td>
+          <td><span class="badge-risque medium">Modéré</span></td>
+          <td class="adeq-cell">
+            <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:50%"></div></div>
+            <span>6,5</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Justification :</strong> Au prix de 650 000 €, le ratio coût/valeur de 1,20 élimine d'office les stratégies de promotion et de location — chaque euro investi crée moins d'un euro de valeur. La seule stratégie viable est une <strong>négociation massive</strong> ramenant le prix d'achat à ≤ 493 000 € (décote de 24 %), seuil auquel le ratio coût/valeur atteint 1,05. Sans cette décote, le projet est structurellement déficitaire quelle que soit la stratégie d'exploitation. Note : les projections ci-dessous sont calculées sur une hypothèse de conservation locative au prix actuel, uniquement à titre illustratif de l'impasse financière.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Extension Années 80-90, Brignoles (83170)</td></tr>
+        <tr><th>Type de bien</th><td>Maison avec PC — projet immeuble 6 lots</td></tr>
+        <tr><th>Type d'opération</th><td>Promotion</td></tr>
+        <tr><th>Prix affiché</th><td>650 000 € (honoraires vendeur)</td></tr>
+        <tr><th>Surface projet</th><td>376 m² (196 m² rénovation + 180 m² extension)</td></tr>
+        <tr><th>Prix / m²</th><td>1 729 €/m²</td></tr>
+        <tr><th>Lots</th><td>6 — Studio 24 m², 2× T2 (34+39 m²), 3× T4 (99+90+90 m²)</td></tr>
+        <tr><th>Année construction</th><td>1900 — rénovation nécessaire</td></tr>
+        <tr><th>DPE</th><td>Non communiqué</td></tr>
+        <tr><th>Étages</th><td>2</td></tr>
+        <tr><th>Extérieurs</th><td>Terrasse/balcon par lot, parking privatif, entrées indépendantes</td></tr>
+        <tr><th>Vendeur</th><td>Professionnel — Nestenn Brignoles</td></tr>
+        <tr><th>PC</th><td>Accordé — prêt à démarrer</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — Location longue durée (illustratif)</h2>
+    <p class="attractiveness-intro">Projections calculées en conservation locative (SCI IS) au prix d'achat actuel, pour illustrer l'impasse de rendement. La stratégie réellement envisageable nécessite une négociation du prix d'achat.</p>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer 13,2 €/m² — Charges standard</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>59 558 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td>−2 978 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−2 800 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−600 €</td></tr>
+            <tr><td>Gestion (5 %)</td><td>−2 978 €</td></tr>
+            <tr><td>Charges totales</td><td>−9 356 €</td></tr>
+            <tr><td>Résultat avant amort.</td><td>47 225 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−17 440 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>29 785 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−4 468 €</td></tr>
+            <tr class="highlight-row"><td>Cash flow net</td><td>42 757 €/an</td></tr>
+            <tr class="highlight-row"><td>Rendement net</td><td>3,8 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>62 536 €</td></tr>
+            <tr><td>Vacance (2 %)</td><td>−1 251 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−2 520 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−540 €</td></tr>
+            <tr><td>Gestion (5 %)</td><td>−2 680 €</td></tr>
+            <tr><td>Charges totales</td><td>−6 991 €</td></tr>
+            <tr><td>Résultat avant amort.</td><td>54 295 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−17 440 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>36 855 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−5 528 €</td></tr>
+            <tr class="highlight-row"><td>Cash flow net</td><td>48 767 €/an</td></tr>
+            <tr class="highlight-row"><td>Rendement net</td><td>4,3 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer −10% — Charges +20% + provisions</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>53 603 €</td></tr>
+            <tr><td>Vacance (12 %)</td><td>−6 432 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−3 360 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−720 €</td></tr>
+            <tr><td>Gestion (5 %)</td><td>−3 573 €</td></tr>
+            <tr><td>Prov. gros travaux</td><td>−3 000 €</td></tr>
+            <tr><td>Charges totales</td><td>−17 085 €</td></tr>
+            <tr><td>Résultat avant amort.</td><td>30 085 €</td></tr>
+            <tr><td>Amortissement bâti</td><td>−17 440 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>12 645 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−1 897 €</td></tr>
+            <tr class="highlight-row"><td>Cash flow net</td><td>28 188 €/an</td></tr>
+            <tr class="highlight-row"><td>Rendement net</td><td>2,5 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Loyer mensuel brut</td><td>4 963 €</td><td>5 211 €</td><td>4 467 €</td></tr>
+          <tr><td>Charges mensuelles</td><td>780 €</td><td>583 €</td><td>1 424 €</td></tr>
+          <tr><td>Cash flow mensuel</td><td>3 563 €</td><td>4 064 €</td><td>2 349 €</td></tr>
+          <tr><td>Rendement net</td><td>3,8 %</td><td>4,3 %</td><td>2,5 %</td></tr>
+          <tr><td>Rendement / prix revient</td><td>3,3 %</td><td>3,6 %</td><td>2,1 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ratio coût/valeur déficitaire</td>
+          <td>1,20 au prix demandé. Chaque euro investi crée 0,83 € de valeur. Structurellement perdant.</td>
+          <td class="severity severity-5">5/5</td>
+        </tr>
+        <tr>
+          <td>Dépassement budget travaux</td>
+          <td>Rénovation d'un bâti de 1900 + extension : risque élevé de surprises (amiante, structure, fondations).</td>
+          <td class="severity severity-4">4/5</td>
+        </tr>
+        <tr>
+          <td>Valorisation incertaine</td>
+          <td>Le prix de revente à 3 000 €/m² est optimiste pour du rénové à Brignoles. Si le marché se contracte, la valeur après travaux baisse mécaniquement.</td>
+          <td class="severity severity-4">4/5</td>
+        </tr>
+        <tr>
+          <td>Risque de commercialisation</td>
+          <td>6 lots à écouler simultanément dans un marché modéré (Brignoles). Délai potentiel de 12-18 mois.</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+        <tr>
+          <td>DPE probablement médiocre</td>
+          <td>Bâti de 1900 non isolé. Même après rénovation, la performance énergétique sera probablement D ou E — pas un atout pour la revente.</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+        <tr>
+          <td>Portage financier</td>
+          <td>1,35 M€ immobilisés pendant 18-24 mois (achat + travaux + commercialisation). Le coût du portage est significatif.</td>
+          <td class="severity severity-4">4/5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>À négocier très agressivement.</strong> Au prix de 650 000 €, le projet est structurellement déficitaire : le ratio coût/valeur de 1,20 signifie que chaque euro investi ne génère que 0,83 € de valeur de marché. Le rendement locatif en conservation est inférieur à 4 % net, insuffisant pour un projet de cette envergure et de ce risque. Le prix plafond pour que l'opération atteigne l'équilibre (ratio 1,05) est de <strong>493 000 €</strong>, soit une décote de 24 % sur le prix affiché. Sans cette décote, le projet n'est pas viable économiquement.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 450 000 – 493 000 € (décote de 24 à 31 %)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Ratio coût/valeur déficitaire : démontrer au vendeur que son prix est décorrélé de la réalité économique du projet</li>
+        <li>Bâti de 1900 : aléas travaux potentiellement lourds (amiante, plomb, structure) — chiffrer le risque</li>
+        <li>PC accordé = un atout, mais ne justifie pas une survalorisation de 24 %</li>
+        <li>Marché de Brignoles : prix de revente plafonné autour de 2 700-3 000 €/m², pas 3 500+</li>
+        <li>Projet « clé en main » pour un promoteur, mais le promoteur doit pouvoir dégager une marge — au prix actuel, la marge est négative</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~48 750 € (7,5 %)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 654 000 € (1 500 €/m² rénovation + 2 000 €/m² extension)</p>
+      <p class="verdict-disclaimer">⚠️ Prix de marché estimés — données MeilleursAgents/Seloger non vérifiées en direct (indisponibilité des sources lors de l'analyse). À corroborer avant décision.</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
