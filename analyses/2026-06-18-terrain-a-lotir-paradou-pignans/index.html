@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Terrain à lotir Pignans (83790)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Terrain à lotir — Secteur Paradou, Pignans (83790)</p>
+  <p class="report-date">Analyse générée le 18 juin 2026</p>
+  <p class="report-source">Source : LeBonCoin — Agence CENTURY 21 (réf. 4988)</p>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Promotion / Lotissement</span>
+    <p>Stratégie retenue : <strong>Lotisseur pur — achat, viabilisation, revente des 5 lots</strong> — SCI à l'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">255 120 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">3 042 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">84 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">382 026 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">CA estimé</span>
+      <span class="card-value">365 040 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Marge brute</span>
+      <span class="card-value">−16 986 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">−4,4% / −6,5%</span>
+    </div>
+    <div class="card card-verdict note-4-7">
+      <span class="card-label">Note</span>
+      <span class="card-value">4,7/10</span>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.3005" data-lon="6.2272" data-address="Secteur Paradou, Pignans (83790)"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité du secteur</h2>
+    <p class="attractiveness-intro">Pignans, ~4 700 habitants, est une commune du Centre Var située entre le massif des Maures et la Provence Verte. La gare TER (ligne Toulon–Les Arcs) et la RD97 assurent une accessibilité correcte. Le secteur Paradou est un quartier résidentiel recherché, proche du centre-ville, avec un environnement calme. Marché estimé sur base de la connaissance du secteur — données DVF/MeilleursAgents indisponibles lors de l'analyse.</p>
+    <div class="attractiveness-grid">
+
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar"><div class="attr-bar-fill score-7" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Gare TER (navettes Toulon–Les Arcs), RD97, A57 à 10 min. Pas de transport urbain.</p>
+      </div>
+
+      <div class="attr-card">
+        <span class="attr-label">Commerces &amp; services</span>
+        <div class="attr-bar"><div class="attr-bar-fill score-6" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p class="attr-detail">Commerces de proximité (boulangerie, pharmacie, épicerie), marché hebdomadaire. Supermarché à Carnoules (5 km).</p>
+      </div>
+
+      <div class="attr-card">
+        <span class="attr-label">Écoles &amp; crèches</span>
+        <div class="attr-bar"><div class="attr-bar-fill score-7" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">École maternelle et primaire dans la commune. Collège à Carnoules (5 km). Lycées à Brignoles ou Toulon.</p>
+      </div>
+
+      <div class="attr-card">
+        <span class="attr-label">Sécurité &amp; cadre de vie</span>
+        <div class="attr-bar"><div class="attr-bar-fill score-8" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p class="attr-detail">Village provençal calme, environnement résidentiel. Le Paradou est un secteur prisé.</p>
+      </div>
+
+      <div class="attr-card">
+        <span class="attr-label">Demande (terrains à bâtir)</span>
+        <div class="attr-bar"><div class="attr-bar-fill score-7" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Pénurie de terrains constructibles dans le Centre Var. Demande de primo-accédants et résidences secondaires.</p>
+      </div>
+
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar"><div class="attr-bar-fill score-5" style="width:50%"></div></div>
+        <span class="attr-score">5/10</span>
+        <p class="attr-detail">Commune rurale à dominante résidentielle. Revenu médian modeste (~20 000 €). Peu d'emplois locaux.</p>
+      </div>
+
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil acheteur cible :</strong> Primo-accédants (couples 30-45 ans avec enfants) et retraités cherchant un cadre de vie calme à prix modéré. Marché de résidence principale > secondaire.</p>
+      <p><strong>Conclusion :</strong> Pignans offre un bon équilibre accessibilité / prix / cadre de vie pour le Centre Var. Le secteur Paradou bénéficie d'une image positive. La demande pour des terrains à bâtir viabilisés est réelle mais le pouvoir d'achat local limite les prix de vente.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Trois stratégies ont été évaluées pour ce terrain. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Marge nette</th>
+          <th>CA estimé</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-selected">
+          <td><strong>Lotisseur pur</strong><br><small>Achat → VRD → revente 5 lots</small></td>
+          <td>5</td>
+          <td>−4,4%</td>
+          <td>365 k€</td>
+          <td><span class="ratio-badge ratio-danger">1,05</span></td>
+          <td><span class="badge-faisabilite">Moyenne</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6-5" style="width:65%"></div></div><span>6,5</span></div></td>
+        </tr>
+        <tr>
+          <td><strong>Promoteur complet</strong><br><small>Achat → VRD → 5 maisons → revente</small></td>
+          <td>5</td>
+          <td>−7,6%</td>
+          <td>1 400 k€</td>
+          <td><span class="ratio-badge ratio-danger">1,08</span></td>
+          <td><span class="badge-faisabilite">Difficile</span></td>
+          <td><span class="badge-risque">Très élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-4-5" style="width:45%"></div></div><span>4,5</span></div></td>
+        </tr>
+        <tr>
+          <td><strong>Conservation</strong><br><small>Portage long, revente différée</small></td>
+          <td>5</td>
+          <td>n/a</td>
+          <td>380-450 k€</td>
+          <td><span class="ratio-badge ratio-neutral">1,00</span></td>
+          <td><span class="badge-faisabilite">Haute</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-5-5" style="width:55%"></div></div><span>5,5</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Pourquoi le lotisseur pur ?</strong> C'est la seule stratégie qui valorise le permis d'aménager existant sans mobiliser des capitaux disproportionnés (la construction de 5 maisons représente ~1,5 M€ d'investissement pour une marge négative dans le marché de Pignans). La conservation pure est une option de repli si la négociation du prix échoue. En l'état actuel du prix (255 k€), aucune stratégie n'est confortablement rentable — une négociation à la baisse est indispensable.</p>
+    </div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Type</th><td>Terrain à lotir (permis d'aménager en cours de validité)</td></tr>
+        <tr><th>Adresse</th><td>Secteur Paradou, Pignans (83790)</td></tr>
+        <tr><th>Surface totale</th><td>3 042 m²</td></tr>
+        <tr><th>Nombre de lots</th><td>5</td></tr>
+        <tr><th>Prix affiché</th><td>255 120 € (84 €/m²)</td></tr>
+        <tr><th>Vendeur</th><td>Agence CENTURY 21 — Honoraires vendeur</td></tr>
+        <tr><th>DPE</th><td>Non soumis (terrain nu)</td></tr>
+        <tr><th>Atouts</th><td>Terrain plat, réseaux à proximité, secteur recherché, environnement calme</td></tr>
+        <tr><th>Zonage PLU</th><td>À vérifier (zone constructible confirmée par le permis d'aménager)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières — Lotisseur pur</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Prix vente 150 €/m² — 80% vendable — Délai 12 mois</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Surface vendable</td><td>2 434 m² (80%)</td></tr>
+            <tr><td>Lot moyen</td><td>487 m²</td></tr>
+            <tr><td>Prix vente / lot</td><td>73 008 €</td></tr>
+            <tr><td><strong>Chiffre d'affaires</strong></td><td><strong>365 040 €</strong></td></tr>
+            <tr><td colspan="2"><hr></td></tr>
+            <tr><td>Achat terrain</td><td>−255 120 €</td></tr>
+            <tr><td>Frais de notaire (3%)</td><td>−7 654 €</td></tr>
+            <tr><td>VRD + réseaux</td><td>−85 000 €</td></tr>
+            <tr><td>Géomètre, BET</td><td>−10 000 €</td></tr>
+            <tr><td>Commission vente (5%)</td><td>−18 252 €</td></tr>
+            <tr><td>Portage &amp; divers</td><td>−6 000 €</td></tr>
+            <tr><td><strong>Total coûts</strong></td><td><strong>−382 026 €</strong></td></tr>
+            <tr><td colspan="2"><hr></td></tr>
+            <tr class="highlight"><td><strong>Marge brute</strong></td><td><strong>−16 986 €</strong></td></tr>
+            <tr class="highlight"><td><strong>Marge nette (après IS 15%)</strong></td><td><strong>−16 986 € (−4,4%)</strong></td></tr>
+            <tr><td>Prix terrain max (marge 12%)</td><td>200 657 € (66 €/m²)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Prix vente 175 €/m² — 85% vendable — Délai 6 mois</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Surface vendable</td><td>2 586 m² (85%)</td></tr>
+            <tr><td>Lot moyen</td><td>517 m²</td></tr>
+            <tr><td>Prix vente / lot</td><td>90 500 €</td></tr>
+            <tr><td><strong>Chiffre d'affaires</strong></td><td><strong>452 498 €</strong></td></tr>
+            <tr><td colspan="2"><hr></td></tr>
+            <tr><td>Achat terrain</td><td>−255 120 €</td></tr>
+            <tr><td>Frais de notaire (3%)</td><td>−7 654 €</td></tr>
+            <tr><td>VRD + réseaux</td><td>−70 000 €</td></tr>
+            <tr><td>Géomètre, BET</td><td>−8 000 €</td></tr>
+            <tr><td>Commission vente (5%)</td><td>−22 625 €</td></tr>
+            <tr><td>Portage &amp; divers</td><td>−4 000 €</td></tr>
+            <tr><td><strong>Total coûts</strong></td><td><strong>−367 398 €</strong></td></tr>
+            <tr><td colspan="2"><hr></td></tr>
+            <tr class="highlight"><td><strong>Marge brute</strong></td><td><strong>+85 099 €</strong></td></tr>
+            <tr class="highlight"><td><strong>Marge nette (après IS 15%)</strong></td><td><strong>+72 334 € (+19,7%)</strong></td></tr>
+            <tr><td>Prix terrain max (marge 12%)</td><td>290 671 € (96 €/m²)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Prix vente 120 €/m² — 70% vendable — Délai 24 mois</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Surface vendable</td><td>2 129 m² (70%)</td></tr>
+            <tr><td>Lot moyen</td><td>426 m²</td></tr>
+            <tr><td>Prix vente / lot</td><td>51 106 €</td></tr>
+            <tr><td><strong>Chiffre d'affaires</strong></td><td><strong>255 528 €</strong></td></tr>
+            <tr><td colspan="2"><hr></td></tr>
+            <tr><td>Achat terrain</td><td>−255 120 €</td></tr>
+            <tr><td>Frais de notaire (3%)</td><td>−7 654 €</td></tr>
+            <tr><td>VRD + réseaux</td><td>−110 000 €</td></tr>
+            <tr><td>Géomètre, BET</td><td>−15 000 €</td></tr>
+            <tr><td>Commission vente (5%)</td><td>−12 776 €</td></tr>
+            <tr><td>Portage &amp; divers</td><td>−11 000 €</td></tr>
+            <tr><td><strong>Total coûts</strong></td><td><strong>−411 550 €</strong></td></tr>
+            <tr><td colspan="2"><hr></td></tr>
+            <tr class="highlight"><td><strong>Marge brute</strong></td><td><strong>−156 022 €</strong></td></tr>
+            <tr class="highlight"><td><strong>Marge nette (après IS 15%)</strong></td><td><strong>−156 022 € (−37,9%)</strong></td></tr>
+            <tr><td>Prix terrain max (marge 12%)</td><td>77 062 € (25 €/m²)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Chiffre d'affaires</td><td>365 040 €</td><td>452 498 €</td><td>255 528 €</td></tr>
+          <tr><td>Coût total</td><td>382 026 €</td><td>367 398 €</td><td>411 550 €</td></tr>
+          <tr><td>Marge brute</td><td>−16 986 €</td><td>+85 099 €</td><td>−156 022 €</td></tr>
+          <tr><td>Marge nette</td><td>−4,4%</td><td>+19,7%</td><td>−37,9%</td></tr>
+          <tr><td>Prix terrain max (marge 12%)</td><td>200 657 €</td><td>290 671 €</td><td>77 062 €</td></tr>
+          <tr><td>Prix / m² terrain max</td><td>66 €/m²</td><td>96 €/m²</td><td>25 €/m²</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Prix d'achat surévalué</td>
+          <td>À 84 €/m², le prix demandé laisse une marge négative en Base Case. Le prix viable pour un lotisseur (marge 12%) est ~66 €/m², soit 21% de moins.</td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Prix de revente incertains</td>
+          <td>Pas de données de marché vérifiées pour Pignans (sources indisponibles). L'estimation à 150 €/m² viabilisé est basée sur la connaissance du Centre Var. Une erreur de 20 €/m² change le résultat de ±49 k€.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Délai d'écoulement</td>
+          <td>5 lots dans une commune de 4 700 hab. : le rythme d'absorption est incertain. En Worst Case, 24 mois de portage grèvent lourdement la rentabilité.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Coûts VRD</td>
+          <td>Bien que les réseaux soient « à proximité », le chiffrage précis reste à faire. Un dépassement de 20-30 k€ est possible selon la nature du sol et les exigences de la mairie.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Validité du permis d'aménager</td>
+          <td>Le permis est « en cours de validité » — vérifier la date d'expiration et les délais de prorogation. Un permis qui expire avant la fin des travaux de VRD bloque tout le projet.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Risque de marché Centre Var</td>
+          <td>Ralentissement possible si remontée des taux. Les primo-accédants, cœur de cible, sont les plus sensibles au coût du crédit.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>À négocier.</strong> Le terrain est correctement situé et le permis d'aménager est un vrai atout, mais à 255 120 € (84 €/m²), le prix demandé ne laisse aucune marge de sécurité pour un lotisseur. Le Base Case ressort en perte (−17 k€), et seul un alignement parfait des planètes (Best Case : prix de vente à 175 €/m², VRD maîtrisé, écoulement en 6 mois) permet de dégager une marge correcte de ~20% net. Le Worst Case (−156 k€) est rédhibitoire. Le prix plafond pour viser 12% de marge en Base Case est de <strong>200 000 €</strong> (66 €/m²), soit une offre à <strong>−22%</strong> du prix affiché.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 200 000 € (66 €/m²), soit 200-210 k€ en négociation.</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li><strong>Coûts VRD réels :</strong> demander un chiffrage précis par un BET local — si les réseaux sont vraiment en bordure immédiate, le coût peut tomber à 60 k€ et améliorer le Base Case.</li>
+        <li><strong>Surface cessible exacte :</strong> obtenir le plan de division du permis d'aménager pour connaître la surface exacte de chaque lot et la part de voirie. Le ratio vendable (estimé à 80%) est un paramètre critique.</li>
+        <li><strong>Étude de marché locale :</strong> faire estimer les lots par une agence locale (hors CENTURY 21 vendeur) pour valider le prix de revente à 150 €/m². Si le marché est à 130 €, même 200 k€ ne suffisent pas.</li>
+        <li><strong>Ancienneté de l'annonce :</strong> un terrain en portage coûte de la TF au vendeur. Si l'annonce traîne, c'est un argument pour négocier.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Type d'opération :</strong> Promotion / Lotissement</p>
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15% sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~7 650 € (3% — terrain à bâtir)</p>
+      <p><strong>Enveloppe VRD estimée :</strong> 70 000 – 110 000 € (à confirmer par BET)</p>
+      <p><strong>Note :</strong> Prix de marché estimés sur la base de la connaissance du secteur Centre Var. Données DVF/MeilleursAgents indisponibles lors de l'analyse — à corroborer avant décision.</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
