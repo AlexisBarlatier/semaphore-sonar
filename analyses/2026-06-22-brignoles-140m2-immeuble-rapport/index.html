@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Immeuble de rapport, Centre Vieille Ville, Brignoles (83170)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Immeuble de rapport — 4 lots (3 T2 + 1 local commercial) — Centre Vieille Ville, Brignoles (83170)</p>
+  <p class="report-date">Analyse générée le 22 juin 2026</p>
+  <p class="report-source">Source : <a href="https://www.seloger.com/annonces/achat/appartement/brignoles-83/centre-vieille-ville/26JBNNJ3272F.htm">SeLoger — Annonce 26JBNNJ3272F</a></p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Rénovation des 2 T2 vacants + location nue des 3 T2 + conservation du bail commercial</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">280 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">140 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">2 000 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">352 400 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">~327 300 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">2 020 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">5,4% / 5,8%</span>
+    </div>
+    <div class="card card-verdict note-6">
+      <span class="card-label">Note</span>
+      <span class="card-value">6,4/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.405" data-lon="6.063" data-address="Centre Vieille Ville, Brignoles (83170)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Le Centre Vieille Ville de Brignoles est un quartier ancien en pleine mutation, bénéficiant du programme « Action Cœur de Ville » (18 M€ investis, 60 commerces ouverts depuis 2020). L'ambiance reste contrastée : dynamisme commercial en hausse, mais sécurité perçue comme moyenne et population modeste.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-5" style="width:50%"></div></div>
+        <span class="attr-score">5/10</span>
+        <p class="attr-detail">Gare SNCF, bus, accès A8 à 5 min. Pas de transport en commun lourd.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-6" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p class="attr-detail">Place Caramy, marché, 60+ commerces créés depuis 2020. Offre correcte.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-5" style="width:50%"></div></div>
+        <span class="attr-score">5/10</span>
+        <p class="attr-detail">Collèges, lycées et crèches accessibles. Offre scolaire standard.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-3" style="width:30%"></div></div>
+        <span class="attr-score">3/10</span>
+        <p class="attr-detail">Quartier sensible. Insécurité perçue, rénovation urbaine en cours.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-4" style="width:40%"></div></div>
+        <span class="attr-score">4/10</span>
+        <p class="attr-detail">Demande modérée. Taux de vacance dans la moyenne haute du Var.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-4" style="width:40%"></div></div>
+        <span class="attr-score">4/10</span>
+        <p class="attr-detail">Revenu médian modeste. Action Cœur de Ville positive mais lente.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs, employés, familles modestes pour les T2 ; commerçant ou profession libérale pour le local commercial.</p>
+      <p><strong>Conclusion :</strong> Quartier correct pour du locatif à rendement, mais la demande reste modérée. Le risque de vacance prolongée est réel, surtout pour le local commercial. La rénovation urbaine en cours pourrait améliorer l'attractivité à moyen terme.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Statu quo (2 lots loués, 2 vacants)</td>
+          <td>2 / 4</td>
+          <td>~2,8 %</td>
+          <td>~280 000 €</td>
+          <td><span class="ratio-badge ratio-ok">1,00</span></td>
+          <td><span class="badge-faisabilite excellente">Excellente</span></td>
+          <td><span class="badge-risque faible">Faible</span></td>
+          <td><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-4" style="width:45%"></div></div></td>
+        </tr>
+        <tr class="strategy-retained">
+          <td>Rénovation + location nue 4 lots</td>
+          <td>4 / 4</td>
+          <td>~5,8 %</td>
+          <td>~327 300 €</td>
+          <td><span class="ratio-badge ratio-warning">1,08</span></td>
+          <td><span class="badge-faisabilite bonne">Bonne</span></td>
+          <td><span class="badge-risque modere">Modéré</span></td>
+          <td><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-4" style="width:45%"></div></div></td>
+        </tr>
+        <tr>
+          <td>Rénovation + meublé LMNP (3 T2)</td>
+          <td>4 / 4</td>
+          <td>~6,3 %</td>
+          <td>~330 000 €</td>
+          <td><span class="ratio-badge ratio-warning">1,07</span></td>
+          <td><span class="badge-faisabilite bonne">Bonne</span></td>
+          <td><span class="badge-risque modere">Modéré</span></td>
+          <td><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-4" style="width:45%"></div></div></td>
+        </tr>
+        <tr>
+          <td>Vente à la découpe après rénovation</td>
+          <td>4 lots</td>
+          <td>Marge brute ~5-10 k€</td>
+          <td>~330 000 €</td>
+          <td><span class="ratio-badge ratio-ok">~1,00</span></td>
+          <td><span class="badge-faisabilite complexe">Complexe</span></td>
+          <td><span class="badge-risque eleve">Élevé</span></td>
+          <td><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-4" style="width:45%"></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La rénovation + location nue est retenue car c'est le meilleur compromis rendement/risque. Le meublé LMNP offrirait un rendement légèrement supérieur mais avec un turnover plus élevé et une gestion plus lourde. La vente à la découpe est écartée : les frais de mutation + la fiscalité sur la plus-value annulent la marge brute. Le statu quo est inacceptable — laisser 74 m² vacants détruit toute rentabilité. <strong>Le point critique est le prix d'achat</strong> : à 280 000 €, le ratio coût/valeur de 1,08 signifie qu'on surpaie de ~8 % par rapport à la valeur réelle après travaux.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Type de bien</th><td>Immeuble de rapport — 4 lots (3 T2 + 1 local commercial)</td></tr>
+        <tr><th>Adresse</th><td>Centre Vieille Ville, Brignoles (83170)</td></tr>
+        <tr><th>Surface totale</th><td>140 m² (3 niveaux)</td></tr>
+        <tr><th>Composition</th><td>3 T2 d'environ 37 m² chacun + 1 local commercial de 35 m²</td></tr>
+        <tr><th>Prix de vente</th><td>280 000 € (2 000 €/m²)</td></tr>
+        <tr><th>Vendeur</th><td>Particulier (Guillaume) — pas d'agence</td></tr>
+        <tr><th>DPE</th><td>Non communiqué — à exiger avant toute offre</td></tr>
+        <tr><th>Occupation actuelle</th><td>1 T2 loué 500 €/mois + 1 local commercial loué 450 €/mois = 950 €/mois immédiats</td></tr>
+        <tr><th>Travaux</th><td>2 T2 vacants à rénover — estimation 50 000 € (plomberie, électricité, rafraîchissement)</td></tr>
+        <tr><th>Points forts</th><td>Immeuble entier sans copropriété lourde, 2 revenus immédiats, terrasse tropézienne sur le T2 du dernier étage, compteurs électriques individuels</td></tr>
+        <tr><th>Points faibles</th><td>DPE inconnu, 50 % de la surface vacante à rénover, centre-ville au profil socio-économique modeste, ratio coût/valeur > 1,05 au prix demandé</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5,7% — Loyer marché — Charges standard</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>24 240 €</td></tr>
+            <tr><td>Charges (TF + copro + assurance)</td><td>−2 300 €</td></tr>
+            <tr><td>Vacance locative (5,7 %)</td><td>−1 374 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td>20 566 €</td></tr>
+            <tr><td>Amortissement (bâti + travaux)</td><td>−9 733 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>10 833 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−1 625 €</td></tr>
+            <tr class="total-row"><td>Résultat net après IS</td><td>18 941 €</td></tr>
+            <tr class="yield-row"><td>Rendement net / prix de revient</td><td>5,4 %</td></tr>
+            <tr class="yield-row"><td>Rendement net / valeur marché</td><td>5,8 %</td></tr>
+            <tr class="cashflow-row"><td>Cash-flow mensuel net</td><td>1 578 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2,7% — Loyer +5% — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>25 452 €</td></tr>
+            <tr><td>Charges (TF + copro + assurance)</td><td>−2 070 €</td></tr>
+            <tr><td>Vacance locative (2,7 %)</td><td>−679 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td>22 703 €</td></tr>
+            <tr><td>Amortissement (bâti + travaux)</td><td>−9 733 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>12 970 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−1 945 €</td></tr>
+            <tr class="total-row"><td>Résultat net après IS</td><td>20 757 €</td></tr>
+            <tr class="yield-row"><td>Rendement net / prix de revient</td><td>5,9 %</td></tr>
+            <tr class="yield-row"><td>Rendement net / valeur marché</td><td>6,3 %</td></tr>
+            <tr class="cashflow-row"><td>Cash-flow mensuel net</td><td>1 730 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 13,3% — Loyer −10% — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>21 816 €</td></tr>
+            <tr><td>Charges (TF + copro + assurance)</td><td>−2 760 €</td></tr>
+            <tr><td>Vacance locative (13,3 %)</td><td>−2 910 €</td></tr>
+            <tr><td>Provisions travaux imprévus</td><td>−3 000 €</td></tr>
+            <tr><td>Résultat avant amortissement</td><td>13 146 €</td></tr>
+            <tr><td>Amortissement (bâti + travaux)</td><td>−9 733 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>3 413 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−512 €</td></tr>
+            <tr class="total-row"><td>Résultat net après IS</td><td>12 635 €</td></tr>
+            <tr class="yield-row"><td>Rendement net / prix de revient</td><td>3,6 %</td></tr>
+            <tr class="yield-row"><td>Rendement net / valeur marché</td><td>3,9 %</td></tr>
+            <tr class="cashflow-row"><td>Cash-flow mensuel net</td><td>1 053 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut annuel</td><td>24 240 €</td><td>25 452 €</td><td>21 816 €</td></tr>
+          <tr><td>Résultat net après IS</td><td>18 941 €</td><td>20 757 €</td><td>12 635 €</td></tr>
+          <tr><td>Cash-flow mensuel</td><td>1 578 €</td><td>1 730 €</td><td>1 053 €</td></tr>
+          <tr><td>Rendement net / valeur</td><td>5,8 %</td><td>6,3 %</td><td>3,9 %</td></tr>
+          <tr><td>Taux de vacance effectif</td><td>5,7 %</td><td>2,7 %</td><td>13,3 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DPE inconnu</td>
+          <td>Aucune information énergétique dans l'annonce. Un DPE F ou G exposerait à une interdiction de location à horizon 2028 (G) ou 2034 (F).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Dérapage travaux</td>
+          <td>Rénovation de 2 T2 (~74 m²). Risque de découvertes (électricité, plomberie) pouvant alourdir la facture de 20-30 %.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance commerciale</td>
+          <td>Le local commercial est loué 450 €/mois. Si le preneur part, relocation incertaine dans un centre-ville au dynamisme modéré. La vacance commerciale peut durer 6-18 mois.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Insécurité du quartier</td>
+          <td>Centre-ville classé quartier sensible. Perception négative de la sécurité qui peut freiner la demande locative pour les T2.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Réglementation location</td>
+          <td>Pas de risque identifié à ce stade (hors zone tendue, pas de permis de louer obligatoire à Brignoles).</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À négocier autour de 255 000 €. Au prix affiché de 280 000 €, l'opération est structurellement surpayée : chaque euro investi ne crée que 0,93 € de valeur après rénovation (ratio 1,08). Le rendement net de 5,8 % en Base Case est correct pour du locatif dans le Var intérieur mais ne compense pas le risque d'un quartier au profil socio-économique fragile et d'un DPE inconnu. Le vendeur est un particulier sans agence — il y a une marge de négociation réelle. Si le prix descend à 255 000 €, le ratio tombe à 1,01 et le rendement net passe à ~6,5 %, ce qui rend l'opération défendable. En dessous de 250 000 €, le dossier devient franchement intéressant.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 255 000 € (ratio coût/valeur ~1,01, rendement net ~6,5 %)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>DPE inconnu : exiger le diagnostic avant toute offre — un DPE D ou moins serait un levier pour baisser le prix</li>
+        <li>Travaux à réaliser sur 50 % de la surface : chiffrer un devis et le présenter comme justificatif de l'offre basse</li>
+        <li>Rendement facial de l'annonce trompeur : les 2 150 €/mois annoncés supposent une rénovation complète et aucun frottement</li>
+        <li>Particulier vendeur : pas de commission d'agence, le vendeur a plus de flexibilité sur le prix net vendeur</li>
+        <li>Quartier en mutation mais encore fragile : mettre en avant le risque de vacance pour justifier une décote</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices, amortissement du bâti et des travaux)</p>
+      <p><strong>Estimation frais de notaire :</strong> 22 400 € (8 % du prix d'achat)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 50 000 € (rénovation 2 T2 — plomberie, électricité, rafraîchissement, cuisine équipée)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
