@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Grande maison de village, Cuers</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Grande maison de village — Cuers (83390)</p>
+  <p class="report-date">Analyse générée le 23 juin 2026</p>
+  <p class="report-source">Source : Sud Azur — Réf. VMA10002182</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Colocation meublée 5 chambres + studio après rénovation</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">300 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">138 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">2 173 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">403 750 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">455 500 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">2 650 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">5,5% / 4,9%</span>
+    </div>
+    <div class="card card-verdict note-7">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,4/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.2375" data-lon="6.0708" data-address="Cuers centre village (83390)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Cuers (11 500 habitants) est un village provençal dynamique situé à 20 km au nord de Toulon, sur l'axe autoroutier A57. Le centre-village conserve son caractère authentique avec commerces de proximité et marché hebdomadaire. La commune bénéficie d'une croissance démographique régulière et d'un bon maillage scolaire.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">A57 (gratuit Toulon-Cuers), gare SNCF Cuers-Pierrefeu, réseau de bus régional. Bon accès routier, desserte ferroviaire correcte.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Centre-village avec commerces de bouche, marché du vendredi réputé, supermarché à 2 km. Services de santé présents.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">6 écoles, 1 collège public bien noté (La Ferrage), 1 établissement privé (Sainte-Marthe). Offre complète jusqu'au lycée (Pierrefeu).</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-detail">Village provençal calme et agréable. Avis habitants positifs. Cadre préservé, faible incivisme.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-score">5/10</span>
+        <p class="attr-detail">Marché locatif modéré. Taux de locataires ~35%. La demande existe pour les budgets serrés et les jeunes actifs, mais sans tension forte.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-score">5/10</span>
+        <p class="attr-detail">Revenu médian ~21 800 €. Taux de chômage ~11%. Croissance démographique positive mais dépendance à l'emploi toulonnais.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs travaillant sur Toulon / La Valette, couples sans enfants, travailleurs locaux, familles monoparentales. La colocation vise les actifs à budget modéré cherchant un cadre de vie agréable à 20 min de Toulon.</p>
+      <p><strong>Conclusion :</strong> Cuers offre un cadre de vie de qualité mais un marché locatif sans tension extrême. La demande pour de la colocation en maison rénovée existe (peu d'offre sur le segment) mais le pricing doit rester accessible pour ne pas se retrouver en concurrence avec Toulon même. La colocation est le seul levier pour extraire un rendement correct de ce type de grande surface.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Location nue en l'état</td>
+          <td>1</td>
+          <td>~2,8%</td>
+          <td>~260 k€</td>
+          <td><span class="ratio-badge ratio-danger">1,25</span></td>
+          <td><span class="badge-faisabilite">Simple</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-5" style="width:50%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Location meublée après rénovation</td>
+          <td>1</td>
+          <td>~4,8%</td>
+          <td>~455 k€</td>
+          <td><span class="ratio-badge ratio-good">0,89</span></td>
+          <td><span class="badge-faisabilite">Complexe</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-5" style="width:50%"></div></div></div></td>
+        </tr>
+        <tr class="strategy-selected">
+          <td>Colocation meublée 5 ch. + studio</td>
+          <td>6</td>
+          <td>5,5%</td>
+          <td>~455 k€</td>
+          <td><span class="ratio-badge ratio-good">0,89</span></td>
+          <td><span class="badge-faisabilite">Complexe</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:60%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Marchand de biens (achat-revente)</td>
+          <td>1</td>
+          <td>—</td>
+          <td>~470 k€</td>
+          <td><span class="ratio-badge ratio-good">0,86</span></td>
+          <td><span class="badge-faisabilite">Complexe</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:60%"></div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La colocation meublée maximise le revenu locatif sur cette grande surface (prime de ~35% vs location nue). Avec 5 chambres à 430 € et un studio indépendant à 500 € dans l'annexe aménagée, le rendement net atteint 5,5% — le meilleur compromis rendement/risque. La location nue en l'état est éliminée (DPE F, rendement inférieur au Livret A). Le marchand de biens est techniquement le plus rentable (marge nette ~70 k€ après négociation) mais sort du cadre de l'investissement locatif patrimonial. La stratégie de colocation est retenue pour les projections.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Type</th><td>Maison de village provençale — 3 niveaux</td></tr>
+        <tr><th>Surface habitable actuelle</th><td>80,53 m² (4 chambres, 5 pièces)</td></tr>
+        <tr><th>Surface après travaux</th><td>138,03 m² (80,53 + 30 annexe + 27,5 grenier)</td></tr>
+        <tr><th>Annexe</th><td>30 m² au sol, état brut — aménageable en studio indépendant</td></tr>
+        <tr><th>Grenier</th><td>27,50 m² à aménager (chambre + salle d'eau)</td></tr>
+        <tr><th>Garage</th><td>~42 m² au RDC</td></tr>
+        <tr><th>Terrasse</th><td>25 m² au 1er étage</td></tr>
+        <tr><th>Cour / Jardin</th><td>Présente, surface non précisée</td></tr>
+        <tr><th>DPE</th><td>F (consommation) / G (GES) — rénovation énergétique indispensable</td></tr>
+        <tr><th>Taxe foncière</th><td>1 285 €/an</td></tr>
+        <tr><th>Charges copropriété</th><td>Aucune (maison individuelle)</td></tr>
+        <tr><th>Vendeur</th><td>Agence (Sud Azur, exclusivité)</td></tr>
+        <tr><th>Occupation</th><td>Inoccupé — visite immédiate</td></tr>
+        <tr><th>Prix facial</th><td>300 000 € (honoraires TTC inclus)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché — Charges estimées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="proj-value">31 800 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td class="proj-value">−1 590 €</td></tr>
+            <tr><td>Charges (TF, PNO, entretien, gestion)</td><td class="proj-value">−6 095 €</td></tr>
+            <tr><td>Net avant amortissement</td><td class="proj-value proj-subtotal">24 115 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td class="proj-value">−10 658 €</td></tr>
+            <tr><td>Amortissement meubles (7 ans)</td><td class="proj-value">−1 543 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="proj-value">11 914 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="proj-value">−1 787 €</td></tr>
+            <tr><td><strong>Résultat net après IS</strong></td><td class="proj-value proj-total">22 328 €</td></tr>
+            <tr><td>Rendement net / prix de revient</td><td class="proj-value">5,5 %</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td class="proj-value">4,9 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="proj-value">33 390 €</td></tr>
+            <tr><td>Vacance (2 %)</td><td class="proj-value">−668 €</td></tr>
+            <tr><td>Charges (−10 %)</td><td class="proj-value">−5 486 €</td></tr>
+            <tr><td>Net avant amortissement</td><td class="proj-value proj-subtotal">27 237 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td class="proj-value">−10 658 €</td></tr>
+            <tr><td>Amortissement meubles (7 ans)</td><td class="proj-value">−1 543 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="proj-value">15 036 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="proj-value">−2 255 €</td></tr>
+            <tr><td><strong>Résultat net après IS</strong></td><td class="proj-value proj-total">24 981 €</td></tr>
+            <tr><td>Rendement net / prix de revient</td><td class="proj-value">6,2 %</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td class="proj-value">5,5 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 15% — Loyer −10% — Charges +20% — Provisions tx 5 000 €</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="proj-value">28 620 €</td></tr>
+            <tr><td>Vacance (15 %)</td><td class="proj-value">−4 293 €</td></tr>
+            <tr><td>Charges (+20 %)</td><td class="proj-value">−7 314 €</td></tr>
+            <tr><td>Provisions travaux imprévus</td><td class="proj-value">−5 000 €</td></tr>
+            <tr><td>Net avant amortissement</td><td class="proj-value proj-subtotal">12 013 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td class="proj-value">−10 658 €</td></tr>
+            <tr><td>Amortissement meubles (7 ans)</td><td class="proj-value">−1 543 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="proj-value">−188 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="proj-value">0 €</td></tr>
+            <tr><td><strong>Résultat net après IS</strong></td><td class="proj-value proj-total">12 013 €</td></tr>
+            <tr><td>Rendement net / prix de revient</td><td class="proj-value">3,0 %</td></tr>
+            <tr><td>Rendement net / valeur marché</td><td class="proj-value">2,6 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut annuel</td><td>31 800 €</td><td>33 390 €</td><td>28 620 €</td></tr>
+          <tr><td>Résultat net après IS</td><td>22 328 €</td><td>24 981 €</td><td>12 013 €</td></tr>
+          <tr><td>Cash flow mensuel net</td><td>1 861 €</td><td>2 082 €</td><td>1 001 €</td></tr>
+          <tr><td>Rendement net / prix de revient</td><td>5,5 %</td><td>6,2 %</td><td>3,0 %</td></tr>
+          <tr><td>Rendement net / valeur marché</td><td>4,9 %</td><td>5,5 %</td><td>2,6 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DPE F → interdiction de location</td>
+          <td>Sans rénovation, le bien sera interdit à la location en 2028 (loi Climat). Rénovation énergétique impérative et budgétée dans le plan de travaux (25 k€).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Risque d'exécution des travaux</td>
+          <td>80 k€ de travaux (annexe + grenier + DPE). Chantier complexe en maison de village, accès contraint, surprises possibles sur le bâti ancien.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Marché locatif modéré (Cuers)</td>
+          <td>La demande locative à Cuers est correcte mais sans tension. Une vacance simultanée de 2-3 chambres est possible. Le turnover en colocation est structurellement plus élevé qu'en location nue.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Réglementation colocation</td>
+          <td>Aucun risque identifié à ce stade (maison individuelle, pas de copropriété). Vérifier que le PLU n'impose pas de restrictions sur la division informelle.</td>
+          <td><span class="severity severity-1">1/5</span></td>
+        </tr>
+        <tr>
+          <td>Surinvestissement par rapport au marché</td>
+          <td>404 k€ de prix de revient pour un rendement net de 5,5%. En cas de revente forcée, la valeur marché (455 k€) couvre le prix de revient mais sans marge significative.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Évolution du marché Cuers</td>
+          <td>Baisse de 5% des prix sur 1 an (Le Figaro, juin 2026). Tendance baissière qui pourrait continuer et éroder la création de valeur latente.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>⚠️ À négocier.</strong> Le bien a un vrai potentiel de création de valeur (ratio coût/valeur de 0,89) grâce à l'annexe et au grenier aménageables. Une fois rénové, il vaut ~455 k€ pour un investissement de 404 k€. Mais le rendement locatif net de 5,5% en Base est trop faible au prix facial de 300 k€ — il faut viser au minimum 6,5% pour que l'opération ait du sens en pur investissement locatif.<br><br>Le prix plafond calculé pour un rendement de 6,5% est de <strong>244 000 €</strong>. C'est une décote de 19% qui sera difficile à obtenir. Une négociation autour de 260-270 k€ permettrait d'atteindre un rendement de 6,0% — acceptable si le potentiel de plus-value à la revente est intégré dans l'équation.<br><br>À défaut d'accord sur le prix, ce bien s'adresse davantage à un profil marchand de biens (achat 260k + 80k travaux → revente 470k, marge nette ~70k) qu'à un investisseur locatif patrimonial.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 260 000 – 270 000 € (rendement cible 6,0%)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li><strong>DPE F :</strong> le coût de rénovation énergétique obligatoire (25 k€ minimum) doit être intégré dans le prix. Sans travaux, le bien est invendable à un investisseur locatif.</li>
+        <li><strong>Marché en baisse :</strong> −5% sur 1 an à Cuers. Le prix facial date probablement d'avant cette correction.</li>
+        <li><strong>Inoccupé = urgence vendeur :</strong> un bien vide coûte de l'argent au propriétaire. C'est un levier classique.</li>
+        <li><strong>Travaux lourds :</strong> l'annexe en état brut et le grenier non aménagé représentent 55 k€ de travaux rien que pour les rendre habitables. Le prix facial ne reflète pas cet état.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~24 000 € (8 % du prix d'achat)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 80 000 € (annexe 30k + grenier 25k + DPE 25k)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
