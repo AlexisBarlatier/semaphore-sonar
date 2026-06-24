@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — 390 chemin de Plaisance, Saint-Roch, Toulon (83200)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">390 chemin de Plaisance, Saint-Roch, Toulon (83200)</p>
+  <p class="report-date">Analyse générée le 24 juin 2026</p>
+  <p class="report-source">Source : Logic-Immo — BSK Immobilier</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location nue en l'état — 7 lots — conservation long terme</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">720&nbsp;000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">263,75 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">2&nbsp;730 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">791&nbsp;160 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">725&nbsp;312 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">3&nbsp;932 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">4,5&nbsp;% / 4,9&nbsp;%</span>
+    </div>
+    <div class="card card-verdict note-5">
+      <span class="card-label">Note</span>
+      <span class="card-value">5,7/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.129" data-lon="5.928" data-address="390 chemin de Plaisance, Saint-Roch, Toulon (83200)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Saint-Roch est un quartier populaire de Toulon Ouest, à l'écart du centre-ville mais bien desservi. Secteur vivant, commerçant, avec un tissu de petits immeubles et maisons de ville. La demande locative y est structurellement forte, portée par des ménages modestes et des jeunes actifs cherchant des loyers abordables à proximité du bassin d'emploi toulonnais.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <h4>Transports</h4>
+        <div class="attr-bar"><div class="attr-bar-fill score-7" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p>Bus de ville, gare SNCF à 2 km, accès rapide A50/A57. Pas de métro/tram.</p>
+      </div>
+      <div class="attr-card">
+        <h4>Commerces &amp; services</h4>
+        <div class="attr-bar"><div class="attr-bar-fill score-7" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p>Quartier vivant, commerces de proximité, supérettes. Centre commercial Grand Var à 10 min.</p>
+      </div>
+      <div class="attr-card">
+        <h4>Écoles &amp; crèches</h4>
+        <div class="attr-bar"><div class="attr-bar-fill score-6" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p>Écoles primaires à proximité, collège à 15 min. Offre correcte sans être un point fort.</p>
+      </div>
+      <div class="attr-card">
+        <h4>Sécurité &amp; cadre de vie</h4>
+        <div class="attr-bar"><div class="attr-bar-fill score-4" style="width:40%"></div></div>
+        <span class="attr-score">4/10</span>
+        <p>Quartier populaire avec points de vigilance : circulation difficile, incivisme signalé par les riverains (Nice-Matin, CIL Saint-Roch).</p>
+      </div>
+      <div class="attr-card">
+        <h4>Demande locative</h4>
+        <div class="attr-bar"><div class="attr-bar-fill score-8" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p>Très forte : taux de locataires élevé, tension sur les petits loyers, relocation rapide.</p>
+      </div>
+      <div class="attr-card">
+        <h4>Dynamisme économique</h4>
+        <div class="attr-bar"><div class="attr-bar-fill score-6" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p>Revenus modestes mais bassin d'emploi toulonnais solide (défense, services, port).</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs, étudiants, petits salariés, familles monoparentales — ménages modestes recherchant un loyer accessible proche du bassin d'emploi toulonnais.</p>
+      <p><strong>Conclusion :</strong> Saint-Roch est un quartier de rendement, pas de prestige. L'atout principal est la demande locative structurelle et la rapidité de relocation. Le risque est le profil socio-économique des locataires (impayés) et le cadre de vie moyen. L'adéquation avec un immeuble de rapport à 7 lots est bonne : la dispersion du risque sur 7 logements dilue le risque d'impayé.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-selected">
+          <td>Location nue en l'état</td>
+          <td>7</td>
+          <td>4,5 %</td>
+          <td>725&nbsp;312 €</td>
+          <td>1,09</td>
+          <td><span class="badge-faisabilite">Élevée</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:60%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Colocation meublée (3 T3)</td>
+          <td>10</td>
+          <td>5,4 %</td>
+          <td>740&nbsp;000 €</td>
+          <td>1,09</td>
+          <td><span class="badge-faisabilite">Moyenne</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-7" style="width:70%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Aménagement combles + 1 lot</td>
+          <td>8</td>
+          <td>4,8 %</td>
+          <td>794&nbsp;062 €</td>
+          <td>1,04</td>
+          <td><span class="badge-faisabilite">Moyenne</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:65%"></div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La stratégie <strong>location nue en l'état</strong> est retenue : l'immeuble est déjà loué avec 7 baux en cours, aucun travaux majeurs immédiats, et les loyers sont proches du marché (14,9 €/m²/mois vs 13-17 €/m² constatés). La colocation meublée améliorerait le rendement (+0,9 pt) mais complexifie la gestion, expose à un turnover plus élevé (vacance à 15% en Worst), et nécessite un investissement en meubles. L'aménagement des combles est une option de valorisation à moyen terme (ratio 1,04) mais dépend des autorisations d'urbanisme et d'un budget travaux de ~38 k€. Les projections sont calculées sur la stratégie de conservation.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Type</th><td>Immeuble de rapport — 3 bâtiments indépendants</td></tr>
+        <tr><th>Adresse</th><td>390 &amp; 400 chemin de Plaisance, 1 rue Louise, Saint-Roch, 83200 Toulon</td></tr>
+        <tr><th>Prix de vente</th><td>720&nbsp;000 € FAI (honoraires charge vendeur)</td></tr>
+        <tr><th>Surface Carrez</th><td>263,75 m²</td></tr>
+        <tr><th>Surface utile totale</th><td>335,66 m²</td></tr>
+        <tr><th>Nombre de lots</th><td>7 logements (du studio au T3, dont une maison T3 avec cour)</td></tr>
+        <tr><th>Année de construction</th><td>1940</td></tr>
+        <tr><th>DPE</th><td>D (242 kWhEP/m²/an) — GES B (9 kgCO₂/m²/an)</td></tr>
+        <tr><th>Occupation</th><td>7 logements loués — 0 vacance</td></tr>
+        <tr><th>Loyer annuel HC</th><td>47&nbsp;184 € (stationnaire, baux en cours)</td></tr>
+        <tr><th>Taxe foncière 2025</th><td>5&nbsp;339 €/an</td></tr>
+        <tr><th>Charges annuelles</th><td>Assurance PNO 452 € + Électricité communs ~150 € + Maintenance ~1&nbsp;000 €</td></tr>
+        <tr><th>Travaux réalisés</th><td>Toitures rénovées, isolation améliorée, électricité refaite (consuel), ballons ECS remplacés</td></tr>
+        <tr><th>Potentiel</th><td>Combles partiellement aménageables au 390 (~25 m² estimés)</td></tr>
+        <tr><th>Vendeur</th><td>Professionnel — BSK Immobilier, Kévin LEXA (EI)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer brut annuel</td><td>47&nbsp;184 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td>−2&nbsp;359 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−5&nbsp;339 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−452 €</td></tr>
+            <tr><td>Électricité communs</td><td>−150 €</td></tr>
+            <tr><td>Maintenance</td><td>−1&nbsp;000 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td>−20&nbsp;400 €</td></tr>
+            <tr><td><strong>Résultat avant IS</strong></td><td><strong>17&nbsp;484 €</strong></td></tr>
+            <tr><td>IS (15 %)</td><td>−2&nbsp;623 €</td></tr>
+            <tr><td><strong>Résultat net après IS</strong></td><td><strong>35&nbsp;261 €</strong></td></tr>
+            <tr><td>Cashflow mensuel</td><td>2&nbsp;938 €</td></tr>
+            <tr><td>Rendement net (sur prix de revient)</td><td>4,46 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges -10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer brut annuel</td><td>49&nbsp;543 €</td></tr>
+            <tr><td>Vacance (2 %)</td><td>−991 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−5&nbsp;339 €</td></tr>
+            <tr><td>Assurance + Élec + Maintenance</td><td>−1&nbsp;452 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td>−20&nbsp;400 €</td></tr>
+            <tr><td><strong>Résultat avant IS</strong></td><td><strong>21&nbsp;361 €</strong></td></tr>
+            <tr><td>IS (15 %)</td><td>−3&nbsp;204 €</td></tr>
+            <tr><td><strong>Résultat net après IS</strong></td><td><strong>38&nbsp;557 €</strong></td></tr>
+            <tr><td>Cashflow mensuel</td><td>3&nbsp;213 €</td></tr>
+            <tr><td>Rendement net (sur prix de revient)</td><td>4,87 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer -10% — Charges +20% + 5&nbsp;000€ imprévus</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer brut annuel</td><td>42&nbsp;466 €</td></tr>
+            <tr><td>Vacance (12 %)</td><td>−5&nbsp;096 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−5&nbsp;339 €</td></tr>
+            <tr><td>Assurance + Élec + Maintenance (+20 %)</td><td>−1&nbsp;752 €</td></tr>
+            <tr><td>Provisions travaux imprévus</td><td>−5&nbsp;000 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td>−20&nbsp;400 €</td></tr>
+            <tr><td><strong>Résultat avant IS</strong></td><td><strong>4&nbsp;879 €</strong></td></tr>
+            <tr><td>IS (15 %)</td><td>−732 €</td></tr>
+            <tr><td><strong>Résultat net après IS</strong></td><td><strong>24&nbsp;547 €</strong></td></tr>
+            <tr><td>Cashflow mensuel</td><td>2&nbsp;046 €</td></tr>
+            <tr><td>Rendement net (sur prix de revient)</td><td>3,10 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Loyer brut annuel</td><td>47&nbsp;184 €</td><td>49&nbsp;543 €</td><td>42&nbsp;466 €</td></tr>
+          <tr><td>Vacance</td><td>5 %</td><td>2 %</td><td>12 %</td></tr>
+          <tr><td>Charges annuelles</td><td>6&nbsp;941 €</td><td>6&nbsp;791 €</td><td>12&nbsp;091 €</td></tr>
+          <tr><td>Résultat net après IS</td><td>35&nbsp;261 €</td><td>38&nbsp;557 €</td><td>24&nbsp;547 €</td></tr>
+          <tr><td>Cashflow mensuel</td><td>2&nbsp;938 €</td><td>3&nbsp;213 €</td><td>2&nbsp;046 €</td></tr>
+          <tr><td>Rendement net</td><td>4,46 %</td><td>4,87 %</td><td>3,10 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Survalorisation</td>
+          <td>Prix facial 720 k€ pour un rendement net de 4,5 %. Le marché de l'immeuble de rapport capitalise à 6-7 % à Saint-Roch, ce qui valorise l'immeuble autour de 530-560 k€. Surcote de ~35 % vs valeur de rendement.</td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Profil socio-économique des locataires</td>
+          <td>Quartier populaire, revenus modestes. Risque d'impayés amplifié en période de crise. La dispersion sur 7 lots atténue mais n'élimine pas le risque.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Âge du bâti (1940)</td>
+          <td>Malgré les rénovations récentes (toiture, électricité), un immeuble de 86 ans peut cacher des vices (structure, humidité, canalisations). Provisions travaux à prévoir.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Taxe foncière élevée</td>
+          <td>5&nbsp;339 €/an pour 263 m², soit 11,3 % du loyer brut. C'est significativement plus lourd que la moyenne (généralement 7-8 %). Toulon a des taux de TF élevés.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>DPE D — risque réglementaire futur</td>
+          <td>DPE D n'est pas bloquant aujourd'hui, mais la trajectoire réglementaire (interdiction G en 2025, F en 2028, E en 2034) pourrait atteindre D à horizon 10-15 ans. 242 kWh/m² reste correct pour du collectif 1940.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Cadre de vie / sécurité</td>
+          <td>Incivisme signalé dans le quartier (CIL Saint-Roch). Peut freiner la relocation des lots les plus exposés.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">Immeuble cohérent, bien entretenu, 7 lots loués sans vacance — le produit est sain. Mais le prix facial de 720&nbsp;000 € est déconnecté du rendement réel en SCI IS : 4,5 % net, c'est inférieur à ce qu'un Livret A + PEL produirait sans risque immobilier. La valeur de rendement de cet immeuble (capitalisation à 7 % du revenu net bailleur) se situe autour de 530&nbsp;000–560&nbsp;000 € — soit ~30 % en dessous du prix affiché. À 720 k€, l'opération n'est pas catastrophique (le cashflow reste positif) mais elle ne crée pas de valeur. Pour que le rendement net atteigne un seuil acceptable de 6 %, le prix d'achat doit descendre sous 520&nbsp;000 € — une négociation à ce niveau est peu réaliste face à un vendeur professionnel qui a acheté sur un rendement facial de 6,6 %. Le bon prix d'offre se situe autour de 600&nbsp;000 € : le rendement net remonte à ~5,4 %, le ratio coût/valeur passe sous 1,00, et l'opération devient défendable pour un investisseur patrimonial qui valorise la stabilité des 7 baux en cours et le potentiel des combles.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 600&nbsp;000 € (offre) — 520&nbsp;000 € (plancher rendement 6 %)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Rendement net réel en SCI IS : 4,5 % — pas 6,55 % comme affiché</li>
+        <li>Taxe foncière de 5&nbsp;339 €/an qui pèse 11,3 % du loyer brut (2× la moyenne)</li>
+        <li>Valorisation par capitalisation du revenu : 530–560 k€ à 7 % de taux de cap</li>
+        <li>Quartier populaire avec décote de sécurité vs centre-ville</li>
+        <li>Combles aménageables = potentiel mais pas de valorisation immédiate sans travaux</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices, amortissement du bâti sur 30 ans)</p>
+      <p><strong>Estimation frais de notaire :</strong> 56&nbsp;160 € (7,8 % — achat dans l'ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 15&nbsp;000 € (rafraîchissement léger — toitures et électricité déjà refaites)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
