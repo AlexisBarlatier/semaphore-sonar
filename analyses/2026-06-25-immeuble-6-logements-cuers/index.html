@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Immeuble 6 logements, Cuers (83390)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Immeuble 6 logements — Cuers (83390)</p>
+  <p class="report-date">Analyse générée le 25 juin 2026</p>
+  <p class="report-source">Source : LeBonCoin — Annonce n° 3182591995 (Mario BROCCARDO)</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Conservation en l'état avec rafraîchissement progressif</strong> — SCI à l'IS (15&nbsp;% sur les bénéfices)</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">350 000&nbsp;€</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">200&nbsp;m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 750&nbsp;€/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">438 000&nbsp;€</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">667 200&nbsp;€</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">2 430&nbsp;€/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">4,9&nbsp;% / 3,2&nbsp;%</span>
+    </div>
+    <div class="card card-verdict note-8">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,9/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.2370" data-lon="6.0717" data-address="Cuers (83390)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Cuers (13&nbsp;300 habitants, Var) est une commune péri-urbaine située à 20&nbsp;km au nord-est de Toulon, sur l'axe de l'A57. Le marché immobilier y est 15&nbsp;% moins cher que la moyenne du département. La population croît de +3,2&nbsp;% par an, signe d'un dynamisme résidentiel, mais la commune souffre d'un déficit d'image sur le volet sécurité et d'un taux de chômage supérieur à la moyenne nationale (8,6&nbsp;%).</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <span class="attr-score">5,0/10</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-detail">Gare TER Cuers-Pierrefeu, accès A57 direct, bus vers Toulon. Pas de transport en commun urbain dense.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces &amp; services</span>
+        <span class="attr-score">6,0/10</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-detail">5 supermarchés, commerces de proximité corrects, 7 médecins généralistes. Hypermarché et hôpital à 10-15 km.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles &amp; crèches</span>
+        <span class="attr-score">5,0/10</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-detail">Crèches, écoles primaires et 2 collèges sur place. Pas de lycée public (La Garde, 12&nbsp;km). Collège La Ferrage mal noté.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité &amp; cadre de vie</span>
+        <span class="attr-score">3,0/10</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:30%"></div></div>
+        <span class="attr-detail">Point faible majeur. Incivilités, trafic de stupéfiants, vols signalés. Note ville-ideale&nbsp;: 3,45/10. Centre-ville et quartier Clovade à éviter.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <span class="attr-score">6,5/10</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:65%"></div></div>
+        <span class="attr-detail">45,5&nbsp;% de population active, 19&nbsp;% de personnes seules. Tension locative ressentie (loyers jugés «&nbsp;exorbitants&nbsp;» par les habitants).</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <span class="attr-score">5,0/10</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-detail">Revenu médian 23&nbsp;860&nbsp;€ (au-dessus de la moyenne nationale). Peu d'emplois locaux, commune dortoir reliée à Toulon.</span>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs et couples travaillant sur Toulon, ménages modestes à intermédiaires cherchant un logement abordable à 20&nbsp;min de la métropole, familles monoparentales.</p>
+      <p><strong>Conclusion :</strong> L'attractivité est polarisée&nbsp;: le cadre de vie et la sécurité sont des freins sérieux (3/10), mais la demande locative est réelle (6,5/10) et le positionnement prix — 1&nbsp;750&nbsp;€/m² contre un marché à 3&nbsp;336&nbsp;€/m² — compense largement le risque de quartier. Cuers n'est pas Solliès-Pont, mais à ce prix, la décote intègre déjà la prime de risque.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Trois stratégies ont été évaluées pour cet immeuble de 6 logements déjà loués. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row retained">
+          <td><strong>Conservation SCI IS</strong></td>
+          <td>6</td>
+          <td>4,9&nbsp;%</td>
+          <td>667&nbsp;200&nbsp;€</td>
+          <td><span class="ratio-badge ratio-good">0,66</span></td>
+          <td><span class="badge-faisabilite">Excellente</span></td>
+          <td><span class="badge-risque risque-faible">Faible</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-5" style="width:50%"></div></div><span>5,0</span></div></td>
+        </tr>
+        <tr class="strategy-row">
+          <td>Rénovation + relocation majorée</td>
+          <td>6</td>
+          <td>5,1&nbsp;%</td>
+          <td>667&nbsp;200&nbsp;€</td>
+          <td><span class="ratio-badge ratio-neutral">0,72</span></td>
+          <td><span class="badge-faisabilite">Bonne</span></td>
+          <td><span class="badge-risque risque-moyen">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-5" style="width:52%"></div></div><span>5,3</span></div></td>
+        </tr>
+        <tr class="strategy-row">
+          <td>Marchand de biens (revente)</td>
+          <td>6+</td>
+          <td>N/A</td>
+          <td>667&nbsp;200&nbsp;€</td>
+          <td><span class="ratio-badge ratio-neutral">0,72</span></td>
+          <td><span class="badge-faisabilite">Moyenne</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-4" style="width:42%"></div></div><span>4,3</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Justification du choix&nbsp;:</strong> La conservation en SCI IS est la stratégie la plus efficiente. L'immeuble est déjà intégralement loué avec des baux en cours — le revenu est immédiat, sans risque de vacance au démarrage. La décote d'achat (1&nbsp;750&nbsp;€/m² vs 3&nbsp;336&nbsp;€/m² marché) offre une marge de sécurité considérable, et le cash flow net de 1&nbsp;800&nbsp;€/mois après IS délivre un rendement de 4,9&nbsp;% sur prix de revient. Le rafraîchissement peut être réalisé progressivement, logement par logement, sans interrompre les revenus locatifs. La rénovation lourde (stratégie 2) n'apporte qu'un gain marginal de rendement (+0,2&nbsp;%) pour 40&nbsp;k€ de travaux supplémentaires — le jeu n'en vaut pas la chandelle. Le marchand de biens (stratégie 3) est écarté&nbsp;: la fiscalité sur la plus-value (36,2&nbsp;%) consomme un tiers de la marge brute, et trouver un acquéreur pour un immeuble entier à Cuers est un pari risqué.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Type de bien</th><td>Immeuble de rapport — 6 logements</td></tr>
+        <tr><th>Adresse</th><td>Cuers (83390) — adresse exacte à confirmer</td></tr>
+        <tr><th>Surface totale</th><td>200&nbsp;m² habitables + cave 8&nbsp;m² + patio 10&nbsp;m²</td></tr>
+        <tr><th>Composition</th><td>1 T3 47&nbsp;m², 1 T3 39&nbsp;m², 2 studios 17&nbsp;m², 2 T2 38&nbsp;m²</td></tr>
+        <tr><th>Prix de vente</th><td>350&nbsp;000&nbsp;€ (1&nbsp;750&nbsp;€/m²)</td></tr>
+        <tr><th>Frais de notaire</th><td>~28&nbsp;000&nbsp;€ (8&nbsp;% dans l'ancien)</td></tr>
+        <tr><th>Travaux estimés</th><td>60&nbsp;000&nbsp;€ (rafraîchissement ~300&nbsp;€/m²)</td></tr>
+        <tr><th>Prix de revient</th><td>438&nbsp;000&nbsp;€</td></tr>
+        <tr><th>État</th><td>Ancien, à rafraîchir</td></tr>
+        <tr><th>DPE</th><td>Inconnu — à vérifier impérativement avant offre</td></tr>
+        <tr><th>Taxe foncière</th><td>2&nbsp;900&nbsp;€/an (annonce)</td></tr>
+        <tr><th>Occupation</th><td>6 logements loués — loyers charges comprises</td></tr>
+        <tr><th>Compteurs</th><td>EDF et eau individuels par logement</td></tr>
+        <tr><th>Vendeur</th><td>Mario BROCCARDO, professionnel (agent immobilier)</td></tr>
+        <tr><th>Revenu brut annoncé</th><td>31&nbsp;320&nbsp;€/an CC (2&nbsp;610&nbsp;€/mois CC)</td></tr>
+        <tr><th>Revenu HC estimé</th><td>29&nbsp;160&nbsp;€/an (2&nbsp;430&nbsp;€/mois HC)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5&nbsp;% — Loyer marché — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer HC annuel</td><td class="num">29&nbsp;160&nbsp;€</td></tr>
+            <tr><td>Vacance (5&nbsp;%)</td><td class="num neg">−1&nbsp;458&nbsp;€</td></tr>
+            <tr><td>Revenu net de vacance</td><td class="num">27&nbsp;702&nbsp;€</td></tr>
+            <tr><td>Taxe foncière</td><td class="num neg">−2&nbsp;900&nbsp;€</td></tr>
+            <tr><td>Assurance PNO</td><td class="num neg">−300&nbsp;€</td></tr>
+            <tr><td>Entretien courant</td><td class="num neg">−1&nbsp;000&nbsp;€</td></tr>
+            <tr><td>Amortissement bâti (3&nbsp;%)</td><td class="num neg">−10&nbsp;725&nbsp;€</td></tr>
+            <tr class="subtotal"><td>Résultat fiscal</td><td class="num">12&nbsp;777&nbsp;€</td></tr>
+            <tr><td>IS (15&nbsp;%)</td><td class="num neg">−1&nbsp;917&nbsp;€</td></tr>
+            <tr class="total"><td><strong>Net après IS</strong></td><td class="num"><strong>21&nbsp;585&nbsp;€/an</strong></td></tr>
+            <tr class="cashflow"><td><strong>Cash flow mensuel</strong></td><td class="num"><strong>1&nbsp;799&nbsp;€</strong></td></tr>
+            <tr><td>Rendement / prix de revient</td><td class="num">4,9&nbsp;%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td class="num">3,2&nbsp;%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2&nbsp;% — Loyer +5&nbsp;% — Charges −10&nbsp;%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer HC annuel</td><td class="num">30&nbsp;618&nbsp;€</td></tr>
+            <tr><td>Vacance (2&nbsp;%)</td><td class="num neg">−612&nbsp;€</td></tr>
+            <tr><td>Revenu net de vacance</td><td class="num">30&nbsp;006&nbsp;€</td></tr>
+            <tr><td>Taxe foncière</td><td class="num neg">−2&nbsp;610&nbsp;€</td></tr>
+            <tr><td>Assurance PNO</td><td class="num neg">−270&nbsp;€</td></tr>
+            <tr><td>Entretien courant</td><td class="num neg">−900&nbsp;€</td></tr>
+            <tr><td>Amortissement bâti (3&nbsp;%)</td><td class="num neg">−10&nbsp;725&nbsp;€</td></tr>
+            <tr class="subtotal"><td>Résultat fiscal</td><td class="num">15&nbsp;501&nbsp;€</td></tr>
+            <tr><td>IS (15&nbsp;%)</td><td class="num neg">−2&nbsp;325&nbsp;€</td></tr>
+            <tr class="total"><td><strong>Net après IS</strong></td><td class="num"><strong>23&nbsp;901&nbsp;€/an</strong></td></tr>
+            <tr class="cashflow"><td><strong>Cash flow mensuel</strong></td><td class="num"><strong>1&nbsp;992&nbsp;€</strong></td></tr>
+            <tr><td>Rendement / prix de revient</td><td class="num">5,5&nbsp;%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td class="num">3,6&nbsp;%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12&nbsp;% — Loyer −10&nbsp;% — Charges +20&nbsp;%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer HC annuel</td><td class="num">26&nbsp;244&nbsp;€</td></tr>
+            <tr><td>Vacance (12&nbsp;%)</td><td class="num neg">−3&nbsp;149&nbsp;€</td></tr>
+            <tr><td>Revenu net de vacance</td><td class="num">23&nbsp;095&nbsp;€</td></tr>
+            <tr><td>Taxe foncière</td><td class="num neg">−3&nbsp;480&nbsp;€</td></tr>
+            <tr><td>Assurance PNO</td><td class="num neg">−360&nbsp;€</td></tr>
+            <tr><td>Entretien courant</td><td class="num neg">−1&nbsp;200&nbsp;€</td></tr>
+            <tr><td>Provisions travaux imprévus</td><td class="num neg">−5&nbsp;000&nbsp;€</td></tr>
+            <tr><td>Amortissement bâti (3&nbsp;%)</td><td class="num neg">−10&nbsp;725&nbsp;€</td></tr>
+            <tr class="subtotal"><td>Résultat fiscal</td><td class="num">2&nbsp;330&nbsp;€</td></tr>
+            <tr><td>IS (15&nbsp;%)</td><td class="num neg">−350&nbsp;€</td></tr>
+            <tr class="total"><td><strong>Net après IS</strong></td><td class="num"><strong>12&nbsp;705&nbsp;€/an</strong></td></tr>
+            <tr class="cashflow"><td><strong>Cash flow mensuel</strong></td><td class="num"><strong>1&nbsp;059&nbsp;€</strong></td></tr>
+            <tr><td>Rendement / prix de revient</td><td class="num">2,9&nbsp;%</td></tr>
+            <tr><td>Rendement / valeur marché</td><td class="num">1,9&nbsp;%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut annuel</td><td>29&nbsp;160&nbsp;€</td><td>30&nbsp;618&nbsp;€</td><td>26&nbsp;244&nbsp;€</td></tr>
+          <tr><td>Charges + provisions</td><td>4&nbsp;200&nbsp;€</td><td>3&nbsp;780&nbsp;€</td><td>10&nbsp;040&nbsp;€</td></tr>
+          <tr><td>Amortissement</td><td>10&nbsp;725&nbsp;€</td><td>10&nbsp;725&nbsp;€</td><td>10&nbsp;725&nbsp;€</td></tr>
+          <tr><td>IS</td><td>1&nbsp;917&nbsp;€</td><td>2&nbsp;325&nbsp;€</td><td>350&nbsp;€</td></tr>
+          <tr><td><strong>Net après IS</strong></td><td><strong>21&nbsp;585&nbsp;€</strong></td><td><strong>23&nbsp;901&nbsp;€</strong></td><td><strong>12&nbsp;705&nbsp;€</strong></td></tr>
+          <tr><td><strong>Cash flow mensuel</strong></td><td><strong>1&nbsp;799&nbsp;€</strong></td><td><strong>1&nbsp;992&nbsp;€</strong></td><td><strong>1&nbsp;059&nbsp;€</strong></td></tr>
+          <tr><td>Rendement / prix revient</td><td>4,9&nbsp;%</td><td>5,5&nbsp;%</td><td>2,9&nbsp;%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sécurité quartier</td>
+          <td>Vols, trafic de stupéfiants, incivilités signalés à Cuers centre (note ville-ideale 3,45/10, avis très majoritairement négatifs). Risque de dégradation du bien et de turnover accru.</td>
+          <td class="severity severity-4">4/5</td>
+        </tr>
+        <tr>
+          <td>DPE inconnu</td>
+          <td>Aucun DPE mentionné dans l'annonce. Immeuble ancien (probablement avant 1975) — risque de classement F ou G, avec interdiction de location à horizon 2028 si passoire thermique.</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+        <tr>
+          <td>Charges réelles à vérifier</td>
+          <td>Les loyers sont affichés «&nbsp;charges comprises&nbsp;» sans détail des charges récupérables. Estimation à 180&nbsp;€/mois de provisions — à corroborer avec les baux en place.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>Turnover locatif</td>
+          <td>Cuers a un taux de chômage de 8,6&nbsp;% (au-dessus de la moyenne nationale). La population active (45,5&nbsp;%) est modeste. Risque de rotation plus élevé que dans des communes limitrophes mieux notées (La Farlède, Solliès-Toucas).</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+        <tr>
+          <td>Travaux sous-estimés</td>
+          <td>«&nbsp;À rafraîchir&nbsp;» sans détail. Estimation à 300&nbsp;€/m² (peinture, revêtements). Une mauvaise surprise électrique ou plomberie peut doubler l'enveloppe.</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict acheter">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">Ce bien présente un profil rare&nbsp;: une décote d'achat de 48&nbsp;% par rapport au prix du marché (1&nbsp;750&nbsp;€/m² contre 3&nbsp;336&nbsp;€/m²), des revenus locatifs immédiats avec 6 lots déjà loués, et un cash flow net de 1&nbsp;800&nbsp;€/mois après impôt sur les sociétés. Même en scénario pessimiste (vacance 12&nbsp;%, loyers −10&nbsp;%, 5&nbsp;000&nbsp;€ de travaux imprévus), le cash flow reste positif à 1&nbsp;059&nbsp;€/mois — le risque de cash flow négatif est quasi nul. La faiblesse structurelle de Cuers (sécurité, image) est le prix à payer pour cette décote, et les loyers actuels (HC estimé 12,15&nbsp;€/m²) sont cohérents avec le marché local (médiane 13,88&nbsp;€/m²).</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé&nbsp;:</strong> 380&nbsp;000&nbsp;€ (marge de négociation de 30&nbsp;k€ au-dessus du prix affiché — le ratio coût/valeur reste excellent jusqu'à ce seuil).</p>
+      <p><strong>Leviers de négociation&nbsp;:</strong></p>
+      <ul>
+        <li>DPE absent&nbsp;: exiger sa communication avant l'offre. Un DPE F ou G justifie une décote complémentaire de 15-25&nbsp;k€ pour financer la rénovation énergétique.</li>
+        <li>Travaux «&nbsp;à rafraîchir&nbsp;»&nbsp;: obtenir un chiffrage précis (peinture, électricité, plomberie, toiture). L'estimation à 60&nbsp;k€ est une hypothèse basse.</li>
+        <li>Baux en cours&nbsp;: vérifier la solvabilité des locataires, les montants exacts des provisions pour charges, et l'historique des impayés.</li>
+        <li>Sécurité du quartier&nbsp;: argumenter sur la décote liée au risque d'incivilité (quartier mal noté, turnover potentiellement plus élevé).</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu&nbsp;:</strong> SCI à l'IS (15&nbsp;% sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire&nbsp;:</strong> ~28&nbsp;000&nbsp;€ (8&nbsp;% dans l'ancien)</p>
+      <p><strong>Enveloppe travaux estimée&nbsp;:</strong> 50&nbsp;000 – 80&nbsp;000&nbsp;€ (rafraîchissement progressif)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
