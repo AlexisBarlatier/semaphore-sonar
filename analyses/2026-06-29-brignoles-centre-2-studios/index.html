@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Brignoles Centre, 2 studios 35 m²</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Brignoles Centre Vieille Ville (83170) — 2 studios, 35 m²</p>
+  <p class="report-date">Analyse générée le 29 juin 2026</p>
+  <p class="report-source">Source : SeLoger — Annonce 331939 (BSK Immobilier)</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location nue en l'état</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">88 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">35 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">2 515 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">95 040 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">66 745 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">660 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">5,8 % / 8,3 %</span>
+    </div>
+    <div class="card card-verdict note-54">
+      <span class="card-label">Note</span>
+      <span class="card-value">5,4/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.405" data-lon="6.063" data-address="Centre Vieille Ville, Brignoles (83170)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Le Centre Vieille Ville de Brignoles est classé Quartier Prioritaire de la Ville (QPV). Le profil socio-économique est fortement dégradé (chômage 25 %, revenu médian 16 000 €/ménage), mais la densité commerciale et le vivier locatif (73 % de locataires) créent une demande structurelle pour les petites surfaces.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:30%"></div></div>
+        <span class="attr-score">3/10</span>
+        <p class="attr-detail">Gare routière à proximité, mais pas de gare SNCF. Dépendance à la voiture pour l'emploi hors commune.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces &amp; services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p class="attr-detail">8,1 commerces / 100 m. Marché, cinéma, hypermarché, pharmacies, restaurants. Excellente couverture.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles &amp; crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p class="attr-detail">16 établissements/km². Couverture quantitative correcte, mais quartier prioritaire = qualité variable.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité &amp; cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:30%"></div></div>
+        <span class="attr-score">3/10</span>
+        <p class="attr-detail">83 délits / 1 000 hab. QPV avec criminalité supérieure à la moyenne. 0 % d'espaces verts.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p class="attr-detail">73 % de locataires = vivier énorme. Mais 21 % de logements vacants et chômage 25 % = risque d'impayés.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:30%"></div></div>
+        <span class="attr-score">3/10</span>
+        <p class="attr-detail">Revenu médian 16 k€ (−44 % vs France). 3 % de cadres. Croissance établissements +7 % (contre 29 % commune).</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Personnes seules à revenus modestes, étudiants, travailleurs précaires, bénéficiaires d'aides (APL, CAF). Les studios de 12-23 m² sont calibrés pour ce public.</p>
+      <p><strong>Conclusion :</strong> Le quartier est objectivement difficile (QPV, chômage, insécurité) mais le couple petite surface / loyer modéré / forte densité de locataires crée une demande structurelle. Le risque est moins la vacance que la solvabilité des locataires.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Deux stratégies ont été évaluées. Le marchand de biens est éliminé d'office : le ratio coût/valeur de 1,32 signifie que le bien est déjà surpayé de 32 % par rapport au marché du quartier.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-selected">
+          <td>Location nue SCI IS</td>
+          <td>2</td>
+          <td>5,8 %</td>
+          <td>66 745 €</td>
+          <td>1,32</td>
+          <td><span class="badge-faisabilite">Élevée</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td>
+            <div class="adeq-bar-track">
+              <div class="adeq-bar-fill adeq-50" style="width:50%"></div>
+            </div>
+            <span>5,0</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Marchand de biens</td>
+          <td>2</td>
+          <td>—</td>
+          <td>66 745 €</td>
+          <td>1,43</td>
+          <td><span class="badge-faisabilite">Éliminée</span></td>
+          <td><span class="badge-risque">Très élevé</span></td>
+          <td>
+            <div class="adeq-bar-track">
+              <div class="adeq-bar-fill adeq-50" style="width:50%"></div>
+            </div>
+            <span>5,0</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>Seule la location nue en l'état est viable. Le MDB est exclu car le prix d'achat (2 515 €/m²) est 32 % au-dessus du prix de marché du quartier (1 907 €/m²). Aucune rénovation ne comblera cet écart — l'acheteur final ne paiera pas plus que le marché. La stratégie retenue capitalise sur un rendement facial correct (9 % brut) en attendant une éventuelle revalorisation du quartier, ou une revente aux locataires occupants dans 10-15 ans. L'extension aux 2 autres studios du même immeuble (160 k€ pour 4 biens) mérite d'être explorée si le prix unitaire est ramené sous 45 k€ par lot.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><td>Adresse</td><td>Centre Vieille Ville, Brignoles (83170) — adresse exacte non communiquée</td></tr>
+        <tr><td>Type</td><td>Immeuble de rapport — 2 studios en RDC</td></tr>
+        <tr><td>Surface totale</td><td>35 m² (23 m² + 12 m²)</td></tr>
+        <tr><td>Prix affiché</td><td>88 000 € (2 515 €/m²)</td></tr>
+        <tr><td>Année construction</td><td>~1900</td></tr>
+        <tr><td>DPE / GES</td><td>E (287 kWhEP/m²/an) / B (9 kgCO2/m²/an)</td></tr>
+        <tr><td>Étage</td><td>RDC d'un immeuble de 3 étages</td></tr>
+        <tr><td>Revenu locatif</td><td>660 €/mois — deux locataires en place</td></tr>
+        <tr><td>Charges copro</td><td>10 €/mois — anormalement bas, à vérifier</td></tr>
+        <tr><td>Taxe foncière</td><td>471 €/an — annoncée</td></tr>
+        <tr><td>Cave</td><td>Oui</td></tr>
+        <tr><td>Vendeur</td><td>BSK Immobilier (agent commercial — honoraires vendeur)</td></tr>
+        <tr><td>Opportunité</td><td>2 autres studios disponibles dans le même immeuble — 4 biens pour 160 000 €</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5 % — Loyer actuel — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>7 920 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td>−396 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−471 €</td></tr>
+            <tr><td>Charges copro</td><td>−120 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−200 €</td></tr>
+            <tr><td>Entretien</td><td>−200 €</td></tr>
+            <tr><td>Comptable</td><td>−500 €</td></tr>
+            <tr class="subtotal"><td>EBE</td><td>6 033 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td>−2 581 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>3 452 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−518 €</td></tr>
+            <tr class="total"><td>Cash-flow net annuel</td><td>5 515 €</td></tr>
+            <tr class="total"><td>Cash-flow mensuel</td><td>460 €</td></tr>
+            <tr class="total"><td>CF amort. réintégré / mois</td><td>675 €</td></tr>
+            <tr class="total"><td>Rendement net (revient)</td><td>5,8 %</td></tr>
+            <tr class="total"><td>Rendement net (marché)</td><td>8,3 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2 % — Loyer +5 % — Charges −10 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>8 316 €</td></tr>
+            <tr><td>Vacance (2 %)</td><td>−166 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−471 €</td></tr>
+            <tr><td>Charges copro</td><td>−108 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−180 €</td></tr>
+            <tr><td>Entretien</td><td>−180 €</td></tr>
+            <tr><td>Comptable</td><td>−500 €</td></tr>
+            <tr class="subtotal"><td>EBE</td><td>6 711 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td>−2 581 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>4 130 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−619 €</td></tr>
+            <tr class="total"><td>Cash-flow net annuel</td><td>6 092 €</td></tr>
+            <tr class="total"><td>Cash-flow mensuel</td><td>508 €</td></tr>
+            <tr class="total"><td>CF amort. réintégré / mois</td><td>723 €</td></tr>
+            <tr class="total"><td>Rendement net (revient)</td><td>6,4 %</td></tr>
+            <tr class="total"><td>Rendement net (marché)</td><td>9,1 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12 % — Loyer −10 % — Charges +20 % — Travaux 2 000 €</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td>7 128 €</td></tr>
+            <tr><td>Vacance (12 %)</td><td>−855 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−471 €</td></tr>
+            <tr><td>Charges copro</td><td>−144 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−240 €</td></tr>
+            <tr><td>Entretien</td><td>−240 €</td></tr>
+            <tr><td>Comptable</td><td>−500 €</td></tr>
+            <tr><td>Provisions travaux imprévus</td><td>−2 000 €</td></tr>
+            <tr class="subtotal"><td>EBE</td><td>2 678 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td>−2 581 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>97 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−15 €</td></tr>
+            <tr class="total"><td>Cash-flow net annuel</td><td>2 663 €</td></tr>
+            <tr class="total"><td>Cash-flow mensuel</td><td>222 €</td></tr>
+            <tr class="total"><td>CF amort. réintégré / mois</td><td>437 €</td></tr>
+            <tr class="total"><td>Rendement net (revient)</td><td>2,8 %</td></tr>
+            <tr class="total"><td>Rendement net (marché)</td><td>4,0 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut annuel</td><td>7 920 €</td><td>8 316 €</td><td>7 128 €</td></tr>
+          <tr><td>EBE</td><td>6 033 €</td><td>6 711 €</td><td>2 678 €</td></tr>
+          <tr><td>IS</td><td>−518 €</td><td>−619 €</td><td>−15 €</td></tr>
+          <tr><td>Cash-flow net mensuel</td><td>460 €</td><td>508 €</td><td>222 €</td></tr>
+          <tr><td>CF amort. réintégré / mois</td><td>675 €</td><td>723 €</td><td>437 €</td></tr>
+          <tr><td>Rendement net (revient)</td><td>5,8 %</td><td>6,4 %</td><td>2,8 %</td></tr>
+          <tr><td>Rendement net (marché)</td><td>8,3 %</td><td>9,1 %</td><td>4,0 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Surpaye foncière</td>
+          <td>Prix au m² (2 515 €) est 32 % au-dessus du marché du quartier (1 907 €). Toute revente dans les 5 ans se fera à perte.</td>
+          <td><span class="severity severity-4">4</span></td>
+        </tr>
+        <tr>
+          <td>Solvabilité des locataires</td>
+          <td>Quartier QPV avec 25 % de chômage et 21 % de logements vacants. Risque d'impayés réel malgré la stabilité annoncée.</td>
+          <td><span class="severity severity-3">3</span></td>
+        </tr>
+        <tr>
+          <td>DPE médiocre</td>
+          <td>DPE E (287 kWhEP). Pas de risque d'interdiction à court terme, mais dévalorisation progressive et travaux énergétiques à prévoir.</td>
+          <td><span class="severity severity-3">3</span></td>
+        </tr>
+        <tr>
+          <td>Charges copro sous-évaluées</td>
+          <td>10 €/mois pour un immeuble de 1900 est anormalement bas. Probablement pas de fonds travaux constitué. Risque d'appel de fonds.</td>
+          <td><span class="severity severity-4">4</span></td>
+        </tr>
+        <tr>
+          <td>Liquidité de sortie</td>
+          <td>Revente difficile dans un quartier QPV avec 21 % de vacance. La fenêtre de sortie se limite aux investisseurs en rendement.</td>
+          <td><span class="severity severity-3">3</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À négocier. Le rendement facial de 9 % brut est attrayant, mais le prix est déconnecté du marché du quartier de 32 %. À 2 515 €/m², vous payez le prix d'un quartier standard de Brignoles (moyenne 2 242 €) pour un bien situé dans le quartier le moins valorisé de la ville (1 907 €/m²). Le cash-flow mensuel de 460 € en Base Case est confortable, mais le Worst Case à 222 € rappelle que la marge de sécurité est faible face à un impayé ou une vacance prolongée. L'opportunité d'acquérir les 4 studios pour 160 k€ n'est pertinente que si le prix unitaire descend sous 45 k€ par lot.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 62 000 € (1 770 €/m²)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Présenter le prix au m² du quartier (1 907 €/m² MeilleursAgents) pour justifier une décote de 24 % minimum</li>
+        <li>Demander les 3 derniers PV d'AG pour vérifier les charges réelles et le fonds travaux</li>
+        <li>Négocier un prix de lot pour l'acquisition des 4 studios (160 k€ → 140 k€, soit 35 k€/studio)</li>
+        <li>Jouer la montre : 21 % de vacance dans le quartier, Biens de 1900 avec DPE E, le vendeur n'a pas une position de force</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~7 040 € (8 % — achat dans l'ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 0 € (bien loué en l'état)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
