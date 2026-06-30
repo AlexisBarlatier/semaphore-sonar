@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — 9 parkings Place Caramy, Brignoles</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">9 places de parking — Place Caramy, 83170 Brignoles</p>
+  <p class="report-date">Analyse générée le 30 juin 2026</p>
+  <p class="report-source">Source : Leboncoin — 83IMMOBILIER</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location parking sous-sol — 9 lots</strong> — SCI à l'IS (15 %)</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">109 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">9 places</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / place</span>
+      <span class="card-value">12 111 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">116 920 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">99 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">720 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">5,4% / 5,8%</span>
+    </div>
+    <div class="card card-verdict note-6">
+      <span class="card-label">Note</span>
+      <span class="card-value">6,3/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.4055" data-lon="6.0615" data-address="Place Caramy, 83170 Brignoles"></div>
+  </section>
+
+  <!-- === Attractivité === -->
+  <section class="attractiveness">
+    <h2>Attractivité — parking sous-sol</h2>
+    <p class="attractiveness-intro">Évaluation du site sur 6 dimensions spécifiques au parking. Brignoles centre-ville, Place Caramy, entre la Mairie et le boulodrome. Le stationnement payant instauré au 1<sup>er</sup> juillet 2025 sur 1 096 places en centre-ville renforce mécaniquement la demande pour les parkings privés.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Pénurie de stationnement</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10 — Stationnement payant en surface depuis juillet 2025, report vers le privé.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Densité résidentielle</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10 — Centre ancien dense, nombreux logements sans garage.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Accessibilité</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10 — Sous-sol avec porte automatique, accès facile depuis la voirie.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10 — Porte automatique à digicode, sous-sol fermé.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Protection</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:90%"></div></div>
+        <span class="attr-score">9/10 — Sous-sol = ni intempéries ni dégradations, protection maximale.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10 — 8/9 places déjà louées. Stationnement payant = demande croissante.</span>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Riverains du centre-ville, commerçants, résidents sans garage — Brignoles intra-muros.</p>
+      <p><strong>Conclusion :</strong> Emplacement pertinent pour du parking locatif. La mise en place du stationnement payant (1 096 places concernées) est un catalyseur structurel de demande. Le sous-sol sécurisé justifie un loyer premium (80 €/mois) par rapport à une place extérieure. Score attractivité : 7,8/10.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Deux stratégies évaluées. La location des 9 places en l'état est retenue — le lot est indissociable, la revente à l'unité n'est pas possible sans modification des lots de copropriété.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td>Location parking sous-sol</td>
+          <td>9</td>
+          <td>5,4%</td>
+          <td>99 000 €</td>
+          <td><span class="ratio-badge ratio-danger">1,18</span></td>
+          <td><span class="badge-faisabilite">Immédiate</span></td>
+          <td><span class="badge-risque">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-7" style="width:78%"></div></div></div></td>
+        </tr>
+        <tr class="strategy-row">
+          <td>Revente à l'unité (après division lots)</td>
+          <td>9</td>
+          <td>—</td>
+          <td>~117 000 €</td>
+          <td><span class="ratio-badge ratio-neutral">1,00</span></td>
+          <td><span class="badge-faisabilite">Complexe</span></td>
+          <td><span class="badge-risque">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-6" style="width:65%"></div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location en bloc est la seule stratégie réaliste à court terme : le lot est indissociable, les 9 places sont déjà louées à 8/9, et les baux en cours génèrent 440 €/mois avec un potentiel de réactualisation à 720 €/mois. La revente à l'unité supposerait une modification du règlement de copropriété (frais de géomètre + notaire), un délai de 6-12 mois, et une exposition au risque de vacance commerciale — non retenu pour une opération de cette taille.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Type</th><td>9 places de parking en sous-sol sécurisé</td></tr>
+        <tr><th>Adresse</th><td>Place Caramy, 83170 Brignoles (quartier Centre-ville / Vieille ville)</td></tr>
+        <tr><th>Prix FAI</th><td>109 000 € (dont 10 000 € d'honoraires agence, soit 10,1%)</td></tr>
+        <tr><th>Prix hors honoraires</th><td>99 000 €</td></tr>
+        <tr><th>Frais de notaire estimés</th><td>7 920 € (~7,3% — ancien)</td></tr>
+        <tr><th>Prix de revient</th><td>116 920 €</td></tr>
+        <tr><th>Lots de copropriété</th><td>9 lots distincts, un par place</td></tr>
+        <tr><th>Occupation</th><td>8 places louées, 1 vacante</td></tr>
+        <tr><th>Loyer actuel</th><td>440 €/mois (8 × 55 €)</td></tr>
+        <tr><th>Loyer potentiel</th><td>720 €/mois (9 × 80 €) selon l'agent</td></tr>
+        <tr><th>Sécurisation</th><td>Porte automatique à digicode</td></tr>
+        <tr><th>Vendeur</th><td>83IMMOBILIER (professionnel, SIRET 82178827000022)</td></tr>
+        <tr><th>Valeur marché estimée</th><td>~99 000 € (9 × 11 000 €, basé sur comparables Brignoles s/sol)</td></tr>
+        <tr><th>DPE</th><td>Non applicable (parking)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 10% — Loyer 80 €/place — Charges estimées 900 €/an (copro ~600 € + TF ~300 €)</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut</td><td class="num">8 640 €/an</td></tr>
+            <tr><td>Vacance (10 %)</td><td class="num">−864 €</td></tr>
+            <tr><td>Charges copro (estimées)</td><td class="num">−600 €</td></tr>
+            <tr><td>Taxe foncière (estimée)</td><td class="num">−300 €</td></tr>
+            <tr class="subtotal"><td>EBE</td><td class="num">6 876 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td class="num">−3 508 €</td></tr>
+            <tr class="subtotal"><td>Résultat fiscal</td><td class="num">3 368 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−505 €</td></tr>
+            <tr class="total"><td>Cash flow net après IS</td><td class="num">6 371 €/an</td></tr>
+            <tr class="total secondary"><td>Soit par mois</td><td class="num">531 €</td></tr>
+            <tr class="total secondary"><td>CF amort. réintégré</td><td class="num">823 €/mois</td></tr>
+            <tr class="total"><td>Rendement net (sur prix de revient)</td><td class="num">5,4 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer 88 €/place — Charges maîtrisées 780 €/an</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut</td><td class="num">9 504 €/an</td></tr>
+            <tr><td>Vacance (5 %)</td><td class="num">−475 €</td></tr>
+            <tr><td>Charges copro</td><td class="num">−480 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num">−300 €</td></tr>
+            <tr class="subtotal"><td>EBE</td><td class="num">8 249 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td class="num">−3 508 €</td></tr>
+            <tr class="subtotal"><td>Résultat fiscal</td><td class="num">4 741 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−711 €</td></tr>
+            <tr class="total"><td>Cash flow net après IS</td><td class="num">7 538 €/an</td></tr>
+            <tr class="total secondary"><td>Soit par mois</td><td class="num">628 €</td></tr>
+            <tr class="total secondary"><td>CF amort. réintégré</td><td class="num">920 €/mois</td></tr>
+            <tr class="total"><td>Rendement net</td><td class="num">6,4 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 25% — Loyer 64 €/place — Hausse charges 1 080 €/an</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut</td><td class="num">6 912 €/an</td></tr>
+            <tr><td>Vacance (25 %)</td><td class="num">−1 728 €</td></tr>
+            <tr><td>Charges copro</td><td class="num">−780 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num">−300 €</td></tr>
+            <tr class="subtotal"><td>EBE</td><td class="num">4 104 €</td></tr>
+            <tr><td>Amortissement bâti (30 ans)</td><td class="num">−3 508 €</td></tr>
+            <tr class="subtotal"><td>Résultat fiscal</td><td class="num">596 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−89 €</td></tr>
+            <tr class="total"><td>Cash flow net après IS</td><td class="num">4 015 €/an</td></tr>
+            <tr class="total secondary"><td>Soit par mois</td><td class="num">335 €</td></tr>
+            <tr class="total secondary"><td>CF amort. réintégré</td><td class="num">627 €/mois</td></tr>
+            <tr class="total"><td>Rendement net</td><td class="num">3,4 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut</td><td>8 640 €</td><td>9 504 €</td><td>6 912 €</td></tr>
+          <tr><td>Vacance</td><td>10 %</td><td>5 %</td><td>25 %</td></tr>
+          <tr><td>EBE</td><td>6 876 €</td><td>8 249 €</td><td>4 104 €</td></tr>
+          <tr><td>CF net après IS</td><td>6 371 €</td><td>7 538 €</td><td>4 015 €</td></tr>
+          <tr><td>CF net /mois</td><td>531 €</td><td>628 €</td><td>335 €</td></tr>
+          <tr><td>CF amort. réintégré /mois</td><td>823 €</td><td>920 €</td><td>627 €</td></tr>
+          <tr><td>Rendement net</td><td>5,4 %</td><td>6,4 %</td><td>3,4 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Liquidité</td>
+          <td>Lot indissociable de 9 places = marché de revente très étroit. Peu d'acheteurs pour un bloc de cette taille.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Concentration</td>
+          <td>Un seul actif, une seule zone géographique, un seul type de locataire. Aucune diversification.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Dépendance réglementaire</td>
+          <td>Le stationnement payant est un catalyseur fort. Un retour en arrière politique affaiblirait la demande.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Charges copropriété</td>
+          <td>Porte automatique + digicode = maintenance et pannes potentielles. Charges à vérifier via PV d'AG.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance corrélée</td>
+          <td>Risque que plusieurs locataires partent simultanément (déménagements, changement de situation).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Honoraires agence élevés</td>
+          <td>10,1% du prix hors honoraires (10 000 €). C'est 3 points au-dessus de la pratique standard (7%).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Survalorisation faciale</td>
+          <td>Ratio coût/valeur de 1,18 — le prix de revient dépasse la valeur de marché de 18 %.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À négocier. Le bien est bien placé et le stationnement payant à Brignoles est un catalyseur réel, mais à 109 000 € FAI le rendement net de 5,4 % est trop faible pour du parking. Le prix de revient (116 920 €) dépasse la valeur de marché estimée (99 000 €) de 18 % — c'est structurellement trop cher. Pour viser 7 % de rendement net, le prix FAI doit descendre autour de 85 000 €.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 85 000 € FAI (rendement net ~7 % en Base Case)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li><strong>Honoraires d'agence excessifs :</strong> 10,1 % (10 000 €) contre 5-7 % en pratique. Ramener à 5 % = économie de 5 050 €.</li>
+        <li><strong>Liquidité du produit :</strong> un bloc de 9 parkings est invendable au prix unitaire — décote de bloc justifiée.</li>
+        <li><strong>Rendement réel vs annoncé :</strong> l'agent annonce « presque 8 % » mais c'est du brut sur le prix hors honoraires (8,7 % brut). En net-net après charges, vacance, TF et IS, on est à 5,4 %. Présenter le calcul détaillé.</li>
+        <li><strong>Comparables :</strong> les places s/sol à Brignoles se vendent 10 000-13 000 € à l'unité. Un achat en bloc de 9 places doit bénéficier d'une décote de gros.</li>
+        <li><strong>1 place vacante :</strong> manque à gagner immédiat de 80 €/mois, soit 960 €/an avant relocation.</li>
+        <li><strong>Charges à vérifier :</strong> demander les PV d'AG pour connaître les charges réelles et l'état du fonds de roulement — un appel de fonds exceptionnel (porte automatique à remplacer) changerait la donne.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices) — places en sous-sol amortissables sur 25-30 ans (bâti).</p>
+      <p><strong>Estimation frais de notaire :</strong> 7 920 € (~7,3 %, ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 0 € (places en état, pas de travaux signalés)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
