@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Immeuble mixte Toulon Est</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Toulon Est (83100) — adresse exacte non communiquée</p>
+  <p class="report-date">Analyse générée le 2 juillet 2026</p>
+  <p class="report-source">Source : Logic-Immo — IBOX Mourillon — Réf. 6174ME</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Mixte conservé — Boulangerie louée + 3 logements rénovés</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">420,000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">234 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1,795 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">571,500 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">577,000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">3,356 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">4.8% / 4.8%</span>
+    </div>
+    <div class="card card-verdict note-6">
+      <span class="card-label">Note</span>
+      <span class="card-value">6.1/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <p class="map-note">⚠️ Adresse exacte non communiquée — positionnement approximatif secteur Toulon Est.</p>
+    <div id="map-container" data-lat="43.128" data-lon="5.948" data-address="Toulon Est (83100)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Évaluation du secteur Toulon Est (Saint-Jean-du-Var / Pont-du-Las) sur 6 dimensions. Sans adresse exacte, les notes sont basées sur la moyenne du secteur Est.</p>
+    <div class="attractiveness-grid">
+      
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p class="attr-desc">Bus urbains, gare SNCF à 10-15 min, accès A50/A57. Pas de tramway.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7/10</span>
+        <p class="attr-desc">Bonne densité commerciale, présence de la boulangerie en RDC, commerces de proximité.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p class="attr-desc">Écoles primaires et collèges accessibles dans le secteur Est de Toulon.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-score">5/10</span>
+        <p class="attr-desc">Quartiers Est contrastés : certains secteurs recherchés, d'autres plus populaires.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <span class="attr-score">8/10</span>
+        <p class="attr-desc">Zone A tendue, fort déséquilibre offre/demande, vacance locative très faible.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:55%"></div></div>
+        <span class="attr-score">5.5/10</span>
+        <p class="attr-desc">Toulon : économie militaire et services publics. Revenu médian inférieur à la moyenne nationale.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Actifs et familles modestes (T2/T3) + preneur commercial (boulangerie, commerce de bouche). Zone tendue, forte demande locative, budget moyen.</p>
+      <p><strong>Conclusion :</strong> Quartier populaire avec une bonne dynamique locative. La demande est là, mais le niveau de loyer est plafonné par le revenu médian inférieur à la moyenne nationale. La mixité commerce/habitation est un atout différenciant.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Deux stratégies ont été évaluées. Le scénario A (mixte conservé) est retenu car il offre le meilleur ratio rendement/risque. Le scénario B est conditionné à l'absence de « linéaire commercial protégé » au PLU — à vérifier avec l'adresse exacte.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr class="strategy-row selected">
+          <td><strong>A — Mixte conservé</strong><br><span class="text-muted">Boulangerie louée + 3 logements</span></td>
+          <td class="num">4</td>
+          <td class="num">4.8%</td>
+          <td class="num">577,000 €</td>
+          <td><span class="ratio-badge ratio-ok">0.99</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Moyenne</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td class="adeq-cell">
+            <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:61%"></div></div>
+            <span>6.1/10</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>B — 100% résidentiel</strong><br><span class="text-muted">Boulangerie transformée + 3 logements ⚠️ conditionnel</span></td>
+          <td class="num">4</td>
+          <td class="num">4.3%</td>
+          <td class="num">585,000 €</td>
+          <td><span class="ratio-badge ratio-mauvais">1.06</span></td>
+          <td><span class="badge-faisabilite faisabilite-faible">Faible</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td class="adeq-cell">
+            <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:57%"></div></div>
+            <span>5.7/10</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Pourquoi le scénario A (mixte) :</strong> la boulangerie, bien que valorisée à un prix/m² inférieur au résidentiel (~1 800 € vs 2 500 €), apporte un revenu locatif commercial net (charges et TF refacturables) qui compense le surcoût des travaux de transformation. La conversion en logement (scénario B) coûte 50 k€ de plus et crée moins de valeur qu'elle n'en détruit (ratio 1,06). La mixité répartit aussi le risque locatif : si un logement est vacant, le loyer commercial continue de tourner, et inversement. Le scénario B reste une option si l'adresse confirme l'absence de protection « linéaire commercial » au PLU ET si une visite révèle une configuration facilement convertible (accès indépendant, hauteur sous plafond, luminosité).</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        
+        <tr><td>Type</td><td>Immeuble mixte — commerce (boulangerie) + 3 logements</td></tr>
+        <tr><td>Surface totale</td><td>234 m² (com. ~80 m², rés. ~154 m²)</td></tr>
+        <tr><td>Année de construction</td><td>1948</td></tr>
+        <tr><td>Étages</td><td>RDC + 1 étage</td></tr>
+        <tr><td>Composition</td><td>RDC : boulangerie (vente + labo + réserve)<br>Duplex exploitant (RDC+1er) : 2 ch., salon, cuisine, SdB<br>T2 droit (1er) : cuisine, ch., SdE, WC<br>T2 gauche (1er) : cuisine, ch., SdE+WC</td></tr>
+        <tr><td>DPE</td><td><strong>Non communiqué</strong> — demandé à l'agence ⚠️</td></tr>
+        <tr><td>État</td><td>Rénovation nécessaire (rafraîchissement / modernisation)</td></tr>
+        <tr><td>Vendeur</td><td>Professionnel (IBOX Mourillon)</td></tr>
+        <tr><td>Prix affiché</td><td>420,000 € (1 795 €/m²)</td></tr>
+        <tr><td>Honoraires</td><td>À la charge du vendeur</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières (Scénario A) === -->
+  <section class="financial-projections">
+    <h2>Projections financières — Scénario A (mixte conservé)</h2>
+    <p class="projection-note">⚠️ Les loyers et charges sont estimés à partir des moyennes de marché Toulon (adresse exacte inconnue). DPE non communiqué. Hypothèses : vacance commerciale 8% Base, résidentielle 5% Base ; charges mono-propriété reconstituées 3 900 €/an ; TF 2 800 €/an (part bailleur 66%) ; travaux 120 000 €.</p>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance com. 8% / rés. 5% — Loyers marché — Charges estimées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">40,272 €</td></tr>
+<tr><td>Vacance (6.1%)</td><td class="num">−2,446 €</td></tr>
+<tr class="secondary"><td>Revenu net après vacance</td><td class="num">37,826 €</td></tr>
+<tr><td>Charges (gestion, entretien, PNO, TF bailleur, comptable)</td><td class="num">−8,134 €</td></tr>
+<tr class="subtotal"><td>EBE (Excédent Brut d'Exploitation)</td><td class="num"><strong>29,692 €</strong></td></tr>
+<tr><td>Amortissement bâti (30 ans)</td><td class="num">−14,760 €</td></tr>
+<tr class="subtotal"><td>Résultat fiscal</td><td class="num">14,932 €</td></tr>
+<tr><td>IS (15 % SCI)</td><td class="num">−2,240 €</td></tr>
+<tr class="total"><td>Cash-flow net après IS</td><td class="num"><strong>27,452 €</strong></td></tr>
+<tr class="secondary"><td>CF amort. réintégré</td><td class="num">42,212 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance com. 5% / rés. 2% — Loyers +5% — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">42,286 €</td></tr>
+<tr><td>Vacance (3.1%)</td><td class="num">−1,299 €</td></tr>
+<tr class="secondary"><td>Revenu net après vacance</td><td class="num">40,986 €</td></tr>
+<tr><td>Charges (gestion, entretien, PNO, TF bailleur, comptable)</td><td class="num">−7,718 €</td></tr>
+<tr class="subtotal"><td>EBE (Excédent Brut d'Exploitation)</td><td class="num"><strong>33,269 €</strong></td></tr>
+<tr><td>Amortissement bâti (30 ans)</td><td class="num">−14,760 €</td></tr>
+<tr class="subtotal"><td>Résultat fiscal</td><td class="num">18,509 €</td></tr>
+<tr><td>IS (15 % SCI)</td><td class="num">−2,776 €</td></tr>
+<tr class="total"><td>Cash-flow net après IS</td><td class="num"><strong>30,492 €</strong></td></tr>
+<tr class="secondary"><td>CF amort. réintégré</td><td class="num">45,252 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance com. 18% / rés. 12% — Loyers −10%/−15% — Charges +20% — Travaux imprévus 5 000 €/an</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">35,525 €</td></tr>
+<tr><td>Vacance (14.1%)</td><td class="num">−4,997 €</td></tr>
+<tr class="secondary"><td>Revenu net après vacance</td><td class="num">30,527 €</td></tr>
+<tr><td>Charges (gestion, entretien, PNO, TF bailleur, comptable)</td><td class="num">−13,918 €</td></tr>
+<tr class="subtotal"><td>EBE (Excédent Brut d'Exploitation)</td><td class="num"><strong>16,610 €</strong></td></tr>
+<tr><td>Amortissement bâti (30 ans)</td><td class="num">−14,760 €</td></tr>
+<tr class="subtotal"><td>Résultat fiscal</td><td class="num">1,850 €</td></tr>
+<tr><td>IS (15 % SCI)</td><td class="num">−277 €</td></tr>
+<tr class="total"><td>Cash-flow net après IS</td><td class="num"><strong>16,332 €</strong></td></tr>
+<tr class="secondary"><td>CF amort. réintégré</td><td class="num">31,092 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut</td><td class="num">40,272 €</td><td class="num">42,286 €</td><td class="num">35,525 €</td></tr>
+<tr><td>Vacance</td><td class="num">6.1%</td><td class="num">3.1%</td><td class="num">14.1%</td></tr>
+<tr><td>EBE</td><td class="num">29,692 €</td><td class="num">33,269 €</td><td class="num">16,610 €</td></tr>
+<tr><td>IS</td><td class="num">−2,240 €</td><td class="num">−2,776 €</td><td class="num">−277 €</td></tr>
+<tr class="total"><td>Cash-flow net</td><td class="num"><strong>27,452 €</strong></td><td class="num"><strong>30,492 €</strong></td><td class="num"><strong>16,332 €</strong></td></tr>
+<tr class="secondary"><td>CF amort. réintégré</td><td class="num">42,212 €</td><td class="num">45,252 €</td><td class="num">31,092 €</td></tr>
+<tr><td>Rendement net (revient)</td><td class="num">4.8%</td><td class="num">5.3%</td><td class="num">2.9%</td></tr>
+<tr><td>Rendement net (marché)</td><td class="num">4.8%</td><td class="num">5.3%</td><td class="num">2.8%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>DPE inconnu</td>
+          <td>1948 → risque élevé de DPE F ou G. Si F/G, obligation de rénovation énergétique à horizon 2028 (location) et 2034 (tous). Coût potentiel : 60-120 k€ supplémentaires.</td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Adresse exacte inconnue</td>
+          <td>Sans l'adresse, impossible de vérifier le PLU (linéaire commercial protégé ?), le prix de marché réel, ou l'attractivité précise. Variabilité possible de ±30 % sur la valeur.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Amiante / plomb / normes</td>
+          <td>Construction 1948 : risques amiante (obligation de diagnostic), plomb dans les peintures, électricité non conforme. Surcoût travaux possible.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Copropriété / mono-propriété</td>
+          <td>Immeuble entier (a priori mono-propriété) : tous les travaux sont à la charge du propriétaire, pas de syndic pour mutualiser. Avantage : liberté de décision.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Boulangerie — ICPE</td>
+          <td>Présence d'un four + extraction. Normes spécifiques en cas de travaux. Si le boulanger actuel part, le local peut être difficile à relouer en l'état (équipements spécifiques).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Marché locatif Toulon Est</td>
+          <td>Zone tendue (A), bonne demande locative. Loyers plafonnés mais turnover faible.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À négocier. Au prix affiché (420 000 €), le ratio coût/valeur est à 0,99 — l'opération est à l'équilibre sans création de valeur significative. Le rendement net de 4,8 % est correct pour du mixte toulonnais mais ne laisse aucune marge de sécurité. <strong>Le DPE inconnu et l'absence d'adresse exacte sont les deux blocages majeurs</strong> : un DPE F ou G ajouterait 60-120 k€ de travaux obligatoires, faisant basculer le ratio bien au-delà de 1,10. Avant toute offre, exiger le DPE et l'adresse pour vérifier le PLU (linéaire commercial protégé ?).</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 398,279 € (sur la base d'une valeur marché de 577,000 € et d'une marge de 5 %)</p>
+      <p><strong>Offre suggérée :</strong> 378,365 € (hypothèse DPE D/E confirmé)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li><strong>DPE inconnu = risque F/G</strong> : un immeuble de 1948 sans DPE affiché est un aveu implicite. Chiffrer 80 k€ de rénovation énergétique et les déduire du prix.</li>
+        <li><strong>Boulangerie</strong> : si le preneur actuel part, le local avec four et extraction est difficile à relouer rapidement. Valoriser ce risque de vacance commerciale prolongée.</li>
+        <li><strong>Travaux de rafraîchissement</strong> : obtenir un devis avant l'offre. Les 120 k€ estimés peuvent facilement déraper sur du 1948 (amiante, électricité, plomberie).</li>
+        <li><strong>Ratio coût/valeur déjà à 0,99</strong> : sans décote, l'opération ne crée pas de valeur. Présenter l'approche « valeur après travaux − marge − travaux = prix max » à l'agent.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire :</strong> 31,500 € (7,5 % — ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 120,000 € (rafraîchissement global + mise aux normes boulangerie)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
