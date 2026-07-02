@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Immeuble Le Luc Centre</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Centre-ville, Le Luc (83340) — adresse exacte non communiquée</p>
+  <p class="report-date">Analyse générée le 2 juillet 2026</p>
+  <p class="report-source">Source : Logic-Immo — Concerto Immobilier — Réf. MA6086</p>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location longue durée — Division en 4 T2 rénovés</strong> — SCI à l'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">310,000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">213 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1,455 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">463,250 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">506,514 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">2,530 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">4.2% / 3.9%</span>
+    </div>
+    <div class="card card-verdict note-5">
+      <span class="card-label">Note</span>
+      <span class="card-value">6.0/10</span>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <p class="map-note">⚠️ Adresse exacte non communiquée — positionnement centre-ville du Luc.</p>
+    <div id="map-container" data-lat="43.395" data-lon="6.313" data-address="Centre-ville, Le Luc (83340)"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Évaluation du centre-ville du Luc-en-Provence. Petite ville varoise de ~11 000 habitants, à mi-chemin entre Toulon et Draguignan.</p>
+    <div class="attractiveness-grid">
+      
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:55%"></div></div>
+        <span class="attr-score">5.5/10</span>
+        <p class="attr-desc">Gare SNCF (Les Arcs-Draguignan à 15 min), accès A8 à 10 min, bus locaux. Pas de transport en commun dense.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:65%"></div></div>
+        <span class="attr-score">6.5/10</span>
+        <p class="attr-desc">Centre-ville : commerces de proximité, marché provençal, supermarché. Services publics présents.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:55%"></div></div>
+        <span class="attr-score">5.5/10</span>
+        <p class="attr-desc">Écoles primaires et collège dans la commune. Lycée à 15-20 min (Draguignan ou Brignoles). Futur lycée repoussé à 2029.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6/10</span>
+        <p class="attr-desc">Petite ville provençale calme, centre historique agréable. Tissu social mixte sans tension particulière.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:65%"></div></div>
+        <span class="attr-score">6.5/10</span>
+        <p class="attr-desc">Demande soutenue sur petites surfaces. Bassin d'emploi modeste mais prix abordables attirent les actifs exclus du littoral.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <span class="attr-score">5/10</span>
+        <p class="attr-desc">Économie locale modeste (services, agriculture, tourisme). Projet de lycée (2029) et piscine (2028) comme catalyseurs futurs.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs, couples sans enfants, retraités modestes. Demande portée par les prix abordables (vs littoral) et la qualité de vie provençale. Le projet de lycée (2029) pourrait dynamiser le bassin d'emploi à moyen terme.</p>
+      <p><strong>Conclusion :</strong> Marché secondaire correct, sans euphorie. La décote de 39 % vs prix moyen communal est le principal moteur de valeur. L'absence du lycée à court terme est un frein au dynamisme.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Deux stratégies évaluées. La location longue durée (A) est retenue car la MDB (B) ne dégage quasiment aucune marge au prix facial — les travaux et frais consomment toute la décote.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr class="strategy-row selected">
+          <td><strong>A — Investissement locatif</strong><br><span class="text-muted">4 T2 rénovés en location longue durée (SCI IS)</span></td>
+          <td class="num">4</td>
+          <td class="num">3.9%</td>
+          <td class="num">506,514 €</td>
+          <td><span class="ratio-badge ratio-bon">0.91</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Moyenne</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td class="adeq-cell">
+            <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:60%"></div></div>
+            <span>6.0/10</span>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>B — Marchand de biens</strong><br><span class="text-muted">Rénovation + revente 4 lots (8 mois)</span></td>
+          <td class="num">4</td>
+          <td class="num">ROI 0.1%</td>
+          <td class="num">489,900 €</td>
+          <td><span class="ratio-badge ratio-mauvais">1.00</span></td>
+          <td><span class="badge-faisabilite faisabilite-faible">Faible</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td class="adeq-cell">
+            <div class="adeq-bar-track"><div class="adeq-bar-fill adeq-low" style="width:40%"></div></div>
+            <span>4.0/10</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Pourquoi le locatif plutôt que la MDB :</strong> avec 130 k€ de travaux et 23 k€ de notaire, le coût de revient atteint 463 k€ pour une valeur marché de 507 k€. La marge de 44 k€ est absorbée par le portage, l'agence de revente et l'IS — la PV nette MDB tombe à ~500 €. Le locatif, lui, génère un cash-flow net de 19 600 €/an (1 631 €/mois), soit un rendement de 4,2 % sur prix de revient. Ce n'est pas spectaculaire, mais c'est stable, et la valeur sous-jacente est là (ratio 0,91). <strong>Pour que la MDB devienne viable, le prix d'achat doit descendre sous 250 000 €.</strong> La division en 4 lots reste pertinente dans les deux cas : elle maximise le rendement au m² et facilite la revente à la découpe comme stratégie de sortie future.</p>
+    </div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        
+        <tr><td>Type</td><td>Immeuble de rapport, centre-ville, 3 étages</td></tr>
+        <tr><td>Surface totale</td><td>213 m² (habitable estimée ~187 m² après déduction parties communes)</td></tr>
+        <tr><td>Division envisagée</td><td>4 T2 d'environ 53 m²</td></tr>
+        <tr><td>DPE</td><td><strong>D</strong> / GES <strong>B</strong> — correct pour de l'ancien, pas d'obligation de rénovation lourde</td></tr>
+        <tr><td>État</td><td>Travaux de rénovation importants nécessaires</td></tr>
+        <tr><td>Vendeur</td><td>Professionnel (Concerto Immobilier, Le Luc)</td></tr>
+        <tr><td>Prix affiché</td><td>310,000 € (1,455 €/m²) — décote de 39% vs marché</td></tr>
+        <tr><td>Loyer potentiel annoncé</td><td>2 000 – 2 200 €/mois (agent) — notre estimation marché : 2,530 €/mois</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières — Scénario locatif (SCI IS)</h2>
+    <p class="projection-note">⚠️ Hypothèses : loyers 13,5 €/m² (marché Le Luc), travaux 130 000 €, division en 4 T2 de ~47 m² habitables. TF 1 800 €/an, charges mono-propriété 4 200 €/an, comptable 500 €/an. Surface habitable retenue : 187 m² (88 % de la surface totale).</p>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché (13,5 €/m²) — Charges estimées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">30,365 €</td></tr>
+<tr><td>Vacance</td><td class="num">−1,518 €</td></tr>
+<tr class="secondary"><td>Revenu net après vacance</td><td class="num">28,847 €</td></tr>
+<tr><td>Charges (gestion, PNO, entretien, TF, comptable)</td><td class="num">−7,942 €</td></tr>
+<tr class="subtotal"><td>EBE</td><td class="num"><strong>20,905 €</strong></td></tr>
+<tr><td>Amortissement bâti (30 ans)</td><td class="num">−12,027 €</td></tr>
+<tr class="subtotal"><td>Résultat fiscal</td><td class="num">8,878 €</td></tr>
+<tr><td>IS (15 %)</td><td class="num">−1,332 €</td></tr>
+<tr class="total"><td>Cash-flow net après IS</td><td class="num"><strong>19,573 €</strong></td></tr>
+<tr class="secondary"><td>CF amort. réintégré</td><td class="num">31,600 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% (14,2 €/m²) — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">31,884 €</td></tr>
+<tr><td>Vacance</td><td class="num">−638 €</td></tr>
+<tr class="secondary"><td>Revenu net après vacance</td><td class="num">31,246 €</td></tr>
+<tr><td>Charges (gestion, PNO, entretien, TF, comptable)</td><td class="num">−7,462 €</td></tr>
+<tr class="subtotal"><td>EBE</td><td class="num"><strong>23,784 €</strong></td></tr>
+<tr><td>Amortissement bâti (30 ans)</td><td class="num">−12,027 €</td></tr>
+<tr class="subtotal"><td>Résultat fiscal</td><td class="num">11,757 €</td></tr>
+<tr><td>IS (15 %)</td><td class="num">−1,764 €</td></tr>
+<tr class="total"><td>Cash-flow net après IS</td><td class="num"><strong>22,020 €</strong></td></tr>
+<tr class="secondary"><td>CF amort. réintégré</td><td class="num">34,047 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer −10% (12,2 €/m²) — Charges +20% — Travaux imprévus 5 000 €/an</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">27,329 €</td></tr>
+<tr><td>Vacance</td><td class="num">−3,279 €</td></tr>
+<tr class="secondary"><td>Revenu net après vacance</td><td class="num">24,049 €</td></tr>
+<tr><td>Charges (gestion, PNO, entretien, TF, comptable)</td><td class="num">−13,902 €</td></tr>
+<tr class="subtotal"><td>EBE</td><td class="num"><strong>10,147 €</strong></td></tr>
+<tr><td>Amortissement bâti (30 ans)</td><td class="num">−12,027 €</td></tr>
+<tr class="subtotal"><td>Résultat fiscal</td><td class="num">-1,880 €</td></tr>
+<tr><td>IS (15 %)</td><td class="num">−0 €</td></tr>
+<tr class="total"><td>Cash-flow net après IS</td><td class="num"><strong>10,147 €</strong></td></tr>
+<tr class="secondary"><td>CF amort. réintégré</td><td class="num">22,174 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<tr><td>Revenu brut</td><td class="num">30,365 €</td><td class="num">31,884 €</td><td class="num">27,329 €</td></tr>
+<tr><td>EBE</td><td class="num">20,905 €</td><td class="num">23,784 €</td><td class="num">10,147 €</td></tr>
+<tr><td>IS</td><td class="num">−1,332 €</td><td class="num">−1,764 €</td><td class="num">0 €</td></tr>
+<tr class="total"><td>Cash-flow net</td><td class="num"><strong>19,573 €</strong></td><td class="num"><strong>22,020 €</strong></td><td class="num"><strong>10,147 €</strong></td></tr>
+<tr class="secondary"><td>CF amort. réintégré</td><td class="num">31,600 €</td><td class="num">34,047 €</td><td class="num">22,174 €</td></tr>
+<tr><td>Rendement net (revient)</td><td class="num">4.2%</td><td class="num">4.8%</td><td class="num">2.2%</td></tr>
+<tr><td>Rendement net (marché)</td><td class="num">3.9%</td><td class="num">4.3%</td><td class="num">2.0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>Travaux « importants » sans devis</td>
+          <td>Le terme est vague. Sur 213 m², l'enveloppe peut varier de 80 k€ (rafraîchissement) à 180 k€ (rénovation complète). Sans visite, l'estimation à 130 k€ reste une hypothèse.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Configuration inconnue</td>
+          <td>Pas de plan fourni. La division en 4 T2 est une hypothèse : nombre de pièces par niveau, accès indépendants, possibilité de créer des lots de copropriété distincts — tout est à vérifier.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Marchand de biens non viable au prix facial</td>
+          <td>La MDB dégage un ROI net de seulement 0,1 % au prix de 310 k€. La marge est intégralement consommée par les travaux et les frais. Le prix d'achat doit descendre sous 250 k€ pour qu'une MDB devienne intéressante (ROI > 20 %).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Marché locatif local modeste</td>
+          <td>Le Luc n'a pas la tension locative de Toulon. Le bassin d'emploi est limité, les loyers sont plafonnés par le revenu médian. Vacance potentiellement plus élevée qu'en zone A.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>DPE D — rassurant</td>
+          <td>Contrairement à la plupart des immeubles anciens du Var (souvent F ou G), le DPE D est correct. Pas d'obligation de rénovation énergétique à court terme. Facture énergétique estimée 2 850-3 900 €/an (à préciser : qui paie ?).</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Centre-ville Le Luc — liquidité correcte</td>
+          <td>Bien placé en centre-ville, les petites surfaces trouvent preneur. La revente à la découpe est une stratégie de sortie crédible si les lots sont bien individualisés.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À négocier. Le ratio coût/valeur de 0,91 est attractif et le DPE D est un vrai soulagement. Mais le rendement net de 4,2 % est trop faible pour un investissement qui demande 130 k€ de travaux et une division complète. <strong>Le prix facial laisse une marge trop mince</strong> : la décote de 39 % vs marché est en grande partie absorbée par les coûts de rénovation. La MDB est carrément non viable au prix de 310 k€ (ROI 0,1 %).</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 326,687 € (pour un rendement net de ~5,3 % sur valeur marché)</p>
+      <p><strong>Offre suggérée :</strong> 310,352 € — arrondir à <strong>310 000 €</strong> (oui, c'est le prix facial, mais c'est déjà au plafond)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li><strong>Travaux « importants » = risque budgétaire</strong> : sans devis, l'enveloppe peut exploser. Obtenir un chiffrage avant l'offre, ou conditionner l'offre à un diagnostic technique.</li>
+        <li><strong>Configuration et plans :</strong> l'agent dit « plans disponibles sur demande ». Les obtenir avant l'offre pour vérifier la faisabilité de la division en 4 lots — c'est le cœur de la création de valeur.</li>
+        <li><strong>MDB non viable = levier d'argumentation</strong> : présenter le calcul à l'agent. Au prix de 310 k€, même un marchand de biens ne gagne rien. Le vendeur doit comprendre que son prix est au plafond du marché.</li>
+        <li><strong>Comparable DVF</strong> : 2 423 €/m² médian au Luc (2025). Votre offre à 280 k€ mettrait le prix de revient après travaux à ~2 030 €/m², laissant une marge de 15 % vs marché — acceptable pour les deux parties.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire :</strong> 23,250 € (7,5 % — ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 130,000 € (610 €/m² — rénovation fonctionnelle)</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
