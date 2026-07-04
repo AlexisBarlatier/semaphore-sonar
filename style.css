@@ -89,6 +89,22 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   margin-top: 0.25rem;
 }
 
+/* Lien copiable vers l'annonce originale */
+.report-source-link {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  word-break: break-all;
+}
+.report-source-link a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-family: monospace;
+}
+.report-source-link a:hover {
+  text-decoration: underline;
+}
+
 /* Badge type de bien (Résidentiel / Professionnel) */
 .badge-type {
   display: inline-block;
@@ -814,6 +830,17 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   text-decoration: underline;
 }
 
+/* Icône lien annonce originale */
+.listing-src-link {
+  font-size: 0.85rem;
+  text-decoration: none;
+  opacity: 0.6;
+  margin-left: 0.3rem;
+}
+.listing-src-link:hover {
+  opacity: 1;
+}
+
 /* Badge de note /10 dans la liste */
 .listing-badge {
   display: inline-block;
@@ -895,6 +922,15 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   }
   .listing-card-title:hover {
     text-decoration: underline;
+  }
+  .listing-src-link {
+    font-size: 0.85rem;
+    text-decoration: none;
+    opacity: 0.6;
+    margin-left: 0.3rem;
+  }
+  .listing-src-link:hover {
+    opacity: 1;
   }
   .listing-card-meta {
     display: flex;
