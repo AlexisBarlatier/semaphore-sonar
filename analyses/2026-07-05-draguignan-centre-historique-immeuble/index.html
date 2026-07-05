@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Draguignan centre historique — 150 000 €</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Centre historique — Draguignan (83300)</p>
+  <p class="report-date">Analyse générée le 5 juillet 2026</p>
+  <p class="report-source">Source : Logic-Immo — Annonce HM IMMOBILIER</p>
+  <div class="report-source-link"><a href="https://www.logic-immo.com/detail-vente-264536957.htm">https://www.logic-immo.com/detail-vente-264536957.htm</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location meublée après rénovation</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">150 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">161 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">933 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">227 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">~310 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">1 995 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">7,0% / 5,1%</span>
+    </div>
+    <div class="card card-verdict note-8">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,5/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.536" data-lon="6.465" data-address="Centre historique, Draguignan (83300)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Draguignan, 40 789 habitants, préfecture du Var située à 30 km de la mer. Le centre historique bénéficie d'un bâti de caractère mais souffre d'un manque de dynamisme et d'une insécurité perçue. L'immobilier y est deux fois moins cher que sur le littoral (St-Raphaël, Fréjus), ce qui attire les budgets modestes. La ville dispose de tous les services publics (hôpital, lycées, antenne universitaire) mais reste enclavée sans gare SNCF.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:40%"></span></span>
+        <span class="attr-score">4/10</span>
+        <p class="attr-detail">Réseau de bus correct + navette gratuite centre-ville, mais pas de gare SNCF (Les Arcs à 20 min). Projet de gare au Muy non abouti.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:50%"></span></span>
+        <span class="attr-score">5/10</span>
+        <p class="attr-detail">Commerces de proximité et grands centres présents, mais centre-ville jugé «&nbsp;peu animé&nbsp;» et «&nbsp;vieillissant&nbsp;» par les habitants.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:60%"></span></span>
+        <span class="attr-score">6/10</span>
+        <p class="attr-detail">Lycées, collèges et antenne de la faculté de Toulon. Suffisant pour une ville de cette taille, mais offre supérieure limitée.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:30%"></span></span>
+        <span class="attr-score">3/10</span>
+        <p class="attr-detail">Point noir récurrent : alcooliques errants, trafic de stupéfiants, sentiment d'insécurité. Centre ancien jugé sale et mal fréquenté.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:50%"></span></span>
+        <span class="attr-score">5/10</span>
+        <p class="attr-detail">48 % de locataires, mais 11,4 % de vacance (élevé). La demande existe pour les petits budgets mais le centre ancien peine à retenir.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:40%"></span></span>
+        <span class="attr-score">4/10</span>
+        <p class="attr-detail">Revenu médian 27 394 €, chômage 15,8 %. Population vieillissante, peu de création d'emplois qualifiés.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Étudiants (antenne universitaire), jeunes actifs à budget modeste, personnel hospitalier, militaires. CSP modeste recherchant un loyer abordable plutôt qu'un cadre de vie premium.</p>
+      <p><strong>Conclusion :</strong> Le centre historique de Draguignan offre un rapport prix/loyer intéressant pour l'investisseur, mais la faible attractivité du quartier (insécurité, vacance élevée) impose une sélection rigoureuse des locataires et une rénovation de qualité pour se démarquer.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row-retained">
+          <td>Location meublée après rénovation</td>
+          <td>3 apparts + garage</td>
+          <td>5,1 %</td>
+          <td>~310 000 €</td>
+          <td>0,73</td>
+          <td>Élevée</td>
+          <td>Modéré</td>
+          <td><span class="adeq-bar-track"><span class="adeq-bar-fill" style="width:45%"></span></span>4,5/10</td>
+        </tr>
+        <tr>
+          <td>Transformation garage → studio</td>
+          <td>4 logements</td>
+          <td>5,6 %</td>
+          <td>~325 000 €</td>
+          <td>0,74</td>
+          <td>Moyenne</td>
+          <td>Élevé</td>
+          <td><span class="adeq-bar-track"><span class="adeq-bar-fill" style="width:45%"></span></span>4,5/10</td>
+        </tr>
+        <tr>
+          <td>Marchand de biens</td>
+          <td>Immeuble entier</td>
+          <td>ROI ~35 %</td>
+          <td>~310 000 €</td>
+          <td>0,73</td>
+          <td>Moyenne</td>
+          <td>Élevé</td>
+          <td><span class="adeq-bar-track"><span class="adeq-bar-fill" style="width:50%"></span></span>5,0/10</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location meublée après rénovation est la stratégie retenue : elle maximise le rendement sans complexité administrative (pas de changement d'usage, pas d'autorisation PLU). Le régime meublé permet d'amortir les meubles en plus du bâti (SCI IS), et la proximité de l'antenne universitaire rend le meublé pertinent pour des T2 destinés aux étudiants ou jeunes actifs. La transformation du garage en studio est séduisante sur le papier mais dépend du PLU (centre historique souvent protégé) et du coût réel de création d'une surface habitable aux normes (fenêtre, ventilation, accès indépendant). Le marchand de biens offre le meilleur rendement ponctuel (ROI ~35 %) mais nécessite de trouver un acheteur pour un immeuble entier rénové à Draguignan — liquidité incertaine.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><td>Type</td><td>Immeuble de rapport</td></tr>
+        <tr><td>Adresse</td><td>Centre historique, Draguignan (83300) — adresse exacte non communiquée</td></tr>
+        <tr><td>Surface habitable</td><td>160,86 m² — 3 appartements F2 (~47 m² chacun) + garage 19 m²</td></tr>
+        <tr><td>Prix de vente</td><td>150 000 € (honoraires charge vendeur)</td></tr>
+        <tr><td>Prix / m²</td><td>933 €/m²</td></tr>
+        <tr><td>DPE</td><td>D (énergie) / B (GES) — dépenses estimées 2 710 – 3 710 €/an</td></tr>
+        <tr><td>État</td><td>Rénovation nécessaire — immeuble de caractère, centre ancien</td></tr>
+        <tr><td>Occupation</td><td>2 appartements loués (loyers non communiqués) + 1 vacant + garage libre</td></tr>
+        <tr><td>Vendeur</td><td>Professionnel — HM IMMOBILIER (SAS), Draguignan</td></tr>
+        <tr><td>Annonce</td><td>Réf. 1226 — Logic-Immo</td></tr>
+        <tr><td>Type d'opération</td><td>Investissement locatif</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché (13,5 €/m²) — Charges annoncées<br><em>Charges estimées (copro ~1 500 € + PNO 300 € + entretien 1 500 €) — à vérifier</em></p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">23 941 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td class="num">−1 197 €</td></tr>
+            <tr><td>Charges copro + PNO + entretien</td><td class="num">−3 300 €</td></tr>
+            <tr><td>Taxe foncière (est. ~1 800 €)</td><td class="num">−1 800 €</td></tr>
+            <tr><td>Comptable</td><td class="num">−500 €</td></tr>
+            <tr><td>EBE</td><td class="num">17 144 €</td></tr>
+            <tr><td>Amortissement bâti (85% × 227k / 30)</td><td class="num">−6 432 €</td></tr>
+            <tr><td>Amortissement meubles (3×4k / 7)</td><td class="num">−1 714 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">8 998 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−1 350 €</td></tr>
+            <tr class="highlight"><td>Cash-flow net</td><td class="num"><strong>15 795 €/an — 1 316 €/mois</strong></td></tr>
+            <tr><td>CF amort. réintégré</td><td class="num">23 940 €/an — 1 995 €/mois</td></tr>
+            <tr><td>Rendement net (revient)</td><td class="num">7,0 %</td></tr>
+            <tr><td>Rendement net (valeur marché)</td><td class="num">5,1 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% (14,5 €/m²) — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">25 884 €</td></tr>
+            <tr><td>Vacance (2 %)</td><td class="num">−518 €</td></tr>
+            <tr><td>Charges copro + PNO + entretien</td><td class="num">−2 970 €</td></tr>
+            <tr><td>Taxe foncière (est. ~1 620 €)</td><td class="num">−1 620 €</td></tr>
+            <tr><td>Comptable</td><td class="num">−450 €</td></tr>
+            <tr><td>EBE</td><td class="num">20 326 €</td></tr>
+            <tr><td>Amortissement bâti</td><td class="num">−6 007 €</td></tr>
+            <tr><td>Amortissement meubles</td><td class="num">−1 714 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">12 605 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−1 891 €</td></tr>
+            <tr class="highlight"><td>Cash-flow net</td><td class="num"><strong>18 435 €/an — 1 536 €/mois</strong></td></tr>
+            <tr><td>CF amort. réintégré</td><td class="num">26 156 €/an — 2 180 €/mois</td></tr>
+            <tr><td>Rendement net (revient)</td><td class="num">8,7 %</td></tr>
+            <tr><td>Rendement net (valeur marché)</td><td class="num">5,9 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer −10% (12,0 €/m²) — Charges +20% — Provisions 3 000 €</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">21 028 €</td></tr>
+            <tr><td>Vacance (12 %)</td><td class="num">−2 523 €</td></tr>
+            <tr><td>Charges copro + PNO + entretien</td><td class="num">−3 960 €</td></tr>
+            <tr><td>Taxe foncière (est. ~2 160 €)</td><td class="num">−2 160 €</td></tr>
+            <tr><td>Comptable</td><td class="num">−600 €</td></tr>
+            <tr><td>Provisions travaux imprévus</td><td class="num">−3 000 €</td></tr>
+            <tr><td>EBE</td><td class="num">8 784 €</td></tr>
+            <tr><td>Amortissement bâti (85% × 247k / 30)</td><td class="num">−6 998 €</td></tr>
+            <tr><td>Amortissement meubles</td><td class="num">−1 714 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">72 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−11 €</td></tr>
+            <tr class="highlight"><td>Cash-flow net</td><td class="num"><strong>8 774 €/an — 731 €/mois</strong></td></tr>
+            <tr><td>CF amort. réintégré</td><td class="num">17 486 €/an — 1 457 €/mois</td></tr>
+            <tr><td>Rendement net (revient)</td><td class="num">3,9 %</td></tr>
+            <tr><td>Rendement net (valeur marché)</td><td class="num">2,8 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut annuel</td><td>23 941 €</td><td>25 884 €</td><td>21 028 €</td></tr>
+          <tr><td>EBE</td><td>17 144 €</td><td>20 326 €</td><td>8 784 €</td></tr>
+          <tr><td>Cash-flow net</td><td>1 316 €/mois</td><td>1 536 €/mois</td><td>731 €/mois</td></tr>
+          <tr><td>CF amort. réintégré</td><td>1 995 €/mois</td><td>2 180 €/mois</td><td>1 457 €/mois</td></tr>
+          <tr><td>Rendement net (marché)</td><td>5,1 %</td><td>5,9 %</td><td>2,8 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Loyers actuels inconnus</td>
+          <td>L'annonce ne communique pas les loyers des 2 appartements occupés. Si les baux sont anciens avec des loyers très bas (ex. 350 €/mois), l'arbitrage relocation est impossible sans attendre le départ des locataires. Information à exiger avant toute offre.</td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Budget travaux non chiffré</td>
+          <td>« Rénovation nécessaire » sans devis ni diagnostic détaillé. Estimation 50 000 – 85 000 € selon l'état réel (électricité, plomberie, isolation, fenêtres). Un immeuble de caractère en centre ancien peut cacher des surprises (structure, amiante, plomb).</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Adresse exacte inconnue</td>
+          <td>Le centre historique de Draguignan est hétérogène : une rue calme proche des commerces ne vaut pas une ruelle sombre en impasse. La valeur au m² peut varier de ±20 % selon la rue. Impossible d'affiner l'analyse sans l'adresse.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Insécurité centre-ville</td>
+          <td>Insécurité perçue (alcoolisme, trafic), centre jugé « sale et mal fréquenté » par les habitants. Impact direct sur l'attractivité locative et la capacité à louer au prix du marché. Peut allonger les périodes de vacance.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>DPE D — isolation à prévoir</td>
+          <td>Le DPE D n'est pas bloquant réglementairement mais les dépenses énergétiques annoncées (2 710–3 710 €) sont élevées pour 160 m². Une isolation complémentaire sera probablement nécessaire à moyen terme, surtout si le DPE se dégrade.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Transformation garage incertaine</td>
+          <td>Le garage est présenté comme « transformable en local commercial ». Sans vérification du PLU (centre historique souvent en zone de protection du linéaire commercial), cette option reste spéculative. Le coût réel de transformation n'est pas estimé.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict verdict-acheter">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À 150 000 €, cet immeuble affiche une décote de plus de 50 % par rapport à sa valeur de marché potentielle après rénovation (~310 000 €). Le ratio coût/valeur de 0,73 est excellent — chaque euro investi crée 1,37 € de valeur. Même dans le pire scénario (travaux 85k, loyers bas, vacance 12 %), le cash-flow reste positif à 731 €/mois. Le rendement net de 5,1 % sur valeur marché est correct sans être exceptionnel, mais le rendement de 7,0 % sur le prix de revient est solide pour du Var intérieur. Le prix facial de 150 000 € est une opportunité rare, à condition de valider les trois inconnues critiques : loyers actuels, budget travaux réel, et adresse exacte. La note de 7,5/10 reflète un bon deal structurel plombé par des informations manquantes que l'agent devra fournir.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 165 000 € (soit +10 % si les loyers actuels sont corrects et les travaux limités à 50k)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li><strong>Loyers actuels :</strong> exiger le détail des baux en cours. Si les loyers sont inférieurs à 500 €/mois par appartement, demander une baisse de prix proportionnelle (environ 3 000 € par tranche de 50 € de loyer manquant).</li>
+        <li><strong>DPE et travaux :</strong> un DPE D avec une conso annoncée à 3 700 €/an suggère une isolation médiocre. Chiffrer les travaux avec un artisan avant l'offre — si le budget dépasse 85k, renégocier à 135 000 €.</li>
+        <li><strong>Garage transformable :</strong> demander une attestation PLU ou un CU opérationnel pour vérifier la faisabilité du changement d'usage. Si impossible, le garage ne vaut que 8 000–10 000 € comme parking.</li>
+        <li><strong>Vacance du 3e lot :</strong> un appartement vacant depuis combien de temps ? Si + de 3 mois, cela peut indiquer un problème (état dégradé, difficulté à louer dans cette rue).</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices) — amortissement bâti 30 ans + meubles 7 ans</p>
+      <p><strong>Estimation frais de notaire :</strong> 12 000 € (8 % du prix d'achat)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 50 000 – 85 000 € (rafraîchissement 3 appartements, isolation, électricité/plomberie)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
