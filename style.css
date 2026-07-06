@@ -222,6 +222,8 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
 /* Cas particuliers — notes décimales sans le point */
 .card-verdict.note-54 { background: var(--color-amber-bg); border-color: var(--color-amber); }
 .card-verdict.note-54 .card-value { color: var(--color-amber); }
+.card-verdict.note-6-9 { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-6-9 .card-value { color: var(--color-amber); }
 .card-verdict.note-4-7 { background: var(--color-red-bg); border-color: var(--color-red); }
 .card-verdict.note-4-7 .card-value { color: var(--color-red); }
 
@@ -489,6 +491,10 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   text-align: right;
   font-family: var(--font-mono);
   font-weight: 500;
+}
+.projection-table tr.highlight {
+  background: var(--color-green-bg);
+  font-weight: 600;
 }
 .projection-table tr:last-child td {
   font-weight: 700;
