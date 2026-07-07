@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — La Seyne-sur-Mer — Centre Ville-Peyron, 83500</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">La Seyne-sur-Mer — Centre Ville-Peyron, 83500</p>
+  <p class="report-date">Analyse générée le 10 juillet 2026</p>
+  <p class="report-source">Source : Logic-Immo — RIVOLI IMMOBILIER (réf. 5021)</p>
+  <div class="report-source-link"><a href="https://www.logic-immo.com/detail-vente-267283805.htm" target="_blank" rel="noopener">https://www.logic-immo.com/detail-vente-267283805.htm</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Value-add progressif — conservation des locataires + relocation au prix marché à chaque départ</strong> — SCI à l'IS (15 %)</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">155 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">124 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1,250 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">202 400 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">263 500 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">1 700 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">6,09 % / 4,68 %</span>
+    </div>
+    <div class="card card-verdict note-7-8">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,8/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.100" data-lon="5.883" data-address="La Seyne-sur-Mer — Centre Ville-Peyron, 83500"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Le quartier Centre Ville-Peyron est classé QPV (Quartier Prioritaire de la Ville). En plein NPNRU (45 M€), il est en mutation mais reste marqué par la paupérisation, un taux de chômage élevé (17,6 %) et un sentiment d'insécurité (2,8/5).</p>
+    <div class="attractiveness-grid">
+          <div class="attr-card">
+      <span class="attr-label">Transports</span>
+      <span class="attr-score">6/10</span>
+      <span class="attr-bar-track"><span class="attr-bar-fill" style="width:60%"></span></span>
+      <span class="attr-detail">Gare SNCF, réseau bus Mistral, accès A50 rapide. Centre-ville desservi.</span>
+    </div>
+    <div class="attr-card">
+      <span class="attr-label">Commerces & services</span>
+      <span class="attr-score">4/10</span>
+      <span class="attr-bar-track"><span class="attr-bar-fill" style="width:40%"></span></span>
+      <span class="attr-detail">Centre-ville paupérisé, fermetures en cascade. NPNRU en cours — marché provençal et quelques commerces résiduels.</span>
+    </div>
+    <div class="attr-card">
+      <span class="attr-label">Écoles & crèches</span>
+      <span class="attr-score">4/10</span>
+      <span class="attr-bar-track"><span class="attr-bar-fill" style="width:40%"></span></span>
+      <span class="attr-detail">Écoles publiques de secteur (QPV), notation 2,6/5 sur BienDansMaVille. Peu attractif pour les familles CSP+.</span>
+    </div>
+    <div class="attr-card">
+      <span class="attr-label">Sécurité & cadre de vie</span>
+      <span class="attr-score">3/10</span>
+      <span class="attr-bar-track"><span class="attr-bar-fill" style="width:30%"></span></span>
+      <span class="attr-detail">QPV classé, trafic de drogue signalé, note 2,8/5. Rénovation NPNRU en cours mais effets pas encore visibles.</span>
+    </div>
+    <div class="attr-card">
+      <span class="attr-label">Demande locative</span>
+      <span class="attr-score">5/10</span>
+      <span class="attr-bar-track"><span class="attr-bar-fill" style="width:50%"></span></span>
+      <span class="attr-detail">45 % de locataires, tension locative modérée. La proximité Toulon (10 min) élargit le bassin.</span>
+    </div>
+    <div class="attr-card">
+      <span class="attr-label">Dynamisme économique</span>
+      <span class="attr-score">4/10</span>
+      <span class="attr-bar-track"><span class="attr-bar-fill" style="width:40%"></span></span>
+      <span class="attr-detail">Chômage 17,6 %, revenu médian 25 348 €. NPNRU 45 M€ = catalyseur long terme. Port et plages = atouts touristiques.</span>
+    </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs, étudiants, ménages modestes — public QPV sensible au prix. Pas de CSP+.</p>
+      <p><strong>Conclusion :</strong> Le quartier est risqué à court terme (délinquance, turnover locatif) mais le NPNRU est un catalyseur structurel. Dans 5-10 ans, si le plan de rénovation aboutit, la valeur du quartier pourrait converger vers la moyenne seynoise. Le profil locataire type est un jeune actif ou étudiant non-véhiculé (proximité gare, bus), acceptant un cadre de vie modeste en échange d'un loyer accessible.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+                <tr class="strategy-row">
+          <td>Statu quo locatif</td>
+          <td class="num">3</td>
+          <td class="num">4,24 %</td>
+          <td class="num">182 400 €</td>
+          <td class="num"><span class="ratio-badge ratio-bon">0,69</span></td>
+          <td><span class="badge-faisabilite faisabilite-haute">Haute</span></td>
+          <td><span class="badge-risque risque-faible">Faible</span></td>
+          <td class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:43%"></span></span></td>
+        </tr>
+        <tr class="strategy-row selected">
+          <td>Value-add progressif</td>
+          <td class="num">3</td>
+          <td class="num">6,09 %</td>
+          <td class="num">202 400 €</td>
+          <td class="num"><span class="ratio-badge ratio-bon">0,77</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Moyenne</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:43%"></span></span></td>
+        </tr>
+        <tr class="strategy-row">
+          <td>Marchand de biens</td>
+          <td class="num">1</td>
+          <td class="num">ROI ~12 %</td>
+          <td class="num">210 000 €</td>
+          <td class="num"><span class="ratio-badge ratio-ok">0,96</span></td>
+          <td><span class="badge-faisabilite faisabilite-faible">Faible</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-low" style="width:33%"></span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La stratégie « Value-add progressif » est retenue car elle maximise le rendement sans expulser les locataires. En Phase 1, les loyers actuels (14 820 €/an) couvrent les charges avec un cash-flow positif modeste (~645 €/mois après IS). Au départ de chaque locataire, le lot est rénové et reloué au prix de marché, faisant progresser le revenu brut vers ~20 400 €/an. Le statu quo pur est trop peu rentable (4,2 % net) compte tenu du risque QPV. Le marchand de biens est écarté : QPV = liquidité de revente trop faible, DPE inconnu = risque de moins-value. La transformation du RDC commerce en habitation est probablement bloquée par le PLU (linéaire commercial protégé en centre-ville).</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+                <tr><td>Type</td><td>Immeuble de rapport — 4 niveaux</td></tr>
+        <tr><td>Surface</td><td>124 m² (RDC ~30 m² commerce, 1er ~30 m² T1, 2e ~40 m² T2, 3e ~24 m² chambre+SdB)</td></tr>
+        <tr><td>Prix</td><td>155 000 € FAI</td></tr>
+        <tr><td>Prix/m²</td><td>1 250 €/m²</td></tr>
+        <tr><td>Lots</td><td>3 lots (1 commercial + 2 résidentiels)</td></tr>
+        <tr><td>Occupation</td><td>3 lots loués — loyers sécurisés (375 € + 400 € + 460 € = 1 235 €/mois)</td></tr>
+        <tr><td>DPE</td><td><strong>Non communiqué</strong> — à exiger avant toute offre</td></tr>
+        <tr><td>Charges</td><td>Mono-propriété — estimées ~3 900 €/an (assurance, entretien, électricité, provision gros travaux)</td></tr>
+        <tr><td>Taxe foncière</td><td>~1 671 €/an (estimé) — part commerce refacturable ~508 €</td></tr>
+        <tr><td>Travaux</td><td>« À prévoir » selon l'agent — estimés 15-35 k€ selon ampleur</td></tr>
+        <tr><td>Vendeur</td><td>Agence RIVOLI IMMOBILIER — 45 ventes récentes</td></tr>
+        <tr><td>Quartier</td><td>Centre Ville-Peyron — QPV — 2 500 €/m² DVF</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer marché — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+                    <tr><td>Revenu brut annuel</td><td class="num">14 820 €</td></tr>
+        <tr><td>Vacance</td><td class="num">− 876 €</td></tr>
+        <tr><td>Charges (mono-propriété)</td><td class="num">− 5 813 €</td></tr>
+        <tr class="subtotal"><td>EBE</td><td class="num">8 131 €</td></tr>
+        <tr><td>Amortissement</td><td class="num">− 5 541 €</td></tr>
+        <tr><td>Résultat fiscal</td><td class="num">2 590 €</td></tr>
+        <tr><td>IS (15 %)</td><td class="num">− 388 €</td></tr>
+        <tr class="highlight"><td>Cash-flow net</td><td class="num">7 742 €</td></tr>
+        <tr class="secondary"><td>CF amort. réintégré</td><td class="num">13 283 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges -10%</p>
+        <table class="projection-table">
+          <tbody>
+                    <tr><td>Revenu brut annuel</td><td class="num">21 420 €</td></tr>
+        <tr><td>Vacance</td><td class="num">− 624 €</td></tr>
+        <tr><td>Charges (mono-propriété)</td><td class="num">− 5 423 €</td></tr>
+        <tr class="subtotal"><td>EBE</td><td class="num">15 373 €</td></tr>
+        <tr><td>Amortissement</td><td class="num">− 6 341 €</td></tr>
+        <tr><td>Résultat fiscal</td><td class="num">9 032 €</td></tr>
+        <tr><td>IS (15 %)</td><td class="num">− 1 355 €</td></tr>
+        <tr class="highlight"><td>Cash-flow net</td><td class="num">14 018 €</td></tr>
+        <tr class="secondary"><td>CF amort. réintégré</td><td class="num">20 359 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer -10% — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+                    <tr><td>Revenu brut annuel</td><td class="num">17 340 €</td></tr>
+        <tr><td>Vacance</td><td class="num">− 2 397 €</td></tr>
+        <tr><td>Charges (mono-propriété)</td><td class="num">− 9 593 €</td></tr>
+        <tr class="subtotal"><td>EBE</td><td class="num">5 350 €</td></tr>
+        <tr><td>Amortissement</td><td class="num">− 6 341 €</td></tr>
+        <tr><td>Résultat fiscal</td><td class="num">0 €</td></tr>
+        <tr><td>IS (15 %)</td><td class="num">− 0 €</td></tr>
+        <tr class="highlight"><td>Cash-flow net</td><td class="num">5 350 €</td></tr>
+        <tr class="secondary"><td>CF amort. réintégré</td><td class="num">11 690 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+                  <tr>
+          <td>Revenu brut</td>
+          <td class="num">14 820 €</td>
+          <td class="num">21 420 €</td>
+          <td class="num">17 340 €</td>
+        </tr>
+        <tr>
+          <td>EBE</td>
+          <td class="num">8 131 €</td>
+          <td class="num">15 373 €</td>
+          <td class="num">5 350 €</td>
+        </tr>
+        <tr>
+          <td>IS</td>
+          <td class="num">388 €</td>
+          <td class="num">1 355 €</td>
+          <td class="num">0 €</td>
+        </tr>
+        <tr>
+          <td>CF net mensuel</td>
+          <td class="num">645 €</td>
+          <td class="num">1 168 €</td>
+          <td class="num">446 €</td>
+        </tr>
+        <tr>
+          <td>CF amort. réintégré/mois</td>
+          <td class="num">1 107 €</td>
+          <td class="num">1 697 €</td>
+          <td class="num">974 €</td>
+        </tr>
+        <tr>
+          <td>Rendement net</td>
+          <td class="num">4,24 %</td>
+          <td class="num">6,93 %</td>
+          <td class="num">2,64 %</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+                <tr>
+          <td><strong>DPE inconnu</strong></td>
+          <td>Aucun diagnostic énergétique communiqué. Si F ou G, rénovation obligatoire 40-60 k€ et interdiction de location à terme. Signal fort : le vendeur cache le DPE.</td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td><strong>Quartier QPV</strong></td>
+          <td>Centre-ville classé prioritaire. Délinquance, turnover locatif, impayés plus fréquents. La décote de prix compense partiellement.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td><strong>Travaux non chiffrés</strong></td>
+          <td>« À prévoir » sans aucun devis. Sur un immeuble entier ancien, le propriétaire porte tout. Risque de surprise à 20-30 k€.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td><strong>Locataires en place sous-marché</strong></td>
+          <td>Le T2 (64 m²) loué 460 € vs ~850 € marché. Manque à gagner 4 700 €/an. Départ non maîtrisable dans le temps.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td><strong>Mixte commercial</strong></td>
+          <td>RDC commerce = vacance plus longue (8-18 mois) si départ. Linéaire commercial probablement protégé par le PLU — transformation en habitation bloquée.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td><strong>Marché baissier</strong></td>
+          <td>La Seyne −4,3 % sur 1 an (appartements). Tendance baissière nationale. Achat dans un marché qui corrige.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict buy">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>À acheter</strong> — avec conditions. Le prix est attractif (décote 50 % vs marché) mais le DPE inconnu, les travaux non chiffrés et le QPV imposent la prudence. Une offre à 140 000 € intégrerait ces risques. Sans DPE, ne pas s'engager.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 140 000 € (soit 90 % du prix affiché) — pour compenser le risque DPE inconnu et les travaux non chiffrés</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+                <li><strong>DPE manquant</strong> — exiger le diagnostic avant toute offre. Si F ou G, chiffrer la rénovation (40-60 k€) et la déduire du prix.</li>
+        <li><strong>Travaux « à prévoir »</strong> — demander un chiffrage précis. Sans devis, provisionner 35 k€ et négocier d'autant.</li>
+        <li><strong>T2 sous-loué</strong> — le manque à gagner (4 700 €/an × durée estimée du bail restant) est un argument de baisse. Capitaliser 5 ans = 23 500 €.</li>
+        <li><strong>QPV + vacance commerciale</strong> — le risque de vacance prolongée du RDC commerce (8-18 mois en cas de départ) justifie une prime de risque.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire :</strong> 12 400 € — 8 % (ancien, immeuble entier)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 15 000 € (Phase 1 — rafraîchissement) à 35 000 € (Phase 2 — rénovation complète)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>

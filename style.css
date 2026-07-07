@@ -228,6 +228,10 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
 .card-verdict.note-6-9 .card-value { color: var(--color-amber); }
 .card-verdict.note-4-7 { background: var(--color-red-bg); border-color: var(--color-red); }
 .card-verdict.note-4-7 .card-value { color: var(--color-red); }
+.card-verdict.note-7-5 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7-5 .card-value { color: var(--color-blue); }
+.card-verdict.note-7-8 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7-8 .card-value { color: var(--color-blue); }
 
 /* --- Carte --- */
 .map-section { margin-bottom: 2rem; }
