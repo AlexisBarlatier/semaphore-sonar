@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Brignoles T3 55 m² — 68 000 € FAI</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Brignoles (83170) — T3 55,1 m² — RDC</p>
+  <p class="report-date">Analyse générée le 8 juillet 2026</p>
+  <p class="report-source">Source : SeLoger — Exclusivité Marylène Delaire (CENTRALE IMMOBILIERE DE GESTION)</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonces/achat/appartement/brignoles-83/269472571.htm">https://www.seloger.com/annonces/achat/appartement/brignoles-83/269472571.htm</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location nue longue durée</strong> — SCI à l'IS — Prix cible 68 000 € FAI</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">62 963 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">55,1 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 143 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">68 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">~121 220 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">600 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">6,5% / 4,0%</span>
+    </div>
+    <div class="card card-verdict note-7-8">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,8/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.406" data-lon="6.062" data-address="Brignoles (83170)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Brignoles (17 846 hab.) est une commune du centre-Var, à 30 min de l'A8 et 45 min de la mer. Le marché immobilier est parmi les plus accessibles du département (2 276 €/m² moyen pour un appartement, MeilleursAgents juillet 2026) mais la commune cumule les indicateurs socio-économiques dégradés : chômage à 19,8 %, revenu médian de 24 800 €, et surtout 14,2 % de logements vacants — un taux très élevé qui signale une faible tension locative. L'adresse exacte n'est pas communiquée dans l'annonce, ce qui empêche une analyse fine par quartier. Les prix varient de 1 935 €/m² (centre/vieille-ville) à 2 917 €/m² (extension années 80-90).</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:40%"></span></span>
+        <span class="attr-score">4/10</span>
+        <p class="attr-detail">Bus locaux, A8 à 15 km. Pas de gare SNCF (Les Arcs à 25 km). Voiture indispensable.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:50%"></span></span>
+        <span class="attr-score">5/10</span>
+        <p class="attr-detail">Centre-ville avec commerces de proximité, marché, supermarchés. Services publics présents (sous-préfecture).</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:50%"></span></span>
+        <span class="attr-score">5/10</span>
+        <p class="attr-detail">Écoles maternelles et primaires, collèges, lycée Raynouard. Pas d'enseignement supérieur.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:40%"></span></span>
+        <span class="attr-score">4/10</span>
+        <p class="attr-detail">Ville populaire sans charme particulier. Quartiers sensibles. Cadre de vie médiocre.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:40%"></span></span>
+        <span class="attr-score">4/10</span>
+        <p class="attr-detail">47 % de locataires mais 14,2 % de vacance — alarmant. Tension locative très faible, relocation lente.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <span class="attr-bar-track"><span class="attr-bar-fill" style="width:30%"></span></span>
+        <span class="attr-score">3/10</span>
+        <p class="attr-detail">Chômage 19,8 %, revenu médian 24 800 €. Économie peu dynamique, peu d'emplois qualifiés.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Famille modeste ou couple avec enfant, budget serré. Actif à revenu médian, voire bénéficiaire d'aides (APL). La solvabilité sera le facteur limitant — un loyer de 600 € représente déjà 29 % du revenu médian mensuel.</p>
+      <p><strong>Conclusion :</strong> Brignoles est un marché d'entrée de gamme : prix bas, loyers bas, risque locatif élevé. L'investissement n'a de sens que si le prix d'achat compense large le risque de vacance — ce qui est le cas à 68 000 € FAI (1 143 €/m², soit −48 % sous la moyenne communale de 2 200 € retenue).</p>
+    </div>
+  </section>
+
+  <!-- === Stratégies === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Trois stratégies envisagées. La location nue longue durée est retenue : le marché de la colocation est quasi inexistant à Brignoles (pas d'étudiants), Airbnb est inadapté (pas de tourisme), et le marchand de biens est peu attractif vu la faible liquidité locale.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Location nue longue durée</strong><br><small>En l'état, loyer 600 €/mois</small></td>
+          <td>1 lot</td>
+          <td>6,5 %</td>
+          <td>~121 220 €</td>
+          <td><span class="ratio-badge ratio-bon">0,56</span></td>
+          <td><span class="badge-faisabilite faisabilite-haute">Élevée</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:42%"></span></span>4,2/10</td>
+        </tr>
+        <tr>
+          <td>Location meublée</td>
+          <td>1 lot</td>
+          <td>6,8 %</td>
+          <td>~121 220 €</td>
+          <td><span class="ratio-badge ratio-bon">0,56</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Moyenne</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:40%"></span></span>4,0/10</td>
+        </tr>
+        <tr>
+          <td>Marchand de biens</td>
+          <td>1 lot</td>
+          <td>ROI ~28 %</td>
+          <td>~105 000 €</td>
+          <td><span class="ratio-badge ratio-ok">0,65</span></td>
+          <td><span class="badge-faisabilite faisabilite-faible">Faible</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:35%"></span></span>3,5/10</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location nue est la stratégie la plus cohérente : simplicité, pas d'investissement meubles, pas de turnover lié au meublé. Le meublé apporte 0,3 point de rendement supplémentaire (amortissement des meubles sur 7 ans) mais ajoute de la gestion et un risque de vacance plus élevé (rotation). La MDB est écartée : la liquidité à Brignoles est faible, le délai de revente incertain, et le DPE E limite le pool d'acheteurs.</p>
+      <p><strong>⚠️ Charges copropriété :</strong> le montant réel n'est pas connu. L'annonce affiche 6 000 € dans une section dépliable, mais ce chiffre est probablement erroné (109 €/m²/an, 5× la normale). Les projections ci-dessous utilisent une estimation de 1 100 €/an (~20 €/m²/an) — <strong>à faire confirmer par l'agence avant toute offre</strong>. Une erreur de 500 €/an sur ce poste change le rendement de ±0,6 point.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><td>Type</td><td>Appartement T3 — RDC sur 3 étages</td></tr>
+        <tr><td>Adresse</td><td>Non communiquée — Brignoles (83170)</td></tr>
+        <tr><td>Surface habitable</td><td>55,1 m² — séjour + 2 chambres + cuisine équipée + SdB + WC</td></tr>
+        <tr><td>Prix affiché</td><td>79 900 € (1 450 €/m²) — honoraires charge vendeur</td></tr>
+        <tr><td>Prix cible</td><td><strong>68 000 € FAI</strong> (−21 % vs FAI affiché 86 292 €) — prix net vendeur ~62 963 €</td></tr>
+        <tr><td>DPE</td><td>E (énergie) / B (GES)</td></tr>
+        <tr><td>Occupation</td><td>Libre (vendu vide)</td></tr>
+        <tr><td>Travaux</td><td>Aucun mentionné. Cuisine équipée présente. RDC en état correct apparent.</td></tr>
+        <tr><td>Annexes</td><td>2 caves + parking gratuit sur place</td></tr>
+        <tr><td>Copropriété</td><td>8 appartements + caves (12 lots totaux) — pas d'ascenseur</td></tr>
+        <tr><td>Vendeur</td><td>Professionnel — CENTRALE IMMOBILIERE DE GESTION (Lyon)</td></tr>
+        <tr><td>Annonce</td><td>Réf. 696 — SeLoger — Exclusivité Marylène Delaire</td></tr>
+        <tr><td>Type d'opération</td><td>Investissement locatif — Location nue longue durée</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+    <p class="attractiveness-intro">Projections calculées avec le <strong>prix cible de 68 000 € FAI</strong> (62 963 € net vendeur). Fiscalité : SCI à l'IS (15 % sur les bénéfices), amortissement du bâti sur 30 ans (base = 90 % du prix de revient). Charges copropriété estimées à 1 100 €/an (~20 €/m²/an) en l'absence de chiffre fiable dans l'annonce — <strong>à vérifier avec les PV d'AG</strong>. Taxe foncière estimée à 700 €/an. Le calcul intègre l'impact fiscal global de la SCI (bénéfice existant de 6 000 €/an avant ce bien).</p>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Loyer 600 €/mois — Charges estimées 1 100 € — TF 700 € — PNO 200 €<br><em>Vacance 5 % — Charges à vérifier avec PV d'AG</em></p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">7 200 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td class="num">−360 €</td></tr>
+            <tr><td>Charges copro (est. 20 €/m²/an)</td><td class="num">−1 100 €</td></tr>
+            <tr><td>Taxe foncière (estimée)</td><td class="num">−700 €</td></tr>
+            <tr><td>PNO</td><td class="num">−200 €</td></tr>
+            <tr><td>EBE</td><td class="num">4 840 €</td></tr>
+            <tr><td>Amortissement bâti (90% × 68k / 30)</td><td class="num">−2 040 €</td></tr>
+            <tr><td>Résultat fiscal bien</td><td class="num">2 800 €</td></tr>
+            <tr><td>IS supplémentaire (15 % sur résultat global SCI)</td><td class="num">−420 €</td></tr>
+            <tr class="highlight"><td>Cash-flow net</td><td class="num"><strong>4 420 €/an — 368 €/mois</strong></td></tr>
+            <tr><td>CF amort. réintégré</td><td class="num">6 460 €/an — 538 €/mois</td></tr>
+            <tr><td>Rendement net (prix de revient)</td><td class="num">6,5 %</td></tr>
+            <tr><td>Rendement net (valeur marché)</td><td class="num">4,0 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Best</h3>
+        <p class="scenario-subtitle">Loyer 630 €/mois (+5 %) — Charges −10 % — Vacance 2 %<br><em>Relocation rapide, locataire solvable, pas d'impayés</em></p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">7 560 €</td></tr>
+            <tr><td>Vacance (2 %)</td><td class="num">−151 €</td></tr>
+            <tr><td>Charges copro (−10 %)</td><td class="num">−990 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num">−700 €</td></tr>
+            <tr><td>PNO</td><td class="num">−200 €</td></tr>
+            <tr><td>EBE</td><td class="num">5 519 €</td></tr>
+            <tr><td>Amortissement bâti</td><td class="num">−2 040 €</td></tr>
+            <tr><td>IS supplémentaire</td><td class="num">−522 €</td></tr>
+            <tr class="highlight"><td>Cash-flow net</td><td class="num"><strong>4 997 €/an — 416 €/mois</strong></td></tr>
+            <tr><td>CF amort. réintégré</td><td class="num">7 037 €/an — 586 €/mois</td></tr>
+            <tr><td>Rendement net (prix de revient)</td><td class="num">7,3 %</td></tr>
+            <tr><td>Rendement net (valeur marché)</td><td class="num">4,1 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Worst</h3>
+        <p class="scenario-subtitle">Loyer 540 €/mois (−10 %) — Charges +20 % — Vacance 12 %<br><em>Vacance prolongée 4+ mois, relocation forcée à prix cassé, provisions travaux 2 000 €</em></p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">6 480 €</td></tr>
+            <tr><td>Vacance (12 %)</td><td class="num">−778 €</td></tr>
+            <tr><td>Charges copro (+20 %)</td><td class="num">−1 320 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num">−700 €</td></tr>
+            <tr><td>PNO</td><td class="num">−200 €</td></tr>
+            <tr><td>Provisions travaux imprévus</td><td class="num">−2 000 €</td></tr>
+            <tr><td>EBE</td><td class="num">1 482 €</td></tr>
+            <tr><td>Amortissement bâti</td><td class="num">−2 040 €</td></tr>
+            <tr><td>Résultat fiscal bien</td><td class="num">−558 €</td></tr>
+            <tr><td>IS supplémentaire</td><td class="num">0 €</td></tr>
+            <tr class="highlight"><td>Cash-flow net</td><td class="num"><strong>1 482 €/an — 124 €/mois</strong></td></tr>
+            <tr><td>CF amort. réintégré</td><td class="num">3 522 €/an — 294 €/mois</td></tr>
+            <tr><td>Rendement net (prix de revient)</td><td class="num">2,2 %</td></tr>
+            <tr><td>Rendement net (valeur marché)</td><td class="num">1,2 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative — 68 000 € FAI</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Best</th>
+            <th>Worst</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut annuel</td><td>7 200 €</td><td>7 560 €</td><td>6 480 €</td></tr>
+          <tr><td>EBE</td><td>4 840 €</td><td>5 519 €</td><td>1 482 €</td></tr>
+          <tr><td>Cash-flow net</td><td>368 €/mois</td><td>416 €/mois</td><td>124 €/mois</td></tr>
+          <tr><td>CF amort. réintégré</td><td>538 €/mois</td><td>586 €/mois</td><td>294 €/mois</td></tr>
+          <tr><td>Rendement net (marché)</td><td>4,0 %</td><td>4,1 %</td><td>1,2 %</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Note :</strong> l'IS supplémentaire intègre l'impact du bien sur le résultat fiscal global de la SCI (bénéfice existant de 6 000 €/an). En Base, le bien génère 2 800 € de résultat fiscal → IS supplémentaire de 420 €. L'amortissement de 2 040 €/an réduit l'assiette taxable et économise 306 € d'IS par rapport à une situation sans amortissement.</p>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Charges copropriété inconnues</td>
+          <td>Le chiffre de 6 000 € dans l'annonce est aberrant (109 €/m²/an) mais ne peut pas être écarté sans confirmation. Si le chiffre réel est de 2 500-3 000 € (travaux votés), le rendement net tombe à 3-4 % et le CF devient négatif. <strong>PV d'AG obligatoires avant toute offre.</strong></td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance locative élevée (Brignoles)</td>
+          <td>14,2 % de logements vacants dans la commune (INSEE). C'est 2× la moyenne nationale. Une relocation peut prendre 3-6 mois. Le Worst Case à 12 % de vacance est optimiste — le taux réel en cas de pépin pourrait atteindre 20-25 %. Un T3 en RDC sans ascenseur dans une ville à 19,8 % de chômage n'est pas le bien le plus liquide.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Adresse exacte inconnue</td>
+          <td>Sans l'adresse, impossible de savoir si le bien est dans le centre (1 935 €/m²), en extension années 50-70 (2 470 €/m²) ou dans un quartier dégradé. La valeur marché retenue (2 200 €/m²) est une hypothèse conservative — mais l'écart peut être de ±25 % selon le quartier réel. <strong>Demander l'adresse avant l'offre.</strong></td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>DPE E — passoire thermique à horizon 2034</td>
+          <td>Le DPE E n'est pas encore interdit à la location, mais la trajectoire réglementaire est claire (G en 2025, F en 2028, E en 2034). Un RDC est le plus mauvais étage thermiquement (humidité, déperditions par le sol). Budget rénovation à prévoir à moyen terme : 15 000-25 000 € (isolation plancher, fenêtres double vitrage, VMC).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Solvabilité des locataires</td>
+          <td>Chômage 19,8 %, revenu médian 24 800 €. Un loyer de 600 € représente 29 % du revenu médian — acceptable sur le papier, mais le risque d'impayés est réel dans une commune où la moitié de la population est sous le seuil de pauvreté. La garantie Visale ou un dépôt de garantie solide seront indispensables.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>RDC sans ascenseur — désavantage locatif</td>
+          <td>Un RDC est moins recherché qu'un étage (bruit, sécurité, luminosité). La décote locative est estimée à 5-10 % par rapport à un 1er étage. Le loyer de 600 € (10,9 €/m²) est déjà 17 % sous la moyenne communale de 13,2 €/m² — cohérent avec un RDC mais limite le potentiel de hausse.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict buy">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À 68 000 € FAI, ce T3 Brignoles est un investissement défensif : le prix (1 143 €/m²) offre une décote de 48 % sur la valeur marché estimée (2 200 €/m²), ce qui protège le capital même en cas de baisse du marché ou de relocation difficile. Le rendement net de 6,5 % sur prix de revient est solide, le cash-flow de 368 €/mois est positif, et le trou de financement sur 15 ans n'est que de 48 €/mois — absorbable sans douleur par l'épargne mensuelle. L'amortissement de 2 040 €/an vient réduire l'assiette taxable de la SCI et économise 306 € d'IS par an sur les bénéfices existants.</p>
+      <p>Le point bloquant est l'absence de données fiables : adresse exacte et charges réelles de copropriété. Si les charges sont confirmées à un niveau normal (≤ 1 500 €/an) et si l'adresse n'est pas dans un quartier dégradé, ce bien est un <strong>À acheter</strong> au prix cible. Dans le cas contraire (charges ≥ 2 500 € ou adresse en QPV), le prix devrait descendre sous 60 000 € FAI pour rester viable.</p>
+      <p>Le Worst Case est faible (124 €/mois de CF) mais reste positif — c'est inhabituel pour un T3 à ce prix et témoigne de la protection offerte par la décote. Même avec 4 mois de vacance et un loyer à 540 €, le bien ne coûte pas d'argent.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix cible recommandé : 68 000 € FAI</strong> — soit −21 % sur le FAI affiché de 86 292 € (offre à ~63 000 € net vendeur).</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li><strong>Charges copro non fiables :</strong> le chiffre de 6 000 € affiché (même si probablement erroné) est un argument pour exiger les PV d'AG et négocier à la baisse. Si les charges réelles sont de 1 500 €, le rendement reste à 5,8 % — correct. Si elles sont de 3 000 €, le rendement tombe à 4,4 % et le prix doit baisser d'autant.</li>
+        <li><strong>DPE E :</strong> anticiper 15 000-25 000 € de travaux énergétiques à horizon 2034. Capitaliser ce coût futur dans la négociation.</li>
+        <li><strong>14,2 % de vacance à Brignoles :</strong> le risque de relocation longue est réel. Argumenter que le loyer de 600 € est au prix du marché (10,9 €/m² vs 13,2 € moyen) et qu'une baisse supplémentaire n'est pas envisageable — c'est le prix d'achat qui doit compenser le risque.</li>
+        <li><strong>RDC sans ascenseur :</strong> liquidité plus faible à la revente, pool d'acheteurs réduit (pas de PMR, pas de personnes âgées).</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices) — amortissement bâti 30 ans</p>
+      <p><strong>Estimation frais de notaire :</strong> 5 037 € (8 % du prix net vendeur de 62 963 €)</p>
+      <p><strong>Enveloppe travaux immédiats :</strong> 0 € (vendu en état, cuisine équipée, aucun travaux annoncés)</p>
+      <p><strong>Loyer estimé :</strong> 600 €/mois (10,9 €/m²) — cohérent avec un RDC DPE E à Brignoles</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
