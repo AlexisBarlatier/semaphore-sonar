@@ -544,6 +544,18 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
   font-family: var(--font-mono);
 }
 
+/* --- Projection summary spacing --- */
+.projection-summary-secondary {
+  margin-top: 2rem;
+}
+
+/* --- Note de valorisation --- */
+.valorisation-note {
+  margin-top: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
 /* --- Valorisation institutionnelle (pro uniquement) --- */
 .institutional-valuation {
   margin-bottom: 2rem;
