@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — 108 Rue Darius Milhaud, Toulon</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">108 Rue Darius Milhaud, 83000 Toulon — Quartier La Rode</p>
+  <p class="report-date">Analyse générée le 10 juillet 2026</p>
+  <p class="report-source">Source : LeBonCoin — Particulier (RB)</p>
+  <div class="report-source-link"><a href="https://www.leboncoin.fr/ad/ventes_immobilieres/3229863633">🔗 Annonce originale</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Bail commercial 3-6-9 — conservation</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">99 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">63 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 571 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">106 920 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">~162 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">990 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">8,0 % / 5,3 %</span>
+    </div>
+    <div class="card card-verdict note-9-2">
+      <span class="card-label">Note</span>
+      <span class="card-value">9,2/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.117538" data-lon="5.942210" data-address="108 Rue Darius Milhaud, 83000 Toulon"></div>
+  </section>
+
+  <!-- === Attractivité de la zone === -->
+  <section class="attractiveness">
+    <h2>Attractivité de la zone d'activité</h2>
+    <p class="attractiveness-intro">La Rode est un quartier mixte de Toulon, à deux pas du port de commerce et de la base navale. Zone de passage avec une bonne densité commerciale, bénéficiant de la dynamique de rénovation urbaine du centre toulonnais. Le profil preneur est typiquement une enseigne de proximité, une agence (comme l'ancien locataire Marine Immobilier), ou un commerce de détail.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Accessibilité</span>
+          <span class="attr-card-score">7/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-card-detail">Proche port, bus, accès A50 à 5 min — pas de métro/tram mais bonne desserte routière.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Visibilité &amp; flux</span>
+          <span class="attr-card-score">8/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-card-detail">Rue passante, 3 grandes baies vitrées, signalétique possible. Flux piéton correct.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Bassin d'emploi</span>
+          <span class="attr-card-score">5/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-card-detail">Toulon : chômage ~14 %, revenu médian 27 394 €. Bassin modeste, dominé par l'emploi public et militaire.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Concurrence / saturation</span>
+          <span class="attr-card-score">6/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-card-detail">Quelques locaux commerciaux vacants visibles dans le secteur, mais pas de saturation critique.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Dynamisme économique</span>
+          <span class="attr-card-score">6/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-card-detail">Rénovation urbaine du centre-ville en cours, proximité du port, quelques créations d'entreprises.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Cadre réglementaire</span>
+          <span class="attr-card-score">7/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-card-detail">Zone urbaine mixte (PLU Toulon). Vérifier si la rue est en linéaire commercial protégé — probablement oui, ce qui sécurise l'usage.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil preneur cible :</strong> Agence immobilière, commerce de détail, enseigne de proximité, professions libérales</p>
+      <p><strong>Conclusion :</strong> Emplacement commercial correct sans être premium. La surface modeste (45 m²) et les 3 baies vitrées ciblent bien les commerces de passage. Le loyer antérieur de 990 € (22 €/m²/mois) est dans la fourchette haute pour Toulon — signe d'un emplacement qui fonctionne commercialement.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien mixte (local commercial + box). La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-retained">
+          <td><strong>Bail commercial 3-6-9</strong></td>
+          <td>1</td>
+          <td>8,0 %</td>
+          <td>162 000 €</td>
+          <td>0,66</td>
+          <td>Élevée</td>
+          <td>Faible</td>
+          <td>
+            <div class="adeq-bar-track"><div class="adeq-bar-fill" style="width:70%"></div></div>
+            <span class="adeq-score">7,0</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Vente à la découpe (commerce + box)</td>
+          <td>2</td>
+          <td>ROI ~50 %</td>
+          <td>180 000 €</td>
+          <td>0,59</td>
+          <td>Moyenne</td>
+          <td>Moyen</td>
+          <td>
+            <div class="adeq-bar-track"><div class="adeq-bar-fill" style="width:70%"></div></div>
+            <span class="adeq-score">7,0</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Relocation loyer majoré (+15 %)</td>
+          <td>1</td>
+          <td>~9,5 %</td>
+          <td>175 000 €</td>
+          <td>0,61</td>
+          <td>Moyenne</td>
+          <td>Moyen</td>
+          <td>
+            <div class="adeq-bar-track"><div class="adeq-bar-fill" style="width:70%"></div></div>
+            <span class="adeq-score">7,0</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>Le bail commercial 3-6-9 est retenu comme stratégie de base : rendement net de 8,0 % sans travaux, exécution immédiate, risque minimal. La vente à la découpe est une option de sortie intéressante (le box et le commerce ont des acheteurs distincts) mais ne constitue pas le cœur de l'opération. Le loyer antérieur de 990 € semble déjà bien positionné — tenter de le majorer de 15 % est ambitieux sans rénovation préalable.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>108 Rue Darius Milhaud, 83000 Toulon</td></tr>
+        <tr><th>Quartier</th><td>La Rode — proche port de Toulon</td></tr>
+        <tr><th>Type</th><td>Local commercial (boutique) 45 m² + Box parking fermé 18 m²</td></tr>
+        <tr><th>Surface totale</th><td>63 m² (commerce 45 m² + box 18 m²)</td></tr>
+        <tr><th>Prix affiché</th><td>99 000 € FAI</td></tr>
+        <tr><th>Prix / m²</th><td>1 571 €/m²</td></tr>
+        <tr><th>État</th><td>Bon état — 3 baies vitrées, bien entretenu</td></tr>
+        <tr><th>Occupation</th><td>Libre — anciennement loué 990 €/mois (Marine Immobilier)</td></tr>
+        <tr><th>DPE</th><td>Non communiqué</td></tr>
+        <tr><th>Taxe foncière</th><td>800 €/an (dont ~571 € refacturables en bail commercial, ~229 € à charge bailleur pour le box)</td></tr>
+        <tr><th>Charges copropriété</th><td>Non communiquées — estimées à ~400 €/an pour le box (si copropriété)</td></tr>
+        <tr><th>Vendeur</th><td>Particulier (RB)</td></tr>
+        <tr><th>Source</th><td>LeBonCoin — annonce du 09/07/2026</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — Bail commercial 3-6-9 (SCI IS)</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Loyer 990 € — Vacance 8 % — Charges estimées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">11 880 €</td></tr>
+            <tr><td>Vacance (8 %)</td><td class="num neg">−950 €</td></tr>
+            <tr><td>Charges bailleur</td><td class="num neg">−1 385 €</td></tr>
+            <tr class="detail"><td>· TF box (non refacturable)</td><td class="num">229 €</td></tr>
+            <tr class="detail"><td>· PNO</td><td class="num">300 €</td></tr>
+            <tr class="detail"><td>· Comptable</td><td class="num">500 €</td></tr>
+            <tr class="detail"><td>· Provisions gros travaux (3 %)</td><td class="num">356 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr><td>EBE</td><td class="num">9 545 €</td></tr>
+            <tr><td>Amortissement</td><td class="num neg">−2 966 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">6 579 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num neg">−987 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr class="total"><td>Net après IS</td><td class="num">8 558 €</td></tr>
+            <tr class="total"><td>CF mensuel</td><td class="num">713 €</td></tr>
+            <tr class="total"><td>CF amort. réintégré</td><td class="num">960 €</td></tr>
+            <tr class="total"><td>Rendement net (revient)</td><td class="num">8,0 %</td></tr>
+            <tr class="total"><td>Rendement net (marché)</td><td class="num">5,3 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Loyer 1 040 € — Vacance 5 % — Charges −10 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">12 480 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td class="num neg">−624 €</td></tr>
+            <tr><td>Charges bailleur</td><td class="num neg">−1 229 €</td></tr>
+            <tr class="detail"><td>· TF box (non refacturable)</td><td class="num">229 €</td></tr>
+            <tr class="detail"><td>· PNO</td><td class="num">250 €</td></tr>
+            <tr class="detail"><td>· Comptable</td><td class="num">500 €</td></tr>
+            <tr class="detail"><td>· Provisions gros travaux (2 %)</td><td class="num">250 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr><td>EBE</td><td class="num">10 627 €</td></tr>
+            <tr><td>Amortissement</td><td class="num neg">−2 966 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">7 661 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num neg">−1 149 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr class="total"><td>Net après IS</td><td class="num">9 478 €</td></tr>
+            <tr class="total"><td>CF mensuel</td><td class="num">790 €</td></tr>
+            <tr class="total"><td>CF amort. réintégré</td><td class="num">1 037 €</td></tr>
+            <tr class="total"><td>Rendement net (revient)</td><td class="num">8,9 %</td></tr>
+            <tr class="total"><td>Rendement net (marché)</td><td class="num">5,9 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Loyer 890 € — Vacance 18 % — Charges +20 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">10 680 €</td></tr>
+            <tr><td>Vacance (18 %)</td><td class="num neg">−1 922 €</td></tr>
+            <tr><td>Charges bailleur</td><td class="num neg">−1 613 €</td></tr>
+            <tr class="detail"><td>· TF box (non refacturable)</td><td class="num">229 €</td></tr>
+            <tr class="detail"><td>· PNO</td><td class="num">350 €</td></tr>
+            <tr class="detail"><td>· Comptable</td><td class="num">500 €</td></tr>
+            <tr class="detail"><td>· Provisions gros travaux (5 %)</td><td class="num">534 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr><td>EBE</td><td class="num">7 145 €</td></tr>
+            <tr><td>Amortissement</td><td class="num neg">−2 966 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">4 179 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num neg">−627 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr class="total"><td>Net après IS</td><td class="num">6 518 €</td></tr>
+            <tr class="total"><td>CF mensuel</td><td class="num">543 €</td></tr>
+            <tr class="total"><td>CF amort. réintégré</td><td class="num">790 €</td></tr>
+            <tr class="total"><td>Rendement net (revient)</td><td class="num">6,1 %</td></tr>
+            <tr class="total"><td>Rendement net (marché)</td><td class="num">4,0 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut</td><td>11 880 €</td><td>12 480 €</td><td>10 680 €</td></tr>
+          <tr><td>EBE</td><td>9 545 €</td><td>10 627 €</td><td>7 145 €</td></tr>
+          <tr><td>Net après IS</td><td>8 558 €</td><td>9 478 €</td><td>6 518 €</td></tr>
+          <tr><td>CF mensuel</td><td>713 €</td><td>790 €</td><td>543 €</td></tr>
+          <tr><td>CF amort. réintégré</td><td>960 €</td><td>1 037 €</td><td>790 €</td></tr>
+          <tr><td>Rendement net / revient</td><td>8,0 %</td><td>8,9 %</td><td>6,1 %</td></tr>
+          <tr><td>Rendement net / marché</td><td>5,3 %</td><td>5,9 %</td><td>4,0 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Valorisation institutionnelle -->
+    <div class="projection-summary" style="margin-top: 2rem;">
+      <h3>Valorisation par capitalisation (investisseur institutionnel)</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Taux de cap</th>
+            <th>Valeur de revente</th>
+            <th>Écart vs prix de revient</th>
+            <th>Interprétation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>5 % (prime)</td><td>190 900 €</td><td class="num">+83 980 €</td><td>Scénario très favorable, acheteur core</td></tr>
+          <tr><td>6 % (bon)</td><td>159 100 €</td><td class="num">+52 180 €</td><td>Marché normal, bon emplacement</td></tr>
+          <tr><td>7 % (médian)</td><td>136 400 €</td><td class="num">+29 480 €</td><td>Emplacement secondaire correct</td></tr>
+          <tr><td>8 % (risqué)</td><td>119 300 €</td><td class="num">+12 380 €</td><td>Zone tertiaire, risque de vacance</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 0.5rem; color: var(--color-text-muted); font-size: 0.9rem;">Capitalisation sur l'EBE Base (9 545 €). Même au taux de capitalisation le plus défavorable (8 %), la valeur de revente reste supérieure au prix de revient (+12 %).</p>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DPE inconnu</td>
+          <td>Le DPE n'est pas communiqué dans l'annonce. Pour un local commercial, l'impact réglementaire est moindre que pour du résidentiel, mais un DPE défavorable peut indiquer des travaux de mise aux normes à prévoir (éclairage, chauffage).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance actuelle</td>
+          <td>Le local est libre. L'ancien preneur (Marine Immobilier) a quitté les lieux — raison inconnue. Une relocation peut prendre 2 à 6 mois selon le profil du preneur recherché.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Charges copropriété inconnues</td>
+          <td>Aucune charge de copropriété mentionnée. Si le bien est en copropriété, des appels de fonds importants peuvent grever le rendement. À vérifier avec le PV d'AG avant offre.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Liquidité de sortie</td>
+          <td>Un local commercial de 45 m² + box est un actif de niche. La revente peut prendre du temps. En contrepartie, le ticket d'entrée modeste (99 k€) élargit le bassin d'acheteurs potentiels.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Évolution du PLU</td>
+          <td>Le PLU de Toulon protège certains linéaires commerciaux. Vérifier que la rue Darius Milhaud n'est pas concernée par un projet urbain pouvant impacter la valeur locative ou l'attractivité.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Dépendance au preneur unique</td>
+          <td>Avec un seul local commercial, le risque est concentré : le départ du preneur met le revenu à zéro. La présence du box atténue partiellement ce risque (relocation séparée possible).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict verdict-buy">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À 99 000 €, ce local commercial + box présente un profil rendement/risque remarquable. Avec un rendement net de 8,0 % en Base Case et une valorisation institutionnelle qui reste positive même au taux de capitalisation de 8 %, l'opération est structurellement saine. La décote de ~40 % sur la valeur de marché estimée (ratio coût/valeur de 0,66) offre une marge de sécurité confortable. Le principal risque est la vacance actuelle : une relocation rapide à 990 €/mois est l'hypothèse clé. Le fait que le bien était déjà loué à ce niveau par une agence immobilière est rassurant — le loyer facial est validé par le marché. Avant offre : exiger le DPE, vérifier les charges de copropriété, et idéalement contacter l'ancien preneur pour comprendre les raisons de son départ.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 120 000 € (prix de revient)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Local libre = vacance immédiate → coût d'opportunité pour l'acheteur (2-6 mois sans revenu)</li>
+        <li>DPE non communiqué → risque de travaux cachés, demander une décote si DPE défavorable</li>
+        <li>Absence de charges copro connues → incertitude budgétaire, provisionner 500-800 €/an</li>
+        <li>Ticket modeste (99 k€) et rendement attractif → marge de négociation limitée, le bien devrait se vendre vite</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire :</strong> 7 920 € (8 % — achat dans l'ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 0 € (bon état, pas de travaux immédiats identifiés)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
