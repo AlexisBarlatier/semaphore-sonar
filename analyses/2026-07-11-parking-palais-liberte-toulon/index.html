@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Parking Palais Liberté, Toulon</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Place de parking couverte — Quartier Haute-ville, Palais Liberté, 83000 Toulon</p>
+  <p class="report-date">Analyse générée le 11 juillet 2026</p>
+  <p class="report-source">Source : LeBonCoin — Pro AMALIS</p>
+  <div class="report-source-link"><a href="https://www.leboncoin.fr/ad/ventes_immobilieres/3209234576">🔗 Annonce originale</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Placement parking</span>
+    <p>Stratégie retenue : <strong>Conservation — rendement locatif</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">13 900 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">~12 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">~1 158 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">15 012 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">~15 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">135 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">7,5 % / 7,5 %</span>
+    </div>
+    <div class="card card-verdict note-7-9">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,9/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1240" data-lon="5.9330" data-address="Palais Liberté, Haute-ville, 83000 Toulon"></div>
+  </section>
+
+  <!-- === Attractivité === -->
+  <section class="attractiveness">
+    <h2>Attractivité — Parking hyper-centre</h2>
+    <p class="attractiveness-intro">Le secteur Palais Liberté / Haute-ville est l'hyper-centre de Toulon. Stationnement notoirement difficile, forte densité résidentielle et commerciale. Une place de parking dans ce périmètre est un actif recherché, aussi bien par les résidents que par les commerçants et navetteurs.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Pénurie de stationnement</span>
+          <span class="attr-card-score">9/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:90%"></div></div>
+        <p class="attr-card-detail">Hyper-centre toulonnais : se garer est un cauchemar. Toute place est précieuse.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Densité résidentielle</span>
+          <span class="attr-card-score">8/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-card-detail">Immeubles collectifs denses, forte population dans un rayon de 200 m.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Accessibilité</span>
+          <span class="attr-card-score">6/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-card-detail">Rues étroites du centre ancien, accès parfois contraint selon l'heure.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Sécurité</span>
+          <span class="attr-card-score">7/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-card-detail">Parking couvert probablement en copropriété sécurisée (accès contrôlé).</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Protection</span>
+          <span class="attr-card-score">5/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-card-detail">Stationnement couvert (toit) — protégé des intempéries mais pas un box fermé.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Demande locative</span>
+          <span class="attr-card-score">8/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-card-detail">135 €/mois avec bail en cours — preuve de demande réelle. Loyer conforme au marché hyper-centre.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Résident du quartier sans garage, commerçant, navetteur travaillant en centre-ville</p>
+      <p><strong>Conclusion :</strong> Emplacement premium pour du parking à Toulon. La pénurie structurelle de stationnement en hyper-centre garantit une demande locative solide. Le bail en cours à 135 €/mois valide le loyer de marché.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Stratégies évaluées pour cette place de parking déjà louée.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-retained">
+          <td><strong>Conservation — rendement</strong></td>
+          <td>1</td>
+          <td>7,5 %</td>
+          <td>15 000 €</td>
+          <td>1,00</td>
+          <td>Immédiate</td>
+          <td>Très faible</td>
+          <td>
+            <div class="adeq-bar-track"><div class="adeq-bar-fill" style="width:75%"></div></div>
+            <span class="adeq-score">7,5</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Revente à terme (après 3-5 ans)</td>
+          <td>1</td>
+          <td>ROI ~10 %</td>
+          <td>16 000 €</td>
+          <td>0,94</td>
+          <td>Élevée</td>
+          <td>Faible</td>
+          <td>
+            <div class="adeq-bar-track"><div class="adeq-bar-fill" style="width:75%"></div></div>
+            <span class="adeq-score">7,5</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La conservation est retenue : rendement net de 7,5 % avec un bail en cours, zéro gestion, ticket minuscule (15 k€). C'est un placement « parking » sans ambition de plus-value — le rendement fait tout le travail. La revente à terme est une option naturelle (le marché du parking toulonnais est liquide en hyper-centre), mais le vrai intérêt est le cash-flow régulier sans contrainte.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Secteur Palais Liberté, Haute-ville, 83000 Toulon</td></tr>
+        <tr><th>Type</th><td>Stationnement couvert</td></tr>
+        <tr><th>Surface estimée</th><td>~12 m²</td></tr>
+        <tr><th>Prix affiché</th><td>13 900 € (honoraires vendeur)</td></tr>
+        <tr><th>Prix / m²</th><td>~1 158 €/m²</td></tr>
+        <tr><th>État</th><td>Très bon état</td></tr>
+        <tr><th>Occupation</th><td>Loué — 135 €/mois, bail en cours</td></tr>
+        <tr><th>Charges annuelles</th><td>90 €/an (refacturées au locataire en sus du loyer)</td></tr>
+        <tr><th>Taxe foncière</th><td>Non communiquée — estimée à 50-80 €/an (parking), probablement refacturée ou incluse dans les charges</td></tr>
+        <tr><th>Amortissement</th><td>Non — place couverte (pas de sous-sol), pas de bâti amortissable</td></tr>
+        <tr><th>Vendeur</th><td>Pro — AMALIS (SIRET 48809570400059)</td></tr>
+        <tr><th>Référence</th><td>TPL83000</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — Conservation (SCI IS)</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Loyer 135 € — Vacance 10 % — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">1 620 €</td></tr>
+            <tr><td>Vacance (10 %)</td><td class="num neg">−162 €</td></tr>
+            <tr><td>Charges (copro 90 € + PNO 50 €)</td><td class="num neg">−140 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr><td>EBE</td><td class="num">1 318 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">—</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">1 318 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num neg">−198 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr class="total"><td>Net après IS</td><td class="num">1 120 €</td></tr>
+            <tr class="total"><td>CF mensuel</td><td class="num">93 €</td></tr>
+            <tr class="total"><td>Rendement net</td><td class="num">7,5 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Loyer 149 € — Vacance 5 % — Charges −20 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">1 782 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td class="num neg">−89 €</td></tr>
+            <tr><td>Charges (72 € + PNO 40 €)</td><td class="num neg">−112 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr><td>EBE</td><td class="num">1 581 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">—</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">1 581 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num neg">−237 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr class="total"><td>Net après IS</td><td class="num">1 344 €</td></tr>
+            <tr class="total"><td>CF mensuel</td><td class="num">112 €</td></tr>
+            <tr class="total"><td>Rendement net</td><td class="num">9,0 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Loyer 108 € — Vacance 25 % — Charges +30 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">1 296 €</td></tr>
+            <tr><td>Vacance (25 %)</td><td class="num neg">−324 €</td></tr>
+            <tr><td>Charges (117 € + PNO 65 €)</td><td class="num neg">−182 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr><td>EBE</td><td class="num">790 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">—</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">790 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num neg">−119 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr class="total"><td>Net après IS</td><td class="num">671 €</td></tr>
+            <tr class="total"><td>CF mensuel</td><td class="num">56 €</td></tr>
+            <tr class="total"><td>Rendement net</td><td class="num">4,5 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut</td><td>1 620 €</td><td>1 782 €</td><td>1 296 €</td></tr>
+          <tr><td>EBE</td><td>1 318 €</td><td>1 581 €</td><td>790 €</td></tr>
+          <tr><td>Net après IS</td><td>1 120 €</td><td>1 344 €</td><td>671 €</td></tr>
+          <tr><td>CF mensuel</td><td>93 €</td><td>112 €</td><td>56 €</td></tr>
+          <tr><td>Rendement net</td><td>7,5 %</td><td>9,0 %</td><td>4,5 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Départ du locataire</td>
+          <td>Le bail en cours peut être résilié à tout moment avec un préavis de 1 mois (location parking). La relocation dépend de la demande locale — forte en hyper-centre, mais le risque de vacance de 3-6 mois est réel.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Liquidité de revente</td>
+          <td>Une place de parking isolée se revend, mais le délai peut être de plusieurs mois. Le ticket modeste (15 k€) élargit le bassin d'acheteurs. La demande en hyper-centre est structurellement forte.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Pas d'amortissement</td>
+          <td>Place couverte en surface = pas de bâti amortissable en SCI IS. La totalité de l'EBE est imposée à 15 %. L'absence d'amortissement pénalise le rendement net par rapport à un parking en sous-sol.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Marge du professionnel</td>
+          <td>AMALIS achète probablement ces places 8 000-10 000 € et les revend 13 900 € avec un bail en cours. La marge du pro est intégrée dans le prix — l'investisseur paie un premium pour le service « clé en main ».</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Charges de copropriété</td>
+          <td>90 €/an annoncés, très raisonnables. À vérifier : pas de travaux exceptionnels votés en AG (ravalement, réfection dalle) qui pourraient générer des appels de fonds.</td>
+          <td><span class="severity severity-1">1/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict verdict-buy">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À 13 900 €, cette place de parking couverte dans l'hyper-centre de Toulon est un petit placement correct, sans être exceptionnel. Le rendement net de 7,5 % est légèrement sous le seuil idéal de 8 % pour du parking, mais le ticket minuscule (15 k€ prix de revient), le bail en cours et l'emplacement premium (Palais Liberté) compensent largement. Le CF mensuel de 93 € est modeste mais régulier — c'est un actif « qui dort et qui rapporte », sans gestion. L'absence d'amortissement (place couverte, pas de sous-sol) est le principal point faible fiscal. Si AMALIS a d'autres places dans le même secteur à ce prix, l'accumulation de 3-4 unités peut créer un petit revenu mensuel de 300-400 € avec un risque extrêmement dilué. Pour 13 900 €, difficile de perdre de l'argent — au pire, le capital est immobilisé quelques mois en cas de revente.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 14 800 € (pour viser 8 % de rendement net)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>AMALIS est un pro qui fait du volume — possibilité de négocier si achat groupé de plusieurs places</li>
+        <li>Marge implicite du pro : ils ont acheté moins cher, une offre à 12 000 € reste probablement rentable pour eux</li>
+        <li>Absence d'amortissement fiscal → rendement net réel inférieur à un parking en sous-sol équivalent</li>
+        <li>Ticket modeste → la négociation porte sur quelques centaines d'euros, l'enjeu est limité</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire :</strong> 1 112 € (8 % — achat dans l'ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 0 € (très bon état, déjà loué)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
