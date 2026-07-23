@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Immeuble 4 logements, Tourves — 160-180 k€</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Immeuble 4 logements + panneau pub — Tourves (83170)</p>
+  <p class="report-date">Analyse générée le 24 juillet 2026</p>
+  <p class="report-source">Source : Orpi — Agence Papazian</p>
+  <div class="report-source-link"><a href="https://www.orpi.com/annonce-vente-maison-t8-tourves-83170-da87794d-5ec7-4d50-8373-cc1f45732362/">🔗 Annonce originale</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Conservation avec rénovation thermique étages 2-3 + relocation majorée</strong> — SCI à l'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix d'achat</span><span class="card-value">160 000 – 180 000 €</span></div>
+    <div class="card"><span class="card-label">Surface</span><span class="card-value">103 m² (+ communs)</span></div>
+    <div class="card"><span class="card-label">Prix / m²</span><span class="card-value">1 552 – 1 745 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient</span><span class="card-value">190 800 – 212 400 €</span></div>
+    <div class="card"><span class="card-label">Revenus bruts</span><span class="card-value">1 695 €/mois HC</span></div>
+    <div class="card"><span class="card-label">Lots</span><span class="card-value">4 logements + panneau</span></div>
+    <div class="card"><span class="card-label">Rentabilité</span><span class="card-value">6,5 – 7,2 %</span></div>
+    <div class="card card-verdict note-7-5"><span class="card-label">Note</span><span class="card-value">7,5/10</span></div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.3965" data-lon="5.8973" data-address="Tourves (83170) — Centre village"></div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Tourves centre — 83170</td></tr>
+        <tr><th>Type</th><td>Immeuble de rapport — 4 logements T1/T2 + panneau publicitaire</td></tr>
+        <tr><th>Surface habitable</th><td>103,23 m² + communs (~120 m² au total)</td></tr>
+        <tr><th>Composition</th><td>RDC 21 m² · 1er 29,4 m² · 2e 29,3 m² · 3e 28,3 m² — tous en T2</td></tr>
+        <tr><th>Prix affiché</th><td>200 000 € FAI (1 938 €/m²)</td></tr>
+        <tr><th>DPE</th><td>E (278 kWh/m²·an) — ancien DPE. Cible D après travaux combles + radiateurs + vitrages</td></tr>
+        <tr><th>Occupation</th><td>4 logements loués — baux de 2015 à 2022. RDC et 1er déjà rénovés. 2e et 3e à rénover.</td></tr>
+        <tr><th>Copropriété</th><td>4 lots — charges courantes limitées</td></tr>
+        <tr><th>Taxe foncière</th><td>1 953 €/an (2024)</td></tr>
+        <tr><th>PNO</th><td>331 €/an</td></tr>
+        <tr><th>Panneau pub</th><td>450 €/an (bail 12/2020)</td></tr>
+        <tr><th>Vendeur</th><td>Agence Orpi Papazian — La Seyne-sur-Mer</td></tr>
+        <tr><th>Spécificité</th><td>Possibilité de cession de parts</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité du secteur</h2>
+    <p class="attractiveness-intro">Tourves (4 200 hab.) est un village du Var intérieur à 15 min de Brignoles, 30 min d'Aix-en-Provence via l'A8. Secteur recherché par les actifs travaillant sur le bassin de Brignoles et les primo-accédants exclus du littoral. Le centre-village offre commerces, écoles et transports. Rendement moyen constaté : 6-8 % brut sur les petites surfaces.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card"><div class="attr-card-header"><span class="attr-card-label">Accessibilité</span><span class="attr-card-score">7/10</span></div><div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div><p class="attr-card-detail">A8 à 10 min, gare SNCF à 5 min. Bus vers Brignoles et Aix.</p></div>
+      <div class="attr-card"><div class="attr-card-header"><span class="attr-card-label">Commerces & services</span><span class="attr-card-score">6/10</span></div><div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div><p class="attr-card-detail">Centre-village : boulangerie, pharmacie, supérette, école. Commerces à pied.</p></div>
+      <div class="attr-card"><div class="attr-card-header"><span class="attr-card-label">Demande locative</span><span class="attr-card-score">7/10</span></div><div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div><p class="attr-card-detail">Petites surfaces très recherchées. Loyer 13-15 €/m². Turnover modéré.</p></div>
+      <div class="attr-card"><div class="attr-card-header"><span class="attr-card-label">Dynamisme économique</span><span class="attr-card-score">5/10</span></div><div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div><p class="attr-card-detail">Var intérieur, bassin d'emploi modeste. Dépendance à la voiture.</p></div>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation — Travaux de rénovation thermique</h2>
+    <p class="attractiveness-intro">Les étages 2 et 3 ne sont pas rénovés. L'objectif est de sécuriser le DPE (passage de E à D) et de permettre une relocation rapide et majorée au départ des locataires actuels.</p>
+
+    <h3>Détail des travaux — 18 000 €</h3>
+    <table class="comparison-table">
+      <thead><tr><th>Poste</th><th>Montant</th><th>Impact</th></tr></thead>
+      <tbody>
+        <tr><td>Isolation des combles</td><td>2 500 €</td><td>Gain DPE : −30 à −40 kWh/m²·an</td></tr>
+        <tr><td>Radiateurs électriques à inertie (ét. 2-3)</td><td>2 200 €</td><td>Confort + gain DPE : −10 kWh</td></tr>
+        <tr><td>Vitrages double vitrage renforcé (ét. 2-3)</td><td>3 000 €</td><td>Gain DPE : −10 kWh</td></tr>
+        <tr><td>Peinture + revêtements sols (ét. 2-3)</td><td>4 900 €</td><td>Présentabilité pour relocation</td></tr>
+        <tr><td>Plomberie / sanitaires (ét. 2-3)</td><td>3 300 €</td><td>Remise en état WC + douche</td></tr>
+        <tr><td>Aléas / maîtrise d'œuvre (10 %)</td><td>2 100 €</td><td>—</td></tr>
+        <tr class="total"><td><strong>Total</strong></td><td><strong>18 000 €</strong></td><td>DPE E → D estimé (~220 kWh)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Loyers après travaux et relocation majorée</h3>
+    <table class="comparison-table">
+      <thead><tr><th>Lot</th><th>Loyer actuel HC</th><th>Loyer après travaux</th><th>Majoration</th></tr></thead>
+      <tbody>
+        <tr><td>RDC — 21 m² (déjà rénové)</td><td>373 €</td><td>373 €</td><td>inchangé</td></tr>
+        <tr><td>1er — 29,4 m² (déjà rénové)</td><td>428 €</td><td>428 €</td><td>inchangé</td></tr>
+        <tr><td>2e — 29,3 m² (à rénover)</td><td>313 €</td><td><strong>427 €</strong></td><td>+114 €</td></tr>
+        <tr><td>3e — 28,3 m² (à rénover)</td><td>370 €</td><td><strong>429 €</strong></td><td>+59 €</td></tr>
+        <tr><td>Panneau pub</td><td>38 €</td><td>38 €</td><td>inchangé</td></tr>
+        <tr class="total"><td><strong>Total</strong></td><td><strong>1 522 €/mois</strong></td><td><strong>1 695 €/mois</strong></td><td><strong>+173 € (+11 %)</strong></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+    <p class="attractiveness-intro">Calculs après travaux (18 000 €) et relocation majorée. Charges réelles : TF 1 953 €, PNO 331 €, entretien 500 €, comptable 500 €. Emprunt 90 % (achat + travaux) hors notaire, 20 ans à 3,45 %, assurance 0,34 %. IPPD 0,7 %.</p>
+
+    <h3>Comparaison 160k vs 180k</h3>
+    <table class="comparison-table">
+      <thead><tr><th></th><th>160 000 €</th><th>180 000 €</th></tr></thead>
+      <tbody>
+        <tr><td>+ Notaire (8 %)</td><td>12 800 €</td><td>14 400 €</td></tr>
+        <tr><td>+ Travaux</td><td>18 000 €</td><td>18 000 €</td></tr>
+        <tr class="subtotal"><td>Prix de revient</td><td><strong>190 800 €</strong></td><td><strong>212 400 €</strong></td></tr>
+        <tr><td>Emprunt (90 % ach. + tx)</td><td>160 200 €</td><td>178 200 €</td></tr>
+        <tr><td>IPPD (0,7 %)</td><td>1 121 €</td><td>1 247 €</td></tr>
+        <tr><td>Frais dossier</td><td>500 €</td><td>500 €</td></tr>
+        <tr class="total"><td><strong>Apport total</strong></td><td><strong>32 221 €</strong></td><td><strong>35 947 €</strong></td></tr>
+        <tr><td>Mensualité</td><td>925 €</td><td>1 029 €</td></tr>
+        <tr><td>+ Assurance (0,34 %)</td><td>971 €</td><td>1 079 €</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Compte de résultat</h3>
+    <table class="comparison-table">
+      <thead><tr><th></th><th>160 000 €</th><th>180 000 €</th></tr></thead>
+      <tbody>
+        <tr><td>Revenu brut annuel</td><td>20 338 €</td><td>20 338 €</td></tr>
+        <tr><td>Vacance (8 %)</td><td>−1 627 €</td><td>−1 627 €</td></tr>
+        <tr><td>TF + PNO + entretien + comptable</td><td>−3 284 €</td><td>−3 284 €</td></tr>
+        <tr class="subtotal"><td>EBE</td><td><strong>15 427 €</strong></td><td><strong>15 427 €</strong></td></tr>
+        <tr><td>Amortissement (bâti 85 % + tx)</td><td>−4 620 €</td><td>−5 130 €</td></tr>
+        <tr class="subtotal"><td>Résultat fiscal</td><td>10 807 €</td><td>10 297 €</td></tr>
+        <tr><td>IS (15 %)</td><td>−1 621 €</td><td>−1 545 €</td></tr>
+        <tr class="total"><td><strong>Net après IS</strong></td><td><strong>13 806 €/an</strong></td><td><strong>13 882 €/an</strong></td></tr>
+        <tr class="total"><td><strong>CF mensuel</strong></td><td><strong>1 151 €</strong></td><td><strong>1 157 €</strong></td></tr>
+        <tr class="total"><td><strong>CF amort. réintégré</strong></td><td><strong>1 536 €</strong></td><td><strong>1 584 €</strong></td></tr>
+        <tr class="highlight"><td><strong>Écart (CF − mensualité)</strong></td><td><strong style="color:var(--color-green)">+180 €/mois</strong></td><td><strong style="color:var(--color-green)">+78 €/mois</strong></td></tr>
+        <tr><td>Rendement net / revient</td><td><strong>7,2 %</strong></td><td><strong>6,5 %</strong></td></tr>
+        <tr><td>DSCR 20 ans</td><td>1,58</td><td>1,47</td></tr>
+        <tr><td>Apport remboursé en</td><td>~28 mois</td><td>~38 mois</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Triple scénario — base 160k</h3>
+    <table class="comparison-table">
+      <thead><tr><th>Indicateur</th><th>Base</th><th>Optimiste</th><th>Pessimiste</th></tr></thead>
+      <tbody>
+        <tr><td>Loyer total</td><td>1 695 €</td><td>1 780 €</td><td>1 550 €</td></tr>
+        <tr><td>Vacance</td><td>8 %</td><td>5 %</td><td>12 %</td></tr>
+        <tr><td>EBE</td><td>15 427 €</td><td>17 336 €</td><td>12 427 €</td></tr>
+        <tr><td>CF mensuel</td><td>1 151 €</td><td>1 286 €</td><td>938 €</td></tr>
+        <tr class="highlight"><td>Écart</td><td><strong>+180 €</strong></td><td><strong>+315 €</strong></td><td><strong style="color:var(--color-red)">−32 €</strong></td></tr>
+        <tr><td>Rdt net</td><td>7,2 %</td><td>8,0 %</td><td>5,6 %</td></tr>
+      </tbody>
+    </table>
+    <p>Le Worst Case (vacance 12 % et loyers −9 %) bascule en CF légèrement négatif (−32 €). Le risque est concentré sur la relocation des étages 2-3 : si les locataires actuels restent en place, les loyers majorés ne se matérialisent pas. Mais même avec les loyers actuels (1 522 €), le CF reste positif à +85 €/mois à 160k.</p>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead><tr><th>Facteur</th><th>Détail</th><th>Sévérité</th></tr></thead>
+      <tbody>
+        <tr><td>DPE E — ancien diagnostic</td><td>278 kWh/m²·an en ancien DPE pourrait devenir F en nouveau calcul (les petites surfaces sont pénalisées). F = interdiction de location en 2028. Les travaux de combles + radiateurs + vitrages (18k€) visent le passage en D, ce qui sécurise le bien jusqu'en 2034. À faire confirmer par un nouveau DPE après travaux.</td><td><span class="severity severity-3">3/5</span></td></tr>
+        <tr><td>Départ locataires étages 2-3</td><td>Les loyers majorés (+173 €) supposent le départ des locataires actuels. Le locataire du 3e est en place depuis 2015 — peu de risque de turnover. Celui du 2e (bail 2019) est plus susceptible de partir. Sans leur départ, le CF redescend à +85 €/mois. Reste positif, mais la marge est plus fine.</td><td><span class="severity severity-2">2/5</span></td></tr>
+        <tr><td>Petites surfaces (~26 m²)</td><td>4 logements de moins de 30 m² = turnover structurellement plus élevé que des T3. À compenser par un état impeccable et un loyer attractif. Avantage : relocation rapide en cas de vacance.</td><td><span class="severity severity-2">2/5</span></td></tr>
+        <tr><td>Cession de parts</td><td>L'agent mentionne la possibilité de vendre en cession de parts (probablement une SCI existante). À examiner : cela peut réduire les frais de notaire (passage de 8 % à ~5 % en droits d'enregistrement sur parts). Mais implique de vérifier le passif de la société.</td><td><span class="severity severity-2">2/5</span></td></tr>
+        <tr><td>Charges maîtrisées</td><td>TF 1 953 € (9,6 % du revenu brut — acceptable), PNO 331 €, pas de grosse copropriété. L'entretien courant est limité aux parties communes d'un petit immeuble.</td><td><span class="severity severity-1">1/5</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict verdict-buy">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>On achète entre 160 000 et 180 000 €.</strong> L'immeuble est un petit 4-logements propre, déjà opérationnel, avec des loyers sécurisés, des charges maîtrisées et une rentabilité solide. Le DPE est le seul vrai risque — les 18 000 € de travaux thermiques (combles + radiateurs + vitrages) le neutralisent et financent le rafraîchissement des deux étages non rénovés.</p>
+      <p>À 160k, le CF est de +180 €/mois avec un rendement net de 7,2 %. Même au prix affiché de 200k, le CF est quasi neutre (−25 €). La fenêtre de négociation 160-180k est réaliste et laisse une marge confortable.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Offre recommandée : 160 000 €</strong> (−20 % vs affiché)</p>
+      <p><strong>Plafond : 180 000 €</strong> (−10 %, CF reste à +78 €)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>DPE E en ancien diagnostic = risque de reclassement F → travaux obligatoires avant relocation</li>
+        <li>Étages 2-3 non rénovés = baisses de loyer à prévoir si les locataires restent</li>
+        <li>Petites surfaces = turnover, pas un immeuble « posé »</li>
+        <li>Cession de parts possible → argument pour négocier les frais de notaire</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal :</strong> SCI à l'IS (15 % sur les bénéfices) — amortissement bâti 30 ans</p>
+      <p><strong>Frais de notaire :</strong> 12 800 – 14 400 € (8 %)</p>
+      <p><strong>Travaux :</strong> 18 000 € (combles + radiateurs + vitrages + rafraîchissement ét. 2-3)</p>
+      <p><strong>Apport :</strong> 32 200 – 36 000 €</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles</p>';
+      return;
+    }
+    var map = L.map('map-container').setView([lat, lon], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
