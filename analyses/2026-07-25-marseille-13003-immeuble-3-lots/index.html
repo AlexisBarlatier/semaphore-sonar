@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — 3 lots, Marseille 13003 — 137 000 €</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Immeuble 5 lots — Package 3 lots retenus — Marseille 13003</p>
+  <p class="report-date">Analyse générée le 25 juillet 2026</p>
+  <p class="report-source">Source : Figaro Immobilier — Agence Skyline Real Estate</p>
+  <div class="report-source-link"><a href="https://immobilier.lefigaro.fr/annonces/annonce-101189819.html">🔗 Annonce originale</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif — 3 lots</span>
+    <p>Stratégie : <strong>Package 3 lots (sur 5 disponibles) dans le même immeuble. Lots exclus du package : T1 6e étage (CF négatif, surpayé) et Studio+T1 6e (loyer anormal à 770 €, 24,8 €/m² — non reproductible à la relocation).</strong> Pas de travaux immédiats. SCI à l'IS.</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix de vente</span><span class="card-value">137 000 €</span></div>
+    <div class="card"><span class="card-label">Surface</span><span class="card-value">71 m²</span></div>
+    <div class="card"><span class="card-label">Prix / m²</span><span class="card-value">1 930 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient</span><span class="card-value">147 960 €</span></div>
+    <div class="card"><span class="card-label">Revenus bruts</span><span class="card-value">1 370 €/mois</span></div>
+    <div class="card"><span class="card-label">Rendement brut</span><span class="card-value">12,0 %</span></div>
+    <div class="card"><span class="card-label">Rendement net</span><span class="card-value">7,4 %</span></div>
+    <div class="card card-verdict note-7-5"><span class="card-label">Note</span><span class="card-value">7,5/10</span></div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.308" data-lon="5.375" data-address="Marseille 13003 — Quartier La Villette / Saint-Charles"></div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Marseille 13003 — Immeuble de 5 étages sans ascenseur</td></tr>
+        <tr><th>Type</th><td>3 lots dans un immeuble de 5 lots : T1 20 m² 1er · T2 31 m² 1er · T1 20 m² 3e</td></tr>
+        <tr><th>Surface totale</th><td>71 m²</td></tr>
+        <tr><th>Lots</th><td>T1 1er (450 €), T2 1er (550 €), T1 3e (370 €) — tous loués</td></tr>
+        <tr><th>Prix affiché</th><td>137 000 € FAI (1 930 €/m²)</td></tr>
+        <tr><th>DPE</th><td>Non communiqué ⚠️ — demande en cours</td></tr>
+        <tr><th>Occupation</th><td>3 lots loués. Loyers actuels : 1 370 €/mois. T1 3e sous-loué (370 € vs 450 € pour le T1 1er identique).</td></tr>
+        <tr><th>Copropriété</th><td>3 lots sur 5 → pas de majorité en AG</td></tr>
+        <tr><th>Taxe foncière</th><td>~850 €/an (estimé)</td></tr>
+        <tr><th>Charges copro</th><td>~700 €/an (estimé)</td></tr>
+        <tr><th>Chauffage</th><td>Électrique individuel</td></tr>
+        <tr><th>Vendeur</th><td>Agence Skyline Real Estate — Marseille 6e</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Pourquoi ces 3 lots ?</h2>
+
+    <div class="strategy-rationale">
+      <p>L'immeuble propose 5 lots. Deux ont été exclus de l'analyse :</p>
+      <ul>
+        <li><strong>❌ T1 6e étage — 49 000 € / 450 €</strong> : CF net négatif (−14 €/mois). Prix au m² à 2 450 €, 25 % plus cher que les autres T1. Dernier étage sans ascenseur = turnover élevé.</li>
+        <li><strong>❌ Studio+T1 6e gauche — 64 000 € / 770 €</strong> : Loyer à 24,8 €/m², intenable. À la relocation, difficile de dépasser 18-20 €/m² → perte de 150-200 €/mois. Rendement facial (14,4 %) complètement artificiel.</li>
+      </ul>
+      <p>Les <strong>3 lots conservés</strong> forment un package homogène : loyers dans la norme (17,7-22,5 €/m²), CF positifs ou quasi neutres, prix cohérents (~1 930 €/m²).</p>
+    </div>
+
+    <h3>Détail des 3 lots retenus</h3>
+    <table class="comparison-table">
+      <thead><tr><th>Lot</th><th>Surface</th><th>Loyer</th><th>€/m²</th><th>Prix</th><th>Rdt facial</th><th>Commentaire</th></tr></thead>
+      <tbody>
+        <tr><td>T1 — 1er étage</td><td>20 m²</td><td>450 €</td><td>22,5</td><td>39 000 €</td><td>13,8 %</td><td>✅ Loyer dans la norme haute. Bon rendement.</td></tr>
+        <tr><td>T2 — 1er étage</td><td>31 m²</td><td>550 €</td><td>17,7</td><td>59 000 €</td><td>11,2 %</td><td>😐 Loyer cohérent, CF quasi neutre.</td></tr>
+        <tr><td>T1 — 3e étage</td><td>20 m²</td><td>370 €</td><td>18,5</td><td>39 000 €</td><td>11,4 %</td><td>⚠️ Sous-loué (−80 € vs T1 1er). Marge de progression.</td></tr>
+        <tr class="total"><td><strong>Package</strong></td><td><strong>71 m²</strong></td><td><strong>1 370 €</strong></td><td><strong>19,3</strong></td><td><strong>137 000 €</strong></td><td><strong>12,0 %</strong></td><td></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Anomalie de loyer — T1 3e étage</h3>
+    <div class="strategy-rationale">
+      <p>Le T1 3e est loué 370 € alors que le T1 1er (identique en surface et configuration) est à 450 €. Soit le 1er est sur-loué (risque de correction au départ du locataire), soit le 3e est sous-loué (opportunité de révision à la relocation). L'hypothèse prudente retient les loyers actuels sans correction.</p>
+    </div>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS, 20 ans, 3,45 %</h2>
+    <p class="attractiveness-intro">Charges : TF 850 €, copro 700 €, comptable 800 €, entretien 500 €. Emprunt = 90 % du prix d'achat. Assurance emprunteur 0,34 %, IPPD 0,7 %.</p>
+
+    <h3>Scénario Base — 137 000 €</h3>
+    <table class="comparison-table">
+      <thead><tr><th></th><th>Montant</th></tr></thead>
+      <tbody>
+        <tr><td>Prix d'achat</td><td>137 000 €</td></tr>
+        <tr><td>+ Notaire (8 %)</td><td>10 960 €</td></tr>
+        <tr class="subtotal"><td>Prix de revient</td><td><strong>147 960 €</strong></td></tr>
+        <tr><td>Emprunt (90 %)</td><td>123 300 €</td></tr>
+        <tr><td>IPPD (0,7 %)</td><td>959 €</td></tr>
+        <tr><td>Frais dossier</td><td>500 €</td></tr>
+        <tr class="total"><td><strong>Apport</strong></td><td><strong>26 119 €</strong></td></tr>
+        <tr><td>Mensualité (3,79 %)</td><td>734 €</td></tr>
+        <tr><td colspan="2"></td></tr>
+        <tr><td>Revenu brut annuel</td><td>16 440 €</td></tr>
+        <tr><td>Vacance (5 %)</td><td>−822 €</td></tr>
+        <tr><td>Charges</td><td>−2 850 €</td></tr>
+        <tr class="subtotal"><td>EBE</td><td><strong>12 768 €</strong></td></tr>
+        <tr><td>Amortissement (3 % bâti)</td><td>−3 494 €</td></tr>
+        <tr class="subtotal"><td>Résultat fiscal</td><td>9 274 €</td></tr>
+        <tr><td>IS (15 %)</td><td>−1 391 €</td></tr>
+        <tr class="total"><td><strong>CF net</strong></td><td><strong>173 €/mois</strong></td></tr>
+        <tr class="highlight"><td><strong>Écart (CF − mensualité)</strong></td><td><strong>−561 €/mois</strong></td></tr>
+        <tr><td>Rendement net / revient</td><td><strong>7,4 %</strong></td></tr>
+        <tr><td>DSCR</td><td>1,45</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Stress test — DPE &amp; relocation</h3>
+    <table class="comparison-table">
+      <thead><tr><th></th><th>Base</th><th>T1 3e reloué 430 €</th><th>T1 1er correction 400 €</th></tr></thead>
+      <tbody>
+        <tr><td>Loyer mensuel</td><td>1 370 €</td><td>1 430 €</td><td>1 320 €</td></tr>
+        <tr><td>EBE</td><td>12 768 €</td><td>13 492 €</td><td>12 162 €</td></tr>
+        <tr><td>CF net</td><td><strong>+173 €/mois</strong></td><td><strong>+235 €/mois</strong></td><td><strong>+123 €/mois</strong></td></tr>
+        <tr><td>Rendement net</td><td>7,4 %</td><td>7,9 %</td><td>7,1 %</td></tr>
+      </tbody>
+    </table>
+    <p class="attractiveness-intro">Le scénario optimiste (relocation du T1 3e à 430 €, soit ~21,5 €/m²) améliore le CF de 62 €/mois. Le scénario prudent (baisse du T1 1er à 400 €) ne dégrade le CF que de 50 €/mois. Le dossier reste positif même en cas de correction baissière des loyers.</p>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="comparison-table">
+      <thead><tr><th>Risque</th><th>Gravité</th><th>Probabilité</th><th>Impact</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr class="risk-critical"><td>DPE F ou G</td><td>🔴 Critique</td><td>Moyenne</td><td>Interdiction de relocation → perte de valeur locative</td><td>Exiger DPE avant offre. Si F/G : décote ou abandon.</td></tr>
+        <tr class="risk-high"><td>Loyers surévalués</td><td>🟠 Élevé</td><td>Moyenne</td><td>Correction baissière au départ locataire (−50 à −80 €)</td><td>Stress test montre CF positif même avec −50 €</td></tr>
+        <tr class="risk-medium"><td>Turnover 3e étage</td><td>🟡 Modéré</td><td>Élevée</td><td>Vacance + relocation sous marché</td><td>Marge de progression (370 → 430 €)</td></tr>
+        <tr class="risk-medium"><td>Charges copro</td><td>🟡 Modéré</td><td>Faible</td><td>3 lots minoritaires en AG</td><td>Budget prévisionnel à vérifier</td></tr>
+        <tr class="risk-low"><td>Vacance</td><td>🟢 Faible</td><td>Faible</td><td>5 % retenu est prudent pour du petit collectif</td><td>Proximité Saint-Charles, bonne demande locative</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict">
+    <h2>Verdict</h2>
+    <div class="strategy-banner">
+      <span class="strategy-badge">🟢 On négocie — sous réserve DPE</span>
+      <p><strong>Offre recommandée : 125 000 €.</strong> À ce prix, le rendement net grimpe à 8,2 % et le CF net atteint +213 €/mois. Le package 3 lots est cohérent : ticket d'entrée modeste (26k d'apport), CF positif dans tous les scénarios testés, marge de progression sur le T1 3e. Le seul vrai blocage est le DPE non communiqué. Si DPE E ou mieux → dossier à prendre. Si DPE F ou G → on fuit.</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function() {
+  var container = document.getElementById('map-container');
+  if (!container) return;
+  var lat = parseFloat(container.getAttribute('data-lat'));
+  var lon = parseFloat(container.getAttribute('data-lon'));
+  var address = container.getAttribute('data-address');
+  var map = L.map(container).setView([lat, lon], 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap'
+  }).addTo(map);
+  L.marker([lat, lon]).addTo(map).bindPopup(address).openPopup();
+})();
+</script>
+
+</body>
+</html>
