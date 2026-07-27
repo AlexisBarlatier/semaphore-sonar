@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — 4 Parkings « Parc des Arts », Marseille 9ᵉ</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">4 places de parking souterraines — Résidence « Parc des Arts », 343 Bd Romain Rolland, 13009 Marseille</p>
+  <p class="report-date">Analyse générée le 27 juillet 2026</p>
+  <p class="report-source">Source : Promoteur — VEFA livraison septembre 2026</p>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Placement parking ×4</span>
+    <p>Stratégie retenue : <strong>Achat groupé — rendement locatif — SCI à l'IS</strong></p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix négocié</span>
+      <span class="card-value">4 × 11 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix total TTC</span>
+      <span class="card-value">44 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">45 100 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Apport total</span>
+      <span class="card-value">18 188 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">340 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité brute</span>
+      <span class="card-value">9,3 %</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Cash flow (20a)</span>
+      <span class="card-value">+111 €/mois</span>
+    </div>
+    <div class="card card-verdict note-7-0">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,0/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.272" data-lon="5.396" data-address="343 Bd Romain Rolland, 13009 Marseille"></div>
+  </section>
+
+  <!-- === Attractivité === -->
+  <section class="attractiveness">
+    <h2>Attractivité — Zone résidentielle Marseille 9ᵉ</h2>
+    <p class="attractiveness-intro">Le 343 boulevard Romain Rolland se situe à la limite des quartiers Sainte-Marguerite et Mazargues, à proximité du Parc Chanot et du Stade Vélodrome. Zone résidentielle de standing intermédiaire, bien desservie (bus, future ligne de tramway). La résidence « Parc des Arts » est une construction neuve — le stationnement y est un enjeu pour les résidents n'ayant pas acquis de place.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Tension stationnement</span>
+          <span class="attr-card-score">5/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-card-detail">Zone résidentielle aérée — pas de pénurie criante comme en hyper-centre. Le boulevard est large, du stationnement gratuit existe alentour.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Densité résidentielle</span>
+          <span class="attr-card-score">7/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-card-detail">Immeubles collectifs + maisons individuelles. Résidence neuve = clients captifs potentiels dans la copropriété.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Accessibilité</span>
+          <span class="attr-card-score">7/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-card-detail">Boulevard principal, accès facile. À 10 min du Vélodrome et du Parc Chanot (événementiel).</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Sécurité</span>
+          <span class="attr-card-score">8/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-card-detail">Neuf — portail, interphone, éclairage LED. Copropriété fermée.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Protection</span>
+          <span class="attr-card-score">8/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-card-detail">Souterrain = protection intempéries, vandalisme, soleil. Meilleure conservation véhicule.</p>
+      </div>
+      <div class="attr-card">
+        <div class="attr-card-header">
+          <span class="attr-card-label">Demande locative</span>
+          <span class="attr-card-score">6/10</span>
+        </div>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-card-detail">80-90 €/mois dans le neuf. Demande portée par les résidents de la copro n'ayant pas acheté leur place + riverains.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Résident de la copropriété sans place, riverain du quartier, travailleur du secteur Chanot/Vélodrome</p>
+      <p><strong>Conclusion :</strong> Zone correcte sans être premium. Le neuf et le sous-sol sont des atouts. Le risque principal est la concurrence : 16 places invendues dans la même résidence. Si d'autres investisseurs les achètent pour les louer, vous serez en compétition directe sur le même palier. L'achat groupé (4 places) dilue ce risque.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">4 places de parking souterraines en VEFA — livraison septembre 2026.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-retained">
+          <td><strong>Location longue durée</strong></td>
+          <td>4</td>
+          <td>6,2 % (an 1-2) / 5,6 % (an 3+)</td>
+          <td>44 000 €</td>
+          <td>1,02</td>
+          <td>Immédiate</td>
+          <td>Faible</td>
+        </tr>
+        <tr>
+          <td>Revente à la livraison</td>
+          <td>4</td>
+          <td>ROI ~8-12 %</td>
+          <td>48-50 000 €</td>
+          <td>0,90</td>
+          <td>Spéculative</td>
+          <td>Moyen</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location longue durée est retenue : rendement net de 6,2 % les 2 premières années (exonération TF), puis 5,6 %. Le cash flow avec crédit 20 ans est de 111 €/mois en années 1-2, 85 € ensuite. En SCI IS, l'amortissement de 2 030 €/an efface totalement l'impôt. La revente à la livraison est une option spéculative : si le promoteur écoule ses dernières places à 13 000 €, les vôtres à 11 000 € pourraient se revendre 12-13 000 € pièce rapidement — plus-value de 4 000-8 000 € sans avoir à gérer de locataire. Mais cette stratégie est incertaine et dépend de la demande au moment de la livraison.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Résidence « Parc des Arts », 343 Bd Romain Rolland, 13009 Marseille</td></tr>
+        <tr><th>Type</th><td>Stationnement souterrain — VEFA (neuf)</td></tr>
+        <tr><th>Nombre de lots</th><td>4 places — n° 127, 131, 134, 141 (ou autres parmi les 16 disponibles)</td></tr>
+        <tr><th>Surface estimée</th><td>~12,5 m² par place</td></tr>
+        <tr><th>Prix unitaire affiché</th><td>13 000 € TTC</td></tr>
+        <tr><th>Prix unitaire négocié</th><td>11 000 € TTC</td></tr>
+        <tr><th>Prix total négocié</th><td>44 000 € TTC</td></tr>
+        <tr><th>Prix de revient</th><td>45 100 € (dont 1 100 € de notaire)</td></tr>
+        <tr><th>Livraison</th><td>Septembre 2026</td></tr>
+        <tr><th>Paiement</th><td>30 % à l'acte (13 200 €) — 70 % à la livraison (30 800 €)</td></tr>
+        <tr><th>Charges copro</th><td>Inconnues (VEFA) — estimées 12 €/mois/place</td></tr>
+        <tr><th>Taxe foncière</th><td>Exonérée 2 ans — estimée 80 €/an/place ensuite</td></tr>
+        <tr><th>Amortissement</th><td>Base 40 590 € / 20 ans = 2 030 €/an (sous-sol −10 % terrain)</td></tr>
+        <tr><th>Loyer indicatif</th><td>80-90 €/mois/place (donné par le promoteur)</td></tr>
+        <tr><th>Places disponibles</th><td>16 lots restants : 127, 131, 134, 141, 142, 213, 214, 223, 224, 225, 228, 231, 246, 279, 299, 91</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — Location 4 places, crédit 20 ans, SCI IS</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Loyer 85 € — Vacance 5 % — Crédit 20 ans 3,70 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">4 080 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td class="num neg">−204 €</td></tr>
+            <tr><td>Charges copro (48 € × 12)</td><td class="num neg">−576 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num neg">0 € (exo. 2 ans)</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr><td>EBE</td><td class="num">3 300 €</td></tr>
+            <tr><td>Amortissement</td><td class="num neg">−2 030 €</td></tr>
+            <tr><td>Intérêts emprunt (an 1)</td><td class="num neg">−1 010 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">260 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num neg">−39 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr class="total"><td>Net après IS</td><td class="num">2 251 €</td></tr>
+            <tr class="total"><td>Mensualité crédit</td><td class="num neg">−1 968 €</td></tr>
+            <tr class="total"><td>Cash flow annuel</td><td class="num">1 336 €</td></tr>
+            <tr class="total"><td>CF mensuel</td><td class="num">111 €</td></tr>
+            <tr class="total"><td>Cash-on-cash</td><td class="num">7,3 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Loyer 90 € — Vacance 0 % — Charges 10 €/place</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">4 320 €</td></tr>
+            <tr><td>Vacance (0 %)</td><td class="num">0 €</td></tr>
+            <tr><td>Charges copro (40 € × 12)</td><td class="num neg">−480 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num neg">0 € (exo. 2 ans)</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr><td>EBE</td><td class="num">3 840 €</td></tr>
+            <tr><td>Amortissement</td><td class="num neg">−2 030 €</td></tr>
+            <tr><td>Intérêts emprunt (an 1)</td><td class="num neg">−1 010 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">800 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num neg">−120 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr class="total"><td>Net après IS</td><td class="num">2 710 €</td></tr>
+            <tr class="total"><td>Mensualité crédit</td><td class="num neg">−1 968 €</td></tr>
+            <tr class="total"><td>Cash flow annuel</td><td class="num">1 876 €</td></tr>
+            <tr class="total"><td>CF mensuel</td><td class="num">156 €</td></tr>
+            <tr class="total"><td>Cash-on-cash</td><td class="num">10,3 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Loyer 70 € — Vacance 15 % — Charges 20 €/place</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">3 360 €</td></tr>
+            <tr><td>Vacance (15 %)</td><td class="num neg">−504 €</td></tr>
+            <tr><td>Charges copro (80 € × 12)</td><td class="num neg">−960 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num neg">0 € (exo. 2 ans)</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr><td>EBE</td><td class="num">1 896 €</td></tr>
+            <tr><td>Amortissement</td><td class="num neg">−2 030 €</td></tr>
+            <tr><td>Intérêts emprunt (an 1)</td><td class="num neg">−1 010 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num neg">−1 144 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">0 €</td></tr>
+            <tr class="separator"><td colspan="2"></td></tr>
+            <tr class="total"><td>Net après IS</td><td class="num">886 €</td></tr>
+            <tr class="total"><td>Mensualité crédit</td><td class="num neg">−1 968 €</td></tr>
+            <tr class="total"><td>Cash flow annuel</td><td class="num neg">−68 €</td></tr>
+            <tr class="total"><td>CF mensuel</td><td class="num neg">−6 €</td></tr>
+            <tr class="total"><td>Cash-on-cash</td><td class="num neg">−0,4 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative — Années 1-2 (exonération TF)</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenu brut</td><td>4 080 €</td><td>4 320 €</td><td>3 360 €</td></tr>
+          <tr><td>EBE</td><td>3 300 €</td><td>3 840 €</td><td>1 896 €</td></tr>
+          <tr><td>Résultat fiscal</td><td>260 €</td><td>800 €</td><td>−1 144 €</td></tr>
+          <tr><td>IS</td><td>−39 €</td><td>−120 €</td><td>0 €</td></tr>
+          <tr><td>CF mensuel</td><td>+111 €</td><td>+156 €</td><td>−6 €</td></tr>
+          <tr><td>Cash-on-cash</td><td>7,3 %</td><td>10,3 %</td><td>−0,4 %</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Impact taxe foncière — Années 3+</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>TF estimée</td><td>320 €</td><td>200 €</td><td>480 €</td></tr>
+          <tr><td>EBE après TF</td><td>2 980 €</td><td>3 640 €</td><td>1 416 €</td></tr>
+          <tr><td>CF mensuel</td><td>+85 €</td><td>+140 €</td><td>−46 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- === Financement : 15 vs 20 ans === -->
+    <div class="projection-summary" style="margin-top:2rem;">
+      <h3>Comparatif crédit 15 ans vs 20 ans (scénario Base)</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>15 ans — 3,50 %</th>
+            <th>20 ans — 3,70 %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Capital emprunté</td><td>27 720 €</td><td>27 720 €</td></tr>
+          <tr><td>Mensualité</td><td>198 €</td><td>164 €</td></tr>
+          <tr><td>Intérêts an 1</td><td>947 €</td><td>1 010 €</td></tr>
+          <tr><td>Coût total intérêts</td><td>~7 900 €</td><td>~11 200 €</td></tr>
+          <tr><td>CF mois (an 1-2)</td><td>+77 €</td><td>+111 €</td></tr>
+          <tr><td>CF mois (an 3+)</td><td>+50 €</td><td>+85 €</td></tr>
+          <tr><td>Cash-on-cash (an 1-2)</td><td>5,1 %</td><td>7,3 %</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:0.75rem;"><strong>Recommandation :</strong> Crédit 20 ans. Le coût supplémentaire en intérêts (3 300 € sur 20 ans, soit 165 €/an) est largement compensé par le cash flow mensuel supérieur de 34 €, qui fait passer le Worst case de −40 € à −6 €. La différence de cash-on-cash (7,3 % vs 5,1 %) est significative.</p>
+    </div>
+
+    <!-- === Structure VEFA === -->
+    <div class="projection-summary" style="margin-top:2rem;">
+      <h3>Calendrier de paiement VEFA</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Échéance</th>
+            <th>Montant</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>À l'acte (J+0)</td><td>13 200 €</td><td>Fonds propres</td></tr>
+          <tr><td>À l'acte (J+0)</td><td>1 100 €</td><td>Notaire — fonds propres</td></tr>
+          <tr><td>À l'acte (J+0)</td><td>808 €</td><td>IPPD + frais dossier — fonds propres</td></tr>
+          <tr><td><strong>Sous-total acte</strong></td><td><strong>15 108 €</strong></td><td><strong>Fonds propres</strong></td></tr>
+          <tr><td>À la livraison (sept 2026)</td><td>27 720 €</td><td>Emprunt bancaire</td></tr>
+          <tr><td>À la livraison (sept 2026)</td><td>3 080 €</td><td>Fonds propres (10 % solde)</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>45 908 €</strong></td><td><strong>Fonds propres : 18 188 € | Emprunt : 27 720 €</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Charges copro inconnues</td>
+          <td>En VEFA, le budget prévisionnel n'est pas encore communiqué. Si les charges grimpent à 20-25 €/mois/place, le cash flow Base passe de 111 € à 61 €. Si la résidence a un gardien, des ascenseurs ou des espaces verts importants, la quote-part parking peut être plus élevée que prévu.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Concurrence intra-résidence</td>
+          <td>16 places encore invendues. Si plusieurs sont achetées par des investisseurs pour location, vous entrez en compétition directe. Les locataires préféreront la place la moins chère ou la mieux placée dans le sous-sol.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Retard de livraison</td>
+          <td>La VEFA peut glisser de 6 à 18 mois sans que le promoteur soit pénalisé au-delà des indemnités contractuelles. Votre capital (13 200 € à l'acte) est bloqué sans revenu locatif. Pas de loyer avant la remise des clés.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Liquidité de revente</td>
+          <td>Revendre 4 parkings ensemble est plus difficile qu'une unité. Mais le ticket total (44 k€) reste accessible. L'idéal est de pouvoir les revendre séparément à des résidents de la copropriété. Le neuf est un atout à la revente.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Demande locative zone</td>
+          <td>Le boulevard Romain Rolland n'est pas un hyper-centre. Du stationnement gratuit existe à proximité. La demande est réelle mais pas garantie — un local qui peut se garer gratuitement dans la rue ne paiera pas 85 €/mois.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Fiscalité avantageuse</td>
+          <td>L'amortissement de 2 030 €/an + les intérêts d'emprunt couvrent le résultat fiscal dans tous les scénarios. IS quasi nul pendant 10-15 ans. C'est un point fort du montage en SCI IS.</td>
+          <td><span class="severity severity-1">1/5</span></td>
+        </tr>
+        <tr>
+          <td>Exonération TF 2 ans</td>
+          <td>Bonus fiscal de ~640 € sur 2 ans. Attention : la TF applicable ensuite dépend des taux communaux de Marseille — à vérifier. Si la mairie révise fortement les bases, la TF peut être plus élevée que nos 80 € estimés.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict verdict-negotiate">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">
+        <strong>ON NÉGOCIE — 4 places groupées à 11 000 € TTC l'unité.</strong><br><br>
+        À 11 000 €, le rendement brut atteint 9,3 % et le cash-on-cash en crédit 20 ans ressort à 7,3 % — des chiffres honorables pour du neuf sans travaux en VEFA. Le cash flow mensuel de 111 € (Base) reste modeste en absolu mais le ticket d'entrée de 18 k€ est contenu. L'amortissement en SCI IS efface l'impôt.<br><br>
+        Le vrai risque, ce sont les charges copro inconnues et la concurrence des 16 places invendues. Ces deux inconnues justifient qu'on n'achète pas au prix affiché (13 000 €) mais qu'on tente une négo groupée. L'argument massue : « Je prends 4 places d'un coup, vous libérez un quart de votre stock invendu. »<br><br>
+        Si le promoteur ne bouge pas en dessous de 12 000 €, le dossier reste acceptable en Base (cash flow 66 €/mois en 20 ans). Mais le Worst case devient franchement négatif et le cash-on-cash tombe sous 5 % — trop juste.<br><br>
+        <strong>Points bloquants avant signature :</strong> obtenir un budget prévisionnel de charges copro, même approximatif, et visiter un chantier équivalent du même promoteur pour évaluer la qualité des sous-sols (éclairage, largeur des places, accessibilité).
+      </p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix cible :</strong> 11 000 € / place (offre à 44 000 € les 4)</p>
+      <p><strong>Prix plafond :</strong> 12 000 € / place (cash-on-cash ~5 % — seuil psychologique)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>16 places invendues à écouler avant livraison → l'achat groupé de 4 lots est un vrai service rendu au promoteur</li>
+        <li>Le prix affiché de 13 000 € est un prix « catalogue » — en VEFA, la négo sur les parkings est standard, surtout en fin de commercialisation</li>
+        <li>Paiement 30/70 : vous bloquez 13 200 € maintenant, le promoteur sécurise sa trésorerie</li>
+        <li>Demander les lots les mieux placés dans le sous-sol (proches de l'ascenseur ou de la sortie) en contrepartie de l'achat groupé</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices)</p>
+      <p><strong>Estimation frais de notaire :</strong> 1 100 € (2,5 % — VEFA)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 0 € (neuf — livraison septembre 2026)</p>
+      <p><strong>Amortissement :</strong> 2 030 €/an (base 40 590 € / 20 ans — parking sous-sol, −10 % terrain)</p>
+      <p><strong>Crédit recommandé :</strong> 27 720 € sur 20 ans à 3,70 % — mensualité 164 €</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
