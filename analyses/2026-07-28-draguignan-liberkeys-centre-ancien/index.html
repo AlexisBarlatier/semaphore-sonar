@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Immeuble 4 studios, Centre Ancien Draguignan — 170 k€</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Immeuble 4 studios ~22 m² + local RDC 21 m² — Centre Ancien, Draguignan (83300)</p>
+  <p class="report-date">Analyse générée le 29 juillet 2026</p>
+  <p class="report-source">Source : Liberkeys (Logic-Immo) — Mandat exclusif DOM31036</p>
+  <div class="report-source-link"><a href="https://www.logic-immo.com/detail-vente-271409995.htm">🔗 Annonce originale</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif — mono-propriété</span>
+    <p>Stratégie retenue : <strong>Location meublée étudiante — 4 studios indépendants. Rafraîchissement léger (12 k€) + local RDC en buanderie/storage commun. Négociation à 170 k€.</strong> — SCI à l'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix négocié</span>
+      <span class="card-value">170 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">92 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 848 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">195 600 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">~220 k€</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">1 580 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité nette</span>
+      <span class="card-value">7,2 %</span>
+    </div>
+    <div class="card card-verdict note-6-0">
+      <span class="card-label">Note</span>
+      <span class="card-value">6,0/10</span>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.5385" data-lon="6.4650" data-address="Centre Ancien, Draguignan (83300) — à deux pas Fac de droit &amp; IUT"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Draguignan, sous-préfecture du Var (40 000 hab.), centre-ville historique à 200 m des commerces et à 5 min à pied de la Fac de droit et de l'IUT. Demande locative étudiante forte et vacance structurellement basse.</p>
+    <div class="attractiveness-grid">
+      <div class="attractiveness-card">
+        <h4>🎓 Proximité faculté</h4>
+        <p>Fac de droit + IUT à moins de 500 m → vivier étudiant garanti. Demande meublé T1/T1bis soutenue septembre-octobre.</p>
+      </div>
+      <div class="attractiveness-card">
+        <h4>🏪 Commerces</h4>
+        <p>Tous commerces à pied. Zone piétonne à 200 m. Boulangerie, pharmacie, supermarché dans un rayon de 300 m.</p>
+      </div>
+      <div class="attractiveness-card">
+        <h4>🏥 Services</h4>
+        <p>Hôpital Sainte-Anne à 2 km. Gare routière à 10 min. Les Arcs-Draguignan (TGV) à 15 km.</p>
+      </div>
+      <div class="attractiveness-card">
+        <h4>📈 Marché local</h4>
+        <p>Prix médian appartement : 3 136 €/m² (Figaro juillet 2026). Loyer meublé étudiant constaté : 17-19 €/m². Observatoire des loyers : médiane 10,8 €/m² (parc global, non meublé).</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Étudiants Fac de droit / IUT, jeunes actifs, saisonniers. Meublé obligatoire pour maximiser le rendement.</p>
+      <p><strong>Conclusion :</strong> Emplacement centre-ville très bien situé, bassin étudiant solide, vacance faible. Le seul point noir est le 4ᵉ étage sans ascenseur, qui limite le loyer et augmente le turnover sur ce lot.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Deux stratégies évaluées. La ligne verte indique celle retenue.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Loyer/mois</th>
+          <th>Rendement net</th>
+          <th>CF/mois (20a)</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Location nue (vide)</td>
+          <td>4 studios</td>
+          <td>370 €/u</td>
+          <td>6,1 %</td>
+          <td>~50 €</td>
+          <td>Faible</td>
+          <td>Moyen</td>
+        </tr>
+        <tr class="strategy-selected">
+          <td>Meublé étudiant ✅</td>
+          <td>4 studios</td>
+          <td>395 €/u</td>
+          <td>7,2 %</td>
+          <td>143 €</td>
+          <td>Faible</td>
+          <td>Bon</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>Le meublé étudiant maximise les loyers (+7 % vs nu) tout en étant LMNP-compatible dans une SCI à l'IS. Les 4 studios sont calibrés pour le marché : 17-19 €/m² meublé, sauf le 4ᵉ étage (sans ascenseur) plafonné à 360 € (16,4 €/m²). Le local RDC sert de buanderie commune — argument différenciant face aux studios concurrents, mais ne génère pas de loyer supplémentaire.</p>
+    </div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Centre Ancien, Draguignan (83300) — adresse exacte non communiquée (mandat exclusif)</td></tr>
+        <tr><th>Type</th><td>Immeuble de rapport — pleine propriété (mono-propriété, 5 lots)</td></tr>
+        <tr><th>Configuration</th><td>RDC : local 21 m² (buanderie/storage) · 1er : studio 22 m² · 2e : studio 22 m² · 3e : studio 22 m² · 4e : studio 22 m²</td></tr>
+        <tr><th>Surface</th><td>92 m² — un studio par étage du 1er au 4ᵉ, local RDC 21 m²</td></tr>
+        <tr><th>Prix affiché</th><td>200 000 € FAI (2 174 €/m²) — honoraires vendeur</td></tr>
+        <tr><th>Prix négocié</th><td><strong>170 000 €</strong> (1 848 €/m²) — cible recommandée</td></tr>
+        <tr><th>Année construction</th><td>1850</td></tr>
+        <tr><th>DPE / GES</th><td>D / B — Double vitrage posé, chauffage électrique</td></tr>
+        <tr><th>Ascenseur</th><td>❌ Aucun — 4ᵉ étage à pied</td></tr>
+        <tr><th>Occupation</th><td>1 seul studio loué 350 €/mois — 3 studios libres</td></tr>
+        <tr><th>Taxe foncière</th><td>2 275 €/an</td></tr>
+        <tr><th>Copropriété</th><td>Mono-propriété (pleine propriété des 5 lots) — pas de syndic, pas de charges copro</td></tr>
+        <tr><th>Travaux estimés</th><td>12 000 € — rafraîchissement 4 studios (peinture, sols, équipement) + aménagement buanderie RDC</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS, achat 170 k€, 20 ans</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">395 €/u · Vacance 5 % · TF 2 275 €</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer brut</td><td class="num">18 960 €/an</td></tr>
+            <tr><td>Vacance 5 %</td><td class="num">−948 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num">−2 275 €</td></tr>
+            <tr><td>PNO</td><td class="num">−300 €</td></tr>
+            <tr><td>Assurance immeuble</td><td class="num">−500 €</td></tr>
+            <tr><td>Prov. entretien</td><td class="num">−800 €</td></tr>
+            <tr class="total-row"><td>EBE</td><td class="num">14 137 €/an (1 178 €/mois)</td></tr>
+            <tr><td>Mensualité (3,45 %)</td><td class="num">−11 906 €/an (992 €/mois)</td></tr>
+            <tr><td>CF avant IS</td><td class="num">2 231 €/an (186 €/mois)</td></tr>
+            <tr><td>IS 15 %</td><td class="num">−519 €</td></tr>
+            <tr class="total-row"><td>CF net</td><td class="num"><strong>+1 712 €/an (143 €/mois)</strong></td></tr>
+            <tr><td>→ 50 % côté rénov.</td><td class="num">+71 €/mois</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">430 €/u · Vacance 3 % · TF stable</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer brut</td><td class="num">20 640 €/an</td></tr>
+            <tr><td>Vacance 3 %</td><td class="num">−619 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num">−2 275 €</td></tr>
+            <tr><td>PNO</td><td class="num">−300 €</td></tr>
+            <tr><td>Assurance immeuble</td><td class="num">−500 €</td></tr>
+            <tr><td>Prov. entretien</td><td class="num">−800 €</td></tr>
+            <tr class="total-row"><td>EBE</td><td class="num">16 146 €/an (1 345 €/mois)</td></tr>
+            <tr><td>Mensualité</td><td class="num">−11 906 €/an</td></tr>
+            <tr><td>CF avant IS</td><td class="num">4 240 €/an (353 €/mois)</td></tr>
+            <tr><td>IS 15 %</td><td class="num">−636 €</td></tr>
+            <tr class="total-row"><td>CF net</td><td class="num"><strong>+3 604 €/an (300 €/mois)</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">370 €/u · Vacance 8 % · TF +10 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer brut</td><td class="num">17 760 €/an</td></tr>
+            <tr><td>Vacance 8 %</td><td class="num">−1 421 €</td></tr>
+            <tr><td>Taxe foncière</td><td class="num">−2 503 €</td></tr>
+            <tr><td>PNO</td><td class="num">−300 €</td></tr>
+            <tr><td>Assurance immeuble</td><td class="num">−500 €</td></tr>
+            <tr><td>Prov. entretien</td><td class="num">−800 €</td></tr>
+            <tr class="total-row"><td>EBE</td><td class="num">12 237 €/an (1 020 €/mois)</td></tr>
+            <tr><td>Mensualité</td><td class="num">−11 906 €/an</td></tr>
+            <tr><td>CF avant IS</td><td class="num">331 €/an (28 €/mois)</td></tr>
+            <tr><td>IS 15 %</td><td class="num">−50 €</td></tr>
+            <tr class="total-row"><td>CF net</td><td class="num"><strong>+281 €/an (23 €/mois)</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative — 20 ans</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Loyer moyen</td><td>395 €</td><td>430 €</td><td>370 €</td></tr>
+          <tr><td>Taux de vacance</td><td>5 %</td><td>3 %</td><td>8 %</td></tr>
+          <tr><td>EBE mensuel</td><td>1 178 €</td><td>1 345 €</td><td>1 020 €</td></tr>
+          <tr><td>CF net / mois</td><td>143 €</td><td>300 €</td><td>23 €</td></tr>
+          <tr><td>Rendement net</td><td>7,2 %</td><td>8,3 %</td><td>6,3 %</td></tr>
+          <tr><td>Provision 5 ans (50 % CF)</td><td>4 279 €</td><td>9 000 €</td><td>690 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="projection-summary" style="margin-top: 2rem;">
+      <h3>Financement 15 ans — ❌ Ne passe pas</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Indicateur</th><th>15 ans (3,25 %)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mensualité</td><td>1 197 €/mois</td></tr>
+          <tr><td>CF avant IS</td><td>−19 €/mois</td></tr>
+          <tr><td>CF net</td><td><strong>−67 €/mois ❌</strong></td></tr>
+          <tr><td>Provision 5 ans (50 % CF)</td><td>Négative — impossible</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 1rem; color: #856404; background: #fff3cd; padding: 0.75rem; border-radius: 6px;">Le financement sur 15 ans est structurellement déficitaire. L'achat n'est viable que sur 20 ans. C'est un investissement patrimonial à effet de levier — la pierre se rembourse, mais le cash-flow ne nourrit pas son homme.</p>
+    </div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>4ᵉ étage sans ascenseur</td>
+          <td>Turnover élevé, loyer plafonné à 360 €, risque vacance accrue sur ce lot. Dévalorisation de ~15 % du loyer vs 1er étage.</td>
+          <td class="risk-high">⚠️ Élevé</td>
+        </tr>
+        <tr>
+          <td>DPE D — annonce « rénovation nécessaire »</td>
+          <td>Bâti de 1850 avec double vitrage posé. Travaux cosmétiques possibles, mais structure à surveiller. Pas de syndic → pas d'AG surprise, mais pas de mutualisation non plus.</td>
+          <td class="risk-medium">🟡 Moyen</td>
+        </tr>
+        <tr>
+          <td>Cash-flow très faible</td>
+          <td>143 €/mois en Base Case. Provision rénovation à 50 % = 71 €/mois, soit 8 500 € en 10 ans — insuffisant pour une rénovation lourde (DPE, plomberie, toiture).</td>
+          <td class="risk-high">⚠️ Élevé</td>
+        </tr>
+        <tr>
+          <td>1 seul studio loué (350 €)</td>
+          <td>3 studios à relouer. Le « marché à 400 € » est une projection — pas un fait acquis. Risque de décote si relocation précipitée.</td>
+          <td class="risk-medium">🟡 Moyen</td>
+        </tr>
+        <tr>
+          <td>Local RDC non valorisable</td>
+          <td>21 m² en buanderie commune = coût d'opportunité. Pas de loyer supplémentaire possible sans travaux lourds (création d'un 5ᵉ studio — changement d'usage).</td>
+          <td class="risk-low">🟢 Faible</td>
+        </tr>
+        <tr>
+          <td>Mono-propriété</td>
+          <td>Avantage : pas de syndic, pas d'AG, travaux décidés en autonomie. Inconvénient : tous les coûts sont concentrés sur un seul propriétaire. Pas de mutualisation.</td>
+          <td class="risk-low">🟢 Faible</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict verdict-negotiate">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À NÉGOCIER — 170 000 €</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 170 000 € (soit −15 % sur le prix affiché de 200 k€)</p>
+      <p><strong>À 200 k€ :</strong> CF net = 91 €/mois. À 170 k€ : CF net = 143 €/mois. L'écart est faible mais décisif — en dessous de 170 k€, la provision rénovation devient trop ridicule.</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li><strong>4ᵉ étage sans ascenseur</strong> → décote de 10-15 % du loyer sur 1/4 des lots. Capitalisation : 40 € × 12 × 20 ans = 9 600 € de manque à gagner.</li>
+        <li><strong>3 studios vacants à relouer</strong> → risque locatif initial. L'agent présente « 400 €/mois » comme un fait établi, ce n'est qu'une projection.</li>
+        <li><strong>Travaux de rafraîchissement</strong> → 12 000 € à déduire du prix facial. L'annonce dit « clé en main », mais les photos montrent un besoin de remise au goût du jour.</li>
+        <li><strong>DPE D sur bâti 1850</strong> → la prochaine réglementation pourrait imposer une rénovation thermique plus lourde (estimation rapide : 8-10 k€ supplémentaires si obligation de passer à C).</li>
+        <li><strong>Mandat exclusif Liberkeys</strong> → l'agence n'a qu'un seul canal de vente. Pression temporelle potentielle sur le mandat.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal :</strong> SCI à l'IS (15 %) — Amortissement bâti 75 % sur 30 ans (3 825 €/an) + travaux sur 10 ans (1 200 €/an)</p>
+      <p><strong>Frais de notaire :</strong> 13 600 € (8 %)</p>
+      <p><strong>Enveloppe travaux :</strong> 12 000 € (rafraîchissement léger)</p>
+      <p><strong>Apport nécessaire :</strong> 31 800 €</p>
+      <p><strong>Emprunt 20 ans :</strong> 163 800 € à 3,45 % + 0,34 % assurance → mensualité 992 €</p>
+      <p><strong>ROCE (CF net / apport) :</strong> 5,4 %</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles</p>';
+      return;
+    }
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
