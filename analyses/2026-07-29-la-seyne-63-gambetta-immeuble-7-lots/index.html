@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — La Seyne-sur-Mer, 63 Av. Gambetta, immeuble 7 lots</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">63 Avenue Gambetta — Centre Ville-Peyron, La Seyne-sur-Mer (83500)</p>
+  <p class="report-date">Analyse générée le 29 juillet 2026</p>
+  <p class="report-source">Source : Prestige Immobilier — Margaux Sabbah — Dossier confidentiel investisseur</p>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif — Immeuble mixte</span>
+    <p>Stratégie retenue : <strong>Location nue — 7 lots (2 commerces + 5 habitations)</strong> — SCI à l'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix FAI affiché</span>
+      <span class="card-value">430 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Offre cible (−25 %)</span>
+      <span class="card-value">322 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">248,8 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m² cible</span>
+      <span class="card-value">1 294 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Investissement total</span>
+      <span class="card-value">390 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus full projeté</span>
+      <span class="card-value">3 627 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité nette</span>
+      <span class="card-value">9,6 % full / 3,2 % actuel</span>
+    </div>
+    <div class="card card-verdict note-7">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,5/10</span>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1020" data-lon="5.8810" data-address="63 Avenue Gambetta, 83500 La Seyne-sur-Mer"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Le quartier Centre Ville-Peyron est le cœur historique et commercial de La Seyne-sur-Mer. L'avenue Gambetta est un axe passant reliant le centre-ville au port et aux plages des Sablettes. Le secteur bénéficie d'une mixité commerces/habitations dynamique, d'une desserte en transports (bus, gare SNCF à 10 min), et d'une attractivité renforcée par la rénovation urbaine du centre-ville. La demande locative est soutenue, tant pour les commerces que pour les logements.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <span class="attr-score">7,0</span>
+        <span class="attr-detail">Bus, gare SNCF à 10 min, accès A50 rapide. Tout à pied dans le centre.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:85%"></div></div>
+        <span class="attr-score">8,5</span>
+        <span class="attr-detail">Avenue commerçante, marché provençal, supermarchés, restaurants, banques.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:65%"></div></div>
+        <span class="attr-score">6,5</span>
+        <span class="attr-detail">Écoles primaires et collèges à proximité. Lycées à Toulon (20 min).</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6,0</span>
+        <span class="attr-detail">Centre-ville animé, quelques incivilités. En nette amélioration avec la rénovation urbaine.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:75%"></div></div>
+        <span class="attr-score">7,5</span>
+        <span class="attr-detail">Demande soutenue. Mixité commerces + logements = pool élargi. Taux de vacance faible.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <span class="attr-score">6,0</span>
+        <span class="attr-detail">Bassin d'emploi naval en reconversion. Tourisme, commerce, services. Toulon à 15 min.</span>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Commerçants/artisans pour les RDC (bar, boutique), jeunes actifs et couples pour les T2/T3, étudiant ou saisonnier pour le studio.</p>
+      <p><strong>Conclusion :</strong> L'adéquation quartier/bien est bonne (6,8/10). L'avenue Gambetta est un emplacement commercial établi avec passage piéton. Le potentiel de valorisation par relocation est réel. Le principal risque est la vacance du bar — le plus gros loyer du portefeuille.</p>
+    </div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Type</th><td>Immeuble mixte — 2 commerces RDC + 5 logements étages</td></tr>
+        <tr><th>Adresse</th><td>63 Avenue Gambetta, 83500 La Seyne-sur-Mer</td></tr>
+        <tr><th>Surface totale</th><td>248,8 m² (7 lots)</td></tr>
+        <tr><th>Construction</th><td>1975 — 3 étages, pas d'ascenseur</td></tr>
+        <tr><th>DPE</th><td>Majoritairement C (3 lots C, 1 D, 1 E, 2 commerces N/R)</td></tr>
+        <tr><th>État</th><td>Rénovation nécessaire : plomb (4 lots), électricité (5 lots), DPE E→D à traiter. Pas d'amiante, pas de termites.</td></tr>
+        <tr><th>Occupation</th><td>3 lots loués (1 457 €/mois) — 4 lots vacants dont le bar (1 170 € projeté)</td></tr>
+        <tr><th>Vendeur</th><td>Professionnel — Prestige Immobilier (Aubagne)</td></tr>
+        <tr><th>Prix affiché</th><td>430 000 € FAI (410 000 € net vendeur + 20 000 € honoraires acquéreur)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="lot-details">
+    <h2>Détail des 7 lots</h2>
+    <table class="comparison-table">
+      <thead><tr><th>Lot</th><th>Surface</th><th>Loyer/mois</th><th>DPE</th><th>Statut</th><th>Alertes</th></tr></thead>
+      <tbody>
+        <tr><td>Bar RDC Gauche</td><td>34,4 m²</td><td>1 170 € (couplé T2 1er D)</td><td>N/R</td><td>🔴 VACANT</td><td>À relouer solo ~700 €</td></tr>
+        <tr><td>Commerce RDC Droit</td><td>45,0 m²</td><td>ex-480 €</td><td>N/R</td><td>🔴 VACANT</td><td>Potentiel ~500 €</td></tr>
+        <tr><td>Studio 1er</td><td>15,7 m²</td><td>352 €</td><td>C</td><td>🟢 Loué 01/2021</td><td>Plomb, électricité</td></tr>
+        <tr><td>T2 1er Droite</td><td>34,2 m²</td><td>0 € (couplé bar)</td><td>E</td><td>🔴 VACANT</td><td>Plomb, élec HS, DPE E→D</td></tr>
+        <tr><td>T2 1er Gauche</td><td>32,9 m²</td><td>500 €</td><td>C</td><td>🔴 VACANT</td><td>Plomb, électricité</td></tr>
+        <tr><td>T2 2e Droite</td><td>36,3 m²</td><td>500 €</td><td>D</td><td>🟢 Loué 01/2026</td><td>Plomb, électricité</td></tr>
+        <tr><td>T3 2e Gauche</td><td>50,4 m²</td><td>605 €</td><td>C</td><td>🟢 Loué 03/2017</td><td>Électricité</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Note sur le couplage Bar + T2 :</strong> Actuellement, le bar RDC et le T2 1er Droite sont loués ensemble pour 1 170 €/mois, mais le lot est vacant. Une relocation séparée est recommandée : bar solo ~700 € + T2 solo ~470 € = 1 170 € équivalent. Le T2 nécessite des travaux (DPE E, électricité HS, plomb) avant relocation.</p>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Deux stratégies ont été évaluées. La location nue longue durée est retenue pour sa simplicité de gestion et sa stabilité.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>CF net/mois</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-retained">
+          <td>Location nue 7 lots</td>
+          <td>7</td>
+          <td>9,6 %</td>
+          <td>+937 €</td>
+          <td><span class="badge-faisabilite">Haute</span></td>
+          <td><span class="badge-risque">Moyen</span></td>
+        </tr>
+        <tr>
+          <td>Mixte (commerces bail commercial + habitation nue)</td>
+          <td>7</td>
+          <td>9,2 %</td>
+          <td>+880 €</td>
+          <td><span class="badge-faisabilite">Haute</span></td>
+          <td><span class="badge-risque">Moyen</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location nue longue durée est privilégiée. Le bail commercial pour le bar serait plus protecteur (3/6/9) mais limiterait la flexibilité. Le commerce RDC Droit pourrait convenir à un bail commercial classique. Attention à la licence IV pour le bar : à vérifier si elle est incluse dans la vente — sans elle, le potentiel locatif du bar chute fortement.</p>
+    </div>
+  </section>
+
+  <section class="renovation-plan">
+    <h2>Plan de rénovation obligatoire</h2>
+    <table class="comparison-table">
+      <thead><tr><th>Poste</th><th>Lots concernés</th><th>Coût estimé</th><th>Urgence</th></tr></thead>
+      <tbody>
+        <tr><td>Déplombage (peintures, canalisations)</td><td>4 lots (studio, 2×T2)</td><td>12 000 €</td><td>🔴 Obligatoire avant relocation</td></tr>
+        <tr><td>Mise aux normes électricité</td><td>5 lots</td><td>20 000 €</td><td>🔴 Obligatoire (dont 1 HS)</td></tr>
+        <tr><td>Rénovation DPE E→D (T2 1er D)</td><td>1 lot</td><td>7 000 €</td><td>🟡 Avant 2034</td></tr>
+        <tr><td>Rafraîchissement lots vacants</td><td>4 lots</td><td>6 000 €</td><td>🟡 Avant relocation</td></tr>
+        <tr><td><strong>Total</strong></td><td></td><td><strong>45 000 €</strong></td><td></td></tr>
+      </tbody>
+    </table>
+    <p>Le déplombage et la mise aux normes électrique sont <strong>obligatoires avant toute relocation</strong>. Ces 32 k€ sont incompressibles. Le DPE E du T2 1er Droite est à traiter idéalement avant relocation pour éviter de devoir interrompre le bail en 2034.</p>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières — Offre à 322 000 € FAI</h2>
+    <p><strong>Base :</strong> Emprunt 330 300 € (90 %), 20 ans à 3,45 %, assurance 0,34 %. Apport : 62 539 €.</p>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Actuel</h3>
+        <p class="scenario-subtitle">3 lots loués — post-travaux — vacance 5 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>1 457 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>17 484 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td>−874 €</td></tr>
+            <tr><td>TF + PNO + entretien</td><td>−4 000 €</td></tr>
+            <tr class="total-row"><td>EBITDA</td><td>12 610 €</td></tr>
+            <tr class="yield-row"><td>Mensualité crédit</td><td>−24 012 €</td></tr>
+            <tr class="yield-row"><td>CF net annuel</td><td>−11 402 €</td></tr>
+            <tr class="yield-row"><td>CF net / mois</td><td>−950 € ❌</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-base">
+        <h3>Scénario Transition</h3>
+        <p class="scenario-subtitle">6-7 lots reloués — vacance 7 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>3 627 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>43 524 €</td></tr>
+            <tr><td>Vacance (7 %)</td><td>−3 047 €</td></tr>
+            <tr><td>TF + PNO + entretien</td><td>−4 000 €</td></tr>
+            <tr class="total-row"><td>EBITDA</td><td>36 477 €</td></tr>
+            <tr class="yield-row"><td>Mensualité crédit</td><td>−24 012 €</td></tr>
+            <tr class="yield-row"><td>CF net annuel</td><td>+10 500 €</td></tr>
+            <tr class="yield-row"><td>CF net / mois</td><td>+875 € ✅</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Full stabilisé</h3>
+        <p class="scenario-subtitle">7 lots loués — vacance 5 % — loyers optimisés</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer mensuel</td><td>3 627 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td>43 524 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td>−2 176 €</td></tr>
+            <tr><td>TF + PNO + entretien</td><td>−4 000 €</td></tr>
+            <tr class="total-row"><td>EBITDA</td><td>37 348 €</td></tr>
+            <tr class="yield-row"><td>Mensualité crédit</td><td>−24 012 €</td></tr>
+            <tr class="yield-row"><td>CF net annuel (avant IS)</td><td>+13 336 €</td></tr>
+            <tr class="yield-row"><td>CF net / mois</td><td>+1 112 € ✅</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative — 322 000 € vs 430 000 €</h3>
+      <table class="comparison-table">
+        <thead><tr><th>Indicateur</th><th>Prix affiché (430k)</th><th>Offre −25 % (322k)</th></tr></thead>
+        <tbody>
+          <tr><td>Investissement total</td><td>505 750 €</td><td>390 027 €</td></tr>
+          <tr><td>Prix / m²</td><td>1 728 €</td><td>1 294 €</td></tr>
+          <tr><td>Apport</td><td>~81 700 €</td><td>~62 500 €</td></tr>
+          <tr><td>Mensualité 20 ans</td><td>2 589 €</td><td>2 001 €</td></tr>
+          <tr><td>CF net full / mois</td><td>+523 €</td><td>+1 112 €</td></tr>
+          <tr><td>Rendement net full</td><td>7,4 %</td><td>9,6 %</td></tr>
+          <tr><td>ROI fonds propres</td><td>7,7 %</td><td>21,3 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="dpe-liability">
+    <h2>⚠️ Passif technique — Plomb & Électricité</h2>
+    <p>Contrairement au DPE qui est globalement bon (3 lots C, 1 D, 1 E), le passif technique est lourd :</p>
+    <ul>
+      <li><strong>Plomb</strong> : présence au-delà des seuils réglementaires sur 4 lots habités (studio 1er, T2 1er D, T2 1er G, T2 2e D). Le déplombage est obligatoire avant relocation. Coût estimé : 8 000 – 16 000 €.</li>
+      <li><strong>Électricité</strong> : anomalies constatées sur 5 lots, dont une installation « non alimentée lors du contrôle » (T2 1er D = HS). Mise en conformité obligatoire. Coût estimé : 15 000 – 25 000 €.</li>
+      <li><strong>DPE E du T2 1er Droite</strong> : 309 kWh/m²/an. Interdiction de location en 2034. Rénovation à prévoir (isolation, menuiseries). Coût estimé : 5 000 – 10 000 €.</li>
+    </ul>
+    <p><strong>Total travaux obligatoires : 32 000 – 51 000 €</strong>. Ces coûts sont intégrés à l'offre à 322 000 € (forfait 45 000 €).</p>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Vacance du bar</td><td>Plus gros loyer (1 170 € couplé). Relocation incertaine sans licence IV. Délai potentiel 6-12 mois.</td><td><span class="severity severity-5">5/5</span></td></tr>
+        <tr><td>Travaux plomb + électricité</td><td>Obligatoires avant relocation. 32 k€ minimum. Possibilité de surfacturation en cours de chantier.</td><td><span class="severity severity-4">4/5</span></td></tr>
+        <tr><td>DPE E T2 1er Droite</td><td>Interdiction locative en 2034. 7 k€ de travaux à budgéter. Peut être traité en même temps que le reste.</td><td><span class="severity severity-3">3/5</span></td></tr>
+        <tr><td>Phase de transition</td><td>CF négatif (−950 €/mois) tant que 4 lots sont vacants. Provision de 15-20 k€ nécessaire.</td><td><span class="severity severity-4">4/5</span></td></tr>
+        <tr><td>Mixité commerces/habitation</td><td>Atout (diversification) mais nuisances potentielles (bruit bar, Déchets). Choix des locataires clé.</td><td><span class="severity severity-2">2/5</span></td></tr>
+        <tr><td>Honoraires acquéreur</td><td>20 000 € à la charge de l'acquéreur (4,88 %). Augmente le prix réel de 30 750 € avec le notaire.</td><td><span class="severity severity-2">2/5</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict verdict-negocier">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>ON NÉGOCIE à 322 000 € FAI (−25 %).</strong> Le dossier a un vrai potentiel : 7 lots mixtes dans un quartier dynamique de La Seyne, DPE majoritairement C, revenu full projeté à 3 627 €/mois. Mais le prix affiché de 430 000 € est décorrélé de la réalité : 4 lots vacants, 32 k€ de travaux obligatoires (plomb + électricité), et un bar — le plus gros loyer — dont la relocation est incertaine. L'offre à −25 % intègre ces risques et permet d'atteindre un CF net de +1 112 €/mois en régime stabilisé.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>🎯 Offre recommandée : 322 000 € FAI</strong></p>
+      <p>Justification du −25 % (108 000 € de décote) :</p>
+      <ul>
+        <li><strong>Travaux obligatoires : 45 000 €</strong> (plomb 12k + électricité 20k + DPE 7k + rafraîchissement 6k)</li>
+        <li><strong>Risque vacance bar : 30 000 €</strong> (6 mois de vacance du plus gros loyer + travaux supplémentaires si licence IV absente)</li>
+        <li><strong>Honoraires acquéreur : 20 000 €</strong> déjà intégrés dans le prix FAI, mais qui alourdissent le notaire</li>
+        <li><strong>Phase de transition : 15 000 €</strong> de CF négatif à provisionner (−950 € × ~16 mois)</li>
+      </ul>
+
+      <p><strong>📊 Ratios à 322 000 € :</strong></p>
+      <table class="comparison-table">
+        <thead><tr><th>Indicateur</th><th>Prix affiché</th><th>Offre −25 %</th></tr></thead>
+        <tbody>
+          <tr><td>Rendement net full</td><td>7,4 %</td><td>9,6 %</td></tr>
+          <tr><td>CF net mensuel full</td><td>+523 €</td><td>+1 112 €</td></tr>
+          <tr><td>Prix / m²</td><td>1 728 €</td><td>1 294 €</td></tr>
+          <tr><td>Apport</td><td>81 700 €</td><td>62 500 €</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>🔑 Points de vigilance avant l'offre :</strong></p>
+      <ul>
+        <li><strong>Licence IV du bar</strong> : exigence absolue. Sans elle, le bar perd 50 % de sa valeur locative.</li>
+        <li><strong>Visite technique</strong> : faire chiffrer précisément le déplombage et l'électricité par un professionnel.</li>
+        <li><strong>DPE complet</strong> : déjà fourni dans le dossier confidentiel. Le T2 1er Droite (E) est le seul point noir.</li>
+        <li><strong>Baux en cours</strong> : le T3 2e Gauche est loué depuis 2017 — vérifier si le loyer est révisé ou bloqué.</li>
+        <li><strong>TF réelle</strong> : demander le dernier avis. L'estimation utilisée (2 000 €) est conservative.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices, amortissement du bâti + travaux)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~23 027 € (7,5 % sur 307 023 € net vendeur)</p>
+      <p><strong>Enveloppe travaux :</strong> 45 000 € (plomb, électricité, DPE, rafraîchissement)</p>
+      <p><strong>Phase de transition :</strong> ~950 €/mois de CF négatif → provision de 15 000 € recommandée</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
