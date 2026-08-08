@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Immeuble 4 lots, Ollioules centre — 175 k€</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Immeuble 4 lots — 1 studio neuf + 2 studios + T2 — Centre Ollioules (83190)</p>
+  <p class="report-date">Analyse générée le 8 août 2026</p>
+  <p class="report-source">Source : Logic-Immo — Corinne Campagni, Dr House Immo</p>
+  <div class="report-source-link"><a href="https://www.logic-immo.com/detail-annonce/vente/provence-alpes-cote-d-azur/var-83/ollioules-83190/26VLUDIP3AQK">🔗 Annonce originale</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif — mono-propriété</span>
+    <p>Stratégie retenue : <strong>Location meublée longue durée — 4 lots. Rafraîchissement intérieur (25 k€) des 3 lots à rénover. Négociation à 157 500 € FAI pour passer sous les 170 k€.</strong> — SCI à l'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix négocié</span><span class="card-value">175 000 €</span></div>
+    <div class="card"><span class="card-label">Surface</span><span class="card-value">94 m²</span></div>
+    <div class="card"><span class="card-label">Prix / m²</span><span class="card-value">1 862 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient</span><span class="card-value">214 000 €</span></div>
+    <div class="card"><span class="card-label">Valeur marché</span><span class="card-value">~230 k€ après tx</span></div>
+    <div class="card"><span class="card-label">Revenus bruts</span><span class="card-value">1 690 €/mois</span></div>
+    <div class="card"><span class="card-label">Rentabilité nette</span><span class="card-value">7,6 %</span></div>
+    <div class="card card-verdict note-5-5"><span class="card-label">Note</span><span class="card-value">5,5/10</span></div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1395" data-lon="5.8478" data-address="Centre — Ollioules (83190)"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Ollioules (14 000 hab.), à 8 km de Toulon centre. Commune résidentielle de première couronne toulonnaise, desservie par la D11 et les bus du réseau Mistral. Centre-ville ancien avec commerces de proximité, marché provençal réputé. Demande locative portée par les actifs travaillant sur Toulon qui cherchent à s'éloigner de la densité urbaine.</p>
+    <div class="attractiveness-grid">
+      <div class="attractiveness-card"><h4>🏪 Centre-ville & commerces</h4><p>Ruelle au calme à 2 min à pied des commerces, boulangeries, pharmacie. Marché provençal classé les jeudis et samedis.</p></div>
+      <div class="attractiveness-card"><h4>🚉 Accès Toulon</h4><p>8 km du centre de Toulon (15 min en voiture). Bus Mistral ligne 8. Gare SNCF Toulon à 12 min — TGV Paris 3h45.</p></div>
+      <div class="attractiveness-card"><h4>🏥 Services</h4><p>Écoles primaires et collège à Ollioules. Lycées à Toulon/La Seyne. Centre hospitalier Sainte-Anne à 10 km.</p></div>
+      <div class="attractiveness-card"><h4>📈 Marché local</h4><p>Prix médian appartement Ollioules : ~3 200 €/m² (2026). Loyer moyen : 15-17 €/m², jusqu'à 19 €/m² pour du meublé récent centre-ville. Marché locatif actif — peu d'offres disponibles en permanence.</p></div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeunes actifs travaillant sur le bassin toulonnais, couples sans enfants, saisonniers (proximité Sanary/Bandol à 6 km). Studios pour actifs solo, T2 pour couple ou parent isolé.</p>
+      <p><strong>Conclusion :</strong> Emplacement centre-ville au calme, commune recherchée en première couronne de Toulon. La demande locative est soutenue mais les loyers sont plafonnés par le pouvoir d'achat local — on n'est pas sur du Toulon Port ou du Mourillon. Le prix au m² (1 862 €) est très en dessous du marché (3 200 €) après travaux.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Deux stratégies évaluées. La ligne verte indique celle retenue.</p>
+    <table class="strategy-table">
+      <thead><tr><th>Stratégie</th><th>Lots</th><th>Rendement net</th><th>Valeur après tx</th><th>Ratio coût/valeur</th><th>Faisabilité</th><th>Risque</th><th>Adéquation</th></tr></thead>
+      <tbody>
+        <tr class="strategy-row strategy-selected">
+          <td><strong>Meublé longue durée</strong></td>
+          <td>4 lots</td>
+          <td>7,6 %</td>
+          <td>~230 k€</td>
+          <td>93 %</td>
+          <td>Immédiate</td>
+          <td>Faible</td>
+          <td>✅ Optimale</td>
+        </tr>
+        <tr class="strategy-row">
+          <td>Colocation 4 chambres</td>
+          <td>Immeuble entier</td>
+          <td>~6,5 %</td>
+          <td>~200 k€</td>
+          <td>107 %</td>
+          <td>Complexe</td>
+          <td>Élevé</td>
+          <td>❌ Inadapté</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Meublé longue durée</strong> : le format naturel de l'immeuble — 4 logements indépendants avec entrées séparées. Les studios meublés sont les plus recherchés sur Ollioules (actifs solo, saisonniers). La colocation n'a pas de sens ici : les lots sont déjà individualisés, la rentabilité serait mécaniquement inférieure (loyer à la chambre vs studio entier) et la gestion plus lourde (turnover par chambre, parties communes à entretenir). Le meublé maximise le loyer au m² et ouvre le régime réel (amortissement du bâti + meubles).</p>
+    </div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Centre — Ollioules (83190) — adresse exacte non communiquée</td></tr>
+        <tr><th>Type</th><td>Immeuble de rapport mono-propriété — 4 lots : 1 studio neuf (~22 m²) + 2 studios (~20 m² chacun) + 1 T2 (~32 m²)</td></tr>
+        <tr><th>Surface</th><td>94 m² habitables — 3 niveaux (RDC + 2 étages)</td></tr>
+        <tr><th>Prix affiché</th><td>187 000 € FAI (1 989 €/m²) — honoraires vendeur</td></tr>
+        <tr><th>Prix négocié cible</th><td><strong>175 000 €</strong> — offre à 157 500 € (−16 % vs affiché) pour atterrir sous 170 000 €</td></tr>
+        <tr><th>DPE</th><td>D (GES D) — pas de travaux énergétiques obligatoires</td></tr>
+        <tr><th>État</th><td>Studio neuf prêt à louer. 3 lots à rénover (intérieur uniquement). Façade, toit, fenêtres et électricité refaits par le vendeur.</td></tr>
+        <tr><th>Occupation</th><td>Libre de toute occupation — aucun locataire en place</td></tr>
+        <tr><th>Régime</th><td><strong>Mono-propriété</strong> — pas de syndic, pas de charges de copropriété, pas de surprise d'AG</td></tr>
+        <tr><th>Taxe foncière</th><td>~1 000 €/an (estimé — à confirmer auprès de l'agent)</td></tr>
+        <tr><th>Charges</th><td>Assurance immeuble ~500 €/an + provision entretien ~800 €/an + PNO ~200 €/an</td></tr>
+        <tr><th>Construction</th><td>1900 — structure traditionnelle pierre</td></tr>
+        <tr><th>Vendeur</th><td>Corinne Campagni — Dr House Immo (Six-Fours-les-Plages)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Travaux — 25 000 € (intérieur uniquement)</h2>
+    <table class="comparison-table">
+      <thead><tr><th>Poste</th><th>Montant</th><th>Détail</th></tr></thead>
+      <tbody>
+        <tr><td>Peinture + revêtements muraux (3 lots)</td><td>7 500 €</td><td>~70 m² × 100 €/m² — remise à neuf complète</td></tr>
+        <tr><td>Sols (3 lots)</td><td>5 000 €</td><td>Stratifié/vinyle — pose comprise</td></tr>
+        <tr><td>Cuisines équipées (3)</td><td>5 400 €</td><td>1 800 €/unité — meubles + électroménager + pose</td></tr>
+        <tr><td>Salles d'eau (3)</td><td>4 500 €</td><td>1 500 €/unité — receveur, meuble, robinetterie, faïence</td></tr>
+        <tr><td>Aléas / divers</td><td>2 600 €</td><td>10 % — surprises 1900, électricité complémentaire</td></tr>
+        <tr class="total"><td><strong>Total</strong></td><td><strong>25 000 €</strong></td><td>3-4 mois de travaux</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:1rem;"><strong>Note :</strong> la façade, la toiture, les fenêtres et l'électricité sont déjà refaits. Les 25 k€ couvrent uniquement l'aménagement intérieur — rapport qualité/prix exceptionnel. Le vendeur a porté le gros œuvre, reste la finition.</p>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Loyers projetés — meublé</h2>
+    <table class="comparison-table">
+      <thead><tr><th>Lot</th><th>Surface estimée</th><th>Loyer Base</th><th>Loyer Best</th><th>Loyer Worst</th></tr></thead>
+      <tbody>
+        <tr><td>Studio neuf (RDC)</td><td>~22 m²</td><td>400 €</td><td>440 €</td><td>360 €</td></tr>
+        <tr><td>Studio (1<sup>er</sup>)</td><td>~20 m²</td><td>380 €</td><td>400 €</td><td>340 €</td></tr>
+        <tr><td>Studio (2<sup>e</sup>)</td><td>~20 m²</td><td>380 €</td><td>400 €</td><td>340 €</td></tr>
+        <tr><td>T2 (2<sup>e</sup>)</td><td>~32 m²</td><td>530 €</td><td>580 €</td><td>480 €</td></tr>
+        <tr class="total"><td><strong>Total HC</strong></td><td><strong>94 m²</strong></td><td><strong>1 690 €/mois</strong></td><td><strong>1 820 €/mois</strong></td><td><strong>1 520 €/mois</strong></td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:0.5rem;">Loyers basés sur 16-19 €/m² (marché Ollioules meublé récent centre-ville). Studios à 18-19 €/m² (petite surface = prime au m²), T2 à 16-17 €/m².</p>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS, 20 ans, 3,45 %</h2>
+    <p class="attractiveness-intro">Charges mono-propriété : assurance 500 €, entretien 800 €, TF 1 000 € (estimé), PNO 200 €, comptable 500 € = 3 000 €/an. Emprunt = 90 % (achat + travaux). Assurance emprunteur 0,34 %, IPPD 0,7 %, frais dossier 500 €.</p>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer 1 690 € — Travaux 25 k€</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Prix d'achat</td><td>175 000 €</td></tr>
+            <tr><td>+ Notaire (8 %)</td><td>14 000 €</td></tr>
+            <tr><td>+ Travaux</td><td>25 000 €</td></tr>
+            <tr class="subtotal"><td>Prix de revient</td><td><strong>214 000 €</strong></td></tr>
+            <tr><td>Emprunt (90 %)</td><td>180 000 €</td></tr>
+            <tr><td>Apport</td><td>35 900 €</td></tr>
+            <tr><td colspan="2"></td></tr>
+            <tr class="subtotal"><td>Mensualité + assurance</td><td><strong>1 090 €/mois</strong></td></tr>
+            <tr><td colspan="2"></td></tr>
+            <tr><td>Revenu brut</td><td>1 690 €/mois</td></tr>
+            <tr><td>Vacance (5 %)</td><td>−85 €/mois</td></tr>
+            <tr><td>Charges fixes</td><td>−250 €/mois</td></tr>
+            <tr class="subtotal"><td>EBE</td><td><strong>1 356 €/mois</strong></td></tr>
+            <tr><td>Amortissement (3 % bâti)</td><td>−425 €/mois</td></tr>
+            <tr class="subtotal"><td>Résultat fiscal</td><td>931 €/mois</td></tr>
+            <tr><td>IS (15 %)</td><td>−140 €/mois</td></tr>
+            <tr class="total"><td><strong>CF net</strong></td><td><strong style="color:var(--color-green)">+126 €/mois</strong></td></tr>
+            <tr><td>Rendement net / revient</td><td><strong>7,6 %</strong></td></tr>
+            <tr><td>CF Phase 1.1 (3 mois tx)</td><td><strong style="color:var(--color-red)">−960 €/mois</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer 1 820 € — Travaux 20 k€</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Prix d'achat</td><td>175 000 €</td></tr>
+            <tr><td>+ Notaire (8 %)</td><td>14 000 €</td></tr>
+            <tr><td>+ Travaux</td><td>20 000 €</td></tr>
+            <tr class="subtotal"><td>Prix de revient</td><td><strong>209 000 €</strong></td></tr>
+            <tr><td>Emprunt (90 %)</td><td>175 500 €</td></tr>
+            <tr><td>Apport</td><td>35 365 €</td></tr>
+            <tr><td colspan="2"></td></tr>
+            <tr class="subtotal"><td>Mensualité + assurance</td><td><strong>1 063 €/mois</strong></td></tr>
+            <tr><td colspan="2"></td></tr>
+            <tr><td>Revenu brut</td><td>1 820 €/mois</td></tr>
+            <tr><td>Vacance (2 %)</td><td>−36 €/mois</td></tr>
+            <tr><td>Charges fixes</td><td>−250 €/mois</td></tr>
+            <tr class="subtotal"><td>EBE</td><td><strong>1 534 €/mois</strong></td></tr>
+            <tr><td>Amortissement (3 % bâti)</td><td>−414 €/mois</td></tr>
+            <tr class="subtotal"><td>Résultat fiscal</td><td>1 119 €/mois</td></tr>
+            <tr><td>IS (15 %)</td><td>−168 €/mois</td></tr>
+            <tr class="total"><td><strong>CF net</strong></td><td><strong style="color:var(--color-green)">+303 €/mois</strong></td></tr>
+            <tr><td>Rendement net / revient</td><td><strong>8,8 %</strong></td></tr>
+            <tr><td>CF Phase 1.1 (3 mois tx)</td><td><strong style="color:var(--color-red)">−882 €/mois</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 10% — Loyer 1 520 € — Travaux 35 k€</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Prix d'achat</td><td>175 000 €</td></tr>
+            <tr><td>+ Notaire (8 %)</td><td>14 000 €</td></tr>
+            <tr><td>+ Travaux</td><td>35 000 €</td></tr>
+            <tr class="subtotal"><td>Prix de revient</td><td><strong>224 000 €</strong></td></tr>
+            <tr><td>Emprunt (90 %)</td><td>189 000 €</td></tr>
+            <tr><td>Apport</td><td>36 970 €</td></tr>
+            <tr><td colspan="2"></td></tr>
+            <tr class="subtotal"><td>Mensualité + assurance</td><td><strong>1 145 €/mois</strong></td></tr>
+            <tr><td colspan="2"></td></tr>
+            <tr><td>Revenu brut</td><td>1 520 €/mois</td></tr>
+            <tr><td>Vacance (10 %)</td><td>−152 €/mois</td></tr>
+            <tr><td>Charges fixes</td><td>−250 €/mois</td></tr>
+            <tr class="subtotal"><td>EBE</td><td><strong>1 118 €/mois</strong></td></tr>
+            <tr><td>Amortissement (3 % bâti)</td><td>−446 €/mois</td></tr>
+            <tr class="subtotal"><td>Résultat fiscal</td><td>672 €/mois</td></tr>
+            <tr><td>IS (15 %)</td><td>−101 €/mois</td></tr>
+            <tr class="total"><td><strong>CF net</strong></td><td><strong style="color:var(--color-red)">−128 €/mois</strong></td></tr>
+            <tr><td>Rendement net / revient</td><td><strong>6,0 %</strong></td></tr>
+            <tr><td>CF Phase 1.1 (3 mois tx)</td><td><strong style="color:var(--color-red)">−1 071 €/mois</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead><tr><th>Indicateur</th><th>Base</th><th>Optimiste</th><th>Pessimiste</th></tr></thead>
+        <tbody>
+          <tr><td>Prix de revient</td><td>214 000 €</td><td>209 000 €</td><td>224 000 €</td></tr>
+          <tr><td>Apport</td><td>35 900 €</td><td>35 365 €</td><td>36 970 €</td></tr>
+          <tr><td>Mensualité</td><td>1 090 €/mois</td><td>1 063 €/mois</td><td>1 145 €/mois</td></tr>
+          <tr><td>EBE mensuel</td><td>1 356 €</td><td>1 534 €</td><td>1 118 €</td></tr>
+          <tr><td>CF net mensuel</td><td><strong style="color:var(--color-green)">+126 €</strong></td><td><strong style="color:var(--color-green)">+303 €</strong></td><td><strong style="color:var(--color-red)">−128 €</strong></td></tr>
+          <tr><td>Rendement net</td><td>7,6 %</td><td>8,8 %</td><td>6,0 %</td></tr>
+          <tr><td>CF Phase 1.1</td><td>−960 €/mois</td><td>−882 €/mois</td><td>−1 071 €/mois</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Phase 1.1 — Couverture de la vacance initiale</h3>
+    <p>Pendant les 3-4 mois de travaux, seul le studio neuf (RDC) est louable. Les 3 autres lots génèrent zéro revenu.</p>
+    <table class="comparison-table">
+      <thead><tr><th></th><th>Base</th><th>Optimiste</th><th>Pessimiste</th></tr></thead>
+      <tbody>
+        <tr><td>Revenu Phase 1.1</td><td>400 €/mois</td><td>440 €/mois</td><td>360 €/mois</td></tr>
+        <tr><td>Charges + emprunt</td><td>−1 340 €/mois</td><td>−1 313 €/mois</td><td>−1 395 €/mois</td></tr>
+        <tr class="highlight"><td>CF Phase 1.1</td><td><strong style="color:var(--color-red)">−960 €/mois</strong></td><td><strong style="color:var(--color-red)">−882 €/mois</strong></td><td><strong style="color:var(--color-red)">−1 071 €/mois</strong></td></tr>
+        <tr><td>Delta total (4 mois)</td><td><strong>−3 840 €</strong></td><td><strong>−3 528 €</strong></td><td><strong>−4 284 €</strong></td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:0.5rem;">Prévoir <strong>4 000 – 4 500 €</strong> de trésorerie pour couvrir les 4 mois de travaux. Une fois les 4 lots loués en régime de croisière, le CF redevient positif.</p>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead><tr><th>Facteur</th><th>Détail</th><th>Sévérité</th></tr></thead>
+      <tbody>
+        <tr><td>Vacance initiale</td><td>3 lots sur 4 à rénover → 3-4 mois sans revenu sur ces lots. Delta ~4 000 € à provisionner avant le premier loyer. Une fois les travaux terminés, le risque disparaît.</td><td><span class="severity severity-3">3/5</span></td></tr>
+        <tr><td>Petites surfaces (18-22 m²)</td><td>Turnover structurellement plus élevé que des T3. Compensé par une relocation rapide (demande forte sur les petits meublés) et un loyer au m² plus élevé. Délai moyen de relocation estimé à 3-4 semaines.</td><td><span class="severity severity-2">2/5</span></td></tr>
+        <tr><td>Loyer Ollioules à confirmer</td><td>Ollioules n'est pas Toulon centre. Le loyer moyen constaté est de 15-16 €/m², jusqu'à 19 €/m² pour du meublé récent. L'hypothèse Base (18 €/m²) est dans la fourchette haute — valider avec des annonces comparables.</td><td><span class="severity severity-2">2/5</span></td></tr>
+        <tr><td>Structure 1900</td><td>Même si façade, toit et fenêtres sont refaits, une construction 1900 peut cacher des vices (humidité, structure porteuse). L'inspection visuelle lors de la visite est cruciale. Prévoir 2 600 € d'aléas dans le budget travaux.</td><td><span class="severity severity-2">2/5</span></td></tr>
+        <tr><td>TF estimée</td><td>1 000 € basé sur les taux Ollioules et la surface. Une TF à 1 500 € réduirait le CF net de ~40 €/mois. Confirmer avec le dernier avis.</td><td><span class="severity severity-2">2/5</span></td></tr>
+        <tr><td>Surcoût travaux</td><td>20-35 k€ selon l'agent. Le Base case à 25 k€ intègre 10 % d'aléas. Un dérapage à 35 k€ (Worst) reste absorbable : CF −128 € mais rendement net toujours > 6 %. Le gros œuvre déjà fait limite le risque de mauvaise surprise.</td><td><span class="severity severity-2">2/5</span></td></tr>
+        <tr><td>Mono-propriété — charges maîtrisées</td><td>Pas de syndic, pas de charges copro, pas de surprise d'AG. Le propriétaire maîtrise le calendrier d'entretien. Structure de charges légère (3 000 €/an pour 4 lots → 62 €/mois/lot).</td><td><span class="severity severity-1">1/5</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict verdict-negotiate">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>On négocie à 175 000 € — première offre à 157 500 €.</strong></p>
+      <p>Le dossier est structurellement bon : mono-propriété, gros œuvre déjà fait, DPE D, 4 lots, centre-ville. Le CF net de +126 €/mois en Base Case est confortable, et le rendement net de 7,6 % est excellent dans le contexte actuel. Le Worst Case à −128 € est le seul scénario négatif — il se matérialise si les loyers sont 10 % sous nos estimations ET que les travaux dérapent à 35 k€. Même dans ce cas, le rendement net reste à 6 %, ce qui protège la valeur de l'actif.</p>
+      <p>Le point de vigilance principal est la vacance initiale : 4 000 € de trésorerie à mobiliser pendant les travaux. Une fois le bien stabilisé, le CF devient positif et le rendement est parmi les meilleurs du portefeuille actuel.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Offre recommandée : 157 500 €</strong> (−16 % vs affiché, −10 % vs cible 175 k€)</p>
+      <p><strong>Prix plafond : 175 000 €</strong> — au-delà, le CF Base tombe sous 50 €/mois et le Worst Case devient structurellement négatif</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Travaux intérieurs à prévoir (20-35 k€) — le vendeur a fait le gros œuvre mais pas la finition</li>
+        <li>Bien vide → aucun revenu pendant 3-4 mois de rénovation (4 000 € de manque à gagner)</li>
+        <li>DPE D correct mais pas exceptionnel — les studios sont petits et chauffent vite, argument à utiliser</li>
+        <li>1900 = risques structurels potentiels que l'acheteur assume</li>
+        <li>Surface modeste (94 m² pour 4 lots) → studios compacts, turnover plus élevé qu'un T3/T4</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal :</strong> SCI à l'IS (15 %) — amortissement bâti + composants + meubles</p>
+      <p><strong>Frais de notaire :</strong> 14 000 € (8 % du prix d'achat)</p>
+      <p><strong>Travaux :</strong> 25 000 € (intérieur — 3 studios/T2)</p>
+      <p><strong>Apport :</strong> 35 900 €</p>
+      <p><strong>Trésorerie démarrage :</strong> ~4 000 € supplémentaires pour couvrir la Phase 1.1</p>
+      <p><strong>CF net stabilisé :</strong> +126 €/mois (Base)</p>
+      <p><strong>Potentiel value-add :</strong> Prix de revient 214 k€ pour une valeur marché après travaux ~230 k€ → PV latente immédiate de ~16 k€</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles</p>';
+      return;
+    }
+    var map = L.map('map-container').setView([lat, lon], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
