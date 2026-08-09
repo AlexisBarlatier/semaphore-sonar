@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Centre Vieille Ville, Brignoles (83170)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Centre Vieille Ville, Brignoles (83170)</p>
+  <p class="report-date">Analyse générée le 9 août 2026</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonces/achat/appartement/brignoles-83/centre-vieille-ville/26GAKUBNVE7T.htm">🔗 Annonce SeLoger — 26GAKUBNVE7T</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner"><strong>Stratégie retenue :</strong> Location nue longue durée — SCI IS Barlatier <span class="op-type">Investissement locatif</span></div>
+
+  <!-- === Cartes de synthèse === -->
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix de vente</span><span class="card-value">67 000 €</span></div>
+    <div class="card"><span class="card-label">Surface</span><span class="card-value">28 m²</span></div>
+    <div class="card"><span class="card-label">Prix / m²</span><span class="card-value">2 393 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient</span><span class="card-value">72 360 €</span></div>
+    <div class="card"><span class="card-label">Loyer actuel</span><span class="card-value">590 €/mois</span></div>
+    <div class="card"><span class="card-label">Rendement brut</span><span class="card-value">10,6 %</span></div>
+    <div class="card"><span class="card-label">Rentabilité nette</span><span class="card-value">9,0 % / 8,3 %</span></div>
+    <div class="card card-verdict note-high"><span class="card-label">Note</span><span class="card-value">7,8/10</span></div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.4047" data-lon="6.0618" data-address="Centre Vieille Ville, Brignoles (83170)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Le Centre Vieille Ville de Brignoles est le cœur historique de la capitale de la Provence Verte (17 846 habitants). Ruelle calme dans un secteur piétonnier commerçant, à 5 minutes de la place Caramy et du marché provençal. La commune bénéficie d'un accès autoroutier (A8) et d'une gare SNCF sur la ligne Marseille-Nice. Le quartier a été rénové et bénéficie d'une image en amélioration. Taux de vacance communal de 14,2 % — élevé mais le centre-ville rénové absorbe mieux que la périphérie.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-5" style="width:50%"></div></div>
+        <span class="attr-score"><strong>5/10</strong> — Gare SNCF à 1,5 km, A8 à 5 km. Bus Zou! régionaux. Pas de transport urbain lourd.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-7" style="width:70%"></div></div>
+        <span class="attr-score"><strong>7/10</strong> — Centre-ville commerçant, marché provençal, supermarchés à moins de 2 km. Restaurants, cafés.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-6" style="width:60%"></div></div>
+        <span class="attr-score"><strong>6/10</strong> — 23 établissements scolaires sur la commune. Collèges et lycées à Brignoles.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-6" style="width:60%"></div></div>
+        <span class="attr-score"><strong>6/10</strong> — Brignoles notée 4,7/10 en sécurité globale. Le centre-ville rénové est plus sûr que les QPV périphériques.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-6" style="width:60%"></div></div>
+        <span class="attr-score"><strong>6/10</strong> — Marché modéré. Le T2 rénové à 590 € dans le centre trouve preneur. 47 % de locataires sur la commune.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-4" style="width:40%"></div></div>
+        <span class="attr-score"><strong>4/10</strong> — Chômage 19,8 %, revenu médian 24 800 €. Économie résidentielle, peu de grands employeurs.</span>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeune actif ou couple sans enfant, budget 550-600 €/mois, recherchant un logement rénové proche des commodités du centre-ville. La petite surface (28 m²) cible naturellement une personne seule.</p>
+      <p><strong>Conclusion :</strong> Le centre-ville rénové est le meilleur emplacement locatif de Brignoles. La demande pour un T2 propre à 590 € est réelle mais le bassin de locataires solvables est limité par la démographie locale. Le turn-over sera plus élevé que sur une grande surface.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Le bien est déjà loué 590 €/mois avec un bail en cours. Aucune stratégie alternative ne se justifie vu la petite surface et le marché local.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Loyer</th>
+          <th>Rendement net</th>
+          <th>Travaux</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-selected">
+          <td><strong>Location nue — SCI IS</strong><br><span class="strategy-desc">Maintien du bail en cours, relocation au même loyer</span></td>
+          <td>590 €</td>
+          <td>8,3 %</td>
+          <td>Aucun</td>
+          <td><span class="badge-faisabilite faisabilite-haute">Haute</span></td>
+          <td><span class="badge-risque risque-faible">Faible</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-high" style="width:80%"></span></span><span class="adeq-score">8,0/10</span></span></td>
+        </tr>
+        <tr>
+          <td><span class="strategy-name">LMNP meublé</span><br><span class="strategy-desc">Meubler (+2 000 €), loyer majoré ~620 €</span></td>
+          <td>620 €</td>
+          <td>8,9 %</td>
+          <td>2 000 €</td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Moyenne</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:60%"></span></span><span class="adeq-score">6,5/10</span></span></td>
+        </tr>
+        <tr>
+          <td><span class="strategy-name">Revente spéculative</span><br><span class="strategy-desc">Revente immédiate après achat avec décote</span></td>
+          <td>—</td>
+          <td>—</td>
+          <td>Aucun</td>
+          <td><span class="badge-faisabilite faisabilite-basse">Basse</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-low" style="width:20%"></span></span><span class="adeq-score">3,0/10</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Justification :</strong> Le bien est opérationnel, loué, rénové. La stratégie SCI IS en conservation est la seule qui a du sens : zéro vacance au départ, pas de travaux, rendement immédiat. Le LMNP meublé apporte 30 €/mois de plus mais ajoute du travail (meubles, turnover plus rapide) et sort du cadre SCI. La revente à la découpe n'a pas de sens sur un T2 unique.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Centre Vieille Ville, Brignoles (83170)</td></tr>
+        <tr><th>Type de bien</th><td>Appartement T2 — 28 m²</td></tr>
+        <tr><th>Prix négocié</th><td>67 000 € (annonce : 75 000 €)</td></tr>
+        <tr><th>Prix / m²</th><td>2 393 €/m²</td></tr>
+        <tr><th>Étage</th><td>2ᵉ / 3 — sans ascenseur</td></tr>
+        <tr><th>Année / État</th><td>Rénové entièrement en 2022</td></tr>
+        <tr><th>DPE / GES</th><td>D / B</td></tr>
+        <tr><th>Chauffage</th><td>Électrique individuel</td></tr>
+        <tr><th>Annexes</th><td>Cave</td></tr>
+        <tr><th>Occupation</th><td>Loué 590 €/mois — bail en cours</td></tr>
+        <tr><th>Permis de louer</th><td>✓ Obtenu</td></tr>
+        <tr><th>Fibre</th><td>✓</td></tr>
+        <tr><th>Vendeur</th><td>Particulier — Pierre</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — SCI IS Barlatier</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer 590 € — Charges standard</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>7 080 €</td></tr>
+            <tr><td>Vacance (2 %)</td><td>−142 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−450 €</td></tr>
+            <tr><td>Charges copropriété</td><td>−350 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−100 €</td></tr>
+            <tr><td>EBE</td><td>6 038 €</td></tr>
+            <tr><td>Amortissement bâti (85% × 67k / 30a)</td><td>−1 898 €</td></tr>
+            <tr><td>Amortissement notaire (5 360 / 20a)</td><td>−268 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>3 872 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−581 €</td></tr>
+            <tr class="highlight-row"><td>Cash flow net</td><td>5 457 €/an</td></tr>
+            <tr class="highlight-row"><td>CF / mois</td><td>+455 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 0% — Loyer 590 € — Charges -10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>7 080 €</td></tr>
+            <tr><td>Vacance (0 %)</td><td>0 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−405 €</td></tr>
+            <tr><td>Charges copropriété</td><td>−315 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−90 €</td></tr>
+            <tr><td>EBE</td><td>6 270 €</td></tr>
+            <tr><td>Amortissement</td><td>−2 166 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>4 104 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−616 €</td></tr>
+            <tr class="highlight-row"><td>Cash flow net</td><td>5 654 €/an</td></tr>
+            <tr class="highlight-row"><td>CF / mois</td><td>+471 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 3 mois — Loyer 530 € — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>5 565 €</td></tr>
+            <tr><td>Vacance (3 mois)</td><td>−1 590 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−450 €</td></tr>
+            <tr><td>Charges copropriété</td><td>−420 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−120 €</td></tr>
+            <tr><td>Provision travaux copro</td><td>−500 €</td></tr>
+            <tr><td>EBE</td><td>2 485 €</td></tr>
+            <tr><td>Amortissement</td><td>−2 166 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>319 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−48 €</td></tr>
+            <tr class="highlight-row"><td>Cash flow net</td><td>2 437 €/an</td></tr>
+            <tr class="highlight-row"><td>CF / mois</td><td>+203 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse — Emprunt 60 300 € / 20 ans / 3,45 %</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Loyer mensuel</td><td>590 €</td><td>590 €</td><td>464 €</td></tr>
+          <tr><td>EBE mensuel</td><td>503 €</td><td>523 €</td><td>207 €</td></tr>
+          <tr><td>Mensualité crédit + ass.</td><td>−365 €</td><td>−365 €</td><td>−365 €</td></tr>
+          <tr><td>IS mensuel</td><td>−48 €</td><td>−51 €</td><td>−4 €</td></tr>
+          <tr><td><strong>CF net mensuel</strong></td><td><strong>+90 €</strong></td><td><strong>+106 €</strong></td><td><strong>−162 €</strong></td></tr>
+          <tr><td>Rendement net (EBE/prix)</td><td>9,0 %</td><td>9,4 %</td><td>3,7 %</td></tr>
+          <tr><td>ROI (CF net/apport 13k)</td><td>8,3 %</td><td>9,8 %</td><td>−15,0 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Petite surface</td>
+          <td>28 m² = turn-over naturellement plus élevé. Le locataire change tous les 2-3 ans en moyenne. La vacance de 2% du Base Case est optimiste sans votre track record.</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+        <tr>
+          <td>DPE D</td>
+          <td>Pas d'urgence (interdiction en 2034) mais 5 000 € de travaux à provisionner pour monter en C (PAC air-air).</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>Étage sans ascenseur</td>
+          <td>2ᵉ étage non PMR. Exclut seniors et personnes à mobilité réduite. Limite le bassin locatif.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>Marché brignolais modeste</td>
+          <td>Chômage 19,8 %, revenu médian bas. La solvabilité des locataires est structurellement limitée. Pas de tension locative forte.</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+        <tr>
+          <td>Liquidité de revente</td>
+          <td>Un T2 de 28 m² à Brignoles n'est pas un actif très liquide. Délai de revente probable : 6-12 mois.</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+        <tr>
+          <td>Rénovation 2022</td>
+          <td>Rénovation récente = risque limité de vices cachés. Mais vérifier les factures et garanties décennales.</td>
+          <td class="severity severity-1">1/5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict acheter">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>On achète à 67 000 €.</strong> À ce prix, le rendement brut de 10,6 % et le CF net de +90 €/mois en SCI IS sont solides. Le bien est opérationnel immédiatement (loué, rénové, permis de louer) et le risque principal (DPE D) est gérable avec une provision de 5 000 € lissée sur 8 ans. La petite surface est compensée par un prix d'entrée bas et un emplacement centre-ville qui facilite la relocation.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix proposé :</strong> 67 000 € net vendeur</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Prix au m² (2 393 €) au-dessus du marché ancien non rénové de Brignoles (~2 100 €) — argumenter que la rénovation de 2022 ne justifie pas la prime complète</li>
+        <li>Petite surface = décote naturelle, turn-over plus élevé</li>
+        <li>DPE D = provision travaux énergétiques à horizon 2034 à la charge de l'acquéreur</li>
+        <li>Marché brignolais modeste : le vendeur particulier n'a pas une file d'acheteurs</li>
+        <li>Bail en cours = contrainte pour un acheteur occupant, atout pour un investisseur (vous)</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices)</p>
+      <p><strong>Financement :</strong> Emprunt 60 300 € sur 20 ans à 3,45 % — Mensualité 365 €/mois</p>
+      <p><strong>Apport nécessaire :</strong> ~13 000 €</p>
+      <p><strong>Provision DPE D→C :</strong> 5 000 € (PAC air-air + isolation combles) à horizon 2034</p>
+      <p class="verdict-disclaimer">⚠️ Estimation taxe foncière basée sur les moyennes du secteur (450 €). À vérifier avec l'avis TF réel du vendeur.</p>
+    </div>
+  </section>
+
+  <!-- === Variante 15 ans === -->
+  <section class="variant-section">
+    <h2>Variante — Financement sur 15 ans</h2>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Indicateur</th>
+          <th>20 ans</th>
+          <th>15 ans</th>
+          <th>Écart</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Mensualité crédit + ass.</td><td>365 €</td><td>447 €</td><td>+82 €</td></tr>
+        <tr><td>CF net mensuel (Base)</td><td>+90 €</td><td>+8 €</td><td>−82 €</td></tr>
+        <tr><td>CF net (ans 16-20, sans crédit)</td><td>+90 €</td><td>+455 €</td><td>+365 €</td></tr>
+        <tr><td>Intérêts totaux</td><td>23 260 €</td><td>17 027 €</td><td>−6 233 €</td></tr>
+        <tr><td>CF cumulé 20 ans</td><td>21 449 €</td><td>28 708 €</td><td>+7 259 €</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Avis :</strong> Le 15 ans maximise le cumulé sur 20 ans (+7 300 €) mais le CF mensuel tombe à +8 € — trop précaire. Avec 90 € de CF sur 20 ans, le bien respire en cas de pépin. Le jeu n'en vaut pas la chandelle sur un ticket de 67k.</p>
+  </section>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
