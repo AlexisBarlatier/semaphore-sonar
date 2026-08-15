@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Place de parking extérieure, La Garde (Le Village)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Place de stationnement privative extérieure — résidence neuve sécurisée, quartier Le Village, La Garde (83130)</p>
+  <p class="report-date">Analyse générée le 15 août 2026 — charges copro, TF et nombre de lots disponibles à confirmer par l'agence</p>
+  <p class="report-source">Source : LeBonCoin — Agence Delta Immobilier (réf. dionysos)</p>
+  <div class="report-source-link"><a href="https://www.leboncoin.fr/ad/ventes_immobilieres/3250049358">https://www.leboncoin.fr/ad/ventes_immobilieres/3250049358</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Placement parking</span>
+    <p>Stratégie retenue : <strong>Location longue durée + compte courant d'associé (test pipeline)</strong> — SCI à l'IS (15 %)</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">5 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">n.c.</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">—</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">5 400 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">5 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">60 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">6,7 % / 7,3 %</span>
+    </div>
+    <div class="card card-verdict note-7-2">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,2/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1247" data-lon="6.0106" data-address="Quartier Le Village, La Garde (83130)"></div>
+  </section>
+
+  <!-- === Attractivité === -->
+  <section class="attractiveness">
+    <h2>Attractivité — Zone résidentielle La Garde (Le Village)</h2>
+    <p class="attractiveness-intro">La Garde (25 000 hab.) fait partie de l'agglomération toulonnaise, à 5 km de Toulon. Le quartier Le Village est le centre ancien et commerçant, à proximité duquel se trouve la résidence neuve sécurisée. La demande locative de places est attestée : 26 annonces de location de parkings sur Le Figaro Immo pour la commune, loyers constatés à 60 €/mois (FNAIM, Bien'Ici). L'adresse exacte de la résidence n'est pas communiquée dans l'annonce.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Tension stationnement</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Centre ancien dense, stationnement contraint, résidence neuve souvent sous-équipée en places. La demande dépasse l'offre privée.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Densité résidentielle</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Habitat collectif dominant, population active pendulaire vers Toulon, campus universitaire à proximité immédiate.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Accessibilité</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">RN97 et A57 à 5-10 minutes, transports en commun vers Toulon, axe fortement fréquenté.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Résidence neuve fermée et sécurisée (annonce) — argument réel pour le locataire. À confirmer sur place.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Protection</span>
+          <span class="attr-score"><strong>0/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:0%"></div></div>
+        <p class="attr-detail">Place extérieure à ciel ouvert (confirmé) — aucune protection contre intempéries et dégradations. Ce point borne le loyer et exclut tout amortissement.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+          <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Loyer de marché constaté 60 €/mois (FNAIM, Bien'Ici — deux annonces concordantes), fourchette 50-70 €. Demande portée par les résidents sans place et les riverains.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Résident de la copropriété sans place, riverain du quartier Le Village, actif pendulaire vers Toulon</p>
+      <p><strong>Conclusion :</strong> Zone de centre-ville dense avec demande réelle de stationnement privé. Point faible structurel : place extérieure non protégée, non amortissable — actif de rendement pur au ticket minimal, pertinent comme support de test du montage compte courant.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Place unique, extérieure, achetée 40 % sous les comparables locaux (7 950-9 000 €) — le prix n'est pas l'objet : c'est un ticket de validation du pipeline compte courant.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Location longue durée + compte courant associé</strong></td>
+          <td>1</td>
+          <td>6,7 % (base) / 9,1 % (optimiste)</td>
+          <td>5 000 €</td>
+          <td><span class="ratio-badge ratio-mauvais">1,08</span></td>
+          <td><span class="badge-faisabilite faisabilite-haute">Immédiate</span></td>
+          <td><span class="badge-risque risque-faible">Faible</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:57%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Revente à l'unité</td>
+          <td>1</td>
+          <td>ROI ~0 % (pas de plus-value)</td>
+          <td>5 000 €</td>
+          <td><span class="ratio-badge ratio-mauvais">1,08</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Possible</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:57%"></div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location longue durée est retenue : seule stratégie pertinente pour une place extérieure. L'intérêt réel du dossier n'est pas le rendement (honorable : 6,7 % net base avec une vacance binaire conservatrice de 10 %) mais son rôle d'<strong>achat-test du montage compte courant</strong> : avance des associés de 5 400 € à 4 %, déduction des intérêts, extraction du flux à 30 % (PFU) au lieu de 40,5 %, déploiement du surplus SCI dormant à 1,5 %. Le ticket minimal (5 400 € tout compris) et l'intégration dans une SCI existante (comptable et PNO mutualisés) rendent le risque de l'opération quasi nul : même place vide, le portage est de ~18 €/mois.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Résidence neuve sécurisée, quartier Le Village, La Garde (83130) — adresse exacte non communiquée dans l'annonce</td></tr>
+        <tr><th>Type</th><td>Place de stationnement extérieure (non couverte) — confirmée</td></tr>
+        <tr><th>Surface</th><td>Non communiquée dans l'annonce</td></tr>
+        <tr><th>Prix</th><td>5 000 € honoraires d'agence inclus (à charge vendeur)</td></tr>
+        <tr><th>Sécurisation</th><td>Résidence fermée et sécurisée (annonce) — portail et éclairage à confirmer sur place</td></tr>
+        <tr><th>Charges copro</th><td>À confirmer — estimées 120 €/an (10 €/mois) pour une place extérieure en résidence sécurisée</td></tr>
+        <tr><th>Taxe foncière</th><td>À confirmer — estimée 40 €/an (stationnement, taux léger)</td></tr>
+        <tr><th>DPE</th><td>Non applicable (stationnement)</td></tr>
+        <tr><th>Vendeur</th><td>Agence Delta Immobilier (professionnel) — référence dionysos</td></tr>
+        <tr><th>Régime juridique</th><td>Copropriété (lot de stationnement) — lot distinct à confirmer pour la liquidité de sortie</td></tr>
+        <tr><th>Disponibilité</th><td>Plusieurs lots disponibles dans la résidence — concurrence locative à évaluer (nombre à confirmer)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 10 % — Loyer 60 €/mois — Charges estimées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">720 €</td></tr>
+            <tr><td>Vacance locative (10 %)</td><td class="num">−72 €</td></tr>
+            <tr class="secondary"><td>Charges (copro 120 € + TF 40 € + PNO 60 € — estimées)</td><td class="num">−220 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">428 €</td></tr>
+            <tr><td>Amortissement (extérieur non-bâti)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">428 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−64 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">364 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">30 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">30 €</td></tr>
+            <tr><td>Rendement net (revient / marché)</td><td class="num">6,7 % / 7,3 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 5 % — Loyer 66 €/mois (+10 %) — Charges −20 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">792 €</td></tr>
+            <tr><td>Vacance locative (5 %)</td><td class="num">−40 €</td></tr>
+            <tr class="secondary"><td>Charges (copro 96 € + TF 32 € + PNO 48 €)</td><td class="num">−176 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">576 €</td></tr>
+            <tr><td>Amortissement (extérieur non-bâti)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">576 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−86 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">490 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">41 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">41 €</td></tr>
+            <tr><td>Rendement net (revient / marché)</td><td class="num">9,1 % / 9,8 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 25 % — Loyer 48 €/mois (−20 %) — Charges +30 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">576 €</td></tr>
+            <tr><td>Vacance locative (25 %)</td><td class="num">−144 €</td></tr>
+            <tr class="secondary"><td>Charges (copro 156 € + TF 52 € + PNO 78 €)</td><td class="num">−286 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">146 €</td></tr>
+            <tr><td>Amortissement (extérieur non-bâti)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">146 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−22 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">124 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">10 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">10 €</td></tr>
+            <tr><td>Rendement net (revient / marché)</td><td class="num">2,3 % / 2,5 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>EBE avant IS</td><td class="num">428 €</td><td class="num">576 €</td><td class="num">146 €</td></tr>
+          <tr><td>CF net mensuel</td><td class="num">30 €</td><td class="num">41 €</td><td class="num">10 €</td></tr>
+          <tr><td>CF amort. réintégré / mois</td><td class="num">30 €</td><td class="num">41 €</td><td class="num">10 €</td></tr>
+          <tr><td>Rendement net (revient)</td><td class="num">6,7 %</td><td class="num">9,1 %</td><td class="num">2,3 %</td></tr>
+          <tr><td>Rendement net (marché)</td><td class="num">7,3 %</td><td class="num">9,8 %</td><td class="num">2,5 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- === Montage compte courant === -->
+    <div class="projection-summary">
+      <h3>Montage compte courant d'associé — le test</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Paramètre</th>
+            <th>Valeur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Avance des associés (prix + notaire)</td><td class="num">5 400 €</td></tr>
+          <tr><td>Intérêts versés (4 % — taux fixé dans la convention)</td><td class="num">216 €/an</td></tr>
+          <tr><td>Base imposable SCI</td><td class="num">surplus existant + 212 €</td></tr>
+          <tr><td>Flux SCI net après IS (212 € × 0,85)</td><td class="num">180 €/an</td></tr>
+          <tr><td>Intérêts nets associés (PFU 30 %)</td><td class="num">151 €/an</td></tr>
+          <tr><td>Flux total du montage</td><td class="num">331 €/an → 6,1 % sur l'avance</td></tr>
+        </tbody>
+      </table>
+      <p class="attractiveness-intro"><strong>Lecture :</strong> support extérieur non amortissable → EBE (428 €) &gt; intérêts (216 €), la base imposable augmente de 212 €. Ce n'est pas un échec : le gain du montage est l'<strong>extraction à 30 %</strong> (PFU) au lieu de 40,5 % (IS + PFU sur dividende), le <strong>déploiement du surplus dormant</strong> (1,5 % → 6,1 %) et la conservation de l'actif + de la créance dans la SCI. L'objectif de cet achat est de <strong>valider le pipeline complet</strong> : convention de compte courant, paiement des intérêts, déduction IS, PFU perso — avant de déployer le mécanisme sur des lots plus importants. Seul un support amortissable (sous-sol) ferait réellement baisser la base (amortissement + intérêts &gt; EBE).</p>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Charges copro non confirmées</td>
+          <td>Résidence sécurisée : portail, éclairage, entretien peuvent peser. Estimées 120 €/an (10 €/mois). Si elles dépassaient 240 €/an (20 €/mois), le rendement base passerait sous le seuil de 6,5 %. À confirmer par écrit lundi.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance binaire</td>
+          <td>Place extérieure en rotation locative : 10 % minimum structurel. Un parking vide peut le rester 6 mois. Portage en vacance totale : ~18 €/mois — dérisoire à ce ticket.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Loyer de marché estimé</td>
+          <td>60 €/mois constaté sur deux annonces locales concordantes (FNAIM, Bien'Ici — place extérieure). Fourchette 50-70 €. Pas de bail en place : le loyer réel se confirmera à la relocation.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Concurrence locative — plusieurs lots disponibles</td>
+          <td>L'annonce indique « plusieurs lots disponibles » dans la même résidence : d'autres investisseurs peuvent louer en parallèle. Demander le nombre exact de places restant à la vente. Au-delà de 8-10, la vacance Worst devient crédible.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Place extérieure non amortissable</td>
+          <td>Non-bâti : aucun amortissement en SCI IS — aucun levier fiscal structurel sur ce support. Le montage compte courant ne réduit pas la base (EBE &gt; intérêts).</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Liquidité de revente</td>
+          <td>Ticket minime et marché étroit : la revente à l'unité prendra du temps, sans plus-value attendue après frais. À confirmer : lot de copropriété distinct.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict buy">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À acheter au prix de 5 000 € — c'est le ticket idéal pour valider le pipeline du compte courant d'associé. Prix 40 % sous les comparables locaux (7 950-9 000 € à La Garde), rendement net base de 6,7 % (7,3 % sur valeur marché) au-dessus du seuil parking de 6,5 % avec une vacance binaire conservatrice de 10 %, et portage quasi nul en cas de vacance totale (~18 €/mois). Le montage compte courant (avance 5 400 € à 4 %, intérêts déductibles, extraction du flux à 30 %) déploie le surplus SCI dormant et valide la mécanique convention/déduction/PFU avant le déploiement à l'échelle. Pour un achat-test, le prix n'est pas le critère : l'actif est dans le marché, on ne bloque pas le test pour 500 €.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 5 000 € (contre-offre à 4 500 € uniquement si le loyer ne se confirme pas à 60 €/mois)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Confirmation lundi : charges copro réelles, TF, nombre de lots disponibles — si charges &gt; 20 €/mois ou &gt; 10 places en vente, renégocier à 4 500 €</li>
+        <li>Vérifier que le lot est distinct (liquidité de sortie unitaire)</li>
+        <li>Si achat de plusieurs lots en bloc : exiger une décote volume</li>
+        <li>Adresse exacte de la résidence : vérifier sur place avant offre</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices) — comptable et PNO mutualisés (SCI existante, 13 parkings), pas d'amortissement (place extérieure non-bâti)</p>
+      <p><strong>Estimation frais de notaire :</strong> 400 € (8 % — achat dans l'ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 0 € (résidence neuve, état bon)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
