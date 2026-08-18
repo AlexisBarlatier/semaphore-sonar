@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Centre Ville-Peyron, La Seyne-sur-Mer (83500)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Studio 19 m² — Centre Ville-Peyron, La Seyne-sur-Mer (83500)</p>
+  <p class="report-date">Analyse générée le 18 août 2026</p>
+  <p class="report-source">Source : SeLoger — SAFTI, Sylvain Daumas (EI)</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonces/achat/appartement/la-seyne-sur-mer-83/centre-ville-peyron/274528899.htm">🔗 Annonce SeLoger — 274528899</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner"><strong>Stratégie retenue :</strong> Location nue longue durée (variante meublée possible) — SCI à l'IS <span class="op-type">Investissement locatif</span></div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix d'achat</span><span class="card-value">32 000 € FAI</span></div>
+    <div class="card"><span class="card-label">Surface</span><span class="card-value">19 m²</span></div>
+    <div class="card"><span class="card-label">Prix / m²</span><span class="card-value">1 684 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient</span><span class="card-value">49 320 €</span></div>
+    <div class="card"><span class="card-label">Valeur marché</span><span class="card-value">48 000 €</span></div>
+    <div class="card"><span class="card-label">Revenus bruts</span><span class="card-value">420 €/mois</span></div>
+    <div class="card"><span class="card-label">Rentabilité</span><span class="card-value">7,3 % / 7,5 %</span></div>
+    <div class="card card-verdict note-7-8"><span class="card-label">Note</span><span class="card-value">7,8/10</span></div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1037" data-lon="5.8790" data-address="Centre Ville-Peyron, La Seyne-sur-Mer (83500)"></div>
+  </section>
+
+  <!-- === Attractivité du quartier === -->
+  <section class="attractiveness">
+    <h2>Attractivité du quartier</h2>
+    <p class="attractiveness-intro">Le quartier Centre Ville-Peyron est le cœur ancien de La Seyne-sur-Mer (65 000 habitants, 2ᵉ ville du Var), à 500 m du port et du terminus du TCSP (métro léger) qui relie Toulon en ~20 minutes. Secteur résidentiel calme, commerces de proximité, marché, écoles. Le quartier profite de la dynamique de requalification du front de mer et de la montée en gamme progressive du centre-ville.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-8" style="width:80%"></div></div>
+        <span class="attr-score"><strong>8/10</strong> — Terminus du TCSP (métro léger Toulon-La Seyne) à ~500 m, bus urbains, navettes maritimes vers Toulon. A50 à 5 min.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-8" style="width:80%"></div></div>
+        <span class="attr-score"><strong>8/10</strong> — Centre-ville commerçant dense : alimentaire, marchés, banques, poste, restaurants. Toutes commodités à pied.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-7" style="width:70%"></div></div>
+        <span class="attr-score"><strong>7/10</strong> — Écoles maternelles et primaires à proximité immédiate, collèges et lycées sur la commune, enseignement supérieur sur Toulon.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-6" style="width:60%"></div></div>
+        <span class="attr-score"><strong>6/10</strong> — Quartier résidentiel calme, ruelles partiellement piétonnes. Secteur port en requalification — ambiance en amélioration.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-8" style="width:80%"></div></div>
+        <span class="attr-score"><strong>8/10</strong> — Tension réelle sur les petites surfaces : studios et T2 se louent vite, portés par les actifs du bassin toulonnais et les navetteurs du TCSP. ~55 % de locataires.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-7" style="width:70%"></div></div>
+        <span class="attr-score"><strong>7/10</strong> — Bassin d'emploi Toulon-La Seyne (chantiers navals, défense, tertiaire, tourisme). Front de mer en cours de valorisation.</span>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Jeune actif ou étudiant célibataire, budget 400-480 €/mois, mobilité métro/TCSP, recherchant un logement rénové près des commerces. La petite surface cible naturellement une personne seule.</p>
+      <p><strong>Conclusion :</strong> Le centre de La Seyne est un des marchés locatifs les plus dynamiques du Var sur les petites surfaces, porté par la métropole toulonnaise. Le quartier Peyron, résidentiel et calme, est bien positionné : demande réelle, relocation rapide. Le turn-over sur un studio restera plus élevé que sur un T3.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Loyer</th>
+          <th>Rendement net</th>
+          <th>Travaux</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-selected">
+          <td><strong>Location nue — SCI IS</strong><br><span class="strategy-desc">Rénovation complète puis relocation à prix marché</span></td>
+          <td>420 €</td>
+          <td>7,3 %</td>
+          <td>15 k€</td>
+          <td><span class="badge-faisabilite faisabilite-haute">Haute</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-high" style="width:75%"></span></span><span class="adeq-score">7,5/10</span></span></td>
+        </tr>
+        <tr>
+          <td><span class="strategy-name">Location meublée</span><br><span class="strategy-desc">Meubler (+2 k€), loyer majoré ~480 €</span></td>
+          <td>480 €</td>
+          <td>9,9 %</td>
+          <td>15 + 2 k€</td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Moyenne</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:70%"></span></span><span class="adeq-score">7,0/10</span></span></td>
+        </tr>
+        <tr>
+          <td><span class="strategy-name">Marchand de biens</span><br><span class="strategy-desc">Rénover puis revendre immédiatement</span></td>
+          <td>—</td>
+          <td>≈ −3 %</td>
+          <td>15-20 k€</td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Moyenne</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:50%"></span></span><span class="adeq-score">5,0/10</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Justification :</strong> La location nue en SCI IS est retenue : cash flow positif dès l'exploitation (+43 €/mois en Base après service de la dette), amortissement bâti maximal (85 % sur 30 ans), intégration directe dans la SCI existante (comptable mutualisé). La variante meublée (+60 €/mois de loyer) suppose 2 k€ de meubles et un turn-over plus rapide — intéressante en seconde phase. Le MDB est éliminé : coût de revient (49,3 k€) ≈ valeur rénovée (48 k€) — marge nulle avant même la TVA sur marge, ratio coût/valeur 1,03 (équilibre).</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Centre Ville-Peyron, La Seyne-sur-Mer (83500) — adresse exacte non communiquée</td></tr>
+        <tr><th>Type de bien</th><td>Studio — 19 m² (loi Carrez)</td></tr>
+        <tr><th>Prix</th><td>32 000 € FAI — 29 000 € net vendeur + 3 000 € honoraires acquéreur (10,34 %)</td></tr>
+        <tr><th>Prix / m²</th><td>1 684 €/m² (FAI)</td></tr>
+        <tr><th>Étage</th><td>1ᵉʳ / 3 — sans ascenseur</td></tr>
+        <tr><th>Année / État</th><td>1920 — à rénover entièrement (« page blanche »)</td></tr>
+        <tr><th>DPE / GES</th><td>Non communiqué — à exiger avant toute offre</td></tr>
+        <tr><th>Exposition</th><td>Sud</td></tr>
+        <tr><th>Chauffage</th><td>Non précisé — électrique à créer (rénovation)</td></tr>
+        <tr><th>Charges copro</th><td>250 €/an — copropriété 6 lots, pas de procédure en cours</td></tr>
+        <tr><th>Vendeur</th><td>SAFTI — Sylvain Daumas (EI), RSAC Toulon</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer 420 € — Charges annoncées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>5 040 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td>−252 €</td></tr>
+            <tr><td>Taxe foncière (estimée)</td><td>−400 €</td></tr>
+            <tr><td>Charges copropriété</td><td>−250 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−180 €</td></tr>
+            <tr><td>EBE</td><td>3 958 €</td></tr>
+            <tr><td>Amortissement bâti (85 % × 49 320 / 30 ans)</td><td>−1 397 €</td></tr>
+            <tr><td>Amortissement notaire (2 320 / 20 ans)</td><td>−116 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>2 445 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−367 €</td></tr>
+            <tr><td>Cash flow net</td><td>3 591 €/an</td></tr>
+            <tr><td>CF / mois</td><td>+299 €</td></tr>
+            <tr><td>CF amort. réintégré</td><td>+425 €/mois</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 2% — Loyer 480 € (meublé) — Charges −10%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>5 760 €</td></tr>
+            <tr><td>Vacance (2 %)</td><td>−115 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−360 €</td></tr>
+            <tr><td>Charges copropriété</td><td>−225 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−162 €</td></tr>
+            <tr><td>EBE</td><td>4 898 €</td></tr>
+            <tr><td>Amortissement (revient 44 320 €)</td><td>−1 372 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>3 526 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−529 €</td></tr>
+            <tr><td>Cash flow net</td><td>4 369 €/an</td></tr>
+            <tr><td>CF / mois</td><td>+364 €</td></tr>
+            <tr><td>CF amort. réintégré</td><td>+478 €/mois</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 12% — Loyer 360 € — Charges +20%</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel brut</td><td>4 320 €</td></tr>
+            <tr><td>Vacance (12 %)</td><td>−518 €</td></tr>
+            <tr><td>Taxe foncière</td><td>−480 €</td></tr>
+            <tr><td>Charges copropriété</td><td>−300 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−216 €</td></tr>
+            <tr><td>Provision travaux imprévus (1920)</td><td>−1 000 €</td></tr>
+            <tr><td>EBE</td><td>1 806 €</td></tr>
+            <tr><td>Amortissement (revient 54 320 €)</td><td>−1 655 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>151 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−23 €</td></tr>
+            <tr><td>Cash flow net</td><td>1 783 €/an</td></tr>
+            <tr><td>CF / mois</td><td>+149 €</td></tr>
+            <tr><td>CF amort. réintégré</td><td>+287 €/mois</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative — service de la dette sur 20 ans</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Loyer mensuel</td><td>420 €</td><td>480 €</td><td>360 €</td></tr>
+          <tr><td>EBE mensuel</td><td>330 €</td><td>408 €</td><td>151 €</td></tr>
+          <tr><td>Mensualité (20 ans)</td><td>−256 €</td><td>−229 €</td><td>−283 €</td></tr>
+          <tr><td>IS mensuel</td><td>−31 €</td><td>−44 €</td><td>−2 €</td></tr>
+          <tr><td><strong>CF net IS après crédit</strong></td><td><strong>+43 €</strong></td><td><strong>+135 €</strong></td><td><strong>−135 €</strong></td></tr>
+          <tr><td>CF amort. réintégré</td><td>+425 €</td><td>+478 €</td><td>+287 €</td></tr>
+          <tr><td>Rendement net (après IS)</td><td>7,3 %</td><td>9,9 %</td><td>4,8 %</td></tr>
+        </tbody>
+      </table>
+      <p><em>CF net IS après crédit = (EBE − IS) / 12 − mensualité. Le CF amort. réintégré (EBE − IS + amortissement) / 12 mesure la capacité de remboursement théorique du dossier.</em></p>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Variante — Financement sur 15 ans</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur (Base)</th>
+            <th>20 ans</th>
+            <th>15 ans</th>
+            <th>Écart</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Mensualité</td><td>256 €</td><td>309 €</td><td>+53 €</td></tr>
+          <tr><td>CF net IS après crédit (Base)</td><td>+43 €</td><td>−10 €</td><td>−53 €</td></tr>
+          <tr><td>CF net IS après crédit (Optimiste)</td><td>+135 €</td><td>+88 €</td><td>−47 €</td></tr>
+          <tr><td>CF net IS après crédit (Pessimiste)</td><td>−135 €</td><td>−193 €</td><td>−58 €</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Avis :</strong> Le 15 ans ne passe pas en Base (−10 €/mois) : le 20 ans laisse respirer le dossier (+43 €). Sur un ticket de 32 k€, l'économie d'intérêts ne justifie pas la perte de flexibilité. Même avec une offre à 30 000 € FAI, le 15 ans reste à l'équilibre précaire (+3 €/mois).</p>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DPE non communiqué</td>
+          <td>Immeuble 1920 — DPE probable F/G en l'état. La rénovation complète (isolation, chauffage) ramène en D/E, mais le DPE doit être exigé avant toute offre : un G non traité est non louable depuis 2025.</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+        <tr>
+          <td>Travaux « page blanche »</td>
+          <td>Électricité et plomberie intégrales à prévoir sur un 1920. Enveloppe 15 k€ (fourchette 10-20 k€) — devis fermes obligatoires avant engagement. Provision 1 000 €/an intégrée au scénario pessimiste.</td>
+          <td class="severity severity-3">3/5</td>
+        </tr>
+        <tr>
+          <td>Honoraires acquéreur 10,34 %</td>
+          <td>3 000 € de frais SAFTI à la charge de l'acquéreur. Le notaire est calculé sur le net vendeur (bien intégré), mais le ticket est surchargé de 10,3 % par rapport à une vente sans honoraires.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>Micro-logement 19 m²</td>
+          <td>Turn-over naturellement plus élevé, bassin locatif limité à une personne seule. Revente moins liquide qu'un T2/T3 — délai probable 6-12 mois.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>Charges copro à confirmer</td>
+          <td>250 €/an annoncés pour 6 lots — faible mais cohérent. Vérifier les PV d'AG, le fonds de travaux et l'absence de travaux votés avant toute offre.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>Adresse et TF inconnues</td>
+          <td>Adresse exacte non communiquée et taxe foncière estimée (400 €/an). L'écart de quartier peut faire varier la valeur de ±15 % — demander l'adresse et l'avis TF réel.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict buy">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>On achète — offre à 30 000 € FAI, plafond 40 000 €.</strong> Le dossier tient à prix affiché : CF net IS après crédit +43 €/mois en Base à 32 000 € FAI, rendement net 7,3 % (7,5 % sur valeur marché), ratio coût/valeur 1,03 (équilibre). La Seyne centre est un des marchés locatifs les plus fluides du Var sur les petites surfaces, et le bien est amortissable à 85 % en SCI IS. Tout se joue sur deux verrous : le DPE (à exiger avant offre) et le devis travaux (15 k€ sur un 1920 « page blanche »). Une offre à 30 000 € FAI (27 000 € net vendeur) sécurise la marge travaux et fait passer le CF à +54 €/mois.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 40 000 € FAI — CF net IS après crédit neutre en Base (travaux 15 k€)</p>
+      <p><strong>Prix proposé :</strong> 30 000 € FAI (27 000 € net vendeur)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Honoraires acquéreur de 10,34 % : demander une compensation sur le net vendeur — le ticket est surchargé de 3 000 €</li>
+        <li>État « page blanche » : 15-20 k€ de travaux immédiats entièrement portés par l'acquéreur</li>
+        <li>DPE absent : obligation légale de le fournir — son absence signale une classe F/G probable et justifie une décote</li>
+        <li>Bâtiment 1920 : risque structurel (électricité, plomberie) intégralement à la charge de l'acquéreur</li>
+        <li>1ᵉʳ étage sans ascenseur : bassin locatif restreint — argument de décote, partiellement compensé par la tension sur les studios</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices) — amortissement bâti 85 % sur 30 ans</p>
+      <p><strong>Estimation frais de notaire :</strong> ~2 320 € (8 % sur le net vendeur 29 000 €)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 15 000 € (fourchette 10-20 k€) — électricité, plomberie, cuisine, salle d'eau, isolation</p>
+      <p><strong>⚠️ Estimations à confirmer :</strong> TF (~400 €/an), DPE (à exiger), charges copro (PV d'AG), adresse exacte.</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
