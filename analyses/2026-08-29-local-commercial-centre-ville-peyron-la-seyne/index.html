@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Local commercial, Centre Ville-Peyron, La Seyne-sur-Mer (83500)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Local commercial 64 m² — Centre Ville-Peyron, La Seyne-sur-Mer (83500)</p>
+  <p class="report-date">Analyse générée le 29 août 2026</p>
+  <p class="report-source">Source : SeLoger — THE HOME CLUB / Gravier Immobilier, Jennifer Mondou (mandataire RSAC Toulon)</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/la-seyne-sur-mer-83500/26MTGZ3U1QGF">🔗 Annonce SeLoger — 26MTGZ3U1QGF</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Bail commercial 3-6-9 — professionnel de santé</strong> — SCI à l'IS</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix d'achat</span><span class="card-value">67 000 €</span></div>
+    <div class="card"><span class="card-label">Surface</span><span class="card-value">64 m²</span></div>
+    <div class="card"><span class="card-label">Prix / m²</span><span class="card-value">1 047 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient</span><span class="card-value">75 360 €</span></div>
+    <div class="card"><span class="card-label">Valeur marché</span><span class="card-value">80 000 €</span></div>
+    <div class="card"><span class="card-label">Revenus bruts</span><span class="card-value">650 €/mois</span></div>
+    <div class="card"><span class="card-label">Rentabilité</span><span class="card-value">8,0 % / 7,5 %</span></div>
+    <div class="card card-verdict note-8-1"><span class="card-label">Note</span><span class="card-value">8,1/10</span></div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1013" data-lon="5.8816" data-address="Centre Ville-Peyron, La Seyne-sur-Mer (83500)"></div>
+  </section>
+
+  <!-- === Attractivité de la zone (professionnel) === -->
+  <section class="attractiveness">
+    <h2>Attractivité de la zone d'implantation</h2>
+    <p class="attractiveness-intro">Rue piétonne à proximité immédiate du port de La Seyne-sur-Mer (65 000 habitants, 2ᵉ ville du Var), dans le cœur ancien commerçant du quartier Peyron. Secteur à forte densité de professions libérales et de commerces, alimenté par le flux piétonnier du centre-ville et la requalification du front de mer.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Accessibilité</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-7" style="width:70%"></div></div>
+        <span class="attr-score"><strong>7/10</strong> — Rue piétonne (accès piéton idéal pour une patientèle), TCSP Toulon-La Seyne à ~500 m, gare maritime à ~400 m, A50 à 5 min. Stationnement public à proximité.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Visibilité & flux</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-8" style="width:80%"></div></div>
+        <span class="attr-score"><strong>8/10</strong> — Rue piétonne commerçante à fort passage, à 2 min du port et des terrasses. Flux piétons continus (shopping, promenade port), vitrine en rez-de-chaussée.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Bassin d'emploi</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-6" style="width:60%"></div></div>
+        <span class="attr-score"><strong>6/10</strong> — Bassin Toulon-La Seyne (chantiers navals, défense, tertiaire). Revenu médian modéré, mais patientèle de santé stable et population vieillissante → demande médicale/paramédicale soutenue.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Concurrence / saturation</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-6" style="width:60%"></div></div>
+        <span class="attr-score"><strong>6/10</strong> — Densité de locaux médicaux modérée en centre-ville ; offre de locaux aux normes ARS rare (avantage). Vacance commerciale de centre-ville à surveiller — à vérifier sur le terrain.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-7" style="width:70%"></div></div>
+        <span class="attr-score"><strong>7/10</strong> — Front de mer en requalification, arrivée du TCSP, dynamique métropole toulonnaise. Le centre-ville se redresse progressivement après la crise du commerce.</span>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Cadre réglementaire</span>
+        <div class="attr-bar-track"><div class="attr-bar-fill score-7" style="width:70%"></div></div>
+        <span class="attr-score"><strong>7/10</strong> — Local commercial en centre-ville : destination compatible avec professions libérales (pas de changement d'usage). Normes ARS déjà en place → exploitabilité immédiate. PLU à vérifier (linéaire commercial protégé).</span>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil preneur cible :</strong> Professionnel de santé libéral (kinésithérapeute, ostéopathe, orthophoniste, pédicure-podologue, sage-femme) — le local est calibré ARS et exploitable immédiatement, un argument décisif pour un praticien qui s'installe.</p>
+      <p><strong>Conclusion :</strong> Emplacement de flux en centre-ville piétonnier proche du port, avec un actif différenciant (normes ARS). Le créneau médical/paramédical est structurellement demandeur dans une population vieillissante. Le risque n'est pas la localisation mais le délai de relocation d'un local vacant.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce local. La ligne verte indique celle retenue pour les projections.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-selected">
+          <td><strong>Bail commercial 3-6-9 — santé</strong><br><span class="strategy-desc">Relocation à un praticien libéral, charges + TF refacturées</span></td>
+          <td>1</td>
+          <td>8,0 %</td>
+          <td>80 000 €</td>
+          <td>0,94</td>
+          <td><span class="badge-faisabilite faisabilite-haute">Haute</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-high" style="width:70%"></span></span><span class="adeq-score">7,0/10</span></span></td>
+        </tr>
+        <tr>
+          <td><span class="strategy-name">Bail commercial — retail</span><br><span class="strategy-desc">Relocation à un commerce de centre-ville (boutique, services)</span></td>
+          <td>1</td>
+          <td>7,6 %</td>
+          <td>78 000 €</td>
+          <td>0,97</td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Moyenne</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:60%"></span></span><span class="adeq-score">6,0/10</span></span></td>
+        </tr>
+        <tr>
+          <td><span class="strategy-name">Revente après mise en location</span><br><span class="strategy-desc">Louer puis céder à un investisseur sur base capitalisée</span></td>
+          <td>1</td>
+          <td>8,9 % (cap 7,5 %)</td>
+          <td>89 000 €</td>
+          <td>0,85</td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Moyenne</span></td>
+          <td><span class="badge-risque risque-faible">Faible</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-mid" style="width:55%"></span></span><span class="adeq-score">5,5/10</span></span></td>
+        </tr>
+        <tr>
+          <td><span class="strategy-name">Transformation en habitation</span><br><span class="strategy-desc">Changement de destination RDC → logement</span></td>
+          <td>1</td>
+          <td>≈ 4 %</td>
+          <td>—</td>
+          <td>> 1,10</td>
+          <td><span class="badge-faisabilite faisabilite-faible">Faible</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><span class="adeq-cell"><span class="adeq-bar-track"><span class="adeq-bar-fill adeq-low" style="width:30%"></span></span><span class="adeq-score">3,0/10</span></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p><strong>Justification :</strong> Le bail commercial 3-6-9 à un professionnel de santé est retenu : le local est calibré ARS (aucun travaux de mise en conformité), l'emplacement piétonnier proche du port sert directement la patientèle, et le bail commercial refacture 100 % des charges et de la TF au preneur. Le créneau santé offre le meilleur ratio rendement/risque de relocation. Le retail est la solution de repli (même loyer possible, mais perte du différentiel ARS). La revente après mise en location capitalise la valeur (~89 k€ à 7,5 %) — une vraie sortie, pas la stratégie d'entrée. La transformation en habitation est éliminée : linéaire commercial probablement protégé au PLU, ratio coût/valeur dégradé et perte du potentiel locatif commercial.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité du bien</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Centre Ville-Peyron, La Seyne-sur-Mer (83500) — adresse exacte non communiquée, rue piétonne proche du port</td></tr>
+        <tr><th>Type de bien</th><td>Local commercial — murs d'un local d'activité (ancien cabinet de kinésithérapie)</td></tr>
+        <tr><th>Surface</th><td>64 m² de surface de vente (accueil, pièce lave-main, 2 pièces en enfilade, cour extérieure + sanitaire)</td></tr>
+        <tr><th>Prix</th><td>67 000 € — honoraires d'agence à la charge du vendeur</td></tr>
+        <tr><th>Prix / m²</th><td>1 047 €/m²</td></tr>
+        <tr><th>Occupation</th><td><strong>VACANT</strong> — à relouer (ancien cabinet de kinésithérapie)</td></tr>
+        <tr><th>DPE / GES</th><td>C / A — affichage énergétique annoncé</td></tr>
+        <tr><th>Chauffage / clim</th><td>Chauffage individuel électrique + climatisation</td></tr>
+        <tr><th>Normes ARS</th><td>Oui — exploitable immédiatement pour professions médicales et paramédicales</td></tr>
+        <tr><th>État</th><td>Entretenu</td></tr>
+        <tr><th>Copropriété</th><td>6 lots — charges à confirmer (PV d'AG)</td></tr>
+        <tr><th>Vendeur</th><td>THE HOME CLUB / Gravier Immobilier — Jennifer Mondou (mandataire RSAC Toulon 510656127)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — Bail commercial 3-6-9, SCI à l'IS</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 8% — Loyer 650 € HT/HC — Charges + TF refacturées au preneur</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel HT/HC</td><td>7 800 €</td></tr>
+            <tr><td>Vacance (8 %)</td><td>−624 €</td></tr>
+            <tr><td>Charges + TF (refacturées)</td><td>0 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−250 €</td></tr>
+            <tr><td>Provisions grosses réparations (3 %)</td><td>−234 €</td></tr>
+            <tr><td>Revenu net bailleur</td><td>6 692 €</td></tr>
+            <tr><td>Amortissement bâti (80 % × 67 000 / 30 ans)</td><td>−1 787 €</td></tr>
+            <tr><td>Amortissement notaire (5 360 / 20 ans)</td><td>−268 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>4 637 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−696 €</td></tr>
+            <tr><td>Cash flow net</td><td>5 996 €/an</td></tr>
+            <tr><td>CF / mois</td><td>+500 €</td></tr>
+            <tr><td>CF amort. réintégré</td><td>+671 €/mois</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 5% — Loyer 750 € HT/HC — Provisions réduites</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel HT/HC</td><td>9 000 €</td></tr>
+            <tr><td>Vacance (5 %)</td><td>−450 €</td></tr>
+            <tr><td>Charges + TF (refacturées)</td><td>0 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−225 €</td></tr>
+            <tr><td>Provisions grosses réparations (2 %)</td><td>−180 €</td></tr>
+            <tr><td>Revenu net bailleur</td><td>8 145 €</td></tr>
+            <tr><td>Amortissement (revient 75 360 €)</td><td>−2 055 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>6 090 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−914 €</td></tr>
+            <tr><td>Cash flow net</td><td>7 231 €/an</td></tr>
+            <tr><td>CF / mois</td><td>+603 €</td></tr>
+            <tr><td>CF amort. réintégré</td><td>+774 €/mois</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 18% — Loyer 500 € HT/HC — Provisions majorées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer annuel HT/HC</td><td>6 000 €</td></tr>
+            <tr><td>Vacance (18 %)</td><td>−1 080 €</td></tr>
+            <tr><td>Charges + TF (refacturées)</td><td>0 €</td></tr>
+            <tr><td>Assurance PNO</td><td>−300 €</td></tr>
+            <tr><td>Provisions grosses réparations (5 %)</td><td>−300 €</td></tr>
+            <tr><td>Revenu net bailleur</td><td>4 320 €</td></tr>
+            <tr><td>Amortissement (revient 75 360 €)</td><td>−2 055 €</td></tr>
+            <tr><td>Résultat fiscal</td><td>2 265 €</td></tr>
+            <tr><td>IS (15 %)</td><td>−340 €</td></tr>
+            <tr><td>Cash flow net</td><td>3 980 €/an</td></tr>
+            <tr><td>CF / mois</td><td>+332 €</td></tr>
+            <tr><td>CF amort. réintégré</td><td>+503 €/mois</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative — service de la dette sur 20 ans</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Loyer mensuel HT/HC</td><td>650 €</td><td>750 €</td><td>500 €</td></tr>
+          <tr><td>Revenu net mensuel</td><td>558 €</td><td>679 €</td><td>360 €</td></tr>
+          <tr><td>Mensualité (20 ans)</td><td>−365 €</td><td>−365 €</td><td>−365 €</td></tr>
+          <tr><td>IS mensuel</td><td>−58 €</td><td>−76 €</td><td>−28 €</td></tr>
+          <tr><td><strong>CF net IS après crédit</strong></td><td><strong>+134 €</strong></td><td><strong>+237 €</strong></td><td><strong>−34 €</strong></td></tr>
+          <tr><td>CF amort. réintégré</td><td>+671 €</td><td>+774 €</td><td>+503 €</td></tr>
+          <tr><td>Rendement net (après IS)</td><td>8,0 %</td><td>9,6 %</td><td>5,3 %</td></tr>
+        </tbody>
+      </table>
+      <p><em>CF net IS après crédit = (revenu net bailleur − IS) / 12 − mensualité. En bail commercial 3-6-9, les charges et la TF sont refacturées au preneur (article L.145-40 du Code de commerce) : le revenu net bailleur est proche du loyer facial.</em></p>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Variante — Financement sur 15 ans</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur (Base)</th>
+            <th>20 ans</th>
+            <th>15 ans</th>
+            <th>Écart</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Mensualité</td><td>365 €</td><td>441 €</td><td>+76 €</td></tr>
+          <tr><td>CF net IS après crédit (Base)</td><td>+134 €</td><td>+59 €</td><td>−76 €</td></tr>
+          <tr><td>CF net IS après crédit (Optimiste)</td><td>+237 €</td><td>+162 €</td><td>−76 €</td></tr>
+          <tr><td>CF net IS après crédit (Pessimiste)</td><td>−34 €</td><td>−109 €</td><td>−76 €</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Avis :</strong> Les deux durées passent en Base (+134 € / +59 € par mois). Le 20 ans laisse de la marge sur la vacance initiale (6-12 mois de portage avant le premier loyer) ; le 15 ans reste positif mais sans coussin — le Worst Case tombe à −109 €/mois. Sur un ticket de 67 k€, le 20 ans est le bon arbitrage.</p>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Valorisation institutionnelle — valeur de revente par capitalisation</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Taux de cap</th>
+            <th>Valeur de revente</th>
+            <th>Prime/décote vs prix d'achat</th>
+            <th>Interprétation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>5 % (prime)</td><td>133 840 €</td><td>+99,8 %</td><td>Scénario favorable — preneur institutionnel, bail ferme long</td></tr>
+          <tr><td>6 % (bon)</td><td>111 530 €</td><td>+66,5 %</td><td>Marché normal, bon emplacement</td></tr>
+          <tr><td>7 % (médian)</td><td>95 600 €</td><td>+42,7 %</td><td>Emplacement secondaire ou preneur correct</td></tr>
+          <tr><td>8 % (risqué)</td><td>83 650 €</td><td>+24,9 %</td><td>Emplacement tertiaire, risque de vacance élevé</td></tr>
+        </tbody>
+      </table>
+      <p><em>Base : revenu net bailleur 6 692 €/an. Taux retenu pour l'analyse : <strong>7,5 %</strong> (local vacant à relouer, preneur libéral à trouver, centre-ville secondaire) → valeur de revente ≈ <strong>89 000 €</strong>, soit +33 % vs le prix d'achat. Le prix demandé est sous la valeur capitalisée : le dossier n'est pas surpayé une fois le bail signé.</em></p>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Local VACANT — délai de relocation</td>
+          <td>Aucun revenu encaissé avant la signature d'un bail. Relocation d'un local médical : 6-12 mois réalistes (visites, travaux éventuels, négociation). Coût de portage de la vacance initiale : ~2 200-4 400 €. C'est LE risque du dossier — le prix doit l'intégrer.</td>
+          <td class="severity severity-4">4/5</td>
+        </tr>
+        <tr>
+          <td>Loyer de marché à vérifier</td>
+          <td>Loyer estimé 110-140 €/m²/an (650 €/mois en base). À confirmer par des comparables locaux de locaux médicaux — le créneau santé peut justifier une valeur locative supérieure au retail standard, à démontrer par l'agent.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>TF et charges copro inconnues</td>
+          <td>TF non annoncée, charges copro 6 lots à confirmer (PV d'AG). En bail commercial elles sont refacturables au preneur, mais la vacance initiale les laisse temporairement à la charge du bailleur. Obtenir les montants avant l'offre.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>Liquidité de revente</td>
+          <td>Un local vacant se revend moins bien qu'un local loué : la valeur capitalisée (89 k€) ne vaut que si un bail est en place. La liquidité est conditionnée à la relocation — sortie rapide difficile sans bail.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+        <tr>
+          <td>PLU / changement de destination</td>
+          <td>Linéaire commercial probablement protégé au PLU de La Seyne (centre ancien) : la transformation en habitation serait bloquée ou soumise à autorisation. Vérifier le zonage exact avec l'adresse réelle avant toute hypothèse de repli.</td>
+          <td class="severity severity-2">2/5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict buy">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>On achète — offre à 62 000 €, plafond 67 000 €.</strong> Le dossier tient à prix affiché : CF net IS après crédit +134 €/mois en Base à 67 000 €, rendement net 8,0 % (7,5 % sur valeur marché), ratio coût/valeur 0,94, et le prix demandé est 25 % sous la valeur capitalisée à 7,5 % (~89 k€). Le local est calibré ARS, exploitabilité immédiate, rue piétonne à fort flux près du port. Tout se joue sur la relocation d'un praticien libéral : c'est un revenu potentiel, pas un revenu encaissé. Une offre à 62 000 € couvre le portage de 6-12 mois de vacance initiale et sécurise la marge — le prix affiché est justifiable dès qu'un bail 3-6-9 est signé.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 67 000 € (prix affiché) — dès qu'un bail 3-6-9 ≥ 650 €/mois avec charges + TF refacturées est signé</p>
+      <p><strong>Prix proposé :</strong> 62 000 €</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Local vacant : aucun loyer encaissé — le vendeur ne peut pas argumenter sur un revenu existant ; le portage de relocation (2 200-4 400 €) doit peser dans le prix</li>
+        <li>Normes ARS = argument de relocation, pas de prime au prix : l'acquéreur paie un potentiel, pas une certitude</li>
+        <li>TF et charges copro non communiquées : exiger les montants avant l'offre — une TF élevée change la donne pendant la vacance</li>
+        <li>Levier « bail avant acte » : si l'agent (ou l'acquéreur) signe un bail 3-6-9 avant l'acte, le prix affiché se justifie — convertir le potentiel en encaissé avant de payer</li>
+        <li>Copropriété 6 lots : vérifier PV d'AG, fonds de travaux et absence de travaux votés avant toute offre</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices) — bail commercial 3-6-9, amortissement bâti 80 % sur 30 ans</p>
+      <p><strong>Estimation frais de notaire :</strong> ~5 360 € (8 % — achat dans l'ancien)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 3 000 € (remise en état légère — le local est entretenu et aux normes ARS)</p>
+      <p><strong>⚠️ Estimations à confirmer :</strong> TF (montant réel), charges copro (PV d'AG), loyer de marché santé (comparables locaux), adresse exacte (zonage PLU).</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
