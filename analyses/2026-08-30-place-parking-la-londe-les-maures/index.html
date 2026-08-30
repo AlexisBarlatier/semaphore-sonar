@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Place de parking extérieure, La Londe-les-Maures (Domaine des Pins)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Place de stationnement privative extérieure — copropriété Domaine des Pins (accès badges), quartier Moulin-Vieux, La Londe-les-Maures (83250)</p>
+  <p class="report-date">Analyse générée le 30 août 2026 — charges copro 2 €/mois validées verbalement par le propriétaire (à confirmer par écrit), TF 30 €/an annoncée (à confirmer sur avis)</p>
+  <p class="report-source">Source : LeBonCoin (annonce 3224795493) — vendeur particulier, Gomez Francisco (membre depuis 2013, numéro vérifié)</p>
+  <div class="report-source-link"><a href="https://www.leboncoin.fr/ad/ventes_immobilieres/3224795493">https://www.leboncoin.fr/ad/ventes_immobilieres/3224795493</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Placement parking</span>
+    <p>Stratégie retenue : <strong>Location longue durée + compte courant d'associé (test pipeline)</strong> — SCI à l'IS (15 %)</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">6 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">n.c.</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">—</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">6 480 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">6 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">50 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">6,4 % / 6,9 %</span>
+    </div>
+    <div class="card card-verdict note-6-9">
+      <span class="card-label">Note</span>
+      <span class="card-value">6,9/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1014" data-lon="6.2349" data-address="Copropriété Domaine des Pins, quartier Moulin-Vieux, La Londe-les-Maures (83250) — coordonnées centre-ville, adresse exacte non communiquée"></div>
+  </section>
+
+  <!-- === Attractivité === -->
+  <section class="attractiveness">
+    <h2>Attractivité — Zone La Londe-les-Maures (Moulin-Vieux)</h2>
+    <p class="attractiveness-intro">La Londe-les-Maures (11 000 hab., ~57 % de résidences secondaires) est une station balnéaire du littoral varois entre Hyères et Bormes. La copropriété est à moins de 2 km du port et de la plage de l'Argentière. Le marché locatif permanent y est étroit mais la demande saisonnière (plage, port, campings) et le déficit de places privées soutiennent les loyers. L'adresse exacte de la copropriété n'est pas communiquée dans l'annonce.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Tension stationnement</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Stationnement contraint près du port et des plages en saison ; copro sécurisée à badges, offre privée limitée dans le quartier Moulin-Vieux.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Densité résidentielle</span>
+          <span class="attr-score"><strong>5/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Habitat mixte (maisons, copropriétés, résidences secondaires) ; densité modérée hors centre. La demande permanente est portée par les résidents sans place.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Accessibilité</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">À moins de 2 km du port et de la plage de l'Argentière, accès facile au bord de mer et à la D98.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Copropriété fermée, accès par badges, « très bien entretenue » (annonce), cadre arboré et calme. Argument réel pour le locataire.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Protection</span>
+          <span class="attr-score"><strong>0/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:0%"></div></div>
+        <p class="attr-detail">Place extérieure à ciel ouvert (confirmée photo) — aucune protection contre intempéries et dégradations. Ce point borne le loyer et exclut tout amortissement.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+          <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Loyer de marché visé 50 €/mois (hypothèse du dossier, fourchette 40-60 €), cohérent avec les communes voisines (La Garde 50-75 €, Six-Fours 50-80 €). Demande saisonnière forte, permanente plus étroite.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Résident de la copropriété sans place, riverain du port, saisonnier (plage de l'Argentière à 2 km)</p>
+      <p><strong>Conclusion :</strong> Emplacement avec filet de sortie connu (port, plages, campings) — le point fort du dossier. Point faible structurel : place extérieure non protégée, non amortissable, marché locatif permanent étroit. Actif de rendement pur au ticket minimal, pertinent comme support de test du montage compte courant.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Place unique, extérieure, au prix de référence du marché local (6 000 € constaté 2026 à La Londe) — le prix n'est pas l'objet : c'est le ticket de validation du pipeline compte courant, après La Garde.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Location longue durée + compte courant associé</strong></td>
+          <td>1</td>
+          <td>6,4 % (base) / 9,3 % (optimiste)</td>
+          <td>6 000 €</td>
+          <td><span class="ratio-badge ratio-ok">1,08</span></td>
+          <td><span class="badge-faisabilite faisabilite-haute">Immédiate</span></td>
+          <td><span class="badge-risque risque-faible">Faible</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:57%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Revente à l'unité</td>
+          <td>1</td>
+          <td>ROI ~0 % (pas de plus-value)</td>
+          <td>6 000 €</td>
+          <td><span class="ratio-badge ratio-ok">1,08</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Possible</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:57%"></div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location longue durée est retenue : seule stratégie pertinente pour une place extérieure. L'intérêt réel du dossier n'est pas le rendement (correct mais pas exceptionnel : 6,4 % net d'IS en base, sous le seuil parking de 6,5 % avec une vacance binaire de 10 %) mais son rôle d'<strong>achat-test du montage compte courant</strong> : avance des associés de 6 480 € à 4 %, déduction des intérêts, extraction du flux à 30 % (PFU) au lieu de 40,5 %, déploiement du surplus SCI dormant (1,5 % → 5,8 %). Le ticket minimal (6 480 € tout compris), les charges au plancher (2 €/mois validés) et l'intégration dans une SCI existante (comptable et PNO mutualisés) rendent le risque quasi nul : même place vide, le portage est de ~4,50 €/mois.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Copropriété « Domaine des Pins », quartier Moulin-Vieux - Ondine - Mas d'Argent - Stade Vitria, La Londe-les-Maures (83250) — adresse exacte non communiquée dans l'annonce</td></tr>
+        <tr><th>Type</th><td>Place de stationnement extérieure (non couverte) — confirmée photo</td></tr>
+        <tr><th>Surface</th><td>Non communiquée dans l'annonce</td></tr>
+        <tr><th>Prix</th><td>6 000 € (vente entre particuliers, pas d'honoraires)</td></tr>
+        <tr><th>Frais de notaire</th><td>~480 € (8 % — ancien, particulier)</td></tr>
+        <tr><th>Sécurisation</th><td>Copropriété fermée, accès par badges, parking ombragé et « très bien entretenu » (annonce)</td></tr>
+        <tr><th>Charges copro</th><td>2 €/mois validés verbalement par le propriétaire (24 €/an) — à confirmer par écrit (règlement copro / budget prévisionnel)</td></tr>
+        <tr><th>Taxe foncière</th><td>30 €/an annoncée (LeBonCoin) — à confirmer sur l'avis réel</td></tr>
+        <tr><th>DPE</th><td>Non applicable (stationnement)</td></tr>
+        <tr><th>Vendeur</th><td>Particulier (Gomez Francisco) — membre depuis 2013, numéro vérifié, réactif</td></tr>
+        <tr><th>Régime juridique</th><td>Copropriété (lot de stationnement) — 1 place = lot distinct à confirmer au règlement pour la liquidité de sortie</td></tr>
+        <tr><th>Disponibilité</th><td>Annonce déposée le 28/08/2026, 10 favoris en 24 h — demande active sur la place</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 10 % — Loyer 50 €/mois — Charges confirmées/annoncées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">600 €</td></tr>
+            <tr><td>Vacance locative (10 %)</td><td class="num">−60 €</td></tr>
+            <tr class="secondary"><td>Charges (copro 24 € + TF 30 € — validées verbalement / annoncées)</td><td class="num">−54 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">486 €</td></tr>
+            <tr><td>Amortissement (extérieur non-bâti)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">486 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−73 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">413 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">34 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">34 €</td></tr>
+            <tr><td>Rendement net (revient / marché)</td><td class="num">6,4 % / 6,9 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 5 % — Loyer 66 €/mois (+10 %) — Charges −20 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">792 €</td></tr>
+            <tr><td>Vacance locative (5 %)</td><td class="num">−40 €</td></tr>
+            <tr class="secondary"><td>Charges (copro 19 € + TF 24 €)</td><td class="num">−43 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">709 €</td></tr>
+            <tr><td>Amortissement (extérieur non-bâti)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">709 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−106 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">603 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">50 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">50 €</td></tr>
+            <tr><td>Rendement net (revient / marché)</td><td class="num">9,3 % / 10,0 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 25 % — Loyer 40 €/mois (−20 %) — Charges +30 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">480 €</td></tr>
+            <tr><td>Vacance locative (25 %)</td><td class="num">−120 €</td></tr>
+            <tr class="secondary"><td>Charges (copro 31 € + TF 39 €)</td><td class="num">−70 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">290 €</td></tr>
+            <tr><td>Amortissement (extérieur non-bâti)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">290 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−44 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">246 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">21 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">21 €</td></tr>
+            <tr><td>Rendement net (revient / marché)</td><td class="num">3,8 % / 4,1 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>EBE avant IS</td><td class="num">486 €</td><td class="num">709 €</td><td class="num">290 €</td></tr>
+          <tr><td>CF net mensuel</td><td class="num">34 €</td><td class="num">50 €</td><td class="num">21 €</td></tr>
+          <tr><td>CF amort. réintégré / mois</td><td class="num">34 €</td><td class="num">50 €</td><td class="num">21 €</td></tr>
+          <tr><td>Rendement net (revient)</td><td class="num">6,4 %</td><td class="num">9,3 %</td><td class="num">3,8 %</td></tr>
+          <tr><td>Rendement net (marché)</td><td class="num">6,9 %</td><td class="num">10,0 %</td><td class="num">4,1 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- === Montage compte courant === -->
+    <div class="projection-summary">
+      <h3>Montage compte courant d'associé — le test</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Paramètre</th>
+            <th>Valeur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Avance des associés (prix + notaire)</td><td class="num">6 480 €</td></tr>
+          <tr><td>Intérêts versés (4 % — taux fixé dans la convention)</td><td class="num">259 €/an</td></tr>
+          <tr><td>Base imposable SCI</td><td class="num">surplus existant + 227 €</td></tr>
+          <tr><td>Flux SCI net après IS (227 € × 0,85)</td><td class="num">193 €/an</td></tr>
+          <tr><td>Intérêts nets associés (PFU 30 %)</td><td class="num">181 €/an</td></tr>
+          <tr><td>Flux total du montage</td><td class="num">374 €/an → 5,8 % sur l'avance</td></tr>
+        </tbody>
+      </table>
+      <p class="attractiveness-intro"><strong>Lecture :</strong> support extérieur non amortissable → EBE (486 €) &gt; intérêts (259 €), la base imposable augmente de 227 €. Ce n'est pas un échec : le gain du montage est l'<strong>extraction à 30 %</strong> (PFU) au lieu de 40,5 % (IS + PFU sur dividende), le <strong>déploiement du surplus dormant</strong> (1,5 % → 5,8 % net sur l'avance) et la conservation de l'actif + de la créance dans la SCI. L'objectif de cet achat est de <strong>valider le pipeline complet</strong> : convention de compte courant, paiement des intérêts, déduction IS, PFU perso — avant de déployer le mécanisme sur des lots plus importants. Seul un support amortissable (sous-sol) ferait réellement baisser la base (amortissement + intérêts &gt; EBE).</p>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Charges copro validées verbalement</td>
+          <td>2 €/mois confirmés par le propriétaire (24 €/an), ratio 4 % du loyer — au plancher du marché. À verrouiller par écrit (règlement copro / budget prévisionnel) au compromis. Même doublées, l'impact reste marginal.</td>
+          <td><span class="severity severity-1">1/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance binaire / saisonnalité</td>
+          <td>10 % minimum structurel. La Londe : ~57 % de résidences secondaires, marché locatif permanent étroit — la vacance prolongée est le risque principal. Portage en vacance totale : ~54 €/an (4,50 €/mois) — dérisoire à ce ticket.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Loyer de marché non contracté</td>
+          <td>50 €/mois est une hypothèse de dossier (fourchette locale 40-60 €), pas un bail en place. Le loyer réel se confirmera à la relocation. Sensibilité : 40 €/mois → rendement base 4,9 % net d'IS.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Place extérieure non amortissable</td>
+          <td>Non-bâti : aucun amortissement en SCI IS — aucun levier fiscal structurel sur ce support. Le montage compte courant ne réduit pas la base (EBE &gt; intérêts).</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>TF annoncée à vérifier</td>
+          <td>30 €/an annoncés par LeBonCoin. Si l'avis réel la portait à 60 €, le rendement base perdrait ~0,3 point. À obtenir avant l'acte.</td>
+          <td><span class="severity severity-1">1/5</span></td>
+        </tr>
+        <tr>
+          <td>Liquidité de revente</td>
+          <td>Ticket minime et marché étroit : revente à l'unité sans plus-value attendue après frais. Confirmer que la place constitue un lot de copropriété distinct.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Adresse exacte non vérifiée</td>
+          <td>La copropriété « Domaine des Pins » n'est pas localisée précisément ; vérifier le lot au règlement de copropriété avant l'acte (numéro de lot, quote-part).</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict buy">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À acheter au prix de 6 000 € — le ticket idéal pour valider le pipeline du compte courant d'associé, au prix de référence du marché local (6 000 € constaté 2026 à La Londe, comparables en ligne à 6 000-7 500 €). Rendement net d'IS de 6,4 % en base (6,9 % sur valeur marché), légèrement sous le seuil parking de 6,5 % avec une vacance binaire conservatrice de 10 %, mais porté par trois atouts : charges au plancher (2 €/mois validés, ratio 4 % du loyer), TF minimale (30 €/an annoncée), et un emplacement à filet de sortie connu (port, plage de l'Argentière, campings). Le montage compte courant (avance 6 480 € à 4 %, intérêts déductibles, extraction du flux à 30 %) déploie le surplus SCI dormant de 1,5 % à 5,8 % net et valide la mécanique convention/déduction/PFU après La Garde. Pour un achat-test, le prix n'est pas le critère : l'actif est au prix du marché, on ne bloque pas le test pour 300 €.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 6 000 € (contre-offre à 5 500 € uniquement si le loyer ne se confirme pas à 50 €/mois à la relocation)</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Verrouiller par écrit au compromis : charges 2 €/mois (règlement copro / budget prévisionnel) et TF (avis réel)</li>
+        <li>Confirmer le lot distinct au règlement de copropriété (liquidité de sortie unitaire)</li>
+        <li>Louer avant l'acte si possible : un bail à 50 €/mois signé avant la vente convertit la projection en revenu contracté</li>
+        <li>Ne pas attendre : 10 favoris en 24 h, vendeur réactif — la place part vite à ce prix</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices) — comptable et PNO mutualisés (SCI existante, 13 parkings), pas d'amortissement (place extérieure non-bâti)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~480 € (8 % — ancien, vente entre particuliers)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 0 € (état très bon, marquage au sol correct)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
