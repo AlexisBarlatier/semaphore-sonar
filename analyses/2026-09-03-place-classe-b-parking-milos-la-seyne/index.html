@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Place de parking catégorie B (sous-sol), VEFA résidence MILOS, La Seyne-sur-Mer</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Place de parking catégorie B en sous-sol — résidence neuve sécurisée MILOS, angle av. Jules Renard / rue Pierre-Joseph Proudhon, quartier Saint-Jean, La Seyne-sur-Mer (83500) — adresse exacte du lot non communiquée</p>
+  <p class="report-date">Analyse générée le 3 septembre 2026 — VEFA, livraison T2 2027 (31/05/2027)</p>
+  <p class="report-source">Source : SeLoger — Constructa Promotion (promoteur, réf. « Parking MILOS »), contact Caroline Amisse</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonces/achat/parking/la-seyne-sur-mer-83/saint-jean/275220505.htm">https://www.seloger.com/annonces/achat/parking/la-seyne-sur-mer-83/saint-jean/275220505.htm</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Placement parking</span>
+    <p>Stratégie retenue : <strong>Location longue durée — intégration au pipeline places sous-sol</strong> — SCI à l'IS (15 %)</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">7 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">9,2 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">761 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">7 175 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">~7 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">65 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">6,6 % / 6,8 %</span>
+    </div>
+    <div class="card card-verdict note-7-7">
+      <span class="card-label">Note</span>
+      <span class="card-value">7,7/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1122" data-lon="5.8675" data-address="Secteur Saint-Jean (angle av. Jules Renard / rue P.-J. Proudhon), La Seyne-sur-Mer (83500) — coordonnées du secteur annoncé, adresse exacte non communiquée"></div>
+  </section>
+
+  <!-- === Attractivité === -->
+  <section class="attractiveness">
+    <h2>Attractivité — Secteur Saint-Jean, La Seyne-sur-Mer</h2>
+    <p class="attractiveness-intro">La Seyne-sur-Mer (~62 000 hab.), deuxième ville du Var, connaît un développement résidentiel soutenu autour de Saint-Jean (collectifs récents, écoquartiers en cours). Le stationnement en sous-sol sécurisé y est un actif de rendement recherché : l'offre locative en ligne est limitée (moins de 10 annonces actives pour toute la ville) et les loyers des places sous-sol s'échelonnent de 78 à 95 €/mois. La résidence MILOS est un programme neuf du promoteur Constructa Promotion (17 places en vente en sous-sol).</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Tension stationnement</span>
+          <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Stationnement payant et contraint en centre-ville ; Saint-Jean en développement résidentiel, les résidences neuves sont souvent sous-dotées (1 place par logement). Tension réelle mais inférieure au centre ancien.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Densité résidentielle</span>
+          <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Quartier en densification : collectifs récents, programmes neufs à proximité immédiate. La demande sera portée par les résidents de la résidence elle-même et des programmes voisins.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Accessibilité</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Angle avenue Jules Renard (axe structurant du quartier) et rue P.-J. Proudhon, à ~1,5 km du centre, accès rapide vers Toulon et la RN8. Sous-sol accessible en rampe.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité</span>
+          <span class="attr-score"><strong>8/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Résidence neuve sécurisée (annonce), secteur résidentiel calme. Le sous-sol fermé réduit fortement le risque de dégradation — argument locatif direct.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Protection</span>
+          <span class="attr-score"><strong>10/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:100%"></div></div>
+        <p class="attr-detail">Sous-sol : le meilleur profil parking — protection totale, loyer supérieur à l'extérieur, et bâti amortissable en SCI IS (90 % du prix sur 30 ans).</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Offre locative limitée (moins de 10 annonces de parking en ligne pour la ville) ; places sous-sol constatées 78-95 €/mois. À pondérer du gabarit réduit de la catégorie B, qui restreint le bassin aux petits véhicules.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> Résident de la résidence MILOS ou des programmes voisins avec un petit véhicule (citadine ≤ ~3,8 m), riverain du quartier sans place, jeune actif en location</p>
+      <p><strong>Conclusion :</strong> Sous-sol neuf sécurisé amortissable = le meilleur profil parking, au prix d'entrée le plus bas du marché local. Le point faible n'est pas l'emplacement ni le prix, c'est le gabarit de la catégorie B (2,30 × 4,00 m), qui borne le bassin locatif et plafonne le loyer sous les places standard.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Place de sous-sol neuve à prix de grille promoteur — le rendement locatif est la seule lecture pertinente, avec une revente unitaire en filet de sortie (lot de copropriété distinct à confirmer).</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Location longue durée (pipeline sous-sol)</strong></td>
+          <td>1</td>
+          <td>6,6 % (base) / 8,4 % (optimiste)</td>
+          <td>7 000 €</td>
+          <td><span class="ratio-badge ratio-ok">1,03</span></td>
+          <td><span class="badge-faisabilite faisabilite-haute">Immédiate (livraison)</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-high" style="width:73%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Revente à l'unité</td>
+          <td>1</td>
+          <td>ROI ~0 % (pas de plus-value attendue)</td>
+          <td>7 000 €</td>
+          <td><span class="ratio-badge ratio-ok">1,03</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Possible (lot distinct)</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-high" style="width:73%"></div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location longue durée est retenue : actif de rendement pur, sous-sol neuf amortissable, au prix le plus bas du marché local (761 €/m² contre 1 000-2 700 €/m² constatés sur les places et boxes de l'ancien à La Seyne). Le rendement base (6,6 % net d'IS) passe le seuil parking de 6,5 % avec un loyer volontairement conservateur de 65 €/mois — décote de gabarit appliquée aux 78-95 €/mois constatés sur les places standard du secteur. La vacance binaire de 10 % et les charges VEFA encore inconnues sont les deux réserves principales ; le ticket (7 175 € tout compris) et l'intégration à la SCI existante (comptable et assurance mutualisés) les rendent supportables. La revente à l'unité reste le filet de sortie, sans plus-value attendue.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Résidence neuve MILOS, angle avenue Jules Renard / rue Pierre-Joseph Proudhon, quartier Saint-Jean, La Seyne-sur-Mer (83500) — adresse exacte du lot non communiquée dans l'annonce</td></tr>
+        <tr><th>Type</th><td>Place de stationnement catégorie B en sous-sol, résidence neuve sécurisée — VEFA (vente en l'état futur d'achèvement)</td></tr>
+        <tr><th>Cotes annoncées</th><td>2,30 × 4,00 m = 9,2 m² — profondeur « jusqu'à 1 m » sous le standard annoncée par le promoteur, à confirmer sur plan côté (4,0 à ~5,0 m selon les lots)</td></tr>
+        <tr><th>Surface</th><td>9,2 m² (à confirmer — cf. cotes)</td></tr>
+        <tr><th>Prix</th><td>7 000 € TTC (grille « dès 7 000 € » — honoraires à la charge du vendeur)</td></tr>
+        <tr><th>Frais de notaire</th><td>~175 € (2,5 % — VEFA neuve)</td></tr>
+        <tr><th>Vendeur</th><td>Constructa Promotion (promoteur, 134 bd Haussmann, Paris — RCS 065805822) — grille : 4 places B à 7 000 €, 3 doubles à 12 000 €, 10 places moto à 1 200 €</td></tr>
+        <tr><th>Disponibilité</th><td>Livraison T2 2027 (31/05/2027) — capital immobilisé ~9 mois sans revenu</td></tr>
+        <tr><th>Charges copro</th><td>Inconnues — budget prévisionnel non communiqué avant livraison (VEFA). Estimées ~150 €/an : quote-part charges courantes copro résidence neuve (~120 €) + électricité/entretien sous-sol (~30 €). À confirmer par écrit</td></tr>
+        <tr><th>Taxe foncière</th><td>Exonérée 2 ans après livraison (neuf), puis ~30 €/an estimée (à confirmer sur avis)</td></tr>
+        <tr><th>Amortissement</th><td>Oui — sous-sol bâti : 90 % du prix de revient sur 30 ans (~215 €/an)</td></tr>
+        <tr><th>DPE</th><td>Non applicable (stationnement)</td></tr>
+        <tr><th>Sécurisation</th><td>Résidence neuve sécurisée, sous-sol fermé (annonce)</td></tr>
+        <tr><th>Régime juridique</th><td>Copropriété à créer (VEFA) — lot distinct à confirmer à l'état descriptif de division (liquidité de sortie unitaire)</td></tr>
+        <tr><th>Loyer marché estimé</th><td>60-70 €/mois pour ce gabarit (décote ~20 % vs places standard sous-sol 78-95 €/mois constatées en ligne sur La Seyne) — estimation, aucune ancre directe pour une place de 9,2 m²</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières</h2>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 10 % — Loyer 65 €/mois (est. gabarit) — Charges estimées 180 €/an</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">780 €</td></tr>
+            <tr><td>Vacance locative (10 %)</td><td class="num">−78 €</td></tr>
+            <tr class="secondary"><td>Charges (copro ~150 € + TF 30 € — estimées VEFA)</td><td class="num">−180 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">522 €</td></tr>
+            <tr><td>Amortissement (sous-sol bâti, 90 % / 30 ans)</td><td class="num">−215 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">307 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−46 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">476 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">40 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">58 €</td></tr>
+            <tr><td>Rendement net (revient / marché)</td><td class="num">6,6 % / 6,8 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 5 % — Loyer 72 €/mois (+10 %) — Charges −20 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">864 €</td></tr>
+            <tr><td>Vacance locative (5 %)</td><td class="num">−43 €</td></tr>
+            <tr class="secondary"><td>Charges (copro ~120 € + TF 30 €)</td><td class="num">−150 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">671 €</td></tr>
+            <tr><td>Amortissement (sous-sol bâti, 90 % / 30 ans)</td><td class="num">−215 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">456 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−68 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">603 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">50 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">68 €</td></tr>
+            <tr><td>Rendement net (revient / marché)</td><td class="num">8,4 % / 8,6 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 25 % — Loyer 52 €/mois (−20 %) — Charges +30 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">624 €</td></tr>
+            <tr><td>Vacance locative (25 %)</td><td class="num">−156 €</td></tr>
+            <tr class="secondary"><td>Charges (copro ~195 € + TF 30 €)</td><td class="num">−225 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">243 €</td></tr>
+            <tr><td>Amortissement (sous-sol bâti, 90 % / 30 ans)</td><td class="num">−215 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">28 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−4 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">239 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">20 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">38 €</td></tr>
+            <tr><td>Rendement net (revient / marché)</td><td class="num">3,3 % / 3,4 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>EBE avant IS</td><td class="num">522 €</td><td class="num">671 €</td><td class="num">243 €</td></tr>
+          <tr><td>CF net mensuel</td><td class="num">40 €</td><td class="num">50 €</td><td class="num">20 €</td></tr>
+          <tr><td>CF amort. réintégré / mois</td><td class="num">58 €</td><td class="num">68 €</td><td class="num">38 €</td></tr>
+          <tr><td>Rendement net (revient)</td><td class="num">6,6 %</td><td class="num">8,4 %</td><td class="num">3,3 %</td></tr>
+          <tr><td>Rendement net (marché)</td><td class="num">6,8 %</td><td class="num">8,6 %</td><td class="num">3,4 %</td></tr>
+        </tbody>
+      </table>
+      <p class="attractiveness-intro"><strong>Sensibilité gabarit :</strong> si les cotes confirment 4,0 m de profondeur (et non 4,5-5,0 m), le loyer plafonne à ~60 €/mois : EBE 468 €, CF net ~36 €/mois, rendement base 6,0 % — sous le seuil parking. Le seuil de 6,5 % n'est alors tenu qu'à ~6 000 € facial.</p>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Charges copro inconnues (VEFA)</td>
+          <td>Budget prévisionnel non communiqué avant livraison. Estimation 150 €/an (quote-part copro résidence neuve + électricité sous-sol) — si les charges réelles atteignaient 300 €/an, le rendement base tomberait à ~4,9 %. Verrou n°1 : budget prévisionnel écrit avant réservation.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Gabarit réduit de la catégorie B</td>
+          <td>2,30 × 4,00 m : seuls les véhicules ≤ ~3,8 m entrent (micro-citadines). Bassin locatif étroit, loyer plafonné à 60-70 €/mois estimé contre 78-95 €/mois pour une place standard. C'est la limite structurelle du produit, pas un défaut du prix.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Cotes exactes non confirmées</td>
+          <td>Profondeur annoncée « jusqu'à 1 m » sous le standard : les 4 lots B peuvent mesurer de 4,0 à ~5,0 m. La valeur locative varie du simple au double selon la cote réelle. Sélectionner le lot le plus profond, plan côté à l'appui.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>VEFA — délai de livraison</td>
+          <td>Livraison T2 2027 : ~9 mois de capital immobilisé sans revenu, risque de retard de chantier (6-18 mois possibles sans pénalité significative), aucune certitude sur l'état du marché locatif à la remise des clés.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Loyer non ancré pour ce gabarit</td>
+          <td>65 €/mois est une estimation par décote (aucune annonce locative directe d'une place de 9,2 m² en sous-sol sur La Seyne). Le loyer réel se confirmera à la relocation, après livraison. Sensibilité : 55 €/mois → rendement base ~5,4 %.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Concurrence locative intra-résidence</td>
+          <td>Le promoteur commercialise 17 places (4 B + 3 doubles + 10 moto). Les places voiture restantes sont peu nombreuses — risque modéré ; à re-vérifier au fil de la commercialisation (d'autres lots pourraient être libérés par des acquéreurs-investisseurs).</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Liquidité de revente</td>
+          <td>Gabarit non standard : le bassin d'acheteurs est plus étroit que pour une place standard. Revente sans plus-value attendue après frais. Confirmer à l'état descriptif de division que chaque place constitue un lot distinct cessible à un tiers non-résident.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict buy">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance">À acheter au prix facial de 7 000 € — sous réserve de trois verrous écrits avant réservation : cotes réelles du lot (profondeur ≥ 4,5 m recommandée), budget prévisionnel de charges ≤ 200 €/an, et lot distinct cessible à un tiers non-résident. Le sous-sol neuf sécurisé amortissable s'achète ici au prix le plus bas du marché local (761 €/m² contre 1 000-2 700 €/m² sur les places et boxes de l'ancien à La Seyne), pour un rendement net d'IS de 6,6 % en base (6,8 % sur valeur) — au-dessus du seuil parking de 6,5 %, calculé sur un loyer volontairement conservateur de 65 €/mois (décote de gabarit appliquée aux 78-95 €/mois des places standard). Le point de vigilance n'est pas le prix, c'est le gabarit : si la cote ressort à 4,0 m, le loyer plafonne à ~60 €/mois, le rendement tombe à 6,0 % et le dossier ne tient plus qu'à ~6 000 € facial — d'où l'importance de sélectionner le lot le plus profond et de ne rien réserver avant les plans côté.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 7 000 € facial (grille VEFA) — si la cote du lot confirmée est de 4,0 m, le prix de tenue du seuil 6,5 % tombe à ~6 000 € : à négocier en volume ou à laisser filer</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Exiger avant réservation : plan côté du lot (profondeur réelle), budget prévisionnel de charges par écrit, état descriptif de division (lot distinct, cession à tiers non-résident autorisée)</li>
+        <li>Sélectionner le lot le plus profond parmi les 4 places B — la grille « dès 7 000 € » ne différencie pas les lots : c'est un droit de tirage, pas une loterie</li>
+        <li>Jouer le volume : le stock de places voiture (4 B + 3 doubles) est un levier réel — une prise multiple justifie une décote ou des conditions (le promoteur écoule les parkings en fin de programme)</li>
+        <li>L'incertitude de gabarit est un argument de prix : une place à 4,0 m de profondeur vaut locativement moins qu'une place à 5,0 m — le faire valoir si des lots de tailles différentes sont affichés au même prix</li>
+        <li>Refuser tout supplément (marquage, télécommande, options) : les inclure ou s'en passer — le neuf n'a pas besoin de travaux</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices) — comptable et assurance mutualisés (SCI existante) — amortissement sous-sol ~215 €/an (90 % du prix de revient sur 30 ans)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~175 € (2,5 % — VEFA neuve)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 0 € (neuf, livraison T2 2027)</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
