@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Maison de ville divisée en 4 studios (100 m²), Centre-ville, Tarascon (13150)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Maison de ville 1900 divisée en 4 studios — 100 m², quartier Centre-ville – Château – Condamine, Tarascon (13150) — adresse exacte non communiquée</p>
+  <p class="report-date">Analyse générée le 6 septembre 2026 — prix affiché 150 000 €, entre particuliers, sans agence</p>
+  <p class="report-source">Source : LeBonCoin — annonce « Maison avec 4 studios » du 5 août 2026, vendeur « pascal » (particulier)</p>
+  <div class="report-source-link"><a href="https://www.leboncoin.fr/ad/ventes_immobilieres/3244905534">https://www.leboncoin.fr/ad/ventes_immobilieres/3244905534</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location longue durée — conservation des 4 studios</strong> — SCI à l'IS (15 %)</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat</span>
+      <span class="card-value">150 000 € (FAI)</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">100 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">1 500 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">211 250 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché (rénovée)</span>
+      <span class="card-value">160 – 190 k€</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">1 600 €/mois (4 × 400 €, annoncés)</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">6,6 % / 8,0 %</span>
+    </div>
+    <div class="card card-verdict note-6-4">
+      <span class="card-label">Note</span>
+      <span class="card-value">6,4/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.8058" data-lon="4.6603" data-address="Centre-ville – Château – Condamine, Tarascon (13150) — coordonnées du centre-ville, adresse exacte non communiquée"></div>
+  </section>
+
+  <!-- === Attractivité === -->
+  <section class="attractiveness">
+    <h2>Attractivité — Centre-ville de Tarascon (13150)</h2>
+    <p class="attractiveness-intro">Tarascon, ~15 900 habitants, ville populaire des Bouches-du-Rhône en rive gauche du Rhône, face à Beaucaire. Centre ancien au pied du château, marchés et commerces vivants, mais revenus modestes (18 190 €/habitant), chômage à 10-12 % et parc social important. Ce n'est pas un marché porteur : c'est un marché de rendement, où la demande locative réelle se concentre sur les petites surfaces bon marché (studios 315-520 €/mois constatés).</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+          <span class="attr-score"><strong>5/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Gare SNCF TER (ligne Avignon–Arles), bus urbains, A54/A9 à quelques minutes, Avignon TGV à ~20 km. Centre-ville compact et piétonnier. Rien de structurant, mais correct pour une ville de cette taille.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+          <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Centre ancien commerçant (rues des Halles et piétonnes), marché hebdomadaire, commerces de proximité ; grandes surfaces en entrée de ville. Attractivité touristique modeste (château de Tarascon).</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+          <span class="attr-score"><strong>5/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Écoles, collèges et lycées complets sur la commune ; aucun enseignement supérieur local — les étudiants partent vers Avignon, Nîmes ou Arles. Demande étudiante sur place quasi nulle.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+          <span class="attr-score"><strong>4/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:40%"></div></div>
+        <p class="attr-detail">Centre ancien populaire : incivilités et délinquance moyenne signalées, rues étroites, stationnement difficile, certaines rues en retrait. La réalité se joue rue par rue — d'où l'importance de l'adresse exacte.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+          <span class="attr-score"><strong>5/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Demande réelle pour les petites surfaces (studios 315-520 €/mois constatés, offre pléthorique d'annonces) mais population aux revenus modestes et parc social important : tension faible, loyers haut de fourchette à risque de vacance.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+          <span class="attr-score"><strong>4/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:40%"></div></div>
+        <p class="attr-detail">Chômage ~10-12 %, économie de PME, agroalimentaire et logistique, dépendance à l'emploi d'Avignon-Arles, démographie stable (~15 900 hab.). Peu de projets structurants visibles.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> jeunes actifs et travailleurs modestes du bassin tarasconnais, personnes seules en mobilité (intérim, services), petits budgets — studios meublés sous 400 €/mois</p>
+      <p><strong>Conclusion :</strong> adéquation moyenne (4,8/10 en pondération location nue). Le quartier ne crée pas de demande par lui-même : le produit « studio à loyer contraint » correspond à la réalité du marché local, mais sans marge pour viser au-dessus de 400 €/mois. Le centre ancien de Tarascon se valorise peu — l'opération ne peut se défendre que par le rendement, pas par la plus-value.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Le bien est déjà configuré en 4 studios productifs (annoncés 1 600 €/mois) — la location longue durée est la lecture naturelle. La revente après travaux (MDB) est testée et éliminée : le coût de revient dépasse la valeur rénovée.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Location longue durée — 4 studios conservés</strong></td>
+          <td>4</td>
+          <td>6,6 % (base) / 7,3 % (optimiste)</td>
+          <td>175 000 € (retenue)</td>
+          <td><span class="ratio-badge ratio-mauvais">1,21</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Après remise en état</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:48%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Marchand de biens — rénover puis revendre</td>
+          <td>1</td>
+          <td>PV négative (revient 211 k€ &gt; revente ~175 k€)</td>
+          <td>175 000 €</td>
+          <td><span class="ratio-badge ratio-mauvais">1,21</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Envisageable</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:48%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Revente à l'unité des studios rénovés (si lots distincts)</td>
+          <td>4</td>
+          <td>PV unitaire 40-45 k€ estimée — déficitaire à ce prix d'achat</td>
+          <td>160 – 180 k€</td>
+          <td><span class="ratio-badge ratio-mauvais">1,21</span></td>
+          <td><span class="badge-faisabilite faisabilite-faible">À confirmer (division)</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:48%"></div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location longue durée est retenue par défaut, car c'est la seule lecture où le bien peut créer du revenu : avec les 1 600 €/mois annoncés, le rendement net d'IS atteint 6,6 % sur le prix de revient (211 k€, travaux de 50 k€ inclus) — correct pour un centre ancien, sans plus. Mais le ratio coût/valeur de 1,21 dit l'essentiel : à 150 k€, on paie 36 k€ de plus que ce que les travaux permettent de recréer (valeur rénovée estimée 175 k€). Le MDB et la revente à l'unité sont structurellement déficitaires à ce prix d'achat : chaque euro investi crée moins d'un euro de valeur. Le dossier ne se répare qu'à l'achat — le prix doit baisser pour que le ratio repasse sous 1,05 (≈ 116-120 k€).</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Quartier Centre-ville – Château – Condamine, Tarascon (13150) — <strong>adresse exacte non communiquée</strong> dans l'annonce</td></tr>
+        <tr><th>Type</th><td>Maison de ville de 1900, divisée en 4 studios — annonce : 5 pièces, 3 chambres, 4 salles d'eau, 100 m²</td></tr>
+        <tr><th>Prix affiché</th><td>150 000 € FAI (1 500 €/m²) — vente entre particuliers, sans agence</td></tr>
+        <tr><th>Revenus annoncés</th><td>1 600 €/mois (4 × 400 €) — <strong>aucun bail ni justificatif fourni</strong> ; cohérent avec le haut du marché des studios meublés de Tarascon (390-490 € CC pour 18-29 m² constatés)</td></tr>
+        <tr><th>Travaux</th><td>« Travaux à prévoir » — photos montrant façade dégradée (joints, salpêtre en pied de mur), menuiseries vétustes, entrée sans porte, pièce sous combles en chantier. Enveloppe estimée <strong>50 000 €</strong> (500 €/m²), fourchette réelle 25-80 k€</td></tr>
+        <tr><th>DPE</th><td>Non communiqué — maison 1900 : classement probable F/G, passif énergétique et contrainte légale de location (G non louables depuis 2025, F en 2028)</td></tr>
+        <tr><th>Taxe foncière</th><td>Non communiquée — estimée ~1 300 €/an (à vérifier sur avis)</td></tr>
+        <tr><th>Charges</th><td>Mono-propriété présumée (pas de copropriété a priori) — PNO ~300 €/an + entretien ~800 €/an estimés</td></tr>
+        <tr><th>Occupation</th><td>Non précisée — 4 studios occupés ou non, inconnu</td></tr>
+        <tr><th>Vendeur</th><td>Particulier « pascal » (LeBonCoin, membre depuis décembre 2018, très réactif, numéro vérifié) — annonce publiée le 5 août 2026, 7 favoris</td></tr>
+        <tr><th>Valeur marché rénovée</th><td>160 – 190 k€, retenue 175 k€ — croisement : annonces maisons de ville du centre (845-1 330 €/m² en l'état, biens 149-213 m²), prix/m² d'un lot rénové en centre ~1 600-1 900 €/m², MeilleursAgents ville (2 211 €/m² maison, moyenne tirée par la périphérie — non représentative du centre ancien)</td></tr>
+        <tr><th>Prix de revient</th><td>211 250 € = prix 150 000 € + frais de notaire ~11 250 € (ancien, estimés 7,5 %) + travaux 50 000 €</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — prix affiché 150 000 € (SCI IS)</h2>
+    <p class="attractiveness-intro">Loyer retenu 400 €/mois/studio (annoncé, haut de fourchette marché — à confirmer sur baux), vacance 5 % base, charges estimées décomposées : TF ~1 300 € + PNO ~300 € + entretien ~800 € + provision rénovation 2,5 % des revenus. Amortissement : 90 % du prix de revient (211 250 €) sur 30 ans = ~6 338 €/an. Valeur après travaux retenue : 175 000 €.</p>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Loyer 400 €/mois × 4 — Vacance 5 % — Charges estimées 2 880 €/an</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">19 200 €</td></tr>
+            <tr><td>Vacance locative (5 %)</td><td class="num">−960 €</td></tr>
+            <tr class="secondary"><td>Charges (TF ~1 300 € + PNO ~300 € + entretien ~800 € + provision rénov. ~480 € — estimées)</td><td class="num">−2 880 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">15 360 €</td></tr>
+            <tr><td>Amortissement (90 % du revient / 30 ans)</td><td class="num">−6 338 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">9 022 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−1 353 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">14 007 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">1 167 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">1 695 €</td></tr>
+            <tr><td>Rendement net (revient / valeur)</td><td class="num">6,6 % / 8,0 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Loyer 420 €/mois (+5 %) — Vacance 2 % — Charges −10 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">20 160 €</td></tr>
+            <tr><td>Vacance locative (2 %)</td><td class="num">−403 €</td></tr>
+            <tr class="secondary"><td>Charges (TF ~1 170 € + PNO ~270 € + entretien ~720 € + provision rénov. ~504 €)</td><td class="num">−2 664 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">17 093 €</td></tr>
+            <tr><td>Amortissement (90 % du revient / 30 ans)</td><td class="num">−6 338 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">10 755 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−1 613 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">15 480 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">1 290 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">1 818 €</td></tr>
+            <tr><td>Rendement net (revient / valeur)</td><td class="num">7,3 % / 8,8 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Loyer 360 €/mois (−10 %) — Vacance 12 % — Charges +20 % + 5 000 € de travaux imprévus</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">17 280 €</td></tr>
+            <tr><td>Vacance locative (12 %)</td><td class="num">−2 074 €</td></tr>
+            <tr class="secondary"><td>Charges (TF ~1 560 € + PNO ~360 € + entretien ~960 € + provision rénov. ~432 € + travaux imprévus 5 000 €)</td><td class="num">−8 312 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">6 894 €</td></tr>
+            <tr><td>Amortissement (90 % du revient / 30 ans)</td><td class="num">−6 338 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">556 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−83 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">6 811 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">568 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">1 096 €</td></tr>
+            <tr><td>Rendement net (revient / valeur)</td><td class="num">3,2 % / 3,9 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>EBE avant IS</td><td class="num">15 360 €</td><td class="num">17 093 €</td><td class="num">6 894 €</td></tr>
+          <tr><td>CF net mensuel</td><td class="num">1 167 €</td><td class="num">1 290 €</td><td class="num">568 €</td></tr>
+          <tr><td>CF amort. réintégré / mois</td><td class="num">1 695 €</td><td class="num">1 818 €</td><td class="num">1 096 €</td></tr>
+          <tr><td>Rendement net (revient)</td><td class="num">6,6 %</td><td class="num">7,3 %</td><td class="num">3,2 %</td></tr>
+          <tr><td>Rendement net (valeur)</td><td class="num">8,0 %</td><td class="num">8,8 %</td><td class="num">3,9 %</td></tr>
+        </tbody>
+      </table>
+      <p class="attractiveness-intro"><strong>Lecture :</strong> le rendement base de 6,6 % sur le prix de revient repose intégralement sur deux hypothèses non démontrées : les 400 €/mois par studio (baux absents) et l'enveloppe de 50 k€ (fourchette 25-80 k€). Dès que le loyer redescend à 360 € (relocation prudente) ou que les travaux dérapent, le Worst Case montre le plancher : 3,2 % net sur revient. La marge de sécurité ne se trouve pas dans l'exploitation — elle ne peut venir que du prix d'achat.</p>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Revenus annoncés non démontrés et contradictoires avec l'état</td>
+          <td>1 600 €/mois annoncés pour 4 studios alors que les photos montrent des pièces non louables en l'état (entrée sans porte, pièce en chantier) et une façade dégradée. Soit les studios occupés sont en meilleur état que les 3 photos publiées, soit les revenus sont théoriques, soit des locations indignes sont en cours — les trois lectures changent radicalement la valeur. Exiger baux, DPE par lot et état des lieux avant toute offre.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Enveloppe travaux très incertaine</td>
+          <td>50 000 € retenus (500 €/m²), fourchette réelle 25-80 k€. Maison 1900 : électricité, plomberie des 4 salles d'eau, traitement de l'humidité ascensionnelle, ravalement, menuiseries. À 80 k€, le prix de revient dépasse 240 k€ et le prix plafond d'achat tombe sous 110 k€. Devis électricité/plomberie/toiture obligatoires avant offre.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>DPE inconnu — passif énergétique</td>
+          <td>Maison 1900 sans DPE communiqué : classement probable F/G. Les logements G ne sont plus louables en nouvelle location depuis 2025, les F suivront en 2028 — si les studios sont loués avec un DPE G, la situation est déjà non conforme. Une rénovation énergétique ajouterait 20-40 k€ de coût.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Adresse exacte inconnue</td>
+          <td>Seul le quartier (Centre-ville – Château – Condamine) est communiqué. La valeur peut varier de ±30 % entre deux rues du centre ancien (rues en retrait vs axes commerçants). Identifier la rue et croiser DVF / MeilleursAgents avant offre.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Conformité administrative de la division</td>
+          <td>Maison transformée en 4 studios : vérifier la déclaration préalable ou l'autorisation de changement d'usage, la conformité électrique et les normes de décence par lot. Un défaut peut bloquer la location ou la revente — et engager la responsabilité du bailleur.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Gros œuvre 1900 à expertiser</td>
+          <td>Toiture, charpente, murs porteurs, humidité ascensionnelle visible en pied de façade. Visite structurelle (maçon, couvreur) avant offre — un sinistre non visible est le scénario de dérapage classique de ce type de bien.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Marché locatif local à revenus modestes</td>
+          <td>Des studios à 400 €/mois sont dans le haut du marché de Tarascon : au-delà, la relocation ralentit nettement. Revenu moyen 18 190 €/habitant, parc social important, tension faible — le Worst Case à 12 % de vacance est réaliste pour des loyers haut de fourchette.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Liquidité de revente étroite</td>
+          <td>Le centre ancien de Tarascon est un marché mince : un bien divisé en studios ne s'adresse qu'aux investisseurs, délais de revente longs et décote possible. Pondéré par le ticket modeste (150 k€) et le rendement qui tient la valeur en location.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>À négocier — offre à 115 000 €</strong>. Le produit est cohérent avec son marché (4 studios en centre ancien de Tarascon, demande locative réelle sous 400 €/mois, ticket modeste) et le rendement facial annoncé est alléchant. Mais le prix demandé ne laisse aucune marge : à 150 k€, avec 50 k€ de travaux crédibles au vu des photos, le coût de revient atteint 211 k€ pour une valeur rénovée estimée à 175 k€ — le ratio de 1,21 détruit 36 k€ de valeur dès le premier jour, et le MDB est structurellement déficitaire à ce prix. Le rendement net de 6,6 % sur revient ne tient que si les 1 600 €/mois sont réels (baux) et si les travaux restent sous 30-50 k€ : deux conditions qu'aucun document ne démontre aujourd'hui. Le prix d'équilibre (revient = valeur) se situe autour de 116 000 €.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> ~116 000 € pour un ratio coût/valeur ≈ 1,0 (revient ~174 k€, rendement net ~8 % sur revient). À 130 000 €, le dossier ne se défend que si les diagnostics confirment tout : baux en cours à 400 €, DPE corrects, devis travaux sous 30 k€. Au-delà de 130 k€, on achète de la valeur négative — ne pas y aller.</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>La contradiction revenus/état est l'argument n°1 : demander baux, DPE par studio et état des lieux AVANT toute offre. Si les studios ne sont pas tous loués en l'état, le 1 600 €/mois est un potentiel — pas un actif — et la décote se calcule sur le manque à gagner (× 12 mois × années de remise en état)</li>
+        <li>Comparables du centre : les maisons de ville de Tarascon se négocient 845-1 330 €/m² (149-213 m², annonces pro et particulier) — 1 500 €/m² ici, c'est 15 à 40 % au-dessus, et la prime « studios » ne vaut que si les revenus sont prouvés</li>
+        <li>Les photos font le travail pour nous : façade à ravaler, salpêtre, pièces en chantier — provisionner 50 k€ minimum et déduire du prix tout dépassement constaté en visite (toiture, électricité, plomberie)</li>
+        <li>DPE : si F ou G, le coût de mise en conformité (isolation, chauffage, VMC) s'impute sur le prix — et l'interdiction de location des G interroge la légalité des baux actuels, un levier de décote puissant</li>
+        <li>Vente entre particuliers sans agence : le prix facial est un prix net vendeur — la comparaison avec les annonces d'agence (souvent frais inclus) joue en faveur d'une offre sous les 120 k€</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices) — amortissement bâti ~6 338 €/an (90 % du prix de revient sur 30 ans), comptable déjà mutualisé (SCI existante)</p>
+      <p><strong>Estimation frais de notaire :</strong> ~11 250 € (7,5 % — ancien, estimation par défaut ; le barème réel dépend du montant d'acte)</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 50 000 € (fourchette 25-80 k€) — devis électricité, plomberie, toiture obligatoires avant offre ; toute inconnue résiduelle se déduit du prix</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>

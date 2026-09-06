@@ -7,6 +7,187 @@
  },
  "analyses": [
   {
+   "slug": "2026-09-06-maison-4-studios-centre-tarascon",
+   "date_analyse": "2026-09-06",
+   "date_maj": null,
+   "titre": "Maison de ville 1900 divisée en 4 studios (100 m²) — Centre-ville, Tarascon (13150)",
+   "bien": {
+    "type_bien": "maison",
+    "sous_type": null,
+    "type_detail": "Maison de ville de 1900 divisée en 4 studios (annonce : 5 pièces, 3 chambres, 4 salles d'eau) — travaux à prévoir, vente entre particuliers sans agence",
+    "neuf": false,
+    "adresse": {
+     "texte": "Centre-ville – Château – Condamine, Tarascon (13150) — adresse exacte non communiquée dans l'annonce",
+     "ville": "Tarascon",
+     "code_postal": "13150"
+    },
+    "surfaces": {
+     "texte": "100 m² annoncés — répartition entre les 4 studios et les circulations inconnue (surface Carrez à vérifier lot par lot)"
+    },
+    "lots": {
+     "count": 4,
+     "nature": "4 studios indépendants (mono-propriété présumée — statut copro à confirmer)",
+     "lots_distincts": null
+    },
+    "copro": {
+     "charges_annuelles_euros": 0.0,
+     "charges_source": "Mono-propriété présumée (le vendeur cède la maison entière) — pas de syndic a priori ; PNO et entretien portés en charges directes. À confirmer : si division en lots de copropriété, charges à reconstituer sur PV d'AG"
+    },
+    "travaux": {
+     "montant_euros": 50000,
+     "nature": "Rénovation de remise en état estimée 50 000 € (500 €/m²) : mise aux normes électrique, plomberie des salles d'eau, traitement humidité ascensionnelle RDC (salpêtre visible), ravalement partiel, menuiseries vétustes, finitions des pièces en chantier. Fourchette 25-80 k€ — devis obligatoires avant offre"
+    }
+   },
+   "annonce": {
+    "plateforme": "leboncoin",
+    "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3244905534",
+    "prix_affiche_euros": 150000.0,
+    "prix_retenu_euros": null,
+    "prix_statut": "affiche"
+   },
+   "marche": {
+    "valeur": {
+     "basse_euros": 160000.0,
+     "haute_euros": 190000.0,
+     "retenue_euros": 175000.0,
+     "source": "Croisement : annonces maisons de ville centre Tarascon (845-1 330 €/m² en l'état, 149-213 m²) ; MeilleursAgents ville maison 2 211 €/m² (moyenne tirée par la périphérie, non représentative du centre ancien) ; prix/m² lot rénové en centre ~1 600-1 900 €/m² ; approche rendement : net ~15 000 € capitalisé à 7-7,5 %",
+     "confiance": "moyenne"
+    },
+    "loyers": [
+     {
+      "lot": "studio",
+      "quantite": 4,
+      "loyer_mensuel_euros": 400.0,
+      "occupe": null,
+      "note": "400 €/mois/studio annoncés par le vendeur (1 600 €/mois soit 19 200 €/an) — cohérent avec le haut du marché des studios meublés de Tarascon (390-490 € CC constatés pour 18-29 m²) mais conditionné à des studios décents (DPE, conformité) que les photos ne confirment pas. À vérifier sur baux ; relocation prudente 350-375 €/mois"
+     }
+    ],
+    "notes": "Prix facial 1 500 €/m² — comparables maisons de ville du centre de Tarascon nettement moins chers au m² (845-1 330 €/m², biens plus grands) ; la prime tient aux revenus locatifs annoncés. Adresse exacte inconnue : valeur ±30 % selon la rue."
+   },
+   "hypotheses": {
+    "vacance_base_pct": 5.0,
+    "vacance_best_pct": 2.0,
+    "vacance_worst_pct": 12.0,
+    "vacance_justification": "Location nue classique en studios : 5 % base / 2 % best / 12 % worst. Ville à revenus modestes : des studios au-delà de 400 €/mois se relouent lentement, turnover locatif réel.",
+    "charges": {
+     "taxe_fonciere_annuelle_euros": 1300.0,
+     "taxe_fonciere_commentaire": "Estimée 1 300 €/an (maison 1900 de 100 m², centre Tarascon, Bouches-du-Rhône) — à vérifier sur avis réel (alerte si > 15 % du brut)",
+     "charges_copro_annuelles_euros": 0.0,
+     "charges_copro_commentaire": "Mono-propriété présumée — pas de charges de copropriété ; PNO et entretien en lignes directes",
+     "pno_annuelle_euros": 300.0,
+     "pno_commentaire": "PNO maison divisée en 4 lots ~300 €/an (estimée)",
+     "entretien_annuel_euros": 800.0,
+     "entretien_commentaire": "Entretien courant mono-propriété (façade, toiture, petits travaux) ~800 €/an estimé",
+     "comptabilite_annuelle_euros": 0.0,
+     "comptabilite_commentaire": "Comptable déjà mutualisé (SCI existante)"
+    },
+    "frais_acquisition_euros": null
+   },
+   "analyse": {
+    "branche": "residentiel",
+    "type_operation": "locatif",
+    "strategie_retenue": {
+     "nom": "Location longue durée — conservation des 4 studios",
+     "code": "ld-nue",
+     "lots": 4
+    },
+    "strategies_explorees": [
+     {
+      "strategie": "Location nue des 4 studios (loyers marché 350-400 €)",
+      "lots": 4,
+      "faisabilite": "immédiate après remise en état",
+      "risque": "élevé (état, revenus à prouver)"
+     },
+     {
+      "strategie": "Marchand de biens : rénovation puis revente en un ou plusieurs lots",
+      "lots": "1-4",
+      "faisabilite": "sous réserve PLU et division",
+      "risque": "moyen"
+     },
+     {
+      "strategie": "Vente séparée des studios rénovés (si lots distincts)",
+      "lots": 4,
+      "faisabilite": "à confirmer (division)",
+      "risque": "faible-moyen"
+     }
+    ],
+    "attractivite": [
+     {
+      "dimension": "transports",
+      "score": 5,
+      "justification": "Gare SNCF TER Tarascon (ligne Avignon–Arles), bus urbains, A54/A9 à quelques minutes, Avignon TGV ~20 km. Centre-ville compact et piétonnier — pas de transport structurant mais correct pour 15 900 habitants."
+     },
+     {
+      "dimension": "commerces",
+      "score": 6,
+      "justification": "Centre ancien commerçant (rues des Halles et piétonnes), marché hebdomadaire, commerces de proximité ; grandes surfaces en entrée de ville. Attractivité touristique modeste (château de Tarascon)."
+     },
+     {
+      "dimension": "ecoles",
+      "score": 5,
+      "justification": "Écoles, collèges et lycées complets sur la commune ; aucun enseignement supérieur — étudiants vers Avignon, Nîmes ou Arles. Demande étudiante locale quasi nulle."
+     },
+     {
+      "dimension": "securite",
+      "score": 4,
+      "justification": "Centre ancien populaire : incivilités et délinquance moyenne signalées, rues étroites, stationnement difficile, certaines rues en retrait. Réalité à apprécier rue par rue."
+     },
+     {
+      "dimension": "demande_locative",
+      "score": 5,
+      "justification": "Demande réelle pour les petites surfaces (studios 315-520 €/mois constatés) mais population aux revenus modestes (18 190 €/hab) et parc social important : tension faible, loyers haut de fourchette à risque de vacance."
+     },
+     {
+      "dimension": "dynamisme",
+      "score": 4,
+      "justification": "Chômage ~10-12 %, économie de PME/agroalimentaire/logistique, dépendance à l'emploi d'Avignon-Arles, démographie stable. Peu de projets structurants visibles."
+     }
+    ],
+    "risques": [
+     {
+      "facteur": "Revenus annoncés non démontrés et contradictoires avec l'état",
+      "detail": "1 600 €/mois annoncés pour 4 studios alors que les photos montrent des pièces non louables en l'état (entrée sans porte, pièce en chantier) et une façade dégradée. Soit les studios occupés sont en meilleur état que les 3 photos, soit les revenus sont théoriques ou issus de locations indignes. Exiger baux, DPE par lot et état des lieux avant toute offre.",
+      "severite": 4
+     },
+     {
+      "facteur": "Enveloppe travaux très incertaine",
+      "detail": "50 000 € retenus (500 €/m²) — fourchette réelle 25-80 k€. Maison 1900 : électricité, plomberie des 4 salles d'eau, traitement humidité, ravalement, menuiseries. Si 80 k€, le prix plafond tombe sous 110 k€. Devis élec/plomberie/toiture obligatoires avant offre.",
+      "severite": 4
+     },
+     {
+      "facteur": "DPE inconnu — passif énergétique",
+      "detail": "Maison 1900 sans DPE communiqué : classement probable F/G. Les logements G ne sont plus louables (nouvelles locations depuis 2025), les F suivront en 2028. Si les studios sont loués aujourd'hui avec un DPE G, la situation est déjà non conforme. Rénovation énergétique = coût additionnel potentiel 20-40 k€.",
+      "severite": 4
+     },
+     {
+      "facteur": "Adresse exacte inconnue",
+      "detail": "Seul le quartier (Centre-ville – Château – Condamine) est communiqué. La valeur peut varier de ±30 % entre deux rues du centre ancien. Identifier la rue et croiser DVF/MeilleursAgents avant offre.",
+      "severite": 3
+     },
+     {
+      "facteur": "Conformité administrative de la division",
+      "detail": "Maison transformée en 4 studios : vérifier déclaration préalable / autorisation de changement d'usage, conformité électrique et sécurité (ERP non, mais logements : normes décence), nombre de logements autorisé. Un défaut de conformité peut bloquer la location ou la revente.",
+      "severite": 3
+     },
+     {
+      "facteur": "Gros œuvre 1900 à expertiser",
+      "detail": "Toiture, charpente, murs porteurs, humidité ascensionnelle visible en pied de façade. Visite structurelle (maçon, couvreur) avant offre — sinistre non visible = risque de dépassement.",
+      "severite": 3
+     },
+     {
+      "facteur": "Marché locatif local à revenus modestes",
+      "detail": "Des studios à 400 €/mois sont dans le haut du marché de Tarascon : au-delà, la relocation ralentit. Ville à 18 190 €/hab de revenu moyen, parc social important, tension locative faible. Le Worst Case à 12 % de vacance est réaliste.",
+      "severite": 3
+     },
+     {
+      "facteur": "Liquidité de revente étroite",
+      "detail": "Le centre ancien de Tarascon est un marché mince : un bien divisé en studios ne s'adresse qu'aux investisseurs. Délais de revente longs, décote possible. À pondérer par le ticket modeste (150 k€).",
+      "severite": 2
+     }
+    ]
+   }
+  },
+  {
    "slug": "2026-09-03-place-classe-b-parking-milos-la-seyne",
    "date_analyse": "2026-09-03",
    "date_maj": null,
