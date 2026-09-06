@@ -15,3 +15,7 @@ analyses/*/documents/*
 # Notes perso
 notes.md
 *.log
+
+# Python
+__pycache__/
+*.pyc
