@@ -1,9 +1,9 @@
 {
  "meta": {
   "schema": "analyses-v2-entrees",
-  "generated_at": "2026-09-06T17:09:53+00:00",
+  "generated_at": "2026-09-07T00:00:00+00:00",
   "source": "import_legacy.py",
-  "count": 51
+  "count": 52
  },
  "analyses": [
   {
@@ -5487,6 +5487,214 @@
     "analyse.attractivite",
     "analyse.risques"
    ]
+  },
+  {
+   "slug": "2026-09-07-immeuble-mixte-bd-jean-moulin-saint-raphael",
+   "date_analyse": "2026-09-07",
+   "date_maj": null,
+   "titre": "Saint-Raphaël — Cession 100 % parts SCI : immeuble mixte 5 lots + terrain 940 m² (Bd Jean Moulin)",
+   "bien": {
+    "type_bien": "immeuble",
+    "sous_type": null,
+    "type_detail": "Cession de 100 % des parts d'une SCI à l'IS (vendeur : agence CARO). Prix facial 383 900 € (parts) + reprise de la dette : CRD 253 000 € au 01/01/2027, crédit à 1,18 % fixe, mensualité 1 766 € (~13 ans résiduels) → prix économique de l'immeuble 636 900 €. Bien mixte : 4 logements (T3 81 m²+porche 4,8 m² terrasse/jardin ; T2 35 m² terrasse ; T2 bis 52 m² terrasse/jardin ; T2 bis 44 m² balcon/jardin) + local commercial 24 m² avec cour, sur terrain de 940 m². Immeuble ancien, DPE D annoncé. « Potentiel foncier R+3 (940 m² de plancher, étude préliminaire dispo) » — zone Uc du PLU révisé (mixité habitat/économie), à vérifier parcelle par parcelle (ER n°14 élargissement Bd Jean Moulin).",
+    "neuf": false,
+    "adresse": {
+     "texte": "Boulevard Jean Moulin — Plateau Notre-Dame, Saint-Raphaël (83700) — numéro non communiqué dans l'annonce",
+     "ville": "Saint-Raphaël",
+     "code_postal": "83700"
+    },
+    "surfaces": {
+     "texte": "~240 m² de lots (81 + 35 + 52 + 44 + 24 m² + porche 4,8 m²) — l'annonce LBC affiche 250 m². Terrain de 940 m²."
+    },
+    "lots": {
+     "count": 5,
+     "nature": "4 logements + 1 local commercial 24 m² (cession de parts — pas d'acquisition directe des lots)",
+     "lots_distincts": null
+    },
+    "copro": {
+     "charges_annuelles_euros": 0.0,
+     "charges_source": "Mono-propriété présumée (SCI unique propriétaire de l'ensemble) — pas de syndic a priori ; assurance + entretien portés en lignes directes. À confirmer via PV d'AG."
+    },
+    "travaux": {
+     "montant_euros": 12000,
+     "nature": "Rafraîchissements légers : remise en état des 2 lots vacants (T2 bis 44 m² ~4 k€, local ~3 k€) + rafraîchissements courants des lots occupés et parties communes (~5 k€). Fourchette 8-20 k€ — devis avant offre."
+    }
+   },
+   "annonce": {
+    "plateforme": "leboncoin",
+    "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3209767726",
+    "prix_affiche_euros": 636900.0,
+    "prix_retenu_euros": null,
+    "prix_statut": "reconstitue",
+    "prix_commentaire": "Prix économique reconstitué = 383 900 € (cession des parts, prix facial annonce) + 253 000 € (CRD du crédit 1,18 % restant dans la SCI). Le prix facial seul ne représente PAS le coût de l'actif."
+   },
+   "marche": {
+    "valeur": {
+     "basse_euros": 580000.0,
+     "haute_euros": 660000.0,
+     "retenue_euros": 620000.0,
+     "source": "Croisement : (1) prix/m² rue MeilleursAgents Bd Jean Moulin 3 703 €/m² (09/2026) × ~240 m² = 888 k€ en lots individuels rénovés → décote immeuble entier ancien DPE D avec 2 lots vacants ~30 % ≈ 620 k€ ; (2) capitalisation du net opérationnel (hors IS) ~36 900 € à 6 % ≈ 615 k€. Adresse exacte (numéro) inconnue : ±10 %. À affiner avec l'étude préliminaire et l'état réel.",
+     "confiance": "moyenne"
+    },
+    "loyers": [
+     {
+      "lot": "T3 81 m² + porche (terrasse/jardin)",
+      "quantite": 1,
+      "loyer_mensuel_euros": 1200.0,
+      "occupe": true,
+      "note": "Loué 1 200 €/m — 14,8 €/m², cohérent marché Bd Jean Moulin (moyenne 15,8 €/m², fourchette 10,9-25,5)."
+     },
+     {
+      "lot": "T2 35 m² (terrasse)",
+      "quantite": 1,
+      "loyer_mensuel_euros": 640.0,
+      "occupe": true,
+      "note": "Loué 640 €/m — 18,3 €/m², cohérent petite surface."
+     },
+     {
+      "lot": "T2 bis 52 m² (terrasse/jardin)",
+      "quantite": 1,
+      "loyer_mensuel_euros": 990.0,
+      "occupe": true,
+      "note": "Loué 990 €/m — 19 €/m², haut de fourchette mais plausible (jardin, rénové)."
+     },
+     {
+      "lot": "T2 bis 44 m² (balcon/jardin) — VACANT",
+      "quantite": 1,
+      "loyer_mensuel_euros": 720.0,
+      "occupe": false,
+      "note": "Agent annonce 890 €/m (20,2 €/m², au-dessus du marché). Retenu 720 €/m (16,4 €/m²) : relocation réaliste après rafraîchissement. Fourchette 680-780."
+     },
+     {
+      "lot": "Local commercial 24 m² + cour — VACANT",
+      "quantite": 1,
+      "loyer_mensuel_euros": 550.0,
+      "occupe": false,
+      "note": "Agent annonce 850 €/m (425 €/m²/an — haut de fourchette locale 140-488). Retenu 550 €/m (~275 €/m²/an) : comparable local St-Raphaël 620 € CC (450 HC) pour petite cellule ; le Bd Jean Moulin est un axe commerçant mais pas le centre piéton. Fourchette 450-650."
+     }
+    ],
+    "notes": "Loyers occupés = loyers réels annoncés (à confirmer sur baux). Lots vacants = loyers de relocation réalistes retenus, inférieurs aux potentiels annoncés par l'agent (890/850 €/m). Revenu plein potentiel retenu : 4 100 €/m. Le commerce 24 m² pèse ~13 % des revenus — vacance commerciale plus longue en cas d'échec de relocation."
+   },
+   "hypotheses": {
+    "vacance_base_pct": 10.0,
+    "vacance_best_pct": 4.0,
+    "vacance_worst_pct": 16.0,
+    "vacance_justification": "Écart justifié au défaut résidentiel 5 % : 2 lots sur 5 sont VACANTS au jour de l'analyse (T2 bis 44 m² + local commercial, soit 31 % des revenus potentiels). Base 10 % = relocation étalée sur l'année 1 (le local commercial peut prendre 6-12 mois). Best 4 % = relocation rapide des 2 lots en 3-6 mois. Worst 16 % = commerce vide 12-18 mois + vacance résidentielle courante + effet domino.",
+    "charges": {
+     "taxe_fonciere_annuelle_euros": 3250.0,
+     "taxe_fonciere_commentaire": "TF totale estimée ~3 600 €/an (5 lots + local + terrain 940 m², Saint-Raphaël — commune au taux élevé). Quote-part local commercial (~10 % de la surface) refacturable au preneur en bail commercial → ~360 € refacturés, ~3 250 € nets à charge bailleur. Estimé — à vérifier sur avis réel. Alerte si > 15 % du brut.",
+     "charges_copro_annuelles_euros": 0.0,
+     "charges_copro_commentaire": "Mono-propriété présumée — pas de copro ; assurance, entretien, jardin en lignes directes. À confirmer.",
+     "pno_annuelle_euros": 600.0,
+     "pno_commentaire": "PNO immeuble mixte ~600 €/an (estimée).",
+     "entretien_annuel_euros": 1500.0,
+     "entretien_commentaire": "Entretien immeuble ancien + jardin 940 m² (espaces verts, toiture, menuiseries) ~1 500 €/an (estimé).",
+     "comptabilite_annuelle_euros": 800.0,
+     "comptabilite_commentaire": "SCI cible = entité distincte conservée (si acquisition par Sémaphore Patrimoine, filiale à 100 %) : comptabilité propre ~800 €/an — non mutualisable automatiquement."
+    },
+    "frais_acquisition_euros": 20700.0,
+    "frais_commentaire": "Cession de parts de SCI à prépondérance immobilière : droits d'enregistrement 5 % × 383 900 = 19 195 € + émoluments notaire ~1 500 € ≈ 20 700 €. PAS de frais à 7-8 % (pas de mutation immobilière directe).",
+    "quote_part_bati_pct": 0.0,
+    "amortissement_commentaire": "Cession de parts : PAS de nouvelle base amortissable — l'immeuble est déjà amorti dans la SCI cible (VNC inconnue, hypothèse conservative VNC ≈ 0 → amortissement résiduel nul). Si la VNC est significative, l'amortissement résiduel réduirait l'IS : l'hypothèse 0 est défavorable à l'acquéreur, donc prudente. Titres de participation non amortissables dans la société acquéreuse."
+   },
+   "analyse": {
+    "branche": "residentiel",
+    "type_operation": "locatif",
+    "strategie_retenue": {
+     "nom": "Location longue durée — immeuble mixte conservé, relocation des 2 lots vacants puis gestion",
+     "code": "ld-nue",
+     "lots": 5
+    },
+    "strategies_explorees": [
+     {
+      "strategie": "Location nue (mixte résidentiel + commerce 24 m² conservé)",
+      "lots": 5,
+      "faisabilite": "immédiate après rafraîchissements",
+      "risque": "moyen (relocation commerce)"
+     },
+     {
+      "strategie": "Revente en bloc de l'immeuble après relocation complète",
+      "lots": 5,
+      "faisabilite": "à 12-24 mois",
+      "risque": "moyen (liquidité bloc)"
+     },
+     {
+      "strategie": "Promotion : surélévation/extension R+3 (terrain 940 m², ~700 m² SdP additionnels)",
+      "lots": "n/a",
+      "faisabilite": "étude préliminaire à obtenir — PLU zone Uc, ER n°14 à vérifier",
+      "risque": "élevé (promo multi-M€, locataires en place)"
+     }
+    ],
+    "attractivite": [
+     {
+      "dimension": "transports",
+      "score": 8,
+      "justification": "Gare SNCF Saint-Raphaël-Valescure à quelques centaines de mètres (TER + TGV saison), bus Agglomération, A8 à 5 min. Axe structurant classé voie de niveau 2 par la ville."
+     },
+     {
+      "dimension": "commerces",
+      "score": 8,
+      "justification": "Bd Jean Moulin = axe commerçant dense (3 supermarchés, nombreux RDC commerciaux imposés par le PLU), centre-ville et plages à pied. Quartier « tout à pied » revendiqué par l'annonce, confirmé par la géographie."
+     },
+     {
+      "dimension": "ecoles",
+      "score": 6,
+      "justification": "Écoles et collèges à proximité immédiate (Plateau Notre-Dame, lycée St-Exupéry au nord), pas d'enseignement supérieur sur la commune (Aix/Nice/Sophia). Demande familiale réelle."
+     },
+     {
+      "dimension": "securite",
+      "score": 6,
+      "justification": "Quartier mixte résidentiel/commerces correct pour Saint-Raphaël, ville touristique sans QPV. Axe très passant = nuisances sonores, stationnement tendu."
+     },
+     {
+      "dimension": "demande_locative",
+      "score": 8,
+      "justification": "Saint-Raphaël : marché locatif tendu (loyer moyen 15,8 €/m²), demande familles + actifs navetteurs (gare) + saisonnière. Immeuble mixte avec jardin sur un axe recherché : bonne adéquation."
+     },
+     {
+      "dimension": "dynamisme",
+      "score": 7,
+      "justification": "Prix stables-orientés hausse (+0,8 % sur 1 an, +14 % sur 5 ans), secteur Jean Moulin inscrit au PADD comme secteur de renouvellement urbain (OAP, mixité habitat/économie) — dynamique démographique et économique du bassin Est-Var."
+     }
+    ],
+    "risques": [
+     {
+      "facteur": "Passif comptable de la SCI inconnu",
+      "detail": "Bilan non communiqué : VNC de l'immeuble, déficits reportables, trésorerie, dettes autres que le crédit affiché (fournisseurs, associés, litiges). Le prix des parts se négocie sur les capitaux propres — sans bilan, toute offre est un chèque en blanc. Exiger les 2 derniers exercices AVANT offre.",
+      "severite": 5
+     },
+     {
+      "facteur": "Accord bancaire sur le crédit 1,18 %",
+      "detail": "Le taux hérité à 1,18 % (CRD 253 k€, ~13 ans) est LE cœur du deal. Le changement de contrôle de la SCI est soumis à l'accord de la banque (clause de remboursement anticipé possible). Refus = refinancement au taux du marché (3,5-3,7 %) : mensualité ~2 560 € au lieu de 1 766 €, le cash-flow après dette devient négatif. Condition suspensive obligatoire.",
+      "severite": 5
+     },
+     {
+      "facteur": "Fiscalité héritée de la cession de parts",
+      "detail": "Pas de nouvelle base amortissable sur les 383 900 € payés (immeuble déjà amorti dans la SCI) → IS quasi plein sur l'EBE. À la revente future de l'immeuble par la SCI, IS sur la totalité de la plus-value (VNC résiduelle faible) : dette fiscale latente intégrée dans le prix des parts — le vendeur la transfère à l'acquéreur.",
+      "severite": 4
+     },
+     {
+      "facteur": "Relocation des 2 lots vacants",
+      "detail": "T2 bis 44 m² et local 24 m² vacants (31 % des revenus potentiels). Les potentiels annoncés (890 €/m et 850 €/m) sont au-dessus du marché réaliste (720 €/m et 550 €/m retenus). Le commerce peut rester vide 6-18 mois : pendant cette phase, le CF après dette (1 766 €/m) est négatif ou nul.",
+      "severite": 3
+     },
+     {
+      "facteur": "PLU et « potentiel R+3 »",
+      "detail": "Zone Uc du PLU révisé (mixité habitat/économie, renouvellement urbain) — la surélévation est un levier identifié par la ville. MAIS : emplacement réservé n°14 (élargissement Bd Jean Moulin, 16 m) pouvant affecter la parcelle ; numéro de parcelle inconnu. L'étude préliminaire du vendeur ne vaut pas certificat d'urbanisme. L'upside foncier est une option, pas une certitude.",
+      "severite": 3
+     },
+     {
+      "facteur": "Illiquidité des parts de SCI",
+      "detail": "Revente = trouver un acheteur d'equity (décote vs vente en direct), pas de financement bancaire classique pour l'acquéreur, agrément des associés selon statuts. La liquidité est structurellement inférieure à un immeuble vendu en direct.",
+      "severite": 3
+     },
+     {
+      "facteur": "État réel et diagnostics",
+      "detail": "DPE D annoncé « globalement » — à vérifier lot par lot (diagnostics obligatoires). Rafraîchissements estimés 8-20 k€ sans devis. Structure de l'immeuble inconnue (année, toiture, réseaux). PV d'AG et assurance à auditer.",
+      "severite": 3
+     }
+    ]
+   }
   }
  ]
 }

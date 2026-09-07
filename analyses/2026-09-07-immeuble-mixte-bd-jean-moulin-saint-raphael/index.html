@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Immeuble mixte Bd Jean Moulin, Saint-Raphaël</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Boulevard Jean Moulin — Plateau Notre-Dame, Saint-Raphaël (83700) — cession de 100 % des parts d'une SCI à l'IS</p>
+  <p class="report-date">Analyse générée le 7 septembre 2026</p>
+  <p class="report-source">Source : LeBonCoin — annonce du 3 août 2026 (vendeur pro « CARO »), prix facial en baisse</p>
+  <div class="report-source-link"><a href="https://www.leboncoin.fr/ad/ventes_immobilieres/3209767726">https://www.leboncoin.fr/ad/ventes_immobilieres/3209767726</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location longue durée — immeuble mixte conservé, relocation des 2 lots vacants</strong> — SCI à l'IS (cession de parts : pas de nouvelle base amortissable)</p>
+  </div>
+
+  <!-- === Cartes de synthèse (8) === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix d'achat (économique)</span>
+      <span class="card-value">636 900 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Surface</span>
+      <span class="card-value">~240 m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix / m²</span>
+      <span class="card-value">2 654 €/m²</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">669 600 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur marché</span>
+      <span class="card-value">620 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Revenus bruts</span>
+      <span class="card-value">4 100 €/mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rentabilité</span>
+      <span class="card-value">4,7 % / 5,1 %</span>
+    </div>
+    <div class="card card-verdict note-6-4">
+      <span class="card-label">Note</span>
+      <span class="card-value">6,4/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.4274" data-lon="6.7831" data-address="Boulevard Jean Moulin — Plateau Notre-Dame, Saint-Raphaël (83700) — numéro non communiqué, pointé sur le boulevard"></div>
+  </section>
+
+  <!-- === Attractivité === -->
+  <section class="attractiveness">
+    <h2>Attractivité — Boulevard Jean Moulin / Plateau Notre-Dame, Saint-Raphaël (83700)</h2>
+    <p class="attractiveness-intro">Saint-Raphaël (~36 000 habitants), station balnéaire de l'Est-Var entre mer et massif de l'Estérel : prix au m² parmi les plus élevés du département après Toulon (appartements 5 068 €/m² en moyenne communale, loyers 15,8 €/m²). Le Boulevard Jean Moulin est un axe structurant mixte — habitat collectif, commerces, tertiaire — classé « voie de niveau 2 » et inscrit au PADD du PLU révisé comme secteur de renouvellement urbain avec mixité habitat/économie renforcée. Prix rue : ~3 700 €/m² (MeilleursAgents 09/2026), nettement sous la moyenne communale tirée par le bord de mer et Valescure : le boulevard reste un quartier de « ville utile », pas la carte postale.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+          <span class="attr-score"><strong>8/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Gare SNCF Saint-Raphaël-Valescure (TER toute l'année, TGV saisonnier) à quelques centaines de mètres, bus de l'agglomération, A8 à 5 minutes. Axe classé voie de niveau 2 par la ville — circulation dense mais desserte excellente.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+          <span class="attr-score"><strong>8/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Bd Jean Moulin = axe commerçant dense : trois supermarchés, nombreux RDC commerciaux (le PLU impose la vocation économique en rez-de-chaussée sur l'axe), commerces de proximité, centre-ville et plages à pied. Le « tout à pied » de l'annonce est exact.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+          <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Écoles et collèges à proximité immédiate (secteur Plateau Notre-Dame), lycée Saint-Exupéry au nord du boulevard. Pas d'enseignement supérieur sur la commune — les étudiants partent vers Nice, Sophia ou Aix. Demande familiale réelle.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+          <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Quartier mixte résidentiel/commerces sans QPV ni zone de non-droit signalée, ville touristique globalement sûre. Le revers de l'axe : trafic dense, nuisances sonores en journée, stationnement tendu — la qualité de vie se joue côté jardin/cour.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+          <span class="attr-score"><strong>8/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Marché locatif tendu (loyer moyen 15,8 €/m², fourchette 10,9-25,5 €/m² Bd Jean Moulin) : familles, actifs navetteurs pendulant vers la gare, demande saisonnière. Immeuble avec jardins et terrasse sur un axe recherché : bonne adéquation produit/marché.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Prix stables orientés hausse (+0,8 % sur 1 an, +14,2 % sur 5 ans, appartements), économie touristique + tertiaire du bassin Est-Var. Le secteur Jean Moulin est un des sites stratégiques de renouvellement urbain du PLU révisé — la ville pousse la densification le long de l'axe.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> familles et actifs navetteurs (gare à pied), complété par une petite activité commerciale de proximité en RDC — mixte stable et complémentaire</p>
+      <p><strong>Conclusion :</strong> adéquation forte (7,2/10). C'est un quartier de rendement sain : demande locative tendue, services complets, dynamique urbaine portée par le PLU. Ni quartier chic ni zone difficile — un emplacement de « ville utile » où l'immeuble de rapport se loue bien et se défend en valeur, sans prime spéculative.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Le bien est vendu via ses parts sociales, avec 3 lots loués et 2 lots vacants (31 % des revenus potentiels à relouer). La location longue durée de l'ensemble mixte est la lecture naturelle ; les deux autres lectures (revente en bloc, promotion R+3) sont testées ci-dessous.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Location longue durée — immeuble mixte conservé, relocation des 2 lots vacants</strong></td>
+          <td>5</td>
+          <td>5,1 % (base) / 5,9 % (optimiste) — sur valeur</td>
+          <td>620 000 € (retenue)</td>
+          <td><span class="ratio-badge ratio-mauvais">1,08</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Après rafraîchissements</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-high" style="width:72%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Revente en bloc après relocation complète</td>
+          <td>5</td>
+          <td>ROI négatif — revient 670 k€ + portage &gt; revente 620-640 k€</td>
+          <td>620 – 660 k€</td>
+          <td><span class="ratio-badge ratio-mauvais">1,08</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">À 12-24 mois</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-high" style="width:68%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Promotion — surélévation / extension R+3 (terrain 940 m²)</td>
+          <td>n/a</td>
+          <td>Non chiffrable — étude préliminaire du vendeur à obtenir</td>
+          <td>Potentiel ~700 m² SdP additionnels (à valider)</td>
+          <td>—</td>
+          <td><span class="badge-faisabilite faisabilite-faible">PLU + ER n°14 à vérifier</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:60%"></div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>La location longue durée est retenue : c'est la seule lecture qui valorise la structure du deal — un actif de ~620-640 k€ adossé à un passif bancaire ancien à 1,18 % (253 000 € de capital restant dû, annoncé), que la cession de parts permet de conserver. La revente en bloc est structurellement déficitaire à ce prix (les frais de cession à ~5 % et les travaux absorbent la marge). La lecture « promotion R+3 » est réelle — le terrain de 940 m² en zone Uc du PLU révisé, secteur où la ville identifie elle-même des « capacités d'extensions par surélévation » — mais elle est conditionnelle (zonage parcellaire, emplacement réservé n°14 d'élargissement du boulevard, permis, locataires en place) et d'une ampleur qui dépasse la logique de rendement de cette fiche : elle s'étudie après acquisition, pas avant. Le ratio coût/valeur de 1,08 dit que le prix facial paie ~8 % au-dessus de la valeur relouée : la marge ne peut venir que du prix des parts.</p>
+    </div>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Boulevard Jean Moulin — Plateau Notre-Dame, Saint-Raphaël (83700) — <strong>numéro non communiqué</strong> dans l'annonce (valeur ±10 % selon la parcelle, ER n°14 à vérifier)</td></tr>
+        <tr><th>Structure de la vente</th><td><strong>Cession de 100 % des parts d'une SCI à l'IS</strong> — pas de mutation immobilière directe : droits d'enregistrement ~5 % (au lieu de ~8 %), pas de nouvelle base amortissable, héritage du passif et de l'historique fiscal de la SCI</td></tr>
+        <tr><th>Prix facial (annonce)</th><td>383 900 € net vendeur pour les parts — en baisse depuis le dépôt du 03/08/2026</td></tr>
+        <tr><th>Passif bancaire annoncé</th><td>Capital restant dû 253 000 € au 01/01/2027 — taux fixe 1,18 % — échéance 1 766 €/mois — <strong>accord de la banque sur le changement de contrôle à obtenir</strong> (condition suspensive indispensable)</td></tr>
+        <tr><th>Prix économique de l'immeuble</th><td><strong>636 900 €</strong> = parts 383 900 € + dette 253 000 € — soit 2 654 €/m² sur ~240 m² de lots</td></tr>
+        <tr><th>Composition</th><td>5 lots sur ~240 m² (81 + 35 + 52 + 44 + 24 + porche 4,8 m²) : T3 81 m² + porche, terrasse et jardin (loué 1 200 €/m) ; T2 35 m² terrasse (loué 640 €/m) ; T2 bis 52 m² terrasse et jardin (loué 990 €/m) ; T2 bis 44 m² balcon et jardin (<strong>vacant</strong>, potentiel annoncé 890 €/m) ; local commercial 24 m² + cour (<strong>vacant</strong>, potentiel annoncé 850 €/m)</td></tr>
+        <tr><th>Terrain</th><td>940 m² — « potentiel constructible important, immeuble R+3 possible, 940 m² de plancher, étude préliminaire disponible » (annonce). Zone Uc du PLU révisé (mixité habitat/économie) — surélévation identifiée comme levier par la ville, mais ER n°14 (élargissement du Bd Jean Moulin, 16 m) pouvant affecter la parcelle : certificat d'urbanisme à obtenir</td></tr>
+        <tr><th>Loyers en place</th><td>3 lots loués : 2 830 €/mois (33 960 €/an) — à confirmer sur baux (échéances, dépôts de garantie). 2 lots vacants à relouer : retenus 720 €/m (T2 bis 44 m²) et 550 €/m (commerce 24 m²) — sous les potentiels annoncés, calibrés sur le marché (fourchettes 680-780 et 450-650)</td></tr>
+        <tr><th>DPE</th><td>« Globalement classé D, aucun logement en passoire thermique » (annonce) — diagnostics lot par lot à exiger avant offre</td></tr>
+        <tr><th>Travaux</th><td>Rafraîchissements légers annoncés — enveloppe retenue <strong>12 000 €</strong> (fourchette 8-20 k€) : remise en état des 2 lots vacants, rafraîchissements courants. Devis avant offre</td></tr>
+        <tr><th>Charges</th><td>Mono-propriété présumée (pas de copropriété a priori) : TF totale estimée ~3 600 €/an dont ~360 € refacturables au local commercial (bail commercial) → ~3 250 € nets à charge ; PNO ~600 € + entretien ~1 500 € (jardin 940 m² inclus) + comptabilité SCI ~800 €/an — <strong>estimations à vérifier</strong> (avis TF, PV d'AG)</td></tr>
+        <tr><th>Fiscalité</th><td>SCI à l'IS (15 %) : l'immeuble est déjà amorti dans la SCI cible → pas de nouvelle base amortissable sur les 383 900 € payés (hypothèse conservative VNC nulle) ; à la revente future de l'immeuble par la SCI, IS sur la quasi-totalité de la plus-value (dette fiscale latente transférée par le vendeur)</td></tr>
+        <tr><th>Vendeur</th><td>Agence « CARO » (pro LeBonCoin, membre depuis janvier 2024, numéro vérifié, réactif) — 48 favoris sur l'annonce</td></tr>
+        <tr><th>Valeur marché retenue</th><td>580 – 660 k€, retenue <strong>620 000 €</strong> (immeuble reloué, rafraîchi) — croisement : (1) prix/m² Bd Jean Moulin 3 703 €/m² (MeilleursAgents 09/2026) × ~240 m² ≈ 888 k€ en lots individuels rénovés, décote immeuble entier ancien DPE D avec lots vacants ~30 % ; (2) capitalisation du net opérationnel hors IS (~36 900 €) à ~6 % ≈ 615 k€</td></tr>
+        <tr><th>Prix de revient</th><td><strong>669 600 €</strong> = prix économique 636 900 € + frais de cession ~20 700 € (droits 5 % sur 383 900 € + émoluments) + travaux 12 000 €</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — prix économique 636 900 € (SCI IS)</h2>
+    <p class="attractiveness-intro">Loyers retenus : 3 lots occupés au réel (2 830 €/m) + 2 lots vacants reloués à 720 €/m et 550 €/m → 4 100 €/mois. Vacance Base 10 % (justifiée : 2 lots sur 5 vacants au jour J, relocation étalée sur l'année 1). Charges estimées décomposées : TF nette ~3 250 € + PNO ~600 € + entretien ~1 500 € + comptabilité ~800 € + provision rénovation 2,5 % des revenus. <strong>Amortissement : 0</strong> (cession de parts — pas de nouvelle base amortissable, hypothèse conservative ; un amortissement résiduel dans la SCI cible réduirait l'IS). Valeur retenue : 620 000 €.</p>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Loyers 4 100 €/m — Vacance 10 % (relocation des 2 lots vacants) — Charges estimées</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">49 200 €</td></tr>
+            <tr><td>Vacance locative (10 %)</td><td class="num">−4 920 €</td></tr>
+            <tr class="secondary"><td>Charges (TF nette ~3 250 € + PNO ~600 € + entretien ~1 500 € + compta ~800 € + provision rénov. ~1 230 € — estimées)</td><td class="num">−7 380 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">36 900 €</td></tr>
+            <tr><td>Amortissement (cession de parts — base héritée nulle)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">36 900 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−5 535 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">31 365 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">2 614 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">2 614 €</td></tr>
+            <tr><td>Rendement net (revient / valeur)</td><td class="num">4,7 % / 5,1 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Relocation rapide — Loyers +5 % — Vacance 4 % — Charges −10 %</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">51 660 €</td></tr>
+            <tr><td>Vacance locative (4 %)</td><td class="num">−2 066 €</td></tr>
+            <tr class="secondary"><td>Charges (TF ~2 925 € + PNO ~540 € + entretien ~1 350 € + compta ~720 € + provision rénov. ~1 292 €)</td><td class="num">−6 827 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">42 767 €</td></tr>
+            <tr><td>Amortissement (cession de parts)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">42 767 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−6 415 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">36 352 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">3 029 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">3 029 €</td></tr>
+            <tr><td>Rendement net (revient / valeur)</td><td class="num">5,4 % / 5,9 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Commerce vide 12-18 mois — Loyers −10 % — Vacance 16 % — Charges +20 % + 5 000 € de travaux imprévus</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">44 280 €</td></tr>
+            <tr><td>Vacance locative (16 %)</td><td class="num">−7 085 €</td></tr>
+            <tr class="secondary"><td>Charges (TF ~3 900 € + PNO ~720 € + entretien ~1 800 € + compta ~960 € + provision rénov. ~1 107 € + travaux imprévus 5 000 €)</td><td class="num">−13 487 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">23 708 €</td></tr>
+            <tr><td>Amortissement (cession de parts)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">23 708 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−3 556 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">20 152 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">1 679 €</td></tr>
+            <tr><td>CF amort. réintégré / mois</td><td class="num">1 679 €</td></tr>
+            <tr><td>Rendement net (revient / valeur)</td><td class="num">3,0 % / 3,3 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Base</th>
+            <th>Optimiste</th>
+            <th>Pessimiste</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>EBE avant IS</td><td class="num">36 900 €</td><td class="num">42 767 €</td><td class="num">23 708 €</td></tr>
+          <tr><td>CF net mensuel</td><td class="num">2 614 €</td><td class="num">3 029 €</td><td class="num">1 679 €</td></tr>
+          <tr><td>CF amort. réintégré / mois</td><td class="num">2 614 €</td><td class="num">3 029 €</td><td class="num">1 679 €</td></tr>
+          <tr><td>Rendement net (revient)</td><td class="num">4,7 %</td><td class="num">5,4 %</td><td class="num">3,0 %</td></tr>
+          <tr><td>Rendement net (valeur)</td><td class="num">5,1 %</td><td class="num">5,9 %</td><td class="num">3,3 %</td></tr>
+        </tbody>
+      </table>
+      <p class="attractiveness-intro"><strong>Lecture :</strong> le scénario de base intègre déjà la relocation des 2 lots vacants à des loyers réalistes (sous les potentiels annoncés) : le CF de 2 614 €/mois est donc l'année 1 de détention, pas un rêve. La faiblesse structurelle est ailleurs : sans amortissement nouveau, l'IS est payé au premier euro — le rendement de 5,1 % sur valeur est un plafond honnête pour un immeuble ancien DPE D. Le Pessimiste (1 679 €/mois) tombe sous l'échéance de 1 766 €/mois du passif bancaire annoncé : un commerce qui reste vide 12-18 mois met la SCI en tension de trésorerie. La marge de sécurité du dossier ne se trouve pas dans l'exploitation — elle ne peut venir que du prix des parts.</p>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Passif comptable de la SCI inconnu</td>
+          <td>Bilan non communiqué : valeur nette comptable de l'immeuble, déficits reportables, trésorerie, dettes autres que le passif bancaire affiché (fournisseurs, comptes courants d'associés, litiges). En cession de parts, le prix se négocie sur les capitaux propres — sans bilan, toute offre est un chèque en blanc. <strong>Exiger les 2 derniers exercices comptables avant toute offre.</strong></td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Accord bancaire sur le changement de contrôle</td>
+          <td>Le taux hérité à 1,18 % (253 000 € de capital restant dû, ~13 ans) est le cœur économique du deal : il explique à lui seul la viabilité du portage. Le changement de contrôle de la SCI est soumis à l'accord de la banque (clause de remboursement anticipé possible). En cas de refus, un refinancement aux conditions actuelles du marché ferait passer l'échéance de 1 766 € à ~2 500-2 600 €/mois et le cash-flow deviendrait négatif en scénario de base. <strong>Condition suspensive obligatoire dans toute offre.</strong></td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Fiscalité héritée de la cession de parts</td>
+          <td>Pas de nouvelle base amortissable sur les 383 900 € payés : l'immeuble est déjà amorti dans la SCI cible, l'IS s'applique donc sur un résultat proche du cash. À la revente future de l'immeuble par la SCI, l'IS portera sur la quasi-totalité du prix (VNC résiduelle faible) : le vendeur transfère sa dette fiscale latente à l'acquéreur — un point de négociation majeur sur le prix des parts.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Relocation des 2 lots vacants</td>
+          <td>T2 bis 44 m² et local commercial 24 m² vacants = 31 % des revenus potentiels. Les potentiels annoncés (890 €/m et 850 €/m) sont au-dessus du marché réaliste calibré ici (720 €/m et 550 €/m, soit un écart de ~5 640 €/an de revenus). Le commerce peut rester vide 6-18 mois — c'est le scénario qui met la SCI en tension (voir Pessimiste).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>PLU et « potentiel R+3 »</td>
+          <td>Zone Uc du PLU révisé (mixité habitat/économie, renouvellement urbain) : la surélévation est un levier que la ville identifie elle-même sur l'axe. Mais l'emplacement réservé n°14 (élargissement du Bd Jean Moulin, 16 m, de la rue Salvador Allende au carrefour Grand Défends/Aspé) peut affecter la parcelle, et le numéro est inconnu. L'étude préliminaire du vendeur ne vaut pas certificat d'urbanisme. L'upside foncier est une option, pas une certitude — ne pas le payer dans le prix.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Illiquidité des parts de SCI</td>
+          <td>Revente = trouver un acquéreur d'equity : pas de financement bancaire classique pour l'acheteur de parts, décote habituelle vs vente en direct de l'immeuble, agrément des associés selon statuts. La liquidité est structurellement inférieure — le vendeur le sait, c'est une partie de la décote apparente du prix facial.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>État réel, DPE et adresse exacte</td>
+          <td>DPE D « globalement » annoncé — à vérifier lot par lot (diagnostics obligatoires). Rafraîchissements estimés 8-20 k€ sans devis. Structure de l'immeuble inconnue (année, toiture, réseaux). PV d'AG et assurances à auditer. Numéro de parcelle non communiqué — la valeur retenue est calibrée sur la moyenne du boulevard (±10 %).</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>À négocier — offre à ~335 000 € pour les parts, sous conditions</strong>. Le dossier a une vraie colonne vertébrale : emplacement recherché et demandé (Bd Jean Moulin, tout à pied), immeuble mixte sain avec 3 lots loués au prix du marché, DPE D assumé, et une structure de cession qui permet de conserver un passif bancaire à 1,18 % — un avantage de financement qu'aucune banque ne reproduirait aujourd'hui. Mais trois faits refroidissent le prix facial : (1) à 636 900 € de prix économique, l'immeuble paie ~8 % au-dessus de sa valeur relouée (620 k€) ; (2) les deux lots vacants sont annoncés avec des potentiels supérieurs au marché — la relocation réelle met la SCI en tension si elle traîne ; (3) l'acquéreur hérite d'une fiscalité sans amortissement et d'une dette fiscale latente que le vendeur, lui, élude en cédant des parts plutôt que l'immeuble. L'équilibre (coût total = valeur de l'equity) se situe autour de 335 000 € de parts. Et rien ne se signe sans le bilan de la SCI ni l'accord écrit de la banque.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> ~335 000 € pour les parts (coût total ~367 000 € avec frais et travaux, pour une equity de 367 000 € = valeur 620 k€ − passif 253 k€). Au-delà de ~350 000 €, on paie la valeur sans marge de sécurité — et le dossier ne se répare qu'à l'achat.</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Le bilan est l'argument n°1 : sans les comptes (VNC, trésorerie, dettes, déficits reportables), le prix des parts est indéterminable — l'offre est conditionnée à leur communication, et toute surprise comptable se déduit du prix</li>
+        <li>Les potentiels des lots vacants sont gonflés : 890 €/m et 850 €/m annoncés contre 720 €/m et 550 €/m réalistes — soit ~5 640 €/an de revenus en moins, à capitaliser en décote (~30-40 k€)</li>
+        <li>La structure de vente joue contre le vendeur : cession de parts = illiquidité, pas d'amortissement pour l'acquéreur, dette fiscale latente transférée — trois décotes légitimes qui justifient un prix d'equity sous la valeur de l'immeuble vendu en direct</li>
+        <li>L'accord bancaire est une épée de Damoclès : le maintien du prêt à 1,18 % est la condition de viabilité du deal — s'il n'est pas garanti par écrit avant la signature, le prix doit intégrer le coût d'un refinancement au marché</li>
+        <li>Le « potentiel R+3 » ne se paie pas dans le prix tant qu'un certificat d'urbanisme n'a pas confirmé le droit à construire réel de la parcelle (ER n°14 à écarter) — c'est un upside gratuit, pas un argument de prix</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices) — cession de parts : pas de nouvelle base amortissable (immeuble déjà amorti dans la SCI cible, hypothèse VNC nulle), titres non amortissables chez l'acquéreur ; IS quasi plein sur l'EBE</p>
+      <p><strong>Estimation frais d'acquisition :</strong> ~20 700 € — droits d'enregistrement 5 % sur 383 900 € (19 195 €) + émoluments ~1 500 €. Pas de frais à 7-8 % : il n'y a pas de mutation immobilière directe</p>
+      <p><strong>Enveloppe travaux estimée :</strong> 12 000 € (fourchette 8-20 k€) — rafraîchissements des lots vacants et courants ; toute inconnue résiduelle (toiture, réseaux, DPE par lot) se déduit du prix</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
