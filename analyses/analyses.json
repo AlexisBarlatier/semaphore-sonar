@@ -3,7 +3,7 @@
   "schema": "analyses-v2-entrees",
   "generated_at": "2026-09-06T17:09:53+00:00",
   "source": "import_legacy.py",
-  "count": 50
+  "count": 51
  },
  "analyses": [
   {
@@ -343,7 +343,7 @@
   {
    "slug": "2026-09-03-11-parkings-jean-rostand-la-seyne",
    "date_analyse": "2026-09-03",
-   "date_maj": null,
+   "date_maj": "2026-09-07",
    "titre": "Bloc de 11 places de parking standard (sous-sol), résidence Jean Rostand, La Seyne-sur-Mer",
    "bien": {
     "type_bien": "parking",
@@ -360,32 +360,34 @@
     },
     "lots": {
      "count": 11,
-     "nature": null,
-     "lots_distincts": null
+     "nature": "11 lots de copropriété distincts, un par place (revente à l'unité possible — à confirmer à l'état descriptif de division)",
+     "lots_distincts": true,
+     "surface_par_lot_m2": 12.0
     },
     "copro": {
      "charges_annuelles_euros": 1650.0,
      "charges_source": "Estimées 150 €/an/place (quote-part copro résidence neuve + électricité sous-sol) — budget prévisionnel à obtenir par écrit avant réservation"
     },
     "travaux": {
-     "montant_euros": null,
-     "nature": null
+     "montant_euros": 0.0,
+     "nature": "Neuf (VEFA) — aucun travaux, livraison T2 2027"
     }
    },
    "annonce": {
-    "plateforme": null,
+    "plateforme": "seloger",
     "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/la-seyne-sur-mer-83500/26ED31QDH4P8",
-    "prix_affiche_euros": null,
+    "prix_affiche_euros": 88000.0,
     "prix_retenu_euros": 77000.0,
-    "prix_statut": "offre"
+    "prix_statut": "offre",
+    "vendeur": "Constructa Promotion (134 bd Haussmann, Paris — RCS 065805822)"
    },
    "marche": {
     "valeur": {
      "basse_euros": 110000.0,
      "haute_euros": 143000.0,
-     "retenue_euros": null,
-     "source": "carte « Valeur revente » (import)",
-     "confiance": "faible"
+     "retenue_euros": 125000.0,
+     "source": "Revente à l'unité, lots distincts : comparables places sous-sol La Seyne et Brignoles 10-13 k€/place (fiche 03/09/2026) — médiane 125 k€",
+     "confiance": "moyenne"
     },
     "loyers": [
      {
@@ -419,7 +421,20 @@
      "code": "parking-ld",
      "lots": null
     },
-    "strategies_explorees": [],
+    "strategies_explorees": [
+     {
+      "strategie": "Location longue durée du bloc (11 lots sous-sol)",
+      "lots": 11,
+      "faisabilite": "Immédiate à la livraison (T2 2027)",
+      "risque": "modéré (montée en charge 6-9 mois)"
+     },
+     {
+      "strategie": "Revente à l'unité (lots distincts, 10-13 k€/place)",
+      "lots": 11,
+      "faisabilite": "Envisageable après livraison",
+      "risque": "faible — filet de sortie, PV unitaire estimée 3-6 k€/place"
+     }
+    ],
     "attractivite": [
      {
       "dimension": "tension_stationnement",
@@ -454,8 +469,8 @@
     ],
     "risques": [
      {
-      "facteur": "Revente à l'unité (lots distincts)",
-      "detail": "11 PV unitaire estimée 3-6 k€/place 110 – 143 k€ 0,64 Envisageable Faible La location longue durée est retenue : rendement net d'IS de 8,5 % en base (sur revient 79 600 €), la meilleure opération parking du parc. Le rabais volume (7 000 €/place au lieu de 8 000 €) crée une double marge : rendement supérieur au seuil de 6,5 % avec un loyer conservateur de 80 €/mois, et décote d'achat massive (ratio coût/valeur 0,64 sur une valeur de revente unitaire estimée 10-13 k€). La résilience du bloc est le point décisif : le point mort se situe à ~2 places louées sur 11 — la vacance binaire, qui fragilise les places isolées, devient statistiquement négligeable sur un parc de 11 lots. La revente à l'unité reste le filet de sortie (lots distincts, liquidité unitaire). Fiche d'identité Adresse Résidence neuve au croisement boulevard Jean Rostand / avenue Jean Vilar, quartier Saint-Jean, La Seyne-sur-Mer (83500) — adresse exacte non communiquée dans l'annonce Type Bloc de 11 places de parking standard en sous-sol, résidence neuve sécurisée — VEFA (livraison T2 2027) Grille du programme 11 places simples à 8 000 € (12 m²) · 1 PMR à 9 000 € (18 m²) · 7 places moto à 1 200 € (2,5 m²) — Constructa Promotion Offre simulée 77 000 € (7 000 €/place — rabais volume de 1 000 €/place, soit −12,5 %) Cotes par place 12 m² — gabarit standard (2,40 × 5,00 m), tout le parc automobile admissible Frais de notaire ~2 600 € estimés (acte unique portant sur 11 lots, barème notaire constaté extrapolé) — verrou : un seul acte, pas 11 actes séparés (11 × 875 € ≈ 9 600 €) Prix de revient 79 600 € (7 236 €/place acte en main) Lots de copropriété 11 lots distincts, un par place (à confirmer à l'état descriptif de division) — revente unitaire possible Occupation 0/11 — places neuves, à louer à la livraison Loyer cible 80 €/mois/place (ancres locales : places standard sous-sol 78-95 €/mois constatées en ligne) Charges copro Estimées 150 €/an/place (quote-part copro résidence neuve + électricité sous-sol) — budget prévisionnel à obtenir par écrit avant réservation Taxe foncière Exonérée 2 ans après livraison (neuf), puis ~30 €/an/place estimée Amortissement Sous-sol bâti : 90 % du prix de revient sur 30 ans (~2 388 €/an pour le bloc) DPE Non applicable (stationnement) Vendeur Constructa Promotion (promoteur, 134 bd Haussmann, Paris — RCS 065805822) Valeur revente estimée 110 – 143 k€ (10-13 k€/place, comparables places sous-sol La Seyne et Brignoles) — médiane 125 k€ Projections financières — Offre 77 000 € (SCI IS) Loyer cible 80 €/mois/place, charges copro estimées 150 €/an/place + TF 30 €, amortissement sous-sol 90 % du revient sur 30 ans (~2 388 €/an). Vacance 10 % en base (≈1 place vide), 5 % en optimiste, 25 % en pessimiste. Scénario Base Loyer 80 €/mois × 11 — Vacance 10 % — Charges estimées 1 980 €/an Revenu brut annuel 10 560 € Vacance locative (10 %) −1 056 € Charges (copro ~1 650 € + TF ~330 € — estimées) −1 980 € EBE avant IS 7 524 € Amortissement (sous-sol bâti, 90 % / 30 ans) −2 388 € Résultat fiscal 5 136 € IS (15 %) −770 € CF net annuel 6 754 € CF net mensuel 563 € CF amort. réintégré / mois 762 € Rendement net (revient / prix) 8,5 % / 8,8 % Scénario Optimiste Loyer 88 €/mois (+10 %) — Vacance 5 % — Charges −20 % Revenu brut annuel 11 616 € Vacance locative (5 %) −581 € Charges (copro ~1 320 € + TF ~330 €) −1 650 € EBE avant IS 9 385 € Amortissement (sous-sol bâti, 90 % / 30 ans) −2 388 € Résultat fiscal 6 997 € IS (15 %) −1 050 € CF net annuel 8 335 € CF net mensuel 695 € CF amort. réintégré / mois 894 € Rendement net (revient / prix) 10,5 % / 10,8 % Scénario Pessimiste Loyer 64 €/mois (−20 %) — Vacance 25 % — Charges +30 % Revenu brut annuel 8 448 € Vacance locative (25 %) −2 112 € Charges (copro ~2 145 € + TF ~330 €) −2 475 € EBE avant IS 3 861 € Amortissement (sous-sol bâti, 90 % / 30 ans) −2 388 € Résultat fiscal 1 473 € IS (15 %) −221 € CF net annuel 3 640 € CF net mensuel 303 € CF amort. réintégré / mois 502 € Rendement net (revient / prix) 4,6 % / 4,7 % Synthèse comparative Indicateur Base Optimiste Pessimiste EBE avant IS 7 524 € 9 385 € 3 861 € CF net mensuel 563 € 695 € 303 € CF amort. réintégré / mois 762 € 894 € 502 € Rendement net (revient) 8,5 % 10,5 % 4,6 % Rendement net (prix) 8,8 % 10,8 % 4,7 % Sensibilité au taux d'occupation — de 0 à 11 places louées Loyer 80 €/mois/place, charges fixes 1 980 €/an (copro + TF), amortissement 2 388 €/an. Le tableau détaille le CF net après IS et le CF amort. réintégré à chaque niveau d'occupation — la montée en charge post-livraison (T2 2027) se lit dans cette grille : 11 places neuves se louent progressivement. Places louées EBE / an IS CF net / mois CF amort. réintégré / mois 0 / 11 −1 980 € 0 € −165 € 34 € 1 / 11 −1 020 € 0 € −85 € 114 € 2 / 11 −60 € 0 € −5 € 194 € 3 / 11 900 € 0 € 75 € 274 € 4 / 11 1 860 € 0 € 155 € 354 € 5 / 11 2 820 € 65 € 230 € 429 € 6 / 11 3 780 € 209 € 298 € 497 € 7 / 11 4 740 € 353 € 366 € 565 € 8 / 11 5 700 € 497 € 434 € 633 € 9 / 11 6 660 € 641 € 502 € 701 € 10 / 11 7 620 € 785 € 570 € 769 € 11 / 11 8 580 € 929 € 638 € 837 € Lecture : le point mort se situe à ~2 places louées sur 11 (−5 €/mois) ; le CF net est positif dès 3 places. La ligne 8/11 correspond au scénario base (10 % de vacance). Une première année de montée en charge à 70-80 % d'occupation (8-9 places) laisse le CF net entre 434 et 502 €/mois — la trésorerie du parc absorbe sans tension la période de relocation groupée. Matrice de risques Facteur de risque Détail Sévérité Charges copro inconnues (VEFA) Budget prévisionnel non communiqué avant livraison. Estimation 150 €/an/place (1 650 €/an pour le bloc). Si les charges réelles doublaient (300 €/place), le rendement base passerait de 8,5 % à ~6,7 % — le rabais volume absorbe le choc, mais le budget prévisionnel écrit reste le verrou n°1.",
+      "facteur": "Charges copro inconnues (VEFA)",
+      "detail": "Budget prévisionnel non communiqué avant livraison. Estimation 150 €/an/place (1 650 €/an pour le bloc). Si les charges réelles doublaient (300 €/place/an), le rendement base passerait de ~8,5 % à ~6,7 % — le rabais volume absorbe le choc, mais le budget prévisionnel écrit reste le verrou n°1 avant réservation.",
       "severite": 4
      },
      {
@@ -2711,70 +2726,83 @@
   {
    "slug": "2026-06-30-9-parkings-place-caramy-brignoles",
    "date_analyse": "2026-06-30",
-   "date_maj": null,
+   "date_maj": "2026-09-07",
    "titre": "9 parkings 28 rue Lice de Signon, Brignoles",
    "bien": {
     "type_bien": "parking",
     "sous_type": "sous-sol",
     "type_detail": "9 places de parking en sous-sol sécurisé",
-    "neuf": null,
+    "neuf": false,
     "adresse": {
-     "texte": "9 places de parking — 28 rue Lice de Signon, 83170 Brignoles",
+     "texte": "9 places de parking — 28 rue Lice de Signon, 83170 Brignoles — résidence « Les Berges de Signon » (43 logements)",
      "ville": "Brignoles",
-     "code_postal": "83170"
+     "code_postal": "83170",
+     "quartier": "Centre-ville"
     },
     "surfaces": {
-     "texte": "9 places"
+     "texte": "9 places (sous-sol sécurisé, porte automatique à digicode)"
     },
     "lots": {
      "count": 9,
-     "nature": null,
-     "lots_distincts": null
+     "nature": "9 lots de copropriété distincts, un par place — revente à l'unité possible",
+     "lots_distincts": true
     },
     "copro": {
-     "charges_annuelles_euros": 810.0,
-     "charges_source": "90 €/an (10 €/place/an) — confirmé par l'agent le 31/07/2026"
+     "charges_annuelles_euros": 90.0,
+     "charges_source": "90 €/an (10 €/place/an) — confirmé par l'agent (Céline Guillaume) le 31/07/2026"
     },
     "travaux": {
-     "montant_euros": null,
-     "nature": null
+     "montant_euros": 0.0,
+     "nature": "Aucun — places en état, pas de travaux signalés"
     }
    },
    "annonce": {
-    "plateforme": null,
-    "url": "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css",
-    "prix_affiche_euros": null,
+    "plateforme": "leboncoin",
+    "url": null,
+    "prix_affiche_euros": 109000.0,
     "prix_retenu_euros": 80000.0,
-    "prix_statut": "offre"
+    "prix_statut": "offre",
+    "vendeur": "83IMMOBILIER — agent Céline Guillaume"
    },
    "marche": {
     "valeur": {
      "basse_euros": 99000.0,
      "haute_euros": 117000.0,
-     "retenue_euros": null,
-     "source": "carte « Valeur revente » (import)",
-     "confiance": "faible"
+     "retenue_euros": 108000.0,
+     "source": "Comparables places sous-sol Brignoles 11-13 k€/place — médiane 9 × 12 000 € = 108 k€ (fiche 27/08/2026), fourchette 99-117 k€",
+     "confiance": "moyenne"
     },
     "loyers": [
      {
-      "lot": "ensemble (import)",
+      "lot": "place standard — baux en place",
+      "quantite": 8,
+      "loyer_mensuel_euros": 55.0,
+      "occupe": true,
+      "note": "8 baux écrits à 55 €/mois. Loyer historique sous le marché : renouvellements visés 55 → 75 €/mois sur ~3 ans (2-3 baux/an)."
+     },
+     {
+      "lot": "9e place (vacante)",
       "quantite": 1,
-      "loyer_mensuel_euros": 440.0,
-      "occupe": null,
-      "note": "440 €/mois (8 × 55 €)"
+      "loyer_mensuel_euros": 70.0,
+      "occupe": false,
+      "note": "Postulat de la fiche : bail écrit à 70 €/mois avant l'acte — condition de l'offre à 80 k€. Sans bail, plancher CF neutre à 72,8 k€."
      }
     ],
-    "notes": null
+    "notes": "Loyer stabilisé visé : 9 × 75 € = 675 €/mois. Ancres de prix (fiche 27/08/2026) : plafond CF neutre avec 9e louée à 70 € signée = 84 500 € FAI · seuil rendement 6,5 % = 79 600 € FAI · plancher CF neutre sans la 9e = 72 800 € FAI. Offre en cours 80 000 € FAI (net vendeur 70 000 € + 10 000 € honoraires = 14,3 % du net vendeur). Honoraires 5-7 % = pratique, principal levier de négo."
    },
    "hypotheses": {
-    "vacance_base_pct": null,
-    "vacance_best_pct": null,
-    "vacance_worst_pct": null,
+    "vacance_base_pct": 0.0,
+    "vacance_best_pct": 0.0,
+    "vacance_worst_pct": 14.0,
     "charges": {
-     "charges_copro_annuelles_euros": 810.0,
-     "charges_copro_commentaire": "90 €/an (10 €/place/an) — confirmé par l'agent le 31/07/2026"
+     "charges_copro_annuelles_euros": 90.0,
+     "charges_copro_commentaire": "90 €/an (10 €/place/an) — confirmé par l'agent le 31/07/2026",
+     "taxe_fonciere_annuelle_euros": 0.0,
+     "taxe_fonciere_commentaire": "0 € — aucun avis de TF reçu par les propriétaires actuels ; rattrapage éventuel à leur charge (à confirmer par écrit au compromis)"
     },
-    "frais_acquisition_euros": 5110.0
+    "frais_acquisition_euros": 5110.0,
+    "vacance_justification": "8 baux écrits en place : vacance de rotation nulle en base (page : « 0 % — baux en place »). Worst case = 9e place jamais louée (−13,7 % du revenu de base, arrondi 14 %) + départs simultanés aux renouvellements.",
+    "frais_acquisition_commentaire": "Estimation 7,3 % du net vendeur (70 000 €) — barème notaire ancien constaté"
    },
    "analyse": {
     "branche": "parking",
@@ -2784,27 +2812,76 @@
      "code": "parking-ld",
      "lots": null
     },
-    "strategies_explorees": [],
-    "attractivite": [],
+    "strategies_explorees": [
+     {
+      "strategie": "Location parking sous-sol — bloc de 9 lots (stabilisation 55 → 75 €)",
+      "lots": 9,
+      "faisabilite": "Immédiate (8 baux en place)",
+      "risque": "modéré"
+     },
+     {
+      "strategie": "Revente à l'unité (lots distincts, 10-13 k€/place)",
+      "lots": 9,
+      "faisabilite": "Envisageable sans modification du règlement",
+      "risque": "faible — stratégie de sortie"
+     }
+    ],
+    "attractivite": [
+     {
+      "dimension": "tension_stationnement",
+      "score": 8,
+      "justification": "Stationnement payant en surface depuis le 01/07/2025 sur 1 096 places en centre-ville : report mécanique vers le privé."
+     },
+     {
+      "dimension": "densite_residentielle",
+      "score": 7,
+      "justification": "Résidence neuve « Les Berges de Signon » (43 logements) sur place + centre ancien dense — vivier de locataires immédiat."
+     },
+     {
+      "dimension": "accessibilite",
+      "score": 7,
+      "justification": "Sous-sol avec porte automatique, accès facile depuis la voirie (28 rue Lice de Signon)."
+     },
+     {
+      "dimension": "securite_acces",
+      "score": 8,
+      "justification": "Porte automatique à digicode, sous-sol fermé."
+     },
+     {
+      "dimension": "protection",
+      "score": 9,
+      "justification": "Sous-sol : ni intempéries ni dégradations, protection maximale — bâti amortissable en SCI IS."
+     },
+     {
+      "dimension": "demande_locative",
+      "score": 8,
+      "justification": "8/9 places déjà louées ; loyer de marché 75 €/mois justifié (sous-sol sécurisé) — demande croissante avec le stationnement payant."
+     }
+    ],
     "risques": [
      {
-      "facteur": "Revenu brut (8 × 55 € × 12) 5 280 €/an Charges copro (9 × 10 €) −90 € Taxe foncière 0 € EBE 5 190 €/an — 433 €/mois ✅ Amortissement bâti −2 553 € IS (15 %) −396 € Cash flow net 4 794 €/an — 400 €/mois Upside de stabilisation : +142 €/mois (440 € → 675 € de loyer brut sur ~3 ans) Projections financières — Offre 80 000 € (SCI IS) Base : 8 × 55 € (baux en place) + 9ᵉ louée à 70 € avant acte = 510 €/mois. Charges copro 90 €/an, TF 0 €, amortissement bâti sur 30 ans, emprunt 72 000 € sur 20 ans à 3,45 % (ass. 0,34 % incluse). Scénario Base 8 × 55 € + 9ᵉ louée à 70 € = 510 €/mois — Baux en place — Copro 90 € — TF 0 € Revenu brut 6 120 €/an Vacance (0 % — baux en place) 0 € Charges copro −90 € Taxe foncière 0 € EBE 6 030 € Amortissement bâti (30 ans) −2 553 € Résultat fiscal 3 477 € IS (15 %) −522 € Cash flow net après IS 5 508 €/an Soit par mois 459 € CF amort. réintégré 672 €/mois Rendement net (sur prix de revient) 6,5 % Scénario Optimiste Stabilisé 9 × 75 € — Vacance 10% — Copro 90 € — TF 0 € Revenu brut 8 100 €/an Vacance (10 %) −810 € Charges copro −90 € Taxe foncière 0 € EBE 7 200 € Amortissement bâti (30 ans) −2 553 € Résultat fiscal 4 647 € IS (15 %) −697 € Cash flow net après IS 6 503 €/an Soit par mois 542 € CF amort. réintégré 755 €/mois Rendement net 7,6 % Scénario Pessimiste 8 × 55 € = 440 €/mois — 9ᵉ jamais louée — Copro 90 € — TF 0 € Revenu brut 5 280 €/an Vacance (0 % — 8 baux en place) 0 € Charges copro −90 € Taxe foncière 0 € EBE 5 190 € Amortissement bâti (30 ans) −2 553 € Résultat fiscal 2 637 € IS (15 %) −396 € Cash flow net après IS 4 794 €/an Soit par mois 400 € CF amort. réintégré 612 €/mois Rendement net 5,6 % Trajectoire de transition — Renouvellement des baux 55 € → 75 € Année 1 Année 2 Année 3 (stabilisé) Places à 55 €",
-      "detail": "8 5 0 Places à 70 € (9ᵉ) 1 1 0 Places à 75 € 0 3 9 Loyer mensuel 510 € 570 € 675 € CF net /mois 416 € 462 € 542 € Rendement net 5,9 % 6,5 % 7,6 % Hypothèse : 2-3 baux renouvelés par an. La 9ᵉ place est louée à 70 € dès l'acte puis renouvelée à 75 € à terme. Charges copro 90 €/an, TF 0 €, prix de revient 85 110 €. Synthèse comparative — Offre 80 000 € Indicateur Base Optimiste Pessimiste Revenu brut 6 120 € 8 100 € 5 280 € Vacance 0 % (baux en place) 10 % 0 % (baux en place) EBE 6 030 € 7 200 € 5 190 € CF net après IS 5 508 € 6 503 € 4 794 € CF net /mois 459 € 542 € 400 € CF amort. réintégré /mois 672 € 755 € 612 € Rendement net 6,5 % 7,6 % 5,6 % Matrice de risques Facteur de risque Détail Sévérité Liquidité 9 lots de copropriété distincts = chaque place est revendable individuellement à 10 000–13 000 €. Liquidité unitaire correcte.",
+      "facteur": "Bail de la 9e place — condition de l'offre",
+      "detail": "L'offre à 80 000 € ne tient que si la 9e place est louée à 70 € avec bail écrit avant l'acte : sans bail, le plafond retombe à 72 800 € (CF neutre, règle 06/09/2026 : « on paie l'encaissé, pas le potentiel »).",
+      "severite": 3
+     },
+     {
+      "facteur": "Liquidité",
+      "detail": "9 lots de copropriété distincts = chaque place est revendable individuellement à 10 000-13 000 €. Liquidité unitaire correcte.",
       "severite": 2
      },
      {
       "facteur": "Concentration",
-      "detail": "Un seul actif, une seule zone géographique, un seul type de locataire. Aucune diversification.",
+      "detail": "Un seul actif, une seule zone géographique, un seul type de locataire. Aucune diversification — pondéré par le ticket unitaire faible.",
       "severite": 3
      },
      {
       "facteur": "Dépendance réglementaire",
-      "detail": "Le stationnement payant est un catalyseur fort. Un retour en arrière politique affaiblirait la demande.",
+      "detail": "Le stationnement payant (2025) est un catalyseur fort de la demande. Un retour en arrière politique affaiblirait la demande.",
       "severite": 3
      },
      {
-      "facteur": "Transition 55→75 €",
-      "detail": "8 baux à renouveler (la 9ᵉ est sécurisée à 70 € avant l'acte). Risque que certains locataires refusent la hausse et partent → vacance temporaire.",
+      "facteur": "Transition 55 → 75 €",
+      "detail": "8 baux à renouveler (la 9e est sécurisée à 70 € avant l'acte). Risque que certains locataires refusent la hausse et partent → vacance temporaire.",
       "severite": 3
      },
      {
@@ -2814,7 +2891,7 @@
      },
      {
       "facteur": "Honoraires agence élevés",
-      "detail": "14,3 % du net vendeur (10 000 € sur 70 000 €). La décote de l'offre est partiellement absorbée par des honoraires abusifs — le vendeur net n'empoche que 70 000 €. Principal levier de négo.",
+      "detail": "14,3 % du net vendeur (10 000 € sur 70 000 €) — la pratique est 5-7 %. La décote de l'offre est partiellement absorbée : le vendeur net n'empoche que 70 000 €. Principal levier de négo.",
       "severite": 3
      },
      {
@@ -2828,11 +2905,7 @@
     "source": "html-import",
     "importe_le": "2026-09-06"
    },
-   "champs_manquants": [
-    "hypotheses.vacance_base_pct",
-    "hypotheses.charges.taxe_fonciere",
-    "analyse.attractivite"
-   ]
+   "champs_manquants": []
   },
   {
    "slug": "2026-06-29-brignoles-centre-2-studios",
