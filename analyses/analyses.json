@@ -343,7 +343,7 @@
   {
    "slug": "2026-09-03-11-parkings-jean-rostand-la-seyne",
    "date_analyse": "2026-09-03",
-   "date_maj": "2026-09-07",
+   "date_maj": "2026-09-10",
    "titre": "Bloc de 11 places de parking standard (sous-sol), résidence Jean Rostand, La Seyne-sur-Mer",
    "bien": {
     "type_bien": "parking",
@@ -351,7 +351,7 @@
     "type_detail": "Bloc de 11 places de parking standard en sous-sol, résidence neuve sécurisée — VEFA (livraison T2 2027)",
     "neuf": true,
     "adresse": {
-     "texte": "Bloc de 11 places de parking standard (12 m²) en sous-sol — résidence neuve sécurisée, croisement bd Jean Rostand / av. Jean Vilar, quartier Saint-Jean, La Seyne-sur-Mer (83500)",
+     "texte": "Bloc de 11 places de parking standard (12 m²) en sous-sol — résidence neuve sécurisée, croisement bd Jean Rostand / av. Jean Vilar, quartier Saint-Jean (QPV Berthe), La Seyne-sur-Mer (83500)",
      "ville": "La Seyne-sur-Mer",
      "code_postal": "83500"
     },
@@ -360,13 +360,13 @@
     },
     "lots": {
      "count": 11,
-     "nature": "11 lots de copropriété distincts, un par place (revente à l'unité possible — à confirmer à l'état descriptif de division)",
+     "nature": "11 lots de copropriété distincts, un par place (lots 9 et 20-29 de la grille du programme) — revente à l'unité possible, à confirmer à l'état descriptif de division",
      "lots_distincts": true,
      "surface_par_lot_m2": 12.0
     },
     "copro": {
-     "charges_annuelles_euros": 1650.0,
-     "charges_source": "Estimées 150 €/an/place (quote-part copro résidence neuve + électricité sous-sol) — budget prévisionnel à obtenir par écrit avant réservation"
+     "charges_annuelles_euros": 1980.0,
+     "charges_source": "180 €/an/place retenus (1 980 €/an) : quote-part copro résidence neuve — syndic, assurance immeuble, éclairage et ventilation du sous-sol, provision travaux art. 14-2. Budget prévisionnel écrit à obtenir avant réservation (verrou n°1)."
     },
     "travaux": {
      "montant_euros": 0.0,
@@ -377,25 +377,25 @@
     "plateforme": "seloger",
     "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/la-seyne-sur-mer-83500/26ED31QDH4P8",
     "prix_affiche_euros": 88000.0,
-    "prix_retenu_euros": 77000.0,
+    "prix_retenu_euros": 66000.0,
     "prix_statut": "offre",
     "vendeur": "Constructa Promotion (134 bd Haussmann, Paris — RCS 065805822)"
    },
    "marche": {
     "valeur": {
-     "basse_euros": 110000.0,
-     "haute_euros": 143000.0,
-     "retenue_euros": 125000.0,
-     "source": "Revente à l'unité, lots distincts : comparables places sous-sol La Seyne et Brignoles 10-13 k€/place (fiche 03/09/2026) — médiane 125 k€",
+     "basse_euros": 77000.0,
+     "haute_euros": 88000.0,
+     "retenue_euros": 82500.0,
+     "source": "Revente à l'unité dans le quartier : 7 à 8 k€/place — prix programme 8 000 €/place et prix négociés constatés ; médiane 82 500 €. Les comparables 10-13 k€/place relevés hors QPV sont écartés (correction QPV 09/2026).",
      "confiance": "moyenne"
     },
     "loyers": [
      {
       "lot": "ensemble (import)",
       "quantite": 11,
-      "loyer_mensuel_euros": 80.0,
+      "loyer_mensuel_euros": 60.0,
       "occupe": null,
-      "note": "80 €/mois/place (ancres locales : places standard sous-sol 78-95 €/mois constatées en ligne)"
+      "note": "Loyer retenu 60 €/mois/place = milieu de la fourchette envisagée 54-65 €/mois (ancres QPV Berthe / Saint-Jean : 52-60 €/mois constatés ; les 78-95 €/mois relevés hors QPV sont écartés — correction QPV 09/2026)."
      }
     ],
     "notes": null
@@ -406,12 +406,14 @@
     "vacance_worst_pct": 25.0,
     "charges": {
      "taxe_fonciere_annuelle_euros": 0.0,
-     "taxe_fonciere_commentaire": "Exonérée 2 ans après livraison (neuf), puis ~30 €/an/place estimée",
-     "charges_copro_annuelles_euros": 1650.0,
-     "charges_copro_commentaire": "Estimées 150 €/an/place (quote-part copro résidence neuve + électricité sous-sol) — budget prévisionnel à obtenir par écrit avant réservation"
+     "taxe_fonciere_commentaire": "Exonérée 2 ans après livraison (neuf) ; ensuite ~45 €/an/place (~500 €/an pour le bloc) — à confirmer sur l'avis de TF",
+     "charges_copro_annuelles_euros": 1980.0,
+     "charges_copro_commentaire": "180 €/an/place retenus (syndic, assurance immeuble, éclairage/ventilation sous-sol, provision travaux) — budget prévisionnel écrit à obtenir avant réservation"
     },
-    "frais_acquisition_euros": 2600.0,
-    "vacance_justification": "Parc de 11 lots : vacance binaire statistiquement négligeable en base (grille 0-11, point mort ~2 places) — re-saisie 06/09/2026"
+    "frais_acquisition_euros": 1980.0,
+    "vacance_justification": "Parc de 11 lots : vacance binaire statistiquement négligeable en base (grille 0-11, point mort ~2 places) — re-saisie 06/09/2026",
+    "duree_amortissement_ans": 30,
+    "quote_part_bati_pct": 90.0
    },
    "analyse": {
     "branche": "parking",
@@ -429,17 +431,17 @@
       "risque": "modéré (montée en charge 6-9 mois)"
      },
      {
-      "strategie": "Revente à l'unité (lots distincts, 10-13 k€/place)",
+      "strategie": "Revente à l'unité (lots distincts, 7-8 k€/place) — filet de sortie",
       "lots": 11,
       "faisabilite": "Envisageable après livraison",
-      "risque": "faible — filet de sortie, PV unitaire estimée 3-6 k€/place"
+      "risque": "faible — PV unitaire 0,8-1,8 k€/place avant frais de cession"
      }
     ],
     "attractivite": [
      {
       "dimension": "tension_stationnement",
       "score": 6,
-      "justification": "Stationnement payant en centre-ville, résidences neuves sous-dotées (1 place/logement). Tension réelle, inférieure au centre ancien."
+      "justification": "Stationnement payant en centre-ville, résidences neuves sous-dotées (1 place/logement). Tension réelle, mais quartier QPV moins tendu que le centre ancien."
      },
      {
       "dimension": "densite_residentielle",
@@ -459,49 +461,54 @@
      {
       "dimension": "protection",
       "score": 10,
-      "justification": "Sous-sol : protection maximale, loyer supérieur à l'extérieur, bâti amortissable en SCI IS (90 % du prix sur 30 ans)."
+      "justification": "Sous-sol : protection maximale, loyer supérieur à l'extérieur, bâti amortissable en SCI IS (90 % du prix de revient sur 30 ans)."
      },
      {
       "dimension": "demande_locative",
-      "score": 8,
-      "justification": "Places standard : loyers constatés 78-95 €/mois (sous-sol sécurisé). Offre locative limitée. Loyer cible 80 €/mois conservateur et ancré."
+      "score": 7,
+      "justification": "Quartier QPV Berthe : loyers constatés 52-60 €/mois (fourchette envisagée 54-65). Demande réelle mais solvabilité des ménages inférieure à un secteur hors QPV — délai de relocation à surveiller à la livraison."
      }
     ],
     "risques": [
      {
       "facteur": "Charges copro inconnues (VEFA)",
-      "detail": "Budget prévisionnel non communiqué avant livraison. Estimation 150 €/an/place (1 650 €/an pour le bloc). Si les charges réelles doublaient (300 €/place/an), le rendement base passerait de ~8,5 % à ~6,7 % — le rabais volume absorbe le choc, mais le budget prévisionnel écrit reste le verrou n°1 avant réservation.",
-      "severite": 4
+      "severite": 4,
+      "detail": "Budget prévisionnel non communiqué : 180 €/an/place retenus (1 980 €/an). Si les charges réelles doublaient (360 €/place), le CF net tomberait de 432 à 292 €/mois et le rendement sur revient de 7,6 % à 5,2 %. Verrou n°1 avant réservation : le budget écrit."
+     },
+     {
+      "facteur": "Loyer réalisable en QPV",
+      "severite": 3,
+      "detail": "Fourchette envisagée 54-65 €/mois/place (ancres QPV Berthe). Au loyer bas de fourchette (54 €), le rendement sur revient tombe à 6,7 % — le seuil de 6,5 % est tenu sans marge et le prix plafond redescend à ~67 700 €. Aucun bail signé avant livraison."
      },
      {
       "facteur": "Relocation groupée post-livraison",
-      "detail": "11 places neuves à louer simultanément en T2 2027 : montée en charge sur 6-9 mois. Couvert par la grille 0-11 : même à 5/11 louées (45 %), le CF net reste à +230 €/mois. Risque de trésorerie faible, risque de délai réel.",
-      "severite": 3
+      "severite": 3,
+      "detail": "11 places neuves à louer simultanément en T2 2027 : montée en charge sur 6-9 mois. Couvert par la grille 0-11 : à 5/11 louées, le CF net est de +128 €/mois et reste absorbé par le parc."
      },
      {
       "facteur": "Acte unique à confirmer",
-      "detail": "Les frais de ~2 600 € supposent UN acte notarié portant sur les 11 lots. Si le promoteur imposait 11 actes séparés, les frais passeraient à ~9 600 € et le rendement base à ~7,8 %. À écrire noir sur blanc dans la négociation (vente unique, un acte).",
-      "severite": 3
+      "severite": 3,
+      "detail": "Les 1 980 € de frais supposent UN acte notarié portant sur les 11 lots. Si le promoteur imposait 11 actes séparés (~9 600 €), le revient passerait à 75 600 € et le rendement à 6,9 %. À écrire noir sur blanc dans la négociation."
      },
      {
       "facteur": "VEFA — délai de livraison",
-      "detail": "Livraison T2 2027 : ~9 mois sans revenu, risque de retard de chantier, état du marché locatif incertain à la remise des clés.",
-      "severite": 3
+      "severite": 3,
+      "detail": "Livraison T2 2027 : ~9 mois sans revenu, risque de retard de chantier, marché locatif incertain à la remise des clés. Intérêts intercalaires servis par la trésorerie de la SCI, sans appel aux associés."
+     },
+     {
+      "facteur": "Classement QPV Berthe du secteur",
+      "severite": 2,
+      "detail": "Programme situé dans le QPV Berthe (vérifié carte CGET) : loyers plafonnés par le marché du quartier (54-65 €/mois) et valeur de revente adossée au prix programme. Conséquence directe : la décote d'achat à 6 000 €/place est la condition du dossier — au prix catalogue (88 000 €), le rendement sur revient tomberait à 5,8 %."
      },
      {
       "facteur": "Concurrence locative intra-quartier",
-      "detail": "Le même promoteur commercialise MILOS (4 B + 3 doubles) et Jean Rostand (11 simples + 1 PMR) : jusqu'à ~18 places voiture dans Saint-Jean. Ne pas cumuler les deux programmes — prendre Jean Rostand OU les lots MILOS, pas les deux.",
-      "severite": 2
+      "severite": 2,
+      "detail": "Le même promoteur commercialise MILOS (4 B + 3 doubles) et Jean Rostand (11 simples + 1 PMR) : jusqu'à ~18 places voiture dans Saint-Jean. Ne pas cumuler les deux programmes — prendre Jean Rostand OU les lots MILOS, pas les deux."
      },
      {
       "facteur": "Concentration sur un seul programme",
-      "detail": "11 lots dans une seule résidence : un aléa de copropriété (travaux, sinistre sous-sol) expose tout le bloc. Pondéré par le ticket unitaire faible et la diversification du parc existant.",
-      "severite": 2
-     },
-     {
-      "facteur": "Loyer de marché à confirmer",
-      "detail": "80 €/mois est une ancre locale (78-95 € constatés sur places standard sous-sol) mais aucun bail n'existe avant livraison. Sensibilité : à 70 €/mois, le rendement base passe à 7,3 % — le seuil de 6,5 % tient jusqu'à ~62 €/mois.",
-      "severite": 2
+      "severite": 2,
+      "detail": "11 lots dans une seule résidence : un aléa de copropriété (travaux, sinistre sous-sol) expose tout le bloc. Pondéré par le ticket unitaire faible et la diversification du parc existant."
      }
     ]
    },
