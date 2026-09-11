@@ -3,7 +3,7 @@
   "schema": "analyses-v2-entrees",
   "generated_at": "2026-09-10T00:00:00+00:00",
   "source": "saisie-agent",
-  "count": 55
+  "count": 56
  },
  "analyses": [
   {
@@ -6200,6 +6200,198 @@
      {
       "facteur": "Pas de cave",
       "detail": "Absence de cave : perte d'agrément et de valeur à la revente.",
+      "severite": 2
+     }
+    ]
+   },
+   "champs_manquants": []
+  },
+  {
+   "slug": "2026-09-11-t5-86m2-dutasta-mayol-toulon",
+   "date_analyse": "2026-09-11",
+   "date_maj": null,
+   "titre": "Toulon — T5 de 86 m² au 5e étage avec ascenseur, quartier Dutasta-Mayol, 4 chambres",
+   "bien": {
+    "type_bien": "appartement",
+    "sous_type": null,
+    "type_detail": "T5 de 86,05 m² au 5e étage sur 8, ascenseur, 4 chambres, séjour-salon au sud donnant sur balcon de 7 m², cuisine indépendante à aménager avec cellier/loggia, salle de bain avec baignoire et fenêtre, WC indépendant, cave de 4 m², exposition sud-ouest, double vitrage, chauffage et eau chaude individuels au gaz. Immeuble de 1940, bien entretenu, copropriété de 53 lots, sans procédure syndicale en cours. Bien LIBRE (non loué) : aucun bail en place, aucune contrainte d'occupation. Honoraires à la charge du vendeur.",
+    "neuf": false,
+    "adresse": {
+     "texte": "Quartier Dutasta-Mayol, Toulon (83000) — adresse exacte non communiquée dans l'annonce, proche de Mayol et du port",
+     "ville": "Toulon",
+     "code_postal": "83000"
+    },
+    "surfaces": {
+     "texte": "86,05 m² annoncés (loi Carrez à confirmer par le diagnostic du vendeur)",
+     "carrez_m2": 86.05
+    },
+    "lots": {
+     "count": 1,
+     "surface_par_lot_m2": 86.05,
+     "nature": "1 appartement, convertible en colocation de 4 chambres (3 chambres + séjour transformable)",
+     "lots_distincts": 1
+    },
+    "copro": {
+     "charges_annuelles_euros": 1173.0,
+     "charges_source": "Charges de copropriété réelles annoncées par l'annonce : 1 173 €/an (14 €/m²/an), copropriété de 53 lots, aucune procédure syndicale en cours."
+    },
+    "travaux": {
+     "montant_euros": 35000.0,
+     "nature": "« Prévoir travaux de modernité » : cuisine à aménager, rafraîchissement général, sols, peintures. Enveloppe retenue 35 000 € en colocation, dont l'équipement mobilier (15-25 k€ si l'on se limite à la modernisation sans passage en meublé). Une deuxième salle d'eau serait le poste qui change la valeur du bien : à chiffrer en visite (contrainte d'évacuation à vérifier)."
+    }
+   },
+   "annonce": {
+    "plateforme": "seloger",
+    "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/toulon-83000/26AUE1NNJC3Q",
+    "prix_affiche_euros": 155000.0,
+    "prix_retenu_euros": null,
+    "prix_statut": "affiche",
+    "prix_commentaire": "1 801 €/m² sur 86,05 m². Honoraires d'agence à la charge du vendeur. Décote affichée de 29 % sur le prix moyen du quartier Dutasta-Mayol (2 522 €/m² retenus)."
+   },
+   "marche": {
+    "valeur": {
+     "basse_euros": 207000.0,
+     "haute_euros": 225000.0,
+     "retenue_euros": 217000.0,
+     "source": "Quartier Dutasta-Mayol : 2 433 €/m² (SeLoger, rue des Remparts, quartier Dutasta-Mayol — bas 1 878, haut 3 043), 2 612 €/m² (RealAdvisor, août 2026), 2 500 €/m² (efficity, rue Dutasta). Retenue 2 522 €/m² sur 86,05 m² = 217 000 €, avec fourchette 207 000 à 225 000 €. L'avenue de la République cote 3 048 €/m² (MeilleursAgents), mais c'est une avenue plus cotée que la moyenne du quartier. Aucune vente DVF exploitable sur ce bien : le chiffrage repose sur les estimations d'annonces.",
+     "confiance": "moyenne"
+    },
+    "loyers": [
+     {
+      "lot": "Chambre 1 (colocation, meublée)",
+      "quantite": 1,
+      "loyer_mensuel_euros": 420.0,
+      "occupe": false,
+      "note": "Hypothèse de marché toulonnais, aucun bail en place. Les annonces locales de colocation à Toulon s'étalent de 320 € CC (étudiant, entrée de gamme) à 530 € CC."
+     },
+     {
+      "lot": "Chambre 2 (colocation, meublée)",
+      "quantite": 1,
+      "loyer_mensuel_euros": 420.0,
+      "occupe": false,
+      "note": "Hypothèse de marché, aucun bail en place."
+     },
+     {
+      "lot": "Chambre 3 (colocation, meublée)",
+      "quantite": 1,
+      "loyer_mensuel_euros": 420.0,
+      "occupe": false,
+      "note": "Hypothèse de marché, aucun bail en place."
+     },
+     {
+      "lot": "Chambre 4 (séjour transformé, colocation meublée)",
+      "quantite": 1,
+      "loyer_mensuel_euros": 420.0,
+      "occupe": false,
+      "note": "Le séjour-salon du sud peut devenir une quatrième chambre (l'annonce propose déjà « salon ou une chambre »). Hypothèse de marché."
+     }
+    ],
+    "notes": "Aucun loyer en place : le bien est libre, tout le chiffrage repose sur une hypothèse de colocation à 420 €/chambre, cohérente avec le marché toulonnais (annonces de 320 à 530 € charges comprises) sans être vérifiée par un bail. Test de sensibilité : à 350 €/chambre le rendement net tombe à 3,7 % et le CF à −306 €/mois ; à 460 €/chambre il monte à 6,2 % et le CF devient positif (+112 €/mois sur 18 ans). En location nue, le même bien plafonne à 3,8-4,9 % net selon un loyer de 950 à 1 150 €/mois : le nu ne fait pas vivre ce bien. En achat-rénovation-revente, avec 30 k€ de travaux, la marge nette va de 2,3 % (revente à 2 600 €/m²) à 10,3 % (2 900 €/m²) : trop dépendant du prix de sortie pour être la voie principale."
+   },
+   "hypotheses": {
+    "vacance_base_pct": 10.0,
+    "vacance_best_pct": 8.0,
+    "vacance_worst_pct": 15.0,
+    "vacance_justification": "Colocation = chambres qui tournent individuellement, donc vacance structurellement plus élevée qu'un logement loué en bloc. Base 10 %, best 8 % (quatre chambres, ville étudiante), worst 15 % (une chambre vacante trois mois sur l'année).",
+    "frais_acquisition_euros": 12400.0,
+    "frais_divers_euros": 0.0,
+    "charges": {
+     "taxe_fonciere_annuelle_euros": 1300.0,
+     "taxe_fonciere_commentaire": "Estimation 86 m² à Toulon (~15 €/m²/an), à vérifier sur l'avis réel. Alerte si > 15 % du brut.",
+     "charges_copro_annuelles_euros": 1173.0,
+     "charges_copro_commentaire": "Montant réel annoncé : 1 173 €/an, soit 14 €/m²/an — trois fois moins que le T4 de Champ de Mars. Point positif du dossier.",
+     "pno_annuelle_euros": 250.0,
+     "pno_commentaire": "PNO appartement avec cave et balcon.",
+     "entretien_annuel_euros": 2900.0,
+     "entretien_commentaire": "Entretien courant 800 € + ménage et fournitures 700 € + provision de renouvellement du mobilier 700 € + provision d'impayés 3,5 % du loyer (~700 €, colocation : provision renforcée, doctrine du groupe, pas de GLI).",
+     "comptabilite_annuelle_euros": 600.0,
+     "comptabilite_commentaire": "Comptabilité SCI, majorée pour une exploitation en colocation meublée (4 baux, quittances, mobilier)."
+    }
+   },
+   "analyse": {
+    "branche": "residentiel",
+    "type_operation": "locatif",
+    "strategie_retenue": {
+     "nom": "Colocation meublée 4 chambres",
+     "code": "colocation",
+     "lots": 4
+    },
+    "strategies_explorees": [
+     {
+      "strategie": "Colocation meublée 4 chambres",
+      "lots": 4,
+      "faisabilite": "après travaux de modernité et équipement (4-6 mois)",
+      "risque": "moyen (rotation, impayés, gestion)"
+     },
+     {
+      "strategie": "Location nue longue durée",
+      "lots": 1,
+      "faisabilite": "immédiate",
+      "risque": "faible — mais rendement net plafonné à 3,8-4,9 %"
+     },
+     {
+      "strategie": "MDB : achat, modernisation, revente",
+      "lots": 1,
+      "faisabilite": "9-12 mois",
+      "risque": "élevé (marge de 2 à 10 % selon le prix de revente)"
+     }
+    ],
+    "attractivite": [
+     {
+      "dimension": "transports",
+      "score": 8,
+      "justification": "Quartier Dutasta-Mayol : proche du port, de Mayol et des axes centraux, desserte bus dense, gare de Toulon à distance de marche."
+     },
+     {
+      "dimension": "commerces",
+      "score": 8,
+      "justification": "« Proche de toutes les commodités à pied » selon l'annonce : centre-ville, commerces et services à proximité immédiate."
+     },
+     {
+      "dimension": "ecoles",
+      "score": 7,
+      "justification": "Secteur scolaire toulonnais dense ; bassin étudiant (université, écoles) qui soutient la demande de colocation."
+     },
+     {
+      "dimension": "securite",
+      "score": 6,
+      "justification": "Quartier central résidentiel, immeuble annoncé bien entretenu, aucune procédure syndicale. Pas de QPV."
+     },
+     {
+      "dimension": "demande_locative",
+      "score": 8,
+      "justification": "Toulon : demande structurellement forte sur les petites surfaces et la colocation étudiante ; quartier recherché pour sa centralité."
+     },
+     {
+      "dimension": "dynamisme",
+      "score": 7,
+      "justification": "Prix Toulon stables à orientés hausse sur le centre, quartier port-Mayol en amélioration continue."
+     }
+    ],
+    "risques": [
+     {
+      "facteur": "Une seule salle de bain et un WC pour quatre chambres",
+      "detail": "C'est le vrai plafond commercial du bien : à 420 € la chambre, on est proche du haut de ce que ce format accepte. Créer une seconde salle d'eau changerait l'équation, mais la contrainte d'évacuation doit être vérifiée en visite.",
+      "severite": 3
+     },
+     {
+      "facteur": "Aucun loyer en place",
+      "detail": "Le bien est libre : tout le chiffrage repose sur une hypothèse de colocation à 420 €/chambre, non vérifiée par un bail. À 350 €, le dossier tombe à 3,7 % net et −306 €/mois de trésorerie.",
+      "severite": 3
+     },
+     {
+      "facteur": "Colocation : rotation et impayés",
+      "detail": "Quatre baux, quatre rotations possibles, un profil locataire plus mobile et des impayés plus fréquents. Provision portée à 3,5 % du loyer, vacance de base à 10 %.",
+      "severite": 2
+     },
+     {
+      "facteur": "Travaux de modernité non chiffrés",
+      "detail": "« Prévoir travaux de modernité » : cuisine à aménager, rafraîchissement. Enveloppe retenue 35 k€ en colocation (dont mobilier) ; 15-25 k€ si l'on se limite à la modernisation sans meublé. Devis avant offre.",
+      "severite": 2
+     },
+     {
+      "facteur": "Immeuble de 1940",
+      "detail": "Parties communes, toiture et colonnes à examiner. Charges de copropriété faibles (1 173 €/an) mais un immeuble de cet âge peut réserver des appels de fonds. Exiger les trois derniers PV d'AG et le budget prévisionnel.",
       "severite": 2
      }
     ]
