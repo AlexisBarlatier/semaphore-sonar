@@ -5873,7 +5873,7 @@
     "type_detail": "T4 coupé en trois, loué comme trois logements séparés (colocation de fait) : T2 de 32,76 m², studio de 19,81 m², studio de 21,39 m², desservis par un couloir en indivision de 12,74 m². Immeuble de 1925, 6 étages, sans ascenseur, exposition sud, 3 WC séparés, pas de cave, pas de balcon. Copropriété de 22 lots. Les trois lots sont loués en 3/6/9.",
     "neuf": false,
     "adresse": {
-     "texte": "2, rue Vincent Allègre, Toulon (83000) - quartier Saint-Jean du Var / Pont-du-Las",
+     "texte": "2, rue Vincent Allègre, Toulon (83000) - secteur Saint-Roch / Claret, à quelques centaines de mètres du tribunal judiciaire (place Gabriel Péri)",
      "ville": "Toulon",
      "code_postal": "83000"
     },
@@ -5981,33 +5981,33 @@
     "attractivite": [
      {
       "dimension": "transports",
-      "score": 7,
-      "justification": "Secteur annoncé proche des transports, quartier non précisé dans l'annonce : note non vérifiable en l'état."
+      "score": 8,
+      "justification": "Secteur central de Toulon : proche du tribunal judiciaire (place Gabriel Péri) et des axes du centre, desserte urbaine dense."
      },
      {
       "dimension": "commerces",
-      "score": 7,
-      "justification": "Commodités annoncées à proximité immédiate. À confirmer par l'adresse exacte, non communiquée."
+      "score": 8,
+      "justification": "Secteur Saint-Roch / Claret : commerces de proximité, services et administrations accessibles à pied ; le tribunal judiciaire est à quelques centaines de mètres."
      },
      {
       "dimension": "ecoles",
       "score": 6,
-      "justification": "Toulon intra-muros disposant d'un maillage scolaire dense, sous réserve de l'implantation réelle."
+      "justification": "Maillage scolaire toulonnais dense, sous réserve de l'affectation réelle du secteur."
      },
      {
       "dimension": "securite",
-      "score": 5,
-      "justification": "Quartier non communiqué : note médiane par défaut. Un RDC d'immeuble de 1925 est plus exposé."
+      "score": 6,
+      "justification": "Quartier central ancien hors QPV — animation de centre-ville, circulation et stationnement tendus."
      },
      {
       "dimension": "demande_locative",
       "score": 8,
-      "justification": "Petites surfaces : la demande locative toulonnaise est structurellement forte sur les studios et T2, avec des loyers au m² supérieurs aux grandes surfaces."
+      "justification": "Emplacement central : demande des actifs travaillant au centre et dans les administrations s'ajoute au segment étudiant et jeunes actifs. Petites surfaces = segment le plus demandé."
      },
      {
       "dimension": "dynamisme",
       "score": 7,
-      "justification": "Marché toulonnais stable à haussier, forte demande locative estudiantine et active."
+      "justification": "Secteur Saint-Roch, proche des pôles administratifs et judiciaires toulonnais et du centre-ville : quartier de ville utile, valeurs stables."
      }
     ],
     "risques": [
