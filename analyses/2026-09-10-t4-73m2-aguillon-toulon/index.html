@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse - T4 73 m2, quartier Aguillon, Toulon</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Quartier Aguillon, Toulon (83000) - T4 de 73 m², 1er étage avec ascenseur, DPE E</p>
+  <p class="report-date">Analyse générée le 10 septembre 2026</p>
+  <p class="report-source">Source : SeLoger - annonce 26ZBKX4HBQAP (agence Ibox Atlas Immobilier, Toulon)</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/toulon-83000/26ZBKX4HBQAP">https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/toulon-83000/26ZBKX4HBQAP</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location longue durée nue</strong> - SCI à l'IS (15 %), amortissement sur 90 % du prix de revient sur 30 ans</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix affiché</span><span class="card-value">163 500 €</span></div>
+    <div class="card"><span class="card-label">Surface</span><span class="card-value">73 m²</span></div>
+    <div class="card"><span class="card-label">Prix / m²</span><span class="card-value">2 240 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient</span><span class="card-value">184 580 €</span></div>
+    <div class="card"><span class="card-label">Valeur marché retenue</span><span class="card-value">190 000 €</span></div>
+    <div class="card"><span class="card-label">Revenus bruts</span><span class="card-value">950 €/mois</span></div>
+    <div class="card"><span class="card-label">Rentabilité nette</span><span class="card-value">3,7 % / 3,6 %</span></div>
+    <div class="card card-verdict note-6-1"><span class="card-label">Note</span><span class="card-value">6,1/10</span></div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1160" data-lon="5.9470" data-address="Quartier Aguillon, Toulon (83000) - T4 de 73 m², 1er étage avec ascenseur, DPE E"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité - quartier Aguillon, Toulon (83000)</h2>
+    <p class="attractiveness-intro">Le quartier Aguillon occupe l'est toulonnais, entre le centre-ville et la place du Mourillon. Les ventes réelles y ressortent à 3 162 €/m² (DVF, Lestimo 09/2026) et les offres en cours à 2 820 €/m² (efficity) : c'est un quartier de ville utile, résidentiel, correctement desservi, sans être le bord de mer. Le bien s'affiche à 2 240 €/m², soit 29 % sous les ventes réelles du quartier - mais cette décote paie exactement son état (salle de bain à moderniser) et son DPE E.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Quartier bien desservi (bus, proximité Mourillon et centre-ville), stationnement en surface tendu.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Commerces, écoles, administrations à proximité immédiate selon l'annonce ; place du Mourillon à quelques minutes.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Secteur scolaire toulonnais dense, écoles et collèges à pied.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Quartier résidentiel calme, résidence annoncée bien entretenue. Pas de QPV.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <span class="attr-score"><strong>8/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Toulon : loyer moyen 16 €/m², demande familiale et active soutenue sur l'est toulonnais.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Prix Toulon stables à orientés hausse, quartier recherché proche littoral.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> couples et familles actives, demande locative stable sur un quartier résidentiel proche du Mourillon</p>
+      <p><strong>Conclusion :</strong> Adéquation moyenne (7,0/10). Le quartier est un bon emplacement locatif de seconde couronne : commerces, écoles et desserte présents, valeurs stables. Le problème du dossier n'est pas le quartier, c'est la structure de charges de l'immeuble (ascenseur, copropriété de 77 lots) rapportée à un loyer de 950 €.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Deux lectures ont été testées : la conservation en location nue et l'achat-rénovation-revente (MDB). La seconde n'est crédible qu'à un prix d'entrée nettement inférieur.</p>
+    <table class="strategy-table">
+      <thead><tr><th>Stratégie</th><th>Lots</th><th>Rendement</th><th>Faisabilité</th><th>Risque</th></tr></thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Location nue longue durée</strong></td>
+          <td>1</td>
+          <td></td>
+          <td>immédiate après modernisation salle de bain</td>
+          <td>faible</td>
+        </tr>
+        <tr>
+          <td><strong>MDB : achat, remise en état, revente à un utilisateur</strong></td>
+          <td>1</td>
+          <td></td>
+          <td>12 mois</td>
+          <td>moyen (marge uniquement si achat <= 137 k€)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale"><p>La location nue est la stratégie retenue par défaut, mais elle ne passe pas le seuil de rendement de la SCI : 3,7 % net sur le prix de revient, contre 6,5 % exigés. Le MDB est la lecture qui donnerait un sens à ce prix : le bien s'affiche 29 % sous les ventes réelles du quartier, ce qui ressemble à une décote d'entrée. Vérification faite, ce n'est pas une aubaine : la revente crédible d'un bien qui reste en DPE E après remise en état se situe entre 2 900 et 3 100 €/m², pas à la moyenne du quartier. À l'affichage, la marge MDB est nulle (-1 300 à -5 700 €). Et traiter le DPE (isolation intérieure, menuiseries, chauffage : +25 k€) ne se rentabilise pas : cela rapporte 200 à 300 €/m² de revente, soit moins que l'euro investi. Conclusion : le dossier n'a de sens qu'à un prix d'entrée de 116 000 à 126 000 €.</p></div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Quartier Aguillon, Toulon (83000) - adresse exacte non communiquée dans l'annonce</td></tr>
+        <tr><th>Type de bien</th><td>Appartement T4 traversant de 73 m², 1er étage sur 7, ascenseur, 3 chambres, cuisine ouverte, salle de bain et WC séparés, 2 balcons (10 m²), pas de cave</td></tr>
+        <tr><th>Immeuble</th><td>Construit en 1980 - copropriété de 77 lots - chauffage individuel électrique - annoncé résidence calme et bien entretenue</td></tr>
+        <tr><th>DPE / GES</th><td><strong>DPE E</strong> / GES B - interdiction de location en 2034 - facture énergétique annoncée 1 465 à 1 981 €/an (chauffage électrique)</td></tr>
+        <tr><th>Prix affiché</th><td>163 500 € soit 2 240 €/m² - honoraires à la charge du vendeur</td></tr>
+        <tr><th>Valeur de marché retenue</th><td>180 000 à 200 000 €, retenue <strong>190 000 €</strong> (2 600 €/m²) - ventes réelles du quartier 3 162 €/m² (DVF), offres 2 820 €/m² ; décote d'état (salle de bain vétuste) et de DPE E</td></tr>
+        <tr><th>Loyer retenu</th><td>950 €/mois charges comprises (13 €/m²), soit environ 880 € hors charges - marché local : T4 102 m² à 1 255 € CC, T3 67 m² à 900 €</td></tr>
+        <tr><th>Travaux</th><td>Modernisation de la salle de bain et rafraîchissement : <strong>8 000 €</strong> retenus (fourchette 6-12 k€, devis avant offre). Rénovation énergétique (15-30 k€) chiffrée séparément et jugée non rentable</td></tr>
+        <tr><th>Charges annuelles</th><td>Copropriété ~1 400 € (ascenseur, 77 lots) + taxe foncière ~1 250 € + PNO 180 € + entretien 300 € + comptabilité 400 € - <strong>estimations à confirmer</strong> sur budget prévisionnel et avis de taxe foncière</td></tr>
+        <tr><th>Fiscalité</th><td>SCI à l'IS : IS 15 % sur le résultat, amortissement de 90 % du prix de revient sur 30 ans</td></tr>
+        <tr><th>Prix de revient</th><td><strong>184 580 €</strong> = prix 163 500 € + frais d'acquisition ~13 080 € (8 %) + travaux 8 000 €</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières - prix affiché 163 500 € (SCI IS)</h2>
+    <p class="attractiveness-intro">Deux lectures ont été testées : la conservation en location nue et l'achat-rénovation-revente (MDB). La seconde n'est crédible qu'à un prix d'entrée nettement inférieur.</p>
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5 % - hypothèses retenues</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">11 400 €</td></tr>
+            <tr><td>Vacance locative</td><td class="num">-0 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">7 015 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">5 537 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">-222 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">566 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-optimiste">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 3 % - relocation rapide</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">11 400 €</td></tr>
+            <tr><td>Vacance locative</td><td class="num">-0 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">7 243 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">5 537 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">-256 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">582 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-pessimiste">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 10 % - tension locative</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">11 400 €</td></tr>
+            <tr><td>Vacance locative</td><td class="num">-0 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">6 445 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">5 537 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">-136 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">526 €</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <table class="projection-table compare">
+      <thead><tr><th>Indicateur</th><th class="num">Base</th><th class="num">Optimiste</th><th class="num">Pessimiste</th></tr></thead>
+      <tbody>
+        <tr><td>EBE avant IS</td><td class="num">7 015 €</td><td class="num">7 243 €</td><td class="num">6 445 €</td></tr>
+        <tr><td>CF net mensuel</td><td class="num">566 €</td><td class="num">582 €</td><td class="num">526 €</td></tr>
+        <tr><td>Rendement net (revient)</td><td class="num">3.7 %</td><td class="num">3.8 %</td><td class="num">3.4 %</td></tr>
+        <tr><td>Rendement net (valeur)</td><td class="num">3.6 %</td><td class="num">3.7 %</td><td class="num">3.3 %</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix"><p class="attractiveness-intro">Le dossier ne vit pas par son rendement mais par son prix d'entrée. En location nue, le rendement net plafonne à 3,7 % sur le prix de revient et 3,6 % sur la valeur de marché : deux points et demi sous le seuil de 6,5 % que s'impose la SCI. Le coupable n'est pas le loyer (correct pour le quartier) mais la masse de charges fixes : copropriété avec ascenseur et taxe foncière toulonnaise absorbent 24 à 27 % du loyer brut, avant vacance et provision. En MDB, la revente crédible d'un bien qui reste en DPE E se situe entre 2 900 et 3 100 €/m² : la marge est nulle à l'affichage, et la rénovation énergétique (+25 k€) ne se rentabilise pas (elle rapporte 200 à 300 €/m² de revente). Prix d'équilibre : 116 000 à 126 000 € en MDB, 137 000 € pour une marge de 15 %.</p></div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead><tr><th>Facteur de risque</th><th>Détail</th><th>Sévérité</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>DPE E — horizon réglementaire</td>
+          <td>E interdit à la location en 2034. Le logement reste louable huit ans, mais la facture énergétique annoncée (1 465 à 1 981 €/an, chauffage électrique) pèse sur le loyer et sur la revente.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Charges fixes élevées</td>
+          <td>Copropriété avec ascenseur + taxe foncière toulonnaise = 24 à 27 % du loyer brut. C'est le poste qui ramène le rendement sous le seuil, pas le prix d'achat.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Travaux non chiffrés par devis</td>
+          <td>« Modernisation de la salle de bain » : fourchette 6-12 k€. Sur un immeuble de 1980, prévoir des surprises (électricité, plomberie).</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Pas de cave</td>
+          <td>Absence de cave annoncée : légère perte d'attractivité locative et de valeur à la revente.</td>
+          <td><span class="severity severity-1">1/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision"><p class="verdict-stance"><strong>À négocier - et seulement à 120 000 € environ</strong>. Le bien est correct, l'emplacement aussi : un T4 de 73 m² avec ascenseur et deux balcons dans un quartier résidentiel de l'est toulonnais, à 950 € de loyer, ce n'est pas un mauvais produit. Mais le rendement net plafonne à 3,7 % sur le prix de revient, très loin du seuil de 6,5 % de la SCI, et le MDB est nul à l'affichage : la revente crédible d'un logement qui reste en DPE E est de 2 900 à 3 100 €/m², pas la moyenne du quartier. La décote affichée de 29 % n'est donc pas une aubaine : elle paie l'état et le DPE. Seul un prix d'entrée autour de 120 000 € rendrait le dossier défendable en locatif comme en MDB.</p></div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 120 000 € en locatif et MDB, soit 16 % sous l'affichage. À ce prix, le rendement net ressort autour de 5 % en nue et la marge MDB atteint 15 % en revente à 3 300 €/m². Au-dessus de 137 000 €, le dossier n'a plus aucune raison d'être dans le parc.</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Le DPE E est le premier levier : le logement reste louable jusqu'en 2034, donc le vendeur n'a aucune urgence réglementaire - mais l'acquéreur, lui, achète un actif dont la valeur de revente est amputée de 10 à 15 % par le classement énergétique, et une facture de 1 500 à 2 000 €/an qui pèse sur le loyer négociable</li>
+        <li>Les charges de copropriété sont à vérifier pièce en pièce : un immeuble de 1980 de 77 lots avec ascenseur peut réserver des appels de fonds (toiture, ravalement, ascenseur). Exiger les trois derniers PV d'assemblée générale et le budget prévisionnel</li>
+        <li>La salle de bain « à moderniser » n'est pas chiffrée : la fourchette est de 6 à 12 k€, et sur un immeuble de 1980 il faut prévoir de l'électricité et de la plomberie. Devis avant offre</li>
+        <li>Le prix affiché est au-dessus de la valeur du bien en l'état : le vendeur ne peut pas ignorer que son bien est en DPE E avec une salle de bain d'origine. C'est l'argument central de la négociation</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 %) - amortissement sur 90 % du prix de revient sur 30 ans</p>
+      <p><strong>Frais d'acquisition estimés :</strong> ~13 080 € (8 % du prix affiché)</p>
+      <p><strong>Enveloppe travaux :</strong> 8 000 € (salle de bain et rafraîchissement), hors rénovation énergétique chiffrée à 15-30 k€ et jugée non rentable</p>
+      <p><strong>Contrôle à faire avant toute offre :</strong> budget prévisionnel de copropriété, PV d'AG des trois derniers exercices, avis de taxe foncière, devis de la salle de bain, diagnostics complets</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier - 06 27 84 53 50 - sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>

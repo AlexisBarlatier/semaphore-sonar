@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse - T4 66 m2, Champ de Mars, Toulon</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Quartier Champ de Mars, Toulon Est (83000) - T4 de 66 m², 2e étage sans ascenseur</p>
+  <p class="report-date">Analyse générée le 10 septembre 2026</p>
+  <p class="report-source">Source : SeLoger - annonce 26RTY777JQHN (annonce orientée investisseur / colocation)</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/toulon-83000/26RTY777JQHN">https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/toulon-83000/26RTY777JQHN</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location longue durée nue (colocation testée et écartée)</strong> - SCI à l'IS (15 %), amortissement sur 90 % du prix de revient sur 30 ans, provision d'impayés 1 % (pas de GLI)</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix affiché</span><span class="card-value">158 000 €</span></div>
+    <div class="card"><span class="card-label">Surface</span><span class="card-value">66 m²</span></div>
+    <div class="card"><span class="card-label">Prix / m²</span><span class="card-value">2 394 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient</span><span class="card-value">170 640 €</span></div>
+    <div class="card"><span class="card-label">Valeur marché retenue</span><span class="card-value">147 000 €</span></div>
+    <div class="card"><span class="card-label">Revenus bruts</span><span class="card-value">930 €/mois</span></div>
+    <div class="card"><span class="card-label">Rentabilité nette</span><span class="card-value">4,2 % / 4,9 %</span></div>
+    <div class="card card-verdict note-5-9"><span class="card-label">Note</span><span class="card-value">5,9/10</span></div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1180" data-lon="5.9280" data-address="Quartier Champ de Mars, Toulon Est (83000) - T4 de 66 m², 2e étage sans ascenseur"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité - Champ de Mars, Toulon Est (83000)</h2>
+    <p class="attractiveness-intro">Le secteur Jardin du Champ de Mars se situe dans l'est toulonnais, à proximité du bassin universitaire de La Garde : c'est ce que vend l'annonce, et la géographie le confirme. Les prix moyens du secteur ressortent à 2 228 €/m² (MeilleursAgents), avec une fourchette très large selon les biens. Le bien s'affiche à 2 394 €/m², soit environ 7 % au-dessus de cette moyenne : il n'y a pas de décote d'entrée sur ce dossier.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Toulon Est, proche axes et transports urbains ; accès rapide au campus universitaire de La Garde.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Secteur animé de l'est toulonnais, commerces de proximité.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <span class="attr-score"><strong>8/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Proximité immédiate des universités et écoles supérieures — argument central de l'annonce, cohérent avec la géographie.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <span class="attr-score"><strong>5/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Quartier populaire de l'est toulonnais, sans être un QPV. Notoriété locale moyenne.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <span class="attr-score"><strong>8/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Demande étudiante et active soutenue ; le bassin universitaire de La Garde irrigue ce secteur.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Prix stables sur Toulon Est, quartier sans moteur particulier de valorisation.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> étudiants et jeunes actifs du bassin universitaire de La Garde, puis couples en location nue</p>
+      <p><strong>Conclusion :</strong> Adéquation moyenne (6,8/10). L'atout réel est la proximité de l'enseignement supérieur, qui soutient la demande locative. Le point faible est le prix : à 7 % au-dessus du marché du secteur, le dossier ne peut pas se réparer par l'exploitation, seulement par la négociation.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Deux usages ont été chiffrés : la location nue et la colocation meublée en trois chambres, angle mis en avant par l'annonce. Le second a été testé en détail puis écarté.</p>
+    <table class="strategy-table">
+      <thead><tr><th>Stratégie</th><th>Lots</th><th>Rendement</th><th>Faisabilité</th><th>Risque</th></tr></thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Location nue</strong></td>
+          <td>1</td>
+          <td></td>
+          <td>immédiate</td>
+          <td>faible</td>
+        </tr>
+        <tr>
+          <td><strong>Colocation meublée 3 chambres</strong></td>
+          <td>3</td>
+          <td></td>
+          <td>immédiate après équipement</td>
+          <td>moyen — écartée : charges de gestion supérieures au gain de loyer</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale"><p>La location nue est retenue. La colocation a été chiffrée à la demande de Rémy, et le résultat est contre-intuitif : sur un 66 m² découpé en trois chambres de 9 à 11 m², le loyer brut progresse de 42 % (1 320 € contre 930 €) mais les charges de gestion - fluides, ménage, mobilier, provision de renouvellement - progressent de 168 %. Résultat : EBE de 651 €/mois en colocation contre 698 à 708 €/mois en location nue avec provision d'impayés. La colocation ne sauve pas ce dossier ; elle le dégrade. Le marché confirme : le comparable direct d'un T4 meublé de 67 m² à trois chambres se loue à partir de 450 € par chambre, pas 530. Reste la location nue : rendement net de 4,2 % sur le prix de revient, 4,9 % sur la valeur, contre un seuil de 6,5 %.</p></div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Quartier Champ de Mars, Toulon Est (83000) - adresse exacte non communiquée</td></tr>
+        <tr><th>Composition</th><td>T4 de 66 m² au 2e étage sur 4, sans ascenseur - 3 chambres, cuisine séparée, cellier, WC indépendant, salle de bain, pas de cave</td></tr>
+        <tr><th>Copropriété</th><td>20 lots - charges annoncées 960 €/an (80 €/mois), niveau faible : c'est un point positif du dossier</td></tr>
+        <tr><th>DPE / GES</th><td>DPE D / GES B - chauffage individuel électrique - aucun travaux annoncé</td></tr>
+        <tr><th>Prix affiché</th><td>158 000 € soit 2 394 €/m² - honoraires à la charge du vendeur - environ 7 % au-dessus de la moyenne du secteur (2 228 €/m²)</td></tr>
+        <tr><th>Valeur de marché retenue</th><td>140 000 à 154 000 €, retenue <strong>147 000 €</strong> (2 228 €/m²) - MeilleursAgents secteur Jardin du Champ de Mars</td></tr>
+        <tr><th>Loyer retenu</th><td>930 €/mois en location nue (14 €/m²) - marché local 860 à 950 € pour un T4 de ce type. En colocation : 3 chambres à 400-450 € maximum compte tenu de leur taille</td></tr>
+        <tr><th>Travaux</th><td>Aucun travaux annoncé - DPE D, pas de contrainte réglementaire avant 2034</td></tr>
+        <tr><th>Charges annuelles</th><td>Copropriété 960 € + taxe foncière ~950 € + PNO 200 € + entretien 300 € + comptabilité 400 € + provision d'impayés 1 % - <strong>estimations à confirmer</strong></td></tr>
+        <tr><th>Fiscalité</th><td>SCI à l'IS : IS 15 % sur le résultat, amortissement de 90 % du prix de revient sur 30 ans. Pas de GLI : provision d'auto-assurance de 1 % du loyer annuel (doctrine du groupe)</td></tr>
+        <tr><th>Prix de revient</th><td><strong>170 640 €</strong> = prix 158 000 € + frais d'acquisition ~12 640 € (8 %)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières - prix affiché 158 000 € (SCI IS)</h2>
+    <p class="attractiveness-intro">Deux usages ont été chiffrés : la location nue et la colocation meublée en trois chambres, angle mis en avant par l'annonce. Le second a été testé en détail puis écarté.</p>
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 5 % - hypothèses retenues</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">11 160 €</td></tr>
+            <tr><td>Vacance locative</td><td class="num">-0 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">7 513 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">5 119 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">-359 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">596 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-optimiste">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 3 % - relocation rapide</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">11 160 €</td></tr>
+            <tr><td>Vacance locative</td><td class="num">-0 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">7 736 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">5 119 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">-393 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">612 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-pessimiste">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 10 % - tension locative</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">11 160 €</td></tr>
+            <tr><td>Vacance locative</td><td class="num">-0 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">6 955 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">5 119 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">-275 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">557 €</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <table class="projection-table compare">
+      <thead><tr><th>Indicateur</th><th class="num">Base</th><th class="num">Optimiste</th><th class="num">Pessimiste</th></tr></thead>
+      <tbody>
+        <tr><td>EBE avant IS</td><td class="num">7 513 €</td><td class="num">7 736 €</td><td class="num">6 955 €</td></tr>
+        <tr><td>CF net mensuel</td><td class="num">596 €</td><td class="num">612 €</td><td class="num">557 €</td></tr>
+        <tr><td>Rendement net (revient)</td><td class="num">4.2 %</td><td class="num">4.3 %</td><td class="num">3.9 %</td></tr>
+        <tr><td>Rendement net (valeur)</td><td class="num">4.9 %</td><td class="num">5.0 %</td><td class="num">4.5 %</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix"><p class="attractiveness-intro">Le principal défaut du dossier est son prix : 2 394 €/m² contre 2 228 €/m² de moyenne MeilleursAgents sur le secteur, soit environ 7 % au-dessus du marché. Il n'y a donc aucune décote d'entrée à capter, et tout le rendement devrait venir de la négociation. En location nue avec provision d'impayés, le rendement net ressort à 4,2 % sur le prix de revient et 4,9 % sur la valeur, contre un seuil de parc de 6,5 %. L'étude colocation menée sur ce bien est sans appel : le loyer brut progresse de 42 % mais les charges de gestion (fluides, ménage, mobilier) de 168 % - la colocation est moins rentable que le nu sur un 66 m² à trois petites chambres.</p></div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead><tr><th>Facteur de risque</th><th>Détail</th><th>Sévérité</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Prix affiché au-dessus du marché du secteur</td>
+          <td>2 394 €/m² contre 2 228 €/m² de moyenne MeilleursAgents sur le secteur, soit +7 %. Il n'y a aucune décote d'entrée à capter : tout le rendement doit venir de la négociation.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Rendement sous le seuil</td>
+          <td>En location nue avec provision d'impayés, le rendement net ressort à 4,8 % sur le revient, contre un seuil de parc de 6,5 %. Même au loyer haut de fourchette, le dossier ne passe pas.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>2e étage sans ascenseur</td>
+          <td>Deuxième étage sans ascenseur : pénalise la revente et une partie de la demande locative (familles, seniors).</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Pas de cave</td>
+          <td>Absence de cave : perte d'agrément et de valeur à la revente.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision"><p class="verdict-stance"><strong>À négocier - 120 000 € environ, en location nue.</strong> Le dossier n'est pas mauvais : les charges de copropriété sont faibles (960 €/an), le DPE D ne pose aucune contrainte, le bien est libre et la proximité universitaire soutient la demande. Mais le prix affiché est 7 % au-dessus du marché du secteur, ce qui ne laisse aucune marge, et le rendement net plafonne à 4,2 % sur le prix de revient avec une provision d'impayés. L'angle colocation mis en avant par l'annonce a été chiffré et écarté : sur trois chambres de 9 à 11 m², les charges de gestion mangent tout le gain de loyer. Prix cible pour tenir le seuil de 6,5 % : 116 000 à 119 000 €.</p></div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 120 000 € (soit 1 818 €/m², environ 24 % sous l'affichage). À ce prix, le rendement net avec provision d'impayés ressort autour de 6,5 %.</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Le prix est le seul levier réel : le bien s'affiche 7 % au-dessus de la moyenne MeilleursAgents du secteur, sans décote d'entrée à capter. C'est l'argument central, chiffres à l'appui</li>
+        <li>L'étude colocation démontre que l'argument de vente de l'annonce ne tient pas : 42 % de loyer brut en plus pour 168 % de charges en plus. À présenter au vendeur comme la preuve que la valeur locative du bien est bornée</li>
+        <li>La taille des chambres est le plafond du potentiel : 66 m² pour trois chambres signifie des chambres de 9 à 11 m², ce qui limite le loyer à 400-450 € par chambre. À vérifier sur plan</li>
+        <li>L'absence de cave et l'absence d'ascenseur au 2e étage sont deux moins-values à faire valoir, notamment pour la revente</li>
+        <li>La provision d'impayés de 1 % (pas de GLI, doctrine du groupe) est déjà intégrée au calcul : ne pas se laisser opposer l'argument d'une assurance à souscrire</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 %) - amortissement sur 90 % du prix de revient sur 30 ans - provision d'impayés 1 % du loyer annuel, pas de GLI</p>
+      <p><strong>Frais d'acquisition estimés :</strong> ~12 640 € (8 % du prix affiché)</p>
+      <p><strong>Enveloppe travaux :</strong> aucun travaux annoncé, DPE D</p>
+      <p><strong>Contrôle à faire avant toute offre :</strong> plan du logement (surface réelle des trois chambres), PV d'AG et budget de copropriété, avis de taxe foncière, diagnostics complets, échéancier des charges</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier - 06 27 84 53 50 - sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>

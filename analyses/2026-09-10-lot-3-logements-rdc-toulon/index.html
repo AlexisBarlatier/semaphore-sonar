@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse - Lot de 3 logements RDC, Toulon</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Toulon (83000) - lot complet de 3 logements en rez-de-chaussée : T2 32,76 m² + studio 19,81 m² + studio 21,39 m²</p>
+  <p class="report-date">Analyse générée le 10 septembre 2026</p>
+  <p class="report-source">Source : SeLoger - annonce 26C7IRSUZ172 (agence Illiz, Déborah Grifo) - bien en exclusivité</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/toulon-83000/26C7IRSUZ172">https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/toulon-83000/26C7IRSUZ172</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Location longue durée nue - trois logements conservés</strong> - SCI à l'IS (15 %), amortissement sur 90 % du prix de revient sur 30 ans</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix affiché</span><span class="card-value">189 000 €</span></div>
+    <div class="card"><span class="card-label">Surface</span><span class="card-value">74 m²</span></div>
+    <div class="card"><span class="card-label">Prix / m²</span><span class="card-value">2 555 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient</span><span class="card-value">249 120 €</span></div>
+    <div class="card"><span class="card-label">Valeur marché retenue</span><span class="card-value">210 000 €</span></div>
+    <div class="card"><span class="card-label">Revenus bruts</span><span class="card-value">1 348 €/mois</span></div>
+    <div class="card"><span class="card-label">Rentabilité nette</span><span class="card-value">4,0 % / 4,8 %</span></div>
+    <div class="card card-verdict note-5-7"><span class="card-label">Note</span><span class="card-value">5,7/10</span></div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1242" data-lon="5.9280" data-address="Toulon (83000) - lot complet de 3 logements en rez-de-chaussée : T2 32,76 m² + studio 19,81 m² + studio 21,39 m²"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité - Toulon (83000), quartier non précisé dans l'annonce</h2>
+    <p class="attractiveness-intro">L'annonce ne communique ni l'adresse exacte ni le quartier : elle indique seulement « un secteur bien placé de Toulon, proche des commodités et des transports ». Les notes d'attractivité sont donc posées à dire d'expert, avec un quartier médian par défaut pour la sécurité, et devront être révisées dès l'obtention de l'adresse. Le bien est un lot complet de trois logements en rez-de-chaussée d'un immeuble de 1925 : T2 de 32,76 m², studio de 19,81 m², studio de 21,39 m², soit 73,96 m² habitables.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Secteur annoncé proche des transports, quartier non précisé dans l'annonce : note non vérifiable en l'état.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Commodités annoncées à proximité immédiate. À confirmer par l'adresse exacte, non communiquée.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Toulon intra-muros disposant d'un maillage scolaire dense, sous réserve de l'implantation réelle.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <span class="attr-score"><strong>5/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Quartier non communiqué : note médiane par défaut. Un RDC d'immeuble de 1925 est plus exposé.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <span class="attr-score"><strong>8/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Petites surfaces : la demande locative toulonnaise est structurellement forte sur les studios et T2, avec des loyers au m² supérieurs aux grandes surfaces.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Marché toulonnais stable à haussier, forte demande locative estudiantine et active.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> jeunes actifs, étudiants et personnes seules - c'est le segment le plus demandé du marché toulonnais</p>
+      <p><strong>Conclusion :</strong> Adéquation moyenne (6,7/10), mais note non vérifiable : l'absence de quartier dans l'annonce est en soi une information manquante de premier ordre. Les petites surfaces constituent en revanche le meilleur segment locatif de Toulon : demande structurellement forte, loyers au m² supérieurs aux grandes surfaces, rotation rapide.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Deux lectures testées : la conservation en location nue des trois lots, et l'achat-rénovation-revente avec revente à la découpe (les trois logements étant des lots distincts, la sortie séparée est possible).</p>
+    <table class="strategy-table">
+      <thead><tr><th>Stratégie</th><th>Lots</th><th>Rendement</th><th>Faisabilité</th><th>Risque</th></tr></thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Location nue des trois lots</strong></td>
+          <td>3</td>
+          <td></td>
+          <td>immédiate, baux en cours</td>
+          <td>faible</td>
+        </tr>
+        <tr>
+          <td><strong>MDB : rénovation puis revente à la découpe des trois lots</strong></td>
+          <td>3</td>
+          <td></td>
+          <td>12-18 mois</td>
+          <td>élevé — la revente à la découpe ne couvre pas le stock (marge -27 à -88 k€)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale"><p>La location nue est retenue : c'est la seule lecture qui exploite la force réelle du bien - trois petits logements, segment le plus liquide et le plus demandé du marché toulonnais. Le rendement brut paraît flatteur (7,9 % sur le prix de revient), mais il ne survit pas aux charges : trois copropriétés à financer, trois taxes foncières, trois baux à gérer, et une vacance plus fréquente qu'un lot unique. Net après charges, fiscalité et provision de rotation : 4,0 % sur le prix de revient et 4,8 % sur la valeur retenue. La revente à la découpe, testée en MDB, est franchement perdante : avec 45 k€ de travaux sur trois logements, le coût de revient atteint 257 000 € quand la revente à 3 000 €/m² n'en rapporte que 222 000 € (marge -46 000 €). C'est le prix d'entrée qui est trop haut, pas la stratégie de sortie.</p></div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Toulon (83000) - <strong>quartier et adresse non communiqués</strong> dans l'annonce : « secteur bien placé, proche commodités et transports ». Pointé sur le centre de Toulon sur la carte</td></tr>
+        <tr><th>Composition</th><td>Lot complet de 3 logements au rez-de-chaussée : T2 de 32,76 m², studio de 19,81 m², studio de 21,39 m² - immeuble de 1925, 6 étages, sans ascenseur, exposition sud, 3 WC séparés, pas de cave, pas de balcon</td></tr>
+        <tr><th>Surfaces</th><td>73,96 m² habitables (somme des trois lots) - <strong>l'annonce affiche 86,7 m², soit un écart de 12,74 m² à justifier</strong>. Conséquence : le prix au m² réel est de 2 555 €, pas 2 180 €</td></tr>
+        <tr><th>Occupation</th><td>Les trois logements sont <strong>loués en 3/6/9</strong> - échéances, loyers et profils des locataires non communiqués</td></tr>
+        <tr><th>Prix affiché</th><td>189 000 € - honoraires à la charge du vendeur</td></tr>
+        <tr><th>Valeur de marché retenue</th><td>195 000 à 225 000 €, retenue <strong>210 000 €</strong> (2 840 €/m² sur la surface réelle) - Toulon : ~3 200 €/m² en moyenne (MeilleursAgents 09/2026), décote pour le RDC d'immeuble ancien et l'état à rénover. Confiance faible : quartier inconnu</td></tr>
+        <tr><th>Loyers</th><td><strong>Aucun loyer communiqué dans l'annonce.</strong> Hypothèses de marché retenues : T2 524 €/mois (16 €/m²), studio 19,81 m² 396 €/mois (20 €/m²), studio 21,39 m² 428 €/mois (20 €/m²), soit 1 348 €/mois au total. Les baux en cours peuvent être nettement inférieurs s'il s'agit de baux anciens</td></tr>
+        <tr><th>Travaux</th><td>« Travaux de rénovation à prévoir » - non chiffrés par le vendeur. Hypothèse retenue : <strong>45 000 €</strong> (15 k€ par logement : réseaux, cloisons, sols, salle d'eau, cuisine). Fourchette 30-60 k€</td></tr>
+        <tr><th>Charges annuelles</th><td>Copropriété ~1 100 € (3 lots, 22 lots au total, sans ascenseur) + taxe foncière ~1 800 € (trois impositions) + PNO 250 € + entretien 500 € + comptabilité 400 € - <strong>estimations à confirmer</strong></td></tr>
+        <tr><th>Fiscalité</th><td>SCI à l'IS : IS 15 % sur le résultat, amortissement de 90 % du prix de revient sur 30 ans</td></tr>
+        <tr><th>Prix de revient</th><td><strong>249 120 €</strong> = prix 189 000 € + frais d'acquisition ~15 120 € (8 %) + travaux 45 000 €</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières - prix affiché 189 000 € (SCI IS)</h2>
+    <p class="attractiveness-intro">Deux lectures testées : la conservation en location nue des trois lots, et l'achat-rénovation-revente avec revente à la découpe (les trois logements étant des lots distincts, la sortie séparée est possible).</p>
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Vacance 8 % - hypothèses retenues</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">16 176 €</td></tr>
+            <tr><td>Vacance locative</td><td class="num">-0 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">10 428 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">7 474 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">-443 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">832 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-optimiste">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Vacance 5 % - relocation rapide</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">16 176 €</td></tr>
+            <tr><td>Vacance locative</td><td class="num">-0 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">10 913 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">7 474 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">-516 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">866 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-pessimiste">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Vacance 14 % - tension locative</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Revenu brut annuel</td><td class="num">16 176 €</td></tr>
+            <tr><td>Vacance locative</td><td class="num">-0 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">9 457 €</td></tr>
+            <tr><td>Amortissement</td><td class="num">7 474 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">-298 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">763 €</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <table class="projection-table compare">
+      <thead><tr><th>Indicateur</th><th class="num">Base</th><th class="num">Optimiste</th><th class="num">Pessimiste</th></tr></thead>
+      <tbody>
+        <tr><td>EBE avant IS</td><td class="num">10 428 €</td><td class="num">10 913 €</td><td class="num">9 457 €</td></tr>
+        <tr><td>CF net mensuel</td><td class="num">832 €</td><td class="num">866 €</td><td class="num">763 €</td></tr>
+        <tr><td>Rendement net (revient)</td><td class="num">4.0 %</td><td class="num">4.2 %</td><td class="num">3.7 %</td></tr>
+        <tr><td>Rendement net (valeur)</td><td class="num">4.8 %</td><td class="num">5.0 %</td><td class="num">4.4 %</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix"><p class="attractiveness-intro">Le rendement brut paraît séduisant (7,9 % sur le prix de revient) parce que les petites surfaces se louent cher au m² : T2 et studios sont la meilleure adéquation du marché toulonnais. Mais trois logements, c'est trois impositions foncières, trois baux à gérer et une rotation plus fréquente : la vacance retenue est de 8 %, pas 5 %. Après charges et fiscalité, le rendement net tombe à 4,0 % sur le revient et 4,8 % sur la valeur. Le ratio coût/valeur de 1,19 confirme que le prix payé dépasse la valeur du bien en l'état : la marge ne peut venir que de la négociation. Surtout, ce chiffrage repose sur des loyers estimés : l'annonce n'en communique aucun.</p></div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead><tr><th>Facteur de risque</th><th>Détail</th><th>Sévérité</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Loyers en place non communiqués</td>
+          <td>L'annonce ne donne aucun loyer. Les baux 3/6/9 en cours peuvent être des baux anciens très en dessous du marché : impossible de valider le rendement sans les baux et les quittances. Première exigence avant toute offre.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Surfaces incohérentes</td>
+          <td>Somme des trois lots : 73,96 m². Surface affichée : 86,7 m². Écart de 12,74 m² qui change le prix au m² (2 555 € au lieu de 2 180) et la valeur de revente. Exiger les surfaces Carrez de chaque lot.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Travaux non chiffrés</td>
+          <td>« Travaux de rénovation à prévoir » sur trois logements : 30 à 60 k€ selon l'état. Aucun devis fourni, aucune visite technique possible avant offre sérieuse.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Rez-de-chaussée d'immeuble de 1925</td>
+          <td>RDC ancien : vérifier humidité, remontées capillaires, ventilation et exposition du lot. Trois WC séparés et pas de cave laissent supposer des distributions étroites.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Gestion de trois baux</td>
+          <td>Trois locataires, trois quittances, trois échéances : la charge de gestion et le risque d'impayé sont supérieurs à un lot unique.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision"><p class="verdict-stance"><strong>À négocier - 140 000 € maximum, et seulement après avoir obtenu les loyers réels.</strong> Le raisonnement est simple : trois petites surfaces dans une ville où la demande locative est structurellement forte, c'est un bon produit. Mais le dossier est vendu à un prix qui ne laisse aucune marge : le ratio coût/valeur ressort à 1,19, c'est-à-dire que l'acquéreur paie 19 % au-dessus de la valeur du bien dans son état actuel. Ajoutez trois impositions foncières, une vacance plus fréquente qu'un lot unique et 30 à 60 k€ de travaux non chiffrés, et le rendement net tombe à 4,0 %. Tant que les loyers réels et les surfaces Carrez ne sont pas communiqués, il n'y a pas de dossier : il y a une annonce.</p></div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> 140 000 € (soit environ 1 890 €/m² sur la surface réelle), qui ramène le rendement net au-dessus de 5 % et laisse une marge en cas de travaux lourds. Au-dessus de 160 000 €, le dossier ne se défend plus du tout.</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Les loyers en place sont la première exigence : sans eux, aucun chiffrage sérieux n'est possible. Demander les trois baux et les dernières quittances - s'il s'agit de baux anciens sous le marché, la décote est légitime et importante</li>
+        <li>L'écart de surface (12,74 m² entre la somme des lots et la surface affichée) doit être tranché par les surfaces Carrez de chaque lot : c'est un point de négociation direct sur le prix au m²</li>
+        <li>Les travaux ne sont pas chiffrés : exiger un devis ou faire chiffrer trois scénarios (remise en état légère, rénovation standard, rénovation lourde). Sur un immeuble de 1925, l'électricité et la plomberie sont les postes qui dérapent</li>
+        <li>Le rez-de-chaussée d'un immeuble de 1925 justifie une visite technique : humidité, remontées capillaires, ventilation. Un RDC dégradé peut coûter 10 à 20 k€ de traitement</li>
+        <li>Trois logements = trois baux : négocier l'échéancier des baux en cours, car une relocation simultanée des trois lots représenterait plusieurs mois de vacance cumulée</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 %) - amortissement sur 90 % du prix de revient sur 30 ans</p>
+      <p><strong>Frais d'acquisition estimés :</strong> ~15 120 € (8 % du prix affiché)</p>
+      <p><strong>Enveloppe travaux :</strong> 45 000 € (hypothèse 15 k€ par logement), fourchette 30-60 k€ - à confirmer par devis</p>
+      <p><strong>Contrôle à faire avant toute offre :</strong> les trois baux et quittances, les surfaces Carrez par lot, les PV d'AG et le budget de copropriété, l'adresse exacte et le quartier, un devis de rénovation, un état des lieux technique du RDC</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier - 06 27 84 53 50 - sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
