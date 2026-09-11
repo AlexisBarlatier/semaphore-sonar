@@ -5870,7 +5870,7 @@
    "bien": {
     "type_bien": "appartement",
     "sous_type": null,
-    "type_detail": "T4 coupé en trois, loué comme trois logements séparés (colocation de fait) : T2 de 32,76 m², studio de 19,81 m², studio de 21,39 m², desservis par un couloir en indivision de 12,74 m². Immeuble de 1925, 6 étages, sans ascenseur, exposition sud, 3 WC séparés, pas de cave, pas de balcon. Copropriété de 22 lots. Les trois lots sont loués en 3/6/9.",
+    "type_detail": "T4 coupé en trois, loué comme trois logements séparés (colocation de fait) : T2 de 32,76 m², studio de 19,81 m², studio de 21,39 m², desservis par un couloir en indivision de 12,74 m². Immeuble de 1925, 6 étages, sans ascenseur, exposition sud, 3 WC séparés, pas de cave, pas de balcon. Copropriété de 22 lots. Les trois lots sont loués en 3/6/9. Découpage en trois lots AUTORISÉ par l'assemblée générale de copropriété (procédure non engagée par le vendeur) : la technique retenue crée un lot spécifique pour le couloir, en indivision entre les trois lots desservis, ce qui ne modifie pas le poids de l'appartement dans la copropriété. Modification de l'état descriptif de division à la charge de l'acquéreur (5 à 8 k€).",
     "neuf": false,
     "adresse": {
      "texte": "2, rue Vincent Allègre, Toulon (83000) - secteur Saint-Roch / Claret, à quelques centaines de mètres du tribunal judiciaire (place Gabriel Péri)",
@@ -5935,7 +5935,7 @@
       "note": "Réel (réparti)."
      }
     ],
-    "notes": "Loyer global RÉEL : 1 400 €/mois charges comprises, dont 120 € de provisions sur charges payées par les trois locataires (3 × 40 €/lot/mois) - soit 1 280 € hors charges. Surface louée 86,7 m² : le loyer ressort à 16,1 €/m² CC. C'est une colocation de fait (T4 coupé en trois) : le rendement locatif est bien meilleur qu'un T4 nu, qui se louerait 1 000-1 100 €."
+    "notes": "Loyer global RÉEL : 1 400 €/mois charges comprises, dont 120 € de provisions sur charges payées par les trois locataires (3 × 40 €/lot/mois) - soit 1 280 € hors charges. Surface louée 86,7 m² : le loyer ressort à 16,1 €/m² CC. C'est une colocation de fait (T4 coupé en trois) : le rendement locatif est bien meilleur qu'un T4 nu, qui se louerait 1 000-1 100 €. Le découpage en 3 lots est autorisé par l'AG. Technique du vendeur : lot couloir en indivision entre les trois lots, ce qui préserve les tantièmes généraux. Surface Carrez par lot après découpage : 37,01 + 24,06 + 25,64 = 86,70 m² - aucune surface perdue."
    },
    "hypotheses": {
     "vacance_base_pct": 8.0,
@@ -5976,6 +5976,13 @@
       "lots": 3,
       "faisabilite": "12-18 mois",
       "risque": "élevé — la revente à la découpe ne couvre pas le stock (marge -27 à -88 k€)"
+     },
+     {
+      "strategie": "Revente à la découpe des trois lots (EDD à notre charge, technique du lot couloir en indivision)",
+      "lots": 3,
+      "rendement": "Gain net estimé +5 à +25 k€ selon le prix/m² obtenu sur les petits lots (seuil de rentabilité 2 369 €/m², soit +3 % vs le monobloc)",
+      "faisabilite": "Autorisation d'AG déjà votée ; EDD + géomètre + publicité foncière à engager (5-8 k€)",
+      "risque": "Moyen : trois ventes à mener, surcoût de transactions ~5,8 k€"
      }
     ],
     "attractivite": [
