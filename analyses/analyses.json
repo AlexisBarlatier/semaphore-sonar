@@ -5893,7 +5893,7 @@
     },
     "travaux": {
      "montant_euros": 45000.0,
-     "nature": "« Travaux de rénovation à prévoir » selon l'annonce, mais le bien est LOUÉ en l'état 1 400 €/mois : les travaux ne sont pas urgents. Enveloppe 45 k€ (15 k€ par logement) à engager à la rotation des locataires, pas à l'acquisition. Deux lectures chiffrées : 144 k€ de prix max si les travaux sont différés, 102 k€ s'ils sont faits immédiatement."
+     "nature": "« Travaux de rénovation à prévoir » selon l'agent, non chiffrés ET non qualifiés : le bien est LOUÉ en l'état à 1 400 €/mois. Enveloppe retenue 45 000 € (15 k€ par logement) si le rafraîchissement complet est réalisé, à engager à la rotation des locataires plutôt qu'à l'acquisition. Chaque tranche de travaux financée coûte environ 1,1 € de prix d'achat pour rester à cash flow neutre sur 20 ans. QUALIFICATION À OBTENIR : nature des travaux, logements concernés, devis — l'écart entre 20 k€ et 45 k€ fait 30 000 € sur le prix."
     }
    },
    "annonce": {
@@ -5918,21 +5918,21 @@
       "quantite": 1,
       "loyer_mensuel_euros": 560.0,
       "occupe": true,
-      "note": "Réel : le loyer global de 1 400 € couvre les trois lots. Répartition estimée (le T2 représente la plus grande surface)."
+      "note": "Loyer global réel 1 400 €/mois charges comprises pour les trois lots (dont 120 € de provisions sur charges payées par les locataires, soit 1 280 € hors charges). La répartition entre les trois lots n'a pas été communiquée : elle est reconstituée ici au prorata des surfaces."
      },
      {
       "lot": "Studio 19,81 m²",
       "quantite": 1,
       "loyer_mensuel_euros": 360.0,
       "occupe": true,
-      "note": "Réel (réparti)."
+      "note": "Répartition reconstituée au prorata de la surface du lot (le loyer global réel est de 1 400 € CC)."
      },
      {
       "lot": "Studio 21,39 m²",
       "quantite": 1,
       "loyer_mensuel_euros": 360.0,
       "occupe": true,
-      "note": "Réel (réparti)."
+      "note": "Répartition reconstituée au prorata de la surface du lot (le loyer global réel est de 1 400 € CC)."
      }
     ],
     "notes": "Loyer global RÉEL : 1 400 €/mois charges comprises, dont 120 € de provisions sur charges payées par les trois locataires (3 × 40 €/lot/mois) - soit 1 280 € hors charges. Surface louée 86,7 m² : le loyer ressort à 16,1 €/m² CC. C'est une colocation de fait (T4 coupé en trois) : le rendement locatif est bien meilleur qu'un T4 nu, qui se louerait 1 000-1 100 €. Le découpage en 3 lots est autorisé par l'AG. Technique du vendeur : lot couloir en indivision entre les trois lots, ce qui préserve les tantièmes généraux. Surface Carrez par lot après découpage : 37,01 + 24,06 + 25,64 = 86,70 m² - aucune surface perdue. Comparables petites surfaces à Toulon (prix demandés, 09/2026) : studios de 20 à 25 m² affichés entre 74 900 € et 92 000 €, soit 3 000 à 3 700 €/m². Le différentiel avec le monobloc du quartier (2 300-2 600 €/m²) est donc de +30 à +40 %, très au-dessus du seuil de 2 369 €/m² qui rend le découpage rentable. Gain brut estimé du découpage : +35 000 à +78 000 €. À confirmer sur des ventes réalisées (les annonces sont des prix demandés, souvent des biens rénovés en étage). DIFFÉRENTIEL PAR TAILLE CONFIRMÉ PAR LES TRANSACTIONS RÉELLES (DVF 2025, Toulon, 3 199 ventes d'appartements) — médiane des prix au m² : moins de 25 m² = 3 889 €/m² (n=185) ; 25-35 m² = 3 281 €/m² (n=313) ; 35-50 m² = 3 194 €/m² (n=737) ; 50-70 m² = 2 612 €/m² (n=1 161) ; plus de 70 m² = 2 766 €/m² (n=803). Soit +49 % entre un studio et une surface de 50-70 m². Appliqué au niveau de prix du quartier (2 200-2 600 €/m²), cela situe les petits lots entre 2 800 et 3 100 €/m² : revente découpée estimée ~250 000 € contre ~199 000 € en monobloc, soit un gain brut d'environ +50 000 € et +38 000 € net de tous frais. RÉSERVE DÉCISIVE : ces prix supposent une vente LIBRE. Les baux 3/6/9 étant récents, une revente immédiate se ferait louée, avec une décote d'occupation de l'ordre de 15 % qui ramène le gain à quasi zéro. Le découpage est donc un projet à l'échéance des baux, pas immédiat."
@@ -5950,8 +5950,8 @@
      "charges_copro_commentaire": "Charges de copropriété réelles : 75 €/mois (900 €/an) pour les trois lots. Refacturées aux locataires à hauteur de 40 €/lot/mois, soit 120 €/mois encaissés.",
      "pno_annuelle_euros": 250.0,
      "pno_commentaire": "PNO pour trois lots.",
-     "entretien_annuel_euros": 500.0,
-     "entretien_commentaire": "Entretien courant de trois logements (plus d'équipements qu'un lot unique).",
+     "entretien_annuel_euros": 650.0,
+     "entretien_commentaire": "Entretien courant 500 € + provision d'impayés 1 % du loyer annuel (~154 €, auto-assurance, pas de GLI — doctrine du groupe).",
      "comptabilite_annuelle_euros": 400.0,
      "comptabilite_commentaire": "Comptabilité SCI."
     }
