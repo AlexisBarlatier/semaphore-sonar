@@ -50,12 +50,14 @@ RECORD = {
             "charges_source": "Charges de copropriété réelles annoncées par l'annonce : 1 173 €/an (14 €/m²/an), copropriété de 53 lots, aucune procédure syndicale en cours."
         },
         "travaux": {
-            "montant_euros": 35000.0,
+            "montant_euros": 63100.0,
             "nature": (
-                "« Prévoir travaux de modernité » : cuisine à aménager, rafraîchissement général, sols, peintures. "
-                "Enveloppe retenue 35 000 € en colocation, dont l'équipement mobilier (15-25 k€ si l'on se limite à la modernisation "
-                "sans passage en meublé). Une deuxième salle d'eau serait le poste qui change la valeur du bien : à chiffrer en visite "
-                "(contrainte d'évacuation à vérifier)."
+                "Mise en colocation complete, poste par poste : peintures et sols 21 500 €, mise en securite electrique et RJ45 par chambre 8 000 €, "
+                "reprise plomberie 4 500 €, cuisine equipee 7 500 €, creation d'une 2e salle d'eau 9 000 €, mobilier de 4 chambres 6 000 €, "
+                "electromenager collectif 2 800 €, vaisselle et equipement 1 600 €, porte d'entree, serrurerie et securite incendie 2 200 €. "
+                "Total 63 100 €. Variantes : 54 100 € sans la 2e salle d'eau (4 chambres sur une seule salle de bain) ; environ 39 400 € "
+                "en modernisation legere, sans reprise des reseaux ni 2e salle d'eau. Devis obligatoire avant offre : sur un immeuble de 1940, "
+                "l'electricite et la plomberie sont les postes qui derapent."
             )
         }
     },
@@ -84,28 +86,28 @@ RECORD = {
             {
                 "lot": "Chambre 1 (colocation, meublée)",
                 "quantite": 1,
-                "loyer_mensuel_euros": 420.0,
+                "loyer_mensuel_euros": 460.0,
                 "occupe": False,
                 "note": "Hypothèse de marché toulonnais, aucun bail en place. Les annonces locales de colocation à Toulon s'étalent de 320 € CC (étudiant, entrée de gamme) à 530 € CC."
             },
             {
                 "lot": "Chambre 2 (colocation, meublée)",
                 "quantite": 1,
-                "loyer_mensuel_euros": 420.0,
+                "loyer_mensuel_euros": 460.0,
                 "occupe": False,
                 "note": "Hypothèse de marché, aucun bail en place."
             },
             {
                 "lot": "Chambre 3 (colocation, meublée)",
                 "quantite": 1,
-                "loyer_mensuel_euros": 420.0,
+                "loyer_mensuel_euros": 460.0,
                 "occupe": False,
                 "note": "Hypothèse de marché, aucun bail en place."
             },
             {
                 "lot": "Chambre 4 (séjour transformé, colocation meublée)",
                 "quantite": 1,
-                "loyer_mensuel_euros": 420.0,
+                "loyer_mensuel_euros": 460.0,
                 "occupe": False,
                 "note": "Le séjour-salon du sud peut devenir une quatrième chambre (l'annonce propose déjà « salon ou une chambre »). Hypothèse de marché."
             }
@@ -136,10 +138,11 @@ RECORD = {
             "charges_copro_commentaire": "Montant réel annoncé : 1 173 €/an, soit 14 €/m²/an — trois fois moins que le T4 de Champ de Mars. Point positif du dossier.",
             "pno_annuelle_euros": 250.0,
             "pno_commentaire": "PNO appartement avec cave et balcon.",
-            "entretien_annuel_euros": 2900.0,
+            "entretien_annuel_euros": 3400.0,
             "entretien_commentaire": (
                 "Entretien courant 800 € + ménage et fournitures 700 € + provision de renouvellement du mobilier 700 € "
-                "+ provision d'impayés 3,5 % du loyer (~700 €, colocation : provision renforcée, doctrine du groupe, pas de GLI)."
+                "+ provision d'impayés 3,5 % du loyer (~770 €, colocation : provision renforcée, doctrine du groupe, pas de GLI) "
+                "+ entretien supplémentaire lié à la deuxième salle d'eau 500 €."
             ),
             "comptabilite_annuelle_euros": 600.0,
             "comptabilite_commentaire": "Comptabilité SCI, majorée pour une exploitation en colocation meublée (4 baux, quittances, mobilier)."
@@ -188,14 +191,13 @@ def main():
     spec.loader.exec_module(gen)
 
     gen.LECTURE[SLUG] = (
-        "Le dossier a un vrai atout que les autres annonces toulonnaises n'avaient pas : une décote affichée de 29 % sur son propre quartier "
-        "(1 801 €/m² contre 2 522 €/m² pour Dutasta-Mayol). Un T5 de 86 m² avec ascenseur au 5e étage, balcon, cave, DPE D et des charges de "
-        "copropriété à 14 €/m²/an, ce n'est pas un bien courant à ce prix. Mais la décote paie les travaux de modernité, et surtout le bien ne "
-        "vit que par un seul usage : la colocation. À 4 chambres et 420 € la chambre, le rendement net ressort à 5,2 % avec un cash flow quasi "
-        "neutre sur 20 ans ; en location nue, il s'effondre à 3,8-4,9 % et la trésorerie devient franchement négative. Le plafond du bien n'est "
-        "pas son emplacement, c'est sa salle de bain unique pour quatre chambres. Prix qui tiendrait le seuil de parc de 6,5 % : 116 000 € à "
-        "420 €/chambre, 144 000 € à 460 €. L'affichage est à 155 000 €, mais il est déjà au niveau du cash flow neutre : ce qui manque ici, "
-        "c'est le rendement, pas la trésorerie."
+        "Le dossier a un vrai atout : une décote affichée de 29 % sur son propre quartier (1 801 €/m² contre 2 522 €/m² pour Dutasta-Mayol). "
+        "Un T5 de 86 m² au 5e étage avec ascenseur, balcon, cave, DPE D et des charges de copropriété à 14 €/m²/an, ce n'est pas courant à ce prix. "
+        "Mais une fois le coût complet de mise en colocation chiffré — 63 100 € poste par poste, mobilier et deuxième salle d'eau compris — "
+        "le rendement net tombe à 5,1 % sur 155 000 € en quatre chambres, et le cash flow n'est neutre qu'à une condition : payer les travaux en "
+        "apport (91 000 € au total) plutôt que de les financer, sinon il plonge à −365 €/mois sur 18 ans. Le seuil de parc de 6,5 % n'est atteint "
+        "qu'à 105 000 € en quatre chambres. La configuration qui change tout est la cinquième chambre : à 440 € la chambre, cinq chambres portent "
+        "le rendement à 6,5 % dès l'affichage et le cash flow à +321 €/mois. C'est là, et non dans le prix, que se joue ce dossier."
     )
 
     gen.CONF[SLUG] = dict(
@@ -228,17 +230,21 @@ def main():
             "Le bien étant libre, aucun loyer en place ne vient contraindre le choix."
         ),
         rationale=(
-            "La colocation est la seule lecture qui fait vivre ce bien. À quatre chambres de 420 €, le loyer brut atteint 1 680 €/mois pour "
-            "86 m², soit 19,5 €/m² — le niveau qu'un T5 nu de cette surface ne peut pas atteindre (950 à 1 150 €/mois, soit 3,8 à 4,9 % net). "
-            "En colocation, le rendement net ressort à <strong>5,2 %</strong> sur le prix de revient avec un cash flow de −41 €/mois sur 18 ans "
-            "et +21 €/mois sur 20 ans. À 460 € la chambre, il monte à <strong>6,2 %</strong> et le cash flow devient positif dès 18 ans (+112 €/mois).<br><br>"
-            "La location nue est écartée : elle ne passe pas le seuil de parc, et son cash flow est négatif de 250 à 400 €/mois. Le MDB a été "
-            "chiffré puis écarté comme voie principale : avec 30 k€ de travaux, la marge nette va de +4 700 € (revente à 2 600 €/m²) à "
-            "+20 800 € (2 900 €/m²), soit 2,3 % à 10,3 % — entièrement dépendante du prix de sortie, et la TVA sur marge mange la majeure partie "
-            "du différentiel dès que la revente reste dans la fourchette basse du quartier.<br><br>"
-            "Le vrai plafond du dossier est ailleurs : <strong>une seule salle de bain et un WC pour quatre chambres</strong>. C'est ce qui borne "
-            "le loyer par chambre, et donc le rendement. Si la visite confirme qu'une deuxième salle d'eau est faisable à coût raisonnable, "
-            "l'équation s'améliore sensiblement ; si elle ne l'est pas, le bien restera sur un palier de 5 à 6 % net."
+            "La colocation est la seule lecture qui fait vivre ce bien, et le chiffrage doit être fait complet — travaux, mobilier, salle d'eau. "
+            "En quatre chambres à 460 €, le loyer brut atteint 1 840 €/mois pour 86 m², soit 21,4 €/m² : un T5 nu de cette surface ne peut pas "
+            "y prétendre (950 à 1 150 €/mois, soit 3,8 à 4,9 % net). Mais le coût de mise en colocation ressort à <strong>63 100 €</strong> : "
+            "21 500 € de peintures et sols, 8 000 € de mise en sécurité électrique, 4 500 € de plomberie, 7 500 € de cuisine équipée, "
+            "9 000 € pour la deuxième salle d'eau, 6 000 € de mobilier pour quatre chambres, 2 800 € d'électroménager collectif, "
+            "1 600 € de vaisselle et équipement, 2 200 € de porte et sécurités. Avec cette enveloppe, le rendement net ressort à "
+            "<strong>5,1 %</strong> sur 155 000 € et le cash flow à +54 €/mois sur 18 ans — à condition de payer les travaux en apport "
+            "(91 000 € frais compris). Si les travaux sont financés, le cash flow passe à <strong>−365 €/mois</strong>.<br><br>"
+            "La cinquième chambre est le vrai levier. L'annonce propose elle-même « salon ou une chambre » : en transformant le séjour, on passe "
+            "à cinq chambres. À 440 € la chambre, le loyer monte à 2 200 €/mois, le rendement net à <strong>6,5 % dès l'affichage</strong> et le "
+            "cash flow à +321 €/mois sur 18 ans. C'est la différence entre un dossier de portage et un dossier de parc.<br><br>"
+            "Les deux autres usages sont écartés. La location nue ne passe pas le seuil et son cash flow est négatif de 250 à 400 €/mois. "
+            "Le MDB, avec 63 100 € de travaux, devient franchement perdant : le coût de revient dépasse la valeur de revente du quartier. "
+            "Reste la contrainte physique : cinq chambres et deux salles d'eau dans 86 m², c'est dense. Le plan et la dimension réelle des pièces "
+            "doivent être vérifiés avant toute offre."
         ),
         identite=[
             ("Adresse", "Quartier Dutasta-Mayol, Toulon (83000) — adresse exacte non communiquée dans l'annonce, proche de Mayol et du port"),
@@ -248,25 +254,26 @@ def main():
             ("Occupation", "<strong>Bien libre</strong> : aucun bail en place, aucune contrainte d'occupation. Honoraires d'agence à la charge du vendeur"),
             ("Prix affiché", "155 000 € soit <strong>1 801 €/m²</strong>"),
             ("Valeur de marché retenue", "207 000 à 225 000 €, retenue <strong>217 000 €</strong> (2 522 €/m²) — quartier Dutasta-Mayol : 2 433 €/m² (SeLoger), 2 612 €/m² (RealAdvisor), 2 500 €/m² (efficity). <strong>La décote affichée est de 29 %</strong>"),
-            ("Loyers retenus", "<strong>Aucun loyer en place.</strong> Hypothèse de colocation : 4 chambres à <strong>420 €/mois</strong> = 1 680 €/mois (19,5 €/m²), marché local de 320 à 530 € CC par chambre. Sensibilité : 350 €/chambre → 3,7 % net et −306 €/mois ; 460 €/chambre → 6,2 % net et +112 €/mois"),
-            ("Travaux", "« Prévoir travaux de modernité » : cuisine à aménager, rafraîchissement. Enveloppe <strong>35 000 €</strong> en colocation (dont équipement mobilier) ; 15-25 k€ si modernisation seule sans meublé. Deuxième salle d'eau à chiffrer en visite"),
-            ("Charges annuelles", "Copropriété <strong>1 173 €/an (montant réel)</strong> + taxe foncière ~1 300 € + PNO 250 € + entretien et ménage 2 200 € + provision d'impayés 700 € + comptabilité 600 €"),
+            ("Loyers retenus", "<strong>Aucun loyer en place.</strong> Hypothèse 4 chambres à <strong>460 €/mois</strong> = 1 840 €/mois (21,4 €/m²) — la deuxième salle d'eau justifie le haut de fourchette du marché local (annonces de 320 à 530 € CC par chambre). Variante 5 chambres à 440 € = 2 200 €/mois, qui porte le rendement à 6,5 %"),
+            ("Travaux", "Mise en colocation complète <strong>63 100 €</strong> poste par poste : peintures et sols 21 500 €, électricité et RJ45 par chambre 8 000 €, plomberie 4 500 €, cuisine équipée 7 500 €, création d'une 2e salle d'eau 9 000 €, mobilier de 4 chambres 6 000 €, électroménager collectif 2 800 €, vaisselle et équipement 1 600 €, porte et sécurités 2 200 €. Variantes : 54 100 € sans 2e salle d'eau, ~39 400 € en modernisation légère"),
+            ("Charges annuelles", "Copropriété <strong>1 173 €/an (montant réel)</strong> + taxe foncière ~1 300 € + PNO 250 € + entretien, ménage et mobilier 2 700 € + provision d'impayés 770 € + entretien 2e salle d'eau 500 € + comptabilité 600 €"),
             ("Fiscalité", "SCI à l'IS : IS 15 % sur le résultat, amortissement de 90 % du prix de revient sur 30 ans. Pas de GLI : provision d'auto-assurance renforcée à 3,5 % du loyer (colocation)"),
-            ("Prix de revient", "<strong>202 400 €</strong> = prix 155 000 € + frais d'acquisition ~12 400 € (8 %) + travaux 35 000 €"),
+            ("Prix de revient", "<strong>230 500 €</strong> = prix 155 000 € + frais d'acquisition ~12 400 € (8 %) + mise en colocation 63 100 €. <strong>Apport nécessaire 91 000 €</strong> si les travaux ne sont pas financés ; 27 900 € si tout est emprunté, mais alors le cash flow devient négatif de 365 €/mois"),
         ],
         stance=(
-            "<strong>À négocier — 138 000 à 145 000 € maximum.</strong> Le bien a de vraies qualités : un 5e étage avec ascenseur à "
-            "1 800 €/m² dans un quartier qui cote 2 500, un DPE D qui ne sera pas interdit à la location en 2034, un immeuble sans procédure "
-            "et des charges de copropriété trois fois inférieures à la moyenne toulonnaise. Mais il ne fonctionne que sur un usage — la "
-            "colocation — et son rendement net y plafonne à 5,2 % à 420 € la chambre, avec un cash flow à peine neutre sur vingt ans. "
-            "La salle de bain unique pour quatre chambres borne le potentiel : c'est elle qui empêche d'aller chercher 460-480 € par chambre. "
-            "À 138 000-145 000 €, le rendement net passe à 6 % et la trésorerie devient franchement positive sur 18 ans. "
-            "À 155 000 €, on paie le cash flow neutre sans rendement : ce n'est pas un dossier de parc, c'est un dossier de portage."
+            "<strong>À négocier — et la vraie question n'est pas le prix, c'est la cinquième chambre.</strong> Le bien a de vraies qualités : "
+            "un 5e étage avec ascenseur à 1 800 €/m² dans un quartier qui cote 2 522, un DPE D sans contrainte avant 2034, un immeuble sans "
+            "procédure et des charges de copropriété trois fois inférieures à la moyenne toulonnaise. Mais le coût complet de mise en colocation "
+            "— 63 100 €, mobilier et deuxième salle d'eau inclus — ramène le rendement net à 5,1 % en quatre chambres, avec un cash flow qui "
+            "n'est positif que si les travaux sont payés en apport (91 000 €). En cinq chambres à 440 €, le dossier change de nature : 6,5 % net "
+            "dès l'affichage et +321 €/mois de trésorerie. Deux conclusions de négociation : le prix ne peut pas rester à 155 000 € sans la "
+            "cinquième chambre, et à 140 000 € il devient défendable dans les deux configurations. Cible : <strong>135 000 à 140 000 €</strong>, "
+            "avec la faisabilité des cinq chambres et de la deuxième salle d'eau vérifiée en visite."
         ),
         prix_plafond=(
-            "138 000 à 145 000 €, soit 7 à 11 % sous l'affichage. À ce prix, le rendement net en colocation ressort autour de 6 % et le cash flow "
-            "devient positif sur 18 ans. Hors colocation, en location nue, le prix qui tiendrait le seuil de parc serait de 116 000 € : "
-            "c'est la mesure de l'écart entre les deux usages."
+            "138 000 à 140 000 € si le plan permet cinq chambres, 105 000 € si l'on en reste à quatre. Au-delà de 155 000 €, le dossier n'est "
+            "qu'un portage : le coût de revient atteint 230 500 € pour 5,1 % net. Le seuil de parc de 6,5 % n'est atteint à l'affichage "
+            "qu'en configuration cinq chambres."
         ),
         leviers=[
             "La salle de bain unique est le premier levier de négociation et d'instruction : c'est elle qui plafonne le loyer par chambre. Faire chiffrer en visite la faisabilité d'une deuxième salle d'eau — si elle passe, le bien change de catégorie ; si elle ne passe pas, c'est un argument direct sur le prix",
@@ -279,9 +286,9 @@ def main():
         meta=[
             "<strong>Régime fiscal retenu :</strong> SCI à l'IS (15 %) — amortissement sur 90 % du prix de revient sur 30 ans — provision d'impayés renforcée à 3,5 % du loyer (colocation, pas de GLI)",
             "<strong>Frais d'acquisition estimés :</strong> ~12 400 € (8 % du prix affiché)",
-            "<strong>Enveloppe travaux :</strong> 35 000 € en colocation (modernisation, cuisine, équipement mobilier) — 15-25 k€ si modernisation seule. Deuxième salle d'eau à chiffrer",
-            "<strong>Contrôle à faire avant toute offre :</strong> devis de travaux détaillé et faisabilité d'une seconde salle d'eau, budget prévisionnel de copropriété et PV d'AG des trois derniers exercices, avis de taxe foncière, diagnostics complets (électricité, gaz, amiante, plomb), Carrez, plan du logement pour valider la dimension des quatre chambres",
-            "<strong>Point de méthode :</strong> le rendement du dossier dépend entièrement d'un loyer de colocation qui n'existe pas encore. À 350 € la chambre, le dossier tombe à 3,7 % net et la trésorerie passe à −306 €/mois. La visite et deux ou trois comparables signés sont indispensables avant l'offre",
+            "<strong>Mise en colocation : 63 100 €</strong> — peintures et sols 21 500 €, électricité et RJ45 8 000 €, plomberie 4 500 €, cuisine équipée 7 500 €, 2e salle d'eau 9 000 €, mobilier 4 chambres 6 000 €, électroménager collectif 2 800 €, vaisselle et équipement 1 600 €, porte et sécurités 2 200 €. Variantes : 54 100 € sans 2e salle d'eau, ~39 400 € en modernisation légère",
+            "<strong>Apport nécessaire :</strong> 91 000 € (frais + travaux) à 155 000 € pour que le cash flow reste positif. Si les travaux sont financés, l'apport tombe à 27 900 € mais le cash flow devient négatif de 365 €/mois sur 18 ans — c'est le point de montage à trancher",
+            "<strong>Contrôle à faire avant toute offre :</strong> plan coté du logement pour valider la faisabilité de cinq chambres et la dimension réelle des pièces, faisabilité technique d'une deuxième salle d'eau (évacuation), devis détaillé des neuf postes de travaux, budget prévisionnel de copropriété et PV d'AG des trois derniers exercices, avis de taxe foncière, diagnostics complets (électricité, gaz, amiante, plomb), Carrez",
         ],
     )
 

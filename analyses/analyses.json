@@ -6236,8 +6236,8 @@
      "charges_source": "Charges de copropriété réelles annoncées par l'annonce : 1 173 €/an (14 €/m²/an), copropriété de 53 lots, aucune procédure syndicale en cours."
     },
     "travaux": {
-     "montant_euros": 35000.0,
-     "nature": "« Prévoir travaux de modernité » : cuisine à aménager, rafraîchissement général, sols, peintures. Enveloppe retenue 35 000 € en colocation, dont l'équipement mobilier (15-25 k€ si l'on se limite à la modernisation sans passage en meublé). Une deuxième salle d'eau serait le poste qui change la valeur du bien : à chiffrer en visite (contrainte d'évacuation à vérifier)."
+     "montant_euros": 63100.0,
+     "nature": "Mise en colocation complete, poste par poste : peintures et sols 21 500 €, mise en securite electrique et RJ45 par chambre 8 000 €, reprise plomberie 4 500 €, cuisine equipee 7 500 €, creation d'une 2e salle d'eau 9 000 €, mobilier de 4 chambres 6 000 €, electromenager collectif 2 800 €, vaisselle et equipement 1 600 €, porte d'entree, serrurerie et securite incendie 2 200 €. Total 63 100 €. Variantes : 54 100 € sans la 2e salle d'eau (4 chambres sur une seule salle de bain) ; environ 39 400 € en modernisation legere, sans reprise des reseaux ni 2e salle d'eau. Devis obligatoire avant offre : sur un immeuble de 1940, l'electricite et la plomberie sont les postes qui derapent."
     }
    },
    "annonce": {
@@ -6260,28 +6260,28 @@
      {
       "lot": "Chambre 1 (colocation, meublée)",
       "quantite": 1,
-      "loyer_mensuel_euros": 420.0,
+      "loyer_mensuel_euros": 460.0,
       "occupe": false,
       "note": "Hypothèse de marché toulonnais, aucun bail en place. Les annonces locales de colocation à Toulon s'étalent de 320 € CC (étudiant, entrée de gamme) à 530 € CC."
      },
      {
       "lot": "Chambre 2 (colocation, meublée)",
       "quantite": 1,
-      "loyer_mensuel_euros": 420.0,
+      "loyer_mensuel_euros": 460.0,
       "occupe": false,
       "note": "Hypothèse de marché, aucun bail en place."
      },
      {
       "lot": "Chambre 3 (colocation, meublée)",
       "quantite": 1,
-      "loyer_mensuel_euros": 420.0,
+      "loyer_mensuel_euros": 460.0,
       "occupe": false,
       "note": "Hypothèse de marché, aucun bail en place."
      },
      {
       "lot": "Chambre 4 (séjour transformé, colocation meublée)",
       "quantite": 1,
-      "loyer_mensuel_euros": 420.0,
+      "loyer_mensuel_euros": 460.0,
       "occupe": false,
       "note": "Le séjour-salon du sud peut devenir une quatrième chambre (l'annonce propose déjà « salon ou une chambre »). Hypothèse de marché."
      }
@@ -6302,8 +6302,8 @@
      "charges_copro_commentaire": "Montant réel annoncé : 1 173 €/an, soit 14 €/m²/an — trois fois moins que le T4 de Champ de Mars. Point positif du dossier.",
      "pno_annuelle_euros": 250.0,
      "pno_commentaire": "PNO appartement avec cave et balcon.",
-     "entretien_annuel_euros": 2900.0,
-     "entretien_commentaire": "Entretien courant 800 € + ménage et fournitures 700 € + provision de renouvellement du mobilier 700 € + provision d'impayés 3,5 % du loyer (~700 €, colocation : provision renforcée, doctrine du groupe, pas de GLI).",
+     "entretien_annuel_euros": 3400.0,
+     "entretien_commentaire": "Entretien courant 800 € + ménage et fournitures 700 € + provision de renouvellement du mobilier 700 € + provision d'impayés 3,5 % du loyer (~770 €, colocation : provision renforcée, doctrine du groupe, pas de GLI) + entretien supplémentaire lié à la deuxième salle d'eau 500 €.",
      "comptabilite_annuelle_euros": 600.0,
      "comptabilite_commentaire": "Comptabilité SCI, majorée pour une exploitation en colocation meublée (4 baux, quittances, mobilier)."
     }
