@@ -5909,7 +5909,7 @@
      "basse_euros": 180000.0,
      "haute_euros": 210000.0,
      "retenue_euros": 195000.0,
-     "source": "Rue Vincent Allègre : 2 299 €/m² (MeilleursAgents 09/2026, fourchette 1 192-3 020), 2 390 €/m² (efficity 08/2026), 2 313 €/m² au n°4. Valeur retenue 2 250 €/m² sur 86,7 m² = 195 000 €. Le bien est affiché à 2 180 €/m² : il est AU PRIX DU MARCHÉ de la rue, sans décote d'entrée.",
+     "source": "Rue Vincent Allègre : 2 322 €/m² pour les appartements (MeilleursAgents 01/09/2026, fourchette 1 204-3 050), 2 615 €/m² (SeLoger) ; quartier Saint-Roch 2 419 €/m² (SeLoger). Valeur retenue 2 250 €/m² sur 86,7 m² = 195 000 € : le bien affiché à 2 180 €/m² est dans le bas de la fourchette de la rue, sans décote marquée.",
      "confiance": "élevée"
     },
     "loyers": [
@@ -5935,7 +5935,7 @@
       "note": "Réel (réparti)."
      }
     ],
-    "notes": "Loyer global RÉEL : 1 400 €/mois charges comprises, dont 120 € de provisions sur charges payées par les trois locataires (3 × 40 €/lot/mois) - soit 1 280 € hors charges. Surface louée 86,7 m² : le loyer ressort à 16,1 €/m² CC. C'est une colocation de fait (T4 coupé en trois) : le rendement locatif est bien meilleur qu'un T4 nu, qui se louerait 1 000-1 100 €. Le découpage en 3 lots est autorisé par l'AG. Technique du vendeur : lot couloir en indivision entre les trois lots, ce qui préserve les tantièmes généraux. Surface Carrez par lot après découpage : 37,01 + 24,06 + 25,64 = 86,70 m² - aucune surface perdue."
+    "notes": "Loyer global RÉEL : 1 400 €/mois charges comprises, dont 120 € de provisions sur charges payées par les trois locataires (3 × 40 €/lot/mois) - soit 1 280 € hors charges. Surface louée 86,7 m² : le loyer ressort à 16,1 €/m² CC. C'est une colocation de fait (T4 coupé en trois) : le rendement locatif est bien meilleur qu'un T4 nu, qui se louerait 1 000-1 100 €. Le découpage en 3 lots est autorisé par l'AG. Technique du vendeur : lot couloir en indivision entre les trois lots, ce qui préserve les tantièmes généraux. Surface Carrez par lot après découpage : 37,01 + 24,06 + 25,64 = 86,70 m² - aucune surface perdue. Comparables petites surfaces à Toulon (prix demandés, 09/2026) : studios de 20 à 25 m² affichés entre 74 900 € et 92 000 €, soit 3 000 à 3 700 €/m². Le différentiel avec le monobloc du quartier (2 300-2 600 €/m²) est donc de +30 à +40 %, très au-dessus du seuil de 2 369 €/m² qui rend le découpage rentable. Gain brut estimé du découpage : +35 000 à +78 000 €. À confirmer sur des ventes réalisées (les annonces sont des prix demandés, souvent des biens rénovés en étage)."
    },
    "hypotheses": {
     "vacance_base_pct": 8.0,
