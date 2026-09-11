@@ -5870,16 +5870,16 @@
    "bien": {
     "type_bien": "appartement",
     "sous_type": null,
-    "type_detail": "Lot complet de 3 logements au rez-de-chaussée : T2 de 32,76 m², studio de 19,81 m², studio de 21,39 m². Immeuble de 1925, 6 étages, sans ascenseur, exposition sud, 3 WC séparés, pas de cave, pas de balcon. Copropriété de 22 lots. Travaux de rénovation à prévoir (non chiffrés). Les trois logements sont loués en 3/6/9.",
+    "type_detail": "T4 coupé en trois, loué comme trois logements séparés (colocation de fait) : T2 de 32,76 m², studio de 19,81 m², studio de 21,39 m², desservis par un couloir en indivision de 12,74 m². Immeuble de 1925, 6 étages, sans ascenseur, exposition sud, 3 WC séparés, pas de cave, pas de balcon. Copropriété de 22 lots. Les trois lots sont loués en 3/6/9.",
     "neuf": false,
     "adresse": {
-     "texte": "Toulon (83000) — quartier non précisé dans l'annonce, secteur annoncé bien placé proche commodités et transports",
+     "texte": "2, rue Vincent Allègre, Toulon (83000) - quartier Saint-Jean du Var / Pont-du-Las",
      "ville": "Toulon",
      "code_postal": "83000"
     },
     "surfaces": {
-     "texte": "73,96 m² habitables (somme des trois lots) — l'annonce affiche 86,7 m², écart de 12,74 m² à justifier",
-     "carrez_m2": 73.96
+     "texte": "86,7 m² au total = 73,96 m² de lots (32,76 + 19,81 + 21,39) + 12,74 m² de couloir en indivision pour les trois lots. L'écart entre la somme des lots et la surface affichée par l'annonce est donc expliqué.",
+     "carrez_m2": 86.7
     },
     "lots": {
      "count": 3,
@@ -5888,12 +5888,12 @@
      "lots_distincts": 3
     },
     "copro": {
-     "charges_annuelles_euros": 1100.0,
-     "charges_source": "Estimation pour 3 lots en copropriété de 22 lots de 1925 sans ascenseur (RDC). À confirmer sur budget prévisionnel."
+     "charges_annuelles_euros": 900.0,
+     "charges_source": "Charges de copropriété réelles : 75 €/mois pour l'ensemble des trois lots (source : agent, 10/09/2026)."
     },
     "travaux": {
      "montant_euros": 45000.0,
-     "nature": "Rénovation des trois logements ('travaux de rénovation à prévoir' — non chiffrés par le vendeur). Hypothèse 15 k€ par logement (second œuvre : réseaux, cloisons, sols, salle d'eau, cuisine). Fourchette 30-60 k€ selon l'état réel."
+     "nature": "« Travaux de rénovation à prévoir » selon l'annonce, mais le bien est LOUÉ en l'état 1 400 €/mois : les travaux ne sont pas urgents. Enveloppe 45 k€ (15 k€ par logement) à engager à la rotation des locataires, pas à l'acquisition. Deux lectures chiffrées : 144 k€ de prix max si les travaux sont différés, 102 k€ s'ils sont faits immédiatement."
     }
    },
    "annonce": {
@@ -5906,36 +5906,36 @@
    },
    "marche": {
     "valeur": {
-     "basse_euros": 195000.0,
-     "haute_euros": 225000.0,
-     "retenue_euros": 210000.0,
-     "source": "Toulon : prix moyen appartements ~3 200 €/m² (MeilleursAgents 09/2026), 2 907 €/m² pour le bien médian SeLoger. Lots de petites surfaces en RDC d'immeuble ancien : valeur retenue 2 840 €/m² sur 73,96 m², décotée pour le RDC et l'état à rénover. Confiance faible : quartier non communiqué.",
-     "confiance": "faible"
+     "basse_euros": 180000.0,
+     "haute_euros": 210000.0,
+     "retenue_euros": 195000.0,
+     "source": "Rue Vincent Allègre : 2 299 €/m² (MeilleursAgents 09/2026, fourchette 1 192-3 020), 2 390 €/m² (efficity 08/2026), 2 313 €/m² au n°4. Valeur retenue 2 250 €/m² sur 86,7 m² = 195 000 €. Le bien est affiché à 2 180 €/m² : il est AU PRIX DU MARCHÉ de la rue, sans décote d'entrée.",
+     "confiance": "élevée"
     },
     "loyers": [
      {
       "lot": "T2 32,76 m²",
       "quantite": 1,
-      "loyer_mensuel_euros": 524.0,
+      "loyer_mensuel_euros": 560.0,
       "occupe": true,
-      "note": "Hypothèse 16 €/m² — loyer réel non communiqué dans l'annonce."
+      "note": "Réel : le loyer global de 1 400 € couvre les trois lots. Répartition estimée (le T2 représente la plus grande surface)."
      },
      {
       "lot": "Studio 19,81 m²",
       "quantite": 1,
-      "loyer_mensuel_euros": 396.0,
+      "loyer_mensuel_euros": 360.0,
       "occupe": true,
-      "note": "Hypothèse 20 €/m² (petite surface) — loyer réel non communiqué."
+      "note": "Réel (réparti)."
      },
      {
       "lot": "Studio 21,39 m²",
       "quantite": 1,
-      "loyer_mensuel_euros": 428.0,
+      "loyer_mensuel_euros": 360.0,
       "occupe": true,
-      "note": "Hypothèse 20 €/m² — loyer réel non communiqué."
+      "note": "Réel (réparti)."
      }
     ],
-    "notes": "Loyers de marché estimés (1 348 €/mois au total) car l'annonce ne communique AUCUN loyer en place. Les baux 3/6/9 en cours peuvent être nettement inférieurs (baux anciens) : à exiger avant tout chiffrage définitif. Rendement brut estimé 7,9 % sur le revient, mais 4,5-5,5 % net après charges et fiscalité."
+    "notes": "Loyer global RÉEL : 1 400 €/mois charges comprises, dont 120 € de provisions sur charges payées par les trois locataires (3 × 40 €/lot/mois) - soit 1 280 € hors charges. Surface louée 86,7 m² : le loyer ressort à 16,1 €/m² CC. C'est une colocation de fait (T4 coupé en trois) : le rendement locatif est bien meilleur qu'un T4 nu, qui se louerait 1 000-1 100 €."
    },
    "hypotheses": {
     "vacance_base_pct": 8.0,
@@ -5944,10 +5944,10 @@
     "vacance_justification": "Trois logements = trois baux, donc rotation plus fréquente qu'un lot unique. Base 8 % (au-dessus du défaut résidentiel 5 %) pour tenir compte du turnover des petits logements et d'une relocation étalée. Worst 14 % = vacance simultanée de deux lots.",
     "frais_acquisition_euros": 15120.0,
     "charges": {
-     "taxe_fonciere_annuelle_euros": 1800.0,
-     "taxe_fonciere_commentaire": "Trois lots = trois impositions. Estimation 600 €/lot, à vérifier sur avis réels. Alerte si > 15 % du brut.",
-     "charges_copro_annuelles_euros": 1100.0,
-     "charges_copro_commentaire": "Copropriété de 22 lots, immeuble de 1925 sans ascenseur, RDC. À confirmer.",
+     "taxe_fonciere_annuelle_euros": 1900.0,
+     "taxe_fonciere_commentaire": "Taxe foncière réelle communiquée par l'agent : 1 900 €/an pour les trois lots (10/09/2026).",
+     "charges_copro_annuelles_euros": 900.0,
+     "charges_copro_commentaire": "Charges de copropriété réelles : 75 €/mois (900 €/an) pour les trois lots. Refacturées aux locataires à hauteur de 40 €/lot/mois, soit 120 €/mois encaissés.",
      "pno_annuelle_euros": 250.0,
      "pno_commentaire": "PNO pour trois lots.",
      "entretien_annuel_euros": 500.0,
