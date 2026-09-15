@@ -1,0 +1,40 @@
+CONVENTIONS DU DRIVE SEMAPHORE
+==============================
+
+1. INBOX : point d'entree unique. Tout document recu (mail, piece jointe,
+   annonce) est depose ici, puis classe par Semaphore vers 01-Parc ou
+   02-Pipeline-opportunites.
+   IMPORTANT : les .eml (conversations forwardees) ne sont PAS classes au
+   Drive. Seuls les documents structurants (PDF, pieces, actes) sont
+   archives. Les adresses email des intervenants sont extraites pour le
+   carnet d'adresses Google, puis l'email est marque traite.
+
+2. Structure : un dossier par BIEN = unite economique (un acte, une copro,
+   une ligne de revenus, un financement dedie). Exemple : le lot de
+   13 parkings La Valentine est 1 seul bien, pas 13.
+
+3. Squelette standard d'un dossier de bien :
+   Actes-et-compromis / Financement / Baux-et-locataires / Copropriete /
+   Fiscalite-locale / Assurance
+   (adapte au bien : pas de Copropriete pour des places exterieures sans
+   syndic ; pas de Baux si le bien est vide a l'acquisition).
+
+4. Pipeline -> Parc : une opportunite qui aboutit se deplace TELLE QUELLE
+   de 02-Pipeline-opportunites vers 01-Parc (squelette identique, simple
+   deplacement du dossier entier). Numerotation : 02a-Nom-du-projet pendant
+   l'etude, renumero 01a-Nom-du-bien a l'entree au parc.
+
+5. Nommage des fichiers : AAAA-MM-DD_Type_Objet.ext
+   ex : 2026-09-05_TF_Jean-Rostand-pl13.pdf
+   Pas d'espaces ni d'accents dans les noms de DOSSIERS (tirets). Accents
+   toleres dans les noms de fichiers.
+   FICHE DE BIEN : fichier markdown a la racine de chaque dossier de bien,
+   nomme 00-FICHE-<nom-du-dossier>.md (ex : 00-FICHE-01a-Valentine-
+   La-Verrerie-13pkgs.md). Renommer la fiche si le dossier est renumero
+   au passage Pipeline -> Parc.
+
+6. Dossiers transverses (ne suivent pas un bien) :
+   03-Banque-et-financement : fiche banquier, courrier, financements NOUVEAUX
+   04-Fiscalite-SCI          : liasses IS, amortissements, par exercice
+   05-Notaire-et-juridique   : courrier, projets d'acte hors parc
+   06-Reporting              : fiches publiees, syntheses de parc, arbitrages
