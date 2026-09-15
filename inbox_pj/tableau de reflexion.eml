@@ -1,0 +1,961 @@
+Delivered-To: a.barlatier@gmail.com
+Received: by 2002:a05:6022:63c6:20b0:10a:a6cb:d28e with SMTP id w6-n2csp1926588lat;
+        Thu, 20 Aug 2026 07:57:53 -0700 (PDT)
+X-Received: by 2002:a05:690c:e684:20b0:80c:5ce9:8f1a with SMTP id 00721157ae682-844e34a8387mr48983217b3.34.1787237873580;
+        Thu, 20 Aug 2026 07:57:53 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1787237873; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=PtNvJvUvbumSkGNrIJk9Wy333if1ClOWyTErWCNMcG7112makDRL0mjD9zt49gPfEJ
+         gBjE7vOfQnFaQ6EWnrQ4yj4DichSUg4YfLWtTh1fjrcuUHqV9eI4arTlLhUlu7xwAgbv
+         WgHbiCAPRqV9ZG2PZJz4G6adwl5efQNVLM/ogxgCvvQExizGznnBtpmt1TmD+369ED4y
+         FQZN5ff+eeawPnhzSne8YPTgc+mopjHXjrr4nhnOcgCL+Ei++LjVN0RQROQREmJ7mTQY
+         DAJoclfIakWj7ECX0pkaSiaEr/D6FTNDk9ehu/DrY7EJbWHznmcUvp0I4L6NG2QUrz5S
+         kIFA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=juuMk8GqHgFr7sBJmnBkGOiuFUkqJYxiuOKUEFAF+FE=;
+        fh=UgWhm609b4D+Rr19pJ95TlqU+295sIkxbmngg3GKU7o=;
+        b=iLI0HvLtcznbsFSi+q7jawXwvFCe9cq+6cwPPLpMQp6GZK6oEowqvyh+kGz2lTgZ4M
+         qNImdU8DmLEH6fftG+L74+0e5IgEftpMyJzar19hBlEGhNhtyD/blV4cAv5EHIpEMGCw
+         47Y5RZA5kKLyl1ryYS7WHUvPJuI3pxmDZjKMTA4qajwJuK0KW1+oE46lwQx0Z+mD95wi
+         Yn3YhA/J/6qrKby6Gjh8ypAyce/JQ5imx5c8MNLw3JYIEG2FlALGhUZZEuScKzmVYVpe
+         awfP4NR259RTLzerDUjvzZbRkE06JXY/GUDO8QdMK4MmCBDtFW71kiBhPGt6jdvPEUcQ
+         qEuw==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=pmmsl+UY;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of sarl.spbi@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sarl.spbi@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <sarl.spbi@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-8451320ecc6sor51480507b3.5.2026.08.20.07.57.53
+        for <a.barlatier@gmail.com>
+        (Google Transport Security);
+        Thu, 20 Aug 2026 07:57:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sarl.spbi@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=pmmsl+UY;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of sarl.spbi@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sarl.spbi@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1787237873; cv=none;
+        d=google.com; s=arc-20260327;
+        b=E8Hxqi+KaVhiXLViqoIAfgDzN+fs2+/Pxekl8FoCL5WPS+62B1ErdRoIAfFnwgf5D2
+         nrZ63G5huyaXgNKcu3TeMjrxysL+H0FUw56+BTj+Fq7bOYixBj8Cserr4SXm3z4hrvAi
+         6Pjqvx76XF4wGeQk9dYHKKmQ9w4tckgOP05cCOOaaU/zKZAXbKmIGjILg8RjTNhlHYB3
+         HOGpYgFCbjH6TXpEmUMgbtwA4KhvJL8IaLKnKIXmpbbjfnlHcNNZ4P7DdBTz4qezFMXc
+         +KZePi/usy3L3IPuCFFg35r7gRYT72A6zirqSjp+MRD+X5h+71T2JigwWs36RB1P+P5S
+         hqSQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=juuMk8GqHgFr7sBJmnBkGOiuFUkqJYxiuOKUEFAF+FE=;
+        fh=UgWhm609b4D+Rr19pJ95TlqU+295sIkxbmngg3GKU7o=;
+        b=VOAkybP94KMgkc1xq2TM78JJlcufAQrkIVviKLFTAsd9TP98mvcah72l8K1Q4gh6cf
+         1U+1fmP2lpGqjEaSr3Z0hlJ4TLGPKjoumIrW3RQVoZC5BA/nMugnVHFA6OWmTsM25wx3
+         mySbu+WYiGkzhB8xLH1iuhAoQPec7zmUxhOvAkThgcOClgSQFya4OTIjm7OUmcMOxsCk
+         6R4Au85JV+BeuvlQECR9he5S85t4IyD4zmlv/9HRR/2WAABVYvlOLTkyu5BDnh0qXv7u
+         59czTicutaKBxRpp9lx2XtvdSSYhUvnjjApAGJl2zJALVc5Uf9lVwJ6j2HDD0dKLpZsp
+         /PaA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1787237873; x=1787842673; dara=google.com;
+        h=content-type:to:subject:message-id:date:from:mime-version:from:to
+         :cc:subject:date:message-id:reply-to:content-type;
+        bh=juuMk8GqHgFr7sBJmnBkGOiuFUkqJYxiuOKUEFAF+FE=;
+        b=pmmsl+UYUK9B3CPc3iJ3z6VG7Ndh6j8GN8ameFW1BoFr0FIIC8ha6R4Qeqfy8NskH6
+         d2ULNfJ5Xb8cuNad7GtOwbrYacokAQGhDtSU0i5USVRMnbTxU0/X5Ho5VqtMbMkFhd9r
+         mGR8NwAy4xn+e8mUMrmnR4ggpCiicLVLttZasrJTHiENkMcZqXq/szH4X4ess+Ti90fx
+         Yejhkq9zBllrmzrZr4f49mIoh6XdvmoUX9PX9lJzVvXjfGxxT6c1/fh19QG7N5mulZDy
+         boJIEIYPR/eRoP39X/ldoWN7wv00YYtEy+Ruv7F7CreMLl6djdt1vk0qld/rvgqT0luV
+         GiIA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1787237873; x=1787842673;
+        h=content-type:to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=juuMk8GqHgFr7sBJmnBkGOiuFUkqJYxiuOKUEFAF+FE=;
+        b=iNRcld/EfaMSCBFLR7JFHhyt/5sHyu0WMcatygH6xMzgrGUZMioh3MtUOpLa+qxbaW
+         NB9eeTtjjRbk6hMmwT/jzKbvwAvOiRO1zxOtdcodw+U2QwQ7GUaUYTAMpM8RYA8KVQfi
+         vYpFhTEkioMvErZPkzBHDBn7LPOVmMsWgIkLbchKjbpI8l7WQZKwO2G143K6q8K0kUK0
+         aJPwx6GlzU9htahiMYTXBbpzNgyv7vUq+TrNGzcDQ8elDmcaPk3qEwwAs3m291996k0D
+         yhVX/jCye8Go5B34HRTu/KFXMXuhKSw3RxA9Ot9HHFuwp8bVd+xM7biS0nj84YEafrSc
+         SC6Q==
+X-Gm-Message-State: AFuF++mBROq5StMhuUDxmYHS5ZI++iK3pdftlreUvY7Z2jLZn817eMEk
+	lq8XgwmoYRgGshV4FR8Y4EHdqMgF1Kai+2ODk9dKNpIGd6WRay66GaSNxQtCRhAa/zGkfXkvPGK
+	OeDmMojo1fhXAFSzcxV5f8G89m/t70A9rMA9n
+X-Gm-Gg: AR+sD13sGUdfpDz/meSQPA4zXdOqGT0yu5U0YcIDWHJLZIP4kcjzFs7GNJa6MeGgKrO
+	NB8WPlCVM0ceDWjvXa1Sqg4Ibn4JzKzW3fxRvCwKMZVcUIGADNvTs+T8KFqZQQRRLq9v//3HiCp
+	mXj3iuCHUtknJRYpLPKSVGU5GCAnL/iO3YVR+7qqtHXYCV4JKsv9n1MnLVLjvt3qtJs8afrvU67
+	QCiPZMeXuHXDX9E9T0e0SMusYMfzzuuEjzV8YqRuMeDioDFxdKqWTOHrJRIxGA0VAZQohtR2Weg
+	RoSkXb0961/SfdXLqVvEsB4wVglsDtgzdfF6x6t0NYhwMkQ/UZLUq5K1UM9uJ1UCsFPk8uwg02T
+	Kob0=
+X-Received: by 2002:a05:690c:e68b:10b0:81e:5f38:b20e with SMTP id
+ 00721157ae682-844dcf4db29mr46178047b3.6.1787237872867; Thu, 20 Aug 2026
+ 07:57:52 -0700 (PDT)
+MIME-Version: 1.0
+From: Barlatier remy <sarl.spbi@gmail.com>
+Date: Thu, 20 Aug 2026 16:57:41 +0200
+X-Gm-Features: AcwNN1VmM7_SA2X69_oTm99onY7fCz-N48YKTL8Evf6MpzBfjavE_W_8fQOnW6k
+Message-ID: <CAJ0+TuL57Nu3DWiXn0w9GEoY5FNY+zipmX2FBhOpm+PycPH-bg@mail.gmail.com>
+Subject: tableau de reflexion
+To: Alexis BARLATIER <a.barlatier@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000008a9b1b06597bbe8e"
+
+--0000000000008a9b1b06597bbe8e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+place prix notaire cout total loyer base loyer mid loyer best
+1 5000 675 5675 50 60 65
+CF 20 30 35
+RENTA BRUTE 10,57% 12,69% 13,74%
+RENTA NETTE 4,23% 6,34% 7,40%
+delai rbt en ann=C3=A9e 23,65 15,76 13,51
+place prix notaire cout total loyer base loyer mid loyer best
+2 10000 1200 11200 100 120 130
+CF 40 60 70
+RENTA BRUTE 10,71% 12,86% 13,93%
+RENTA NETTE 4,29% 6,43% 7,50%
+23,33 15,56 13,33
+place prix notaire cout total loyer base loyer mid loyer best
+3 15000 1500 16500 150 180 195
+CF 60 90 105
+RENTA BRUTE 10,91% 13,09% 14,18%
+RENTA NETTE 4,36% 6,55% 7,64%
+22,92 15,28 13,10
+place prix notaire cout total loyer base loyer mid loyer best
+7 35000 2200 37200 350 420 455
+CF 140 210 245
+RENTA BRUTE 11,29% 13,55% 14,68%
+RENTA NETTE 4,52% 6,77% 7,90%
+22,14 14,76 12,65
+
+--0000000000008a9b1b06597bbe8e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"600" style=3D"border-collapse:collapse;width:450pt">
+
+ <colgroup><col width=3D"80" span=3D"3" style=3D"width:60pt">
+ <col width=3D"120" style=3D"width:90pt">
+ <col width=3D"80" span=3D"3" style=3D"width:60pt">
+ </colgroup><tbody><tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" width=3D"80" style=3D"height:15pt;width:60pt;padding-to=
+p:1px;padding-right:1px;padding-left:1px;color:black;font-size:11pt;font-fa=
+mily:&quot;Aptos Narrow&quot;,sans-serif;vertical-align:bottom;border-width=
+:medium;border-style:none;border-color:currentcolor;white-space:nowrap">pla=
+ce</td>
+  <td width=3D"80" style=3D"width:60pt;padding-top:1px;padding-right:1px;pa=
+dding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&qu=
+ot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:none;=
+border-color:currentcolor;white-space:nowrap">prix</td>
+  <td width=3D"80" style=3D"width:60pt;padding-top:1px;padding-right:1px;pa=
+dding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&qu=
+ot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:none;=
+border-color:currentcolor;white-space:nowrap">notaire</td>
+  <td width=3D"120" style=3D"width:90pt;padding-top:1px;padding-right:1px;p=
+adding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&q=
+uot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:none=
+;border-color:currentcolor;white-space:nowrap">cout total</td>
+  <td width=3D"80" style=3D"width:60pt;padding-top:1px;padding-right:1px;pa=
+dding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&qu=
+ot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:none;=
+border-color:currentcolor;white-space:nowrap">loyer base</td>
+  <td width=3D"80" style=3D"width:60pt;padding-top:1px;padding-right:1px;pa=
+dding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&qu=
+ot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:none;=
+border-color:currentcolor;white-space:nowrap">loyer mid</td>
+  <td width=3D"80" style=3D"width:60pt;padding-top:1px;padding-right:1px;pa=
+dding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&qu=
+ot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:none;=
+border-color:currentcolor;white-space:nowrap">loyer best</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" align=3D"right" style=3D"height:15pt;padding-top:1px;pa=
+dding-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&qu=
+ot;Aptos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;=
+border-style:none;border-color:currentcolor;white-space:nowrap">1</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">5000</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">675</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">5675</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">50</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">60</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">65</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">CF</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">20</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">30</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">35</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">RENTA BRUTE</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">10,57%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">12,69%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">13,74%</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">RENTA NETTE</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">4,23%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">6,34%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">7,40%</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">delai rbt en ann=C3=A9e</td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">23,65</td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">15,76</td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">13,51</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap">place</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">prix</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">notaire</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">cout total</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">loyer base</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">loyer mid</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">loyer best</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" align=3D"right" style=3D"height:15pt;padding-top:1px;pa=
+dding-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&qu=
+ot;Aptos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;=
+border-style:none;border-color:currentcolor;white-space:nowrap">2</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">10000</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">1200</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">11200</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">100</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">120</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">130</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">CF</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">40</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">60</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">70</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">RENTA BRUTE</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">10,71%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">12,86%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">13,93%</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">RENTA NETTE</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">4,29%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">6,43%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">7,50%</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">23,33</td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">15,56</td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">13,33</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap">place</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">prix</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">notaire</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">cout total</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">loyer base</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">loyer mid</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">loyer best</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" align=3D"right" style=3D"height:15pt;padding-top:1px;pa=
+dding-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&qu=
+ot;Aptos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;=
+border-style:none;border-color:currentcolor;white-space:nowrap">3</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">15000</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">1500</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">16500</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">150</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">180</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">195</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">CF</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">60</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">90</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">105</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">RENTA BRUTE</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">10,91%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">13,09%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">14,18%</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">RENTA NETTE</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">4,36%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">6,55%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">7,64%</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">22,92</td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">15,28</td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">13,10</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap">place</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">prix</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">notaire</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">cout total</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">loyer base</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">loyer mid</td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">loyer best</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" align=3D"right" style=3D"height:15pt;padding-top:1px;pa=
+dding-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&qu=
+ot;Aptos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;=
+border-style:none;border-color:currentcolor;white-space:nowrap">7</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">35000</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">2200</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">37200</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">350</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">420</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">455</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">CF</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">140</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">210</td>
+  <td align=3D"right" style=3D"padding-top:1px;padding-right:1px;padding-le=
+ft:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans=
+-serif;vertical-align:bottom;border-width:medium;border-style:none;border-c=
+olor:currentcolor;white-space:nowrap">245</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">RENTA BRUTE</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">11,29%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">13,55%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">14,68%</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap">RENTA NETTE</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">4,52%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">6,77%</td>
+  <td class=3D"gmail-xl63" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">7,90%</td>
+ </tr>
+ <tr height=3D"20" style=3D"height:15pt">
+  <td height=3D"20" style=3D"height:15pt;padding-top:1px;padding-right:1px;=
+padding-left:1px;color:black;font-size:11pt;font-family:&quot;Aptos Narrow&=
+quot;,sans-serif;vertical-align:bottom;border-width:medium;border-style:non=
+e;border-color:currentcolor;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td style=3D"padding-top:1px;padding-right:1px;padding-left:1px;color:bla=
+ck;font-size:11pt;font-family:&quot;Aptos Narrow&quot;,sans-serif;vertical-=
+align:bottom;border-width:medium;border-style:none;border-color:currentcolo=
+r;white-space:nowrap"></td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">22,14</td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">14,76</td>
+  <td class=3D"gmail-xl64" align=3D"right" style=3D"padding-top:1px;padding=
+-right:1px;padding-left:1px;color:black;font-size:11pt;font-family:&quot;Ap=
+tos Narrow&quot;,sans-serif;vertical-align:bottom;border-width:medium;borde=
+r-style:none;border-color:currentcolor;white-space:nowrap">12,65</td>
+ </tr>
+
+</tbody></table></div>
+
+--0000000000008a9b1b06597bbe8e--

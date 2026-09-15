@@ -1,0 +1,413 @@
+Delivered-To: a.barlatier@gmail.com
+Received: by 2002:a05:6022:c107:b0:104:ad75:702f with SMTP id dl7csp360104lab;
+        Thu, 11 Jun 2026 07:16:02 -0700 (PDT)
+X-Received: by 2002:a05:690c:4442:b0:7ec:59e7:459d with SMTP id 00721157ae682-7f657674402mr32022157b3.37.1781187361863;
+        Thu, 11 Jun 2026 07:16:01 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1781187361; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=EBHOX30aaS62BCiF+0LsHlutzSvH27R38q9hw7GjsCUv8NsOYU1MqNjzb2qa1cmJg+
+         z/85GRf4cx56JJ4esIb1d6s8nIIho8v1+dOjQ75aS4zZNRA0bYNlBEjBEsfyfuqUxIks
+         /knIjsj0R0I7AQaVPMFg2ZpocXTDTswheoXhybLXd5EeH4GIV/YfR9YF4+RUUtbIsvdg
+         we4TN6oKEXOI2893M4ZrH+62Kw/KRglAb+8po9dATcuABzjBgp0NbL05AE8n862vwiBj
+         mSgsBnfEu7KEgOW12szcr8oBCouqse5NBcDQHqspnfM5x5QAD/sLDYRHK/ZBrcPipB4j
+         ALTw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=wBYnvUnOnjJrA91zkf3D6xL35ViqJn19Yzoqb9qxoiI=;
+        fh=UgWhm609b4D+Rr19pJ95TlqU+295sIkxbmngg3GKU7o=;
+        b=cspSiRF5AIdAl53o0L1k0YGXb4HvQMcTlmAdXs10uIJ18EzP4eCNf4UEbse8eC4Cp9
+         rQ5yYJ0/3uFonxCydFJt89QBao9spSpnv38Hv2tzEIZ1Ez0PdUNYPZ/NOXJPK3ko9XgB
+         g9AVsW8WwW5GtnPsxOuSh6LWmwhMuW/0vtnchFpHKpZmjOwZVnV1qiyWXVd+Yf5mvvLL
+         X9Z+aRPUsnAHPMYeoG0hdIwXwQnKHmCERHP23ClC/EPYMNcnFrepzV3QpI6ho9wXYvo7
+         zH1C2vE18EnIH+6rh7BHnCcYLNkRrowtlB1QNnEL5hBQI53zpF8iU6jw6z0y4hM7HNYP
+         Qc4w==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=NYvNv4tz;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of sarl.spbi@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sarl.spbi@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <sarl.spbi@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 6a1803df08f44-8d1e7ead934sor19812556d6.5.2026.06.11.07.16.01
+        for <a.barlatier@gmail.com>
+        (Google Transport Security);
+        Thu, 11 Jun 2026 07:16:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sarl.spbi@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=NYvNv4tz;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of sarl.spbi@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sarl.spbi@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1781187361; cv=none;
+        d=google.com; s=arc-20240605;
+        b=HHFHP3KwewVk0t5+KcranNsbVnL3KsitajHbAkSwxt1OlHmslAOvqbbNx9YVZgeOQt
+         tdar1LoKoCHp4NFz0KuBHs9QEmlvoqPcDjtbxv2wFNrbqVObla/7AfIUsqNs0ir3ZPRd
+         lqQW3cJ8t52EV3fsbtaIj29OnUaBfMQz5w6Ab/c2kR+yI0u6dimDo13IBr0xx/ulfmF0
+         n9TvDXymiUUvA8pqq6KZfLBWiCpbViURQgJ/5DYJOP43ZjOD5+J1YDZYb3IfpWzCcltd
+         Lku1jtxkUbU3kyQjP75tiRWmSrMaXCgfONibCvRnGQknMxsSx5ysl1ue8Fj108Uq/dLp
+         4ufA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=wBYnvUnOnjJrA91zkf3D6xL35ViqJn19Yzoqb9qxoiI=;
+        fh=UgWhm609b4D+Rr19pJ95TlqU+295sIkxbmngg3GKU7o=;
+        b=hHivuzCrzr2XtIF07GVr87va3L9IF3yonA2JpckoJMB8/oZj6MV/wwH4n7aibxpJLl
+         BYqnyvNPvXRMMQeaLLkhSrm2rlxHlF6wlnrkpMS1wD2U+5sDmqZpxLn/P7dJDUC8Atzn
+         4cQDrbyQuwauKgU6ydVoQ9q0otZqDZrV4yaw29EDweGRgdXHPO+/OTkupIm2a9mM/kV+
+         u1UhWfQZcRI4rc7LT/+ZIH85uH8yD7Rs5cuOWzDRHCELnFutYwug2RmqsNcee572yCbt
+         ZwOALT/LPDUpkBYn563YgrAP/b/QXjDdJxURBzuJzRJKWmax8ftGFqiElH0RA3ZJkK/U
+         9d5g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1781187361; x=1781792161; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=wBYnvUnOnjJrA91zkf3D6xL35ViqJn19Yzoqb9qxoiI=;
+        b=NYvNv4tzF/RbWYzgs1XR50xf0G9pFo1xFUwUYAuFblZxHjmJV7gTZhsiaQbhAhV3c3
+         UZcVIZsYIMq5LZW/l/PJzwgL5L4hjYFo7EhFsC21MIjsjHvXx+HQIKYz54A3+RXdOAyR
+         mKDCvtWYSpD+bVvkcb19CHQ/tmiowWktVwb0EZ9aFPMTo05s65K6p9L2OBtzvoREqsnm
+         0NUVzqczu4bc3f0MwC/K054uaj8w4G9r9qyFvIXB+1J0q0jV7kx3zN+QGZeSYQ0hhfL1
+         YRMZVDWlIgtCzZDO3No6k3Ldbdq4GDOu/jPCNN513oKiDqm/cH8OgSaG2dAP/7wM+GsE
+         qS5A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1781187361; x=1781792161;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=wBYnvUnOnjJrA91zkf3D6xL35ViqJn19Yzoqb9qxoiI=;
+        b=Bqt57+yf+ZtZ5mBxjO5zL3jpcxtKgqjgBsgx0H4U6zJXl9ocX3iRjgMIX0zLMDb6U9
+         tf8mQj04+uUCMuWblm/fRXKMbcIfBcx9JQnBtTzwBZO/HO7dJYzXlvIzQKMez6xOlBL7
+         eP/OOxaEEvBUgN/fs9JmHqMXgj76+QIGudBz5KquRlpbldVqjKrRV0lnJHNdBjCDQ4rI
+         dKrhZCKJ8hiOmatu3GxlwcsDMAtTebrnYg8uv8ZASeiWjJNbX9Af7+PcRZE4opVXBVbo
+         cgvdkOwa01JXUzbNiuhU5tfnwd1mYy/KfGiQWqI1NmWxziMdAx2DZS9bUk2LcgxkTgTx
+         iVOw==
+X-Gm-Message-State: AOJu0YwerVdwbsKK81RjB9XiTro2y/JEfwlzvGRDbwNnBkGZEZ/dcK7H
+	uppUNFuOwzWYf/mqRwuVzcFgiVCrtobaBAbZ922QK/9ep9OTG0KKSacmu8W37B3yJYa5pDNiImX
+	DXc7BD5vf3X39pB0Ck/+gvLcvBqTS6lV5zw==
+X-Gm-Gg: Acq92OEYbVyWbUrha3Hl9Eya9lY4ZdxxhkMMmYhR5wrJefzasx3EtYnAhcYlxDvDkVM
+	I+vgJp/mC/wRA9MBOG4yM0caRJcrWPjkpH+iFOS2vTMEKy6A+Ym2G9w5dev9GQILePW4hS4jDeW
+	/4o0FkSypqitZljVDV2BvhDYZbPcqWE2GCNAE5gRa+ypctxW9SrbHt3tydBGkJu5BfLFcor8M9k
+	qTD1jgxb743SlRqN299+cKO6eLHg4Nz5t3tIKiV4/N166gXU1ZLu8Vsc6OpkWGovsLzd0bO7qhh
+	Oj3otnQvU2WXvgvd9hWr84UqLE6PnKPywnU+xackFvQq0/jZk8Cc90uyR0ji1wY=
+X-Received: by 2002:a05:690e:120d:b0:651:bc51:e6b6 with SMTP id
+ 956f58d0204a3-662698499d4mr2457549d50.38.1781187357442; Thu, 11 Jun 2026
+ 07:15:57 -0700 (PDT)
+MIME-Version: 1.0
+References: <Spwd7pu4Q2iPqWZNEet3uQ@geopod-ismtpd-0>
+In-Reply-To: <Spwd7pu4Q2iPqWZNEet3uQ@geopod-ismtpd-0>
+From: Barlatier remy <sarl.spbi@gmail.com>
+Date: Thu, 11 Jun 2026 16:15:45 +0200
+X-Gm-Features: AVVi8Cdm-_sZDbBlicDZRuZLhCg1TAXGcE2XIXhP3gyuvnLwg-nu7w6RPI3pq_c
+Message-ID: <CAJ0+TuJ7kgDWOcQ6LQgnvaA+Mq3tkZSDXT7s52C0y4wAeJ5QJQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Fwd=3A_camille=2Ecalegari=40iadfrance=2Efr_vous_a_envoy=C3=A9_Do?=
+	=?UTF-8?Q?ssier_sollies_pont_via_WeTransfer?=
+To: Alexis BARLATIER <a.barlatier@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000b80bb30653faff49"
+
+--000000000000b80bb30653faff49
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Message transf=C3=A9r=C3=A9 ---------
+De : WeTransfer <noreply@wetransfer.com>
+Date : jeu. 11 juin 2026 =C3=A0 16:12
+Objet : camille.calegari@iadfrance.fr vous a envoy=C3=A9 Dossier sollies po=
+nt
+via WeTransfer
+=C3=80 : <sarl.spbi@gmail.com>
+
+
+[image: WeTransfer logo]
+<https://wetransfer.com/?utm_source=3Dwt_sendgrid&utm_medium=3Demail&utm_ca=
+mpaign=3DTRN_DL_WTP_01&trk=3DTRN_DL_WTP_01>
+
+camille.calegari@iadfrance.fr vous a envoy=C3=A9 Dossier sollies pont
+
+1 =C3=A9l=C3=A9ment, 68 Mo au total =E2=80=A2 Expire le 14 juin 2026
+T=C3=A9l=C3=A9chargez vos fichiers
+<https://wetransfer.com/downloads/935c7515441a71568b3f6b554d88a482202606111=
+41207/fdc364dfd327267dbbf05f21c4d73c9820260611141229/9f089f?utm_source=3Dwt=
+_sendgrid&utm_medium=3Demail&utm_campaign=3DTRN_DL_WTP_01&trk=3DTRN_DL_WTP_=
+01>
+------------------------------
+
+Lien de t=C3=A9l=C3=A9chargement
+
+https://wetransfer.com/downloads/935c7515441a71568b3f6b554d88a4822026061114=
+1207/fdc364dfd327267dbbf05f21c4d73c9820260611141229/9f089f
+<https://wetransfer.com/downloads/935c7515441a71568b3f6b554d88a482202606111=
+41207/fdc364dfd327267dbbf05f21c4d73c9820260611141229/9f089f?utm_source=3Dwt=
+_sendgrid&utm_medium=3Demail&utm_campaign=3DTRN_DL_WTP_01&trk=3DTRN_DL_WTP_=
+01>
+
+1 =C3=A9l=C3=A9ment
+
+Dossier sollies pont
+
+Dossier =E2=80=A2 9 =C3=A9l=C3=A9ments
+
+Partager votre contenu sur WeTransfer?
+
+Vous gardez toujours le contr=C3=B4le.
+Consultez nos Principes de protection du contenu
+<https://wetransfer.com/en-US/explore/legal/principles-of-content-protectio=
+n?utm_source=3Dwt_sendgrid&utm_medium=3Demail&utm_campaign=3Dnotify_recipie=
+nt_email_content_protection&trk=3Dnotify_recipient_email_content_protection=
+>
+------------------------------
+
+Aide
+<https://wetransfer.com/help-center?utm_source=3Dwt_sendgrid&utm_medium=3De=
+mail&utm_campaign=3DTRN_DL_WTP_01&trk=3DTRN_DL_WTP_01>
+
+=C3=80 propos de nous
+<https://about.wetransfer.com/?utm_source=3Dwt_sendgrid&utm_medium=3Demail&=
+utm_campaign=3DTRN_DL_WTP_01&trk=3DTRN_DL_WTP_01>
+
+Mentions l=C3=A9gales
+<https://wetransfer.com/explore/legal/terms?utm_source=3Dwt_sendgrid&utm_me=
+dium=3Demail&utm_campaign=3DTRN_DL_WTP_01&trk=3DTRN_DL_WTP_01>
+
+Pour vous assurer que nos e-mails arrivent, ajoutez noreply@wetransfer.com
+=C3=A0 vos contacts
+<https://wetransfer.com/help-center/troubleshooting/not-receiving-emails?ut=
+m_source=3Dwt_sendgrid&utm_medium=3Demail&utm_campaign=3DTRN_DL_WTP_01&trk=
+=3DTRN_DL_WTP_01>
+.
+
+Vous souhaitez recevoir moins d'e-mails comme celui-ci ? Mettez =C3=A0 jour=
+ vos
+param=C3=A8tres de notification ici
+<https://wetransfer.com/account/notification-settings>.
+
+Signaler ce transfert
+<https://moderation.wetransfer.com/user-reports/?content.content_id=3D935c7=
+515441a71568b3f6b554d88a48220260611141207&content.customerSpecific.contentT=
+ype=3Dtransfer>
+
+Wetransfer B.V. - Nieuwezijds Voorburgwal 162, 1012 SJ Amsterdam, The
+Netherlands
+<https://www.google.com/maps/search/Nieuwezijds+Voorburgwal+162,+1012+SJ+Am=
+sterdam,+The+Netherlands?entry=3Dgmail&source=3Dg>
+
+Registered No. 34380998 | VAT IT14314670960
+
+--000000000000b80bb30653faff49
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div><br></div><div><br><div class=3D"gmail_quote gmail_quote_container"><d=
+iv dir=3D"ltr" class=3D"gmail_attr">---------- Message transf=C3=A9r=C3=A9 =
+---------<br>De=C2=A0: <strong class=3D"gmail_sendername" dir=3D"auto">WeTr=
+ansfer</strong> <span dir=3D"auto">&lt;<a href=3D"mailto:noreply@wetransfer=
+.com">noreply@wetransfer.com</a>&gt;</span><br>Date=C2=A0: jeu. 11 juin 202=
+6 =C3=A0 16:12<br>Objet=C2=A0: <a href=3D"mailto:camille.calegari@iadfrance=
+.fr">camille.calegari@iadfrance.fr</a> vous a envoy=C3=A9 Dossier sollies p=
+ont via WeTransfer<br>=C3=80=C2=A0:  &lt;<a href=3D"mailto:sarl.spbi@gmail.=
+com">sarl.spbi@gmail.com</a>&gt;<br></div><br><br><u></u><table align=3D"ce=
+nter" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"max-width:37.5em"><tbody><tr style=3D"width:100%=
+"><td><table align=3D"center" width=3D"416" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"max-width:416px;width:416p=
+x"><tbody><tr style=3D"width:100%"><td><table align=3D"center" width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"><=
+tbody><tr><td><table align=3D"center" width=3D"100%" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" role=3D"presentation"><tbody style=3D"width:100%=
+"><tr style=3D"width:100%"><td style=3D"text-align:center;padding-top:36px;=
+padding-bottom:48px"><a href=3D"https://wetransfer.com/?utm_source=3Dwt_sen=
+dgrid&amp;utm_medium=3Demail&amp;utm_campaign=3DTRN_DL_WTP_01&amp;trk=3DTRN=
+_DL_WTP_01" style=3D"color:#067df7;text-decoration-line:none" target=3D"_bl=
+ank"><img alt=3D"WeTransfer logo" src=3D"https://email.wetransfer.net/Logos=
+/Logo_wetransfer_4x.png" style=3D"display:inline-block;outline:none;border:=
+none;text-decoration:none" width=3D"194"></a></td></tr></tbody></table></td=
+></tr></tbody></table><table align=3D"center" width=3D"100%" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" class=3D"m_6362922=
+351001319001content-section" style=3D"background:white;padding:16px 8px 0 8=
+px"><tbody><tr><td><p style=3D"font-size:32px;line-height:34px;font-family:=
+Actief Grotesque Rg,Helvetica,Arial,sans-serif;font-weight:400;letter-spaci=
+ng:-1.5px;text-align:center;color:#161616;margin:12px 0 8px 0;word-break:br=
+eak-word;margin-top:12px;margin-right:0;margin-bottom:8px;margin-left:0"><a=
+ href=3D"mailto:camille.calegari@iadfrance.fr" target=3D"_blank">camille.ca=
+legari@iadfrance.fr</a> vous a envoy=C3=A9 Dossier sollies pont</p><p style=
+=3D"font-size:14px;line-height:24px;font-family:Actief Grotesque Rg,Helveti=
+ca,Arial,sans-serif;font-weight:400;text-align:center;color:#161616;margin:=
+24px 0 24px 0;margin-top:24px;margin-right:0;margin-bottom:24px;margin-left=
+:0">1 =C3=A9l=C3=A9ment, 68 Mo au total =E2=80=A2 Expire le 14 juin 2026</p=
+><table align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation"><tbody><tr><td><table align=3D"center" =
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td style=
+=3D"text-align:center;padding-top:32px;padding-bottom:32px"><div style=3D"t=
+ext-align:center"><a id=3D"m_6362922351001319001button" href=3D"https://wet=
+ransfer.com/downloads/935c7515441a71568b3f6b554d88a48220260611141207/fdc364=
+dfd327267dbbf05f21c4d73c9820260611141229/9f089f?utm_source=3Dwt_sendgrid&am=
+p;utm_medium=3Demail&amp;utm_campaign=3DTRN_DL_WTP_01&amp;trk=3DTRN_DL_WTP_=
+01" style=3D"line-height:100%;text-decoration:none;display:inline-block;max=
+-width:100%;font-family:Actief Grotesque Rg,Helvetica,Arial,sans-serif;font=
+-weight:500;font-size:16px;width:default;box-sizing:border-box;text-align:c=
+enter;padding:12.5px 32px;border-radius:16px;color:#ffffff;background-color=
+:#3767ea;border:1px solid #3767ea;padding-top:12.5px;padding-right:32px;pad=
+ding-bottom:12.5px;padding-left:32px" target=3D"_blank"><span></span><span =
+style=3D"max-width:100%;display:inline-block;line-height:120%">T=C3=A9l=C3=
+=A9chargez vos fichiers</span><span></span></a></div></td></tr></tbody></ta=
+ble></td></tr></tbody></table><hr style=3D"width:100%;border:none;border-co=
+lor:transparent;border-top:0.5px solid #707070;margin:0 0 36px 0"><p style=
+=3D"font-size:18px;line-height:27px;font-family:Actief Grotesque Rg,Helveti=
+ca,Arial,sans-serif;font-weight:700;text-align:left;color:#161616;margin:16=
+px 4px 8px 4px;margin-top:16px;margin-right:4px;margin-bottom:8px;margin-le=
+ft:4px">Lien de t=C3=A9l=C3=A9chargement</p><table align=3D"center" width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td style=3D"wor=
+d-break:break-all"><p style=3D"font-size:16px;line-height:24px;font-family:=
+Actief Grotesque Rg,Helvetica,Arial,sans-serif;font-weight:400;text-align:l=
+eft;color:#161616;margin:0 4px 16px 4px;word-break:break-all;margin-top:0;m=
+argin-right:4px;margin-bottom:16px;margin-left:4px"><a href=3D"https://wetr=
+ansfer.com/downloads/935c7515441a71568b3f6b554d88a48220260611141207/fdc364d=
+fd327267dbbf05f21c4d73c9820260611141229/9f089f?utm_source=3Dwt_sendgrid&amp=
+;utm_medium=3Demail&amp;utm_campaign=3DTRN_DL_WTP_01&amp;trk=3DTRN_DL_WTP_0=
+1" style=3D"color:#3767ea;text-decoration-line:none;text-decoration:underli=
+ne;word-break:break-all" target=3D"_blank">https://wetransfer.com/downloads=
+/935c7515441a71568b3f6b554d88a48220260611141207/fdc364dfd327267dbbf05f21c4d=
+73c9820260611141229/9f089f</a></p></td></tr></tbody></table><p style=3D"fon=
+t-size:18px;line-height:27px;font-family:Actief Grotesque Rg,Helvetica,Aria=
+l,sans-serif;font-weight:700;text-align:left;color:#161616;margin:16px 4px =
+8px 4px;margin-top:16px;margin-right:4px;margin-bottom:8px;margin-left:4px"=
+>1 =C3=A9l=C3=A9ment</p><table align=3D"center" width=3D"100%" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"margin-=
+bottom:24px"><tbody><tr><td><div style=3D"margin-bottom:12px"><table align=
+=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"margin:0"><tbody><tr><td><table align=3D"ce=
+nter" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td =
+colspan=3D"2" style=3D"padding:0 4px"><p style=3D"font-size:14px;line-heigh=
+t:24px;font-family:Actief Grotesque Rg,Helvetica,Arial,sans-serif;font-weig=
+ht:400;text-align:left;color:#161616;margin:0;margin-top:0;margin-bottom:0;=
+margin-left:0;margin-right:0">Dossier sollies pont</p></td></tr></tbody></t=
+able><table align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation"><tbody style=3D"width:100%"><tr sty=
+le=3D"width:100%"><td width=3D"18" style=3D"width:18px;padding-left:4px;ver=
+tical-align:middle"><img alt=3D"" height=3D"10" src=3D"https://email.wetran=
+sfer.net/emails/folder-icon-for-email@2x.png" style=3D"display:block;outlin=
+e:none;border:none;text-decoration:none" width=3D"12"></td><td style=3D"ver=
+tical-align:middle;padding-right:4px"><p style=3D"font-size:12px;line-heigh=
+t:16px;font-family:Actief Grotesque Rg,Helvetica,Arial,sans-serif;font-weig=
+ht:400;text-align:left;color:#707070;margin:0;margin-top:0;margin-bottom:0;=
+margin-left:0;margin-right:0">Dossier =E2=80=A2 9 =C3=A9l=C3=A9ments</p></t=
+d></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></=
+table><table align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"max-width:400px"><tbody><=
+tr style=3D"width:100%"><td><table align=3D"center" width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"><tbody sty=
+le=3D"width:100%"><tr style=3D"width:100%"><td style=3D"padding-top:24px;pa=
+dding-bottom:24px"><table align=3D"center" width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border:1px s=
+olid #ecf2ff;border-radius:16px"><tbody><tr><td><table align=3D"center" wid=
+th=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td style=3D"v=
+ertical-align:middle;width:60%;padding:16px 0 16px 12px"><p style=3D"font-s=
+ize:12px;line-height:16px;font-family:Actief Grotesque Rg,Helvetica,Arial,s=
+ans-serif;font-weight:400;text-align:left;color:#707070;margin:0;margin-top=
+:0;margin-bottom:0;margin-left:0;margin-right:0">Partager votre contenu sur=
+ WeTransfer?</p><p style=3D"font-size:14px;line-height:24px;font-family:Act=
+ief Grotesque Rg,Helvetica,Arial,sans-serif;font-weight:500;text-align:left=
+;color:#161616;margin:0;margin-top:0;margin-bottom:0;margin-left:0;margin-r=
+ight:0">Vous gardez toujours le contr=C3=B4le.</p></td><td style=3D"vertica=
+l-align:middle;width:40%;text-align:center;padding:16px 12px 16px 0"><a hre=
+f=3D"https://wetransfer.com/en-US/explore/legal/principles-of-content-prote=
+ction?utm_source=3Dwt_sendgrid&amp;utm_medium=3Demail&amp;utm_campaign=3Dno=
+tify_recipient_email_content_protection&amp;trk=3Dnotify_recipient_email_co=
+ntent_protection" style=3D"color:#3767ea;text-decoration-line:none;text-dec=
+oration:none;font-family:Actief Grotesque Rg,Helvetica,Arial,sans-serif;fon=
+t-size:12px;font-style:normal;font-weight:500;line-height:120%;font-feature=
+-settings:&quot;salt&quot; on;margin:0" target=3D"_blank">Consultez nos Pri=
+ncipes de protection du contenu</a></td></tr></tbody></table></td></tr></tb=
+ody></table></td></tr></tbody></table></td></tr></tbody></table><table alig=
+n=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"max-width:400px"><tbody><tr style=3D"width=
+:100%"><td><hr style=3D"width:100%;border:none;border-color:transparent;bor=
+der-top:0.5px solid #707070;margin:0 0 36px 0"><table align=3D"center" widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"present=
+ation" style=3D"padding:0 16px"><tbody><tr><td><table align=3D"center" widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"present=
+ation"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td style=3D"te=
+xt-align:left;padding-right:8px"><p style=3D"font-size:14px;line-height:24p=
+x;font-family:Actief Grotesque Rg,Helvetica,Arial,sans-serif;font-weight:40=
+0;text-align:center;color:#707070;margin:0;margin-top:0;margin-bottom:0;mar=
+gin-left:0;margin-right:0"><a href=3D"https://wetransfer.com/help-center?ut=
+m_source=3Dwt_sendgrid&amp;utm_medium=3Demail&amp;utm_campaign=3DTRN_DL_WTP=
+_01&amp;trk=3DTRN_DL_WTP_01" style=3D"color:#707070;text-decoration-line:no=
+ne;text-decoration:underline" target=3D"_blank">Aide</a></p></td><td style=
+=3D"text-align:center;padding:0 8px"><p style=3D"font-size:14px;line-height=
+:24px;font-family:Actief Grotesque Rg,Helvetica,Arial,sans-serif;font-weigh=
+t:400;text-align:center;color:#707070;margin:0;margin-top:0;margin-bottom:0=
+;margin-left:0;margin-right:0"><a href=3D"https://about.wetransfer.com/?utm=
+_source=3Dwt_sendgrid&amp;utm_medium=3Demail&amp;utm_campaign=3DTRN_DL_WTP_=
+01&amp;trk=3DTRN_DL_WTP_01" style=3D"color:#707070;text-decoration-line:non=
+e;text-decoration:underline" target=3D"_blank">=C3=80 propos de nous</a></p=
+></td><td style=3D"text-align:right;padding-left:8px"><p style=3D"font-size=
+:14px;line-height:24px;font-family:Actief Grotesque Rg,Helvetica,Arial,sans=
+-serif;font-weight:400;text-align:center;color:#707070;margin:0;margin-top:=
+0;margin-bottom:0;margin-left:0;margin-right:0"><a href=3D"https://wetransf=
+er.com/explore/legal/terms?utm_source=3Dwt_sendgrid&amp;utm_medium=3Demail&=
+amp;utm_campaign=3DTRN_DL_WTP_01&amp;trk=3DTRN_DL_WTP_01" style=3D"color:#7=
+07070;text-decoration-line:none;text-decoration:underline" target=3D"_blank=
+">Mentions l=C3=A9gales</a></p></td></tr></tbody></table></td></tr></tbody>=
+</table><p style=3D"font-size:14px;line-height:18px;font-family:Actief Grot=
+esque Rg,Helvetica,Arial,sans-serif;font-weight:400;text-align:center;color=
+:#707070;margin:32px 0 32px 0;margin-top:32px;margin-right:0;margin-bottom:=
+32px;margin-left:0">Pour vous assurer que nos e-mails arrivent, ajoutez <a =
+href=3D"mailto:noreply@wetransfer.com" style=3D"color:#707070;text-decorati=
+on-line:none;text-decoration:underline" target=3D"_blank">noreply@wetransfe=
+r.com</a> =C3=A0 <a href=3D"https://wetransfer.com/help-center/troubleshoot=
+ing/not-receiving-emails?utm_source=3Dwt_sendgrid&amp;utm_medium=3Demail&am=
+p;utm_campaign=3DTRN_DL_WTP_01&amp;trk=3DTRN_DL_WTP_01" style=3D"color:#707=
+070;text-decoration-line:none;text-decoration:underline" target=3D"_blank">=
+vos contacts</a>.</p><p style=3D"font-size:14px;line-height:18px;font-famil=
+y:Actief Grotesque Rg,Helvetica,Arial,sans-serif;font-weight:400;text-align=
+:center;color:#707070;margin:0 0 32px 0;margin-top:0;margin-right:0;margin-=
+bottom:32px;margin-left:0">Vous souhaitez recevoir moins d&#39;e-mails comm=
+e celui-ci ? <a href=3D"https://wetransfer.com/account/notification-setting=
+s" style=3D"color:#707070;text-decoration-line:none;text-decoration:underli=
+ne" target=3D"_blank">Mettez =C3=A0 jour vos param=C3=A8tres de notificatio=
+n ici</a>.</p><p style=3D"font-size:14px;line-height:18px;font-family:Actie=
+f Grotesque Rg,Helvetica,Arial,sans-serif;font-weight:400;text-align:center=
+;color:#707070;margin:0 0 32px 0;margin-top:0;margin-right:0;margin-bottom:=
+32px;margin-left:0"><a href=3D"https://moderation.wetransfer.com/user-repor=
+ts/?content.content_id=3D935c7515441a71568b3f6b554d88a48220260611141207&amp=
+;content.customerSpecific.contentType=3Dtransfer" style=3D"color:#707070;te=
+xt-decoration-line:none;text-decoration:underline" target=3D"_blank">Signal=
+er ce transfert</a></p><table align=3D"center" width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"><tbody><tr><td><t=
+able align=3D"center" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" role=3D"presentation"><tbody style=3D"width:100%"><tr style=3D"w=
+idth:100%"><td style=3D"padding:0 16px 16px 16px"><p style=3D"font-size:8px=
+;line-height:12px;font-family:Actief Grotesque Rg,Helvetica,Arial,sans-seri=
+f;font-weight:400;text-align:center;color:#707070;margin:0px;margin-top:0px=
+;margin-bottom:0px;margin-left:0px;margin-right:0px">Wetransfer B.V. - <a h=
+ref=3D"https://www.google.com/maps/search/Nieuwezijds+Voorburgwal+162,+1012=
++SJ+Amsterdam,+The+Netherlands?entry=3Dgmail&amp;source=3Dg">Nieuwezijds Vo=
+orburgwal 162, 1012 SJ Amsterdam, The Netherlands</a></p><p style=3D"font-s=
+ize:8px;line-height:12px;font-family:Actief Grotesque Rg,Helvetica,Arial,sa=
+ns-serif;font-weight:400;text-align:center;color:#707070;margin:0px;margin-=
+top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px">Registered No. =
+34380998 | VAT IT14314670960</p></td></tr></tbody></table></td></tr></tbody=
+></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tb=
+ody></table></td></tr></tbody></table><img src=3D"https://u922094.ct.sendgr=
+id.net/wf/open?upn=3Du001.c0o6-2F9BEY7wLPUk3-2BjWV9JGh6HQ4KxLPm0s4h4goTmOEn=
+YSF5exfcQBfkRaSviwA0rhfPVwHnBmJx5Vqql8ih-2FoOIfwtpwMvJ3X5U0FztMyO8B-2BBLugl=
+WlrYKTnEwHi-2F3cGBN-2BvcD-2Bd3yCuiohLtTLjWMhxbAtGAzHvH1-2FSZkBMmVA5yZ-2BHnu=
+zGj9jcsZOWaUJ3UmInFnwtoYvcwOAix5gwUeEQCtIhoLNqNQqDGrQoQTFsefh5JDzo0cHmxhmrV=
+W-2B4V2BViB3zoAm83w25lXHyj0v7S4ByA74UIbDla-2BNoyDxx8KxuuIL3wH-2BHlNLRVp20v9=
+B8a13SI6XA7jLscrfviX2oaq20AP4VjglBSVp0-3D" alt=3D"" width=3D"1" height=3D"1=
+" border=3D"0" style=3D"height:1px!important;width:1px!important;border-wid=
+th:0!important;margin-top:0!important;margin-bottom:0!important;margin-righ=
+t:0!important;margin-left:0!important;padding-top:0!important;padding-botto=
+m:0!important;padding-right:0!important;padding-left:0!important"></div></d=
+iv>
+
+--000000000000b80bb30653faff49--

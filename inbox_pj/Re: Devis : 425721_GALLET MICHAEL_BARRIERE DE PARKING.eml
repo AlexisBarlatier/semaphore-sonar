@@ -1,0 +1,184 @@
+Delivered-To: a.barlatier@gmail.com
+Received: by 2002:a05:7030:2816:b0:10a:a6cb:d28e with SMTP id q22csp7955497lab;
+        Thu, 27 Aug 2026 04:43:36 -0700 (PDT)
+X-Forwarded-Encrypted: i=3; AHgh+RolQkt0q6fH3DCG/jW556MMPXzumAhhHXULB63KEyb2CK09KeHHAvGaUIETyUML72/isbAKCTVHyvvRcA==@gmail.com
+X-Received: by 2002:a05:690e:4850:b0:66d:1d24:667 with SMTP id 956f58d0204a3-66d2550ddb9mr4480113d50.0.1787831016353;
+        Thu, 27 Aug 2026 04:43:36 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1787831016; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=RbZ2vUF6IW88WlSUuI5C27TcTytrq3slCqmQuvY/vS/SsezblTda7+InZFj9gV3v2u
+         DjxUCFfFpTSx++Gc8T104cWirryKLgI+bW3ptWhHtI5DG7XvFhYP4P1V9nTPKdzd5o3Z
+         20nZHG/3t3NDsYj+5om/vNh+vqTEcx/tcPyTawOQoRug0mdigkUESsj8cYc2M2e5stIM
+         YO0nelgp98DUekyM5asIzhduhcowxrcD9QNvQfgJ51UsPpsHlzZj57d2rLU4YsozS4Lv
+         8+SjjDVFTP+02HCw2Kbhh1XW+5IXI06Rba9/LiRJDN1KS9yFUmbrnKV/aZkJe7IWwcWa
+         7k4g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=D5fhFYzOFw4IyjG0x8ZLWU0+l5sadSaEoZ6MWB92tQA=;
+        fh=Xmk4oyJgaJSRUbYY36si1GHRiLZrf7FOtmT1tj3+70M=;
+        b=DzWtgpvHKo+oPTqcVWNoW4SjAdFyN5ZgzdCVlw8ZBWBXvIZSWked5jHw53MK/B7iRm
+         z9zWFSHxXM2jAYDzgFUlNwwjEiJ6+4fR9gpkVtZ9mMFA3GIK39Ed7DMQSOHgt6wlClu+
+         id7iij7j50oJ1y+34+BqqXulUrUR+DVUR3bW+yT7I8c5aOnVXSgIdqrvMYlCPNdbCQt0
+         hQaC/gkDI1oBQFahWLwk0gGCtmrvAqMN+ZIt+uLt9OQGySybwvV+PXd9DdM2L8e+QR/3
+         exGDV7SWrK77gVjSQGiV7aF57MwS+OArq3GC+ePOProSBVftAKPzQXhwK0U8w74flik+
+         GmiA==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b="mKdOT/lv";
+       arc=pass (i=1);
+       spf=pass (google.com: domain of sarl.spbi@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sarl.spbi@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <sarl.spbi@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 956f58d0204a3-66d2479b50fsor4228220d50.9.2026.08.27.04.43.36
+        for <a.barlatier@gmail.com>
+        (Google Transport Security);
+        Thu, 27 Aug 2026 04:43:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sarl.spbi@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b="mKdOT/lv";
+       arc=pass (i=1);
+       spf=pass (google.com: domain of sarl.spbi@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sarl.spbi@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1787831016; cv=none;
+        d=google.com; s=arc-20260327;
+        b=SFAxLJCjKShtaEwpM6AHMiKQwYCqQPACW7p5W4hj8fuFbOdhxQbkVLgnQ90mspnCy1
+         P5RxeV4x3RxuOntzv3j4/SrM+6qdgodV7dAoe9xOu0d94f+/75ezzWH50+Kie+4gQjEr
+         o0J5sQ5AXZsgwvd6PHRcT2D77Ffz5wcjeyrFV72rDTgEFNkEUMFrzgVC6D20WrvWmAa+
+         o77VHMS7HjtUBSfiDzscNhmGpGGjez5hQyuq7O4vEwC4AjjCMmBMB4e5Dpcwwc7JbVI/
+         Y2t8a/Q4JqaZ1RKsVK2TpkMO2K6MsbVmkeWRIzFfEm9rLnPD4s1eJYTs3Ui84e/bemZC
+         LdRA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=D5fhFYzOFw4IyjG0x8ZLWU0+l5sadSaEoZ6MWB92tQA=;
+        fh=Xmk4oyJgaJSRUbYY36si1GHRiLZrf7FOtmT1tj3+70M=;
+        b=XwHGIJIsO3v0R0INCbQSNkgrv6wXAlqaKGRMhmie5LG6nIroErTKDABYGg2WIgpaWm
+         4oXWTACd7q7iZqMeS1Gvu5xtgcA9ghguWzetth51T3GrG8KL2Xx4NMjgg1A48zxGd+TD
+         awxyr5kPn+d8vR6g8kGFpS0KG+aV6NiStOo6wQQ5r2ptrXrRbubEdMmnNT85yXipKlcV
+         qGnaADSNrLOHzatIDZFH3Q4m0qNLHb6TpkmyQ2GYqQkrjjfH3U3VRxEzhRMdJQtuX0D9
+         T6OokQmWgQ/psstRasxBM9frbA0UctUlODrNGIr8u/nYcPUoWPXNBt4XeA7r4c0AehEg
+         YWMw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1787831016; x=1788435816; dara=google.com;
+        h=content-type:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=D5fhFYzOFw4IyjG0x8ZLWU0+l5sadSaEoZ6MWB92tQA=;
+        b=mKdOT/lvf82Z1Ymr+aBtFKPVklh8S5yJi9z8+XACoAj4q3DOkbQwn5DHBhYyAjXu2a
+         8jZOqJQiqH+azFCeMEZ7+C4mcq5tpqpL2ibkoOBRGAQQ98O0dPIwISevLfA0QFXUFxgX
+         XHygmp6yqZWNDKC01wdtYWJQF38j/B+v0sXWm0o3qD46yBsFLobbUliUb6HsDZwHGHC0
+         3WPhayHkiTlSeBzLED9b/aClZvuvV84XBni9oDVsZCpyVTmVOEP4O3Fe4Lr2yWWgQmxE
+         qd5zAN0Mqjy5d+uxCS7NgctZMB9xpU7+i0JqQZ/A79Mm1UF+UF1Ma6smoqqZ+hF20xC2
+         nkXQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1787831016; x=1788435816;
+        h=content-type:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to:content-type;
+        bh=D5fhFYzOFw4IyjG0x8ZLWU0+l5sadSaEoZ6MWB92tQA=;
+        b=DRexTV0yOHmnRKT7Py05GhrPu4+4KIW5qezEi+dS+c78u0YTJm5FH6YsIDfkdYCn3n
+         zOH5vELyKZ8BDjrvSnzJN9Tt7rqh0loJeLSjnLYDBgLRxEmXNXSrWmIu/jaehvbnF/hz
+         Yda82IdFnmGxfbk57M5eHtkNTlp56h84Z7Ii4mnBh8nGGkRGJBY4SrseoMErNDJZtHjR
+         su3xkvrWxUE8OanZcV3rM77UPSlcpYWBd4qLDLEfDGsb1J5HHCot7Ly2PFNp3Yxr/5Qf
+         rQXM9pP0FYDfZPXPsqEatxyn5BUvrLRNcZ+99Q6fU0F2C+l6WI7q1B9Vc2oLNg/0ATGh
+         NkqQ==
+X-Forwarded-Encrypted: i=1; AHgh+RpMJq8XsaUB0Q0qQosSiUGk6ZZQOWVTn6pBQof7ihWh6yr8Px8p6mxcZCk7DEir7uOMw18Mefpn0EMxTg==@gmail.com
+X-Gm-Message-State: AFuF++kLg/88wbS74ipwdN7FlA2mqvTqWAXAfkPbWJmPweiM267kvio/
+	3do5o/VIe+MVSO8HtnoIJ9EQBmOC9Ne3yh7p8e7wj+ynWws+Xi9KT8OYTcIv+CbFB16EN0Qj/bJ
+	W8BpxbeAriNL8k1v29zlCMtRA0tHJAnKfsA==
+X-Gm-Gg: AR+sD104A4bH5OOo6SxtJvxXHmLf93Fh+X62yhJAEFU8qaLCaiPVNULbJlYokhrpAlQ
+	Idnkcdsj8/B+uBY0NJX0UH3yNh1ek7PoRGuitSJEqRH+Rb7TFktX1T8sL7xb1HFVeGhp6az7tku
+	XbRyF1+yoP2ZKTm0f6Hzlx9ftPHG5sIzCu9P3zXKYSMHCEHH5DGUjYUd7oAP2N9eCktCXry6WOk
+	6nACl791+s4oQ8GLwwIgCvYdDqcqpA1IiN6QRR5rIUPVBp3ouJD/8whFajPOoFgpHrLGqBsC/HH
+	G3HiZdRLVtL3YtTIS3ID/feHsfQ/keC4b0C2zpwJfXwfAeLnZAGokJozUQzMudBPjuJf0/3nFHN
+	2EslgxkHcMTTg
+X-Received: by 2002:a53:b453:0:b0:66c:e845:c0d9 with SMTP id
+ 956f58d0204a3-66d257afccdmr4482825d50.34.1787831015792; Thu, 27 Aug 2026
+ 04:43:35 -0700 (PDT)
+MIME-Version: 1.0
+References: <20260827-08503456-1340@DC-GCS-04>
+In-Reply-To: <20260827-08503456-1340@DC-GCS-04>
+From: Barlatier remy <sarl.spbi@gmail.com>
+Date: Thu, 27 Aug 2026 13:43:25 +0200
+X-Gm-Features: AcwNN1XzFnYV_rDBXSkZ73pJ05lY3GFTZw5R0xwyjRGJ4mQ8Nt4BCbk-ntXGDoU
+Message-ID: <CAJ0+Tu+bezn396KWotFMdQ12NoP=ZydeHcz3BezFOX41NZYvZw@mail.gmail.com>
+Subject: Re: Devis : 425721/GALLET MICHAEL/BARRIERE DE PARKING
+To: mgallet@prolians.eu, Alexis BARLATIER <a.barlatier@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000009d6509065a05d838"
+
+--0000000000009d6509065a05d838
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Coucou Mika, c=E2=80=99est OK pour nous
+
+Merci de mettre la facture au nom suivant
+
+SCI Semaphore Patrimoine
+296 Rue Amedeo Modigliani
+83390 Cuers
+
+
+Tr=C3=A8s bon apr=C3=A8s-midi =C3=A0 toi
+
+Bises
+
+Remy
+
+Le jeu. 27 ao=C3=BBt 2026 =C3=A0 08:55, DESCOURS&CABAUD PACA - MICHAEL GALL=
+ET <
+mgallet@prolians.eu> a =C3=A9crit :
+
+> Bonjour,
+>
+> Suite =C3=A0 votre demande, je vous prie de trouver ci-joint notre Devis.
+>
+> Je vous en souhaite bonne r=C3=A9ception, et reste =C3=A0 votre dispositi=
+on pour
+> tout compl=C3=A9ment d'information.
+>
+> Cordialement,
+>
+> GALLET MICHAEL
+>
+>
+>
+
+--0000000000009d6509065a05d838
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div>Coucou Mika, c=E2=80=99est OK pour nous</div><div dir=3D"auto"><br></d=
+iv><div dir=3D"auto">Merci de mettre la facture au nom suivant</div><div di=
+r=3D"auto"><br></div><div dir=3D"auto">SCI Semaphore Patrimoine=C2=A0</div>=
+<div dir=3D"auto">296 Rue Amedeo Modigliani=C2=A0</div><div dir=3D"auto">83=
+390 Cuers</div><div dir=3D"auto"><br></div><div dir=3D"auto"><br></div><div=
+ dir=3D"auto">Tr=C3=A8s bon apr=C3=A8s-midi =C3=A0 toi</div><div dir=3D"aut=
+o"><br></div><div dir=3D"auto">Bises</div><div dir=3D"auto"><br></div><div =
+dir=3D"auto">Remy</div><div><br><div class=3D"gmail_quote gmail_quote_conta=
+iner"><div dir=3D"ltr" class=3D"gmail_attr">Le=C2=A0jeu. 27 ao=C3=BBt 2026 =
+=C3=A0 08:55, DESCOURS&amp;CABAUD PACA - MICHAEL GALLET &lt;<a href=3D"mail=
+to:mgallet@prolians.eu">mgallet@prolians.eu</a>&gt; a =C3=A9crit=C2=A0:<br>=
+</div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-l=
+eft:1px #ccc solid;padding-left:1ex">Bonjour,<br>
+<br>
+Suite =C3=A0 votre demande, je vous prie de trouver ci-joint notre Devis.<b=
+r>
+<br>
+Je vous en souhaite bonne r=C3=A9ception, et reste =C3=A0 votre disposition=
+ pour tout compl=C3=A9ment d&#39;information.<br>
+<br>
+Cordialement,<br>
+<br>
+GALLET MICHAEL<br>
+<br>
+<br>
+</blockquote></div></div>
+
+--0000000000009d6509065a05d838--

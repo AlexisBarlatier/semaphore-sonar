@@ -1,0 +1,275 @@
+Delivered-To: a.barlatier@gmail.com
+Received: by 2002:a05:6022:411a:b0:106:2461:1017 with SMTP id d26csp2428261laa;
+        Sat, 20 Jun 2026 03:40:47 -0700 (PDT)
+X-Received: by 2002:a05:600c:3549:b0:490:e5c1:b8bf with SMTP id 5b1f17b1804b1-4923f33bf18mr115883815e9.13.1781952047618;
+        Sat, 20 Jun 2026 03:40:47 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1781952047; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=ZD7xqUhYy/S9OJppUvwp+NfG/yW/ZS8RR/5NOQ2kFpBy1RTOF8qy6TvNo8A65v/an1
+         n/OIgpGsFjvueeuorHDwF4De0jBh7cIce+LrtwT22iCUQJsy8Jn6pOfMFtw3sCK+YtIC
+         Y8AVCwqLgKEl2IoTE/omzdrdK9TYrTnQEQDN3ZV6OCxqNyY32j4kbIx1Uk1O6Y1S1H/n
+         KRq9L7AWW4aAJJeFuNoS7jE685iMHtCWBhw10gJiWqV6u7+j6fVTuM9sD648D0ToBJsZ
+         BfhWdxzwd//34+n1LLC9Q+3Q3WYVxTbejMiGYeYVLBxObNlUjPiPst/ddJuBOp1tEEfo
+         bBPw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=ZhmodaZesbYZWXEktf1UlCopw0cHIORBIewmyKU7Bco=;
+        fh=HSjmB99/B3zmJhkTKal44EPI86HiloPA4RgIXXjBjrY=;
+        b=REfHkOSyIvon0GKq61ObRV9UOP/5/5ast52N3HpNFpW1mHCNyqvGi85vvOuuDLnh+n
+         IJndDDB5VcMVjkoHiykX4mDO2cSwLQQ/RPIVRH4G2h/HBbWTTXWpZ4LabJ6WrRhe/HxG
+         uSK6aNhh5pvJ9XoBjwoyzqkH3gyqfp6idGevXZ7ypJtrvqgSxKTniL/g1mYOUxTl/LyC
+         MQhaky1znhlynLqz1jqaW6pPJY/YwnP/l/9uw2IYrRi5M6F0OPcUMh8xBTDU8BRrY3bd
+         VBHSye2JS3+i8dA1piEAzbeQrcZbj3xLltAbjFrtVrPFOwJvTYJfW1CusYkoyP9ABzcM
+         9g2A==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@iadfrance.fr header.s=google header.b=KEHnCTby;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of camille.calegari@iadfrance.fr designates 209.85.220.41 as permitted sender) smtp.mailfrom=camille.calegari@iadfrance.fr;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iadfrance.fr;
+       dara=pass header.i=@gmail.com
+Return-Path: <camille.calegari@iadfrance.fr>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 5b1f17b1804b1-4924923d82esor2089005e9.8.2026.06.20.03.40.47
+        for <a.barlatier@gmail.com>
+        (Google Transport Security);
+        Sat, 20 Jun 2026 03:40:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of camille.calegari@iadfrance.fr designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@iadfrance.fr header.s=google header.b=KEHnCTby;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of camille.calegari@iadfrance.fr designates 209.85.220.41 as permitted sender) smtp.mailfrom=camille.calegari@iadfrance.fr;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iadfrance.fr;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1781952047; cv=none;
+        d=google.com; s=arc-20240605;
+        b=BbEXRJh3sSidhX+WM6W/cZmrHsjT5pgvc2OL+pEG2CJALgWgCIf4cyan8rePsmTSQF
+         HYDlysgXtyBPH/23oWU0oVstMkJM2XbPw4ePnFpcl4KVzYzoHAwLPBuVUYICvCOMOhZ+
+         58rbSZSA2sFY+ykcmhhkmKxatCogUzlXVxMKpcagiA0eEoyzEfbZzioep1pyZJWPgf9L
+         M4eRzxlwwEXVlbVu3UFXcxnbfPyExKWIL8P1QBNOX3569UKF+CY21IhKcJGCLoBO0aKv
+         JJhNIck4L2E1BiTV9plyr5Z5t06s7c3ztT7EBEGGzGTLn+Rhx50Y9eEfBvSJ1dSTgJLx
+         yzzQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=ZhmodaZesbYZWXEktf1UlCopw0cHIORBIewmyKU7Bco=;
+        fh=HSjmB99/B3zmJhkTKal44EPI86HiloPA4RgIXXjBjrY=;
+        b=S2qxjCq42BO+hEDqqhH5AXCvgUpAvmZBUARwX7lGOkdpu7n5/qR4ACncY5vhKROafK
+         RHozpOQk8LbCCB7hkey/sp4hIRcFTiRMUXXJNYh/RfDzwsyR//VPOMO8c5Zr1Fc783nh
+         ba5staRaHCSxgEhWGt4p4zRb7X4TjVAQN90I4XhdbaA6IMLnkntKsAKTvU7gvXhZpqs8
+         /PKJ+syNXNLoiSE9ZU4HOFjScAA7qmRDvuayXL2htwkwr2Db/ByAsRHAHRtlQfOpclWe
+         t3gdmaH63GJ6HCUqj/oqCECDNgYDx/D8rMPSrOjfAyzzHM56dUQi3fcrJLQWx9eBa6a5
+         TwQQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=iadfrance.fr; s=google; t=1781952047; x=1782556847; dara=google.com;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=ZhmodaZesbYZWXEktf1UlCopw0cHIORBIewmyKU7Bco=;
+        b=KEHnCTby88t/vqR6SlYTdUh2LtQKj+3+fwgnoBDadOwfeCqGXWtsKfK9dWspPK/OVB
+         xewwGiNZ/4vuJ67OOzLTrJUOVwCujsJCKDVw+KoYAIUZpr2hnw/RKI/Q2sYzpiRt0WRH
+         0k7VlOibmwQIFhuJLPMXvoOJ6epsAd36JFMx05mE0hvp+fU+XXyxXwXho1jOwYVdABAr
+         Ya3WmQvDcxnSNKCyTilnosVe7+jaDLwroiBNFe66+YNIojg97NNoEaW9EOLg7nPJu/gE
+         L4Aw2X+PMqqh+ibn1PvsjK6FOPYAx41PgYn3E9l9etJpLxpM7tRdgcq4CyluHVx45E0I
+         obIA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1781952047; x=1782556847;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=ZhmodaZesbYZWXEktf1UlCopw0cHIORBIewmyKU7Bco=;
+        b=DLZCzms7IIYOs4IxBMXXGZ6SBvBzXOEJfXgnCWAnxItgSg7ynrxGpamEjH4jnm15/p
+         6ZxxU79Qwg1Xkol0bUJBoGgFAjmavJjs6uDu7u87KYFIiLz4zWpyyp/j4kH/Z3PUTyUA
+         CEH4acU80HqcYW6ht+3ZoZYuKDzflNI5hmdtQoBfOuuGBBwxrSIxnt7mTgqdscumwv7q
+         VOZoGbsX+qrEyEkurTLP/MsXfVlKBROf/mMoe/PAWSUR6+PkIY6CsZYMG4zdmE/lmm37
+         G1qx5xv0wjkzGqnwp6owxcY8vWSZ+XhsfhXgZZC42D42MVe1v8v4ItCpg9sce3LN6oDK
+         l0Pw==
+X-Gm-Message-State: AOJu0Yx3nx3HyVMkwGcQ2ahiToDC+TMHTrbPPkvN12UlR4FQa4+PeLwT
+	FaiIrcfosKFuHiwtXpkC2wFRhkNrBJZO6biWolK3ohw4cOwd7Vo7hgvdbE/um75AsDutR8x4ZUg
+	MED9Z8qf78WUHo0bA9L4sDXvAva36Th34OKMoBTGQr1l3+bl3DTWs
+X-Gm-Gg: AfdE7clVETylb0M+BDz0MnZ8As1EclXNJg64UXv7cvNl3JwMdjKirorXoy0bcfUGWO6
+	KSP0vFHpAC/Onrum903idtWhB94kuPTUhSpqw7DtgAihP2vpELy5XvBoMvQ+6QqTWGL3ZTt7I96
+	cgSKhLL9Y/k5eMQ/gNi5bO1eu1dnl6lngqCHU+UULOpjiY9JTpZEm4DPjdFZJ4hGK/yzBB2LPJM
+	4hZEWA5FXMCu7XuS31slkPNJcUSFVaaQwS9svPeZhfESugOzkXqOMUrLkZmFW5gehbsNU6Xqzwj
+	b5sXORmOcNWQvHdjPlrTyVeecNXDheHV/CoXOWFqkTNxPJ/Mhk38gGeVM1uR
+X-Received: by 2002:a05:600c:c4a3:b0:492:4c2e:9610 with SMTP id
+ 5b1f17b1804b1-4924c2e96c7mr21575595e9.11.1781952046055; Sat, 20 Jun 2026
+ 03:40:46 -0700 (PDT)
+MIME-Version: 1.0
+References: <CA+S0AD0Jg0RfAs3KqQAxSarjx5_uyhorb2+LvFDzbcnqVkrFzQ@mail.gmail.com>
+ <CAJ0+Tu+Qrt45Gwc+LsefMWVYbOr=h8zhB=dbpGrXiWTrhYBkZA@mail.gmail.com>
+In-Reply-To: <CAJ0+Tu+Qrt45Gwc+LsefMWVYbOr=h8zhB=dbpGrXiWTrhYBkZA@mail.gmail.com>
+From: Camille Calegari <camille.calegari@iadfrance.fr>
+Date: Sat, 20 Jun 2026 12:40:34 +0200
+X-Gm-Features: AVVi8CdMZ4E1G1P7NZ8luJiAD-IVa-xCVo0SuzmD508fwlVp1w6kYC7lTbtzLp8
+Message-ID: <CA+S0AD0JJQVS+K_g5qdYH3gfCuKPTYoQ5m71-Lu7TnceGhoJTA@mail.gmail.com>
+Subject: Re: Sollies Pont
+To: Barlatier remy <sarl.spbi@gmail.com>
+Cc: Alexis BARLATIER <a.barlatier@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000b664f80654ad0a0f"
+
+--000000000000b664f80654ad0a0f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Merci pour votre retour.
+Je reste disponible au besoin
+Belle journ=C3=A9e
+
+
+<https://sign.pm/iad/ca21ac3>
+<https://sign.pm/special/iad/ca21ac3>
+
+
+Le lun. 15 juin 2026 =C3=A0 12:02, Barlatier remy <sarl.spbi@gmail.com> a =
+=C3=A9crit :
+
+> Ch=C3=A8re Madame,
+>
+> Je vous remercie pour la visite du jeudi 11/06/26.
+>
+> Apr=C3=A8s analyse avec mon associ=C3=A9, nous ne suivrons pas ce dossier=
+ pour les
+> raisons suivantes:
+>
+> -Le prix des travaux pour valoriser le duplex se rapprochera de la valeur
+> de biens r=C3=A9nov=C3=A9s =C3=A0 neuf identiques =C3=A0 la vente actuell=
+ement  pour lequel les
+> parties communes et la toiture sont elles-m=C3=AAme r=C3=A9nov=C3=A9es et=
+ r=C3=A9vis=C3=A9es, ce qui
+> n'est pas le cas ici.
+> -en clair, le prix m=C3=AAme tr=C3=A8s bas sans parties communes et toitu=
+re refaite
+> rend le bien plus cher que des biens identiques et donc ne permet pas
+> d'imaginer une marge sur revente dans le futur si nous souhaitons revendr=
+e
+> -De plus, n'=C3=A9tant pas seuls mais en copropri=C3=A9t=C3=A9, rien ne g=
+arantit que les
+> autres propri=C3=A9taires souhaitent engager les travaux sur parties comm=
+unes
+>
+> J'esp=C3=A8re que vous trouverez preneur aupr=C3=A8s des autres personnes
+> int=C3=A9ress=C3=A9es.
+>
+> Si jamais ce n'=C3=A9tait pas le cas et que votre client conc=C3=A8de une=
+ forte
+> baisse, vous pouvez revenir vers moi pour r=C3=A9=C3=A9tudier le dossier
+>
+> Nous vous remercions n=C3=A9anmoins pour votre accueil et restons =C3=A0 =
+votre
+> disposition pour tout dossier (promotion, lotissement, marchand de biens =
+ou
+> investisseur) que vous pourriez avoir dans l'avenir.
+>
+> Cordialement
+>
+> R=C3=A9my BARLATIER
+>
+>
+>
+> Le jeu. 11 juin 2026 =C3=A0 16:11, Camille Calegari <
+> camille.calegari@iadfrance.fr> a =C3=A9crit :
+>
+>> Bonjour,
+>>
+>> Je vous envoie via un Wetransfer un dossier =C3=A0 t=C3=A9l=C3=A9charger=
+ concernant
+>> Solli=C3=A8s pont.
+>> Dans ce dossier vous trouverez les informations sur tous les lots.
+>>
+>> Les lots 2 & 4 est les logements de 40M=C3=A9 et 32M2 vide au prix de 95=
+000=E2=82=AC
+>> Le lot 1 lou=C3=A9 950=E2=82=AC est le triplex au prix de 180000=E2=82=
+=AC
+>> Le lot 3 & 5 lou=C3=A9 415 =E2=82=AC au prix de 80000=E2=82=AC
+>>
+>> Restant disponible pour tout compl=C3=A9ment d'information
+>>
+>> Merci
+>>
+>> <https://sign.pm/iad/ca21ac3>
+>> <https://sign.pm/special/iad/ca21ac3>
+>>
+>
+
+--000000000000b664f80654ad0a0f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Merci pour votre retour.=C2=A0<br clear=3D"all"></div=
+><div>Je reste disponible au besoin=C2=A0</div><div>Belle journ=C3=A9e=C2=
+=A0</div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"=
+gmail_signature"><div dir=3D"ltr"><br style=3D"color:rgb(0,0,0);font-family=
+:sans-serif;font-size:14px"><br style=3D"color:rgb(0,0,0);font-family:sans-=
+serif;font-size:14px"><div style=3D"color:rgb(0,0,0);font-family:sans-serif=
+;font-size:14px;outline:currentcolor;width:450px"><a href=3D"https://sign.p=
+m/iad/ca21ac3" style=3D"text-decoration:none;outline:currentcolor" target=
+=3D"_blank"><img src=3D"https://sign.pm/cdn/mail/715a709dba82ce00968071a07e=
+4fcc0c.png?v=3D1727787330" width=3D"450" border=3D"0" style=3D"border:0px;v=
+ertical-align:middle;max-width:none;width:450px;outline:currentcolor"></a><=
+br><a href=3D"https://sign.pm/special/iad/ca21ac3" style=3D"text-decoration=
+:none;outline:currentcolor" target=3D"_blank"><img src=3D"https://sign.pm/c=
+dn/mail/bann-715a709dba82ce00968071a07e4fcc0c.png?v=3D1727787330" width=3D"=
+450" border=3D"0" style=3D"border:0px;vertical-align:middle;max-width:none;=
+width:450px;outline:currentcolor"></a></div></div></div></div><br></div><br=
+><div class=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr" class=3D=
+"gmail_attr">Le=C2=A0lun. 15 juin 2026 =C3=A0=C2=A012:02, Barlatier remy &l=
+t;<a href=3D"mailto:sarl.spbi@gmail.com">sarl.spbi@gmail.com</a>&gt; a =C3=
+=A9crit=C2=A0:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0=
+px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><=
+div dir=3D"ltr">Ch=C3=A8re Madame,<div><br></div><div>Je vous remercie pour=
+ la visite du jeudi 11/06/26.</div><div><br></div><div>Apr=C3=A8s analyse a=
+vec mon associ=C3=A9, nous ne suivrons pas ce dossier pour les raisons suiv=
+antes:</div><div><br></div><div>-Le prix des travaux pour valoriser=C2=A0le=
+ duplex se rapprochera de la valeur de biens=C2=A0r=C3=A9nov=C3=A9s=C2=A0=
+=C3=A0 neuf identiques =C3=A0 la vente actuellement=C2=A0 pour lequel les p=
+arties communes et la toiture sont elles-m=C3=AAme r=C3=A9nov=C3=A9es et r=
+=C3=A9vis=C3=A9es, ce qui n&#39;est=C2=A0pas le cas ici.</div><div>-en clai=
+r, le prix m=C3=AAme tr=C3=A8s bas sans parties communes et toiture refaite=
+ rend le bien plus cher que des biens identiques et donc ne permet pas d&#3=
+9;imaginer une marge sur revente dans le futur si nous souhaitons revendre<=
+/div><div>-De plus, n&#39;=C3=A9tant pas seuls mais en copropri=C3=A9t=C3=
+=A9, rien ne garantit que les autres propri=C3=A9taires souhaitent engager=
+=C2=A0les travaux sur parties communes</div><div><br></div><div>J&#39;esp=
+=C3=A8re que vous trouverez preneur aupr=C3=A8s des autres personnes int=C3=
+=A9ress=C3=A9es.</div><div><br></div><div>Si jamais ce n&#39;=C3=A9tait pas=
+ le cas et que votre client conc=C3=A8de une forte baisse, vous pouvez reve=
+nir vers moi pour r=C3=A9=C3=A9tudier le dossier=C2=A0</div><div><br></div>=
+<div>Nous vous remercions n=C3=A9anmoins pour votre accueil=C2=A0et restons=
+ =C3=A0 votre disposition pour tout dossier (promotion, lotissement, marcha=
+nd de biens ou investisseur) que vous pourriez avoir=C2=A0dans l&#39;avenir=
+.</div><div><br></div><div>Cordialement</div><div><br></div><div>R=C3=A9my =
+BARLATIER</div><div><br></div><div><br></div></div><br><div class=3D"gmail_=
+quote"><div dir=3D"ltr" class=3D"gmail_attr">Le=C2=A0jeu. 11 juin 2026 =C3=
+=A0=C2=A016:11, Camille Calegari &lt;<a href=3D"mailto:camille.calegari@iad=
+france.fr" target=3D"_blank">camille.calegari@iadfrance.fr</a>&gt; a =C3=A9=
+crit=C2=A0:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px =
+0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div=
+ dir=3D"ltr"><div>Bonjour,=C2=A0</div><div><br></div><div>Je vous envoie vi=
+a un Wetransfer un dossier =C3=A0 t=C3=A9l=C3=A9charger concernant Solli=C3=
+=A8s pont.=C2=A0</div><div>Dans ce dossier vous trouverez les informations =
+sur tous les lots.=C2=A0</div><div><br></div><div>Les lots 2 &amp; 4 est le=
+s logements de 40M=C3=A9 et 32M2 vide au prix de 95000=E2=82=AC=C2=A0</div>=
+<div>Le lot 1 lou=C3=A9 950=E2=82=AC est le triplex au prix de 180000=E2=82=
+=AC</div><div>Le lot 3 &amp; 5 lou=C3=A9 415 =E2=82=AC au prix de 80000=E2=
+=82=AC</div><div><br></div><div>Restant disponible pour tout compl=C3=A9men=
+t d&#39;information</div><div><br></div><div>Merci</div><div><div dir=3D"lt=
+r" class=3D"gmail_signature"><div dir=3D"ltr"><br style=3D"color:rgb(0,0,0)=
+;font-family:sans-serif;font-size:14px"><div style=3D"color:rgb(0,0,0);font=
+-family:sans-serif;font-size:14px;outline:medium;width:450px"><a href=3D"ht=
+tps://sign.pm/iad/ca21ac3" style=3D"text-decoration:none;outline:medium" ta=
+rget=3D"_blank"><img src=3D"https://sign.pm/cdn/mail/715a709dba82ce00968071=
+a07e4fcc0c.png?v=3D1727787330" width=3D"450" border=3D"0" style=3D"border: =
+0px; vertical-align: middle; max-width: none; width: 450px; outline: medium=
+;"></a><br><a href=3D"https://sign.pm/special/iad/ca21ac3" style=3D"text-de=
+coration:none;outline:medium" target=3D"_blank"><img src=3D"https://sign.pm=
+/cdn/mail/bann-715a709dba82ce00968071a07e4fcc0c.png?v=3D1727787330" width=
+=3D"450" border=3D"0" style=3D"border: 0px; vertical-align: middle; max-wid=
+th: none; width: 450px; outline: medium;"></a></div></div></div></div></div=
+>
+</blockquote></div>
+</blockquote></div>
+
+--000000000000b664f80654ad0a0f--

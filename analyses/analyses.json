@@ -3,7 +3,7 @@
   "schema": "analyses-v2-entrees",
   "generated_at": "2026-09-10T00:00:00+00:00",
   "source": "saisie-agent",
-  "count": 56
+  "count": 57
  },
  "analyses": [
   {
@@ -6393,6 +6393,198 @@
       "facteur": "Immeuble de 1940",
       "detail": "Parties communes, toiture et colonnes à examiner. Charges de copropriété faibles (1 173 €/an) mais un immeuble de cet âge peut réserver des appels de fonds. Exiger les trois derniers PV d'AG et le budget prévisionnel.",
       "severite": 2
+     }
+    ]
+   },
+   "champs_manquants": []
+  },
+  {
+   "slug": "2026-09-15-immeuble-rapport-vidauban-centre",
+   "date_analyse": "2026-09-15",
+   "date_maj": null,
+   "titre": "Vidauban — immeuble de rapport 4 lots en centre-ville (local commercial + 3 T2)",
+   "bien": {
+    "type_bien": "immeuble",
+    "sous_type": null,
+    "type_detail": "Immeuble de rapport en R+3, 230 m² annoncés, construit en 1900, entièrement loué. Rez-de-chaussée : local commercial de 47 m² en activité, complété par 3 réserves de 35 m². 1er, 2e et 3e étages : trois T2 de 50 m² d'agencement identique (entrée, cuisine, séjour, 1 chambre, salle d'eau, WC séparé). Dernier niveau : 3 greniers (potentiel de stockage ou valorisation). Annexes : 4 caves, 1 débarras, jardin, parties communes. MONOPROPRIÉTÉ : aucune charge de copropriété. Compteurs électriques indépendants. Emplacement n°1 en plein cœur du centre-ville, à proximité immédiate des commerces et des parkings. Travaux de rafraîchissement à prévoir dans les appartements (annoncés par l'agence), aucune urgence puisque tous les lots sont loués.",
+    "neuf": false,
+    "adresse": {
+     "texte": "Centre-ville de Vidauban (83550) — adresse exacte non communiquée dans l'annonce",
+     "ville": "Vidauban",
+     "code_postal": "83550"
+    },
+    "surfaces": {
+     "texte": "230 m² annoncés, incluant le local commercial (47 m²), ses réserves (35 m²), les trois T2 (150 m²) et les greniers",
+     "carrez_m2": 230.0
+    },
+    "lots": {
+     "count": 4,
+     "surface_par_lot_m2": null,
+     "nature": "1 local commercial de 47 m² (+ 35 m² de réserves) + 3 T2 de 50 m² + 3 greniers + 4 caves + débarras",
+     "lots_distincts": 4
+    },
+    "copro": {
+     "charges_annuelles_euros": 0.0,
+     "charges_source": "Monopropriété : aucune charge de copropriété. Les seules charges sont la taxe foncière, l'assurance, l'entretien et la comptabilité."
+    },
+    "travaux": {
+     "montant_euros": 40000.0,
+     "nature": "Rafraîchissement des trois T2 annoncé par l'agence (peintures, sols, remise en état des salles d'eau et des cuisines). Enveloppe retenue 40 000 € (environ 470 €/m² sur les 150 m² de logements), à engager À LA ROTATION des locataires et non à l'acquisition : les trois appartements sont loués et le local commercial est en activité, il n'y a donc aucune urgence et rien à faire à court terme. Hypothèse haute 90 000 € (1 200 €/m², réseaux refaits) si la visite révèle des réseaux vétustes — l'écart vaut 50 000 € de prix. À ajouter en différé : la rénovation énergétique (DPE D, facture annoncée 3 280 à 4 470 €/an pour l'immeuble)."
+    }
+   },
+   "annonce": {
+    "plateforme": "seloger",
+    "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/vidauban-83550/26UCYRMCT738",
+    "prix_affiche_euros": 288000.0,
+    "prix_retenu_euros": null,
+    "prix_statut": "affiche",
+    "prix_commentaire": "1 252 €/m² sur les 230 m² annoncés (1 462 €/m² sur la seule surface louable de 197 m²). INCOHÉRENCE : le texte de l'annonce annonce une rentabilité de 7,24 % « sur la base d'un prix de 319 000 € HAI », alors que le bien est affiché 288 000 €. À 288 000 €, le rendement brut est de 8,02 %. Le texte n'a pas été mis à jour après une baisse de 31 000 € — indice d'un vendeur déjà en mouvement."
+   },
+   "marche": {
+    "valeur": {
+     "basse_euros": 320000.0,
+     "haute_euros": 360000.0,
+     "retenue_euros": 340000.0,
+     "source": "Deux méthodes convergentes. (1) Capitalisation : loyers en place 23 100 €/an rapportés à un taux de rendement de marché de 6,5 à 7 % pour un immeuble de rapport entièrement loué → 330 000 à 355 000 €. (2) Comparaison : les appartements se traitent à 2 459-2 607 €/m² à Vidauban (Immovrai DVF, Orpi 09/2026), les maisons à 3 500-3 617 €/m² ; les 150 m² de logements valorisés à 2 200 €/m² (décote d'ancien sans travaux) et le local commercial à 1 500 €/m² donnent environ 330 000 €. Valeur retenue 340 000 €, donc LE BIEN EST AFFICHÉ 15 % SOUS SA VALEUR DE MARCHÉ — décote qui paie les travaux de rafraîchissement.",
+     "confiance": "moyenne"
+    },
+    "loyers": [
+     {
+      "lot": "Local commercial 47 m² + 35 m² de réserves",
+      "quantite": 1,
+      "loyer_mensuel_euros": 780.0,
+      "occupe": true,
+      "note": "Bail en activité. 9,5 €/m² sur 82 m², soit le bas de fourchette pour un emplacement n°1 en centre-ville : marge de revalorisation au renouvellement."
+     },
+     {
+      "lot": "T2 de 50 m² (1er étage)",
+      "quantite": 1,
+      "loyer_mensuel_euros": 370.0,
+      "occupe": true,
+      "note": "Bail en place. 7,4 €/m² : le marché de Vidauban est à 11-13 €/m², soit 35 à 40 % au-dessus. Revalorisation possible à la rotation."
+     },
+     {
+      "lot": "T2 de 50 m² (2e étage)",
+      "quantite": 1,
+      "loyer_mensuel_euros": 395.0,
+      "occupe": true,
+      "note": "Bail en place. 7,9 €/m², même constat."
+     },
+     {
+      "lot": "T2 de 50 m² (3e étage)",
+      "quantite": 1,
+      "loyer_mensuel_euros": 380.0,
+      "occupe": true,
+      "note": "Bail en place. 7,6 €/m², même constat."
+     }
+    ],
+    "notes": "Loyers en place 1 925 €/mois hors charges, soit 23 100 €/an et 8,02 % brut sur le prix affiché. POTENTIEL DE REVALORISATION DOCUMENTÉ : les trois T2 se louent 7,4 à 7,9 €/m² quand le marché de Vidauban est à 11-13 €/m² (comparables relevés : T2 49 m² à 683 € soit 14 €/m², T3 63 m² à 814 € soit 12,7 €/m², 60 m² à 580 €). Si les trois T2 passent à 600 € à la rotation, le revenu atteint 2 580 €/mois, soit 30 960 €/an (+34 %). Le local commercial, à 9,5 €/m², dispose aussi d'une marge au renouvellement du bail. RÉSERVE : la revalorisation ne s'obtient qu'à la rotation des locataires — elle n'est pas encaissable le jour de l'acquisition, et le prix d'offre doit donc se caler sur les baux signés, pas sur le potentiel."
+   },
+   "hypotheses": {
+    "vacance_base_pct": 8.0,
+    "vacance_best_pct": 5.0,
+    "vacance_worst_pct": 15.0,
+    "vacance_justification": "Immeuble entièrement loué, 4 baux dont un bail commercial. Base 8 % (au-dessus du défaut résidentiel) pour tenir compte du lot commercial, dont la relocation est plus longue qu'un logement. Worst 15 % : vacance simultanée d'un T2 et du local.",
+    "frais_acquisition_euros": 23040.0,
+    "frais_divers_euros": 0.0,
+    "charges": {
+     "taxe_fonciere_annuelle_euros": 2500.0,
+     "taxe_fonciere_commentaire": "Estimation pour un immeuble de 4 lots dont un local commercial à Vidauban, à confirmer sur l'avis réel. Alerte si > 15 % du brut.",
+     "charges_copro_annuelles_euros": 0.0,
+     "charges_copro_commentaire": "MONOPROPRIÉTÉ : aucune charge de copropriété, aucun syndic, aucune assemblée générale. C'est un avantage structurel du dossier.",
+     "pno_annuelle_euros": 400.0,
+     "pno_commentaire": "Assurance immeuble en monopropriété (logements + local commercial).",
+     "entretien_annuel_euros": 1000.0,
+     "entretien_commentaire": "Entretien courant d'un immeuble de 1900 et des parties communes (jardin, cages d'escalier).",
+     "comptabilite_annuelle_euros": 600.0,
+     "comptabilite_commentaire": "Comptabilité SCI, avec un bail commercial à suivre."
+    }
+   },
+   "analyse": {
+    "branche": "residentiel",
+    "type_operation": "mixte",
+    "strategie_retenue": {
+     "nom": "Conservation en l'état puis revalorisation à la rotation",
+     "code": "ld-nue",
+     "lots": 4
+    },
+    "strategies_explorees": [
+     {
+      "strategie": "Conservation en l'état avec loyers actuels",
+      "lots": 4,
+      "faisabilite": "immédiate",
+      "risque": "faible — mais rendement net 4,8 %"
+     },
+     {
+      "strategie": "Conservation + rafraîchissement à la rotation et revalorisation des T2 à 600 €",
+      "lots": 4,
+      "faisabilite": "étalée sur 3 à 5 ans",
+      "risque": "moyen (calendrier des rotations inconnu)"
+     },
+     {
+      "strategie": "MDB : revente à la découpe des trois T2 après rénovation",
+      "lots": 4,
+      "faisabilite": "bloquée — tous les lots sont loués",
+      "risque": "élevé (baux en cours, pas d'EDD)"
+     }
+    ],
+    "attractivite": [
+     {
+      "dimension": "transports",
+      "score": 6,
+      "justification": "Vidauban dispose d'une gare SNCF (ligne Marseille-Nice), d'un accès autoroutier immédiat (A57) et d'un réseau de bus. Centre-ville tout à pied."
+     },
+     {
+      "dimension": "commerces",
+      "score": 8,
+      "justification": "Emplacement n°1 en plein cœur du centre-ville, à proximité immédiate des commerces et des parkings. C'est l'argument principal du bien pour le lot commercial comme pour les logements."
+     },
+     {
+      "dimension": "ecoles",
+      "score": 7,
+      "justification": "Vidauban (environ 12 000 habitants) dispose de groupes scolaires et d'un collège ; lycées à Draguignan et Le Luc."
+     },
+     {
+      "dimension": "securite",
+      "score": 6,
+      "justification": "Commune résidentielle du centre Var, pas de QPV. Centre-ville animé en journée."
+     },
+     {
+      "dimension": "demande_locative",
+      "score": 7,
+      "justification": "Marché locatif tendu sur les petites surfaces : les comparables relevés affichent 11 à 14 €/m² pour des T2 et T3, ce qui traduit une demande réelle et une offre limitée."
+     },
+     {
+      "dimension": "dynamisme",
+      "score": 6,
+      "justification": "Vidauban bénéficie de sa position entre Draguignan, Le Luc et la plaine des Maures ; prix en hausse de l'ordre de 5 à 7 % sur un an selon les sources."
+     }
+    ],
+    "risques": [
+     {
+      "facteur": "Revalorisation des loyers différée",
+      "detail": "Les trois T2 sont 35 à 40 % sous le marché, mais les locataires sont en place. On ne peut pas augmenter un loyer en cours de bail au-delà de l'IRL : le potentiel ne se réalise qu'à la rotation, dont le calendrier est inconnu. Le prix d'offre doit donc se caler sur les baux signés.",
+      "severite": 3
+     },
+     {
+      "facteur": "Travaux non chiffrés",
+      "detail": "L'agence annonce un « rafraîchissement » sans le chiffrer : 40 000 € si les réseaux sont sains, jusqu'à 90 000 € s'ils sont à refaire. L'écart vaut 50 000 € de prix d'achat.",
+      "severite": 3
+     },
+     {
+      "facteur": "Facture énergétique élevée",
+      "detail": "DPE D avec une facture annoncée de 3 280 à 4 470 €/an pour l'immeuble, sur un bâti de 1900. La rénovation énergétique devra être provisionnée, sans contrainte réglementaire avant 2034.",
+      "severite": 2
+     },
+     {
+      "facteur": "Bail commercial non détaillé",
+      "detail": "Le local est « en activité » mais ni la nature du bail, ni son échéance, ni sa clause de révision ne sont communiquées. Un bail ancien sous le marché est un potentiel ; un bail précaire est un risque.",
+      "severite": 2
+     },
+     {
+      "facteur": "Greniers et combles",
+      "detail": "Trois greniers au dernier niveau : potentiel de valorisation annoncé mais aucune surface habitable ne peut y être créée sans autorisation. À traiter comme un bonus, jamais comme une valeur acquise.",
+      "severite": 1
      }
     ]
    },
