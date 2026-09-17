@@ -1,44 +1,44 @@
-# Fiche bien — 01a-Valentine-La-Verrerie-13pkgs
+# 00-FICHE — 02c Jean Rostand, 11 parkings (La Seyne-sur-Mer)
 
 ## Identification
-- Type de bien : 13 places de stationnement intérieures couvertes (PKG INT) — ensemble immobilier « Parc tertiaire La Verrerie », traverse de la Martine, quartier Saint Marcel
-- Adresse : 148 traverse de la Martine, 13011 MARSEILLE 11e (La Valentine) — cadastre section E, n° 631, 634 et 637
-- Lots détenus (13, quote-part 6/10098e chacun) :
-  - 108, 109, 113, 118, 128, 129 : sous-sol bâtiment B2
-  - 182, 183 : rez-de-chaussée bâtiment B2
-  - 220, 221 : 2e sous-sol bâtiment B1 ; 222 : 2e sous-sol bâtiment B2
-  - 233 : 1er sous-sol bâtiment B2 ; 234 : rez-de-chaussée bâtiment B2
-- Copropriété : EDD/RC reçu par Me Claude Reynaud le 22/12/2009 (publié 15/02/2010, vol. 2010P n° 856), modifié ensuite (2010, 2014, 2018, 2020 ×2, 2022, 2025)
-- Compte copropriété : immeuble n° 01478 — n° 09017 — compte 00296 (SCI SEMAPHORE PATRIMOINE)
-- Syndic : Saint Victor Gestion, 52 cours Pierre Puget, 13006 Marseille (interlocuteur : Florent de Gérin)
-- Acte de vente reçu le 23/04/2026 par Me Caroline GILSON, « Les Notaires d'Oléa », Ollioules (772 av. Jean Monnet) — vendeur : SCI La Martine (Hyères, SIREN 503808495) — représentée par Alexis Barlatier, gérant (délibération du 15/01/2026)
-- Locataire : SCHINDLER (bail signé le 18/10/2021, transmis à l'achat — gestionnaire Mme Natacha Guis) : 13 parkings loués en bloc
+- Programme neuf (VEFA) « Jean Rostand » — promoteur : Constructa Promotion (commercialisation 1964.immo, Isabelle Alain Scala)
+- Quartier Saint-Jean, bd Jean Rostand / av. Jean Vilar, La Seyne-sur-Mer (83500) — **QPV Berthe** (vérifié carte CGET)
+- 11 lots de parking standard en sous-sol (12 m²/place, ~132 m² au total) — lots 9 et 20-29 de la grille Constructa, sous-sol R-1
+- Livraison : 2e trimestre 2027
+- Statut 10/09/2026 : **offre d'achat à 6 000 €/place, soit 66 000 € net vendeur** (prix catalogue 8 000 €/place) + frais d'acquisition 1 980 € → **prix de revient 67 980 €** (6 180 €/place)
+- Statut 11/09/2026 : **contre-offre du promoteur** (réponse direction via 1964.immo) — **8 emplacements maximum à 7 000 €/place, soit 56 000 € TTC, frais de notaire à notre charge** (≈ 7 248 €/place tout compris) ; ni l'option 11 places ni l'option 4 places ne sont retenues. Argument avancé : l'enjeu de la direction reste le déstockage des commerces/bureaux, les parkings n'étant que la variable d'ajustement. Validité de notre offre initiale : 25/09/2026.
+- Usage retenu : location longue durée — loyers du quartier : fourchette envisagée **54 à 65 €/mois/place** (retenu 60 €/m)
 
-## Acquisition et financement
-- Prix de vente : 85 800,00 € TTC = 71 500 € HT + TVA 20 % (14 300 €) — soit 6 600 € TTC par place
-- Crédit Caisse de Crédit Mutuel MARSEILLE CASTELLANE (4 bd Baille, 13006 — SIREN 314493164 ; interlocuteur Jérémy Filidei), contrat n° 10278 08980 00021441704 :
-  - Montant : 71 500 € (= prix HT) — durée 180 mois (15 ans) — taux fixe 3,70 % — TEG 5,64 %
-  - Échéance : 546,79 €/mois (capital + intérêts + assurance) — 1re échéance 05/05/2026 — dernière 05/04/2041
-  - Assurance emprunteur : 4,00 €/10 000 €/mois ; frais de dossier 500 € ; frais de garanties 4 658 €
-  - Garanties : cautions solidaires d'Alexis Barlatier et Rémy Barlatier (montant garanti 85 800 €, durée du crédit + 204 mois)
-  - Remboursement annuel projeté : capital 6 264 € + assurance 374 €
-- Solde à financer hors prêt (TVA 14 300 € + émoluments/frais) : trésorerie — montants à compléter (provision sur frais 435 € versée par Rémy Barlatier transférée sur le compte de la SCI)
+## Financement
+- Demande : **59 400 €** (90 % du prix net vendeur) sur 15 ans à 3,70 % → mensualité **447,33 €/mois** (assurance 0,34 % incluse)
+- Apport : 8 580 € (fonds propres de la SCI) = 12,6 % du prix de revient
+- Garanties : hypothèque de premier rang sur les 11 places, **prise à l'acte notarié d'acquisition** (pas de report à la livraison — le banquier ne l'accepterait pas). Nantissement des parts sociales et caution des gérants : **non proposés d'office** (cela ferme la négociation parallèle avec une autre banque), accordables seulement si la banque les demande
+- Intérêts intercalaires (~500 à 1 650 € sur le chantier) **servis par la trésorerie de la SCI**, sans appel aux fonds propres des associés ni compte courant d'associé
+- Encours présenté au banquier : **parc Verrerie seul (70 002 €, CM, 546,79 €/m, fin 2041)** — le prêt in fine La Garde (12 k€, entre associés) est exclu ; encours après opération 129 400 €
+- Fiche banquier à jour : `Financement/2026-09-10_Fiche-banquier-11-parkings-Jean-Rostand` (+ PDF) — voir skill `fiche-banquier-financement`
+- **Simulations Crédit Mutuel du 15/09/2026** (M. Filidei, remises par Rémy — montant simulé **56 000 €**, cohérent avec la contre-offre 8 places à 7 000 €) :
+  - 240 mois — taux débiteur fixe **3,80 %** — intérêts 23 874,19 € + assurance 3 102,00 € — frais de garanties 843 € + dossier 500 € — coût total du crédit 28 319,19 € — **TAEG estimatif 4,40 %**
+  - 180 mois — taux débiteur fixe **3,60 %** — intérêts 16 404,77 € + assurance 1 994,48 € — mêmes frais — coût total du crédit 19 742,25 € — **TAEG estimatif 4,25 %**
+  - Classées dans `Financement/2026-09-15_Simulation-credit_Credit-Mutuel-{180,240}-mois-56kEUR.pdf`
+- À COMPLETER : offre de prêt formelle, assurance emprunteur (quotité, TAEA 0,45-0,49 %), garantie retenue (hypothèque de 1er rang demandée)
 
-## Revenus et charges
-- Loyer Schindler : 4 623,32 € HT/trimestre (3 906,13 € avenant + 717,19 € bail initial, révision 2025) — factures 020426 (T2) et 010726 (T3) 2026
-- Refacturations au locataire : charges copro + PNO (facture 030426 : PNO 2026-2027 = 598,91 €, soit 46,07 € × 13 lots ; facture 010526 : régularisation charges 2025 = 445,44 €)
-- Charges de copropriété : budget 2026 appel n°3 du 30/06/2026 = 248,90 € (215,92 € budget + 32,98 € travaux caniveau) ; régularisation 2025 du 22/05/2026 : solde 445,44 € (charges 1 256,40 € − annulation appels 810,96 €)
-- Assurance PNO (SCI) : 598,91 €/an du 23/04/2026 au 22/04/2027, refacturée au locataire
-- Taxe foncière : À COMPLÉTER
+## Revenus / charges (hypothèses retenues 10/09/2026)
+- Loyers : 11 × 60 €/mois (retenu) = 7 920 €/an pleine occupation — fourchette 54-65 €/m
+- Charges copro : 180 €/an/place retenues (1 980 €/an) — **budget prévisionnel écrit à obtenir** ; taxe foncière exonérée 2 ans (neuf) puis ~45 €/an/place (~500 €/an)
+- Amortissement SCI à l'IS : 2 039 €/an (90 % du prix de revient sur 30 ans)
+- Capacité après IS : **432 €/mois** à 60 €/m (vacance nulle) ; 478 €/m à 65 € ; 377 €/m à 54 €
+- Point mort : EBE ≥ 0 dès 3/11 places ; autofinancement en trésorerie ~62 €/m ; vision banque (CF amort. réintégré ≥ annuité) dès 8/11
+- Détail complet de la sensibilité 0-11 places : `analyses/2026-09-03-11-parkings-jean-rostand-la-seyne/documents/financement.html`
 
-## Travaux et sinistres en cours (état 11/09/2026)
-- Infiltrations d'eau en sous-sol : maîtrise d'œuvre ELEVEN STRUCTURE (devis « études et suivi des travaux », reçu le 10/09/2026, reçu via AR24) ; canalisation des infiltrations en sous-sol.
-- Assurance dommage-ouvrage du chantier syndic : GALIAN-SMABTP (déclaration de chantier « DC_DO SYNDIC_012026 », signée pour accord), souscription soumise au vote de l'AGE.
-- AGE : mardi 06 octobre 2026 à 10:00, chez NEPHYLA, 148 traverse de la Martine, bâtiment B, 13011 Marseille — mandat de syndic n° 09017 (convocation reçue le 10/09/2026).
-- Expertise dommage-ouvrage : rapport Stelliant Construction PACA, assureur MMA IARD SA, sinistre n° 26010400140A, contrat n° 146233766, souscripteur SCI La Martine, opération « Parc tertiaire de la Verrerie » (coût définitif 3 582 269,85 € TTC ; expert Frederic Peghinelli) — vérification du quantum des travaux, rapport du 30/07/2026, gestionnaire Aurélie Le Guern.
+## Marqueurs de reconnaissance
+- Promoteur : Constructa Promotion (VEFA)
+- Quartier Saint-Jean, La Seyne-sur-Mer (QPV Berthe) — résidence « Jean Rostand »
+- 11 lots parking sous-sol, livraison T2 2027
+- Commercialisation annexes : Alain Scala Isabelle — ialainscala@1964.immo (1964.immo) ; grille prix stock + plans parking R-1/R-2 reçus 08/09/2026 (catalogue parking simple 8 000 € TTC, 6 667 € HT — TVA 20 %)
 
-## Marqueurs de reconnaissance des papiers
-- Mentions : « La Verrerie » / « Parc tertiaire La Verrerie », 148 traverse de la Martine, 13011 Marseille, syndic Saint Victor Gestion, n° compte 01478-09017-00296, lots 108 à 234 « PKG INT », expéditeur Schindler (1-3 rue Dewoitine, Vélizy) ou SCI Sémaphore Patrimoine (296 rue Modigliani, Cuers, RCS 999 150 428).
-- Vendeur : SCI La Martine — 15 allée de Protée, Hyères (SIREN 503808495). Notaire vendeur/acheteur : Me Caroline Gilson (Ollioules). Prêt : CCM Marseille Castellane — contrat n° 10278 08980 00021441704.
-- Historique : acheté le 23/04/2026 — l'ancien PNO MMA (contrat A 147237800, au nom de la SCI La Martine) a été résilié en juin 2026 (classé en Assurance si conservé).
-- À ne pas confondre avec : Le Dionysos (La Garde, 01b), opportunité Parc des Arts (Marseille 9e, 02a), projet Solliès-Pont (02b), projet Jean Rostand (02c).
+## À COMPLETER
+- Numéros de lots définitifs, syndic de la résidence, référence contrat VEFA
+- **Réponse à trancher sur la contre-offre du 11/09** (8 pl. à 7 000 € + frais de notaire à notre charge) avant le 25/09/2026
+- Date d'acceptation de l'offre / compromis
+- Montants réels : TF, charges copro (budget prévisionnel), frais de notaire définitifs
+- Acceptation écrite par le promoteur : un acte unique pour les 11 lots (sinon ~9 600 € de frais)
