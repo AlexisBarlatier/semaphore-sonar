@@ -6667,7 +6667,7 @@
             "note": "Retenu en l'état à 280 €/mois, soit 10,4 €/m². Rénové, il se louerait 364 €/mois (13,5 €/m²), mais l'investissement de 24 300 € rapporte moins de 6,5 % : la version patrimoniale préfère le laisser en état."
           }
         ],
-        "notes": "Prix affiché à 1 400 €/m² sur 70 m², contre une médiane DVF de 2 313 €/m² sur les 80 ventes d'appartements de 2025 à Le Luc, soit 40 % sous le marché. Le loyer cumulé des deux logements atteint 12,8 €/m², supérieur à celui d'un lot unique, ce qui améliore les deux lectures. Seuils de la fiche ville de Le Luc : patrimonial 1 205 / 1 113 / 966 €/m², marchand de biens 908 / 857 / 825 €/m², pour un lot type de 60 m²."
+        "notes": "Prix affiché à 1 400 €/m² sur 70 m², contre une médiane DVF de 2 313 €/m² sur les 80 ventes d'appartements de 2025 à Le Luc, soit 40 % sous le marché. Le loyer cumulé des deux logements atteint 12,8 €/m², supérieur à celui d'un lot unique, ce qui améliore les deux lectures. Seuils de la fiche ville de Le Luc : patrimonial 1 205 / 1 113 / 966 €/m², marchand de biens 908 / 857 / 825 €/m², pour un lot type de 60 m². Prix de sortie du T2 cadré sur 27 ventes réelles de 30 à 55 m² en 2025 : médiane 2 810 €/m², mais forte polarisation par adresse, 1 100 à 2 500 en centre ancien contre 2 850 à 3 600 en quartier résidentiel. Hypothèse retenue 2 500 €/m², soit 107 500 € pour les 43 m²."
       },
       "hypotheses": {
         "vacance_base_pct": 9.0,
@@ -6689,11 +6689,17 @@
         "branche": "residentiel",
         "type_operation": "mixte",
         "strategie_retenue": {
-          "nom": "Marchand de biens : rénovation et revente des deux lots séparés",
-          "code": "mdb",
-          "lots": 2
+          "nom": "Mix à 85 000 € cash : revente du T2, conservation du studio",
+          "code": "mixte",
+          "lots": 1
         },
         "strategies_explorees": [
+          {
+            "strategie": "Mix à 85 000 € cash : revendre le T2 rénové, garder le studio en location",
+            "lots": 1,
+            "faisabilite": "immédiate, sous réserve du prix de sortie",
+            "risque": "moyen — marge du T2 de 22 600 à 42 800 € selon la sortie, studio en patrimoine pour 8 300 à 33 100 € de capital résiduel"
+          },
           {
             "strategie": "Patrimoniale, deux lots loués, studio laissé en l'état",
             "lots": 2,
