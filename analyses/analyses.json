@@ -6610,6 +6610,185 @@
         ]
       },
       "champs_manquants": []
+    },
+    {
+      "slug": "2026-09-18-t2-studio-attenant-le-luc",
+      "date_analyse": "2026-09-18",
+      "date_maj": null,
+      "titre": "Le Luc — T2 de 43 m² avec studio attenant de 27 m² (deux lectures : patrimoniale et marchand de biens)",
+      "bien": {
+        "type_bien": "Appartement",
+        "sous_type": null,
+        "type_detail": "Ensemble de deux logements dans un bâti de 1900 : un T2 de 43 m² et un studio attenant de 27 m² déclaré à rénover, soit 70 m² au total (72 m² Carrez annoncés). Trois pièces, deux chambres, deux salles d'eau, cuisine américaine équipée. Chauffage individuel de type « autre » au diagnostic, ni gaz ni fioul identifié. Pas de balcon ni de terrasse. DPE D en ancienne version, donc étiquette non fiable. Le studio est présenté comme entièrement indépendant, ce qui ouvre la possibilité de deux logements distincts sous réserve de vérifier les compteurs, l'entrée et la faisabilité juridique de la division.",
+        "neuf": false,
+        "adresse": {
+          "texte": "Le Luc (83340)",
+          "ville": "Le Luc",
+          "code_postal": "83340"
+        },
+        "surfaces": {
+          "texte": "70 m² (43 m² de T2 plus 27 m² de studio), 72 m² Carrez annoncés"
+        },
+        "lots": {
+          "count": 2,
+          "nature": "Un T2 et un studio attenant, susceptibles de constituer deux logements"
+        },
+        "copro": {
+          "charges_annuelles_euros": 900.0,
+          "charges_source": "non communiquées par l'annonce, estimation retenue à 900 €/an"
+        },
+        "travaux": {
+          "montant_euros": 24300.0,
+          "nature": "Rénovation du studio sur 27 m² à 900 €/m², soit 24 300 €, plus un rafraîchissement du T2 à 250 €/m². Enveloppe globale retenue pour la lecture marchand de biens : 35 050 €. Le T2 est habitable en l'état, seul le studio est à reprendre. Le chiffrage n'est pas établi : « à rénover » couvre un facteur deux."
+        }
+      },
+      "annonce": {
+        "plateforme": "hestia-transactions.com",
+        "url": "https://www.hestia-transactions.com/vente/172-le-luc/appartement/138-appartement-t2-studio-attenant-le-luc-70-m",
+        "prix_affiche_euros": 98000.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche"
+      },
+      "marche": {
+        "valeur": null,
+        "loyers": [
+          {
+            "lot": "T2 de 43 m²",
+            "quantite": 1,
+            "loyer_mensuel_euros": 529.0,
+            "occupe": false,
+            "note": "43 m² à 12,3 €/m², loyer constaté au Luc. Logement libre."
+          },
+          {
+            "lot": "Studio attenant de 27 m²",
+            "quantite": 1,
+            "loyer_mensuel_euros": 280.0,
+            "occupe": false,
+            "note": "Retenu en l'état à 280 €/mois, soit 10,4 €/m². Rénové, il se louerait 364 €/mois (13,5 €/m²), mais l'investissement de 24 300 € rapporte moins de 6,5 % : la version patrimoniale préfère le laisser en état."
+          }
+        ],
+        "notes": "Prix affiché à 1 400 €/m² sur 70 m², contre une médiane DVF de 2 313 €/m² sur les 80 ventes d'appartements de 2025 à Le Luc, soit 40 % sous le marché. Le loyer cumulé des deux logements atteint 12,8 €/m², supérieur à celui d'un lot unique, ce qui améliore les deux lectures. Seuils de la fiche ville de Le Luc : patrimonial 1 205 / 1 113 / 966 €/m², marchand de biens 908 / 857 / 825 €/m², pour un lot type de 60 m²."
+      },
+      "hypotheses": {
+        "vacance_base_pct": 9.0,
+        "vacance_best_pct": 6.0,
+        "vacance_worst_pct": 15.0,
+        "vacance_justification": "Deux logements, deux baux, deux risques non mutualisés : la provision est portée à 12 % dans la lecture patrimoniale à deux lots, contre 9 % pour un lot unique.",
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 700.0,
+          "taxe_fonciere_commentaire": "Estimée, non communiquée par l'annonce.",
+          "charges_copro_annuelles_euros": 900.0,
+          "charges_copro_commentaire": "Non communiquées. Estimation retenue, à confirmer : c'est le poste qui déplace le plus les deux prix cibles.",
+          "pno_annuelle_euros": 250.0,
+          "entretien_annuel_euros": 150.0,
+          "comptabilite_annuelle_euros": 600.0
+        },
+        "frais_acquisition_euros": 7840.0
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "mixte",
+        "strategie_retenue": {
+          "nom": "Marchand de biens : rénovation et revente des deux lots séparés",
+          "code": "mdb",
+          "lots": 2
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Patrimoniale, deux lots loués, studio laissé en l'état",
+            "lots": 2,
+            "faisabilite": "au prix de 81 000 €",
+            "risque": "moyen — 5,5 % net au prix affiché, cash flow négatif de 118 €/mois"
+          },
+          {
+            "strategie": "Patrimoniale, studio rénové puis loué",
+            "lots": 2,
+            "faisabilite": "au prix de 70 500 €",
+            "risque": "élevé — les travaux coûtent plus de capacité d'achat qu'ils n'en rapportent"
+          },
+          {
+            "strategie": "Marchand de biens, rénovation et revente séparée",
+            "lots": 2,
+            "faisabilite": "au prix affiché si la revente tient",
+            "risque": "moyen — 10,8 à 21,1 % de marge selon le prix de sortie, dépend du marché local étroit"
+          },
+          {
+            "strategie": "Garder un lot, revendre l'autre",
+            "lots": 1,
+            "faisabilite": "immédiate",
+            "risque": "élevé — garder le T2 ne rend que 5,4 % net, garder le studio 8,4 % mais sur 28 600 € seulement"
+          }
+        ],
+        "attractivite": [
+          {
+            "critere": "Prix d'entrée",
+            "score": 8,
+            "note": "40 % sous le marché de la commune, situation unique sur les dossiers du secteur"
+          },
+          {
+            "critere": "Rendement locatif",
+            "score": 6,
+            "note": "5,5 % net en patrimonial, sous notre seuil de 6,5 %"
+          },
+          {
+            "critere": "Marge marchand de biens",
+            "score": 8,
+            "note": "15,7 % en scénario central, dans notre cible de 15 à 20 %"
+          },
+          {
+            "critere": "Qualité du bâti",
+            "score": 5,
+            "note": "1900, DPE D ancienne version, chauffage indéterminé, pas d'extérieur"
+          },
+          {
+            "critere": "Profondeur du marché",
+            "score": 5,
+            "note": "80 ventes d'appartements par an : revente possible mais lente"
+          },
+          {
+            "critere": "Risque de travaux",
+            "score": 4,
+            "note": "Studio à rénover sans devis, facteur deux sur l'enveloppe"
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Studio à rénover sans chiffrage",
+            "severite": 4,
+            "detail": "« À rénover » couvre un facteur deux. Chaque 10 000 € de dépassement retire 9 000 € de marge nette en marchand de biens, et 15 000 € de capacité d'achat en patrimonial."
+          },
+          {
+            "facteur": "Charges de copropriété inconnues",
+            "severite": 3,
+            "detail": "Ni montant, ni nombre de lots, ni syndic dans l'annonce. 100 € de charges annuelles en plus retirent environ 1 500 € du plafond patrimonial."
+          },
+          {
+            "facteur": "Deux lots, deux baux",
+            "severite": 3,
+            "detail": "La vacance et l'impayé ne sont plus mutualisés. Un studio vacant en patrimonial change la nature du dossier."
+          },
+          {
+            "facteur": "Marché local étroit",
+            "severite": 3,
+            "detail": "80 ventes d'appartements par an à Le Luc. Mettre deux lots en vente simultanément affaiblit la négociation."
+          },
+          {
+            "facteur": "Division à créer",
+            "severite": 2,
+            "detail": "Si les deux logements relèvent d'une copropriété, un état descriptif de division, un règlement et un acte publié sont nécessaires : environ 10 000 € et plusieurs mois."
+          },
+          {
+            "facteur": "Chauffage indéterminé",
+            "severite": 2,
+            "detail": "Le diagnostic mentionne « autre » : ni gaz ni fioul identifié. À clarifier avant de se prononcer sur l'entretien."
+          },
+          {
+            "facteur": "Travaux de copropriété votés",
+            "severite": 2,
+            "detail": "Bâti de 1900 : demander les trois derniers procès-verbaux d'assemblée générale avant de s'engager."
+          }
+        ]
+      }
     }
   ]
 }
