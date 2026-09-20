@@ -3,7 +3,7 @@
     "schema": "analyses-v2-entrees",
     "generated_at": "2026-09-10T00:00:00+00:00",
     "source": "saisie-agent",
-    "count": 57
+    "count": 59
   },
   "analyses": [
     {
@@ -6617,7 +6617,7 @@
       "date_maj": null,
       "titre": "Le Luc — T2 de 43 m² avec studio attenant de 27 m² (deux lectures : patrimoniale et marchand de biens)",
       "bien": {
-        "type_bien": "Appartement",
+        "type_bien": "appartement",
         "sous_type": null,
         "type_detail": "Ensemble de deux logements dans un bâti de 1900 : un T2 de 43 m² et un studio attenant de 27 m² déclaré à rénover, soit 70 m² au total (72 m² Carrez annoncés). Trois pièces, deux chambres, deux salles d'eau, cuisine américaine équipée. Chauffage individuel de type « autre » au diagnostic, ni gaz ni fioul identifié. Pas de balcon ni de terrasse. DPE D en ancienne version, donc étiquette non fiable. Le studio est présenté comme entièrement indépendant, ce qui ouvre la possibilité de deux logements distincts sous réserve de vérifier les compteurs, l'entrée et la faisabilité juridique de la division.",
         "neuf": false,
@@ -6690,7 +6690,7 @@
         "type_operation": "mixte",
         "strategie_retenue": {
           "nom": "Mix à 85 000 € cash : revente du T2, conservation du studio",
-          "code": "mixte",
+          "code": "ld-nue",
           "lots": 1
         },
         "strategies_explorees": [
@@ -6794,7 +6794,225 @@
             "detail": "Bâti de 1900 : demander les trois derniers procès-verbaux d'assemblée générale avant de s'engager."
           }
         ]
-      }
+      },
+      "champs_manquants": [
+        "marche.valeur"
+      ]
+    },
+    {
+      "slug": "2026-09-20-immeuble-rapport-brignoles-centre-ancien",
+      "date_analyse": "2026-09-20",
+      "date_maj": null,
+      "titre": "Brignoles — immeuble de rapport 3 T3 (196 m²) en centre ancien, Site Patrimonial Remarquable",
+      "bien": {
+        "type_bien": "immeuble",
+        "sous_type": null,
+        "type_detail": "Immeuble de rapport en R+3 sur quatre niveaux, dans l'hyper-centre de Brignoles, à l'intérieur du périmètre du Site Patrimonial Remarquable classé par arrêté ministériel du 15 juin 2020. Trois T3 en étages : 64,06 m² au R+1, 67,84 m² au R+2, 64,57 m² au R+3 — soit 196,47 m² habitables — et des combles aménageables au quatrième niveau, d'une surface non communiquée. Immeuble sans ascenseur. Bâti ancien (pierres apparentes, tomettes d'origine, poutres). AUCUN DPE N'EST FOURNI : la fiche vendeur indique « diagnostic de performance énergétique vierge ». Aucun locataire n'est mentionné dans l'annonce : les trois logements sont présumés vacants. Les photographies de l'annonce montrent des logements « dans leur jus » : peintures écaillées, plomberie et électricité apparentes, chauffe-eau vétuste, traces d'humidité en plafond, menuiseries simple vitrage — alors que la fiche vendeur déclare « travaux à prévoir : aucun ».",
+        "neuf": false,
+        "adresse": {
+          "texte": "Centre ancien (périmètre SPR), Brignoles (83170) — adresse exacte non communiquée par le vendeur",
+          "ville": "Brignoles",
+          "code_postal": "83170"
+        },
+        "surfaces": {
+          "texte": "196,47 m² habitables (3 T3 : 64,06 + 67,84 + 64,57) — 197 m² annoncés. Combles aménageables au 4e niveau : surface non communiquée",
+          "carrez_m2": 196.47
+        },
+        "lots": {
+          "count": 3,
+          "surface_par_lot_m2": null,
+          "nature": "3 T3 en étages (64,06 / 67,84 / 64,57 m²) + combles aménageables au 4e niveau — sans ascenseur",
+          "lots_distincts": 3
+        },
+        "copro": {
+          "charges_annuelles_euros": 0.0,
+          "charges_source": "Aucune copropriété ni aucun syndic n'est mentionné : immeuble présumé en MONOPROPRIÉTÉ, donc sans charges de copropriété. À CONFIRMER : si l'immeuble est en copropriété, les charges et le budget prévisionnel doivent être obtenus, ce qui réduirait d'autant le cash flow (ordre de grandeur 8 à 12 €/m²/an pour un immeuble de centre ancien sans ascenseur, soit 1 600 à 2 400 €/an)."
+        },
+        "travaux": {
+          "montant_euros": 120000.0,
+          "nature": "RÉNOVATION COMPLÈTE des trois logements, provisionnée 120 000 € (≈ 610 €/m² habitable) : reprise de l'électricité et de la plomberie (apparentes sur les photos), salles de bains et cuisines, sols, peintures, traitement de l'humidité en plafond, menuiseries en double vitrage conformes au SPR et chauffage. FOURCHETTE 80 000 à 200 000 € selon le devis : 80 000 € (≈ 400 €/m²) pour une remise en état locative minimale — électricité, salles de bains, peintures — et 200 000 € (≈ 1 000 €/m²) si la toiture, la structure ou les réseaux sont à reprendre. Dans un SPR, les menuiseries et les façades relèvent de l'accord de l'Architecte des bâtiments de France : délais et surcoûts à prévoir. AUCUN DEVIS N'A ÉTÉ ÉTABLI : c'est le premier point bloquant du dossier."
+        }
+      },
+      "annonce": {
+        "plateforme": "seloger",
+        "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/brignoles-83170/26GX1JRW1GBC",
+        "prix_affiche_euros": 230000.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche",
+        "prix_commentaire": "230 000 €, honoraires à la charge du vendeur, soit 1 168 €/m² sur les 197 m² annoncés (1 171 €/m² sur les 196,47 m² réellement habitables). Le vendeur est CASAVO (SAS PROPRIOO, RCS 824117345) : un intermédiaire qui achète pour revendre, ce qui explique un dossier sans DPE et sans locataire. Le même bien est diffusé sur LeBonCoin (réf. 3222843686), Logic-Immo (réf. 273406483) et Figaro Immo (réf. 62075) — pas d'enchère croisée, un seul vendeur."
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 250000.0,
+          "haute_euros": 330000.0,
+          "retenue_euros": 285000.0,
+          "source": "Trois sources convergentes. (1) MeilleursAgents au 01/09/2026 : 2 250 €/m² en moyenne communale et 1 865 €/m² sur le quartier Centre / Vieille-Ville — c'est cette dernière qui compte. (2) DVF 2025 : 2 388 €/m² en moyenne communale sur 189 ventes d'appartements (Immovrai), moyenne tirée vers le haut par le neuf et les quartiers récents. (3) Les immeubles entiers effectivement en vente dans le centre de Brignoles le 20/09/2026 se traitent entre 1 168 et 1 467 €/m² (176 m² à 210 000 €, 220 m² à 275 000 €, 300 m² à 440 000 €, 525 m² à 627 000 €). Valeur retenue après travaux 285 000 €, soit 1 450 €/m² : une décote de 22 % sur le prix/m² du quartier, justifiée par l'absence d'ascenseur, l'absence de parking, l'obligation de vente en bloc et la profondeur du marché local. Fourchette 250 000 à 330 000 €. À noter : la valeur ne doit pas être majorée des combles, dont la surface n'est même pas communiquée.",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "T3 de 64,06 m² (R+1)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 660.0,
+            "occupe": false,
+            "note": "10,3 €/m². Retenu sous la médiane des annonces relevées à Brignoles le 20/09/2026 pour des T3 de 60 à 75 m² (550, 615, 720, 750, 820, 827, 880 et 910 €/mois selon état et meublement), et nettement sous la moyenne MeilleursAgents de 13,2 €/m². Lot présumé vacant."
+          },
+          {
+            "lot": "T3 de 67,84 m² (R+2)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 660.0,
+            "occupe": false,
+            "note": "9,7 €/m². Deuxième étage sans ascenseur : c'est la décote qui explique le loyer retenu, inférieur au prix au m² du R+1. Lot présumé vacant."
+          },
+          {
+            "lot": "T3 de 64,57 m² (R+3)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 660.0,
+            "occupe": false,
+            "note": "10,2 €/m². Dernier étage sous toiture, exposé aux déperditions : loyer retenu identique, à confirmer après diagnostic de couverture. Lot présumé vacant."
+          }
+        ],
+        "notes": "Loyers retenus 3 × 660 € = 1 980 €/mois, soit 23 760 €/an et 10,2 €/m² — le bas de la fourchette constatée, conformément à la règle du groupe : on ne construit pas un prix sur la borne haute des loyers. RENDU APRÈS RÉNOVATION seulement : l'immeuble est en mauvais état et aucun des trois logements ne peut être loué en l'état (voir le risque « permis de louer »). Le parc locatif de Brignoles compte 33 appartements en annonce le 20/09/2026 : la relocation de trois lots simultanés n'est pas un marché de pénurie, elle prendra plusieurs mois."
+      },
+      "hypotheses": {
+        "vacance_base_pct": 8.0,
+        "vacance_best_pct": 5.0,
+        "vacance_worst_pct": 15.0,
+        "vacance_justification": "ÉCART ASSUMÉ AU DÉFAUT RÉSIDENTIEL (5 %). Trois raisons : (1) l'immeuble est vendu SANS locataire — les trois logements sont à relouer en même temps, ce qui n'est pas de la vacance statistique mais un revenu absent le premier jour ; (2) chaque relocation exige une autorisation préalable de mise en location (permis de louer, dispositif en vigueur à Brignoles et renouvelé pour 2026), avec visite de conformité et délai d'un mois ; (3) l'offre locative locale est abondante (33 appartements en annonce), donc les délais s'allongent. Worst 15 % : deux lots vides en simultané et un impayé.",
+        "frais_acquisition_euros": 18400.0,
+        "frais_divers_euros": 0.0,
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 2619.0,
+          "taxe_fonciere_commentaire": "Chiffre du vendeur (fiche Casavo et LeBonCoin : « taxe foncière 2 619 €/an »), soit 11 % du loyer brut retenu — sous le seuil d'alerte de 15 %, mais élevé pour un immeuble sans ascenseur et sans parties communes développées : à vérifier sur l'avis réel avant toute offre.",
+          "charges_copro_annuelles_euros": 0.0,
+          "charges_copro_commentaire": "Immeuble présumé en monopropriété (aucun syndic ni aucune copropriété mentionnés) : pas de charges de copropriété. À CONFIRMER — si l'immeuble est en copropriété, compter 1 600 à 2 400 €/an.",
+          "pno_annuelle_euros": 400.0,
+          "pno_commentaire": "Assurance de l'immeuble (trois logements et parties communes).",
+          "entretien_annuel_euros": 1200.0,
+          "entretien_commentaire": "Entretien courant de l'immeuble : cage d'escalier, façade, couverture, évacuations. Sans syndic, le propriétaire porte tout.",
+          "comptabilite_annuelle_euros": 0.0,
+          "comptabilite_commentaire": "Aucune ligne de comptabilité : la SCI porte déjà d'autres biens, le poste est mutualisé (convention du groupe)."
+        }
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Rénovation complète des trois logements puis location nue",
+          "code": "ld-nue",
+          "lots": 3
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Rénovation complète puis location nue des trois T3",
+            "lots": 3,
+            "rendement": "4,4 % net sur le revient / 5,7 % sur la valeur",
+            "faisabilite": "3 à 6 mois de travaux, 3 logements à relouer",
+            "risque": "élevé — 120 000 € de travaux provisionnés et un DPE inconnu"
+          },
+          {
+            "strategie": "Aménagement des combles en quatrième logement",
+            "lots": 4,
+            "rendement": "potentiel non chiffrable",
+            "faisabilite": "soumise à l'accord de l'Architecte des bâtiments de France (SPR)",
+            "risque": "élevé — surface du comble non communiquée, règles de hauteur et de création de surface"
+          },
+          {
+            "strategie": "Mise en location en l'état, sans travaux",
+            "lots": 3,
+            "rendement": "non calculable",
+            "faisabilite": "bloquée par le permis de louer",
+            "risque": "élevé — logements non conformes à la décence et sans DPE : la mairie peut refuser la mise en location"
+          },
+          {
+            "strategie": "Marchand de biens : rénovation puis revente à l'unité",
+            "lots": 3,
+            "rendement": "-88 000 € de plus-value nette",
+            "faisabilite": "division en copropriété à créer",
+            "risque": "rédhibitoire — le prix de revente au détail ne couvre pas la rénovation"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 5,
+            "justification": "Brignoles n'a pas de gare voyageurs : la desserte repose sur l'autocar (réseau régional) et sur l'accès A8 par la sortie de Saint-Maximin. Toulon et Aix sont à 45 minutes, Marseille à une heure. Centre-ville tout à pied."
+          },
+          {
+            "dimension": "commerces",
+            "score": 8,
+            "justification": "Hyper-centre commerçant : marché hebdomadaire, administrations, sous-préfecture, santé, deux supermarchés à moins de 500 m. Le point fort réel du dossier, et la raison pour laquelle les logements d'hyper-centre se relouent."
+          },
+          {
+            "dimension": "ecoles",
+            "score": 7,
+            "justification": "Commune de 15 000 habitants dotée de plusieurs groupes scolaires, d'un collège et du lycée Raynouard ; alimentation en personnel administratif et enseignant, profil de locataire recherché."
+          },
+          {
+            "dimension": "securite",
+            "score": 5,
+            "justification": "Pas de quartier prioritaire, centre ancien animé le jour. Mais la vieille ville concentre des logements vacants et dégradés — le dispositif de permis de louer de la commune en est le symptôme. Immobilier de centre ancien pénalisé à la revente."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 6,
+            "justification": "Demande réelle portée par les actifs, les professions libérales et les fonctionnaires, mais offre abondante : 33 appartements en location à Brignoles le 20/09/2026, dont une majorité de T2 et T3. Ce n'est pas un marché de pénurie ; les délais de relocation y sont moyens."
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 5,
+            "justification": "Sous-préfecture du centre Var, agglomération de la Provence Verte. Prix stables (+0,8 % sur un an pour les appartements, -3,0 % sur trois mois selon MeilleursAgents), 189 ventes d'appartements en 2025. Marché peu liquide : les immeubles entiers s'y revendent en un à deux ans."
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Aucun DPE fourni — location possiblement interdite",
+            "severite": 5,
+            "detail": "La fiche vendeur indique « diagnostic de performance énergétique vierge » : il n'y a pas d'évaluation énergétique. Un DPE est obligatoire pour vendre et pour louer ; son absence n'est pas un oubli, c'est un évitement. Si le bâti ancien (simple vitrage visible sur les photos, chauffage inconnu, pierres apparentes non isolées) ressort en F ou G, la mise en location est interdite — G depuis le 1er janvier 2025 pour les nouveaux baux, F à partir de 2028, E en 2034. Or dans un SPR, la rénovation énergétique est la plus contrainte qui existe : pas d'isolation thermique par l'extérieur possible, menuiseries à valider par l'Architecte des bâtiments de France. CONDITION SUSPENSIVE N°1 : obtenir les trois DPE avant toute offre."
+          },
+          {
+            "facteur": "Travaux très lourds contredits par la fiche vendeur",
+            "severite": 5,
+            "detail": "Le vendeur déclare « travaux à prévoir : aucun ». Les photographies de l'annonce montrent trois logements dans leur jus : peintures écaillées et cloques, plomberie et électricité apparentes hors normes, chauffe-eau vétuste, traces d'humidité en plafond, carrelages usés, cuisine réduite à un évier et des placards. Une rénovation complète de trois logements de 65 m², c'est 80 000 à 200 000 € selon la profondeur. L'écart entre les deux hypothèses vaut 120 000 € de prix d'achat : c'est le cœur du dossier, et il n'est pas tranché."
+          },
+          {
+            "facteur": "Permis de louer — autorisation préalable obligatoire",
+            "severite": 4,
+            "detail": "Brignoles applique le permis de louer, renouvelé pour 2026 : chaque mise en location exige une autorisation préalable, délivrée après visite de conformité, pour deux ans. Trois logements à relouer, c'est trois dossiers et trois visites. Un logement déclaré non conforme (humidité, électricité, ventilation) ne peut pas être loué, et l'autorisation prend un mois. Le dispositif verrouille la montée en loyer d'un immeuble acheté en mauvais état : la trésorerie doit tenir la période."
+          },
+          {
+            "facteur": "Argument Malraux inopérant",
+            "severite": 4,
+            "detail": "L'annonce vend le classement en SPR comme « un levier fiscal exceptionnel » via le dispositif Malraux. Double problème. (1) Depuis 2025, Malraux n'existe plus que dans les SPR dotés d'un plan de sauvegarde et de mise en valeur approuvé (30 %) ou d'un plan de valorisation de l'architecture et du patrimoine (22 %) ; les quartiers anciens dégradés sont sortis du dispositif au 31/12/2024. À Brignoles, seuls l'arrêté de classement du 15 juin 2020 et l'étude préalable de 2018 sont publiés — aucune trace d'un PSMV ou d'un PVAP approuvé, à vérifier en mairie. (2) La réduction Malraux s'impute sur l'impôt sur le revenu des personnes physiques : elle est incompatible avec une détention en SCI à l'IS. L'argument fiscal de l'annonce ne vaut donc rien dans notre montage — et ne doit pas se payer dans le prix."
+          },
+          {
+            "facteur": "Marché de revente encombré",
+            "severite": 4,
+            "detail": "22 immeubles sont en vente à Brignoles le 20/09/2026, dont sept dans le seul centre ancien, entre 1 168 et 1 467 €/m². L'affirmation de l'annonce — « la rareté de ce type de bien en centre historique en renforce durablement la valeur » — est démentie par l'offre disponible. La sortie d'un immeuble entier à Brignoles se compte en années, pas en mois : c'est un actif de rendement, pas de plus-value."
+          },
+          {
+            "facteur": "Bâti ancien : couverture, structure, humidité",
+            "severite": 4,
+            "detail": "Les traces d'humidité visibles en plafond, un troisième étage sous toiture et l'absence de tout diagnostic technique (structure, couverture, amiante, plomb, termites) laissent ouverte la seule dépense qui ne se négocie pas : la toiture. Aucun plan, aucun diagnostic, aucune facture d'entretien n'accompagne l'annonce."
+          },
+          {
+            "facteur": "Contraintes du Site Patrimonial Remarquable",
+            "severite": 3,
+            "detail": "Toute intervention sur les façades, les menuiseries, la couverture ou une création de surface en combles relève de l'Architecte des bâtiments de France. Cela signifie des menuiseries bois sur mesure plutôt que du PVC de série, des délais d'instruction allongés et des arbitrages esthétiques imposés. Dans un immeuble dont tout le sujet est la facture de rénovation, ce n'est pas un détail : c'est un surcoût structurel de 10 à 20 %."
+          },
+          {
+            "facteur": "Statut de copropriété non communiqué",
+            "severite": 2,
+            "detail": "L'annonce ne dit ni si l'immeuble est en copropriété, ni s'il existe un syndic, ni s'il y a des lots annexes. La fiche vendeur mentionne seulement « procédure en cours : non, travaux votés : aucun ». Un budget prévisionnel écrit doit être obtenu avant toute offre : si l'immeuble est en copropriété, c'est 1 600 à 2 400 €/an de charges en plus."
+          },
+          {
+            "facteur": "Taxe foncière élevée au regard du loyer",
+            "severite": 2,
+            "detail": "2 619 €/an annoncés, soit 11 % des loyers bruts retenus, pour un immeuble de 196 m² sans ascenseur. C'est sous le seuil d'alerte de 15 %, mais l'avis réel doit être produit : une valeur locative cadastrale surévaluée sur un immeuble ancien se conteste, elle ne se subit pas."
+          }
+        ]
+      },
+      "champs_manquants": []
     }
   ]
 }
