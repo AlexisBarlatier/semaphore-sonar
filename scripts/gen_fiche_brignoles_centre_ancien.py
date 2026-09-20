@@ -244,7 +244,7 @@ def main():
         raise SystemExit(f"fiche invalide : {errs}")
     data['analyses'].append(RECORD)
     data['meta']['count'] = len(data['analyses'])
-    json.dump(data, open(BASE, 'w'), ensure_ascii=False, indent=1)
+    json.dump(data, open(BASE, 'w'), ensure_ascii=False, indent=2)
     print(f"record ajoute : {SLUG} | total {data['meta']['count']} fiches")
 
     spec = importlib.util.spec_from_file_location("gen", os.path.join(ROOT, 'scripts', 'gen_fiches_2026-09-10.py'))
@@ -329,7 +329,7 @@ def main():
         <tr><td>CF amort. réintégré (mensuel)</td><td class="num">{eur((rb['fiscal']['ebe'] - rb['fiscal']['is_annuel'] + rb['fiscal']['amortissement']) / 12)} €</td><td class="num">{eur((ro['fiscal']['ebe'] - ro['fiscal']['is_annuel'] + ro['fiscal']['amortissement']) / 12)} €</td><td class="num">{eur((rp['fiscal']['ebe'] - rp['fiscal']['is_annuel'] + rp['fiscal']['amortissement']) / 12)} €</td></tr>
         <tr><td>Rendement net (prix de revient)</td><td class="num">{rd(rb)} %</td><td class="num">{rd(ro)} %</td><td class="num">{rd(rp)} %</td></tr>
         <tr><td>Rendement net (valeur de marché)</td><td class="num">{rv(rb)} %</td><td class="num">{rv(ro)} %</td><td class="num">{rv(rp)} %</td></tr>
-        <tr><td>Ratio coût / valeur</td><td class="num">{rb['ratio_cout_valeur']:.2f}</td><td class="num">{ro['ratio_cout_valeur']:.2f}</td><td class="num">{rp['ratio_cout_valeur']:.2f}</td></tr>
+        <tr><td>Ratio coût / valeur</td><td class="num">{f"{rb['ratio_cout_valeur']:.2f}".replace('.', ',')}</td><td class="num">{f"{ro['ratio_cout_valeur']:.2f}".replace('.', ',')}</td><td class="num">{f"{rp['ratio_cout_valeur']:.2f}".replace('.', ',')}</td></tr>
       </tbody>
     </table>
     <div class="risk-matrix"><p class="attractiveness-intro">{gen.LECTURE[rec['slug']]}</p></div>
