@@ -3,7 +3,7 @@
     "schema": "analyses-v2-entrees",
     "generated_at": "2026-09-10T00:00:00+00:00",
     "source": "saisie-agent",
-    "count": 60
+    "count": 61
   },
   "analyses": [
     {
@@ -7219,6 +7219,228 @@
             "facteur": "Contradiction sur l'état du bien",
             "severite": 2,
             "detail": "L'étude notariale écrit « logements en bon état général » ; la fiche SeLoger affiche un champ automatique « état : rénovation nécessaire » et l'une des photographies montre des réseaux apparents, un convecteur électrique vétuste et des traces d'humidité dans une pièce d'eau. La réalité est probablement intermédiaire — bon état locatif, finitions anciennes — mais elle doit être vue, lot par lot."
+          }
+        ]
+      },
+      "champs_manquants": []
+    },
+    {
+      "slug": "2026-09-20-immeuble-rapport-4-t2-sollies-pont",
+      "date_analyse": "2026-09-20",
+      "date_maj": null,
+      "titre": "Solliès-Pont — immeuble de rapport 4 T2 loués (160 m²), 262 000 €",
+      "bien": {
+        "type_bien": "immeuble",
+        "sous_type": null,
+        "type_detail": "Immeuble de rapport de 1900 en R+3, un appartement par palier, quatre T2 loués pour un revenu annoncé de 2 000 €/mois. 160 m² annoncés (aucune surface Carrez par lot, aucun plan). DPE D / GES B, facture énergétique annoncée entre 3 030 et 4 130 €/an. « Rafraîchissement à prévoir » selon l'annonce. Les photographies montrent deux logements d'états différents : l'un avec cuisine américaine refaite, comptoir-bar, menuiseries PVC double vitrage et carrelage récent — un convecteur électrique ancien sous la fenêtre ; l'autre avec tomettes hexagonales d'origine, menuiseries bois simple vitrage, câblage apparent et mobilier ancien. Aucune charge de copropriété, aucune taxe foncière, aucun bail et aucun diagnostic technique ne sont communiqués : le dossier est mince.",
+        "neuf": false,
+        "adresse": {
+          "texte": "Solliès-Pont (83210) — adresse exacte non communiquée. Emprise déclarée dans le village, à proximité de la gare",
+          "ville": "Solliès-Pont",
+          "code_postal": "83210"
+        },
+        "surfaces": {
+          "texte": "160 m² annoncés pour l'immeuble, soit 40 m² par T2 en moyenne — aucune surface Carrez par lot, aucun plan communiqué",
+          "carrez_m2": 160.0
+        },
+        "lots": {
+          "count": 4,
+          "surface_par_lot_m2": null,
+          "nature": "4 T2, un par palier, sur 4 niveaux (R+3) — sans ascenseur",
+          "lots_distincts": 4
+        },
+        "copro": {
+          "charges_annuelles_euros": 0.0,
+          "charges_source": "Aucune copropriété, aucun syndic et aucune charge ne sont mentionnés : immeuble présumé en MONOPROPRIÉTÉ, donc sans charges de copropriété. Avec quatre lots et un appartement par palier, c'est la configuration la plus probable. À CONFIRMER : si l'immeuble est en copropriété, compter 1 800 à 2 800 €/an de charges, ce qui amputerait directement le cash flow."
+        },
+        "travaux": {
+          "montant_euros": 30000.0,
+          "nature": "« Rafraîchissement à prévoir » (annonce), non chiffré. Provision retenue 30 000 €, soit environ 187 €/m², à engager à la ROTATION des locataires et non à l'acquisition : les quatre appartements sont loués, il n'y a donc aucune urgence. Les photographies justifient l'enveloppe : dans le logement le plus daté, menuiseries bois simple vitrage, câblage apparent, tomettes usées et convecteurs anciens. Fourchette 20 000 à 60 000 € selon la profondeur (simple peinture et sols contre reprise des réseaux et des menuiseries). À provisionner séparément : la rénovation énergétique, sans contrainte réglementaire avant 2034 puisque le bien est en DPE D."
+        }
+      },
+      "annonce": {
+        "plateforme": "seloger",
+        "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/sollies-pont-83210/262WZHWZ28Z8",
+        "prix_affiche_euros": 262000.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche",
+        "prix_commentaire": "262 000 €, honoraires à la charge du vendeur, soit 1 638 €/m² sur les 160 m² annoncés. C'est 43 % sous le prix/m² moyen des appartements de la commune (2 852 €/m², MeilleursAgents 01/09/2026) et 44 % sous la moyenne DVF 2025 des appartements (3 654 €/m² sur 88 ventes). Même en appliquant une décote de bloc de 30 %, le prix affiché reste sous la valeur. C'est le premier des trois dossiers du week-end à être affiché sous sa valeur."
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 285000.0,
+          "haute_euros": 350000.0,
+          "retenue_euros": 315000.0,
+          "source": "Deux méthodes convergent vers le haut. (1) Capitalisation : les 24 000 € de loyers annuels, après 5 % de vacance, 3 000 € de taxe foncière estimée, entretien, assurance et provision travaux, laissent 17 250 € de revenu net avant impôt — soit un rendement brut de marché de 7,5 à 8 % pour un immeuble de rapport de quatre lots, ce qui vaut 300 000 à 320 000 €. (2) Comparaison : les appartements de Solliès-Pont se traitent à 2 852 €/m² (MeilleursAgents), 2 950 €/m² en médiane DVF et 3 654 €/m² en moyenne 2025 sur 88 ventes ; les 160 m² valorisés à 2 852 €/m² donnent 456 000 € en vente à l'unité, soit environ 320 000 € après une décote de bloc de 30 %. Valeur retenue 315 000 € (1 969 €/m²), fourchette 285 000 à 350 000 €. Le prix affiché (1 638 €/m²) est donc 17 % SOUS la valeur retenue.",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "T2 n° 1",
+            "quantite": 1,
+            "loyer_mensuel_euros": 500.0,
+            "occupe": true,
+            "note": "Répartition par lot non communiquée : l'annonce donne un total de 2 000 €/mois pour quatre T2, soit 500 € en moyenne. Bail en cours."
+          },
+          {
+            "lot": "T2 n° 2",
+            "quantite": 1,
+            "loyer_mensuel_euros": 500.0,
+            "occupe": true,
+            "note": "Idem — 500 €/mois en moyenne. 12,5 €/m² sur les 160 m² annoncés, contre 15,3 €/m² de moyenne communale : c'est 18 % sous le marché, et c'est au moins autant un potentiel qu'un signal d'alerte sur l'état réel des lots."
+          },
+          {
+            "lot": "T2 n° 3",
+            "quantite": 1,
+            "loyer_mensuel_euros": 500.0,
+            "occupe": true,
+            "note": "Idem. Comparables locatifs relevés le 20/09/2026 à Solliès-Pont : 546 € (27 m²), 659 € CC, 682 € CC, 685 € CC, 730 € (43 m² meublé), 840 € (56 m² meublé avec parking). Un T2 de 40 m² à 500 € est en bas de fourchette."
+          },
+          {
+            "lot": "T2 n° 4",
+            "quantite": 1,
+            "loyer_mensuel_euros": 500.0,
+            "occupe": true,
+            "note": "Idem. Baux non communiqués : dates, échéances, type et dépôts à obtenir avant toute offre."
+          }
+        ],
+        "notes": "Loyers en place 2 000 €/mois, soit 24 000 €/an et 9,16 % brut sur le prix affiché — le meilleur rendement brut des trois dossiers du week-end (7,46 % à Pignans, 5,2 % sur les loyers retenus à Brignoles). Les quatre logements sont loués : le revenu est acquis au premier jour. Le loyer affiché ressort à 12,5 €/m² sur les 160 m² annoncés, contre 15,3 €/m² de moyenne communale (MeilleursAgents) : il y a donc un potentiel de revalorisation d'environ 18 % — soit 360 €/mois, 4 320 €/an et une soixantaine de milliers d'euros de capacité de prix à 8 % — mais il n'est encaissable qu'à la rotation, bail par bail, et il peut aussi signifier que les lots sont en dessous du marché pour de bonnes raisons (petites surfaces, état). Le prix d'offre se cale sur les 2 000 € encaissés, jamais sur le potentiel."
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 2.0,
+        "vacance_worst_pct": 12.0,
+        "vacance_justification": "Taux par défaut de la branche résidentielle (5 % / 2 % / 12 %) : les quatre logements sont loués et le marché locatif local est liquide (28 annonces en ligne, 88 ventes d'appartements par an, 12 000 habitants, gare à 12 minutes de Toulon). La vacance worst à 12 % tient compte du turnover d'un immeuble de quatre lots — quatre baux, donc quatre occasions de vacance — et non d'un marché déprimé.",
+        "frais_acquisition_euros": 20960.0,
+        "frais_divers_euros": 0.0,
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 3000.0,
+          "taxe_fonciere_commentaire": "ESTIMATION 3 000 €/an — aucune taxe foncière n'est communiquée. Solliès-Pont pratique un taux de taxe foncière sur le bâti de 49,51 % en 2025, l'un des plus élevés du Var : le poste doit être vérifié sur l'avis réel avant toute offre. Si la valeur locative cadastrale de l'immeuble est élevée, la taxe peut atteindre 4 000 à 5 000 €/an, soit jusqu'à 20 % des loyers bruts : ce serait le premier poste de charge.",
+          "charges_copro_annuelles_euros": 0.0,
+          "charges_copro_commentaire": "Immeuble présumé en monopropriété (aucun syndic, aucune copropriété, aucun appel de fonds mentionné) : pas de charges de copropriété. À CONFIRMER — si l'immeuble est en copropriété, compter 1 800 à 2 800 €/an.",
+          "pno_annuelle_euros": 450.0,
+          "pno_commentaire": "Assurance de l'immeuble et de ses quatre logements.",
+          "entretien_annuel_euros": 1500.0,
+          "entretien_commentaire": "Entretien d'un bâti de 1900 sur quatre niveaux : cage d'escalier, façade, couverture, évacuations. En monopropriété, le propriétaire porte tout.",
+          "comptabilite_annuelle_euros": 0.0,
+          "comptabilite_commentaire": "Aucune ligne de comptabilité : le poste est mutualisé sur la SCI existante (convention du groupe)."
+        }
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Conservation avec les quatre baux en place, rafraîchissement à la rotation",
+          "code": "ld-nue",
+          "lots": 4
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Conservation avec les quatre baux en place",
+            "lots": 4,
+            "rendement": "5,1 % net sur le revient / 5,1 % sur la valeur",
+            "faisabilite": "immédiate — revenus acquis au premier jour, travaux étalés à la rotation",
+            "risque": "faible — le prix affiché est 17 % sous la valeur retenue"
+          },
+          {
+            "strategie": "Conservation avec revalorisation des loyers à la rotation",
+            "lots": 4,
+            "rendement": "5,5 % net sur le revient avec +18 % de loyer",
+            "faisabilite": "étalée sur 2 à 4 ans, bail par bail",
+            "risque": "moyen — les baux en cours ne se révèlent qu'à l'IRL jusqu'à leur terme"
+          },
+          {
+            "strategie": "Revente à la découpe des quatre T2",
+            "lots": 4,
+            "rendement": "marge brute d'environ 30 000 €",
+            "faisabilite": "division en copropriété à créer (état descriptif de division et règlement)",
+            "risque": "élevé — 10 000 € et 6 à 9 mois de procédure, et le prix au détail se paie sur la durée dans une commune de 12 000 habitants"
+          },
+          {
+            "strategie": "Location meublée des quatre T2",
+            "lots": 4,
+            "rendement": "+10 à 15 % de loyer, charges de gestion en hausse",
+            "faisabilite": "immédiate",
+            "risque": "moyen — le marché local compte des meublés (annonces à 730 et 840 € pour 43 et 56 m²) mais le turnover et la gestion quadruplent"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 8,
+            "justification": "Double atout rare : Solliès-Pont a sa <strong>gare TER</strong> (trajets directs vers Toulon en une douzaine de minutes, vers Hyères et Carnoules) et se trouve à quelques minutes de l'A57. Beaucoup de communes de la vallée du Gapeau n'ont ni l'un ni l'autre. C'est ce qui alimente la demande locative."
+          },
+          {
+            "dimension": "commerces",
+            "score": 7,
+            "justification": "Bourg actif de 12 000 habitants avec commerces de proximité, marché, services de santé et administrations ; grande distribution à La Farlède et La Garde à moins de 10 minutes."
+          },
+          {
+            "dimension": "ecoles",
+            "score": 7,
+            "justification": "Groupes scolaires, collège sur la commune et lycées à Toulon ou La Garde ; la vallée du Gapeau est un secteur familial, ce qui soutient la demande sur des T2 comme sur des maisons."
+          },
+          {
+            "dimension": "securite",
+            "score": 7,
+            "justification": "Commune résidentielle de la première couronne toulonnaise, sans quartier prioritaire, avec un centre ancien entretenu — la rue photographiée dans l'annonce présente des façades propres et des volets repeints."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 7,
+            "justification": "Marché liquide pour une commune de cette taille : 88 ventes d'appartements en 2025, 28 annonces locatives en ligne, 12 000 habitants et la gare à 12 minutes de Toulon. Les T2 se relouent, avec des loyers constatés entre 546 et 840 € CC."
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 6,
+            "justification": "Économie agricole (plaine des Solliès, cerises) et résidentielle, adossée à l'emploi toulonnais. Prix des appartements en hausse sur dix ans (+28 %) mais repli de 0,6 % sur un an et construction neuve à l'arrêt (1 logement autorisé en 2026) : marché stable, sans fièvre."
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Rafraîchissement non chiffré — deux logements d'états très différents",
+            "severite": 3,
+            "detail": "L'annonce annonce un « rafraîchissement à prévoir », sans montant. Les photographies montrent un logement déjà refait (cuisine américaine, comptoir-bar, menuiseries PVC double vitrage, carrelage récent) et un autre resté dans son jus (tomettes d'origine, menuiseries bois simple vitrage, câblage apparent, convecteurs anciens). Provision retenue 30 000 €, fourchette 20 000 à 60 000 € : l'écart vaut 40 000 € de prix. À engager à la rotation, donc étalé — c'est le point favorable du dossier."
+          },
+          {
+            "facteur": "Aucune surface par lot, aucun plan",
+            "severite": 2,
+            "detail": "Les 160 m² annoncés n'ont pas de ventilation Carrez : on ne sait pas si les quatre T2 font 30, 40 ou 45 m² chacun. Cela change le loyer au m² réel (12,5 €/m² sur 160 m², mais 16,7 €/m² si la surface habitable n'est que de 120 m²) et la valeur de revente à l'unité. À exiger avant toute offre."
+          },
+          {
+            "facteur": "Taxe foncière inconnue dans une commune à taux élevé",
+            "severite": 3,
+            "detail": "Aucune taxe foncière n'est annoncée. Solliès-Pont applique un taux sur le bâti de 49,51 % en 2025, parmi les plus élevés du Var. Sur l'ordre de grandeur d'un immeuble de 160 m² loué 24 000 €/an, le poste peut aller de 3 000 à 5 000 €/an selon la valeur locative cadastrale — soit jusqu'à 20 % des loyers bruts. C'est la première ligne à vérifier : chaque 1 000 € d'écart vaut 80 €/mois de cash flow."
+          },
+          {
+            "facteur": "Facture énergétique annoncée de 3 030 à 4 130 €/an",
+            "severite": 3,
+            "detail": "Chauffage par convecteurs électriques anciens sur un bâti de 1900 (visibles sur deux photographies), pour une facture annoncée de 3 030 à 4 130 €/an pour l'immeuble — soit environ 750 à 1 030 € par logement. Le DPE D n'impose aucune contrainte avant 2034, mais ce niveau de charge pèse sur l'attractivité locative et sur la rotation : c'est un argument de rénovation, donc une dépense à provisionner."
+          },
+          {
+            "facteur": "Baux non communiqués",
+            "severite": 2,
+            "detail": "Quatre baux en cours, aucun détail : ni dates, ni échéances, ni type, ni dépôts de garantie, ni répartition des loyers entre les lots. L'annonce ne donne qu'un total de 2 000 €/mois. Or tout le dossier repose sur ces baux, et la revalorisation de 18 % identifiée ne s'encaissera qu'à leur terme."
+          },
+          {
+            "facteur": "Bâti de 1900 : aucun diagnostic structure ni couverture",
+            "severite": 3,
+            "detail": "Aucun diagnostic technique (structure, couverture, charpente, amiante, plomb, termites, électricité, gaz) n'accompagne l'annonce, alors que le bâti est de 1900 et sur quatre niveaux. Le DPE seul ne dit rien de la toiture, qui est la dépense qui ne se négocie pas. À faire vérifier lors de la visite des combles ou du dernier niveau."
+          },
+          {
+            "facteur": "Loyer inférieur de 18 % au marché : potentiel ou signal",
+            "severite": 2,
+            "detail": "2 000 €/mois pour 160 m², soit 12,5 €/m², contre 15,3 €/m² de moyenne communale. Deux lectures : soit les loyers ont été fixés il y a plusieurs années et il y a 4 000 à 5 000 €/an à récupérer à la rotation, soit les logements sont petits et en état moyen, et le loyer reflète leur valeur. Les deux lectures ne donnent pas le même prix."
+          },
+          {
+            "facteur": "Dossier d'information très mince",
+            "severite": 1,
+            "detail": "Quatre photographies, aucune charge, aucune taxe foncière, aucun bail, aucun diagnostic, aucune surface par lot, et un intermédiaire qui est un agent commercial isolé (eXp Realty, RSAC Toulon 791 286 644). La qualité du dossier ne préjuge pas de celle du bien, mais elle impose de tout vérifier avant de s'engager."
+          },
+          {
+            "facteur": "Statut de copropriété non confirmé",
+            "severite": 1,
+            "detail": "L'annonce ne dit pas si l'immeuble est en monopropriété ou en copropriété. Quatre lots et un appartement par palier plaident pour la monopropriété, donc pour l'absence de charges et d'appels de fonds. À confirmer : si une copropriété existe, c'est 1 800 à 2 800 €/an de charges en plus et un syndic à subir."
           }
         ]
       },
