@@ -3,7 +3,7 @@
     "schema": "analyses-v2-entrees",
     "generated_at": "2026-09-10T00:00:00+00:00",
     "source": "saisie-agent",
-    "count": 62
+    "count": 63
   },
   "analyses": [
     {
@@ -7654,6 +7654,227 @@
             "facteur": "Annonce dont une photographie est retouchée",
             "severite": 1,
             "detail": "L'image du séjour porte la mention « photographie retouchée » : le rendu annoncé n'est pas l'état réel de la pièce. Ni la nature ni l'ampleur de la retouche ne sont précisées. Ce n'est pas un vice, mais cela impose de vérifier l'état réel de chaque pièce en visite, et de ne fonder aucun chiffrage sur les photographies."
+          }
+        ]
+      },
+      "champs_manquants": []
+    },
+    {
+      "slug": "2026-09-21-maison-ancienne-gare-meyrargues",
+      "date_analyse": "2026-09-21",
+      "date_maj": null,
+      "titre": "Meyrargues — ancienne gare du village, 185 m² en deux logements, 231 000 €",
+      "bien": {
+        "type_bien": "maison",
+        "sous_type": null,
+        "type_detail": "Ancienne gare du village, aujourd'hui divisée en deux logements indépendants. 185 m² habitables et 185 m² Carrez annoncés, 6 pièces, 5 chambres, deux niveaux, deux parkings, un jardin et une terrasse, sur un terrain de 250 m². Bâti de 1930, un mur mitoyen, exposition est-ouest, chauffage individuel, copropriété NON. DPE E, GES B. L'agence écrit elle-même que « cette maison nécessite une rénovation complète » et la destine aux « amateurs de lieux atypiques, de pierres chargées d'âme et de projets ambitieux ». Aucun plan, aucun devis, aucun diagnostic technique joint, et le terrain de 250 m² interdit toute extension.",
+        "neuf": false,
+        "adresse": {
+          "texte": "Meyrargues (13650), cœur du village, à 15 minutes d'Aix-en-Provence et 20 minutes de Cadarache — adresse exacte non communiquée",
+          "ville": "Meyrargues",
+          "code_postal": "13650"
+        },
+        "surfaces": {
+          "texte": "185 m² habitables annoncés, 185 m² Carrez annoncés, 6 pièces, 5 chambres, deux niveaux",
+          "carrez_m2": 185.0
+        },
+        "lots": {
+          "count": 2,
+          "surface_par_lot_m2": null,
+          "nature": "Deux logements indépendants dans un même volume : l'ancienne gare du village, aujourd'hui aménagée en deux unités d'habitation sur deux niveaux",
+          "lots_distincts": 2
+        },
+        "copro": {
+          "charges_annuelles_euros": 0.0,
+          "charges_source": "Copropriété NON (fiche agence Expertimo et SeLoger) : pas de charges de copropriété. En contrepartie, il n'existe aucune division juridique en deux lots — vendre un seul des deux logements exigerait un état descriptif de division chez le notaire, de l'ordre de 5 000 à 10 000 €, plus une vérification de conformité au PLU"
+        },
+        "travaux": {
+          "montant_euros": 166500.0,
+          "nature": "« Rénovation complète » annoncée par l'agence, sans devis, sans nature détaillée et sans diagnostic technique joint. Provision retenue 166 500 €, soit 900 €/m², au milieu de la fourchette 600 à 1 000 €/m² d'une rénovation lourde : électricité, plomberie, chauffage et eau chaude, isolation, menuiseries, deux cuisines et deux salles d'eau, sols, peintures, couverture et charpente à vérifier. Les deux repères du groupe encadrent ce chiffre : 1 200 €/m² pour une rénovation complète, soit 222 000 €, et 400 à 540 €/m² pour une simple remise au standard de vente, soit 74 000 à 100 000 €. L'écart entre ces deux hypothèses vaut à lui seul 120 000 € de prix d'achat. À ajouter : le passif énergétique du DPE E, dont l'interdiction de location tombe en 2034, soit une valeur actuelle nette de 19 000 € (25 000 € dans 8 ans à 3,5 %)."
+        }
+      },
+      "annonce": {
+        "plateforme": "leboncoin",
+        "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3202017908",
+        "prix_affiche_euros": 231000.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche",
+        "prix_commentaire": "231 000 €, soit 1 249 €/m² sur les 185 m² annoncés, honoraires intégralement à la charge du vendeur, 18 480 € de frais de notaire estimés à 8 %, soit 249 480 € au total. L'annonce porte la mention « baisse de prix » et affiche 215 favoris : c'est un bien déjà repositionné. Le prix facial est spectaculairement bas, 2,6 à 2,9 fois sous la moyenne communale des maisons (3 642 €/m² en DVF 2025 pour immovrai, 3 240 €/m² pour PAP). Mais cet écart n'est pas une décote : c'est le prix d'un bien à rénover complètement, en DPE E, avec un terrain de 250 m² seulement et une mitoyenneté, dans une commune dont les prix reculent de 8 à 15 % sur un an. La question n'est pas de savoir si le prix est bas, mais si les travaux et la revente laissent une marge."
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 425000.0,
+          "haute_euros": 540000.0,
+          "retenue_euros": 481000.0,
+          "source": "Ancrage sur les transactions DVF de même nature, jamais sur la moyenne communale. Maisons vendues à Meyrargues entre octobre et décembre 2025 : 92 m² (4 pièces) à 268 000 € soit 2 913 €/m² ; 104 m² (4 pièces) à 460 000 € soit 4 423 €/m² ; 112 m² (5 pièces) à 420 000 € soit 3 750 €/m² ; 109 m² (4 pièces) à 500 000 € soit 4 587 €/m² ; 88 m² à 450 000 € soit 5 114 €/m² ; 87 m² à 413 250 € soit 4 750 €/m². Ces villas disposent de terrains de 350 à 1 800 m², quand ce bien n'en a que 250, et aucune transaction n'existe dans la tranche 157 à 213 m². Le prix au m² décroît avec la surface : la valeur retenue applique donc une décote de surface et de terrain aux villas de 104 à 112 m², soit 2 600 €/m² et 481 000 € pour 185 m². Fourchette de 425 000 € (2 297 €/m², marché qui continue de reculer) à 540 000 € (2 919 €/m², revente bien exécutée sur un bien atypique qui trouve son amateur). Contexte : moyenne communale des maisons 3 642 €/m² (immovrai 2025) et 3 240 €/m² (PAP 2026), 41 ventes de maisons par an, délai moyen de vente 84 jours, et un prix qui recule de 8,3 % sur un an (immovrai) à 15,2 % (PAP).",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "Logement 1 (environ 95 m², un niveau)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 1000.0,
+            "occupe": false,
+            "note": "Le bien n'est pas loué aujourd'hui : ces loyers sont des loyers retenus, pas des loyers en place. 1 000 € pour un T4 d'environ 95 m², sur la base des maisons relouées dans le secteur : 2 462 € CC pour 150 m² (villa contemporaine, soit 16,4 €/m²), 1 610 € pour 152 m² (10,6 €/m², SIAB IMMO à Meyrargues), 1 700 € pour 115 m² à Villelaure. Le loyer médian DHUP de la commune ressort à 15,81 €/m² toutes surfaces confondues, mais il est mécaniquement tiré vers le haut par les petites surfaces."
+          },
+          {
+            "lot": "Logement 2 (environ 90 m², un niveau)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 850.0,
+            "occupe": false,
+            "note": "850 € pour un T3/T4 d'environ 90 m², soit 10,7 €/m². Le total des deux logements atteint 1 850 €/mois, soit 22 200 €/an et 9,6 % brut sur le prix affiché : c'est ce que fait apparaître l'annonce. Mais rapporté à un prix de revient de 399 480 € après 150 000 € de travaux, le rendement net après IS tombe à 3,2 % de la valeur et 3,9 % du revient, et le cash flow est négatif de près de 1 000 €/mois sous crédit. Le locatif ne porte pas ce dossier."
+          }
+        ],
+        "revente": {
+          "prix_euros": 481000.0,
+          "frais_vente_euros": 24050.0,
+          "duree_mois": 18,
+          "portage_mensuel_euros": 1500.0
+        },
+        "notes": "Revente retenue à 481 000 €, la valeur marché retenue, avec 5 % d'honoraires (24 050 €) et 18 mois de portage à 1 500 €/mois (financing intégral du revient à 3,8 % plus taxe foncière, assurance et comptabilité)."
+      },
+      "hypotheses": {
+        "vacance_base_pct": 6.0,
+        "vacance_best_pct": 3.0,
+        "vacance_worst_pct": 12.0,
+        "vacance_justification": "Taux de vacance au-dessus du défaut résidentiel (5 %) pour deux raisons : le marché de la location de maisons est étroit à Meyrargues, et le bien est composé de deux logements qu'il faut relouer séparément, ce qui double la surface de vacance possible. Le taux pessimiste à 12 % correspond à la perte d'un logement pendant près de deux mois par an, ou au basculement en un seul bail avec un changement de locataire annuel.",
+        "frais_acquisition_euros": 18480.0,
+        "frais_divers_euros": 0.0,
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 2200.0,
+          "taxe_fonciere_commentaire": "ESTIMATION 2 200 €/an, la taxe n'est pas communiquée. Meyrargues applique un taux communal sur le bâti de 34,70 % en 2025 (TEOM 14,00 %), en hausse de 0,1 point depuis 2021. Le calcul part d'une valeur locative cadastrale de l'ordre de 6 000 € pour 185 m² anciens sur deux niveaux, à confirmer sur l'avis réel. Fourchette 1 800 à 2 800 €/an : chaque 500 € d'écart vaut 42 €/mois de cash flow, et sur un dossier où la marge se compte en dizaines de milliers, c'est un poste secondaire mais pas neutre.",
+          "charges_copro_annuelles_euros": 0.0,
+          "charges_copro_commentaire": "Copropriété NON, donc aucune charge de copropriété. C'est une simplification réelle, mais elle a une contrepartie : aucune division juridique en deux lots n'existe, et la revente d'un seul logement imposerait de la créer.",
+          "pno_annuelle_euros": 600.0,
+          "pno_commentaire": "Assurance du propriétaire non occupant pour une maison ancienne de 185 m² avec jardin et deux logements, à ajuster si une occupation personnelle s'ajoute.",
+          "entretien_annuel_euros": 1500.0,
+          "entretien_commentaire": "Entretien d'une maison de 1930 sur deux niveaux : couverture et gouttières, façades, menuiseries, évacuations. Poste plus lourd qu'un appartement, mais qui reste inférieur au vrai enjeu du dossier, les travaux de rénovation.",
+          "comptabilite_annuelle_euros": 0.0,
+          "comptabilite_commentaire": "Aucune ligne de comptabilité : le poste est mutualisé sur la SCI existante (convention du groupe)."
+        }
+      },
+      "analyse": {
+        "branche": "mdb",
+        "type_operation": "mdb",
+        "strategie_retenue": {
+          "nom": "Achat, rénovation complète et revente en marchand de biens",
+          "code": "mdb",
+          "lots": 2
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Marchand de biens : rénovation complète puis revente",
+            "lots": 2,
+            "rendement": "ROI net de 2,9 % en scénario de base (revient 415 980 € pour 481 000 € de revente), −16,2 % en pessimiste, +26,8 % en optimiste",
+            "faisabilite": "18 mois de travaux et de portage avec un suivi de chantier",
+            "risque": "élevé — toute la marge dépend du coût réel d'une rénovation complète que l'agence annonce sans le chiffrer"
+          },
+          {
+            "strategie": "Location des deux logements indépendants",
+            "lots": 2,
+            "rendement": "3,2 % net de la valeur et 3,9 % du prix de revient, cash flow négatif de 940 €/mois sous crédit",
+            "faisabilite": "immédiate après rénovation, mais elle aussi conditionnée au budget travaux",
+            "risque": "faible sur l'exécution, rédhibitoire sur l'économie : le loyer ne couvre pas le service de la dette"
+          },
+          {
+            "strategie": "Colocation de cinq chambres",
+            "lots": 1,
+            "rendement": "4,2 % net de la valeur pour 2 350 €/mois de loyers, net après IS de 20 075 €/an",
+            "faisabilite": "immédiate après rénovation et ameublement des cinq chambres",
+            "risque": "moyen — c'est la variante locative la plus rentable, sans être suffisante pour couvrir le crédit, et elle impose une gestion locative active"
+          },
+          {
+            "strategie": "Revente du seul logement rénové, conservation de l'autre",
+            "lots": 2,
+            "rendement": "la vente d'environ 92 m² à 2 600 €/m² dégage quelque 227 000 € net d'honoraires, qui effacent la plus grande part de la dette",
+            "faisabilite": "12 à 24 mois, et seulement après création d'un état descriptif de division et vérification de conformité au PLU",
+            "risque": "élevé — la division juridique n'existe pas, et le prix de la revente d'un demi-bien atypique n'est étayé par aucune transaction comparable"
+          },
+          {
+            "strategie": "Usage personnel : résidence de caractère",
+            "lots": 1,
+            "rendement": "hors doctrine : aucune rentabilité, l'arbitrage porte sur le coût d'usage et non sur le rendement",
+            "faisabilite": "immédiate, au rythme de la rénovation",
+            "risque": "faible sur l'exécution, nul au regard des critères du parc"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 6,
+            "justification": "Le bien se situe à 15 minutes d'Aix-en-Provence et 20 minutes de Cadarache, sur l'axe de la vallée de la Durance, avec l'autoroute A51 à proximité immédiate. Mais c'est un village de 3 426 habitants où la voiture est indispensable, et l'ancienne gare du village n'est plus desservie : elle donne son nom au bien, pas un service. La proximité de la ligne ferroviaire est même un point à vérifier (bruit, servitudes). Attractif pour un actif travaillant à Aix, Cadarache ou dans la vallée."
+          },
+          {
+            "dimension": "commerces",
+            "score": 6,
+            "justification": "Village provençal vivant avec les commerces de proximité nécessaires au quotidien, marchés, écoles et services. Pour les besoins plus larges, Pertuis est à une dizaine de minutes et Aix-en-Provence à quinze. Le bassin commercial n'est pas un frein pour un bien destiné à une résidence principale familiale."
+          },
+          {
+            "dimension": "ecoles",
+            "score": 7,
+            "justification": "École sur la commune, collèges et lycées à Pertuis et surtout à Aix-en-Provence, qui concentre le principal bassin scolaire du secteur. Pour un acheteur familial, la carte scolaire est un argument de revente réel, dans un village où 89 % des logements sont des résidences principales et où 68 % du parc est constitué de maisons."
+          },
+          {
+            "dimension": "securite",
+            "score": 7,
+            "justification": "Commune résidentielle de la périphérie aixoise, 62 % de propriétaires, aucun quartier prioritaire, une délinquance de zone rurale ou périurbaine. Le profil recherché par un bien atypique de ce type, un acheteur cherchant le calme et le caractère, y trouve exactement ce qu'il vient chercher."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 5,
+            "justification": "C'est le point faible : 38 % de locataires seulement, un marché de la location de maisons étroit, et des loyers constatés modestes au regard de la valeur des biens (1 610 € pour 152 m², 2 462 € CC pour 150 m²). Le bassin d'emploi d'Aix et de Cadarache soutient la demande de location, mais celle-ci se porte sur des logements de taille moyenne, pas sur 185 m² en deux unités."
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 5,
+            "justification": "Économie portée par l'emploi aixois et l'activité du site de Cadarache, dans une commune dont la population progresse lentement. Attention au signal de marché : les prix des maisons reculent de 8,3 % sur un an selon immovrai et de 15,2 % selon PAP, avec 41 ventes de maisons par an pour 1 244 maisons, et une construction neuve autorisée en recul de 68 % entre 2021 et 2025. Un village qui vend une quarantaine de maisons par an écoule lentement un bien de 185 m² atypique."
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Rénovation complète annoncée sans le moindre chiffre",
+            "severite": 4,
+            "detail": "L'agence écrit noir sur blanc que « cette maison nécessite une rénovation complète », sans devis, sans nature de travaux détaillée, sans plan et sans diagnostic technique joint. La fourchette réaliste pour 185 m² va de 600 à 1 200 €/m², soit 111 000 à 222 000 €. L'écart entre les deux bornes vaut plus de 110 000 € de prix d'achat : c'est la variable qui décide de tout le dossier, et elle est inconnue."
+          },
+          {
+            "facteur": "Marge marchand de biens négative au prix affiché",
+            "severite": 4,
+            "detail": "En scénario de base, avec 166 500 € de travaux et une revente à 481 000 €, le prix de revient atteint 415 980 €, la plus-value nette après IS n'est que de 11 874 € et le ROI de 2,9 % sur 18 mois, soit environ 1,9 % par an. En scénario pessimiste, la perte est de 63 000 €. Pour dégager 20 % de ROI avec 150 000 € de travaux, il faudrait acheter 143 900 €, soit 38 % sous l'affichage. Le prix demandé n'est pas une décote, c'est un prix qui intègre déjà les travaux sans laisser de marge."
+          },
+          {
+            "facteur": "DPE E, interdiction de location en 2034 et facture de 3 990 à 5 450 €/an",
+            "severite": 3,
+            "detail": "Le diagnostic publié sur SeLoger donne un DPE E avec un GES B. La facture énergétique annoncée par l'annonce elle-même, entre 3 990 et 5 450 €/an, soit 21 à 29 €/m²/an, est celle d'un bâti non isolé. Un DPE E n'est pas une passoire aujourd'hui, mais la location devient interdite en 2034 : le passif se chiffre à 19 000 € de valeur actuelle nette pour passer en D, et plus si les murs et les menuiseries doivent être repris. Un DPE E avec un GES B oriente vers l'isolation plutôt que vers le chauffage, c'est-à-dire vers le poste le plus cher."
+          },
+          {
+            "facteur": "Aucun comparable direct dans la tranche de surface",
+            "severite": 3,
+            "detail": "Les transactions maison de Meyrargues récentes portent sur 87 à 112 m², avec des terrains de 350 à 1 800 m². Aucune ne se situe dans la tranche 157 à 213 m², et le prix au m² décroît fortement avec la surface. La valeur de 481 000 € est donc une extrapolation, pas un constat : elle applique une décote de surface et de terrain à des villas bien plus petites et mieux dotées. À 425 000 €, le dossier ne laisse déjà plus aucune marge."
+          },
+          {
+            "facteur": "Ancienne gare : voie ferrée, bruit et servitudes à vérifier",
+            "severite": 3,
+            "detail": "Le bien est l'ancienne gare du village : il est par construction au contact de l'emprise ferroviaire. Trois points à vérifier avant toute offre : le niveau de bruit de la ligne et sa fréquentation, l'existence de servitudes ou d'une emprise SNCF non purgée, et les projets d'aménagement de la ligne susceptibles d'affecter le bien. C'est le type de contrainte qui explique une partie de la décote, et qui peut aussi expliquer la durée de mise en vente."
+          },
+          {
+            "facteur": "Marché en recul et bien atypique : le risque est celui du délai",
+            "severite": 3,
+            "detail": "Les prix des maisons reculent de 8,3 % sur un an (immovrai) à 15,2 % (PAP), la commune compte 1 244 maisons pour 41 ventes par an, et le délai moyen de vente affiché est de 84 jours. Un bien de 185 m² atypique, qui s'adresse à des « amateurs de lieux chargés d'âme », élargit le prix mais réduit la clientèle : dans les deux scénarios, c'est le temps qui coûte, puisque 1 500 € de portage mensuel et une décote de marché annuelle de 8 % pèsent sur des millions de centimes."
+          },
+          {
+            "facteur": "Terrain de 250 m² pour 185 m² habitables",
+            "severite": 2,
+            "detail": "Le terrain est de 250 m², dont la maison occupe la plus grande part : le jardin est un espace résiduel, il n'y a ni piscine ni possibilité d'extension, et le mur mitoyen limite les possibilités. Pour un bien à 185 m² dont l'acheteur naturel est une famille venue chercher de l'espace, c'est un handicap structurel qui explique aussi pourquoi le bien s'affiche à ce prix et se destine à un acheteur sensible au caractère plutôt qu'à l'espace."
+          },
+          {
+            "facteur": "Deux logements sans division juridique existante",
+            "severite": 2,
+            "detail": "L'agence indique « copropriété NON » : les deux logements existent physiquement mais aucun état descriptif de division ne les sépare juridiquement. Toute stratégie de revente d'un seul logement suppose donc de créer la division (notaire, 5 000 à 10 000 €, six à neuf mois) et de vérifier la conformité au PLU. Cela pèse directement sur le scénario mixte, qui est pourtant l'un des seuls à pouvoir équilibrer le dossier."
+          },
+          {
+            "facteur": "Charges et taxe foncière inconnues, à confirmer",
+            "severite": 2,
+            "detail": "Aucune taxe foncière, aucune assurance et aucune charge ne sont communiquées. L'estimation de 2 200 €/an repose sur le taux communal de 34,70 % appliqué à une valeur locative cadastrale estimée. Le poste est secondaire au regard des travaux, mais il fait partie des informations à obtenir avant de faire une offre, au même titre que le devis de rénovation."
           }
         ]
       },
