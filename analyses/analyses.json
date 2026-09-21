@@ -3,7 +3,7 @@
     "schema": "analyses-v2-entrees",
     "generated_at": "2026-09-10T00:00:00+00:00",
     "source": "saisie-agent",
-    "count": 59
+    "count": 60
   },
   "analyses": [
     {
@@ -7009,6 +7009,216 @@
             "facteur": "Taxe foncière élevée au regard du loyer",
             "severite": 2,
             "detail": "2 619 €/an annoncés, soit 11 % des loyers bruts retenus, pour un immeuble de 196 m² sans ascenseur. C'est sous le seuil d'alerte de 15 %, mais l'avis réel doit être produit : une valeur locative cadastrale surévaluée sur un immeuble ancien se conteste, elle ne se subit pas."
+          }
+        ]
+      },
+      "champs_manquants": []
+    },
+    {
+      "slug": "2026-09-20-immeuble-rapport-pignans-centre-village",
+      "date_analyse": "2026-09-20",
+      "date_maj": null,
+      "titre": "Pignans — immeuble de rapport 3 T2 (147 m² Carrez) vendu loué, cœur du village",
+      "bien": {
+        "type_bien": "immeuble",
+        "sous_type": null,
+        "type_detail": "Immeuble de rapport R+3 au cœur du village de Pignans, vendu LOUÉ, commercialisé par une étude notariale (LMVE 16 NOTAIRES, SELARL Ioos Solomon & Associés, Lagny-sur-Marne — réf. 77073-51). Trois T2 en étages, superficie Carrez totale 147,08 m² : logement 1 au 1er étage (48,6 m² — séjour-cuisine, une chambre, salle d'eau avec WC) ; logement 2 au 2e étage (49,82 m² — séjour-cuisine, deux chambres, WC, salle d'eau) ; logement 3 au 3e étage (48,66 m² — séjour-cuisine, une chambre, salle d'eau avec WC, terrasse tropézienne). DPE D / GES B. L'immeuble est en copropriété SANS SYNDIC : les parties communes sont gérées directement, et « quelques travaux sont en prévision sur les parties communes » selon l'étude notariale — sans montant. Une partie du rez-de-chaussée n'est pas exploitée et sert de cave aux locataires. Les trois lots sont loués (baux en cours, non communiqués) : 630 € + 550 € + 560 € = 1 740 €/mois charges comprises. SeLoger affiche par ailleurs un champ automatique « état : rénovation nécessaire », en contradiction avec la mention « logements en bon état général » de l'étude notariale.",
+        "neuf": false,
+        "adresse": {
+          "texte": "Cœur du village, Pignans (83790) — adresse exacte non communiquée",
+          "ville": "Pignans",
+          "code_postal": "83790"
+        },
+        "surfaces": {
+          "texte": "147,08 m² Carrez (48,6 + 49,82 + 48,66) — 150 m² annoncés. Partie de rez-de-chaussée non exploitée : surface non communiquée",
+          "carrez_m2": 147.08
+        },
+        "lots": {
+          "count": 3,
+          "surface_par_lot_m2": null,
+          "nature": "3 T2 en étages (48,6 / 49,82 / 48,66 m²) + terrasse tropézienne au 3e + partie de RDC non exploitée",
+          "lots_distincts": 3
+        },
+        "copro": {
+          "charges_annuelles_euros": 900.0,
+          "charges_source": "ESTIMATION, aucune charge n'est communiquée dans l'annonce. L'immeuble est en copropriété sans syndic : sont à budgéter l'assurance des parties communes, l'électricité, le nettoyage de la cage d'escalier et l'entretien courant, soit 900 €/an pour trois lots (300 €/lot/an). Si la quote-part des trois lots est de 100 % des millièmes, l'intégralité des travaux sur parties communes nous revient — ce que la provision de travaux ci-dessous suppose. À faire préciser par l'état descriptif de division et les derniers comptes."
+        },
+        "travaux": {
+          "montant_euros": 20000.0,
+          "nature": "« Quelques travaux en prévision sur les parties communes » (étude notariale), sans montant ni nature. Les photographies montrent une façade marquée (crépi noirci et salpêtre en pied de façade autour des portes, volets écaillés, câbles apparents) et les murs de la terrasse tropézienne très dégradés au-dessus d'un sol refait : ravalement, traitement des remontées d'humidité en pied de façade, réfection de la cage d'escalier et provision pour la couverture. Enveloppe retenue 20 000 € pour l'ensemble de l'immeuble (≈ 136 €/m² Carrez), fourchette 15 000 à 40 000 €. À l'intérieur, un des logements photographiés montre des réseaux apparents, un convecteur vétuste et des traces d'humidité : ces reprises relèvent de la rotation des locataires et ne sont pas budgétées ici — elles sont provisionnées par le poste « provision travaux » récurrent du compte d'exploitation."
+        }
+      },
+      "annonce": {
+        "plateforme": "seloger",
+        "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/pignans-83790/26KYRRDV2G3R",
+        "prix_affiche_euros": 280000.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche",
+        "prix_commentaire": "280 000 €, honoraires à la charge du vendeur, soit 1 867 €/m² sur les 150 m² annoncés ou 1 904 €/m² sur les 147,08 m² Carrez. Vente notariale (Immobilier.notaires®, étude LMVE 16 NOTAIRES à Lagny-sur-Marne) : le vendeur est probablement une indivision ou une succession, géré depuis l'Île-de-France, sur un bien situé dans le Var — configuration qui laisse généralement de la place à une négociation chiffrée, mais aussi qui signifie que le vendeur ne connaît pas les travaux des parties communes."
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 240000.0,
+          "haute_euros": 290000.0,
+          "retenue_euros": 260000.0,
+          "source": "Trois sources convergentes. (1) MeilleursAgents au 01/09/2026 : 2 020 €/m² en moyenne communale pour les appartements et 12,4 €/m²/mois de loyer. (2) DVF 2025 : 2 264 €/m² en moyenne (18 ventes d'appartements sur un an — marché très étroit), avec des transactions réelles à 2 098 €/m² (56 m², Grande Rue), 2 907 €/m² (21 m², place Mazel) et 3 464 €/m² (78 m², Saint-Esprit) ; PAP retient 2 150 €/m². (3) Par capitalisation : les 20 880 € de loyers annuels, chargés et pondérés d'une vacance de 5 %, laissent un revenu net avant impôt de 16 439 € ; à 6,3 % de rendement net avant impôt, cela vaut 260 000 €. Valeur retenue 260 000 €, soit 1 768 €/m² Carrez : une décote de 12 % sur le prix/m² des appartements de la commune, qui paie l'absence de décote de bloc réelle et la profondeur du marché local. Fourchette 240 000 à 290 000 €. Le prix affiché (1 904 €/m²) est donc AU NIVEAU du marché — pas au-dessus, mais sans marge.",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "T2 de 48,6 m² (1er étage)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 630.0,
+            "occupe": true,
+            "note": "12,96 €/m² CC — au-dessus de la moyenne communale de 12,4 €/m². Bail en cours (non communiqué). Peu de revalorisation à espérer à court terme : révision à l'IRL uniquement."
+          },
+          {
+            "lot": "T2 de 49,82 m² (2e étage, deux chambres)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 550.0,
+            "occupe": true,
+            "note": "11,04 €/m² CC — le lot le moins cher au m² alors qu'il compte deux chambres, format rare dans le village. C'est ici que se situe la seule revalorisation documentée : à 12,4 €/m², il vaut 618 €, soit +68 €/mois. Inencaissable avant la rotation : bail en cours."
+          },
+          {
+            "lot": "T2 de 48,66 m² (3e étage, terrasse tropézienne)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 560.0,
+            "occupe": true,
+            "note": "11,51 €/m² CC. Terrasse tropézienne : argument de relocation réel, mais aussi le lot le plus exposé (dernier étage, étanchéité et couverture à vérifier). Bail en cours."
+          }
+        ],
+        "notes": "Loyers en place 1 740 €/mois charges comprises, soit 20 880 €/an et 7,46 % brut sur le prix affiché — 11,83 €/m², contre 12,4 €/m² de moyenne communale (MeilleursAgents 09/2026). Les trois lots sont loués : le revenu est acquis au premier jour, ce qui est l'atout principal du dossier, mais il n'y a pas de marge immédiate — les loyers sont DÉJÀ au prix du marché, et un bail en cours ne se révise qu'à l'IRL. Potentiel identifiable à la rotation : +68 €/mois sur le T2 de 49,82 m² (550 € → 618 € au prix du marché), soit 816 €/an et environ 8 000 € de capacité de prix. Annonces locatives relevées le 20/09/2026 dans le secteur : 560 € (33 m²), 615 € (31 m² à Gonfaron), 650 € (T3 66 m²), 680 €, 708 € (63 m²), 820 € (T3) — seulement 9 à 12 annonces en ligne à Pignans : le marché locatif est réel mais peu profond."
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 2.0,
+        "vacance_worst_pct": 12.0,
+        "vacance_justification": "Taux par défaut de la branche résidentielle (5 % / 2 % / 12 %), sans écart : les trois logements sont loués, les loyers sont au prix du marché et les baux sont en cours. Le Worst à 12 % correspond à un départ suivi d'une relocation lente — le marché local ne compte que 9 à 12 annonces de location et 18 ventes d'appartements par an, donc une relocation de T2 peut prendre plusieurs mois. Le risque n'est pas la vacance structurelle, c'est la profondeur du marché.",
+        "frais_acquisition_euros": 22400.0,
+        "frais_divers_euros": 0.0,
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 1075.0,
+          "taxe_fonciere_commentaire": "Montant annoncé par l'étude notariale : 1 075 €/an, soit 5,1 % des loyers bruts — très raisonnable, bien en dessous du seuil d'alerte de 15 %. À confirmer sur l'avis réel.",
+          "charges_copro_annuelles_euros": 900.0,
+          "charges_copro_commentaire": "ESTIMATION 900 €/an (300 €/lot/an) : assurance des parties communes, électricité, nettoyage et entretien courant d'une copropriété sans syndic. Aucun chiffre n'est communiqué dans l'annonce — à obtenir avec l'état descriptif de division et les derniers appels de fonds.",
+          "pno_annuelle_euros": 300.0,
+          "pno_commentaire": "Assurance propriétaire non occupant pour trois lots (100 €/lot).",
+          "entretien_annuel_euros": 600.0,
+          "entretien_commentaire": "Entretien courant : cage d'escalier, désenfumage, petites reprises sur les parties communes.",
+          "comptabilite_annuelle_euros": 0.0,
+          "comptabilite_commentaire": "Aucune ligne de comptabilité : la SCI porte déjà d'autres biens, le poste est mutualisé (convention du groupe)."
+        }
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Conservation avec les trois baux en place, revalorisation du lot sous-loué à la rotation",
+          "code": "ld-nue",
+          "lots": 3
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Conservation avec les trois baux en place",
+            "lots": 3,
+            "rendement": "4,8 % net sur le revient / 5,9 % sur la valeur",
+            "faisabilite": "immédiate, revenus acquis au premier jour",
+            "risque": "faible — mais aucune marge : loyers déjà au prix du marché"
+          },
+          {
+            "strategie": "Exploitation de la partie de rez-de-chaussée non utilisée",
+            "lots": 4,
+            "rendement": "potentiel non chiffrable",
+            "faisabilite": "à instruire (surface inconnue, accès, PLU)",
+            "risque": "moyen — surface non communiquée, usage à valider ; ne doit pas entrer dans le prix"
+          },
+          {
+            "strategie": "Revente à la découpe des trois T2",
+            "lots": 3,
+            "rendement": "marge négative d'environ 32 000 €",
+            "faisabilite": "simple : les lots sont déjà distincts en copropriété",
+            "risque": "rédhibitoire — les 309 000 € de revente au détail ne couvrent pas le prix de revient"
+          },
+          {
+            "strategie": "Location meublée des trois T2",
+            "lots": 3,
+            "rendement": "+10 à 15 % de loyer, mais vacance et turnover accrus",
+            "faisabilite": "immédiate",
+            "risque": "élevé — le profil locataire local (actifs, familles) n'est pas un profil meublé, et le village ne compte que 9 à 12 annonces locatives"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 7,
+            "justification": "Atout réel et rare pour un village de 3 000 habitants : Pignans a sa gare, desservie par le TER sur l'axe Toulon–Carnoules–Saint-Raphaël. Accès A57 par Carnoules et Le Luc. Toulon et Saint-Raphaël à moins d'une heure, Hyères à 35 minutes."
+          },
+          {
+            "dimension": "commerces",
+            "score": 6,
+            "justification": "Cœur de village commerçant (commerces de proximité, marché, école, services publics) — le bien est « au cœur du village », ce qui est exactement l'emplacement qui se reloue. Moins dense toutefois qu'une sous-préfecture."
+          },
+          {
+            "dimension": "ecoles",
+            "score": 5,
+            "justification": "École primaire sur la commune ; collèges et lycées à Gonfaron, Besse-sur-Issole ou Le Luc. Demande familiale réelle mais modeste pour des T2."
+          },
+          {
+            "dimension": "securite",
+            "score": 6,
+            "justification": "Village rural du pied des Maures, pas de quartier prioritaire. 12 % de logements vacants sur la commune : le centre ancien se dégrade lentement, sans tension particulière."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 6,
+            "justification": "Demande locative réelle (27 % de locataires, 81 % de résidences principales, desserte ferroviaire attractive pour les actifs), mais marché étroit : 9 à 12 annonces à louer et 19 % seulement de logements collectifs sur 2 247 logements."
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 5,
+            "justification": "Prix en progression sur la commune (+12,4 % sur un an selon PAP, appartements +9,6 % sur un an en DVF) dans un secteur en croissance résidentielle ; mais 18 ventes d'appartements par an seulement et une construction neuve à l'arrêt (3 logements autorisés en 2026). Marché peu liquide."
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Loyers déjà au prix du marché — aucune marge d'entrée",
+            "severite": 3,
+            "detail": "1 740 €/mois pour 147,08 m² Carrez, soit 11,83 €/m² contre 12,4 €/m² de moyenne communale. Le dossier s'achète donc en capitalisant le loyer existant : il n'y a pas de valeur locative cachée à révéler, seulement 68 €/mois à récupérer sur un lot à la rotation (soit environ 8 000 € de capacité de prix). C'est une opération de rendement, pas de redressement."
+          },
+          {
+            "facteur": "Copropriété sans syndic et travaux sur parties communes non chiffrés",
+            "severite": 3,
+            "detail": "L'étude notariale annonce « quelques travaux en prévision sur les parties communes » sans montant, et la copropriété n'a pas de syndic : personne n'a voté de budget, personne ne porte la dépense, et il n'y a pas de procès-verbal d'assemblée générale à consulter. Les photos montrent une façade marquée (salpêtre en pied de mur, volets écaillés, câbles apparents) et des murs de terrasse dégradés. Provision retenue 20 000 € (fourchette 15 000 à 40 000 €) : c'est le principal aléa chiffrable du dossier."
+          },
+          {
+            "facteur": "Marché local très étroit",
+            "severite": 4,
+            "detail": "18 ventes d'appartements par an à Pignans, 9 à 12 annonces de location en ligne, 2 247 logements dont 19 % seulement d'appartements : la liquidité est faible des deux côtés. Un lot vide peut mettre plusieurs mois à se relouer, et la revente d'un immeuble entier dans un village de 3 000 habitants se compte en trimestres, voire en années. C'est ce qui justifie la vacance pessimiste à 12 % et la décote de valeur retenue."
+          },
+          {
+            "facteur": "Baux non communiqués",
+            "severite": 2,
+            "detail": "L'annonce donne les loyers mais aucune date de bail, aucune échéance, aucun type (nu/meublé), aucune clause de révision et aucun dépôt de garantie. Or tout le prix repose sur ces baux : un bail précaire ou une échéance imminente change la nature du dossier, notamment pour le lot à 550 € dont la revalorisation est le seul potentiel."
+          },
+          {
+            "facteur": "Façade et pied de mur — humidité ascensionnelle",
+            "severite": 3,
+            "detail": "Les photographies montrent des traces de salpêtre et un crépi décollé autour des portes du rez-de-chaussée, ainsi que des coulures sous les fenêtres. Sur un bâti ancien de village, ce type de désordre remonte souvent à l'absence de coupure de capillarité : le traitement est coûteux et n'est pas une simple peinture. À faire chiffrer par un maçon avant toute offre."
+          },
+          {
+            "facteur": "Risque inondation — porter à connaissance du 15 avril 2025",
+            "severite": 2,
+            "detail": "La préfecture du Var a notifié à Pignans un porter à connaissance inondation du 15 avril 2025 sur le bassin versant du Gapeau : un plan de prévention du risque inondation est en préparation, sans être approuvé à ce jour. Aucune contrainte immédiate sur un bâtiment existant, mais un PPRi approuvé peut modifier les règles d'urbanisme et l'assurabilité. À suivre."
+          },
+          {
+            "facteur": "Lot du 3e étage sous toiture, avec terrasse",
+            "severite": 2,
+            "detail": "Le logement 3 est au dernier étage, sous une terrasse tropézienne dont le sol a été refait mais dont les murs périphériques sont très dégradés. L'étanchéité et la couverture conditionnent la valeur du lot le plus cher à relouer : à vérifier impérativement (relevés, traces d'infiltration)."
+          },
+          {
+            "facteur": "Contradiction sur l'état du bien",
+            "severite": 2,
+            "detail": "L'étude notariale écrit « logements en bon état général » ; la fiche SeLoger affiche un champ automatique « état : rénovation nécessaire » et l'une des photographies montre des réseaux apparents, un convecteur électrique vétuste et des traces d'humidité dans une pièce d'eau. La réalité est probablement intermédiaire — bon état locatif, finitions anciennes — mais elle doit être vue, lot par lot."
           }
         ]
       },
