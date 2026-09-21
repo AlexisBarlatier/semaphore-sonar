@@ -20,6 +20,7 @@
   - 240 mois — taux débiteur fixe **3,80 %** — intérêts 23 874,19 € + assurance 3 102,00 € — frais de garanties 843 € + dossier 500 € — coût total du crédit 28 319,19 € — **TAEG estimatif 4,40 %**
   - 180 mois — taux débiteur fixe **3,60 %** — intérêts 16 404,77 € + assurance 1 994,48 € — mêmes frais — coût total du crédit 19 742,25 € — **TAEG estimatif 4,25 %**
   - Classées dans `Financement/2026-09-15_Simulation-credit_Credit-Mutuel-{180,240}-mois-56kEUR.pdf`
+  - RDV téléphonique avec M. Filidei fixé au **15/09/2026 à 16h** (proposé le 11/09 par la banque, confirmé par Alexis le 11/09 08h46) — origine de ces simulations. Depuis : aucune trace d'offre de prêt formelle dans la boîte SCI.
 - À COMPLETER : offre de prêt formelle, assurance emprunteur (quotité, TAEA 0,45-0,49 %), garantie retenue (hypothèque de 1er rang demandée)
 
 ## Revenus / charges (hypothèses retenues 10/09/2026)

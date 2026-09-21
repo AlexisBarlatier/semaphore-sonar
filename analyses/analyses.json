@@ -3,7 +3,7 @@
     "schema": "analyses-v2-entrees",
     "generated_at": "2026-09-10T00:00:00+00:00",
     "source": "saisie-agent",
-    "count": 61
+    "count": 62
   },
   "analyses": [
     {
@@ -7441,6 +7441,219 @@
             "facteur": "Statut de copropriété non confirmé",
             "severite": 1,
             "detail": "L'annonce ne dit pas si l'immeuble est en monopropriété ou en copropriété. Quatre lots et un appartement par palier plaident pour la monopropriété, donc pour l'absence de charges et d'appels de fonds. À confirmer : si une copropriété existe, c'est 1 800 à 2 800 €/an de charges en plus et un syndic à subir."
+          }
+        ]
+      },
+      "champs_manquants": []
+    },
+    {
+      "slug": "2026-09-21-maison-cuers-les-bousquets",
+      "date_analyse": "2026-09-21",
+      "date_maj": null,
+      "titre": "Cuers — ensemble atypique deux niveaux (115 m²), 199 000 €",
+      "bien": {
+        "type_bien": "maison",
+        "sous_type": null,
+        "type_detail": "Ensemble atypique dans une copropriété de 4 lots, à l'entrée de Cuers, au calme d'une impasse. Deux niveaux de vie : au premier, une entrée desservant une pièce pouvant servir de chambre ou de bureau, un salon, deux chambres et une salle d'eau avec WC ; un escalier intérieur mène à une vaste remise. Au niveau supérieur, accessible par les parties communes, un second espace de vie complet avec salon, salle à manger, cuisine et salle d'eau avec WC. Des combles aménageables complètent l'ensemble. 115 m² annoncés au total, 5 pièces, 3 chambres. « Des travaux de rénovation sont à prévoir » selon l'annonce, sans montant. Les photographies montrent des intérieurs habitables mais d'états inégaux : un séjour refait (parquet chevron, murs blancs) dont l'image porte la mention « photographie retouchée », une salle à manger rustique en tomettes de terre cuite avec poutre apparente, et une chambre carrelée avec fenêtre à petits bois et persiennes. Aucun DPE n'est publié : l'agence le déclare « non soumis ».",
+        "neuf": false,
+        "adresse": {
+          "texte": "Cuers (83390), quartier Les Rayols - Saint Lazare - Les Bousquets, à l'entrée de la commune — adresse exacte non communiquée",
+          "ville": "Cuers",
+          "code_postal": "83390"
+        },
+        "surfaces": {
+          "texte": "115 m² annoncés pour l'ensemble, sans ventilation par niveau ni surface Carrez : la part habitable, celle de la remise et celle des combles ne sont pas distinguées",
+          "carrez_m2": 115.0
+        },
+        "lots": {
+          "count": 2,
+          "surface_par_lot_m2": null,
+          "nature": "Deux espaces de vie indépendants sur deux niveaux, chacun avec ses sanitaires, reliés par l'escalier intérieur et par les parties communes",
+          "lots_distincts": 2
+        },
+        "copro": {
+          "charges_annuelles_euros": 700.0,
+          "charges_source": "Copropriété de 4 lots, tous d'habitation, sans procédure en cours (annonce SeLoger et fiche Laforêt). Aucun montant de charges n'est communiqué. Provision retenue 700 €/an pour le ou les lots vendus, sur la base d'une copropriété de quatre lots avec parties communes et cage d'escalier : à CONFIRMER sur le budget prévisionnel et les appels de fonds. La copropriété existe : c'est une charge certaine, à la différence d'une monopropriété"
+        },
+        "travaux": {
+          "montant_euros": 35000.0,
+          "nature": "« Des travaux de rénovation sont à prévoir » (annonce), non chiffrés, sans devis ni diagnostic technique. Provision retenue 35 000 €, soit environ 300 €/m², pour remettre l'ensemble en état de location sur deux logements : reprise de l'électricité, chauffage ou production d'eau chaude, peintures et sols, cuisine à créer au premier niveau, salles d'eau à moderniser. Fourchette 20 000 à 60 000 € selon la profondeur. À ajouter si le DPE s'avère F ou G : 25 000 à 40 000 € de rénovation énergétique, avec interdiction de louer dès 2028 pour un F et depuis 2025 pour un G. L'aménagement des combles, qui est le vrai levier de valorisation, est un chantier distinct à chiffrer à part"
+        }
+      },
+      "annonce": {
+        "plateforme": "seloger",
+        "url": "https://www.seloger.com/annonces/achat/maison/cuers-83/les-rayols-saint-lazare-les-bousquets/259991513.htm",
+        "prix_affiche_euros": 199000.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche",
+        "prix_commentaire": "199 000 €, honoraires à la charge du vendeur, soit 1 730 €/m² sur les 115 m² annoncés. Le chiffre paraît spectaculairement bas : la moyenne communale des maisons ressort à 3 477 €/m² (MeilleursAgents 01/09/2026) et 3 576 €/m² en moyenne DVF 2025. Mais cette moyenne est tirée par les petites surfaces et les villas récentes. La transaction réellement comparable, une maison de 115 m² et 4 pièces vendue le 19 décembre 2025, s'est traitée à 182 000 €, soit 1 583 €/m². À 1 730 €/m², le bien est donc AU NIVEAU du marché de sa catégorie, pas 50 % en dessous. C'est le premier point que l'annonce fait mal lire, et il change tout le raisonnement"
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 180000.0,
+          "haute_euros": 230000.0,
+          "retenue_euros": 200000.0,
+          "source": "Comparaison directe d'abord, c'est la seule méthode solide ici : 115 m² à 1 583 €/m² en décembre 2025 (Rue Raoul Dufy, même surface), 127 m² à 1 941 €/m² (Rue de Verdun), 71 m² à 2 746 €/m² (Le Village). Le prix au m² décroît fortement avec la surface à Cuers : la médiane communale, autour de 3 600 €/m², est calculée sur des lots bien plus petits. Pour 115 m² anciens avec travaux, la fourchette pertinente est 1 600 à 2 000 €/m², soit 180 000 à 230 000 €. Valeur retenue 200 000 € (1 739 €/m²). À ce niveau, le prix affiché est donc exactement à la valeur : ni décote, ni prime. Le seul élément qui pourrait justifier une valeur supérieure est l'aménagement des combles, dont la surface n'est pas communiquée : chaque m² aménagé coûte de l'ordre de 1 000 à 1 400 € et vaut 1 700 à 2 000 € au m², mais c'est un chantier à financer et à autoriser",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "Logement inférieur (entrée, salon, deux chambres, bureau, salle d'eau)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 850.0,
+            "occupe": false,
+            "note": "Le bien est vendu libre, aucun loyer n'est encaissé aujourd'hui : ces loyers sont des loyers retenus, pas des loyers en place. 850 € pour un logement de type T3/T4 d'un niveau, sur la base des maisons relouées à Cuers (1 180 € pour 90 m², 1 250 € CC pour 85 m², 1 050 € pour 76 m²). Attention : le premier niveau n'a pas de cuisine décrite, il faut en créer une pour le louer en logement autonome"
+          },
+          {
+            "lot": "Logement supérieur (salon, salle à manger, cuisine, salle d'eau)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 600.0,
+            "occupe": false,
+            "note": "600 € pour un T2/T3 complet, dont le loyer au m² est mécaniquement plus élevé que celui d'une maison entière (14,7 €/m² de moyenne communale pour les appartements). Ce niveau a sa propre cuisine et ses sanitaires, et son accès se fait par les parties communes : la division en deux logements est structurellement possible, c'est l'argument de vente de l'annonce"
+          }
+        ],
+        "notes": "Aucun loyer en place : le vendeur ne loue pas, ou vend libre. Les loyers retenus totalisent 1 450 €/mois, soit 17 400 €/an et 8,7 % brut sur le prix affiché, 12,6 €/m² sur les 115 m² annoncés. Le point critique est que ce total suppose DEUX logements loués séparément : en un seul bail, le marché local d'une maison de village de ce type ressort plutôt autour de 1 250 à 1 300 €/mois, soit 8 à 12 % de moins. Toute la rentabilité du dossier tient donc à la faisabilité de la division, et elle dépend de trois inconnues : la création d'une cuisine au premier niveau, l'accord que le règlement de copropriété donne à deux locations distinctes, et l'autorisation d'urbanisme si des travaux modifient les accès. Faute de l'une des trois, le dossier retombe sur le scénario pessimiste"
+      },
+      "hypotheses": {
+        "vacance_base_pct": 6.0,
+        "vacance_best_pct": 3.0,
+        "vacance_worst_pct": 12.0,
+        "vacance_justification": "Taux un peu au-dessus du défaut résidentiel (5 %) parce qu'il s'agit d'une maison et non d'un immeuble de rapport : le marché de la location de maisons à Cuers est étroit (136 ventes de maisons par an, mais peu d'annonces locatives de cette taille), et un logement qui se libère met plus longtemps à retrouver preneur qu'un T2. La vacance pessimiste à 12 % correspond au basculement en un seul bail, avec un changement de locataire par an sur un parc d'un seul logement",
+        "frais_acquisition_euros": 15920.0,
+        "frais_divers_euros": 0.0,
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 1400.0,
+          "taxe_fonciere_commentaire": "ESTIMATION 1 400 €/an, la taxe n'est pas communiquée. Cuers pratique un taux de taxe foncière sur le bâti de 53,63 % en 2025 (plus 12,29 % de TEOM), en hausse de 1,9 point depuis 2021 : c'est l'un des taux les plus élevés du Var. Le calcul part d'une valeur locative cadastrale de l'ordre de 2 600 € pour 115 m² anciens, ce qui reste à confirmer sur l'avis réel. Fourchette 1 200 à 1 900 €/an selon la valeur locative : chaque 500 € d'écart vaut 42 €/mois de cash flow",
+          "charges_copro_annuelles_euros": 700.0,
+          "charges_copro_commentaire": "Copropriété de 4 lots, aucun montant communiqué, aucun procès-verbal d'assemblée, aucun budget prévisionnel. Provision 700 €/an pour quatre lots anciens avec parties communes et cage d'escalier, à confirmer. C'est une charge certaine puisqu'il y a bien une copropriété, contrairement au dossier de Solliès-Pont : elle est à vérifier avant toute offre, en même temps que les travaux votés et les appels de fonds à venir",
+          "pno_annuelle_euros": 450.0,
+          "pno_commentaire": "Assurance du logement, à ajuster si deux locations distinctes.",
+          "entretien_annuel_euros": 900.0,
+          "entretien_commentaire": "Entretien d'une maison ancienne de village : couverture, façade, évacuations, menuiseries. Pas de jardin mentionné, donc pas de charge d'extérieur",
+          "comptabilite_annuelle_euros": 0.0,
+          "comptabilite_commentaire": "Aucune ligne de comptabilité : le poste est mutualisé sur la SCI existante (convention du groupe)."
+        }
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Location nue sur deux logements indépendants, après remise en état",
+          "code": "ld-nue",
+          "lots": 2
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Location nue sur deux logements indépendants",
+            "lots": 2,
+            "rendement": "4,7 % net sur le prix de revient (9,3 % brut sur le prix affiché)",
+            "faisabilite": "immédiate après 35 000 € de travaux, dont une cuisine à créer au premier niveau",
+            "risque": "moyen — structurellement possible (deux sanitaires, deux accès), mais dépend du règlement de copropriété et du budget travaux"
+          },
+          {
+            "strategie": "Location nue en un seul bail familial",
+            "lots": 1,
+            "rendement": "3,7 % net sur le prix de revient (1 250 à 1 300 €/mois, soit 8 à 12 % de moins)",
+            "faisabilite": "immédiate, sans travaux de division",
+            "risque": "faible sur l'exécution, mais c'est le scénario qui ne couvre plus l'échéance bancaire"
+          },
+          {
+            "strategie": "Aménagement des combles puis location d'un troisième logement",
+            "lots": 3,
+            "rendement": "loyer supplémentaire de 600 à 700 €/mois pour 1 000 à 1 400 €/m² de travaux",
+            "faisabilite": "2 à 3 ans, permis ou déclaration préalable selon la nature des travaux",
+            "risque": "élevé — surface des combles non communiquée, hauteur sous plafond, structure et accès à vérifier, et accord de la copropriété nécessaire"
+          },
+          {
+            "strategie": "Revente après rénovation complète",
+            "lots": 2,
+            "rendement": "création de valeur de l'ordre de 15 à 25 % si travaux maîtrisés, à condition d'acheter autour de 155 000 €",
+            "faisabilite": "12 à 24 mois avec un artisan suivi",
+            "risque": "élevé — le prix au m² de revente pour 115 m² anciens à Cuers est établi à 1 583-1 941 €/m², la marge se joue donc entièrement sur le prix d'achat et sur le coût réel des travaux"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 7,
+            "justification": "Cuers dispose de sa <strong>gare TER (Cuers-Pierrefeu)</strong> sur la ligne de Toulon, avec des trajets directs de 20 à 30 minutes, et se situe à 17 km de Toulon par l'A57, soit une vingtaine de minutes. Pour un village de 9 000 à 10 000 habitants, c'est une desserte solide, qui alimente la demande des actifs travaillant dans l'agglomération toulonnaise."
+          },
+          {
+            "dimension": "commerces",
+            "score": 7,
+            "justification": "La commune compte un noyau commercial actif : commerces de proximité, restaurants, hypermarché et marchés (plus de 200 commerces recensés par l'agence). Cuers joue le rôle de bourg-centre pour la vallée du Gapeau et la plaine des Maures."
+          },
+          {
+            "dimension": "ecoles",
+            "score": 7,
+            "justification": "Une dizaine d'établissements et structures d'accueil, avec collège sur la commune et lycées à Toulon, La Garde ou La Farlède. Le profil attendu du locataire de ce bien est justement une famille, ou deux foyers distincts sur le même ensemble."
+          },
+          {
+            "dimension": "securite",
+            "score": 7,
+            "justification": "Commune résidentielle de 65 % de propriétaires, sans quartier prioritaire, avec un bâti de village et des lotissements récents. L'annonce situe le bien dans une impasse à l'entrée de la commune : c'est un argument de calme réel, à l'écart des axes."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 6,
+            "justification": "Le marché de la vente est liquide (136 ventes de maisons et 120 d'appartements en un an) mais celui de la location de maisons est étroit : les annonces de maisons se comptent en dizaines et les loyers constatés vont de 1 050 € (76 m²) à 1 250 € CC (85 m²), avec un point haut à 1 940 € CC (93 m²). C'est un marché de deux foyers modestes, pas de cadres."
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 6,
+            "justification": "Économie résidentielle et agricole adossée à l'emploi toulonnais, avec un solde démographique positif. Mais les prix des maisons reculent de 3,4 % sur un an et la construction neuve est à l'arrêt (1 logement autorisé en 2026, contre 536 depuis 2021) : marché stable, sans tension, ce qui protège la revente mais limite la plus-value."
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Aucun DPE publié, annonce et agence le déclarent « non soumis »",
+            "severite": 3,
+            "detail": "Le DPE est obligatoire pour toute vente d'un logement, et son absence dans l'annonce comme sa mention « non soumis » sur le site de l'agence sont anormales. C'est l'information la plus lourde du dossier : à Cuers, 3 % des logements diagnostiqués sont des passoires F ou G, mais la classe C y est la plus représentée et la construction médiane date de 1976, sur un bâti dont l'ancienneté n'est pas connue ici. Si le bien sort en F, la location devient interdite à compter de 2028 et il faut 25 000 à 40 000 € de rénovation énergétique : cela suffit à annuler la totalité de la marge. À exiger avant toute offre, avec la facture énergétique par logement."
+          },
+          {
+            "facteur": "Prix au m² illusoire : le bien est à sa valeur, pas en dessous",
+            "severite": 3,
+            "detail": "L'annonce s'affiche à 1 730 €/m² quand la moyenne communale des maisons est de 3 477 €/m² (MeilleursAgents) et la moyenne DVF 2025 de 3 576 €/m². La comparaison est trompeuse : le prix au m² s'effondre avec la surface dans cette commune, et la seule transaction comparable (115 m², quatre pièces, vendue en décembre 2025) s'est traitée à 182 000 €, soit 1 583 €/m². Le prix affiché est donc exactement à la valeur du marché de sa catégorie. Toute la négociation doit se construire là-dessus, et non sur une prétendue décote de 50 %."
+          },
+          {
+            "facteur": "Travaux de rénovation annoncés sans le moindre chiffre",
+            "severite": 3,
+            "detail": "« Des travaux de rénovation sont à prévoir », sans nature, sans devis, sans diagnostic technique. Les photographies montrent des intérieurs habitables mais datés par endroits (tomettes de terre cuite, carrelage, menuiseries), et l'une d'elles est explicitement retouchée. La fourchette 20 000 à 60 000 € vaut 40 000 € de prix d'achat : c'est la deuxième variable du dossier après le loyer."
+          },
+          {
+            "facteur": "Division en deux logements non validée",
+            "severite": 3,
+            "detail": "Le total de loyers retenu (1 450 €/mois) suppose deux locations distinctes. Or le premier niveau n'a pas de cuisine décrite (il faut la créer), et l'accès du niveau supérieur se fait par les parties communes : cela signifie que le règlement de copropriété et l'état descriptif de division doivent autoriser cette exploitation, sinon il faut y revenir par une assemblée. En un seul bail, le loyer retombe à 1 250-1 300 €/mois et le cash flow passe sous zéro."
+          },
+          {
+            "facteur": "Copropriété de 4 lots : charges, travaux votés et budget inconnus",
+            "severite": 2,
+            "detail": "La copropriété existe (4 lots, tous d'habitation, aucune procédure en cours), mais aucun montant de charges, aucun budget prévisionnel, aucun carnet d'entretien, aucun procès-verbal d'assemblée n'est communiqué. Sur un bâti ancien de village, un ravalement, une couverture ou une colonne d'évacuation se votent et se paient en quote-part. C'est le seul poste du dossier dont le montant ne se négocie pas après l'achat."
+          },
+          {
+            "facteur": "Surface habitable réelle inconnue",
+            "severite": 2,
+            "detail": "115 m² annoncés sans ventilation : ni surface par niveau, ni surface Carrez, ni plan. La part de la remise et celle des combles ne sont pas distinguées. Si l'habitable réel n'est que de 85 à 95 m², le loyer au m² des deux logements devient nettement supérieur à ce que le marché local paie, et la valeur de revente au m² se recalcule à la hausse sur une surface plus faible."
+          },
+          {
+            "facteur": "Taxe foncière inconnue dans une commune au taux parmi les plus élevés du Var",
+            "severite": 3,
+            "detail": "Aucune taxe foncière n'est communiquée. Cuers applique un taux communal sur le bâti de 53,63 % en 2025, en hausse de 1,9 point depuis 2021, et 12,29 % de TEOM. Sur 115 m² anciens, la fourchette réaliste va de 1 200 à 1 900 €/an, soit jusqu'à 11 % des loyers bruts. Chaque 500 € d'écart vaut 42 €/mois de cash flow : c'est la première pièce à obtenir."
+          },
+          {
+            "facteur": "Marché du locatif familial étroit pour un loyer de 1 450 €/mois",
+            "severite": 2,
+            "detail": "Les maisons relouées à Cuers se situent entre 1 050 € (76 m²) et 1 250 € CC (85 m²), avec un point haut isolé à 1 940 € CC. Un ensemble à 1 450 €/mois en deux logements doit trouver deux preneurs plutôt qu'un seul, ce qui double la vacance possible et exige des logements complets : cuisines, sanitaires, chauffage, à des niveaux de finition cohérents avec ces loyers."
+          },
+          {
+            "facteur": "Combles aménageables : le levier, mais aussi l'inconnue",
+            "severite": 2,
+            "detail": "L'annonce met en avant des combles aménageables, sans en donner la surface ni les contraintes. Hauteur sous plafond, structure, charpente, trémies et accès déterminent si le chantier coûte 800 ou 1 600 €/m² créé. C'est un vrai potentiel de valorisation (un troisième logement à 600-700 €/mois), mais il est interdit de l'intégrer au prix d'offre avant d'avoir vu les lieux et chiffré le chantier."
+          },
+          {
+            "facteur": "Annonce dont une photographie est retouchée",
+            "severite": 1,
+            "detail": "L'image du séjour porte la mention « photographie retouchée » : le rendu annoncé n'est pas l'état réel de la pièce. Ni la nature ni l'ampleur de la retouche ne sont précisées. Ce n'est pas un vice, mais cela impose de vérifier l'état réel de chaque pièce en visite, et de ne fonder aucun chiffrage sur les photographies."
           }
         ]
       },
