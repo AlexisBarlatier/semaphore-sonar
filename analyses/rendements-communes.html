@@ -14,132 +14,251 @@
   .yield-table tr:hover { background:#f8f7f6; }
   #yield-map { height:400px; border:1px solid var(--color-border); border-radius:var(--radius); margin:1.5rem 0; }
   .source-note { font-size:0.75rem; color:var(--color-text-muted); margin-top:2rem; }
-  @media(max-width:768px){ main{overflow-x:auto;} .yield-table{min-width:700px;} }
+  .encadre { border-left:3px solid var(--color-accent); background:#f8f7f6; padding:0.9rem 1.1rem; margin:1.5rem 0; font-size:0.9rem; }
+  @media(max-width:768px){ main{overflow-x:auto;} .yield-table{min-width:760px;} }
 </style>
 </head>
 <body>
 <header class="listing-hero">
   <h1>Sémaphore Sonar</h1>
-  <p class="hero-subtitle">Rendement locatif brut par commune — Bouches-du-Rhône (13) & Var (83)</p>
+  <p class="hero-subtitle">Rendement locatif brut par commune — Bouches-du-Rhône (13) &amp; Var (83)</p>
 </header>
 <main>
   <p style="color:var(--color-text-muted);margin-bottom:1rem;font-size:0.9rem;">
     Rendement brut = (loyer médian/m² × 12) / prix d'achat médian/m².
-    <br>Loyers : ANIL/SeLoger/LBC (T3 2025, charges comprises). Prix : DVF 2025 (min. 10 transactions).
+    <br>Loyers : ANIL/DHUP 2025, indicateur appartement (charges comprises). Prix : DVF 2025, mutations réelles, appartements uniquement, minimum 10 ventes.
     <br>Distance : à vol d'oiseau jusqu'à Marseille ou Cuers (le plus proche).
+    <br><strong>Colonne « est. »</strong> : le loyer de la commune n'est pas mesuré mais extrapolé par l'ANIL depuis les communes voisines (maillage). Le rendement affiché n'y repose sur aucun loyer constaté localement.
   </p>
-  
+
   <div id="yield-map"></div>
-  
+
+  <div class="encadre">
+    <strong>Ce que ça dit pour nos recherches.</strong> Notre doctrine est 5 % net d'IS après charges,
+    vacance et fiscalité, ce qui correspond empiriquement à environ 8 % brut sur le prix de revient.
+    Sur les 167 communes retenues, 7 dépassent 8 % brut,
+    62 se situent entre 6 et 8 %, et les autres sont hors jeu
+    au prix de marché. Le classement ci-dessous sert de filtre avant visite : au-dessus de 8 %, on instruit ;
+    entre 6 et 8 %, il faut que le prix d'achat décroche d'au moins 20 % ; en dessous, on passe.
+  </div>
+
+  <h2>Secteur de recherche</h2>
   <table class="yield-table">
-    <thead><tr><th>#</th><th>Commune</th><th>Prix/m²</th><th>Loyer/m²</th><th>Rendement brut</th><th>Distance</th><th>Ventes</th></tr></thead>
-    <tbody><tr><td>1</td><td>STE ANASTASIE SUR ISSOLE (83)</td><td>918 €</td><td>12.6 €</td><td><strong>16.5 %</strong></td><td>12 km</td><td>63</td></tr>
-<tr><td>2</td><td>FLASSANS-SUR-ISSOLE (83)</td><td>1,071 €</td><td>12.4 €</td><td><strong>13.9 %</strong></td><td>19 km</td><td>114</td></tr>
-<tr><td>3</td><td>BERRE L'ETANG (13)</td><td>1,340 €</td><td>14.5 €</td><td><strong>13.0 %</strong></td><td>26 km</td><td>112</td></tr>
-<tr><td>4</td><td>SEPTEMES LES VALLONS (13)</td><td>1,783 €</td><td>16.6 €</td><td><strong>11.2 %</strong></td><td>11 km</td><td>160</td></tr>
-<tr><td>5</td><td>ROGNAC (13)</td><td>2,033 €</td><td>15.9 €</td><td><strong>9.4 %</strong></td><td>24 km</td><td>167</td></tr>
-<tr><td>6</td><td>LE PUY SAINTE REPARADE (13)</td><td>2,358 €</td><td>15.8 €</td><td><strong>8.1 %</strong></td><td>41 km</td><td>92</td></tr>
-<tr><td>7</td><td>ESPARRON-DE-PALLIERES (83)</td><td>1,834 €</td><td>11.6 €</td><td><strong>7.6 %</strong></td><td>43 km</td><td>10</td></tr>
-<tr><td>8</td><td>MARSEILLE 3EME (13)</td><td>2,422 €</td><td>14.9 €</td><td><strong>7.4 %</strong></td><td>2 km</td><td>856</td></tr>
-<tr><td>9</td><td>CHARLEVAL (13)</td><td>2,173 €</td><td>13.2 €</td><td><strong>7.3 %</strong></td><td>788 km</td><td>41</td></tr>
-<tr><td>10</td><td>AUBAGNE (13)</td><td>2,647 €</td><td>15.4 €</td><td><strong>7.0 %</strong></td><td>16 km</td><td>789</td></tr>
-<tr><td>11</td><td>FOS-SUR-MER (13)</td><td>2,583 €</td><td>15.0 €</td><td><strong>7.0 %</strong></td><td>38 km</td><td>201</td></tr>
-<tr><td>12</td><td>FAYENCE (83)</td><td>2,649 €</td><td>15.5 €</td><td><strong>7.0 %</strong></td><td>66 km</td><td>195</td></tr>
-<tr><td>13</td><td>SIGNES (83)</td><td>2,180 €</td><td>12.8 €</td><td><strong>7.0 %</strong></td><td>18 km</td><td>62</td></tr>
-<tr><td>14</td><td>PLAN-D ORGON (13)</td><td>2,516 €</td><td>14.2 €</td><td><strong>6.8 %</strong></td><td>64 km</td><td>79</td></tr>
-<tr><td>15</td><td>ORGON (13)</td><td>2,211 €</td><td>12.5 €</td><td><strong>6.8 %</strong></td><td>67 km</td><td>37</td></tr>
-<tr><td>16</td><td>SAINT-MITRE-LES-REMPARTS (13)</td><td>2,662 €</td><td>14.8 €</td><td><strong>6.7 %</strong></td><td>34 km</td><td>98</td></tr>
-<tr><td>17</td><td>ALLEINS (13)</td><td>2,862 €</td><td>15.9 €</td><td><strong>6.7 %</strong></td><td>48 km</td><td>36</td></tr>
-<tr><td>18</td><td>BRIGNOLES (83)</td><td>2,337 €</td><td>13.1 €</td><td><strong>6.7 %</strong></td><td>19 km</td><td>411</td></tr>
-<tr><td>19</td><td>LAMBESC (13)</td><td>3,258 €</td><td>17.8 €</td><td><strong>6.6 %</strong></td><td>41 km</td><td>164</td></tr>
-<tr><td>20</td><td>SAINT-CANNAT (13)</td><td>2,998 €</td><td>16.5 €</td><td><strong>6.6 %</strong></td><td>36 km</td><td>122</td></tr>
-<tr><td>21</td><td>MONTFERRAT (83)</td><td>2,133 €</td><td>11.7 €</td><td><strong>6.6 %</strong></td><td>244 km</td><td>21</td></tr>
-<tr><td>22</td><td>CEYRESTE (13)</td><td>3,079 €</td><td>16.6 €</td><td><strong>6.5 %</strong></td><td>24 km</td><td>73</td></tr>
-<tr><td>23</td><td>BOUC-BEL-AIR (13)</td><td>3,423 €</td><td>18.2 €</td><td><strong>6.4 %</strong></td><td>18 km</td><td>164</td></tr>
-<tr><td>24</td><td>LA DESTROUSSE (13)</td><td>3,152 €</td><td>16.6 €</td><td><strong>6.3 %</strong></td><td>21 km</td><td>40</td></tr>
-<tr><td>25</td><td>SAINT-ANDIOL (13)</td><td>2,634 €</td><td>13.9 €</td><td><strong>6.3 %</strong></td><td>69 km</td><td>35</td></tr>
-<tr><td>26</td><td>ROUSSET (13)</td><td>3,270 €</td><td>17.3 €</td><td><strong>6.3 %</strong></td><td>81 km</td><td>90</td></tr>
-<tr><td>27</td><td>MARSEILLE 10EME (13)</td><td>3,106 €</td><td>16.0 €</td><td><strong>6.2 %</strong></td><td>4 km</td><td>1014</td></tr>
-<tr><td>28</td><td>MIRAMAS (13)</td><td>2,786 €</td><td>14.4 €</td><td><strong>6.2 %</strong></td><td>270 km</td><td>292</td></tr>
-<tr><td>29</td><td>SALERNES (83)</td><td>2,328 €</td><td>11.9 €</td><td><strong>6.2 %</strong></td><td>39 km</td><td>175</td></tr>
-<tr><td>30</td><td>LES MAYONS (83)</td><td>2,643 €</td><td>13.7 €</td><td><strong>6.2 %</strong></td><td>25 km</td><td>21</td></tr>
-<tr><td>31</td><td>LA CRAU (83)</td><td>3,080 €</td><td>15.9 €</td><td><strong>6.2 %</strong></td><td>10 km</td><td>239</td></tr>
-<tr><td>32</td><td>MARTIGUES (13)</td><td>3,033 €</td><td>15.5 €</td><td><strong>6.1 %</strong></td><td>29 km</td><td>727</td></tr>
-<tr><td>33</td><td>LA GARDE (83)</td><td>3,205 €</td><td>16.2 €</td><td><strong>6.1 %</strong></td><td>695 km</td><td>493</td></tr>
-<tr><td>34</td><td>LA BASTIDE (83)</td><td>3,004 €</td><td>15.0 €</td><td><strong>6.0 %</strong></td><td>68 km</td><td>11</td></tr>
-<tr><td>35</td><td>ROQUEFORT LA BEDOULE (13)</td><td>3,378 €</td><td>16.7 €</td><td><strong>5.9 %</strong></td><td>19 km</td><td>69</td></tr>
-<tr><td>36</td><td>MARSEILLE 9EME (13)</td><td>3,587 €</td><td>17.4 €</td><td><strong>5.8 %</strong></td><td>6 km</td><td>1098</td></tr>
-<tr><td>37</td><td>LA ROQUE D'ANTHERON (13)</td><td>2,982 €</td><td>14.4 €</td><td><strong>5.8 %</strong></td><td>47 km</td><td>78</td></tr>
-<tr><td>38</td><td>MARSEILLE 15EME (13)</td><td>2,993 €</td><td>14.3 €</td><td><strong>5.7 %</strong></td><td>5 km</td><td>746</td></tr>
-<tr><td>39</td><td>EGUILLES (13)</td><td>3,666 €</td><td>17.5 €</td><td><strong>5.7 %</strong></td><td>18 km</td><td>191</td></tr>
-<tr><td>40</td><td>LE LUC (83)</td><td>2,717 €</td><td>12.9 €</td><td><strong>5.7 %</strong></td><td>25 km</td><td>268</td></tr>
-<tr><td>41</td><td>LAMANON (13)</td><td>3,726 €</td><td>17.3 €</td><td><strong>5.6 %</strong></td><td>78 km</td><td>26</td></tr>
-<tr><td>42</td><td>LE THORONET (83)</td><td>3,107 €</td><td>14.4 €</td><td><strong>5.6 %</strong></td><td>30 km</td><td>88</td></tr>
-<tr><td>43</td><td>CLAVIERS (83)</td><td>2,534 €</td><td>11.7 €</td><td><strong>5.6 %</strong></td><td>57 km</td><td>32</td></tr>
-<tr><td>44</td><td>VINS-SUR-CARAMY (83)</td><td>2,555 €</td><td>12.0 €</td><td><strong>5.6 %</strong></td><td>23 km</td><td>20</td></tr>
-<tr><td>45</td><td>LANCON-PROVENCE (13)</td><td>3,305 €</td><td>15.3 €</td><td><strong>5.5 %</strong></td><td>38 km</td><td>147</td></tr>
-<tr><td>46</td><td>GIGNAC-LA-NERTHE (13)</td><td>3,635 €</td><td>16.6 €</td><td><strong>5.5 %</strong></td><td>15 km</td><td>123</td></tr>
-<tr><td>47</td><td>GARDANNE (13)</td><td>3,544 €</td><td>16.2 €</td><td><strong>5.5 %</strong></td><td>20 km</td><td>324</td></tr>
-<tr><td>48</td><td>VARAGES (83)</td><td>2,266 €</td><td>10.4 €</td><td><strong>5.5 %</strong></td><td>41 km</td><td>48</td></tr>
-<tr><td>49</td><td>ARTIGNOSC-SUR-VERDON (83)</td><td>2,556 €</td><td>11.8 €</td><td><strong>5.5 %</strong></td><td>52 km</td><td>21</td></tr>
-<tr><td>50</td><td>ROUGIERS (83)</td><td>2,894 €</td><td>13.1 €</td><td><strong>5.5 %</strong></td><td>25 km</td><td>40</td></tr>
-<tr><td>51</td><td>ARLES (13)</td><td>2,914 €</td><td>13.0 €</td><td><strong>5.4 %</strong></td><td>317 km</td><td>950</td></tr>
-<tr><td>52</td><td>TARASCON (13)</td><td>2,720 €</td><td>12.2 €</td><td><strong>5.4 %</strong></td><td>81 km</td><td>243</td></tr>
-<tr><td>53</td><td>MONTFORT SUR ARGENS (83)</td><td>2,628 €</td><td>11.7 €</td><td><strong>5.4 %</strong></td><td>27 km</td><td>34</td></tr>
-<tr><td>54</td><td>CALLAS (83)</td><td>2,663 €</td><td>12.0 €</td><td><strong>5.4 %</strong></td><td>55 km</td><td>71</td></tr>
-<tr><td>55</td><td>PLAN DE CUQUES (13)</td><td>3,975 €</td><td>17.5 €</td><td><strong>5.3 %</strong></td><td>9 km</td><td>143</td></tr>
-<tr><td>56</td><td>PORT-SAINT-LOUIS (13)</td><td>2,943 €</td><td>12.9 €</td><td><strong>5.3 %</strong></td><td>47 km</td><td>93</td></tr>
-<tr><td>57</td><td>LE CANNET DES MAURES (83)</td><td>3,228 €</td><td>14.3 €</td><td><strong>5.3 %</strong></td><td>28 km</td><td>122</td></tr>
-<tr><td>58</td><td>MARSEILLE 4EME (13)</td><td>3,581 €</td><td>15.5 €</td><td><strong>5.2 %</strong></td><td>3 km</td><td>1243</td></tr>
-<tr><td>59</td><td>LA FARE LES OLIVIERS (13)</td><td>3,636 €</td><td>15.6 €</td><td><strong>5.2 %</strong></td><td>32 km</td><td>135</td></tr>
-<tr><td>60</td><td>GAREOULT (83)</td><td>3,081 €</td><td>13.3 €</td><td><strong>5.2 %</strong></td><td>10 km</td><td>178</td></tr>
-<tr><td>61</td><td>MONS (83)</td><td>3,505 €</td><td>15.0 €</td><td><strong>5.2 %</strong></td><td>798 km</td><td>64</td></tr>
-<tr><td>62</td><td>GONFARON (83)</td><td>2,797 €</td><td>12.0 €</td><td><strong>5.2 %</strong></td><td>20 km</td><td>116</td></tr>
-<tr><td>63</td><td>COLLOBRIERES (83)</td><td>2,624 €</td><td>11.3 €</td><td><strong>5.2 %</strong></td><td>19 km</td><td>68</td></tr>
-<tr><td>64</td><td>VENELLES (13)</td><td>4,133 €</td><td>17.7 €</td><td><strong>5.1 %</strong></td><td>826 km</td><td>124</td></tr>
-<tr><td>65</td><td>TARADEAU (83)</td><td>3,399 €</td><td>14.4 €</td><td><strong>5.1 %</strong></td><td>38 km</td><td>52</td></tr>
-<tr><td>66</td><td>GEMENOS (13)</td><td>4,151 €</td><td>17.2 €</td><td><strong>5.0 %</strong></td><td>21 km</td><td>108</td></tr>
-<tr><td>67</td><td>LES PENNES MIRABEAU (13)</td><td>4,089 €</td><td>17.1 €</td><td><strong>5.0 %</strong></td><td>14 km</td><td>294</td></tr>
-<tr><td>68</td><td>CAMPS-LA-SOURCE (83)</td><td>2,874 €</td><td>12.0 €</td><td><strong>5.0 %</strong></td><td>17 km</td><td>51</td></tr>
-<tr><td>69</td><td>LA FARLEDE (83)</td><td>3,666 €</td><td>15.3 €</td><td><strong>5.0 %</strong></td><td>9 km</td><td>182</td></tr>
-<tr><td>70</td><td>SAINT-VICTORET (13)</td><td>4,169 €</td><td>17.1 €</td><td><strong>4.9 %</strong></td><td>17 km</td><td>86</td></tr>
-<tr><td>71</td><td>SAINT-ESTEVE-JANSON (13)</td><td>3,967 €</td><td>16.2 €</td><td><strong>4.9 %</strong></td><td>43 km</td><td>10</td></tr>
-<tr><td>72</td><td>PUGET-SUR-ARGENS (83)</td><td>3,950 €</td><td>16.2 €</td><td><strong>4.9 %</strong></td><td>55 km</td><td>213</td></tr>
-<tr><td>73</td><td>LES ARCS (83)</td><td>3,444 €</td><td>14.1 €</td><td><strong>4.9 %</strong></td><td>41 km</td><td>176</td></tr>
-<tr><td>74</td><td>MAZAUGUES (83)</td><td>3,077 €</td><td>12.5 €</td><td><strong>4.9 %</strong></td><td>17 km</td><td>20</td></tr>
-<tr><td>75</td><td>BRUE-AURIAC (83)</td><td>3,114 €</td><td>12.8 €</td><td><strong>4.9 %</strong></td><td>34 km</td><td>30</td></tr>
-<tr><td>76</td><td>ROQUEBRUSSANNE LA (83)</td><td>3,205 €</td><td>13.1 €</td><td><strong>4.9 %</strong></td><td>14 km</td><td>77</td></tr>
-<tr><td>77</td><td>COMPS-SUR-ARTUBY (83)</td><td>2,849 €</td><td>11.7 €</td><td><strong>4.9 %</strong></td><td>63 km</td><td>21</td></tr>
-<tr><td>78</td><td>SAINT CHAMAS (13)</td><td>3,624 €</td><td>14.6 €</td><td><strong>4.8 %</strong></td><td>39 km</td><td>145</td></tr>
-<tr><td>79</td><td>CORRENS (83)</td><td>2,678 €</td><td>10.7 €</td><td><strong>4.8 %</strong></td><td>28 km</td><td>41</td></tr>
-<tr><td>80</td><td>CABASSE (83)</td><td>2,824 €</td><td>11.2 €</td><td><strong>4.8 %</strong></td><td>24 km</td><td>67</td></tr>
-<tr><td>81</td><td>SEILLONS-SOURCE-D ARGENS (83)</td><td>3,399 €</td><td>13.5 €</td><td><strong>4.8 %</strong></td><td>32 km</td><td>58</td></tr>
-<tr><td>82</td><td>POURCIEUX (83)</td><td>3,635 €</td><td>14.7 €</td><td><strong>4.8 %</strong></td><td>35 km</td><td>43</td></tr>
-<tr><td>83</td><td>MARSEILLE 12EME (13)</td><td>4,389 €</td><td>17.2 €</td><td><strong>4.7 %</strong></td><td>8 km</td><td>1042</td></tr>
-<tr><td>84</td><td>PEYPIN (13)</td><td>4,196 €</td><td>16.5 €</td><td><strong>4.7 %</strong></td><td>19 km</td><td>79</td></tr>
-<tr><td>85</td><td>VINON-SUR-VERDON (83)</td><td>3,169 €</td><td>12.3 €</td><td><strong>4.7 %</strong></td><td>58 km</td><td>80</td></tr>
-<tr><td>86</td><td>FORCALQUEIRET (83)</td><td>3,372 €</td><td>13.2 €</td><td><strong>4.7 %</strong></td><td>11 km</td><td>93</td></tr>
-<tr><td>87</td><td>MEOUNES-LES-MONTRIEUX (83)</td><td>3,240 €</td><td>12.7 €</td><td><strong>4.7 %</strong></td><td>10 km</td><td>66</td></tr>
-<tr><td>88</td><td>PLAN-D AUPS SAINTE BAUME (83)</td><td>3,622 €</td><td>14.1 €</td><td><strong>4.7 %</strong></td><td>28 km</td><td>66</td></tr>
-<tr><td>89</td><td>SAINT-ANTONIN-DU-VAR (83)</td><td>3,056 €</td><td>11.9 €</td><td><strong>4.7 %</strong></td><td>35 km</td><td>35</td></tr>
-<tr><td>90</td><td>MARSEILLE 16EME (13)</td><td>4,178 €</td><td>16.1 €</td><td><strong>4.6 %</strong></td><td>9 km</td><td>273</td></tr>
-<tr><td>91</td><td>ENSUES-LA-REDONNE (13)</td><td>4,644 €</td><td>17.6 €</td><td><strong>4.6 %</strong></td><td>15 km</td><td>63</td></tr>
-<tr><td>92</td><td>VERNEGUES (13)</td><td>4,493 €</td><td>17.3 €</td><td><strong>4.6 %</strong></td><td>47 km</td><td>22</td></tr>
-<tr><td>93</td><td>PEYROLLES-EN-PROVENCE (13)</td><td>3,755 €</td><td>14.3 €</td><td><strong>4.6 %</strong></td><td>43 km</td><td>74</td></tr>
-<tr><td>94</td><td>SAINT-PAUL-LEZ-DURANCE (13)</td><td>3,077 €</td><td>11.8 €</td><td><strong>4.6 %</strong></td><td>51 km</td><td>23</td></tr>
-<tr><td>95</td><td>REGUSSE (83)</td><td>2,895 €</td><td>11.2 €</td><td><strong>4.6 %</strong></td><td>47 km</td><td>89</td></tr>
-<tr><td>96</td><td>BARJOLS (83)</td><td>2,889 €</td><td>11.1 €</td><td><strong>4.6 %</strong></td><td>36 km</td><td>116</td></tr>
-<tr><td>97</td><td>NANS-LES-PINS (83)</td><td>3,694 €</td><td>14.2 €</td><td><strong>4.6 %</strong></td><td>28 km</td><td>114</td></tr>
-<tr><td>98</td><td>BORMES-LES-MIMOSAS (83)</td><td>4,427 €</td><td>17.0 €</td><td><strong>4.6 %</strong></td><td>24 km</td><td>393</td></tr>
-<tr><td>99</td><td>CUERS (83)</td><td>3,587 €</td><td>13.9 €</td><td><strong>4.6 %</strong></td><td>0 km</td><td>279</td></tr>
-<tr><td>100</td><td>CADOLIVE (13)</td><td>4,285 €</td><td>15.9 €</td><td><strong>4.5 %</strong></td><td>18 km</td><td>26</td></tr>
-</tbody>
+    <thead><tr><th>Commune</th><th>Prix/m²</th><th>Loyer/m²</th><th>Rendement brut</th><th>Distance</th><th>Loyer</th><th>Ventes</th></tr></thead>
+    <tbody>
+<tr><td>DRAGUIGNAN</td><td>2 049 €</td><td>13.4 €</td><td><strong>7.8 %</strong></td><td>46 km</td><td>mesuré</td><td>474</td></tr>
+<tr><td>GONFARON</td><td>1 865 €</td><td>12.0 €</td><td><strong>7.7 %</strong></td><td>20 km</td><td>mesuré</td><td>22</td></tr>
+<tr><td>LE CANNET-DES-MAURES</td><td>2 246 €</td><td>14.3 €</td><td><strong>7.6 %</strong></td><td>28 km</td><td>mesuré</td><td>17</td></tr>
+<tr><td>CARCÈS</td><td>2 143 €</td><td>12.2 €</td><td><strong>6.8 %</strong></td><td>28 km</td><td>mesuré</td><td>21</td></tr>
+<tr><td>BRIGNOLES</td><td>2 325 €</td><td>13.1 €</td><td><strong>6.7 %</strong></td><td>17 km</td><td>mesuré</td><td>179</td></tr>
+<tr><td>LE LUC</td><td>2 313 €</td><td>12.9 €</td><td><strong>6.7 %</strong></td><td>25 km</td><td>mesuré</td><td>80</td></tr>
+<tr><td>LA VALETTE-DU-VAR</td><td>2 825 €</td><td>15.5 €</td><td><strong>6.6 %</strong></td><td>12 km</td><td>mesuré</td><td>291</td></tr>
+<tr><td>TOULON</td><td>2 670 €</td><td>14.4 €</td><td><strong>6.5 %</strong></td><td>16 km</td><td>mesuré</td><td>2756</td></tr>
+<tr><td>PIGNANS</td><td>2 187 €</td><td>11.8 €</td><td><strong>6.5 %</strong></td><td>17 km</td><td>mesuré</td><td>16</td></tr>
+<tr><td>COTIGNAC</td><td>2 083 €</td><td>11.1 €</td><td><strong>6.4 %</strong></td><td>32 km</td><td>mesuré</td><td>21</td></tr>
+<tr><td>VIDAUBAN</td><td>2 421 €</td><td>12.8 €</td><td><strong>6.4 %</strong></td><td>37 km</td><td>mesuré</td><td>79</td></tr>
+<tr><td>LA GARDE</td><td>3 137 €</td><td>16.2 €</td><td><strong>6.2 %</strong></td><td>13 km</td><td>mesuré</td><td>254</td></tr>
+<tr><td>SOLLIÈS-TOUCAS</td><td>2 545 €</td><td>13.1 €</td><td><strong>6.2 %</strong></td><td>8 km</td><td>mesuré</td><td>20</td></tr>
+<tr><td>PUGET-VILLE</td><td>2 571 €</td><td>12.9 €</td><td><strong>6.0 %</strong></td><td>9 km</td><td>mesuré</td><td>21</td></tr>
+<tr><td>SOLLIÈS-PONT</td><td>2 820 €</td><td>13.8 €</td><td><strong>5.9 %</strong></td><td>5 km</td><td>mesuré</td><td>66</td></tr>
+<tr><td>LA SEYNE-SUR-MER</td><td>3 043 €</td><td>14.8 €</td><td><strong>5.8 %</strong></td><td>23 km</td><td>mesuré</td><td>888</td></tr>
+<tr><td>LA CRAU</td><td>3 347 €</td><td>15.9 €</td><td><strong>5.7 %</strong></td><td>8 km</td><td>mesuré</td><td>59</td></tr>
+<tr><td>BELGENTIER</td><td>2 619 €</td><td>12.4 €</td><td><strong>5.7 %</strong></td><td>6 km</td><td>mesuré</td><td>11</td></tr>
+<tr><td>OLLIOULES</td><td>3 105 €</td><td>14.7 €</td><td><strong>5.7 %</strong></td><td>21 km</td><td>mesuré</td><td>89</td></tr>
+<tr><td>LE VAL</td><td>2 429 €</td><td>11.3 €</td><td><strong>5.6 %</strong></td><td>23 km</td><td>mesuré</td><td>13</td></tr>
+<tr><td>SIGNES</td><td>2 851 €</td><td>12.8 €</td><td><strong>5.4 %</strong></td><td>18 km</td><td>mesuré</td><td>12</td></tr>
+<tr><td>CUERS</td><td>3 151 €</td><td>13.9 €</td><td><strong>5.3 %</strong></td><td>1 km</td><td>mesuré</td><td>94</td></tr>
+<tr><td>PIERREFEU-DU-VAR</td><td>3 217 €</td><td>13.2 €</td><td><strong>4.9 %</strong></td><td>9 km</td><td>mesuré</td><td>65</td></tr>
+<tr><td>LA FARLÈDE</td><td>3 750 €</td><td>15.3 €</td><td><strong>4.9 %</strong></td><td>8 km</td><td>mesuré</td><td>57</td></tr>
+<tr><td>HYÈRES</td><td>4 012 €</td><td>15.7 €</td><td><strong>4.7 %</strong></td><td>19 km</td><td>mesuré</td><td>940</td></tr>
+<tr><td>FORCALQUEIRET</td><td>3 474 €</td><td>13.2 €</td><td><strong>4.6 %</strong></td><td>11 km</td><td>mesuré</td><td>14</td></tr>
+<tr><td>CARQUEIRANNE</td><td>5 362 €</td><td>17.9 €</td><td><strong>4.0 %</strong></td><td>16 km</td><td>mesuré</td><td>121</td></tr>
+<tr><td>SIX-FOURS-LES-PLAGES</td><td>5 183 €</td><td>16.6 €</td><td><strong>3.8 %</strong></td><td>27 km</td><td>mesuré</td><td>592</td></tr>
+<tr><td>BORMES-LES-MIMOSAS</td><td>5 498 €</td><td>17.0 €</td><td><strong>3.7 %</strong></td><td>25 km</td><td>mesuré</td><td>212</td></tr>
+<tr><td>SANARY-SUR-MER</td><td>6 067 €</td><td>17.8 €</td><td><strong>3.5 %</strong></td><td>25 km</td><td>mesuré</td><td>364</td></tr>
+<tr><td>LA LONDE-LES-MAURES</td><td>5 920 €</td><td>16.4 €</td><td><strong>3.3 %</strong></td><td>16 km</td><td>mesuré</td><td>189</td></tr>
+    </tbody>
   </table>
-  
+
+  <h2>Classement complet</h2>
+  <table class="yield-table">
+    <thead><tr><th>#</th><th>Commune</th><th>Prix/m²</th><th>Loyer/m²</th><th>Rendement brut</th><th>Distance</th><th>Ventes</th><th>Obs. loyer</th></tr></thead>
+    <tbody>
+<tr><td>1</td><td>CABANNES (13)</td><td>1 545 €</td><td>13.8 €</td><td><strong style="color:#166534">10.7 %</strong></td><td>71 km</td><td>11</td><td>343</td></tr>
+<tr><td>2</td><td>CABASSE (83)</td><td>1 275 €</td><td>11.2 €</td><td><strong style="color:#166534">10.6 %</strong></td><td>25 km</td><td>14</td><td>268</td></tr>
+<tr><td>3</td><td>PORT-DE-BOUC (13)</td><td>1 875 €</td><td>14.7 €</td><td><strong style="color:#166534">9.4 %</strong></td><td>33 km</td><td>75</td><td>891</td></tr>
+<tr><td>4</td><td>TARASCON (13)</td><td>1 559 €</td><td>12.2 €</td><td><strong style="color:#166534">9.4 %</strong></td><td>78 km</td><td>91</td><td>1284</td></tr>
+<tr><td>5</td><td>BRAS (83)</td><td>1 762 €</td><td>12.6 €</td><td><strong style="color:#166534">8.6 %</strong></td><td>28 km</td><td>11</td><td>192</td></tr>
+<tr><td>6</td><td>BARBENTANE (13)</td><td>1 960 €</td><td>13.9 €</td><td><strong style="color:#166534">8.5 %</strong></td><td>83 km</td><td>10</td><td>337</td></tr>
+<tr><td>7</td><td>POURRIÈRES (83)</td><td>2 131 €</td><td>14.4 €</td><td><strong style="color:#166534">8.1 %</strong></td><td>37 km</td><td>16</td><td>319</td></tr>
+<tr><td>8</td><td>RIANS (83)</td><td>1 765 €</td><td>11.6 €</td><td><strong style="color:#b45309">7.9 %</strong></td><td>45 km</td><td>15</td><td>489</td></tr>
+<tr><td>9</td><td>DRAGUIGNAN (83)</td><td>2 049 €</td><td>13.4 €</td><td><strong style="color:#b45309">7.8 %</strong></td><td>46 km</td><td>474</td><td>8150</td></tr>
+<tr><td>10</td><td>SALERNES (83)</td><td>1 831 €</td><td>11.9 €</td><td><strong style="color:#b45309">7.8 %</strong></td><td>39 km</td><td>36</td><td>666</td></tr>
+<tr><td>11</td><td>BARJOLS (83)</td><td>1 701 €</td><td>11.1 €</td><td><strong style="color:#b45309">7.8 %</strong></td><td>35 km</td><td>44</td><td>640</td></tr>
+<tr><td>12</td><td>GONFARON (83)</td><td>1 865 €</td><td>12.0 €</td><td><strong style="color:#b45309">7.7 %</strong></td><td>20 km</td><td>22</td><td>538</td></tr>
+<tr><td>13</td><td>AUPS (83)</td><td>1 621 €</td><td>10.4 €</td><td><strong style="color:#b45309">7.7 %</strong></td><td>45 km</td><td>23</td><td>230</td></tr>
+<tr><td>14</td><td>COLLOBRIÈRES (83)</td><td>1 758 €</td><td>11.3 €</td><td><strong style="color:#b45309">7.7 %</strong></td><td>22 km</td><td>15</td><td>166</td></tr>
+<tr><td>15</td><td>CALLAS (83)</td><td>1 875 €</td><td>12.0 €</td><td><strong style="color:#b45309">7.7 %</strong></td><td>55 km</td><td>19</td><td>211</td></tr>
+<tr><td>16</td><td>LE CANNET-DES-MAURES (83)</td><td>2 246 €</td><td>14.3 €</td><td><strong style="color:#b45309">7.6 %</strong></td><td>28 km</td><td>17</td><td>296</td></tr>
+<tr><td>17</td><td>SÉNAS (13)</td><td>2 100 €</td><td>13.3 €</td><td><strong style="color:#b45309">7.6 %</strong></td><td>55 km</td><td>10</td><td>410</td></tr>
+<tr><td>18</td><td>TRANS-EN-PROVENCE (83)</td><td>1 909 €</td><td>12.0 €</td><td><strong style="color:#b45309">7.6 %</strong></td><td>45 km</td><td>31</td><td>712</td></tr>
+<tr><td>19</td><td>FOS-SUR-MER (13)</td><td>2 388 €</td><td>15.0 €</td><td><strong style="color:#b45309">7.5 %</strong></td><td>42 km</td><td>61</td><td>810</td></tr>
+<tr><td>20</td><td>GRAVESON (13)</td><td>1 897 €</td><td>11.8 €</td><td><strong style="color:#b45309">7.5 %</strong></td><td>79 km</td><td>11</td><td>363</td></tr>
+<tr><td>21</td><td>MARIGNANE (13)</td><td>2 500 €</td><td>15.5 €</td><td><strong style="color:#b45309">7.4 %</strong></td><td>19 km</td><td>260</td><td>3126</td></tr>
+<tr><td>22</td><td>ROQUEVAIRE (13)</td><td>2 500 €</td><td>15.4 €</td><td><strong style="color:#b45309">7.4 %</strong></td><td>19 km</td><td>37</td><td>887</td></tr>
+<tr><td>23</td><td>BERRE-L'ÉTANG (13)</td><td>2 374 €</td><td>14.5 €</td><td><strong style="color:#b45309">7.3 %</strong></td><td>28 km</td><td>32</td><td>625</td></tr>
+<tr><td>24</td><td>LE MUY (83)</td><td>2 251 €</td><td>13.7 €</td><td><strong style="color:#b45309">7.3 %</strong></td><td>49 km</td><td>73</td><td>1187</td></tr>
+<tr><td>25</td><td>TOURVES (83)</td><td>1 997 €</td><td>12.0 €</td><td><strong style="color:#b45309">7.2 %</strong></td><td>22 km</td><td>18</td><td>518</td></tr>
+<tr><td>26</td><td>AUBAGNE (13)</td><td>2 580 €</td><td>15.4 €</td><td><strong style="color:#b45309">7.2 %</strong></td><td>16 km</td><td>414</td><td>6961</td></tr>
+<tr><td>27</td><td>BARGEMON (83)</td><td>1 850 €</td><td>11.0 €</td><td><strong style="color:#b45309">7.1 %</strong></td><td>58 km</td><td>23</td><td>172</td></tr>
+<tr><td>28</td><td>VITROLLES (13)</td><td>2 861 €</td><td>17.0 €</td><td><strong style="color:#b45309">7.1 %</strong></td><td>19 km</td><td>261</td><td>3514</td></tr>
+<tr><td>29</td><td>MIRAMAS (13)</td><td>2 429 €</td><td>14.4 €</td><td><strong style="color:#b45309">7.1 %</strong></td><td>43 km</td><td>154</td><td>2054</td></tr>
+<tr><td>30</td><td>CARCÈS (83)</td><td>2 143 €</td><td>12.2 €</td><td><strong style="color:#b45309">6.8 %</strong></td><td>28 km</td><td>21</td><td>403</td></tr>
+<tr><td>31</td><td>FLAYOSC (83)</td><td>2 045 €</td><td>11.5 €</td><td><strong style="color:#b45309">6.8 %</strong></td><td>41 km</td><td>31</td><td>449</td></tr>
+<tr><td>32</td><td>BRIGNOLES (83)</td><td>2 325 €</td><td>13.1 €</td><td><strong style="color:#b45309">6.7 %</strong></td><td>17 km</td><td>179</td><td>2799</td></tr>
+<tr><td>33</td><td>SAINT-CHAMAS (13)</td><td>2 600 €</td><td>14.6 €</td><td><strong style="color:#b45309">6.7 %</strong></td><td>36 km</td><td>48</td><td>928</td></tr>
+<tr><td>34</td><td>LES PENNES-MIRABEAU (13)</td><td>3 049 €</td><td>17.1 €</td><td><strong style="color:#b45309">6.7 %</strong></td><td>12 km</td><td>89</td><td>1249</td></tr>
+<tr><td>35</td><td>LE LUC (83)</td><td>2 313 €</td><td>12.9 €</td><td><strong style="color:#b45309">6.7 %</strong></td><td>25 km</td><td>80</td><td>2119</td></tr>
+<tr><td>36</td><td>JOUQUES (13)</td><td>2 445 €</td><td>13.6 €</td><td><strong style="color:#b45309">6.7 %</strong></td><td>44 km</td><td>12</td><td>379</td></tr>
+<tr><td>37</td><td>LA VALETTE-DU-VAR (83)</td><td>2 825 €</td><td>15.5 €</td><td><strong style="color:#b45309">6.6 %</strong></td><td>12 km</td><td>291</td><td>3099</td></tr>
+<tr><td>38</td><td>GARÉOULT (83)</td><td>2 444 €</td><td>13.3 €</td><td><strong style="color:#b45309">6.5 %</strong></td><td>12 km</td><td>12</td><td>289</td></tr>
+<tr><td>39</td><td>MARTIGUES (13)</td><td>2 853 €</td><td>15.5 €</td><td><strong style="color:#b45309">6.5 %</strong></td><td>28 km</td><td>361</td><td>5119</td></tr>
+<tr><td>40</td><td>LORGUES (83)</td><td>2 444 €</td><td>13.2 €</td><td><strong style="color:#b45309">6.5 %</strong></td><td>35 km</td><td>71</td><td>1278</td></tr>
+<tr><td>41</td><td>TOULON (83)</td><td>2 670 €</td><td>14.4 €</td><td><strong style="color:#b45309">6.5 %</strong></td><td>16 km</td><td>2756</td><td>32136</td></tr>
+<tr><td>42</td><td>MEYRARGUES (13)</td><td>2 930 €</td><td>15.8 €</td><td><strong style="color:#b45309">6.5 %</strong></td><td>39 km</td><td>16</td><td>392</td></tr>
+<tr><td>43</td><td>PIGNANS (83)</td><td>2 187 €</td><td>11.8 €</td><td><strong style="color:#b45309">6.5 %</strong></td><td>17 km</td><td>16</td><td>536</td></tr>
+<tr><td>44</td><td>SEILLANS (83)</td><td>2 470 €</td><td>13.3 €</td><td><strong style="color:#b45309">6.5 %</strong></td><td>61 km</td><td>16</td><td>195</td></tr>
+<tr><td>45</td><td>SAINT-VICTORET (13)</td><td>3 182 €</td><td>17.1 €</td><td><strong style="color:#b45309">6.4 %</strong></td><td>16 km</td><td>17</td><td>380</td></tr>
+<tr><td>46</td><td>ROGNAC (13)</td><td>2 976 €</td><td>15.9 €</td><td><strong style="color:#b45309">6.4 %</strong></td><td>25 km</td><td>59</td><td>694</td></tr>
+<tr><td>47</td><td>PORT-SAINT-LOUIS-DU-RHÔNE (13)</td><td>2 426 €</td><td>12.9 €</td><td><strong style="color:#b45309">6.4 %</strong></td><td>46 km</td><td>36</td><td>380</td></tr>
+<tr><td>48</td><td>SEPTÈMES-LES-VALLONS (13)</td><td>3 127 €</td><td>16.6 €</td><td><strong style="color:#b45309">6.4 %</strong></td><td>11 km</td><td>72</td><td>655</td></tr>
+<tr><td>49</td><td>COTIGNAC (83)</td><td>2 083 €</td><td>11.1 €</td><td><strong style="color:#b45309">6.4 %</strong></td><td>32 km</td><td>21</td><td>192</td></tr>
+<tr><td>50</td><td>ISTRES (13)</td><td>2 835 €</td><td>15.0 €</td><td><strong style="color:#b45309">6.4 %</strong></td><td>44 km</td><td>233</td><td>4253</td></tr>
+<tr><td>51</td><td>VIDAUBAN (83)</td><td>2 421 €</td><td>12.8 €</td><td><strong style="color:#b45309">6.4 %</strong></td><td>37 km</td><td>79</td><td>1289</td></tr>
+<tr><td>52</td><td>SAINT-MARTIN-DE-CRAU (13)</td><td>2 750 €</td><td>14.5 €</td><td><strong style="color:#b45309">6.3 %</strong></td><td>53 km</td><td>29</td><td>587</td></tr>
+<tr><td>53</td><td>CUGES-LES-PINS (13)</td><td>2 666 €</td><td>13.9 €</td><td><strong style="color:#b45309">6.3 %</strong></td><td>28 km</td><td>16</td><td>531</td></tr>
+<tr><td>54</td><td>SAINT-MITRE-LES-REMPARTS (13)</td><td>2 840 €</td><td>14.8 €</td><td><strong style="color:#b45309">6.3 %</strong></td><td>34 km</td><td>16</td><td>384</td></tr>
+<tr><td>55</td><td>CHARLEVAL (13)</td><td>2 538 €</td><td>13.2 €</td><td><strong style="color:#b45309">6.3 %</strong></td><td>48 km</td><td>10</td><td>153</td></tr>
+<tr><td>56</td><td>LAMBESC (13)</td><td>3 437 €</td><td>17.9 €</td><td><strong style="color:#b45309">6.2 %</strong></td><td>42 km</td><td>44</td><td>1167</td></tr>
+<tr><td>57</td><td>LA GARDE (83)</td><td>3 137 €</td><td>16.2 €</td><td><strong style="color:#b45309">6.2 %</strong></td><td>13 km</td><td>254</td><td>2602</td></tr>
+<tr><td>58</td><td>SOLLIÈS-TOUCAS (83)</td><td>2 545 €</td><td>13.1 €</td><td><strong style="color:#b45309">6.2 %</strong></td><td>8 km</td><td>20</td><td>411</td></tr>
+<tr><td>59</td><td>GIGNAC-LA-NERTHE (13)</td><td>3 230 €</td><td>16.6 €</td><td><strong style="color:#b45309">6.2 %</strong></td><td>15 km</td><td>31</td><td>545</td></tr>
+<tr><td>60</td><td>LA PENNE-SUR-HUVEAUNE (13)</td><td>3 116 €</td><td>15.8 €</td><td><strong style="color:#b45309">6.1 %</strong></td><td>12 km</td><td>45</td><td>379</td></tr>
+<tr><td>61</td><td>ARLES (13)</td><td>2 567 €</td><td>13.0 €</td><td><strong style="color:#b45309">6.1 %</strong></td><td>64 km</td><td>292</td><td>7991</td></tr>
+<tr><td>62</td><td>GARDANNE (13)</td><td>3 203 €</td><td>16.2 €</td><td><strong style="color:#b45309">6.1 %</strong></td><td>20 km</td><td>136</td><td>2690</td></tr>
+<tr><td>63</td><td>PEYROLLES-EN-PROVENCE (13)</td><td>2 831 €</td><td>14.3 €</td><td><strong style="color:#b45309">6.1 %</strong></td><td>40 km</td><td>16</td><td>563</td></tr>
+<tr><td>64</td><td>SAINT-MAXIMIN-LA-SAINTE-BAUME (83)</td><td>2 746 €</td><td>13.8 €</td><td><strong style="color:#b45309">6.0 %</strong></td><td>29 km</td><td>59</td><td>1716</td></tr>
+<tr><td>65</td><td>LES ARCS (83)</td><td>2 800 €</td><td>14.1 €</td><td><strong style="color:#b45309">6.0 %</strong></td><td>41 km</td><td>59</td><td>1142</td></tr>
+<tr><td>66</td><td>PUGET-VILLE (83)</td><td>2 571 €</td><td>12.9 €</td><td><strong style="color:#b45309">6.0 %</strong></td><td>9 km</td><td>21</td><td>439</td></tr>
+<tr><td>67</td><td>PUGET-SUR-ARGENS (83)</td><td>3 232 €</td><td>16.2 €</td><td><strong style="color:#b45309">6.0 %</strong></td><td>56 km</td><td>81</td><td>1141</td></tr>
+<tr><td>68</td><td>AURIOL (13)</td><td>2 980 €</td><td>14.9 €</td><td><strong style="color:#b45309">6.0 %</strong></td><td>24 km</td><td>64</td><td>1109</td></tr>
+<tr><td>69</td><td>ROGNES (13)</td><td>3 058 €</td><td>15.3 €</td><td><strong style="color:#b45309">6.0 %</strong></td><td>41 km</td><td>15</td><td>298</td></tr>
+<tr><td>70</td><td>CHÂTEAURENARD (13)</td><td>2 523 €</td><td>12.6 €</td><td><strong style="color:#b45309">6.0 %</strong></td><td>78 km</td><td>76</td><td>1493</td></tr>
+<tr><td>71</td><td>SALON-DE-PROVENCE (13)</td><td>2 933 €</td><td>14.4 €</td><td><strong style="color:#b45309">5.9 %</strong></td><td>46 km</td><td>433</td><td>6870</td></tr>
+<tr><td>72</td><td>ÉGUILLES (13)</td><td>3 553 €</td><td>17.5 €</td><td><strong style="color:#b45309">5.9 %</strong></td><td>30 km</td><td>35</td><td>1303</td></tr>
+<tr><td>73</td><td>CARNOUX-EN-PROVENCE (13)</td><td>3 571 €</td><td>17.5 €</td><td><strong style="color:#b45309">5.9 %</strong></td><td>16 km</td><td>37</td><td>522</td></tr>
+<tr><td>74</td><td>SOLLIÈS-PONT (83)</td><td>2 820 €</td><td>13.8 €</td><td><strong style="color:#b45309">5.9 %</strong></td><td>5 km</td><td>66</td><td>1353</td></tr>
+<tr><td>75</td><td>PLAN-D'AUPS-SAINTE-BAUME (83) <span style="color:#9a3412;font-size:0.7rem;">est.</span></td><td>2 891 €</td><td>14.1 €</td><td><strong style="color:#b45309">5.9 %</strong></td><td>28 km</td><td>14</td><td>79</td></tr>
+<tr><td>76</td><td>VINON-SUR-VERDON (83)</td><td>2 529 €</td><td>12.3 €</td><td><strong style="color:#b45309">5.9 %</strong></td><td>58 km</td><td>12</td><td>401</td></tr>
+<tr><td>77</td><td>LA SEYNE-SUR-MER (83)</td><td>3 043 €</td><td>14.8 €</td><td><strong style="color:#b45309">5.8 %</strong></td><td>23 km</td><td>888</td><td>8340</td></tr>
+<tr><td>78</td><td>FAYENCE (83)</td><td>3 194 €</td><td>15.5 €</td><td><strong style="color:#b45309">5.8 %</strong></td><td>64 km</td><td>38</td><td>412</td></tr>
+<tr><td>79</td><td>ALLAUCH (13)</td><td>3 479 €</td><td>16.9 €</td><td><strong style="color:#b45309">5.8 %</strong></td><td>13 km</td><td>77</td><td>1488</td></tr>
+<tr><td>80</td><td>LA GARDE-FREINET (83)</td><td>3 136 €</td><td>15.0 €</td><td><strong style="color:#b45309">5.7 %</strong></td><td>33 km</td><td>23</td><td>174</td></tr>
+<tr><td>81</td><td>PLAN-DE-CUQUES (13)</td><td>3 672 €</td><td>17.5 €</td><td><strong style="color:#b45309">5.7 %</strong></td><td>11 km</td><td>63</td><td>971</td></tr>
+<tr><td>82</td><td>LA CRAU (83)</td><td>3 347 €</td><td>15.9 €</td><td><strong style="color:#b45309">5.7 %</strong></td><td>8 km</td><td>59</td><td>1289</td></tr>
+<tr><td>83</td><td>BELGENTIER (83)</td><td>2 619 €</td><td>12.4 €</td><td><strong style="color:#b45309">5.7 %</strong></td><td>6 km</td><td>11</td><td>242</td></tr>
+<tr><td>84</td><td>OLLIOULES (83)</td><td>3 105 €</td><td>14.7 €</td><td><strong style="color:#b45309">5.7 %</strong></td><td>21 km</td><td>89</td><td>1415</td></tr>
+<tr><td>85</td><td>LES ADRETS-DE-L'ESTÉREL (83) <span style="color:#9a3412;font-size:0.7rem;">est.</span></td><td>3 707 €</td><td>17.4 €</td><td><strong style="color:#b45309">5.6 %</strong></td><td>69 km</td><td>10</td><td>54</td></tr>
+<tr><td>86</td><td>LE VAL (83)</td><td>2 429 €</td><td>11.3 €</td><td><strong style="color:#b45309">5.6 %</strong></td><td>23 km</td><td>13</td><td>416</td></tr>
+<tr><td>87</td><td>LA MÔLE (83) <span style="color:#9a3412;font-size:0.7rem;">est.</span></td><td>3 756 €</td><td>17.3 €</td><td><strong style="color:#b45309">5.5 %</strong></td><td>33 km</td><td>10</td><td>58</td></tr>
+<tr><td>88</td><td>TRETS (13)</td><td>3 273 €</td><td>15.1 €</td><td><strong style="color:#b45309">5.5 %</strong></td><td>32 km</td><td>54</td><td>1348</td></tr>
+<tr><td>89</td><td>ROQUEFORT-LA-BÉDOULE (13)</td><td>3 653 €</td><td>16.7 €</td><td><strong style="color:#b45309">5.5 %</strong></td><td>22 km</td><td>28</td><td>319</td></tr>
+<tr><td>90</td><td>CEYRESTE (13)</td><td>3 658 €</td><td>16.6 €</td><td><strong style="color:#b45309">5.4 %</strong></td><td>23 km</td><td>12</td><td>206</td></tr>
+<tr><td>91</td><td>EYGUIÈRES (13)</td><td>3 091 €</td><td>14.0 €</td><td><strong style="color:#b45309">5.4 %</strong></td><td>53 km</td><td>24</td><td>712</td></tr>
+<tr><td>92</td><td>CHÂTEAUNEUF-LES-MARTIGUES (13)</td><td>3 677 €</td><td>16.6 €</td><td><strong style="color:#b45309">5.4 %</strong></td><td>21 km</td><td>94</td><td>955</td></tr>
+<tr><td>93</td><td>LE BEAUSSET (83)</td><td>3 349 €</td><td>15.1 €</td><td><strong style="color:#b45309">5.4 %</strong></td><td>20 km</td><td>61</td><td>1545</td></tr>
+<tr><td>94</td><td>SIGNES (83)</td><td>2 851 €</td><td>12.8 €</td><td><strong style="color:#b45309">5.4 %</strong></td><td>18 km</td><td>12</td><td>424</td></tr>
+<tr><td>95</td><td>NANS-LES-PINS (83)</td><td>3 179 €</td><td>14.2 €</td><td><strong style="color:#b45309">5.3 %</strong></td><td>28 km</td><td>15</td><td>368</td></tr>
+<tr><td>96</td><td>LA DESTROUSSE (13)</td><td>3 729 €</td><td>16.6 €</td><td><strong style="color:#b45309">5.3 %</strong></td><td>21 km</td><td>17</td><td>308</td></tr>
+<tr><td>97</td><td>LA BOUILLADISSE (13)</td><td>3 526 €</td><td>15.7 €</td><td><strong style="color:#b45309">5.3 %</strong></td><td>23 km</td><td>12</td><td>337</td></tr>
+<tr><td>98</td><td>CUERS (83)</td><td>3 151 €</td><td>13.9 €</td><td><strong style="color:#b45309">5.3 %</strong></td><td>1 km</td><td>94</td><td>1684</td></tr>
+<tr><td>99</td><td>SAINT-ZACHARIE (83)</td><td>3 353 €</td><td>14.7 €</td><td><strong style="color:#b45309">5.2 %</strong></td><td>29 km</td><td>30</td><td>554</td></tr>
+<tr><td>100</td><td>NOVES (13)</td><td>2 910 €</td><td>12.6 €</td><td><strong style="color:#b45309">5.2 %</strong></td><td>73 km</td><td>16</td><td>415</td></tr>
+<tr><td>101</td><td>SAINT-PAUL-EN-FORÊT (83) <span style="color:#9a3412;font-size:0.7rem;">est.</span></td><td>2 992 €</td><td>12.8 €</td><td><strong style="color:#b45309">5.1 %</strong></td><td>62 km</td><td>11</td><td>37</td></tr>
+<tr><td>102</td><td>ROUSSET (13)</td><td>4 077 €</td><td>17.2 €</td><td><strong style="color:#b45309">5.1 %</strong></td><td>29 km</td><td>25</td><td>711</td></tr>
+<tr><td>103</td><td>LA FARE-LES-OLIVIERS (13)</td><td>3 704 €</td><td>15.6 €</td><td><strong style="color:#b45309">5.1 %</strong></td><td>32 km</td><td>24</td><td>738</td></tr>
+<tr><td>104</td><td>FUVEAU (13)</td><td>4 022 €</td><td>16.9 €</td><td><strong style="color:#b45309">5.0 %</strong></td><td>23 km</td><td>43</td><td>610</td></tr>
+<tr><td>105</td><td>PLAN-D'ORGON (13) <span style="color:#9a3412;font-size:0.7rem;">est.</span></td><td>3 385 €</td><td>14.2 €</td><td><strong style="color:#b45309">5.0 %</strong></td><td>65 km</td><td>15</td><td>94</td></tr>
+<tr><td>106</td><td>TOURRETTES (83) <span style="color:#9a3412;font-size:0.7rem;">est.</span></td><td>3 611 €</td><td>15.1 €</td><td><strong style="color:#b45309">5.0 %</strong></td><td>67 km</td><td>13</td><td>94</td></tr>
+<tr><td>107</td><td>GÉMENOS (13)</td><td>4 125 €</td><td>17.2 €</td><td><strong style="color:#991b1b">5.0 %</strong></td><td>23 km</td><td>18</td><td>371</td></tr>
+<tr><td>108</td><td>LE REVEST-LES-EAUX (83)</td><td>3 305 €</td><td>13.7 €</td><td><strong style="color:#991b1b">5.0 %</strong></td><td>12 km</td><td>14</td><td>255</td></tr>
+<tr><td>109</td><td>MEYREUIL (13)</td><td>4 357 €</td><td>18.0 €</td><td><strong style="color:#991b1b">4.9 %</strong></td><td>24 km</td><td>37</td><td>573</td></tr>
+<tr><td>110</td><td>PIERREFEU-DU-VAR (83)</td><td>3 217 €</td><td>13.2 €</td><td><strong style="color:#991b1b">4.9 %</strong></td><td>9 km</td><td>65</td><td>502</td></tr>
+<tr><td>111</td><td>PEYNIER (13)</td><td>4 044 €</td><td>16.6 €</td><td><strong style="color:#991b1b">4.9 %</strong></td><td>26 km</td><td>34</td><td>321</td></tr>
+<tr><td>112</td><td>LA FARLÈDE (83)</td><td>3 750 €</td><td>15.3 €</td><td><strong style="color:#991b1b">4.9 %</strong></td><td>8 km</td><td>57</td><td>992</td></tr>
+<tr><td>113</td><td>BOUC-BEL-AIR (13)</td><td>4 445 €</td><td>18.2 €</td><td><strong style="color:#991b1b">4.9 %</strong></td><td>17 km</td><td>25</td><td>770</td></tr>
+<tr><td>114</td><td>VELAUX (13)</td><td>3 890 €</td><td>15.8 €</td><td><strong style="color:#991b1b">4.9 %</strong></td><td>27 km</td><td>23</td><td>654</td></tr>
+<tr><td>115</td><td>BAGNOLS-EN-FORÊT (83)</td><td>3 095 €</td><td>12.6 €</td><td><strong style="color:#991b1b">4.9 %</strong></td><td>61 km</td><td>21</td><td>209</td></tr>
+<tr><td>116</td><td>MALLEMORT (13)</td><td>3 410 €</td><td>13.9 €</td><td><strong style="color:#991b1b">4.9 %</strong></td><td>50 km</td><td>78</td><td>571</td></tr>
+<tr><td>117</td><td>PÉLISSANNE (13)</td><td>3 632 €</td><td>14.8 €</td><td><strong style="color:#991b1b">4.9 %</strong></td><td>41 km</td><td>35</td><td>967</td></tr>
+<tr><td>118</td><td>LE PUY-SAINTE-RÉPARADE (13)</td><td>3 900 €</td><td>15.8 €</td><td><strong style="color:#991b1b">4.9 %</strong></td><td>40 km</td><td>17</td><td>585</td></tr>
+<tr><td>119</td><td>FRÉJUS (83)</td><td>4 205 €</td><td>17.0 €</td><td><strong style="color:#991b1b">4.9 %</strong></td><td>63 km</td><td>1183</td><td>6923</td></tr>
+<tr><td>120</td><td>CALLIAN (83)</td><td>3 234 €</td><td>12.9 €</td><td><strong style="color:#991b1b">4.8 %</strong></td><td>69 km</td><td>29</td><td>207</td></tr>
+<tr><td>121</td><td>AIX-EN-PROVENCE (13)</td><td>4 818 €</td><td>19.1 €</td><td><strong style="color:#991b1b">4.8 %</strong></td><td>27 km</td><td>1939</td><td>52857</td></tr>
+<tr><td>122</td><td>LA CADIÈRE-D'AZUR (83)</td><td>3 812 €</td><td>15.1 €</td><td><strong style="color:#991b1b">4.8 %</strong></td><td>28 km</td><td>21</td><td>209</td></tr>
+<tr><td>123</td><td>GRANS (13)</td><td>3 715 €</td><td>14.7 €</td><td><strong style="color:#991b1b">4.7 %</strong></td><td>44 km</td><td>16</td><td>476</td></tr>
+<tr><td>124</td><td>COGOLIN (83)</td><td>4 375 €</td><td>17.2 €</td><td><strong style="color:#991b1b">4.7 %</strong></td><td>37 km</td><td>196</td><td>1478</td></tr>
+<tr><td>125</td><td>HYÈRES (83)</td><td>4 012 €</td><td>15.7 €</td><td><strong style="color:#991b1b">4.7 %</strong></td><td>19 km</td><td>940</td><td>8003</td></tr>
+<tr><td>126</td><td>LANÇON-PROVENCE (13)</td><td>3 900 €</td><td>15.3 €</td><td><strong style="color:#991b1b">4.7 %</strong></td><td>35 km</td><td>32</td><td>550</td></tr>
+<tr><td>127</td><td>PEYPIN (13)</td><td>4 239 €</td><td>16.5 €</td><td><strong style="color:#991b1b">4.7 %</strong></td><td>19 km</td><td>10</td><td>266</td></tr>
+<tr><td>128</td><td>LE ROVE (13)</td><td>4 609 €</td><td>17.8 €</td><td><strong style="color:#991b1b">4.6 %</strong></td><td>12 km</td><td>14</td><td>271</td></tr>
+<tr><td>129</td><td>MONTAUROUX (83)</td><td>3 536 €</td><td>13.6 €</td><td><strong style="color:#991b1b">4.6 %</strong></td><td>71 km</td><td>30</td><td>298</td></tr>
+<tr><td>130</td><td>LA MOTTE (83)</td><td>3 649 €</td><td>14.0 €</td><td><strong style="color:#991b1b">4.6 %</strong></td><td>49 km</td><td>23</td><td>229</td></tr>
+<tr><td>131</td><td>LE PLAN-DE-LA-TOUR (83)</td><td>4 322 €</td><td>16.5 €</td><td><strong style="color:#991b1b">4.6 %</strong></td><td>40 km</td><td>22</td><td>157</td></tr>
+<tr><td>132</td><td>CHÂTEAUNEUF-LE-ROUGE (13)</td><td>4 761 €</td><td>18.1 €</td><td><strong style="color:#991b1b">4.6 %</strong></td><td>27 km</td><td>13</td><td>404</td></tr>
+<tr><td>133</td><td>FORCALQUEIRET (83)</td><td>3 474 €</td><td>13.2 €</td><td><strong style="color:#991b1b">4.6 %</strong></td><td>11 km</td><td>14</td><td>171</td></tr>
+<tr><td>134</td><td>SAINT-CANNAT (13)</td><td>4 343 €</td><td>16.5 €</td><td><strong style="color:#991b1b">4.6 %</strong></td><td>36 km</td><td>18</td><td>616</td></tr>
+<tr><td>135</td><td>VENTABREN (13)</td><td>4 773 €</td><td>18.1 €</td><td><strong style="color:#991b1b">4.6 %</strong></td><td>28 km</td><td>28</td><td>517</td></tr>
+<tr><td>136</td><td>SAINT-SAVOURNIN (13)</td><td>4 126 €</td><td>15.6 €</td><td><strong style="color:#991b1b">4.5 %</strong></td><td>18 km</td><td>13</td><td>230</td></tr>
+<tr><td>137</td><td>VENELLES (13)</td><td>4 727 €</td><td>17.7 €</td><td><strong style="color:#991b1b">4.5 %</strong></td><td>35 km</td><td>35</td><td>789</td></tr>
+<tr><td>138</td><td>SAINT-RAPHAËL (83)</td><td>4 762 €</td><td>17.8 €</td><td><strong style="color:#991b1b">4.5 %</strong></td><td>68 km</td><td>1059</td><td>4478</td></tr>
+<tr><td>139</td><td>LE PRADET (83)</td><td>4 161 €</td><td>15.6 €</td><td><strong style="color:#991b1b">4.5 %</strong></td><td>16 km</td><td>117</td><td>987</td></tr>
+<tr><td>140</td><td>CABRIÈS (13)</td><td>4 951 €</td><td>18.4 €</td><td><strong style="color:#991b1b">4.5 %</strong></td><td>18 km</td><td>14</td><td>320</td></tr>
+<tr><td>141</td><td>LE CASTELLET (83)</td><td>4 368 €</td><td>15.7 €</td><td><strong style="color:#991b1b">4.3 %</strong></td><td>26 km</td><td>21</td><td>344</td></tr>
+<tr><td>142</td><td>LE THOLONET (13)</td><td>5 384 €</td><td>19.0 €</td><td><strong style="color:#991b1b">4.2 %</strong></td><td>27 km</td><td>14</td><td>312</td></tr>
+<tr><td>143</td><td>ROQUEBRUNE-SUR-ARGENS (83)</td><td>4 438 €</td><td>15.5 €</td><td><strong style="color:#991b1b">4.2 %</strong></td><td>52 km</td><td>193</td><td>1792</td></tr>
+<tr><td>144</td><td>SAINT-RÉMY-DE-PROVENCE (13)</td><td>4 306 €</td><td>14.8 €</td><td><strong style="color:#991b1b">4.1 %</strong></td><td>69 km</td><td>34</td><td>964</td></tr>
+<tr><td>145</td><td>LA CIOTAT (13)</td><td>5 152 €</td><td>17.7 €</td><td><strong style="color:#991b1b">4.1 %</strong></td><td>23 km</td><td>521</td><td>5795</td></tr>
+<tr><td>146</td><td>SAINT-MANDRIER-SUR-MER (83)</td><td>4 750 €</td><td>15.9 €</td><td><strong style="color:#991b1b">4.0 %</strong></td><td>21 km</td><td>159</td><td>773</td></tr>
+<tr><td>147</td><td>CARQUEIRANNE (83)</td><td>5 362 €</td><td>17.9 €</td><td><strong style="color:#991b1b">4.0 %</strong></td><td>16 km</td><td>121</td><td>896</td></tr>
+<tr><td>148</td><td>CAVALAIRE-SUR-MER (83)</td><td>5 526 €</td><td>18.4 €</td><td><strong style="color:#991b1b">4.0 %</strong></td><td>37 km</td><td>315</td><td>901</td></tr>
+<tr><td>149</td><td>SAINTE-MAXIME (83)</td><td>5 625 €</td><td>18.4 €</td><td><strong style="color:#991b1b">3.9 %</strong></td><td>46 km</td><td>385</td><td>2007</td></tr>
+<tr><td>150</td><td>SAINTES-MARIES-DE-LA-MER (13)</td><td>4 729 €</td><td>15.2 €</td><td><strong style="color:#991b1b">3.8 %</strong></td><td>79 km</td><td>58</td><td>153</td></tr>
+<tr><td>151</td><td>SIX-FOURS-LES-PLAGES (83)</td><td>5 183 €</td><td>16.6 €</td><td><strong style="color:#991b1b">3.8 %</strong></td><td>27 km</td><td>592</td><td>3751</td></tr>
+<tr><td>152</td><td>CARRY-LE-ROUET (13)</td><td>5 945 €</td><td>18.9 €</td><td><strong style="color:#991b1b">3.8 %</strong></td><td>18 km</td><td>50</td><td>704</td></tr>
+<tr><td>153</td><td>GASSIN (83) <span style="color:#9a3412;font-size:0.7rem;">est.</span></td><td>7 173 €</td><td>22.6 €</td><td><strong style="color:#991b1b">3.8 %</strong></td><td>42 km</td><td>36</td><td>73</td></tr>
+<tr><td>154</td><td>LA CROIX-VALMER (83)</td><td>6 250 €</td><td>19.4 €</td><td><strong style="color:#991b1b">3.7 %</strong></td><td>42 km</td><td>99</td><td>269</td></tr>
+<tr><td>155</td><td>BORMES-LES-MIMOSAS (83)</td><td>5 498 €</td><td>17.0 €</td><td><strong style="color:#991b1b">3.7 %</strong></td><td>25 km</td><td>212</td><td>902</td></tr>
+<tr><td>156</td><td>ENSUÈS-LA-REDONNE (13)</td><td>5 767 €</td><td>17.6 €</td><td><strong style="color:#991b1b">3.7 %</strong></td><td>16 km</td><td>13</td><td>317</td></tr>
+<tr><td>157</td><td>SAINT-CYR-SUR-MER (83)</td><td>5 947 €</td><td>17.9 €</td><td><strong style="color:#991b1b">3.6 %</strong></td><td>31 km</td><td>221</td><td>1152</td></tr>
+<tr><td>158</td><td>SANARY-SUR-MER (83)</td><td>6 067 €</td><td>17.8 €</td><td><strong style="color:#991b1b">3.5 %</strong></td><td>25 km</td><td>364</td><td>2116</td></tr>
+<tr><td>159</td><td>BANDOL (83)</td><td>6 216 €</td><td>18.2 €</td><td><strong style="color:#991b1b">3.5 %</strong></td><td>28 km</td><td>315</td><td>1495</td></tr>
+<tr><td>160</td><td>SAUSSET-LES-PINS (13)</td><td>6 914 €</td><td>19.9 €</td><td><strong style="color:#991b1b">3.4 %</strong></td><td>21 km</td><td>80</td><td>698</td></tr>
+<tr><td>161</td><td>CASSIS (13)</td><td>7 521 €</td><td>21.2 €</td><td><strong style="color:#991b1b">3.4 %</strong></td><td>17 km</td><td>98</td><td>657</td></tr>
+<tr><td>162</td><td>LA LONDE-LES-MAURES (83)</td><td>5 920 €</td><td>16.4 €</td><td><strong style="color:#991b1b">3.3 %</strong></td><td>16 km</td><td>189</td><td>1005</td></tr>
+<tr><td>163</td><td>GRIMAUD (83)</td><td>6 642 €</td><td>18.3 €</td><td><strong style="color:#991b1b">3.3 %</strong></td><td>36 km</td><td>148</td><td>361</td></tr>
+<tr><td>164</td><td>LE LAVANDOU (83)</td><td>6 045 €</td><td>16.5 €</td><td><strong style="color:#991b1b">3.3 %</strong></td><td>28 km</td><td>269</td><td>1486</td></tr>
+<tr><td>165</td><td>RAYOL-CANADEL-SUR-MER (83) <span style="color:#9a3412;font-size:0.7rem;">est.</span></td><td>7 660 €</td><td>17.9 €</td><td><strong style="color:#991b1b">2.8 %</strong></td><td>34 km</td><td>15</td><td>2</td></tr>
+<tr><td>166</td><td>RAMATUELLE (83) <span style="color:#9a3412;font-size:0.7rem;">est.</span></td><td>10 442 €</td><td>22.6 €</td><td><strong style="color:#991b1b">2.6 %</strong></td><td>47 km</td><td>18</td><td>46</td></tr>
+<tr><td>167</td><td>SAINT-TROPEZ (83)</td><td>12 339 €</td><td>26.4 €</td><td><strong style="color:#991b1b">2.6 %</strong></td><td>48 km</td><td>134</td><td>192</td></tr>
+    </tbody>
+  </table>
+
   <p class="source-note">
-    Sources : Estimations ANIL à partir des données Groupe SeLoger et leboncoin (loyers) — 
-    DVF 2025, Ministère de l'Économie (prix). 
-    268 communes analysées. Distance à vol d'oiseau (Haversine).
+    Sources : estimations ANIL/DHUP 2025 à partir des données Groupe SeLoger et leboncoin (loyers) —
+    DVF 2025, Ministère de l'Économie, mutations réelles (prix). 167 communes retenues sur 272
+    (appartements, minimum 10 ventes, prix/m² ≥ 500 €). Distance à vol d'oiseau (Haversine).
+    Fiche établie le 22 septembre 2026 ; version précédente du 28 mai 2026.
   </p>
 </main>
 
@@ -150,6 +269,173 @@ L.marker([43.2964,5.3698]).addTo(map).bindPopup('<b>Marseille</b>');
 L.marker([43.2372,6.0708]).addTo(map).bindPopup('<b>Cuers</b>');
 L.circle([43.2964,5.3698], {radius:25000,color:'#1e40af',fillColor:'#dbeafe',fillOpacity:0.15,weight:1}).addTo(map);
 L.circle([43.2372,6.0708], {radius:25000,color:'#166534',fillColor:'#dcfce7',fillOpacity:0.15,weight:1}).addTo(map);
+L.circleMarker([43.8596 4.9592] {radius:6 color:'#166534' fillColor:'#dcfce7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CABANNES</b><br>10.7 % brut — 1 545 €/m² — 13.8 €/m²</br>11 ventes');
+L.circleMarker([43.4275 6.2303] {radius:6 color:'#166534' fillColor:'#dcfce7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CABASSE</b><br>10.6 % brut — 1 275 €/m² — 11.2 €/m²</br>14 ventes');
+L.circleMarker([43.4207 4.9993] {radius:6 color:'#166534' fillColor:'#dcfce7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PORT-DE-BOUC</b><br>9.4 % brut — 1 875 €/m² — 14.7 €/m²</br>75 ventes');
+L.circleMarker([43.7972 4.6852] {radius:6 color:'#166534' fillColor:'#dcfce7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>TARASCON</b><br>9.4 % brut — 1 559 €/m² — 12.2 €/m²</br>91 ventes');
+L.circleMarker([43.4723 5.9558] {radius:6 color:'#166534' fillColor:'#dcfce7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>BRAS</b><br>8.6 % brut — 1 762 €/m² — 12.6 €/m²</br>11 ventes');
+L.circleMarker([43.8910 4.7454] {radius:6 color:'#166534' fillColor:'#dcfce7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>BARBENTANE</b><br>8.5 % brut — 1 960 €/m² — 13.9 €/m²</br>10 ventes');
+L.circleMarker([43.4870 5.7432] {radius:6 color:'#166534' fillColor:'#dcfce7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>POURRIÈRES</b><br>8.1 % brut — 2 131 €/m² — 14.4 €/m²</br>16 ventes');
+L.circleMarker([43.6026 5.7340] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>RIANS</b><br>7.9 % brut — 1 765 €/m² — 11.6 €/m²</br>15 ventes');
+L.circleMarker([43.5346 6.4651] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>DRAGUIGNAN</b><br>7.8 % brut — 2 049 €/m² — 13.4 €/m²</br>474 ventes');
+L.circleMarker([43.5646 6.2379] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SALERNES</b><br>7.8 % brut — 1 831 €/m² — 11.9 €/m²</br>36 ventes');
+L.circleMarker([43.5484 5.9730] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>BARJOLS</b><br>7.8 % brut — 1 701 €/m² — 11.1 €/m²</br>44 ventes');
+L.circleMarker([43.3149 6.2978] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>GONFARON</b><br>7.7 % brut — 1 865 €/m² — 12.0 €/m²</br>22 ventes');
+L.circleMarker([43.6283 6.2139] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>AUPS</b><br>7.7 % brut — 1 621 €/m² — 10.4 €/m²</br>23 ventes');
+L.circleMarker([43.2446 6.3454] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>COLLOBRIÈRES</b><br>7.7 % brut — 1 758 €/m² — 11.3 €/m²</br>15 ventes');
+L.circleMarker([43.5687 6.5735] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CALLAS</b><br>7.7 % brut — 1 875 €/m² — 12.0 €/m²</br>19 ventes');
+L.circleMarker([43.3695 6.3703] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE CANNET-DES-MAURES</b><br>7.6 % brut — 2 246 €/m² — 14.3 €/m²</br>17 ventes');
+L.circleMarker([43.7402 5.0730] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SÉNAS</b><br>7.6 % brut — 2 100 €/m² — 13.3 €/m²</br>10 ventes');
+L.circleMarker([43.5025 6.4869] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>TRANS-EN-PROVENCE</b><br>7.6 % brut — 1 909 €/m² — 12.0 €/m²</br>31 ventes');
+L.circleMarker([43.4545 4.8979] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>FOS-SUR-MER</b><br>7.5 % brut — 2 388 €/m² — 15.0 €/m²</br>61 ventes');
+L.circleMarker([43.8532 4.7686] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>GRAVESON</b><br>7.5 % brut — 1 897 €/m² — 11.8 €/m²</br>11 ventes');
+L.circleMarker([43.4218 5.2178] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>MARIGNANE</b><br>7.4 % brut — 2 500 €/m² — 15.5 €/m²</br>260 ventes');
+L.circleMarker([43.3452 5.5980] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>ROQUEVAIRE</b><br>7.4 % brut — 2 500 €/m² — 15.4 €/m²</br>37 ventes');
+L.circleMarker([43.4976 5.1596] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>BERRE-L'ÉTANG</b><br>7.3 % brut — 2 374 €/m² — 14.5 €/m²</br>32 ventes');
+L.circleMarker([43.4680 6.5844] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE MUY</b><br>7.3 % brut — 2 251 €/m² — 13.7 €/m²</br>73 ventes');
+L.circleMarker([43.4108 5.9281] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>TOURVES</b><br>7.2 % brut — 1 997 €/m² — 12.0 €/m²</br>18 ventes');
+L.circleMarker([43.2904 5.5643] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>AUBAGNE</b><br>7.2 % brut — 2 580 €/m² — 15.4 €/m²</br>414 ventes');
+L.circleMarker([43.6344 6.5439] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>BARGEMON</b><br>7.1 % brut — 1 850 €/m² — 11.0 €/m²</br>23 ventes');
+L.circleMarker([43.4509 5.2656] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>VITROLLES</b><br>7.1 % brut — 2 861 €/m² — 17.0 €/m²</br>261 ventes');
+L.circleMarker([43.5841 5.0148] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>MIRAMAS</b><br>7.1 % brut — 2 429 €/m² — 14.4 €/m²</br>154 ventes');
+L.circleMarker([43.4738 6.1752] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CARCÈS</b><br>6.8 % brut — 2 143 €/m² — 12.2 €/m²</br>21 ventes');
+L.circleMarker([43.5441 6.3577] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>FLAYOSC</b><br>6.8 % brut — 2 045 €/m² — 11.5 €/m²</br>31 ventes');
+L.circleMarker([43.3878 6.0759] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>BRIGNOLES</b><br>6.7 % brut — 2 325 €/m² — 13.1 €/m²</br>179 ventes');
+L.circleMarker([43.5414 5.0720] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-CHAMAS</b><br>6.7 % brut — 2 600 €/m² — 14.6 €/m²</br>48 ventes');
+L.circleMarker([43.4005 5.3222] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LES PENNES-MIRABEAU</b><br>6.7 % brut — 3 049 €/m² — 17.1 €/m²</br>89 ventes');
+L.circleMarker([43.3855 6.3107] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE LUC</b><br>6.7 % brut — 2 313 €/m² — 12.9 €/m²</br>80 ventes');
+L.circleMarker([43.6289 5.6605] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>JOUQUES</b><br>6.7 % brut — 2 445 €/m² — 13.6 €/m²</br>12 ventes');
+L.circleMarker([43.1484 5.9893] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA VALETTE-DU-VAR</b><br>6.6 % brut — 2 825 €/m² — 15.5 €/m²</br>291 ventes');
+L.circleMarker([43.3397 6.0426] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>GARÉOULT</b><br>6.5 % brut — 2 444 €/m² — 13.3 €/m²</br>12 ventes');
+L.circleMarker([43.3839 5.0451] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>MARTIGUES</b><br>6.5 % brut — 2 853 €/m² — 15.5 €/m²</br>361 ventes');
+L.circleMarker([43.4734 6.3588] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LORGUES</b><br>6.5 % brut — 2 444 €/m² — 13.2 €/m²</br>71 ventes');
+L.circleMarker([43.1364 5.9334] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>TOULON</b><br>6.5 % brut — 2 670 €/m² — 14.4 €/m²</br>2756 ventes');
+L.circleMarker([43.6229 5.5321] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>MEYRARGUES</b><br>6.5 % brut — 2 930 €/m² — 15.8 €/m²</br>16 ventes');
+L.circleMarker([43.2997 6.2625] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PIGNANS</b><br>6.5 % brut — 2 187 €/m² — 11.8 €/m²</br>16 ventes');
+L.circleMarker([43.6326 6.6024] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SEILLANS</b><br>6.5 % brut — 2 470 €/m² — 13.3 €/m²</br>16 ventes');
+L.circleMarker([43.4121 5.2508] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-VICTORET</b><br>6.4 % brut — 3 182 €/m² — 17.1 €/m²</br>17 ventes');
+L.circleMarker([43.4995 5.2330] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>ROGNAC</b><br>6.4 % brut — 2 976 €/m² — 15.9 €/m²</br>59 ventes');
+L.circleMarker([43.4066 4.8260] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PORT-SAINT-LOUIS-DU-RHÔNE</b><br>6.4 % brut — 2 426 €/m² — 12.9 €/m²</br>36 ventes');
+L.circleMarker([43.3931 5.3828] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SEPTÈMES-LES-VALLONS</b><br>6.4 % brut — 3 127 €/m² — 16.6 €/m²</br>72 ventes');
+L.circleMarker([43.5246 6.1436] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>COTIGNAC</b><br>6.4 % brut — 2 083 €/m² — 11.1 €/m²</br>21 ventes');
+L.circleMarker([43.5455 4.9477] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>ISTRES</b><br>6.4 % brut — 2 835 €/m² — 15.0 €/m²</br>233 ventes');
+L.circleMarker([43.4071 6.4599] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>VIDAUBAN</b><br>6.4 % brut — 2 421 €/m² — 12.8 €/m²</br>79 ventes');
+L.circleMarker([43.6074 4.8688] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-MARTIN-DE-CRAU</b><br>6.3 % brut — 2 750 €/m² — 14.5 €/m²</br>29 ventes');
+L.circleMarker([43.2822 5.7099] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CUGES-LES-PINS</b><br>6.3 % brut — 2 666 €/m² — 13.9 €/m²</br>16 ventes');
+L.circleMarker([43.4565 5.0152] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-MITRE-LES-REMPARTS</b><br>6.3 % brut — 2 840 €/m² — 14.8 €/m²</br>16 ventes');
+L.circleMarker([43.7205 5.2461] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CHARLEVAL</b><br>6.3 % brut — 2 538 €/m² — 13.2 €/m²</br>10 ventes');
+L.circleMarker([43.6636 5.2493] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LAMBESC</b><br>6.2 % brut — 3 437 €/m² — 17.9 €/m²</br>44 ventes');
+L.circleMarker([43.1290 6.0162] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA GARDE</b><br>6.2 % brut — 3 137 €/m² — 16.2 €/m²</br>254 ventes');
+L.circleMarker([43.2097 5.9836] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SOLLIÈS-TOUCAS</b><br>6.2 % brut — 2 545 €/m² — 13.1 €/m²</br>20 ventes');
+L.circleMarker([43.3873 5.2334] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>GIGNAC-LA-NERTHE</b><br>6.2 % brut — 3 230 €/m² — 16.6 €/m²</br>31 ventes');
+L.circleMarker([43.2778 5.5185] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA PENNE-SUR-HUVEAUNE</b><br>6.1 % brut — 3 116 €/m² — 15.8 €/m²</br>45 ventes');
+L.circleMarker([43.5441 4.6513] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>ARLES</b><br>6.1 % brut — 2 567 €/m² — 13.0 €/m²</br>292 ventes');
+L.circleMarker([43.4585 5.4857] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>GARDANNE</b><br>6.1 % brut — 3 203 €/m² — 16.2 €/m²</br>136 ventes');
+L.circleMarker([43.6262 5.5763] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PEYROLLES-EN-PROVENCE</b><br>6.1 % brut — 2 831 €/m² — 14.3 €/m²</br>16 ventes');
+L.circleMarker([43.4488 5.8603] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-MAXIMIN-LA-SAINTE-BAUME</b><br>6.0 % brut — 2 746 €/m² — 13.8 €/m²</br>59 ventes');
+L.circleMarker([43.4533 6.4862] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LES ARCS</b><br>6.0 % brut — 2 800 €/m² — 14.1 €/m²</br>59 ventes');
+L.circleMarker([43.2809 6.1646] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PUGET-VILLE</b><br>6.0 % brut — 2 571 €/m² — 12.9 €/m²</br>21 ventes');
+L.circleMarker([43.4712 6.6861] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PUGET-SUR-ARGENS</b><br>6.0 % brut — 3 232 €/m² — 16.2 €/m²</br>81 ventes');
+L.circleMarker([43.3594 5.6559] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>AURIOL</b><br>6.0 % brut — 2 980 €/m² — 14.9 €/m²</br>64 ventes');
+L.circleMarker([43.6672 5.3546] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>ROGNES</b><br>6.0 % brut — 3 058 €/m² — 15.3 €/m²</br>15 ventes');
+L.circleMarker([43.8829 4.8344] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CHÂTEAURENARD</b><br>6.0 % brut — 2 523 €/m² — 12.6 €/m²</br>76 ventes');
+L.circleMarker([43.6430 5.0490] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SALON-DE-PROVENCE</b><br>5.9 % brut — 2 933 €/m² — 14.4 €/m²</br>433 ventes');
+L.circleMarker([43.5662 5.3177] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>ÉGUILLES</b><br>5.9 % brut — 3 553 €/m² — 17.5 €/m²</br>35 ventes');
+L.circleMarker([43.2590 5.5655] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CARNOUX-EN-PROVENCE</b><br>5.9 % brut — 3 571 €/m² — 17.5 €/m²</br>37 ventes');
+L.circleMarker([43.1895 6.0625] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SOLLIÈS-PONT</b><br>5.9 % brut — 2 820 €/m² — 13.8 €/m²</br>66 ventes');
+L.circleMarker([43.3336 5.7472] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PLAN-D'AUPS-SAINTE-BAUME</b><br>5.9 % brut — 2 891 €/m² — 14.1 €/m²</br>14 ventes');
+L.circleMarker([43.7214 5.8017] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>VINON-SUR-VERDON</b><br>5.9 % brut — 2 529 €/m² — 12.3 €/m²</br>12 ventes');
+L.circleMarker([43.0837 5.8789] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA SEYNE-SUR-MER</b><br>5.8 % brut — 3 043 €/m² — 14.8 €/m²</br>888 ventes');
+L.circleMarker([43.6118 6.6762] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>FAYENCE</b><br>5.8 % brut — 3 194 €/m² — 15.5 €/m²</br>38 ventes');
+L.circleMarker([43.3522 5.5103] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>ALLAUCH</b><br>5.8 % brut — 3 479 €/m² — 16.9 €/m²</br>77 ventes');
+L.circleMarker([43.3251 6.4603] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA GARDE-FREINET</b><br>5.7 % brut — 3 136 €/m² — 15.0 €/m²</br>23 ventes');
+L.circleMarker([43.3642 5.4639] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PLAN-DE-CUQUES</b><br>5.7 % brut — 3 672 €/m² — 17.5 €/m²</br>63 ventes');
+L.circleMarker([43.1706 6.0923] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA CRAU</b><br>5.7 % brut — 3 347 €/m² — 15.9 €/m²</br>59 ventes');
+L.circleMarker([43.2416 5.9972] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>BELGENTIER</b><br>5.7 % brut — 2 619 €/m² — 12.4 €/m²</br>11 ventes');
+L.circleMarker([43.1385 5.8515] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>OLLIOULES</b><br>5.7 % brut — 3 105 €/m² — 14.7 €/m²</br>89 ventes');
+L.circleMarker([43.5385 6.8177] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LES ADRETS-DE-L'ESTÉREL</b><br>5.6 % brut — 3 707 €/m² — 17.4 €/m²</br>10 ventes');
+L.circleMarker([43.4468 6.0569] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE VAL</b><br>5.6 % brut — 2 429 €/m² — 11.3 €/m²</br>13 ventes');
+L.circleMarker([43.2202 6.4835] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA MÔLE</b><br>5.5 % brut — 3 756 €/m² — 17.3 €/m²</br>10 ventes');
+L.circleMarker([43.4452 5.7137] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>TRETS</b><br>5.5 % brut — 3 273 €/m² — 15.1 €/m²</br>54 ventes');
+L.circleMarker([43.2518 5.6297] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>ROQUEFORT-LA-BÉDOULE</b><br>5.5 % brut — 3 653 €/m² — 16.7 €/m²</br>28 ventes');
+L.circleMarker([43.2215 5.6354] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CEYRESTE</b><br>5.4 % brut — 3 658 €/m² — 16.6 €/m²</br>12 ventes');
+L.circleMarker([43.7005 5.0132] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>EYGUIÈRES</b><br>5.4 % brut — 3 091 €/m² — 14.0 €/m²</br>24 ventes');
+L.circleMarker([43.3904 5.1464] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CHÂTEAUNEUF-LES-MARTIGUES</b><br>5.4 % brut — 3 677 €/m² — 16.6 €/m²</br>94 ventes');
+L.circleMarker([43.2050 5.8239] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE BEAUSSET</b><br>5.4 % brut — 3 349 €/m² — 15.1 €/m²</br>61 ventes');
+L.circleMarker([43.2759 5.8498] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SIGNES</b><br>5.4 % brut — 2 851 €/m² — 12.8 €/m²</br>12 ventes');
+L.circleMarker([43.3808 5.7874] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>NANS-LES-PINS</b><br>5.3 % brut — 3 179 €/m² — 14.2 €/m²</br>15 ventes');
+L.circleMarker([43.3788 5.5984] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA DESTROUSSE</b><br>5.3 % brut — 3 729 €/m² — 16.6 €/m²</br>17 ventes');
+L.circleMarker([43.3942 5.6260] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA BOUILLADISSE</b><br>5.3 % brut — 3 526 €/m² — 15.7 €/m²</br>12 ventes');
+L.circleMarker([43.2429 6.0654] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CUERS</b><br>5.3 % brut — 3 151 €/m² — 13.9 €/m²</br>94 ventes');
+L.circleMarker([43.3749 5.7164] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-ZACHARIE</b><br>5.2 % brut — 3 353 €/m² — 14.7 €/m²</br>30 ventes');
+L.circleMarker([43.8600 4.9018] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>NOVES</b><br>5.2 % brut — 2 910 €/m² — 12.6 €/m²</br>16 ventes');
+L.circleMarker([43.5681 6.6822] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-PAUL-EN-FORÊT</b><br>5.1 % brut — 2 992 €/m² — 12.8 €/m²</br>11 ventes');
+L.circleMarker([43.4869 5.6202] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>ROUSSET</b><br>5.1 % brut — 4 077 €/m² — 17.2 €/m²</br>25 ventes');
+L.circleMarker([43.5541 5.2051] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA FARE-LES-OLIVIERS</b><br>5.1 % brut — 3 704 €/m² — 15.6 €/m²</br>24 ventes');
+L.circleMarker([43.4575 5.5537] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>FUVEAU</b><br>5.0 % brut — 4 022 €/m² — 16.9 €/m²</br>43 ventes');
+L.circleMarker([43.8180 5.0011] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PLAN-D'ORGON</b><br>5.0 % brut — 3 385 €/m² — 14.2 €/m²</br>15 ventes');
+L.circleMarker([43.6090 6.7252] {radius:6 color:'#b45309' fillColor:'#fef3c7' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>TOURRETTES</b><br>5.0 % brut — 3 611 €/m² — 15.1 €/m²</br>13 ventes');
+L.circleMarker([43.2969 5.6518] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>GÉMENOS</b><br>5.0 % brut — 4 125 €/m² — 17.2 €/m²</br>18 ventes');
+L.circleMarker([43.1878 5.9453] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE REVEST-LES-EAUX</b><br>5.0 % brut — 3 305 €/m² — 13.7 €/m²</br>14 ventes');
+L.circleMarker([43.4880 5.5002] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>MEYREUIL</b><br>4.9 % brut — 4 357 €/m² — 18.0 €/m²</br>37 ventes');
+L.circleMarker([43.2351 6.1798] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PIERREFEU-DU-VAR</b><br>4.9 % brut — 3 217 €/m² — 13.2 €/m²</br>65 ventes');
+L.circleMarker([43.4375 5.6204] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PEYNIER</b><br>4.9 % brut — 4 044 €/m² — 16.6 €/m²</br>34 ventes');
+L.circleMarker([43.1640 6.0414] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA FARLÈDE</b><br>4.9 % brut — 3 750 €/m² — 15.3 €/m²</br>57 ventes');
+L.circleMarker([43.4442 5.4118] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>BOUC-BEL-AIR</b><br>4.9 % brut — 4 445 €/m² — 18.2 €/m²</br>25 ventes');
+L.circleMarker([43.5215 5.2460] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>VELAUX</b><br>4.9 % brut — 3 890 €/m² — 15.8 €/m²</br>23 ventes');
+L.circleMarker([43.5328 6.7089] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>BAGNOLS-EN-FORÊT</b><br>4.9 % brut — 3 095 €/m² — 12.6 €/m²</br>21 ventes');
+L.circleMarker([43.7280 5.1849] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>MALLEMORT</b><br>4.9 % brut — 3 410 €/m² — 13.9 €/m²</br>78 ventes');
+L.circleMarker([43.6300 5.1628] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PÉLISSANNE</b><br>4.9 % brut — 3 632 €/m² — 14.8 €/m²</br>35 ventes');
+L.circleMarker([43.6533 5.4401] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE PUY-SAINTE-RÉPARADE</b><br>4.9 % brut — 3 900 €/m² — 15.8 €/m²</br>17 ventes');
+L.circleMarker([43.4553 6.7848] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>FRÉJUS</b><br>4.9 % brut — 4 205 €/m² — 17.0 €/m²</br>1183 ventes');
+L.circleMarker([43.6069 6.7601] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CALLIAN</b><br>4.8 % brut — 3 234 €/m² — 12.9 €/m²</br>29 ventes');
+L.circleMarker([43.5360 5.3879] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>AIX-EN-PROVENCE</b><br>4.8 % brut — 4 818 €/m² — 19.1 €/m²</br>1939 ventes');
+L.circleMarker([43.2026 5.7231] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA CADIÈRE-D'AZUR</b><br>4.8 % brut — 3 812 €/m² — 15.1 €/m²</br>21 ventes');
+L.circleMarker([43.6172 5.0431] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>GRANS</b><br>4.7 % brut — 3 715 €/m² — 14.7 €/m²</br>16 ventes');
+L.circleMarker([43.2406 6.5319] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>COGOLIN</b><br>4.7 % brut — 4 375 €/m² — 17.2 €/m²</br>196 ventes');
+L.circleMarker([43.1139 6.2357] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>HYÈRES</b><br>4.7 % brut — 4 012 €/m² — 15.7 €/m²</br>940 ventes');
+L.circleMarker([43.5728 5.1725] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LANÇON-PROVENCE</b><br>4.7 % brut — 3 900 €/m² — 15.3 €/m²</br>32 ventes');
+L.circleMarker([43.3834 5.5700] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>PEYPIN</b><br>4.7 % brut — 4 239 €/m² — 16.5 €/m²</br>10 ventes');
+L.circleMarker([43.3622 5.2498] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE ROVE</b><br>4.6 % brut — 4 609 €/m² — 17.8 €/m²</br>14 ventes');
+L.circleMarker([43.5936 6.7993] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>MONTAUROUX</b><br>4.6 % brut — 3 536 €/m² — 13.6 €/m²</br>30 ventes');
+L.circleMarker([43.5091 6.5506] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA MOTTE</b><br>4.6 % brut — 3 649 €/m² — 14.0 €/m²</br>23 ventes');
+L.circleMarker([43.3370 6.5462] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE PLAN-DE-LA-TOUR</b><br>4.6 % brut — 4 322 €/m² — 16.5 €/m²</br>22 ventes');
+L.circleMarker([43.4892 5.5691] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CHÂTEAUNEUF-LE-ROUGE</b><br>4.6 % brut — 4 761 €/m² — 18.1 €/m²</br>13 ventes');
+L.circleMarker([43.3357 6.0884] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>FORCALQUEIRET</b><br>4.6 % brut — 3 474 €/m² — 13.2 €/m²</br>14 ventes');
+L.circleMarker([43.6155 5.3108] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-CANNAT</b><br>4.6 % brut — 4 343 €/m² — 16.5 €/m²</br>18 ventes');
+L.circleMarker([43.5446 5.3045] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>VENTABREN</b><br>4.6 % brut — 4 773 €/m² — 18.1 €/m²</br>28 ventes');
+L.circleMarker([43.4025 5.5321] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-SAVOURNIN</b><br>4.5 % brut — 4 126 €/m² — 15.6 €/m²</br>13 ventes');
+L.circleMarker([43.5951 5.4991] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>VENELLES</b><br>4.5 % brut — 4 727 €/m² — 17.7 €/m²</br>35 ventes');
+L.circleMarker([43.4582 6.8483] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-RAPHAËL</b><br>4.5 % brut — 4 762 €/m² — 17.8 €/m²</br>1059 ventes');
+L.circleMarker([43.0984 6.0214] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE PRADET</b><br>4.5 % brut — 4 161 €/m² — 15.6 €/m²</br>117 ventes');
+L.circleMarker([43.4530 5.3467] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CABRIÈS</b><br>4.5 % brut — 4 951 €/m² — 18.4 €/m²</br>14 ventes');
+L.circleMarker([43.2148 5.7561] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE CASTELLET</b><br>4.3 % brut — 4 368 €/m² — 15.7 €/m²</br>21 ventes');
+L.circleMarker([43.5218 5.5053] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE THOLONET</b><br>4.2 % brut — 5 384 €/m² — 19.0 €/m²</br>14 ventes');
+L.circleMarker([43.4282 6.6525] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>ROQUEBRUNE-SUR-ARGENS</b><br>4.2 % brut — 4 438 €/m² — 15.5 €/m²</br>193 ventes');
+L.circleMarker([43.7815 4.8455] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-RÉMY-DE-PROVENCE</b><br>4.1 % brut — 4 306 €/m² — 14.8 €/m²</br>34 ventes');
+L.circleMarker([43.1882 5.6175] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA CIOTAT</b><br>4.1 % brut — 5 152 €/m² — 17.7 €/m²</br>521 ventes');
+L.circleMarker([43.0762 5.9272] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-MANDRIER-SUR-MER</b><br>4.0 % brut — 4 750 €/m² — 15.9 €/m²</br>159 ventes');
+L.circleMarker([43.0975 6.0714] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CARQUEIRANNE</b><br>4.0 % brut — 5 362 €/m² — 17.9 €/m²</br>121 ventes');
+L.circleMarker([43.1797 6.5215] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CAVALAIRE-SUR-MER</b><br>4.0 % brut — 5 526 €/m² — 18.4 €/m²</br>315 ventes');
+L.circleMarker([43.3584 6.6139] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINTE-MAXIME</b><br>3.9 % brut — 5 625 €/m² — 18.4 €/m²</br>385 ventes');
+L.circleMarker([43.4958 4.4374] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINTES-MARIES-DE-LA-MER</b><br>3.8 % brut — 4 729 €/m² — 15.2 €/m²</br>58 ventes');
+L.circleMarker([43.0843 5.8079] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SIX-FOURS-LES-PLAGES</b><br>3.8 % brut — 5 183 €/m² — 16.6 €/m²</br>592 ventes');
+L.circleMarker([43.3462 5.1587] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CARRY-LE-ROUET</b><br>3.8 % brut — 5 945 €/m² — 18.9 €/m²</br>50 ventes');
+L.circleMarker([43.2385 6.5876] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>GASSIN</b><br>3.8 % brut — 7 173 €/m² — 22.6 €/m²</br>36 ventes');
+L.circleMarker([43.1909 6.5880] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA CROIX-VALMER</b><br>3.7 % brut — 6 250 €/m² — 19.4 €/m²</br>99 ventes');
+L.circleMarker([43.1575 6.3615] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>BORMES-LES-MIMOSAS</b><br>3.7 % brut — 5 498 €/m² — 17.0 €/m²</br>212 ventes');
+L.circleMarker([43.3554 5.1880] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>ENSUÈS-LA-REDONNE</b><br>3.7 % brut — 5 767 €/m² — 17.6 €/m²</br>13 ventes');
+L.circleMarker([43.1700 5.7055] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-CYR-SUR-MER</b><br>3.6 % brut — 5 947 €/m² — 17.9 €/m²</br>221 ventes');
+L.circleMarker([43.1374 5.7951] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SANARY-SUR-MER</b><br>3.5 % brut — 6 067 €/m² — 17.8 €/m²</br>364 ventes');
+L.circleMarker([43.1470 5.7488] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>BANDOL</b><br>3.5 % brut — 6 216 €/m² — 18.2 €/m²</br>315 ventes');
+L.circleMarker([43.3469 5.1158] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAUSSET-LES-PINS</b><br>3.4 % brut — 6 914 €/m² — 19.9 €/m²</br>80 ventes');
+L.circleMarker([43.2185 5.5503] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>CASSIS</b><br>3.4 % brut — 7 521 €/m² — 21.2 €/m²</br>98 ventes');
+L.circleMarker([43.1641 6.2417] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LA LONDE-LES-MAURES</b><br>3.3 % brut — 5 920 €/m² — 16.4 €/m²</br>189 ventes');
+L.circleMarker([43.2822 6.5097] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>GRIMAUD</b><br>3.3 % brut — 6 642 €/m² — 18.3 €/m²</br>148 ventes');
+L.circleMarker([43.1669 6.4015] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>LE LAVANDOU</b><br>3.3 % brut — 6 045 €/m² — 16.5 €/m²</br>269 ventes');
+L.circleMarker([43.1664 6.4744] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>RAYOL-CANADEL-SUR-MER</b><br>2.8 % brut — 7 660 €/m² — 17.9 €/m²</br>15 ventes');
+L.circleMarker([43.2115 6.6449] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>RAMATUELLE</b><br>2.6 % brut — 10 442 €/m² — 22.6 €/m²</br>18 ventes');
+L.circleMarker([43.2619 6.6638] {radius:6 color:'#991b1b' fillColor:'#fee2e2' fillOpacity:0.9 weight:1.5}).addTo(map).bindPopup('<b>SAINT-TROPEZ</b><br>2.6 % brut — 12 339 €/m² — 26.4 €/m²</br>134 ventes');
 </script>
 </body>
 </html>
