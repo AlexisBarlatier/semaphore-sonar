@@ -381,9 +381,10 @@ def rec_saint_maximin():
                         "appartements, les cuisines et salles d'eau, l'escalier, la toiture, la façade et la "
                         "structure sont à chiffrer. La fourchette réaliste va de 250 000 à 480 000 € sur 400 m² "
                         "et l'écart entre les deux bornes vaut la totalité de la marge de l'opération. "
-                        "Le prix d'achat qui laisse 20 % de ROI tombe de 258 000 € avec 250 000 € de travaux à "
-                        "45 000 € avec 480 000 € : autrement dit, au-delà de 300 000 € de chantier, l'achat à "
-                        "235 000 € n'est plus un marchand de biens"
+                        "Le prix d'achat qui laisse 20 % de ROI tombe de 325 000 € avec 250 000 € de travaux à "
+                        "113 000 € avec 480 000 €, en passant par 233 000 € avec 350 000 € : autrement dit, "
+                        "au-delà de 350 000 € de chantier, l'achat à 235 000 € n'est plus un marchand de biens "
+                        "et il faut soit renégocier de l'écart, soit passer"
                     ),
                 },
                 {
@@ -517,8 +518,10 @@ def main():
     net = REVENTE_CENTRALE * (1 - FRAIS_VENTE)
     rev_max = 0.85 * net / 1.05
     plafonds = []
+    plafonds_vals = []
     for trav in (200000.0, 250000.0, 300000.0, 350000.0, 400000.0, 480000.0):
         prix_max = ((rev_max - 7200.0) / (1 + TAUX * PORTAGE_MOIS / 12) - trav) / (1 + NOTAIRE)
+        plafonds_vals.append(prix_max)
         plafonds.append(f'        <tr><td>{eur(trav)} €</td><td class="num">{eur(prix_max)} €</td>'
                         f'<td class="num">{eur(prix_max-PRIX)} €</td></tr>')
     plafonds_html = "\n".join(plafonds)
@@ -853,7 +856,7 @@ def main():
 
     print(f"\n  note {note} / 10  |  verdict {verdict}")
     print(f"  base  : revient {eur(rb['revient'])} | PV nette {eur(rb['nette'])} | ROI {fr(rb['roi'])} %")
-    print(f"  plafond 20 % ROI : 258 000 EUR (travaux 250 k) | 212 000 (300 k) | 166 000 (350 k)")
+    print(f"  plafond 20 % ROI : {eur(plafonds_vals[0])} EUR (travaux 250 k) | {eur(plafonds_vals[1])} (300 k) | {eur(plafonds_vals[2])} (350 k)")
 
 
 if __name__ == '__main__':
