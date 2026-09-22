@@ -8557,18 +8557,11 @@
         },
         "loyers": [
           {
-            "lot": "T4 de 77,45 m² — location nue, logement entier",
-            "quantite": 1,
-            "loyer_mensuel_euros": 1050.0,
-            "occupe": false,
-            "note": "Bien vide : loyer retenu après remise au standard. Comparables relevés le 22/09/2026 à Toulon : 1 000 € pour 75 m², 877 € pour un T4 de 75 m². Le loyer mesuré de la commune est de 14,4 €/m²/mois, soit 1 115 € pour cette surface : le loyer retenu de 1 050 € reste prudent"
-          },
-          {
-            "lot": "Variante colocation : quatre chambres meublées",
+            "lot": "Quatre chambres meublées — colocation étudiante (stratégie retenue)",
             "quantite": 4,
             "loyer_mensuel_euros": 450.0,
             "occupe": false,
-            "note": "Chambres meublées dans un T4 proche des facultés : 410 à 480 € par chambre à Toulon, avec de nombreuses colocations de trois et quatre chambres dans le secteur Saint-Jean / Porte d'Italie / Saint-Roch. Retenu 450 € par chambre pour quatre chambres, soit 1 800 €/mois. La quatrième chambre suppose de sacrifier le séjour : c'est la condition à vérifier sur le plan, et le point faible du scénario"
+            "note": "Bien vide : ce loyer est un loyer retenu après remise au standard, pas un revenu acquis. Chambres meublées dans un T4 proche des facultés : 410 à 480 € par chambre à Toulon, avec de nombreuses colocations de trois et quatre chambres dans le secteur Saint-Jean / Porte d'Italie / Saint-Roch. Retenu 450 € par chambre pour quatre chambres, soit 1 800 €/mois. Une seule ligne de revenu est saisie : la variante location nue du T4 entier ne se cumule pas avec celle-ci, elle s'y substitue — à 1 000 à 1 100 €/mois, elle donne 3,4 à 3,9 % net avant IS et un plafond d'achat de 101 000 à 122 000 €. La quatrième chambre suppose de sacrifier le séjour : c'est la condition à vérifier sur le plan, et le point faible du scénario"
           }
         ],
         "notes": "Le dossier se joue entièrement sur la typologie d'exploitation. En location nue, un T4 de 77 m² se loue 1 000 à 1 100 € par mois : l'excédent brut d'exploitation ressort entre 6 480 et 7 578 €, le rendement net avant IS entre 3,4 et 3,9 %, et le prix qui tient notre seuil de 5 % tombe à 101 000-122 000 €, très loin des 160 000 € demandés. En colocation meublée à quatre chambres à 450 €, le loyer brut passe à 21 600 € par an : le rendement net monte à 5,6 %, le cash flow devient quasi neutre sous crédit, et le prix qui tient 5 % remonte à 182 700 € — au-dessus du prix affiché. Le passage de l'un à l'autre n'est pas une nuance d'exploitation, c'est un changement de dossier"
