@@ -7879,6 +7879,222 @@
         ]
       },
       "champs_manquants": []
+    },
+    {
+      "slug": "2026-09-22-immeuble-rapport-pierrefeu-du-var",
+      "date_analyse": "2026-09-22",
+      "date_maj": null,
+      "titre": "Immeuble de rapport — local commercial, deux appartements et combles (141 m²) — Cœur de ville, Pierrefeu-du-Var (83390)",
+      "bien": {
+        "type_bien": "immeuble",
+        "sous_type": null,
+        "type_detail": "Immeuble de rapport de trois étages en cœur de ville, sur rue passante : un local à usage professionnel de 38 m² avec vitrine en rez-de-chaussée, deux appartements de type 2, et un grenier de deux grandes pièces accessible par escalier, aménageable en troisième logement sous réserve des autorisations d'urbanisme. Compteurs individuels, double vitrage, chauffage individuel, climatisation au rez-de-chaussée. Bâti de 1948. Le portail affiche l'état « à rénover ». Pas de cave, non accessible aux personnes à mobilité réduite. Copropriété NON : monopropriété, donc aucune charge de syndic mais la totalité de la structure et de la toiture à la charge du propriétaire.",
+        "neuf": false,
+        "adresse": {
+          "texte": "Cœur de ville, Pierrefeu-du-Var (83390) — adresse exacte non communiquée (nombreux parkings dans l'environnement immédiat, proximité des commerces et des écoles)",
+          "ville": "Pierrefeu-du-Var",
+          "code_postal": "83390"
+        },
+        "surfaces": {
+          "texte": "141 m² annoncés par SeLoger, 148 m² par bien'ici sur le même immeuble (8 pièces, 256 000 € il y a cinq mois) : répartition non communiquée entre le local commercial (~38 m²), les deux appartements (~47 m²) et les combles (non comptés). Aucune surface Carrez par lot. L'écart de 7 m² entre les deux portails et la surface exacte de chaque lot sont à obtenir avant toute offre.",
+          "carrez_m2": 141.0
+        },
+        "lots": {
+          "count": 3,
+          "surface_par_lot_m2": null,
+          "nature": "Trois lots d'activité et d'habitation : un local commercial de 38 m² avec vitrine sur rue passante en rez-de-chaussée, deux appartements aux étages, plus des combles de deux grandes pièces qui permettraient un troisième logement. Immeuble en monopropriété, donc aucun lot juridiquement divisé : une revente à la découpe exigerait un état descriptif de division, de l'ordre de 5 000 à 10 000 € et six à neuf mois.",
+          "lots_distincts": 3
+        },
+        "copro": {
+          "charges_annuelles_euros": 0.0,
+          "charges_source": "Copropriété NON — immeuble en monopropriété (mention de la fiche Logic-Immo : « immeuble de rapport en mono »). Aucune charge de copropriété, aucun syndic. En contrepartie, la toiture, la façade, les réseaux et la structure d'un bâti de 1948 sont intégralement portés par le propriétaire : c'est le premier poste de risque non chiffré du dossier, sur un immeuble dont aucun gros travaux n'est documenté."
+        },
+        "travaux": {
+          "montant_euros": 30000.0,
+          "nature": "État annoncé « à rénover » par le portail, sans devis, sans nature détaillée, sans plan et sans diagnostic technique joint. Provision retenue 30 000 € (213 €/m²) pour la remise en sécurité et la remise au standard de location des lots en place : électricité, plomberie, menuiseries, peintures, remise en état du local. Ne sont PAS chiffrés : la couverture, la charpente et les réseaux d'un bâti de 1948 en monopropriété (fourchette 20 000 à 50 000 €), ni le rafraîchissement des parties communes. L'aménagement des combles en troisième logement est un projet distinct, estimé 55 000 à 75 000 € (isolation, plancher, menuiseries, réseaux, cuisine et salle d'eau pour environ 40 m²), avec création de surface de plancher donc autorisation d'urbanisme et taxe d'aménagement."
+        }
+      },
+      "annonce": {
+        "plateforme": "SeLoger",
+        "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/pierrefeu-du-var-83390/26V4LZNKNUL9",
+        "prix_affiche_euros": 247000.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche",
+        "prix_commentaire": "247 000 €, soit 1 752 €/m² sur les 141 m² annoncés, honoraires à la charge du vendeur. Le même immeuble était affiché 256 000 € sur bien'ici il y a cinq mois (148 m², 8 pièces) : −9 000 € (−3,5 %) et passage en exclusivité après cinq mois sans acheteur. Le ratio au m² est trompeur : il mélange deux appartements, un local commercial et un grenier non aménagé, et il ne doit pas être comparé aux 2 716 €/m² de la médiane des appartements de la commune."
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 250000.0,
+          "haute_euros": 300000.0,
+          "retenue_euros": 280000.0,
+          "source": "Valorisation par composant : deux appartements de 47 m² à 2 716 €/m² — médiane communale des appartements (MeilleursAgents et Figaro Immobilier, septembre 2026) — soit 255 300 € ; local commercial de 38 m² à 800 €/m², soit 30 400 € ; combles non aménagés de 40 m² à 300 €/m², soit 12 000 €. Total brut 297 700 €, ramené à 280 000 € après décote de liquidité et de délai de vente. Les moyennes communales toutes catégories (3 340 €/m² pour MeilleursAgents, 4 046 €/m² pour PAP) ne sont pas des références ici : elles sont tirées vers le haut par les maisons, qui représentent 78 % du parc de la commune.",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "Local commercial 38 m² (rez-de-chaussée, vitrine sur rue passante)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 450.0,
+            "occupe": true,
+            "note": "Répartition non communiquée : l'annonce donne un total de 18 300 €/an « baux en cours », sans détail par lot. Répartition retenue par analogie avec le marché constaté. Comparables : loyer commercial moyen à Pierrefeu-du-Var de 220 €/m²/an (fourchette basse 87 €, haute 257 €, UnEmplacement au 02/09/2026), soit 275 à 813 €/mois pour 38 m² ; 1 200 €/mois pour 105 m² à Cuers. Le local est le lot le plus risqué du dossier : sa vacance est longue et son loyer est plus sensible au commerce local qu'au marché résidentiel."
+          },
+          {
+            "lot": "Appartement T2 environ 47 m² (étages)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 540.0,
+            "occupe": true,
+            "note": "Part du total de 18 300 €/an attribuée à ce lot, à titre de répartition de travail. Marché constaté à Pierrefeu-du-Var : 515 € CC pour un T2 meublé de 35 m², 520 € CC pour un T1 bis de 46 m², 680 € pour un T2 de 50 m² en centre-ville, 890 € CC pour un T3 meublé de 80 m². Le loyer en place n'est pas connu : c'est le premier chiffre à réclamer."
+          },
+          {
+            "lot": "Appartement T2 environ 47 m² (étages)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 535.0,
+            "occupe": true,
+            "note": "Idem : part du total annoncé, répartition de travail. Le montant exact, la date de signature, le type de bail, l'indexation et le dépôt de garantie de chaque lot ne sont pas communiqués. Le total retenu est celui de l'annonce — 1 525 €/mois — et non une reconstruction du marché, qui donne plutôt 1 725 €/mois."
+          }
+        ],
+        "notes": "L'annonce écrit « loyer annuel d'environ 18 300 € » avec « baux en cours », sans répartition par lot, sans date ni type de bail (un bail commercial 3/6/9 et un bail d'habitation ne se révisent pas de la même façon), sans indexation et sans dépôt de garantie. Le marché reconstitué donne 20 700 €/an, soit +2 400 € (+13 %) : 505 €/mois pour le local de 38 m² et 600 à 620 €/mois pour chacun des deux T2. Les deux leviers — rattrapage à l'IRL et réalignement à la rotation — ne se cumulent pas et ne s'appliquent qu'au fil des renouvellements. Avec l'aménagement des combles, le potentiel monte à 27 900 €/an, mais au prix de 55 000 à 75 000 € de travaux supplémentaires."
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 2.0,
+        "vacance_worst_pct": 12.0,
+        "vacance_justification": "Taux par défaut de la branche résidentielle, relevé à 5 % / 2 % / 12 %. L'immeuble compte trois lots loués séparément, dont un local commercial dont la remise en location est lente : la vacance worst à 12 % correspond à la perte du local pendant un mois et demi par an, ou au départ d'un locataire d'habitation avec deux mois de relocation. Le marché locatif résidentiel de la commune est liquide (T2 reloués entre 515 et 680 €), mais le local commercial est le maillon faible.",
+        "frais_acquisition_euros": 19760.0,
+        "frais_divers_euros": 0.0,
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 2200.0,
+          "taxe_fonciere_commentaire": "ESTIMATION 2 200 €/an — la taxe n'est pas communiquée. Pierrefeu-du-Var applique un taux communal sur le bâti de 22,38 %, à comparer à la moyenne de 20,81 % des communes comparables. Le calcul part d'une valeur locative cadastrale de l'ordre de 6 500 € pour 141 m² anciens dont un local commercial, à confirmer sur l'avis réel. Fourchette 1 800 à 2 800 €/an : chaque 500 € d'écart vaut 42 €/mois de cash flow.",
+          "charges_copro_annuelles_euros": 0.0,
+          "charges_copro_commentaire": "Immeuble en monopropriété : aucune charge de copropriété. Convention assumée et signalée : l'absence de syndic ne veut pas dire absence de coût — la toiture, la façade et les réseaux sont portés par le propriétaire, et le poste est traité en provision travaux, pas en charge récurrente.",
+          "pno_annuelle_euros": 450.0,
+          "pno_commentaire": "Assurance de l'immeuble et de ses trois lots, local commercial compris (garantie des locaux professionnels et du risque locatif plus chère qu'une assurance d'habitation).",
+          "entretien_annuel_euros": 2291.0,
+          "entretien_commentaire": "Poste composite de 2 291 €/an, détaillé ligne par ligne : entretien courant et remise en état du local entre deux preneurs 900 €, TEOM sur la part non récupérable 600 €, frais bancaires 150 €, provision d'impayés 1 % des loyers 183 €, provision gros travaux 2,5 % des loyers 458 €. Avec la taxe foncière, l'assurance et la comptabilité, le total des charges ressort à 6 141 €/an hors vacance, soit 34 % des loyers bruts : aucun poste n'est laissé à zéro, et c'est ce jeu de charges complet qui produit l'EBE de 11 244 €/an.",
+          "comptabilite_annuelle_euros": 1200.0,
+          "comptabilite_commentaire": "Comptabilité de la SCI à l'IS (bilan, liasse, amortissements) : 1 200 €/an, plus 150 € de frais bancaires déjà comptés dans le poste entretien."
+        }
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Conservation avec les trois lots en place, réalignement des loyers à la rotation",
+          "code": "ld-nue",
+          "lots": 3
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Conservation avec les baux en place",
+            "lots": 3,
+            "rendement": "3,8 % net avant IS sur le prix de revient (11 244 € d'EBE pour 296 760 € de revient)",
+            "faisabilite": "immédiate — revenus acquis au premier jour, sous réserve de vérifier les baux",
+            "risque": "élevé — sous crédit à 90 % sur 15 ans, il manque 674 €/mois"
+          },
+          {
+            "strategie": "Conservation avec réalignement des loyers à la rotation",
+            "lots": 3,
+            "rendement": "4,6 % net avant IS avec 20 700 € de loyers (marché reconstitué)",
+            "faisabilite": "étalée sur 2 à 5 ans, bail par bail, plus lente sur le bail commercial",
+            "risque": "moyen — les baux en cours ne se révisent qu'à l'IRL jusqu'à leur terme"
+          },
+          {
+            "strategie": "Aménagement des combles en troisième logement puis conservation",
+            "lots": 4,
+            "rendement": "5,5 % net avant IS avec 27 900 € de loyers, mais 95 000 € de travaux au total",
+            "faisabilite": "12 à 24 mois de travaux, autorisation d'urbanisme et taxe d'aménagement",
+            "risque": "élevé — création de surface de plancher, structure d'un bâti de 1948 à vérifier, 139 460 € de fonds à amener pour un cash flow de +58 €/mois"
+          },
+          {
+            "strategie": "Achat comptant puis refinancement partiel",
+            "lots": 3,
+            "rendement": "1,5 à 2,7 % de rendement des fonds propres résiduels",
+            "faisabilite": "réalisable, 121 000 à 145 000 € récupérés sur 70 % de la valeur capitalisée",
+            "risque": "moyen — le rendement des fonds propres résiduels ne couvre pas le coût du risque"
+          },
+          {
+            "strategie": "Revente à la découpe après division en lots",
+            "lots": 3,
+            "rendement": "négatif — le ratio coût/valeur est déjà à 1,00 sans division",
+            "faisabilite": "état descriptif de division, 5 000 à 10 000 €, six à neuf mois",
+            "risque": "élevé — un immeuble loué se valorise par capitalisation du loyer, pas au prix au m² d'un bien libre"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 6,
+            "justification": "Pierrefeu-du-Var est à une vingtaine de minutes de Hyères et de Toulon par l'A570, avec l'aéroport de Hyères-Toulon à proximité et la gare de Cuers à quelques kilomètres. Pas de gare dans la commune : la voiture est indispensable, ce qui cible la clientèle locative sur les actifs du bassin toulonnais et hyérois plutôt que sur des navetteurs ferroviaires."
+          },
+          {
+            "dimension": "commerces",
+            "score": 6,
+            "justification": "Cœur de ville commerçant avec les services de proximité, écoles et marché, ce qui est le point fort de l'emplacement du bien : le local est sur rue passante. Mais l'offre commerciale d'une commune de 6 065 habitants est étroite, et le loyer commercial de Pierrefeu-du-Var affiche une fourchette très large (87 à 257 €/m²/an) : c'est le poste où le risque de vacance est le plus concret."
+          },
+          {
+            "dimension": "ecoles",
+            "score": 6,
+            "justification": "Écoles maternelle et élémentaire dans la commune, collège à Cuers, lycées à Hyères et Toulon. Suffisant pour une clientèle familiale, sans être un pôle scolaire qui tirerait les loyers vers le haut."
+          },
+          {
+            "dimension": "securite",
+            "score": 7,
+            "justification": "Commune résidentielle et viticole du pied des Maures, sans tension particulière : profil classique du village varois où la demande locative est régulière et le turn-over modéré."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 6,
+            "justification": "Les petites surfaces se relouent : 515 à 680 € pour des T1 bis et T2, plusieurs annonces actives, un tissu économique local (viticulture, artisanat, zone d'activité) et le bassin d'emploi toulonnais à 25 minutes. La demande existe sur les appartements, elle est fragile sur le local commercial."
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 5,
+            "justification": "Un signe qui compte : le même immeuble est en vente depuis au moins cinq mois, affiché 256 000 € puis 247 000 €, aujourd'hui en exclusivité chez une deuxième agence. Le marché des appartements de la commune tourne autour de 2 716 €/m², contre 3 340 €/m² toutes catégories confondues : c'est un marché résidentiel peu profond, où un immeuble de rapport se revend lentement."
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Les loyers en place ne sont pas connus lot par lot",
+            "severite": 4,
+            "detail": "L'annonce donne un total de 18 300 €/an « environ », avec « baux en cours », sans répartition par lot, sans date, sans type de bail, sans indexation et sans dépôt de garantie. Or tout le dossier se joue sur ce chiffre : à 18 300 €/an, le prix qui couvre la mensualité sur 15 ans est 143 700 € ; à 20 700 €/an, il monte à 171 700 €. 2 400 € de loyers annuels valent 28 000 € de prix d'achat. C'est la première pièce à exiger avant toute offre."
+          },
+          {
+            "facteur": "Toiture, charpente et réseaux d'un bâti de 1948, en monopropriété",
+            "severite": 4,
+            "detail": "Aucun gros travaux n'est documenté sur un immeuble de 1948, et l'état annoncé est « à rénover ». En monopropriété, il n'y a ni syndic ni copropriété pour partager la facture : la couverture, la charpente, la façade et les réseaux sont intégralement à la charge du propriétaire. Fourchette 20 000 à 50 000 € non chiffrée. Une visite avec un homme de l'art sur la toiture est la condition d'une offre."
+          },
+          {
+            "facteur": "Le local commercial : vacance longue et loyer sensible",
+            "severite": 3,
+            "detail": "Un local de 38 m² avec vitrine en cœur de ville d'une commune de 6 065 habitants. Le loyer commercial y varie de 87 à 257 €/m²/an selon l'emplacement, soit 275 à 813 € par mois pour cette surface : la valeur du lot dépend presque entièrement de l'attractivité de la rue. Une vacance de douze mois coûte 5 400 à 6 000 € et fait tomber l'EBE de 25 %."
+          },
+          {
+            "facteur": "Écart de surface entre les deux portails et absence de Carrez par lot",
+            "severite": 3,
+            "detail": "141 m² sur SeLoger, 148 m² sur bien'ici pour le même immeuble, aucune surface Carrez par lot, et une description qui annonce « deux appartements » tout en n'en décrivant qu'un seul de 47 m². La répartition entre le local, les appartements et les combles n'est pas documentée : impossible de vérifier le prix au m² utile, ni de chiffrer l'aménagement des combles sans plan."
+          },
+          {
+            "facteur": "DPE et réseau d'un immeuble ancien",
+            "severite": 2,
+            "detail": "DPE D / GES B annoncés : corrects, et sans interdiction de location à l'horizon des échéances connues, contrairement à un E ou un F. Deux réserves : la date du diagnostic n'est pas communiquée, et un D en limite peut basculer en E à la refonte du DPE, ce qui rouvrirait un passif travaux à horizon 2034. Compteurs individuels et double vitrage annoncés, à vérifier lot par lot."
+          },
+          {
+            "facteur": "Aménagement des combles soumis à autorisation",
+            "severite": 2,
+            "detail": "Le grenier de deux grandes pièces représente le principal levier du dossier, mais la création de surface de plancher suppose une autorisation d'urbanisme, un contrôle de la hauteur et de l'emprise en zone urbaine ancienne, une taxe d'aménagement et une structure vérifiée. Tant que l'ouverture à cette autorisation n'est pas purgée, elle ne vaut rien dans le prix."
+          }
+        ],
+        "champs_manquants": [
+          "loyer et bail de chaque lot (montant, date de signature, type, indexation, dépôt de garantie)",
+          "avis de taxe foncière réel et valeur locative cadastrale",
+          "surfaces Carrez par lot et plans des niveaux, y compris les combles",
+          "chiffrage de la toiture, de la charpente et de la façade",
+          "nature exacte des travaux « à rénover » et devis",
+          "date et étendue du DPE (par lot si possible) et diagnostics techniques",
+          "faisabilité de l'aménagement des combles : urbanisme, hauteur, emprise, taxe d'aménagement",
+          "statut d'occupation de chaque lot au jour de la vente et historique de mise en vente"
+        ]
+      }
     }
   ]
 }
