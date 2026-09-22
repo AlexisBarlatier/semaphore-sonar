@@ -138,27 +138,19 @@ def rec_toulon_sj():
             },
             "loyers": [
                 {
-                    "lot": "T4 de 77,45 m² — location nue, logement entier",
-                    "quantite": 1,
-                    "loyer_mensuel_euros": 1050.0,
-                    "occupe": False,
-                    "note": (
-                        "Bien vide : loyer retenu après remise au standard. Comparables relevés le 22/09/2026 "
-                        "à Toulon : 1 000 € pour 75 m², 877 € pour un T4 de 75 m². Le loyer mesuré de la "
-                        "commune est de 14,4 €/m²/mois, soit 1 115 € pour cette surface : le loyer retenu de "
-                        "1 050 € reste prudent"
-                    ),
-                },
-                {
-                    "lot": "Variante colocation : quatre chambres meublées",
+                    "lot": "Quatre chambres meublées — colocation étudiante (stratégie retenue)",
                     "quantite": 4,
                     "loyer_mensuel_euros": 450.0,
                     "occupe": False,
                     "note": (
-                        "Chambres meublées dans un T4 proche des facultés : 410 à 480 € par chambre à Toulon, "
-                        "avec de nombreuses colocations de trois et quatre chambres dans le secteur "
+                        "Bien vide : ce loyer est un loyer retenu après remise au standard, pas un revenu "
+                        "acquis. Chambres meublées dans un T4 proche des facultés : 410 à 480 € par chambre à "
+                        "Toulon, avec de nombreuses colocations de trois et quatre chambres dans le secteur "
                         "Saint-Jean / Porte d'Italie / Saint-Roch. Retenu 450 € par chambre pour quatre "
-                        "chambres, soit 1 800 €/mois. La quatrième chambre suppose de sacrifier le séjour : "
+                        "chambres, soit 1 800 €/mois. Une seule ligne de revenu est saisie : la variante "
+                        "location nue du T4 entier ne se cumule pas avec celle-ci, elle s'y substitue — "
+                        "à 1 000 à 1 100 €/mois, elle donne 3,4 à 3,9 % net avant IS et un plafond d'achat "
+                        "de 101 000 à 122 000 €. La quatrième chambre suppose de sacrifier le séjour : "
                         "c'est la condition à vérifier sur le plan, et le point faible du scénario"
                     ),
                 },
