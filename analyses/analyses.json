@@ -8316,6 +8316,194 @@
           "faisabilité de la division des plateaux et de l'aménagement du grenier (PLU, taxe d'aménagement)"
         ]
       }
+    },
+    {
+      "slug": "2026-09-22-appartement-t5-mourillon-toulon",
+      "date_analyse": "2026-09-22",
+      "date_maj": null,
+      "titre": "Appartement T5 de 107,2 m² dans une résidence de standing avec gardien — Mourillon-Centre, Toulon (83000)",
+      "bien": {
+        "type_bien": "appartement",
+        "sous_type": null,
+        "type_detail": "Appartement de type 5 au premier étage d'une résidence de standing de 220 lots, avec gardien et ascenseur, quartier Mourillon-Centre. Hall d'entrée, séjour double ouvrant sur balcon, cuisine avec balcon, cellier, trois chambres dont deux donnant sur balcon, salle d'eau, WC séparé, cave. Exposition ouest, chauffage central au gaz, immeuble de 1961. L'annonce écrit elle-même « prévoir une rénovation ». DPE D, GES D",
+        "neuf": false,
+        "adresse": {
+          "texte": "Mourillon-Centre, Toulon (83000) — adresse exacte non communiquée, à proximité immédiate des plages du Mourillon et des commodités",
+          "ville": "Toulon",
+          "code_postal": "83000"
+        },
+        "surfaces": {
+          "texte": "107,2 m² annoncés, 5 pièces, 3 chambres, 1er étage sur 20. Surface Carrez non précisée dans l'annonce, à confirmer sur le diagnostic",
+          "carrez_m2": 107.2
+        },
+        "lots": {
+          "count": 1,
+          "surface_par_lot_m2": null,
+          "nature": "Un seul lot d'habitation dans une copropriété de 220 lots (fiche SeLoger)",
+          "lots_distincts": 1
+        },
+        "copro": {
+          "charges_annuelles_euros": 3600.0,
+          "charges_source": "Copropriété de 220 lots avec gardien et ascenseur — montant des charges NON communiqué. Estimation retenue 3 600 €/an au titre d'une résidence de standing gardiennée, à vérifier sur les trois derniers appels de fonds et le procès-verbal de la dernière assemblée générale : c'est le premier poste de risque du dossier et il décide du rendement"
+        },
+        "travaux": {
+          "montant_euros": 60000.0,
+          "nature": "« Prévoir une rénovation » (annonce), non chiffrée : électricité, plomberie, salle de bains, cuisine, sols, peintures, menuiseries. Provision retenue 60 000 €, soit 560 €/m², au milieu d'une fourchette de rafraîchissement 400 à 800 €/m² pour un appartement de 1961 jamais repris. Aucun devis, aucun plan, aucun diagnostic technique joint"
+        }
+      },
+      "annonce": {
+        "plateforme": "SeLoger",
+        "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/toulon-83000/269Y5Y2G6A9A",
+        "prix_affiche_euros": 223000.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche",
+        "prix_commentaire": "223 000 €, soit 2 080 €/m², honoraires à la charge du vendeur. C'est le premier quartile de la tranche 80-150 m² de Toulon (450 ventes en 2025, médiane 2 685 €/m²) : le prix d'entrée est objectivement bas pour le Mourillon, et c'est bien un dossier à regarder. Mais un prix d'achat bas ne suffit pas : l'annonce annonce aussi « prévoir une rénovation » et une copropriété de 220 lots avec gardien, deux postes qui décident du rendement. Facture énergétique annoncée entre 1 810 et 2 470 €/an"
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 257000.0,
+          "haute_euros": 311000.0,
+          "retenue_euros": 288000.0,
+          "source": "Mutations DVF 2025 de Toulon (commune 83137, 2 760 ventes d'appartements) : médiane globale 2 668 €/m², et sur la tranche 80-150 m² qui correspond au bien, 450 ventes et une médiane de 2 685 €/m², premier quartile à 2 086 €/m². Valeur retenue 288 000 € (2 685 €/m²), fourchette 257 000 € (2 400 €/m², rafraîchissement léger) à 311 000 € (2 900 €/m², rénovation complète). L'annonce à 2 080 €/m² se situe 22 % sous la médiane de sa propre tranche",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "T5 de 107,2 m² — logement entier loué vide",
+            "quantite": 1,
+            "loyer_mensuel_euros": 1600.0,
+            "occupe": false,
+            "note": "Le bien n'est pas loué aujourd'hui : ce loyer est un loyer retenu après rafraîchissement, pas un revenu acquis. Comparables relevés le 22/09/2026 à Toulon : T5 de 3 chambres à 1 520 €, T5 à 1 609 € hors charges, T5 à 1 759 € (dont 150 € de charges), T5 de 100 m² à 1 600 €. Le loyer mesuré de la commune est de 14,4 €/m²/mois (ANIL 2025), soit 1 541 € pour cette surface : le loyer retenu de 1 600 € reste dans le bas de la fourchette. Un T5 se loue structurellement moins cher au m² qu'un T2"
+          }
+        ],
+        "notes": "Deux pistes alternatives ont été chiffrées. La colocation meublée à quatre chambres se commercialise 420 à 470 € par chambre au Mourillon, soit 1 800 à 1 880 € par mois : c'est 15 % de loyer brut en plus, contre un investissement d'ameublement, une vacance plus fréquente et une gestion plus lourde — le rendement net ne change pas de camp. La revente après rafraîchissement ne fonctionne pas non plus : à 40 000 € de travaux et une revente au médian de la tranche (2 685 €/m²), l'opération perd 7 400 € et il faut atteindre 2 900 €/m² pour espérer 12 000 € de gain. Le dossier n'a donc ni lecture locative conforme à notre doctrine, ni lecture marchand de biens"
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 3.0,
+        "vacance_worst_pct": 12.0,
+        "vacance_justification": "Taux par défaut de la branche résidentielle. Le marché locatif toulonnais est très liquide (2 760 ventes d'appartements par an, des dizaines d'annonces actives), mais un T5 familial est un produit plus rare qu'un T2 : la vacance worst à 12 % correspond à deux mois et demi de vide entre deux locataires, ce qui arrive sur cette typologie",
+        "frais_acquisition_euros": 17840.0,
+        "frais_divers_euros": 0.0,
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 1500.0,
+          "taxe_fonciere_commentaire": "ESTIMATION 1 500 €/an — la taxe n'est pas communiquée. À vérifier sur l'avis réel : sur un T5 de 107 m² à Toulon, la fourchette va de 1 100 à 1 900 €/an",
+          "charges_copro_annuelles_euros": 3600.0,
+          "charges_copro_commentaire": "ESTIMATION 3 600 €/an — charges non communiquées, alors que la copropriété compte 220 lots et un gardien. C'est le poste qui fait basculer le dossier : à 2 800 € la lecture résiste un peu, à 4 500 € elle s'effondre. À exiger avant toute offre : trois derniers appels de fonds, budget prévisionnel, procès-verbal de la dernière assemblée, état daté, et le montant des travaux votés non encore appelés",
+          "pno_annuelle_euros": 250.0,
+          "pno_commentaire": "Assurance du logement, propriétaire non occupant.",
+          "entretien_annuel_euros": 900.0,
+          "entretien_commentaire": "Entretien courant, TEOM non récupérable, frais bancaires, provision d'impayés 1 % et provision travaux 2,5 % des loyers. Poste calibré pour un appartement de 107 m² dans une copropriété qui entretient déjà les parties communes",
+          "comptabilite_annuelle_euros": 1200.0,
+          "comptabilite_commentaire": "Comptabilité de la SCI à l'IS, un seul lot."
+        }
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Conservation locative après rafraîchissement, logement entier loué vide",
+          "code": "ld-nue",
+          "lots": 1
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Location du T5 entier après rafraîchissement",
+            "lots": 1,
+            "rendement": "3,8 % net avant IS sur le prix de revient à 1 600 €/mois, 4,3 % à 1 750 €",
+            "faisabilite": "immédiate après travaux, marché locatif liquide",
+            "risque": "élevé — cash flow négatif de 511 €/mois sous crédit à 90 % sur 15 ans"
+          },
+          {
+            "strategie": "Colocation meublée à quatre chambres",
+            "lots": 4,
+            "rendement": "environ 3,9 % net avant IS, loyer brut 1 800 à 1 880 €/mois",
+            "faisabilite": "ameublement et gestion locative partagée, vacance plus fréquente",
+            "risque": "moyen — loyer brut supérieur de 15 % mais meublement, charges et rotation en face"
+          },
+          {
+            "strategie": "Rafraîchissement puis revente",
+            "lots": 1,
+            "rendement": "négatif : −7 400 € au prix médian de la tranche, +12 300 € seulement à 2 900 €/m²",
+            "faisabilite": "12 mois de portage, marché de revente très liquide",
+            "risque": "élevé — la marge n'existe qu'en haut de fourchette de revente, sans coussin"
+          },
+          {
+            "strategie": "Division en deux appartements",
+            "lots": 2,
+            "rendement": "non chiffré faute de plans, mais la valeur au m² progresse de 2 492 à 2 644 €/m² entre 60-80 m² et 45-60 m²",
+            "faisabilite": "autorisation de l'assemblée générale et modification de l'état descriptif dans une copropriété de 220 lots : lourd",
+            "risque": "élevé — délai et incertitude juridique pour un gain de valeur faible"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 8,
+            "justification": "Toulon : gare TGV, réseau de bus dense, aéroport de Hyères-Toulon, A50 et A57. Le Mourillon est un quartier balnéaire à dix minutes du centre par le bord de mer. La desserte est le point fort du dossier"
+          },
+          {
+            "dimension": "commerces",
+            "score": 8,
+            "justification": "Mourillon-Centre dispose de tout le commerce de proximité du quartier, avec les plages et le marché. Un T5 familial y trouve sa clientèle naturelle"
+          },
+          {
+            "dimension": "ecoles",
+            "score": 8,
+            "justification": "Écoles et collèges du quartier, lycées et université à Toulon."
+          },
+          {
+            "dimension": "securite",
+            "score": 6,
+            "justification": "Le Mourillon est un quartier résidentiel et balnéaire plutôt préservé, mais Toulon reste une grande ville : la résidence avec gardien est un vrai plus sur ce plan"
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 7,
+            "justification": "2 760 ventes d'appartements en 2025 et un loyer mesuré de 14,4 €/m²/mois : la demande est profonde et documentée. Réserve sur la typologie : un T5 de 107 m² à 1 600 €/mois s'adresse à un ménage avec revenus solides, segment plus étroit que le T2"
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 5,
+            "justification": "Médiane communale à 2 668 €/m², quartier Mourillon recherché et proche des plages, mais le prix de l'annonce se situe 22 % sous la médiane de sa tranche, ce qui s'explique d'abord par l'état annoncé « à rénover ». Aucun signal de décote de quartier, mais aucun signal de hausse non plus"
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Charges de copropriété d'une résidence de 220 lots avec gardien",
+            "severite": 4,
+            "detail": "Le montant des charges n'est pas communiqué. Dans une résidence gardiennée de 220 lots, le gardien, les ascenseurs, le chauffage des communs et les parties communes de standing portent facilement la charge d'un 107 m² entre 2 800 et 4 500 €/an. C'est le poste qui décide du dossier : à 2 800 € la lecture résiste, à 4 500 € elle s'effondre. À exiger avant toute offre : trois derniers appels de fonds, budget prévisionnel, procès-verbal d'assemblée, état daté et travaux votés non appelés"
+          },
+          {
+            "facteur": "Rénovation annoncée sans le moindre chiffre",
+            "severite": 3,
+            "detail": "« Prévoir une rénovation » sur un appartement de 1961 jamais repris : électricité, plomberie, salle d'eau, cuisine, sols, peintures, menuiseries. Fourchette 400 à 800 €/m², soit 43 000 à 86 000 €. La provision de 60 000 € retenue déplace le rendement de 0,8 point à elle seule"
+          },
+          {
+            "facteur": "Cash flow négatif sous crédit",
+            "severite": 4,
+            "detail": "Avec un loyer de 1 600 € et des charges de copropriété de 3 600 €, l'excédent brut d'exploitation ressort à 11 318 €/an, soit 943 €/mois, quand la mensualité d'un prêt à 90 % sur quinze ans à 3,7 % pèse 1 611 €. Il manque 511 € chaque mois, soit 6 100 €/an à sortir de la poche pendant quinze ans. Ce n'est pas un dossier d'autofinancement"
+          },
+          {
+            "facteur": "Plafond de loyer d'un T5",
+            "severite": 3,
+            "detail": "Le loyer mesuré de Toulon est de 14,4 €/m²/mois toutes surfaces confondues, mais il est tiré vers le haut par les petites surfaces : les comparables de T5 de 100 à 116 m² se traitent entre 1 520 et 1 759 €, soit 10 à 16 €/m². Le loyer retenu à 1 600 € se situe déjà dans le haut de la fourchette pour la typologie, et le plafond à 1 750 € suppose une rénovation complète"
+          },
+          {
+            "facteur": "Prix d'entrée au premier quartile : décote ou signal",
+            "severite": 2,
+            "detail": "2 080 €/m², quand la tranche 80-150 m² de Toulon affiche 2 685 €/m² en médiane et 2 086 €/m² au premier quartile : l'annonce est au ras du quartile bas. Un écart de cette taille sur un quartier balnéaire s'explique par l'état, mais il faut le documenter : diagnostics, plans, et visite avec un artisan pour vérifier qu'aucun désordre structurel ou d'humidité ne justifie la décote"
+          }
+        ],
+        "champs_manquants": [
+          "montant des charges de copropriété, budget prévisionnel, état daté et procès-verbal d'assemblée",
+          "surface Carrez et plan de l'appartement",
+          "devis de rénovation par corps d'état et diagnostics techniques",
+          "avis de taxe foncière réel et date du DPE",
+          "travaux votés en copropriété et non encore appelés",
+          "statut d'occupation et date de disponibilité du logement"
+        ]
+      }
     }
   ]
 }
