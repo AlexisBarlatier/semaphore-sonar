@@ -8504,6 +8504,201 @@
           "statut d'occupation et date de disponibilité du logement"
         ]
       }
+    },
+    {
+      "slug": "2026-09-22-appartement-t4-saint-jean-toulon",
+      "date_analyse": "2026-09-22",
+      "date_maj": null,
+      "titre": "Appartement T4 de 77,45 m² au 7e étage, quartier Saint-Jean — Toulon (83000)",
+      "bien": {
+        "type_bien": "appartement",
+        "sous_type": null,
+        "type_detail": "T4 traversant de 77,45 m² au 7e étage d'une copropriété fermée de 144 lots, avec ascenseur et stationnement dans la résidence. Deux chambres plus un salon/salle à manger pouvant recevoir une troisième chambre, dressing, cuisine indépendante avec loggia, salle de bains, WC séparé, balcon. Double vitrage, chauffage central au gaz, immeuble de 1970, état déclaré « entretenu ». DPE C, GES C. Quartier Saint-Jean, à proximité des facultés, du campus Porte d'Italie et des commodités",
+        "neuf": false,
+        "adresse": {
+          "texte": "Quartier Saint-Jean, Toulon (83000) — à proximité immédiate du campus Porte d'Italie et de la faculté de droit, adresse exacte non communiquée",
+          "ville": "Toulon",
+          "code_postal": "83000"
+        },
+        "surfaces": {
+          "texte": "77,45 m² annoncés, 4 pièces, 3 chambres possibles (2 chambres + un salon transformable). Surface Carrez non précisée dans l'annonce",
+          "carrez_m2": 77.45
+        },
+        "lots": {
+          "count": 1,
+          "surface_par_lot_m2": null,
+          "nature": "Un lot d'habitation dans une copropriété de 144 lots, avec stationnement",
+          "lots_distincts": 1
+        },
+        "copro": {
+          "charges_annuelles_euros": 2500.0,
+          "charges_source": "Copropriété de 144 lots, charges COMMUNIQUÉES à 2 500 €/an et aucune procédure collective en cours (fiche SeLoger). C'est une exception appréciable sur ce type de dossier : le poste le plus incertain des autres dossiers est ici documenté. À confirmer sur les trois derniers appels de fonds et le procès-verbal de la dernière assemblée, notamment pour les travaux votés non encore appelés"
+        },
+        "travaux": {
+          "montant_euros": 20000.0,
+          "nature": "État déclaré « entretenu », DPE C : les gros postes (couverture, façade, réseaux de l'immeuble) sont derrière, pas devant. Provision retenue 20 000 € (258 €/m²) pour une remise au standard locatif — peintures, sols, cuisine, salle de bains, électricité partielle. Aucun devis joint. En variante colocation, ajouter l'ameublement et l'équipement des quatre chambres, soit 15 000 à 25 000 €"
+        }
+      },
+      "annonce": {
+        "plateforme": "SeLoger",
+        "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/toulon-83000/26HP2UMPWI2F",
+        "prix_affiche_euros": 160000.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche",
+        "prix_commentaire": "160 000 €, soit 2 066 €/m², honoraires à la charge du vendeur, en exclusivité. La tranche 60-80 m² de Toulon affiche 2 492 €/m² en médiane sur 857 ventes en 2025 : l'annonce est 17 % en dessous. Facture énergétique annoncée entre 1 180 et 1 650 €/an, soit la plus basse des dossiers toulonnais examinés cette semaine"
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 180000.0,
+          "haute_euros": 210000.0,
+          "retenue_euros": 193000.0,
+          "source": "Mutations DVF 2025 de Toulon (2 760 ventes d'appartements, médiane 2 668 €/m²). La tranche 60-80 m², qui correspond exactement au bien, compte 857 ventes pour une médiane de 2 492 €/m² et un premier quartile à 1 955 €/m². Valeur retenue 193 000 € (2 492 €/m²), fourchette 180 000 à 210 000 € selon l'état. L'annonce à 2 066 €/m² se situe 17 % sous la médiane de sa tranche, un écart qui s'explique par l'étage élevé et un T4 à rénover légèrement, pas par un défaut de quartier",
+          "confiance": "bonne"
+        },
+        "loyers": [
+          {
+            "lot": "T4 de 77,45 m² — location nue, logement entier",
+            "quantite": 1,
+            "loyer_mensuel_euros": 1050.0,
+            "occupe": false,
+            "note": "Bien vide : loyer retenu après remise au standard. Comparables relevés le 22/09/2026 à Toulon : 1 000 € pour 75 m², 877 € pour un T4 de 75 m². Le loyer mesuré de la commune est de 14,4 €/m²/mois, soit 1 115 € pour cette surface : le loyer retenu de 1 050 € reste prudent"
+          },
+          {
+            "lot": "Variante colocation : quatre chambres meublées",
+            "quantite": 4,
+            "loyer_mensuel_euros": 450.0,
+            "occupe": false,
+            "note": "Chambres meublées dans un T4 proche des facultés : 410 à 480 € par chambre à Toulon, avec de nombreuses colocations de trois et quatre chambres dans le secteur Saint-Jean / Porte d'Italie / Saint-Roch. Retenu 450 € par chambre pour quatre chambres, soit 1 800 €/mois. La quatrième chambre suppose de sacrifier le séjour : c'est la condition à vérifier sur le plan, et le point faible du scénario"
+          }
+        ],
+        "notes": "Le dossier se joue entièrement sur la typologie d'exploitation. En location nue, un T4 de 77 m² se loue 1 000 à 1 100 € par mois : l'excédent brut d'exploitation ressort entre 6 480 et 7 578 €, le rendement net avant IS entre 3,4 et 3,9 %, et le prix qui tient notre seuil de 5 % tombe à 101 000-122 000 €, très loin des 160 000 € demandés. En colocation meublée à quatre chambres à 450 €, le loyer brut passe à 21 600 € par an : le rendement net monte à 5,6 %, le cash flow devient quasi neutre sous crédit, et le prix qui tient 5 % remonte à 182 700 € — au-dessus du prix affiché. Le passage de l'un à l'autre n'est pas une nuance d'exploitation, c'est un changement de dossier"
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 3.0,
+        "vacance_worst_pct": 12.0,
+        "vacance_justification": "Taux par défaut de la branche résidentielle pour la location nue. En colocation, la vacance est plus élevée : chaque chambre tourne séparément et l'été est un mois creux pour les étudiants, d'où le taux de 8 % retenu dans la variante colocation, et 12 % en hypothèse défavorable",
+        "frais_acquisition_euros": 12800.0,
+        "frais_divers_euros": 0.0,
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 1200.0,
+          "taxe_fonciere_commentaire": "ESTIMATION 1 200 €/an — avis non communiqué, fourchette 900 à 1 500 €/an pour 77 m² à Toulon",
+          "charges_copro_annuelles_euros": 2500.0,
+          "charges_copro_commentaire": "2 500 €/an COMMUNIQUÉS par l'annonce, copropriété de 144 lots, aucune procédure collective en cours. C'est le chiffre le plus fiable de tous les dossiers toulonnais examinés cette semaine : à confirmer sur les appels de fonds, mais il n'y a pas d'inconnue majeure de ce côté",
+          "pno_annuelle_euros": 200.0,
+          "pno_commentaire": "Assurance du logement, propriétaire non occupant.",
+          "entretien_annuel_euros": 600.0,
+          "entretien_commentaire": "Entretien courant, TEOM non récupérable et frais bancaires, hors provisions d'impayés et travaux qui sont calculées en pourcentage des loyers (3,5 %). En variante colocation, ajouter l'ameublement et les fluides des parties communes, comptés à 2 500 €/an",
+          "comptabilite_annuelle_euros": 1200.0,
+          "comptabilite_commentaire": "Comptabilité de la SCI à l'IS. À mutualiser si plusieurs lots dans la même structure."
+        }
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Colocation meublée à quatre chambres pour étudiants, proche des facultés",
+          "code": "colocation",
+          "lots": 4
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Location nue du T4 entier",
+            "lots": 1,
+            "rendement": "3,4 à 3,9 % net avant IS selon le loyer (1 000 à 1 100 €)",
+            "faisabilite": "immédiate après une remise au standard de 20 000 €",
+            "risque": "élevé — cash flow négatif de 412 à 504 €/mois sous crédit à 90 % sur 15 ans"
+          },
+          {
+            "strategie": "Colocation meublée à trois chambres",
+            "lots": 3,
+            "rendement": "3,5 % net avant IS : le meublement et les fluides absorbent le gain de loyer",
+            "faisabilite": "trois chambres sans toucher au séjour, configuration la plus confortable",
+            "risque": "moyen — cash flow encore négatif de 432 €/mois"
+          },
+          {
+            "strategie": "Colocation meublée à quatre chambres",
+            "lots": 4,
+            "rendement": "5,6 % net avant IS à 450 € la chambre, 6,2 % à 480 €",
+            "faisabilite": "suppose de sacrifier le séjour pour créer la quatrième chambre : à vérifier sur le plan",
+            "risque": "moyen — cash flow quasi neutre (−37 €/mois) à positif (+53 €/mois), mais rotation étudiante"
+          },
+          {
+            "strategie": "Location meublée d'un seul bail (bail mobilité ou étudiant)",
+            "lots": 1,
+            "rendement": "non retenu — le meublé d'un T4 entier ne franchit pas la barre des 4 %",
+            "faisabilite": "simple, un seul bail à gérer, vacance estivale assumée",
+            "risque": "élevé — la typologie T4 est déjà plafonnée en loyer, le meublé n'y change rien"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 8,
+            "justification": "Toulon : réseau de bus dense, gare TGV, aéroport de Hyères-Toulon, A50 et A57. Le quartier Saint-Jean est bien desservi et proche du campus."
+          },
+          {
+            "dimension": "commerces",
+            "score": 7,
+            "justification": "Commerces de proximité du quartier Saint-Jean, centre-ville de Toulon à quelques minutes, et la vie étudiante du secteur Porte d'Italie."
+          },
+          {
+            "dimension": "ecoles",
+            "score": 9,
+            "justification": "C'est le point fort du dossier : faculté de droit, campus Porte d'Italie, ISEN et écoles d'ingénieurs à proximité immédiate. La demande étudiante est structurelle et renouvelée chaque année."
+          },
+          {
+            "dimension": "securite",
+            "score": 6,
+            "justification": "Quartier résidentiel avec copropriété fermée par portail automatique, mais Toulon reste une grande ville : la résidence fermée est un vrai atout pour une colocation."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 8,
+            "justification": "Deux marchés superposés : la location nue familiale (1 000 à 1 100 € pour 75 m²) et la colocation étudiante (410 à 480 € par chambre), cette dernière adossée à la faculté de droit et au campus. C'est exactement le type de bien où la colocation se loue sans difficulté"
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 6,
+            "justification": "857 ventes dans la tranche 60-80 m² en 2025 : la liquidité du marché toulonnais est un atout réel pour la revente. L'annonce à 2 066 €/m² est 17 % sous la médiane de sa tranche, ce qui s'explique par l'étage et l'état, pas par une décote de quartier"
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "La quatrième chambre suppose de sacrifier le séjour",
+            "severite": 4,
+            "detail": "Le scénario qui rend le dossier conforme est la colocation à quatre chambres, et elle n'existe qu'en transformant le salon/salle à manger en chambre. L'annonce ne parle que d'une possibilité de troisième chambre. Sans la quatrième, le rendement retombe à 3,5 %. C'est la vérification numéro un : le plan, la surface de chaque chambre, la présence d'un espace commun résiduel, et l'accord de la copropriété sur la transformation"
+          },
+          {
+            "facteur": "Rotation étudiante et vacance estivale",
+            "severite": 3,
+            "detail": "Une colocation se vide par chambre et non d'un bloc : la vacance est plus fréquente que sur un bail familial, et l'été est un mois creux. Le modèle retient 8 % de vacance en colocation et 12 % en hypothèse défavorable, contre 5 % en location nue. Prévoir aussi les impayés et les cautions, plus délicats sur une clientèle étudiante"
+          },
+          {
+            "facteur": "Plafond de loyer de la typologie T4",
+            "severite": 3,
+            "detail": "En location nue, un T4 de 77 m² se loue 1 000 à 1 100 €, soit 13 à 14 €/m² : c'est le plafond structurel de la typologie, et il ne progresse pas avec la rénovation. Toute la valeur d'exploitation passe donc par la découpe en chambres, pas par le loyer au mètre carré"
+          },
+          {
+            "facteur": "Travaux et ameublement non chiffrés",
+            "severite": 2,
+            "detail": "20 000 € provisionnés pour la remise au standard, plus 15 000 à 25 000 € d'ameublement et d'équipement en scénario colocation. Aucun devis joint. Le DPE C et l'état « entretenu » limitent le risque structurel, mais l'électricité et la plomberie d'un immeuble de 1970 restent à vérifier"
+          },
+          {
+            "facteur": "Copropriété et règlement",
+            "severite": 2,
+            "detail": "144 lots, charges de 2 500 €/an communiquées et aucune procédure en cours : le dossier est propre de ce côté. Reste à vérifier le règlement de copropriété sur l'exercice d'une colocation et la transformation du séjour, ainsi que les travaux votés non appelés"
+          }
+        ],
+        "champs_manquants": [
+          "plan de l'appartement et surface de chaque pièce",
+          "devis de remise au standard et état de l'électricité et de la plomberie",
+          "règlement de copropriété : colocation et transformation du séjour",
+          "trois derniers appels de fonds, procès-verbal d'assemblée, travaux votés non appelés",
+          "avis de taxe foncière réel et date du DPE",
+          "surface Carrez et statut d'occupation du logement"
+        ]
+      }
     }
   ]
 }
