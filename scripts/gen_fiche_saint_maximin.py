@@ -512,11 +512,13 @@ def main():
     grille_html = "\n".join(grille)
 
     # plafonds d'achat : prix max pour 20 % de ROI, par tranche de travaux
+    # nette = 0,85 x (net_vente - revient) = 0,20 x revient  =>  revient_max = 0,85 x net / 1,05
+    # revient = P x 1,08 + W + 0,074 x (P x 1,08 + W) + 7 200
     net = REVENTE_CENTRALE * (1 - FRAIS_VENTE)
+    rev_max = 0.85 * net / 1.05
     plafonds = []
     for trav in (200000.0, 250000.0, 300000.0, 350000.0, 400000.0, 480000.0):
-        rev_max = 0.85 * net / 1.20
-        prix_max = (rev_max - trav) / (1 + NOTAIRE) - (rev_max * TAUX * PORTAGE_MOIS / 12) / (1 + NOTAIRE)
+        prix_max = ((rev_max - 7200.0) / (1 + TAUX * PORTAGE_MOIS / 12) - trav) / (1 + NOTAIRE)
         plafonds.append(f'        <tr><td>{eur(trav)} €</td><td class="num">{eur(prix_max)} €</td>'
                         f'<td class="num">{eur(prix_max-PRIX)} €</td></tr>')
     plafonds_html = "\n".join(plafonds)
@@ -605,11 +607,12 @@ def main():
             "Les 12 lots sont déjà divisés, ce qui ouvre la revente à la découpe sans formalité préalable.<br><br>"
             "Mais tout dépend d'un chiffre qui n'existe pas. <strong>À 250 000 € de travaux</strong>, la "
             "revente à 849 000 € dégage <strong>219 528 € de plus-value nette, soit 40 % de ROI</strong> sur "
-            "24 mois. <strong>À 350 000 €</strong> : 128 238 € et 19,6 %. <strong>À 480 000 €</strong> : "
-            "9 561 € et 1,2 %, c'est-à-dire rien pour deux ans de chantier et de portage. Le prix d'achat "
-            "maximum qui laisse 20 % de ROI tombe de <strong>258 000 €</strong> avec 250 000 € de travaux à "
-            "<strong>45 000 €</strong> avec 480 000 € : au-delà de 300 000 € de chantier, l'achat à 235 000 € "
-            "n'est plus un marchand de biens.<br><br>"
+            "24 mois. <strong>À 350 000 €</strong> : 128 402 € et 19,6 %. <strong>À 480 000 €</strong> : "
+            "9 725 € et 1,2 %, c'est-à-dire rien pour deux ans de chantier et de portage. Le prix d'achat "
+            "maximum qui laisse 20 % de ROI tombe de <strong>325 000 €</strong> avec 250 000 € de travaux à "
+            "<strong>113 000 €</strong> avec 480 000 €, en passant par <strong>233 000 €</strong> avec "
+            "350 000 € : autrement dit, le prix affiché de 235 000 € se tient tout juste si le chantier "
+            "tient dans 350 000 €, et il ne se tient plus du tout au-delà de 400 000 €."
             "La variante conservation tient mieux qu'on ne pourrait le croire. Avec 350 000 € de travaux et "
             "des loyers prudents — 3 800 €/mois pour les trois logements et les deux locaux — l'excédent brut "
             "d'exploitation ressort à <strong>33 736 €</strong> et le rendement net avant IS à "
@@ -663,35 +666,39 @@ def main():
                                 "et portage de 24 mois), 504 000 € avec 250 000 €, 734 000 € avec 480 000 €"),
         ],
         stance=(
-            "<strong>On négocie, et sous conditions suspensives : offre 200 000 €, plafond 220 000 €.</strong> "
-            "Le raisonnement tient en deux chiffres. À 235 000 €, l'opération laisse 40 % de ROI si la "
-            "rénovation tient dans 250 000 €, 19,6 % si elle coûte 350 000 €, et 1,2 % si elle en coûte "
-            "480 000 €. Or personne ne sait aujourd'hui où se situe ce bâtiment de 1900, et l'agence n'a "
-            "publié ni DPE, ni plan, ni diagnostic. Une offre au prix affiché reviendrait à acheter un devis "
-            "inconnu.<br><br>"
+            "<strong>On instruit, et on signe sous devis : offre 215 000 €, plafond 235 000 € (le prix "
+            "affiché), uniquement si le chantier tient dans 350 000 €.</strong> Le raisonnement tient en deux "
+            "chiffres. À 235 000 €, l'opération laisse 19,6 % de ROI si la rénovation coûte 350 000 €, 40 % si "
+            "elle en coûte 250 000, 1,2 % si elle en coûte 480 000. Le prix affiché n'est donc pas une "
+            "anomalie : pour une rénovation lourde correctement chiffrée, il tombe exactement sur notre seuil "
+            "de 20 % — le prix d'achat maximum pour ce budget de travaux est de 233 000 €. Mais rien ne prouve "
+            "aujourd'hui que ces 350 000 € soient tenables sur un immeuble de 1900 dont personne n'a publié "
+            "le DPE, les plans ni un seul diagnostic. Acheter au prix sans devis, c'est acheter un chiffre "
+            "qu'on n'a pas vu.<br><br>"
             "<strong>Trois conditions suspensives, non négociables.</strong> D'abord le <strong>DPE et les "
             "diagnostics techniques</strong> : leur absence dans une annonce est une irrégularité, et une "
-            "étiquette F ou G ajoute un passif de rénovation énergétique au chantier. Ensuite le "
-            "<strong>devis par corps d'état sous 300 000 €</strong>, toiture et charpente comprises : au-delà, "
-            "le dossier n'est plus un marchand de biens et il faut retirer le prix de l'écart. Enfin le "
-            "<strong>détail des 12 lots</strong> : lesquels sont vendus, avec quelles charges, et le règlement "
-            "autorise-t-il la division des plateaux et l'aménagement du grenier.<br><br>"
+            "étiquette F ou G ajoute 40 000 à 60 000 € de rénovation énergétique au chantier. Ensuite le "
+            "<strong>devis par corps d'état plafonné à 350 000 €, toiture et charpente comprises</strong> : "
+            "c'est ce chiffre, et lui seul, qui décide du dossier. Enfin le <strong>détail des 12 lots</strong> "
+            "et la position du PLU sur la division des plateaux et l'aménagement du grenier.<br><br>"
             "<strong>Ce qui rend le dossier intéressant malgré tout.</strong> Le marché de Saint-Maximin est "
-            "profond — 233 ventes en 2025, 59 appartements dont les tranches 45 à 80 m² partent entre 2 941 et "
-            "3 196 €/m² — et les lots sont déjà divisés. Une opération de trois logements et deux locaux se "
-            "revend ici, ce qui n'est vrai ni à Pierrefeu ni à Cuers. Et la variante conservation atteint "
-            "5,2 % net avant IS à 350 000 € de travaux avec des loyers prudents, ce qui en fait, sur le papier, "
-            "le meilleur rendement patrimonial de la semaine."
+            "profond — 233 ventes en 2025, dont 59 appartements, et les tranches de 45 à 80 m² partent entre "
+            "2 941 et 3 196 €/m² — et les 12 lots sont déjà divisés, donc la revente à la découpe est ouverte "
+            "sans formalité préalable. Une opération de trois logements et deux locaux se revend ici, ce qui "
+            "n'est vrai ni à Pierrefeu ni à Cuers. Et la variante conservation atteint 5,2 % net avant IS à "
+            "350 000 € de travaux avec des loyers prudents, 6,3 % aux loyers du marché : c'est, sur le "
+            "papier, le meilleur rendement patrimonial de la semaine."
         ),
         prix_plafond=(
-            "<strong>220 000 € net vendeur</strong>, sous réserve d'un devis de rénovation sous 300 000 € et "
-            "d'un DPE connu. Repères : <strong>258 000 €</strong> avec 250 000 € de travaux, "
-            "<strong>212 000 €</strong> avec 300 000 €, <strong>166 000 €</strong> avec 350 000 €, "
-            "<strong>119 000 €</strong> avec 400 000 €, <strong>45 000 €</strong> avec 480 000 € — pour 20 % "
-            "de ROI et une revente à 849 000 €. Autrement dit : <strong>chaque tranche de 50 000 € de travaux "
-            "coûte 46 000 € de capacité de prix</strong>. Si le chantier dépasse 350 000 €, l'opération ne se "
-            "fait plus à ce prix et il faut passer. Si le DPE révèle un classement G, retirer le coût de la "
-            "rénovation énergétique de la capacité de prix."
+            "<strong>235 000 €, le prix affiché</strong> — et uniquement avec un devis de rénovation plafonné "
+            "à 350 000 € toiture comprise, un DPE connu et des diagnostics propres. Repères pour 20 % de ROI "
+            "sur une revente à 849 000 € : <strong>325 000 €</strong> avec 250 000 € de travaux, "
+            "<strong>279 000 €</strong> avec 300 000 €, <strong>233 000 €</strong> avec 350 000 €, "
+            "<strong>187 000 €</strong> avec 400 000 €, <strong>113 000 €</strong> avec 480 000 €. "
+            "Chaque tranche de 50 000 € de travaux coûte 46 000 € de capacité de prix. <strong>Une offre à "
+            "215 000 € achète la marge d'erreur</strong> : elle fait tenir le dossier jusqu'à 375 000 € de "
+            "chantier. Si le DPE révèle un classement F ou G, retirer le coût de la rénovation énergétique, "
+            "soit 40 000 à 60 000 € de capacité de prix."
         ),
         leviers=[
             "Le DPE n'est pas publié, alors qu'il est obligatoire dans toute annonce de vente. C'est à la fois "
@@ -790,7 +797,7 @@ def main():
       </tbody>
     </table>
     <div class="risk-matrix">
-      <p class="attractiveness-intro"><strong>Ce que le prix affiché laisse comme marge.</strong> Le point mort est à <strong>480 000 €</strong> de rénovation : au-delà, la plus-value nette tombe sous 10 000 € pour deux ans de chantier. Pour viser 20 % de ROI sur une revente à {eur(REVENTE_CENTRALE)} €, le prix d'achat maximum est de <strong>258 000 €</strong> avec 250 000 € de travaux, <strong>212 000 €</strong> avec 300 000 €, <strong>166 000 €</strong> avec 350 000 €. Autrement dit : à 235 000 €, le dossier n'est un marchand de biens que si la rénovation tient sous 300 000 €.</p>
+      <p class="attractiveness-intro"><strong>Ce que le prix affiché laisse comme marge.</strong> Le point mort est à <strong>480 000 €</strong> de rénovation : au-delà, la plus-value nette tombe sous 10 000 € pour deux ans de chantier. Pour viser 20 % de ROI sur une revente à {eur(REVENTE_CENTRALE)} €, le prix d'achat maximum est de <strong>325 000 €</strong> avec 250 000 € de travaux, <strong>279 000 €</strong> avec 300 000 €, <strong>233 000 €</strong> avec 350 000 €, <strong>187 000 €</strong> avec 400 000 €. Autrement dit : à 235 000 €, le dossier n'est un marchand de biens que si la rénovation tient sous 350 000 €, toiture et charpente comprises. Chaque tranche de 50 000 € de chantier coûte 46 000 € de capacité de prix.</p>
     </div>
     <h3>ROI selon le coût de la rénovation et le prix de revente</h3>
     <table class="projection-table compare">
