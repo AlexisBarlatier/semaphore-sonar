@@ -170,10 +170,15 @@ def main():
     mc = []
     for r in rows:
         _, coul, fond = bande(r['rdt'])
-        mc.append(f"L.circleMarker([{r['lat']:.4f},{r['lon']:.4f}],{{radius:6,color:'{coul}',"
-                  f"fillColor:'{fond}',fillOpacity:0.9,weight:1.5}}).addTo(map)"
-                  f".bindPopup('<b>{r['nom']}</b><br>{r['rdt']:.1f} % brut — {r['prix']:,} €/m² — "
-                  f"{r['loyer']:.1f} €/m²".replace(',', ' ') + f"</br>{r['n']} ventes');")
+        # echappement obligatoire : plusieurs communes portent une apostrophe
+        # (BERRE-L'ETANG, PLAN-D'AUPS...) qui casse le litteral JS et tue tout le script
+        nom_js = r['nom'].replace('\\', '\\\\').replace("'", "\\'")
+        prix_txt = f"{r['prix']:,}".replace(',', ' ')
+        mc.append(
+            f"L.circleMarker([{r['lat']:.4f},{r['lon']:.4f}],{{radius:6,color:'{coul}',"
+            f"fillColor:'{fond}',fillOpacity:0.9,weight:1.5}}).addTo(map)"
+            f".bindPopup('<b>{nom_js}</b><br>{r['rdt']:.1f} % brut, {prix_txt} €/m², "
+            f"{r['loyer']:.1f} €/m², {r['n']} ventes');")
     marqueurs = "\n".join(mc)
 
     # ---------------------------------------------------- bloc secteur de recherche
