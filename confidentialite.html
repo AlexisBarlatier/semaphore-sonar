@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Sémaphore Sonar</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); margin: 0; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 72px; }
+  h1 { color: var(--color-accent); font-size: 1.8rem; margin-bottom: 4px; }
+  h2 { color: var(--color-accent); font-size: 1.12rem; margin-top: 34px; }
+  h3 { font-size: 1rem; margin-top: 22px; }
+  p, li { line-height: 1.7; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: .95rem; }
+  th, td { border: 1px solid var(--color-border); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--color-accent-light); }
+  .meta { color: var(--color-text-muted); font-size: .9rem; }
+  a { color: var(--color-accent); }
+  footer { color: var(--color-text-muted); font-size: .88rem; margin-top: 48px;
+           border-top: 1px solid var(--color-border); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Politique de confidentialité</h1>
+<p class="meta">Application : Sémaphore Sonar · Dernière mise à jour : 23 septembre 2026 ·
+Responsable du traitement : Alexis Barlatier (France) · Contact :
+<a href="mailto:semaphoresonar@gmail.com">semaphoresonar@gmail.com</a></p>
+
+<h2>1. Qui utilise cette application</h2>
+<p>Sémaphore Sonar est un outil logiciel privé, à usage interne, exploité par
+Alexis Barlatier et Rémy Barlatier (deux personnes physiques, France) pour la
+gestion de leurs propres projets d'investissement immobilier. L'application n'est
+pas distribuée au public, ne propose aucune inscription, et n'est pas utilisée pour
+traiter les données de tiers autres que les interlocuteurs professionnels de ces
+projets (agences immobilières, notaires, courtiers, syndics).</p>
+
+<h2>2. Quelles données Google sont consultées</h2>
+<p>Après consentement explicite du propriétaire du compte Google concerné
+(authentification OAuth 2.0 en mode hors connexion), l'application accède aux
+données suivantes, dans les limites des autorisations accordées :</p>
+<table>
+<tr><th>Service Google</th><th>Données lues ou écrites</th><th>Pourquoi</th></tr>
+<tr><td>Gmail</td><td>Messages reçus et envoyés, en-têtes, corps, pièces jointes (PDF, images, plans, diagnostics)</td><td>Identifier la correspondance liée aux dossiers immobiliers, extraire les pièces jointes, envoyer les offres et réponses aux agences</td></tr>
+<tr><td>Google Drive</td><td>Fichiers et dossiers du Drive du projet : création, dépôt, renommage, déplacement</td><td>Classer les pièces reçues et les fiches de synthèse dans l'arborescence du projet</td></tr>
+<tr><td>Google Docs</td><td>Documents créés et complétés</td><td>Produire les fiches de présentation destinées aux banques et partenaires</td></tr>
+<tr><td>Google Sheets</td><td>Tableaux lus et mis à jour</td><td>Suivi des dossiers, des revenus locatifs et des échéances</td></tr>
+<tr><td>Google Calendar</td><td>Événements lus, créés ou supprimés</td><td>Planifier les visites, rendez-vous bancaires et échéances</td></tr>
+<tr><td>Google Contacts</td><td>Contacts lus</td><td>Identifier les interlocuteurs (agences, notaires, artisans) et associer les courriers</td></tr>
+</table>
+
+<h2>3. Comment ces données sont utilisées</h2>
+<p>Les données servent exclusivement à l'usage interne décrit ci-dessus :
+lecture et classement du courrier, extraction de pièces jointes, production
+d'analyses chiffrées, envoi de courriers aux interlocuteurs des projets. Aucune
+autre finalité ne leur est appliquée.</p>
+
+<h3>Utilisation limitée des données Google</h3>
+<p>L'usage des informations reçues des API Google respecte la
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+API Services User Data Policy</a>, y compris ses exigences d'utilisation limitée
+(<em>Limited Use</em>). En particulier :</p>
+<ul>
+<li>les données Google ne sont <strong>jamais transférées ni vendues</strong> à des
+tiers, hors ce qui est strictement nécessaire pour fournir les fonctionnalités
+décrites (aucun prestataire de revente, aucun courtier en données, aucune régie
+publicitaire) ;</li>
+<li>elles ne sont <strong>pas utilisées à des fins publicitaires</strong>, ni pour
+cibler des annonces, ni pour établir un profil de crédit ou un score de solvabilité ;</li>
+<li>elles ne servent <strong>pas</strong> à entraîner, affiner ou évaluer des modèles
+d'apprentissage automatique généralistes ;</li>
+<li>elles ne sont <strong>pas consultées par des humains</strong> en dehors des deux
+exploitants, sauf obligation légale ou accord explicite du propriétaire du compte ;
+dans ce cas, aucune revue humaine n'a lieu sans accord préalable ;</li>
+<li>aucun accès n'est demandé au-delà de ce qui est nécessaire aux fonctionnalités
+décrites.</li>
+</ul>
+
+<h2>4. Où sont stockées les données</h2>
+<p>L'application fonctionne sur les machines personnelles des exploitants
+(ordinateurs de bureau, France). Le jeton d'accès OAuth est stocké localement, en
+dehors de tout dépôt public. Les pièces collectées (pièces jointes, analyses, fiches)
+sont conservées dans le Google Drive du projet, ainsi que sur les postes des
+exploitants pour les besoins du travail en cours.</p>
+<p>Aucune donnée Google n'est envoyée à un serveur tiers exploité par l'éditeur.
+L'application ne fonctionne pas comme un service hébergé accessible au public.</p>
+
+<h2>5. Durée de conservation</h2>
+<p>Les courriers et pièces jointes restent dans la boîte Gmail et le Drive du
+projet, sous le contrôle direct de son propriétaire, qui les supprime librement.
+Les copies locales de travail sont supprimées à la clôture du dossier concerné.
+Le jeton d'accès peut être révoqué à tout moment, ce qui met fin immédiatement à
+tout accès de l'application (voir section 6).</p>
+
+<h2>6. Révocation et droits</h2>
+<p>Le propriétaire du compte Google peut révoquer l'accès de l'application à tout
+moment, sans passer par l'éditeur, depuis la page
+<a href="https://myaccount.google.com/connections">Autorisations liées au compte</a>
+(onglet « Accès tiers » de son compte Google). Il peut également demander la
+suppression des copies locales en écrivant à l'adresse de contact ci-dessous.
+Toute demande d'accès, de rectification ou de suppression adressée à
+<a href="mailto:semaphoresonar@gmail.com">semaphoresonar@gmail.com</a> reçoit une
+réponse sous 30 jours.</p>
+
+<h2>7. Sécurité</h2>
+<p>L'accès aux comptes Google est protégé par l'authentification Google et par
+l'authentification à deux facteurs. Les jetons OAuth sont stockés sur les machines
+personnelles des exploitants, avec des permissions restreintes au seul utilisateur
+du système, et ne sont jamais publiés dans un dépôt de code.</p>
+
+<h2>8. Modifications</h2>
+<p>Toute évolution de cette politique est datée en tête de page. En cas de
+changement substantiel dans l'usage des données Google, le consentement est
+demandé à nouveau — Google réaffiche l'écran d'autorisation à cette occasion.</p>
+
+<footer>
+<a href="index.html">Accueil</a> ·
+Contact : <a href="mailto:semaphoresonar@gmail.com">semaphoresonar@gmail.com</a>
+</footer>
+
+</main>
+</body>
+</html>

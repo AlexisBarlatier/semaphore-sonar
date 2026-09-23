@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=analyses/index.html">
-  <title>Sémaphore Sonar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sémaphore Sonar — outil interne d'analyse immobilière</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { background: var(--color-bg); color: var(--color-text); font-family: var(--font); margin: 0; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 72px; }
+  h1 { color: var(--color-accent); font-size: 1.9rem; margin-bottom: 4px; }
+  h2 { color: var(--color-accent); font-size: 1.15rem; margin-top: 36px; }
+  .lede { color: var(--color-text-muted); font-size: 1.02rem; }
+  ul { line-height: 1.7; }
+  .card { background: var(--color-surface); border: 1px solid var(--color-border);
+          border-radius: var(--radius); padding: 20px 24px; margin-top: 20px; }
+  a { color: var(--color-accent); }
+  footer { color: var(--color-text-muted); font-size: .88rem; margin-top: 48px;
+           border-top: 1px solid var(--color-border); padding-top: 16px; }
+</style>
 </head>
 <body>
-  <p>Redirection vers <a href="analyses/index.html">les analyses</a>…</p>
+<main>
+
+<h1>Sémaphore Sonar</h1>
+<p class="lede">Outil interne d'analyse d'investissement immobilier et de gestion
+documentaire, opéré par Alexis et Rémy Barlatier.</p>
+
+<h2>À quoi sert cet outil</h2>
+<div class="card">
+<p>Sémaphore Sonar est un assistant logiciel privé, utilisé par deux personnes,
+pour instruire des dossiers d'investissement locatif dans le Var : relever les
+annonces, calculer les rendements et les flux de trésorerie, comparer les
+scénarios de financement, produire des fiches de synthèse, et classer la
+correspondance des agences immobilières (courriers, pièces jointes, diagnostics,
+plans) dans une arborescence de dossiers.</p>
+<p>L'outil se connecte à la boîte Gmail du projet pour lire et envoyer les
+messages liés aux dossiers, et à un Google Drive pour y déposer et organiser les
+pièces reçues. Il n'est pas distribué : il n'existe pas d'inscription publique,
+pas de compte utilisateur tiers, et aucune donnée n'est revendue ni utilisée à des
+fins publicitaires.</p>
+</div>
+
+<h2>Données et confidentialité</h2>
+<div class="card">
+<p>La connexion aux services Google se fait via OAuth, avec le consentement
+explicite du propriétaire du compte, et peut être révoquée à tout moment.
+Le détail de ce qui est lu, pourquoi, et combien de temps c'est conservé est
+décrit dans la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+</div>
+
+<h2>Analyses publiées</h2>
+<div class="card">
+<p>Les fiches de synthèse produites par l'outil sont publiées ici :
+<a href="analyses/index.html">consulter les analyses</a>.</p>
+</div>
+
+<footer>
+Contact : <a href="mailto:semaphoresonar@gmail.com">semaphoresonar@gmail.com</a> ·
+<a href="confidentialite.html">Politique de confidentialité</a>
+</footer>
+
+</main>
 </body>
 </html>
