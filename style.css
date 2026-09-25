@@ -1005,3 +1005,6 @@ h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bott
 
 .card-verdict.note-5-8 { background: var(--color-amber-bg); border-color: var(--color-amber); }
 .card-verdict.note-5-8 .card-value { color: var(--color-amber); }
+
+.card-verdict.note-3-9 { background: var(--color-red-bg); border-color: var(--color-red); }
+.card-verdict.note-3-9 .card-value { color: var(--color-red); }
