@@ -8856,6 +8856,11 @@
         ],
         "risques": [
           {
+            "facteur": "Cash-flow négatif sous crédit : le dossier échoue au critère du parc",
+            "severite": 5,
+            "detail": "Le dossier passe la grille de rendement (5,44 % net avant IS) mais pas le critère de cash-flow. À 10 % d'apport, prêt de 144 000 € sur 15 ans à 3,7 % avec assurance emprunteur de 0,34 %, la mensualité est de 1 084 €/mois quand l'exploitation dégage 784 €/mois en scénario de base : le cash-flow est de -301 €/mois, soit -3 607 €/an, et il reste négatif dans les trois scénarios (-143 €/mois en hypothèse favorable, -624 €/mois en hypothèse défavorable). Pour que le bien couvre sa mensualité au prix affiché, il faudrait 1 404 €/mois de loyers — 31 % de plus que notre base — ou un prix de 115 649 €, ou un apport de 55 916 € (35 %). L'opération s'enrichit (4,63 % après IS contre 3,7 % de taux d'intérêt) mais elle consomme 54 108 € de trésorerie sur quinze ans : elle ne se finance pas seule"
+          },
+          {
             "facteur": "Les montants des deux baux ne sont pas communiqués",
             "severite": 5,
             "detail": "C'est le risque numéro un, et il porte tout le dossier. L'annonce vend « une rentabilité immédiate » sans donner un seul loyer, en s'appuyant sur des baux en cours dont le montant, la date, la durée et le type (nue ou meublé) sont inconnus. Le chiffrage publié repose donc sur des loyers reconstruits à partir du marché : 5,44 % net avant IS à 1 070 €/mois, 6,54 % à 1 200 €, 3,20 % à 920 €. Notre seuil est de 5 % : l'écart entre les deux hypothèses vaut une recommandation. Exiger les deux baux, les dates d'échéance et les dernières quittances AVANT l'offre — s'il s'agit de baux anciens sous le marché, c'est le premier levier de négociation et la réponse au vendeur est non"

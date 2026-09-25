@@ -254,12 +254,86 @@
     </div>
     <p class="attractiveness-intro">Repères de méthode : acte en main 172 800 € = prix affiché 160 000 € + frais d'acquisition 12 800 € (8 %, honoraires à la charge du vendeur) ; aucun travaux à l'acquisition (aucun travaux annoncé), provision travaux et ameublement de 200 €/an en exploitation ; vacance 5 % en base, 4 % en hypothèse favorable, 10 % en hypothèse défavorable ; gestion locative 5 %, 4 % et 6 % selon les scénarios ; taxe foncière estimée 900 € (avis non communiqué) ; charges d'immeuble 400 € ; assurance PNO 150 € ; comptabilité 500 € ; SCI à l'IS avec IS de 15 % appliqué à l'EBE, sans amortissement du bâti modélisé ; valeur de marché 127 934 € (2 722 €/m², médiane DVF 2025 de la tranche 30-50 m² sur 5 ventes).</p>
   </section>
+  <section class="financial-projections">
+    <h2>Cash-flow après crédit — service de la dette, apport et durée</h2>
+    <p class="attractiveness-intro"><strong>Hypothèses de crédit (doctrine du parc) :</strong> apport 10 %, frais de notaire assumés à part, prêt de 144 000 € sur 15 ans à 3,7 %, assurance emprunteur 0,34 % du capital. Mensualité <strong>1 084 €/mois</strong>, soit <strong>0,00753 € par euro emprunté</strong>. Comparée au net d'exploitation de 784 €/mois du scénario de base, cette mensualité ne peut pas être couverte.</p>
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Base — loyers 1 070 €/mois</h3>
+        <p class="scenario-subtitle">Prêt 144 000 € sur 15 ans — apport 10 %</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts mensuels</td><td class="num">1 070 €</td></tr>
+            <tr><td>Net d'exploitation mensuel (EBE)</td><td class="num">784 €</td></tr>
+            <tr><td>Mensualité de crédit (assurance incluse)</td><td class="num">-1 084 €</td></tr>
+            <tr class="highlight"><td>Cash-flow mensuel</td><td class="num">-301 €</td></tr>
+            <tr><td>Cash-flow annuel</td><td class="num">-3 607 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-optimiste">
+        <h3>Optimiste — loyers 1 200 €/mois</h3>
+        <p class="scenario-subtitle">Prêt 144 000 € sur 15 ans — apport 10 %</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts mensuels</td><td class="num">1 200 €</td></tr>
+            <tr><td>Net d'exploitation mensuel (EBE)</td><td class="num">942 €</td></tr>
+            <tr><td>Mensualité de crédit (assurance incluse)</td><td class="num">-1 084 €</td></tr>
+            <tr class="highlight"><td>Cash-flow mensuel</td><td class="num">-143 €</td></tr>
+            <tr><td>Cash-flow annuel</td><td class="num">-1 715 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-pessimiste">
+        <h3>Pessimiste — loyers 920 €/mois</h3>
+        <p class="scenario-subtitle">Prêt 144 000 € sur 15 ans — apport 10 %</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts mensuels</td><td class="num">920 €</td></tr>
+            <tr><td>Net d'exploitation mensuel (EBE)</td><td class="num">460 €</td></tr>
+            <tr><td>Mensualité de crédit (assurance incluse)</td><td class="num">-1 084 €</td></tr>
+            <tr class="highlight"><td>Cash-flow mensuel</td><td class="num">-624 €</td></tr>
+            <tr><td>Cash-flow annuel</td><td class="num">-7 489 €</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>La conclusion est nette : ce dossier n'est pas finançable en l'état.</strong> Au prix affiché et avec 10 % d'apport, il manque <strong>301 €/mois</strong> (3 607 €/an) au bien pour payer sa mensualité, et le déficit subsiste dans les trois scénarios de loyers : -143 €/mois en hypothèse favorable, -624 €/mois en hypothèse défavorable. Le rendement de 4,63 % après IS reste supérieur au taux du crédit de 3,7 %, donc l'opération s'enrichit — mais elle consomme 54 106 € de trésorerie sur quinze ans, et c'est la trésorerie qui décide d'un achat.</p>
+    </div>
+    <table class="projection-table compare">
+      <thead><tr><th>Prix payé</th><th class="num">Capital emprunté (90 %)</th><th class="num">Mensualité</th><th class="num">Cash-flow</th><th class="num">Cash-flow annuel</th><th class="num">Loyers requis pour un cash-flow nul</th></tr></thead>
+      <tbody>
+        <tr><td>148 000 € — notre offre</td><td class="num">133 200 €</td><td class="num">1 003 €</td><td class="num">-219 €/mois</td><td class="num">-2 631 €/an</td><td class="num">1 314 €/mois</td></tr>
+        <tr><td>160 000 € — prix affiché</td><td class="num">144 000 €</td><td class="num">1 084 €</td><td class="num">-301 €/mois</td><td class="num">-3 607 €/an</td><td class="num">1 404 €/mois</td></tr>
+        <tr><td>165 000 € — plafond de négociation</td><td class="num">148 500 €</td><td class="num">1 118 €</td><td class="num">-334 €/mois</td><td class="num">-4 014 €/an</td><td class="num">1 442 €/mois</td></tr>
+      </tbody>
+    </table>
+    <h3>Ce qu'il faudrait pour un cash-flow nul</h3>
+    <table class="projection-table compare">
+      <thead><tr><th>Levier</th><th class="num">Valeur</th><th>Lecture</th></tr></thead>
+      <tbody>
+        <tr><td>Loyers mensuels pour un cash-flow nul au prix affiché</td><td class="num">1 404 €/mois</td><td>contre 1 070 €/mois retenus, soit +31 %</td></tr>
+        <tr><td>Prix d'achat à cash-flow nul, 10 % d'apport, loyers de 1 070 €/mois</td><td class="num">115 650 €</td><td>-27,7 % sous le prix affiché</td></tr>
+        <tr><td>Prix d'achat à cash-flow nul, 10 % d'apport, loyers de 1 200 €/mois</td><td class="num">132 913 €</td><td>charges du scénario de base, loyers de l'hypothèse favorable</td></tr>
+        <tr><td>Apport pour un cash-flow nul à 148 000 €</td><td class="num">43 915 €</td><td>30 % du prix</td></tr>
+        <tr><td>Apport pour un cash-flow nul à 160 000 €</td><td class="num">55 915 €</td><td>35 % du prix</td></tr>
+        <tr><td>Apport pour un cash-flow nul à 165 000 €</td><td class="num">60 915 €</td><td>37 % du prix</td></tr>
+        <tr><td>Durée 15 ans (plafond de la banque)</td><td class="num">1 084 €/mois</td><td>cash-flow -301 €/mois</td></tr>
+        <tr><td>Durée 20 ans</td><td class="num">891 €/mois</td><td>cash-flow -107 €/mois</td></tr>
+        <tr><td>Durée 25 ans</td><td class="num">777 €/mois</td><td>cash-flow 7 €/mois</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Fiscalité année 1 — l'amortissement ne crée pas de trésorerie.</strong> Intérêts d'emprunt 5 328 €, dotation aux amortissements 4 267 €, soit un résultat imposable estimé de 1 095 € et <strong>164 € d'IS</strong> (15 %). Autrement dit, l'impôt n'est pas le sujet : il ne représente que 14 €/mois, à comparer aux 301 €/mois de déficit. Et l'amortissement, qui allège l'impôt, ne paie pas la mensualité — c'est la première confusion à éviter sur un dossier d'exploitation.</p>
+      <p class="attractiveness-intro"><strong>Le service de la dette vaut 9,0 % du capital emprunté par an</strong> (intérêts, capital et assurance) alors que le bien rapporte <strong>6,5 % sur ce même capital</strong> : l'écart de 2,5 points, c'est la mensualité que le bien ne couvre pas. Ce n'est pas un dossier mort — l'actif s'apprécie et la dette se rembourse —, mais c'est un dossier qui demande 54 106 € de trésorerie sur quinze ans, ou un apport de 35 % au lieu de 10 %, ou un prix de 115 650 € au lieu de 160 000 €. Trois réponses possibles, aucune gratuite.</p>
+    </div>
+  </section>
 
   <section class="risk-matrix">
     <h2>Matrice de risques</h2>
     <table class="risk-table">
       <thead><tr><th>Facteur de risque</th><th>Détail</th><th>Sévérité</th></tr></thead>
       <tbody>
+        <tr>
+          <td>Cash-flow négatif sous crédit : le dossier échoue au critère du parc</td>
+          <td>Le dossier passe la grille de rendement (5,44 % net avant IS) mais pas le critère de cash-flow. À 10 % d'apport, prêt de 144 000 € sur 15 ans à 3,7 % avec assurance emprunteur de 0,34 %, la mensualité est de 1 084 €/mois quand l'exploitation dégage 784 €/mois en scénario de base : le cash-flow est de -301 €/mois, soit -3 607 €/an, et il reste négatif dans les trois scénarios (-143 €/mois en hypothèse favorable, -624 €/mois en hypothèse défavorable). Pour que le bien couvre sa mensualité au prix affiché, il faudrait 1 404 €/mois de loyers — 31 % de plus que notre base — ou un prix de 115 649 €, ou un apport de 55 916 € (35 %). L'opération s'enrichit (4,63 % après IS contre 3,7 % de taux d'intérêt) mais elle consomme 54 108 € de trésorerie sur quinze ans : elle ne se finance pas seule</td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
         <tr>
           <td>Les montants des deux baux ne sont pas communiqués</td>
           <td>C'est le risque numéro un, et il porte tout le dossier. L'annonce vend « une rentabilité immédiate » sans donner un seul loyer, en s'appuyant sur des baux en cours dont le montant, la date, la durée et le type (nue ou meublé) sont inconnus. Le chiffrage publié repose donc sur des loyers reconstruits à partir du marché : 5,44 % net avant IS à 1 070 €/mois, 6,54 % à 1 200 €, 3,20 % à 920 €. Notre seuil est de 5 % : l'écart entre les deux hypothèses vaut une recommandation. Exiger les deux baux, les dates d'échéance et les dernières quittances AVANT l'offre — s'il s'agit de baux anciens sous le marché, c'est le premier levier de négociation et la réponse au vendeur est non</td>
@@ -306,9 +380,9 @@
 
   <section class="verdict nego">
     <h2>Recommandation</h2>
-    <div class="verdict-decision"><p class="verdict-stance"><strong>À négocier — offrir 148 000 €, plafond 165 000 €</strong>, sous condition d'obtention des deux baux, de l'avis de taxe foncière et des diagnostics datés. Le raisonnement tient en un chiffre : avec les loyers reconstruits à partir du marché — 1 070 €/mois — le dossier rend 5,44 % net avant IS sur l'acte en main, donc il passe notre seuil de 5 %, mais de 44 points de base. Le prix qui tient exactement ce seuil est de <strong>174 185 €</strong>, au-dessus des 160 000 € demandés : la marge de négociation n'est pas là. Elle est dans les baux : à 920 €/mois le même bien ne vaut plus que 102 289 €, à 1 200 €/mois il en vaut 209 222. Personne ne sait aujourd'hui de quel côté de cette fourchette se situe l'immeuble, et l'annonce vend une « rentabilité immédiate » sans en donner le chiffre.<br><br><strong>Trois pièces suspensives, non négociables.</strong> Les deux <strong>baux en cours</strong>, avec leur montant, leur date et leur échéance, et les dernières quittances : c'est la seule donnée qui décide du dossier, et son absence dans une annonce qui parle de rentabilité immédiate est en soi un signal. L'<strong>avis de taxe foncière</strong> : 200 € d'écart valent 0,7 % de rendement brut. Les <strong>diagnostics datés</strong> — DPE, électricité, plomb, amiante — plus une visite d'homme de l'art sur les trois postes que « aucun travaux » ne couvre : couverture, électricité et humidité des caves, sur un immeuble dont l'acquéreur porte seul la structure.<br><br><strong>Ce qui rend le dossier défendable malgré tout.</strong> Il est loué, il est en centre-ville et il n'y a rien à faire : pas de copropriété à financer, pas de chantier, pas de passif énergétique (DPE D, aucune échéance avant 2034), des compteurs individuels. Et il passe le seuil de 5 % net avant IS en scénario de base, ce que peu de dossiers de la semaine font — encore faut-il que les baux soient effectivement à ce niveau, ce qui reste à vérifier.</p></div>
+    <div class="verdict-decision"><p class="verdict-stance"><strong>À négocier — sous condition de preuve des baux. Au rendement prudent de 1 070 €/mois, il faudrait acheter 115 000 € pour que le bien couvre sa mensualité, ce qui n'est pas atteignable sur un bien loué affiché pour sa rentabilité. Si les deux baux ne produisent pas près de 1 400 €/mois, on passe.</strong><br><br>Le raisonnement tient en deux grilles, et le dossier en passe une sur deux. Sur la grille de rendement, il est conforme : avec les loyers reconstruits à partir du marché — 1 070 €/mois — l'exploitation dégage 9 406 € d'EBE, soit 5,44 % net avant IS sur l'acte en main, au-dessus du seuil de 5 %, et 4,63 % après IS contre 3,7 % de taux d'intérêt : l'opération s'enrichit. Sur la grille de cash-flow, il échoue : à 10 % d'apport, la mensualité est de 1 084 €/mois pour 784 €/mois d'exploitation, soit <strong>-301 €/mois</strong> (-3 607 €/an), et il reste négatif dans les trois scénarios. Pour que le bien couvre sa mensualité au prix affiché, il faudrait <strong>1 404 €/mois de loyers</strong> — 31 % de plus que notre base —, ou un prix de 115 650 €, ou un apport de 55 915 € (35 % du prix). Au-delà de 30 000 € d'apport, le dossier sort de la doctrine du parc.<br><br><strong>Ce que cela fixe comme cadre d'offre.</strong> À 148 000 €, le cash-flow reste négatif de 219 €/mois et il faudrait 43 916 € d'apport (30 %) pour l'équilibrer ; à 165 000 € il est de -334 €/mois et il faudrait 60 916 € (37 %). Autrement dit, l'offre de 148 000 € et le plafond de 165 000 € ne tiennent que sur la grille de rendement, avec un apport hors doctrine : ils ne rendent pas ce bien finançable en l'état. <strong>Trois pièces suspensives, non négociables :</strong> les deux baux en cours (montant, date, échéance, type et quittances) — c'est la seule donnée qui décide, et son absence dans une annonce qui parle de rentabilité immédiate est en soi un signal ; l'avis de taxe foncière réel ; les diagnostics datés (DPE, électricité, plomb, amiante) et une visite d'homme de l'art sur les trois postes que « aucun travaux » ne couvre — couverture, électricité et humidité des caves, sur un immeuble dont l'acquéreur porte seul la structure.<br><br><strong>Ce qui reste bon dans ce dossier.</strong> Il est loué, il est en centre-ville, il n'y a rien à faire : pas de copropriété à financer, pas de chantier, pas de passif énergétique (DPE D, aucune échéance avant 2034), des compteurs individuels. Et il passe le seuil de 5 % net avant IS en scénario de base. Mais un dossier qui passe le rendement sans passer le cash-flow ne s'achète pas : il se négocie, et il ne se négocie que sur les baux, qui ne sont pas dans l'annonce.</p></div>
     <div class="verdict-details">
-      <p><strong>Prix plafond recommandé :</strong> <strong>165 000 €, sous condition des baux.</strong> Le prix qui tient exactement 5 % net avant IS est de 174 185 € avec 1 070 €/mois de loyers : c'est un seuil, pas une cible, et il vaut donc 174 185 € sur un chiffrage dont les loyers ne sont pas documentés. Le plafond retenu est 165 000 €, soit 9 185 € de marge pour absorber les trois inconnues du dossier (taxe foncière, état de la couverture et des caves, ameublement du studio), et l'offre d'ouverture est 148 000 €, soit 7,5 % sous le prix affiché. Sensibilité du plafond aux seuls loyers, charges de base inchangées : à 900 €/mois 140 185 €, à 1 000 €/mois 160 185 €, à 1 070 €/mois 174 185 €, à 1 150 €/mois 190 185 €. Chaque tranche de 100 €/mois de loyer vaut 20 000 € de capacité de prix : c'est le seul chiffre à retenir de cette négociation. Si les baux révèlent 920 €/mois, le plafond tombe à 102 289 € et la réponse est non.</p>
+      <p><strong>Prix plafond recommandé :</strong> <strong>Deux ancres, et c'est la plus basse qui décide.</strong> Sur le seul critère de rendement, le prix qui tient 5 % net avant IS est de 174 185 € avec 1 070 €/mois de loyers — un seuil, pas une cible, dont on garde une marge pour les inconnues du dossier (taxe foncière, couverture et caves, ameublement du studio), d'où le plafond de négociation de 165 000 € et l'offre d'ouverture à 148 000 €, soit 7,5 % sous le prix affiché. Sur le critère de cash-flow, le plafond tombe à <strong>115 650 €</strong> à 10 % d'apport — c'est le prix auquel le bien couvre sa mensualité de 1 084 €/mois — et à 132 913 € si les loyers montent à 1 200 €/mois. Les deux ancres sont séparées de 58 535 € : c'est le coût du service de la dette sur quinze ans, et c'est lui qui commande. Sensibilité du plafond de rendement aux seuls loyers, charges de base inchangées : à 900 €/mois 140 185 €, à 1 000 €/mois 160 185 €, à 1 070 €/mois 174 185 €, à 1 150 €/mois 190 185 €. Chaque tranche de 100 €/mois de loyer vaut 20 000 € de capacité de prix. Si les baux révèlent 920 €/mois, le plafond de rendement tombe à 102 289 € et la réponse est non. Et pour un cash-flow nul au prix affiché, il faut <strong>1 404 €/mois de loyers</strong> — c'est le chiffre à mettre en face du vendeur.</p>
       <p><strong>Leviers de négociation :</strong></p>
       <ul>
         <li>Les montants des deux baux sont l'argument central, et l'annonce elle-même le fournit : elle vend une « rentabilité immédiate » sans donner un seul loyer. Demander les baux, les échéances et les quittances avant toute discussion de prix, et faire constater par écrit que le dossier n'est pas chiffrable sans eux</li>
@@ -326,6 +400,7 @@
       <p><strong>Frais d'acquisition :</strong> 12 800 € (8 %), honoraires à la charge du vendeur. Prix de revient acte en main : 172 800 €, sans travaux (aucun travaux annoncé)</p>
       <p><strong>Loyers :</strong> 1 070 €/mois reconstruits (studio meublé 480 € + T2 duplex 590 €) — aucun loyer communiqué par l'annonce, les deux baux en cours ne sont pas chiffrés. Hypothèses de sensibilité : 1 200 €/mois (520 + 680) et 920 €/mois (400 + 520)</p>
       <p><strong>Charges retenues :</strong> taxe foncière estimée 900 €/an (avis non communiqué), charges d'immeuble 400 €/an (pas de copropriété), PNO 150 €, gestion locative 5 % des loyers et provision travaux 200 € (poste composite de 842 €), comptabilité 500 €. Provision automatique de 2,5 % du moteur désactivée pour ne pas compter deux fois la provision travaux. Aucun poste laissé à zéro</p>
+      <p><strong>Financement (doctrine du parc) :</strong> apport 10 %, prêt de 144 000 € sur 15 ans à 3,7 % et assurance emprunteur de 0,34 %, soit une mensualité de 1 084 €/mois (0,00753 € par euro emprunté). Cash-flow de <strong>-301 €/mois</strong> (-3 607 €/an) au prix affiché, -219 €/mois à 148 000 €, -334 €/mois à 165 000 €, -143 €/mois en hypothèse favorable de loyers et -624 €/mois en hypothèse défavorable. Le dossier passe la grille de rendement mais échoue au critère de cash-flow : 1 404 €/mois de loyers seraient nécessaires pour équilibrer au prix affiché, ou un prix de 115 649 €, ou un apport de 30 à 37 % du prix. Ne pas lire cette fiche comme un dossier finançable en l'état</p>
       <p><strong>Valeur de marché :</strong> 127 934 € (2 722 €/m² sur les 47 m² habitables), fourchette 120 000 à 138 000 €. Ancrage : médiane DVF 2025 de la tranche 30-50 m² de Saint-Maximin, 5 ventes ; médiane communale des appartements 2 679 €/m² sur 59 ventes et 276 mutations valides dans l'année</p>
       <p><strong>Contrôles à faire avant toute offre :</strong> les deux baux (montant, date, échéance, type) et les dernières quittances ; surfaces Carrez des deux lots et plan des logements ; diagnostics datés (DPE, électricité, plomb, amiante) ; état de la couverture, des façades et de l'humidité des caves par un homme de l'art ; avis de taxe foncière et valeur locative cadastrale ; statut de propriété de l'immeuble (détention en totalité à confirmer)</p>
       <p><strong>Point de méthode :</strong> sur ce dossier, le seul paramètre qui déplace la décision est le loyer. Le prix de revient est connu (172 800 €), les travaux sont annoncés nuls, la valeur de marché est ancrée sur des ventes comparables — mais les loyers, qui font basculer le rendement de 3,20 % à 6,54 % et la capacité de prix de 102 289 € à 209 222 €, ne sont pas dans l'annonce. Aucune offre ne doit être signée avant de les avoir vus</p>
