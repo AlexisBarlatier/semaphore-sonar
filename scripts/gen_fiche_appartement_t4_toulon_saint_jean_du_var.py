@@ -1475,11 +1475,6 @@ def main():
           round(0.85 * C430['ebe'] / ACTE_EN_MAIN * 100.0, 2),
           "6,83 % net après IS et -75 €/mois sur la base des charges du "
           "scénario de base (mêmes conventions que le reste de la fiche)")
-    ecart("Prix de marché du quartier (fiche de référence du 21/09/2026)",
-          "2 668 €/m² (commune)", DVF_Q_4595_MED,
-          "la fiche de référence des marchés locaux donne la commune à "
-          "2 668 €/m² ; le quartier se traite 2 264 €/m², soit 15,1 % sous "
-          "cette référence — cohérent, mais ce n'est pas le même périmètre")
 
     # ------------------------------------------------------------------
     # 4. Generation de la fiche
