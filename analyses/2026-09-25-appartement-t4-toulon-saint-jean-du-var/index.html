@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse - Appartement T4 66 m² vendu loué, Saint-Jean-du-Var — Toulon (83100)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Quartier Saint-Jean-du-Var, Toulon (83100) — appartement T4 de 66 m² annoncés (68 m² dans le texte de l'annonce) au 3e étage sur 7, avec ascenseur, immeuble de 1961, vendu loué avec locataire en place depuis quinze ans</p>
+  <p class="report-date">Analyse générée le 25 septembre 2026</p>
+  <p class="report-source">Source : SeLoger — annonce 264IMKBI3IM5 (Foncia Transaction Toulon Liberté, 289 place de la Liberté, RCS 503698664, référence 00836037, mandat en exclusivité)</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/toulon-83000/264IMKBI3IM5">https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/toulon-83000/264IMKBI3IM5</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Bien vendu loué — investissement locatif, loyer non communiqué</span>
+    <p>Stratégie retenue : <strong>Conservation du bail en place : loyer retenu 750 €/mois (hypothèse de travail haute, fourchette 620 à 750 €), charges de copropriété estimées 1 800 €/an, travaux de rafraîchissement non chiffrés et différés à la rotation du locataire</strong> - SCI à l'IS — l'année 1 est en déficit (-2 610 € après intérêts 3 993 € et dotation 3 197 €) donc aucun IS dû ; rendements nets publiés sous la convention prudente du moteur (IS de 15 % de l'EBE), dite explicitement ; seuil de décision du parc : 6,5 % net d'IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix affiché</span><span class="card-value">119 900 €</span></div>
+    <div class="card"><span class="card-label">Surface annoncée (titre)</span><span class="card-value">66 m² (4 pièces, 3 chambres)</span></div>
+    <div class="card"><span class="card-label">Prix / m² (sous le 1er quartile du quartier)</span><span class="card-value">1 817 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient (acte en main)</span><span class="card-value">129 492 €</span></div>
+    <div class="card"><span class="card-label">Valeur marché (DVF 2025, quartier 45-95 m²)</span><span class="card-value">149 424 €</span></div>
+    <div class="card"><span class="card-label">Loyer retenu (hypothèse de travail)</span><span class="card-value">750 €/mois</span></div>
+    <div class="card"><span class="card-label">Rendement net après IS (acte en main / valeur)</span><span class="card-value">3,01 % / 2,61 %</span></div>
+    <div class="card card-verdict note-3-9"><span class="card-label">Note</span><span class="card-value">3,9/10</span></div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.1218" data-lon="5.9483" data-address="Quartier Saint-Jean-du-Var, Toulon (83100) — appartement T4 de 66 m² annoncés (68 m² dans le texte de l'annonce) au 3e étage sur 7, avec ascenseur, immeuble de 1961, vendu loué avec locataire en place depuis quinze ans"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité - quartier Saint-Jean-du-Var, Toulon (83100) — immeuble de 1961 avec ascenseur, à quelques minutes du centre de Toulon et de la gare</h2>
+    <p class="attractiveness-intro">Saint-Jean-du-Var est un quartier dense de l'est toulonnais, à quelques minutes du centre-ville, de la gare et du port : commerces de proximité, écoles, réseau de bus urbain. Le marché y est documenté et liquide — <strong>2 749 ventes d'appartements à Toulon en 2025</strong> selon la base DVF, dont <strong>438 dans la boîte de coordonnées de cette annonce et 279 de 45 à 95 m²</strong>. Mais c'est un quartier qui se traite <strong>8,0 % sous la médiane communale</strong> (2 450 €/m² contre 2 662 €/m² toutes surfaces, et 11,8 % sous la commune à tranche de surface comparable) : c'est un emplacement de rendement locatif, pas de plus-value. Côté locatif, les ancrages datés donnent un marché de 830 à 950 €/mois hors charges pour un T4 de 66 m² (OLV agglomération de Toulon 12,9 €/m²/mois hors charges, soit 851 € ; SeLoger quartier 15,0 €/m²/mois soit 990 € ; RealAdvisor quartier 954 € de médiane). Le problème du dossier n'est ni le quartier ni le prix : c'est le loyer du bail en place, que l'annonce ne communique pas.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Saint-Jean-du-Var est un quartier d'entrée de ville, à quelques minutes de la gare de Toulon, du port et des axes vers l'est varois : réseau Mistral dense, lignes urbaines le long de l'avenue de la Résistance et du boulevard de la Martille. C'est un emplacement de locataire motorisé ou pendulaire, pas un quartier excentré</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Commerces de proximité, supermarchés et services le long des avenues du quartier, centre-ville de Toulon à quelques minutes. Le quartier est dense et habité, ce qui soutient la demande locative — et explique aussi que l'offre locative y soit abondante, donc la vacance possible</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Écoles, collèges et lycées de Toulon à proximité immédiate : c'est le profil type du locataire d'un T4 de 66 m² avec trois chambres, qu'on reloue à une famille et non à un étudiant</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Quartier populaire et vivant de l'est toulonnais, sans tension particulière, mais dont la réputation pèse sur la commercialisation à la revente. Immeuble de 1961 avec ascenseur : parties communes anciennes, budget de copropriété à surveiller</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Le bien est proposé avec un locataire en place depuis quinze ans, ce qui prouve la demande sur ce produit. Les relevés du quartier donnent un loyer moyen de 15,0 €/m²/mois (SeLoger), un loyer médian d'appartement de 954 € (RealAdvisor) et une référence d'agglomération de 12,9 €/m²/mois hors charges (OLV), soit 851 € pour 66 m² : le marché du quartier se situe entre 830 et 950 € hors charges</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">2 749 ventes d'appartements enregistrées à Toulon en 2025 : le marché de revente est très liquide. Mais le quartier se traite 8,0 % sous la médiane communale (2 450 €/m² contre 2 662 €/m² toutes surfaces, −11,8 % à tranche de surface comparable), et le prix demandé est déjà au niveau des transactions réellement comparables : la plus-value de sortie est limitée à ce que les travaux apporteront</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> un ménage familial — trois chambres, 66 m², 3e étage sur 7, avec ascenseur — dans un quartier de ville dense à quelques minutes des commerces, des écoles et de la gare de Toulon : le profil type d'un T4 toulonnais, et c'est celui du locataire en place depuis quinze ans. Le loyer facial de référence du quartier (15,0 €/m²/mois selon SeLoger, 990 €) se situe au-dessus de la médiane hors charges de l'agglomération (12,9 €/m², soit 851 €) : la demande ne fait pas défaut, c'est la révision IRL d'un bail ancien qui plafonne le revenu</p>
+      <p><strong>Conclusion :</strong> Adéquation correcte (6,7/10). Le quartier, le produit et le prix sont bons : un T4 de 3 chambres avec ascenseur, à 1 817 €/m², sous le premier quartile de son quartier (1 978 €/m²) et au niveau exact des transactions comparables de 2025 (1 810 €/m² sur 8 ventes d'appartements seuls). Ce qui plombe le dossier n'est pas l'emplacement : c'est l'accumulation de quatre inconnues sur le même bien — le loyer du bail, les charges de copropriété, le montant des travaux et le carrez exact — dont la première décide du rendement entre 2,45 % et 5,20 %. On a donc ici un bien correct, à un prix correct, qui ne s'achète pas sans pièces</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Six lectures ont été testées, toutes calculées par le moteur : cinq hypothèses de loyer (620, 750, 851, 950 €/mois et 851 € avec 2 400 €/an de charges) dans le cadre d'un bail conservé, plus une colocation meublée à trois chambres. Aucune ne dégage un cash-flow positif au prix affiché et seule la colocation franchit la barre des 6 % net — en supposant le départ du locataire en place. La stratégie retenue est donc l'attente de pièces : le bail, les charges, le carrez et la taxe foncière</p>
+    <table class="strategy-table">
+      <thead><tr><th>Stratégie</th><th>Lots</th><th>Rendement</th><th>Faisabilité</th><th>Risque</th></tr></thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Bail ancien — loyer de 620 €/mois (9,4 €/m²), hypothèse d'un bail de quinze ans révisé sous IRL</strong></td>
+          <td>1</td>
+          <td>2,45 % net avant IS sur l'acte en main (3 176 € d'EBE), 2,08 % après IS sous convention prudente, plafond 5 % 58 815 € contre 119 900 € affichés</td>
+          <td>c'est la lecture la plus probable d'un bail de quinze ans : un locataire en place depuis 2008-2010 paye un loyer que la révision IRL n'a pas ramené au marché. Aucune pièce ne permet de la vérifier</td>
+          <td>bloquant en pratique — 2,45 % net avant IS et un cash-flow de -548 €/mois : le dossier n'est plus un investissement, c'est une charge</td>
+        </tr>
+        <tr>
+          <td><strong>Hypothèse de travail haute — loyer de 750 €/mois (11,4 €/m²), vacance 5 %, gestion 5 %</strong></td>
+          <td>1</td>
+          <td>3,54 % net avant IS (4 580 € d'EBE, 382 €/mois), 3,01 % après IS, plafond 5 % 84 815 €, cash-flow -431 €/mois</td>
+          <td>immédiate si le bail le confirme : le bien est vendu loué, aucun travaux immédiat. C'est le scénario de base publié, et il reste sous la moitié du seuil de parc</td>
+          <td>élevé — même à 750 €, le rendement net avant IS (3,54 %) est très loin des 6,5 % net d'IS exigés, et le cash-flow est négatif de 431 €/mois</td>
+        </tr>
+        <tr>
+          <td><strong>Loyer de marché du quartier — 851 €/mois (12,9 €/m²), ancrage OLV agglomération de Toulon</strong></td>
+          <td>1</td>
+          <td>4,38 % net avant IS (5 671 € d'EBE, 473 €/mois), 3,72 % après IS, plafond 5 % 105 015 € (-12 % sous le prix affiché), cash-flow -340 €/mois</td>
+          <td>suppose que le locataire en place paye déjà le prix du marché, ce qui est contradictoire avec quinze ans d'ancienneté : c'est la borne haute de la vraisemblance, pas l'hypothèse centrale</td>
+          <td>élevé — même au loyer de marché, le rendement net avant IS plafonne à 4,38 %, le cash-flow reste à -340 €/mois et il faudrait payer 105 015 € pour tenir 5 % net avant IS</td>
+        </tr>
+        <tr>
+          <td><strong>Haut du marché — 950 €/mois (14,4 €/m²), borne haute des relevés du quartier</strong></td>
+          <td>1</td>
+          <td>5,20 % net avant IS (6 740 € d'EBE, 562 €/mois), 4,42 % après IS, plafond 5 % 124 815 €, cash-flow -251 €/mois</td>
+          <td>c'est la borne haute de SeLoger pour le quartier (15,0 €/m² de moyenne, haut 23,3) : un T4 de 1961 avec locataire en place ne s'y situe pas, mais la borne mérite d'être publiée</td>
+          <td>moyen — c'est la seule lecture qui approche 5 % net avant IS, et elle laisse encore un cash-flow de -251 €/mois : le dossier ne passe jamais du côté positif au prix affiché</td>
+        </tr>
+        <tr>
+          <td><strong>Loyer de marché avec charges de copropriété hautes — 851 €/mois et 2 400 €/an de charges</strong></td>
+          <td>1</td>
+          <td>3,92 % net avant IS (5 071 € d'EBE), 3,33 % après IS, cash-flow -390 €/mois</td>
+          <td>c'est la variante à retenir si les charges dépassent 1 800 €/an, ce qui est plausible au-delà de 20 ans sans travaux votés dans un immeuble de 1961 avec ascenseur — et invérifiable en l'état</td>
+          <td>élevé — 600 €/an de charges en plus, soit 0,46 point de rendement net avant IS et 50 €/mois de trésorerie : la deuxième inconnue du dossier, sans réponse dans l'annonce</td>
+        </tr>
+        <tr>
+          <td><strong>Colocation meublée — 3 chambres à 400 à 430 €/mois</strong></td>
+          <td>1</td>
+          <td>5,72 % à 6,33 % net après IS sur l'acte en main, cash-flow après crédit de -86 à -9 €/mois avant IS (-195 à -130 €/mois après IS)</td>
+          <td>technique mais hors doctrine : elle suppose le DÉPART du locataire en place, donc du portage à vide, une division du T4 en trois chambres (travaux et autorisation), un apport supérieur au filtre du parc, et un bail meublé sur un quartier qui n'est pas étudiant</td>
+          <td>moyen — c'est la seule lecture qui dépasse 6 % net, mais elle ne s'obtient qu'en cassant le seul actif du dossier (le locataire en place proposé comme « revenus immédiats dès la signature ») et ne passe jamais en cash-flow positif</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale"><p>Le scénario de base : loyer retenu 750 €/mois (11,4 €/m², borne haute de l'hypothèse de travail pour un bail de quinze ans révisé sous IRL), vacance 5 %, gestion locative 5 %, taxe foncière estimée 1 000 € (avis non communiqué), charges de copropriété estimées 1 800 €/an (aucune charge publiée), assurance PNO 120 €, provision travaux 200 € et comptabilité 400 €. L'excédent brut d'exploitation ressort à <strong>4 580 €</strong> (382 €/mois), soit <strong>3,54 % net avant IS</strong> sur les 129 492 € d'acte en main et 3,01 % après IS sous convention prudente — la moitié du seuil de 6,5 % net d'IS du parc.<br><br>Ce que l'annonce ne dit pas, et qui décide de tout : le montant du loyer. Le bien est vendu « avec locataire en place depuis 15 ans » et « revenus locatifs immédiats dès la signature » — mais aucun loyer n'est publié. Entre 620 €/mois (bail ancien révisé sous IRL, l'hypothèse la plus probable pour un locataire entré dans les lieux en 2008-2010) et 950 €/mois (haut du marché du quartier), l'EBE passe de 3 176 € à 6 740 € et le rendement net avant IS de 2,45 % à 5,20 % : <strong>2,75 points de rendement tiennent à une pièce qui n'est pas dans le dossier.</strong> Et même en retenant le loyer de marché de 851 €/mois — l'hypothèse la plus favorable crédible, qui suppose que le locataire paye déjà le prix du marché après quinze ans —, la fiche ne passe pas : 4,38 % net avant IS, 3,72 % après IS, plafond 105 015 € et cash-flow -340 €/mois. Il faudrait encaisser 1 229 €/mois (18,6 €/m²) pour que le cash-flow soit nul, au-dessus de tout le marché du quartier.<br><br>Les trois autres inconnues ne sauvent pas la lecture. Les charges de copropriété, absentes de l'annonce sur un immeuble de 1961 avec ascenseur, sont estimées à 1 800 €/an et testées à 2 400 €/an : 600 €/an de plus, soit 0,46 point de rendement net avant IS et 50 €/mois de trésorerie. Les travaux déclarés par l'annonce (« rafraîchissement dans le temps ») ne sont pas chiffrés et ne peuvent pas être exécutés avec le locataire en place : ils attendront la rotation, et la grille publiée montre que 20 000 € de travaux font tomber le plafond d'achat de 105 015 € à 86 496 €. Quant au prix, il n'est pas attaquable : 1 817 €/m², c'est exactement le niveau des transactions comparables du quartier (1 810 €/m² sur 8 ventes de 2025), sous le premier quartile de la tranche de surface. <strong>Un prix au marché ne compense pas un revenu inconnu : le dossier ne se négocie pas, il se documente.</strong></p></div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Quartier Saint-Jean-du-Var, Toulon (83100) — adresse exacte non publiée dans l'annonce ; agence Foncia Transaction Toulon Liberté, 289 place de la Liberté (RCS 503698664, référence 00836037, mandat en exclusivité)</td></tr>
+        <tr><th>Vendeur / intermédiaire</th><td>Foncia Transaction Toulon Liberté — annonce SeLoger 264IMKBI3IM5. Honoraires à la charge du vendeur</td></tr>
+        <tr><th>Composition</th><td>Appartement T4 (4 pièces, 3 chambres) de 66 m² annoncés en titre — 68 m² écrits dans le texte de la même annonce — au 3e étage sur 7, avec ascenseur, immeuble de 1961. Chauffage individuel, non meublé, 5 photos, cave annoncée dans le texte mais « Pas de cave » dans la fiche caractéristiques</td></tr>
+        <tr><th>Statut</th><td>Copropriété de 1961 avec ascenseur, « pas de procédure en cours » selon l'annonce. Ni le nombre de lots, ni le budget prévisionnel, ni la charge annuelle du lot ne sont publiés. « Parking collectif » : <strong>aucune place privative identifiée</strong>, donc aucun lot cessible et aucun revenu annexe</td></tr>
+        <tr><th>Surfaces</th><td><strong>66 m² annoncés en titre</strong> (1 817 €/m²) contre 68 m² écrits dans le texte (1 763 €/m²) : 2 m² d'écart, 3 % de prix au m², à trancher par le certificat Carrez avant toute offre</td></tr>
+        <tr><th>Occupation</th><td><strong>Vendu loué</strong> : locataire en place depuis quinze ans selon l'annonce, « revenus locatifs immédiats dès la signature ». Ni le loyer, ni sa décomposition hors charges / provisions, ni la date d'effet, ni la durée restante, ni une quittance ne sont communiqués. Le bien se visite occupé : aucun accès libre aux pièces, aucun diagnostic contradictoire</td></tr>
+        <tr><th>Loyers retenus</th><td><strong>750 €/mois</strong> (11,4 €/m²) en scénario de base, fourchette de travail 620 à 750 €/mois pour un bail de quinze ans révisé sous IRL. Marché du quartier : 830 à 950 €/mois hors charges, médiane 851 €. Une seule ligne de revenu en base, celle de la stratégie retenue</td></tr>
+        <tr><th>Charges de copropriété</th><td><strong>Non communiquées par l'annonce.</strong> Estimation retenue 1 800 €/an, variante testée 2 400 €/an pour un immeuble de 1961 avec ascenseur. Chaque euro de charge sort du rendement : 0,46 point de rendement net avant IS entre les deux hypothèses</td></tr>
+        <tr><th>Travaux</th><td>L'annonce déclare le bien « nécessitera des travaux de rafraîchissement dans le temps », sans montant. Aucun devis, donc aucun chiffre dans le prix de revient : la fiche publie une grille de plafonds par tranche de 10 000, 20 000 et 30 000 €. Ces travaux ne sont pas exécutables avec le locataire en place</td></tr>
+        <tr><th>DPE / GES</th><td>DPE D / GES B — facture énergétique annoncée de 1 460 à 2 010 €/an, chauffage individuel. Un D reste louable, mais la facture plafonne le loyer acceptable et la mise aux normes se paiera un jour, en appel de fonds ou en travaux individuels</td></tr>
+        <tr><th>Prix affiché</th><td><strong>119 900 €</strong>, honoraires à la charge du vendeur — 1 817 €/m² sur les 66 m² annoncés. Sous le premier quartile du quartier pour cette tranche de surface (1 978 €/m² sur 279 ventes) et au niveau des transactions comparables de 2025 (1 810 €/m² sur 8 ventes d'appartements seuls) : le prix n'est pas le problème du dossier</td></tr>
+        <tr><th>Valeur de marché retenue</th><td><strong>149 424 €</strong> (66 m² × 2 264 €/m², médiane DVF 2025 du quartier sur 279 ventes de 45 à 95 m²), fourchette 130 548 à 177 144 € (premier et troisième quartiles). Comparables nommés à 1 810 €/m² de médiane : rue de Suez (55 m², 99 500 €, 1 809 €/m², 25/03/2025), place Gustave Lambert (52 m², 94 000 €, 1 808 €/m², 30/04/2025), rue Jean Aicard (41 m², 75 000 €, 1 829 €/m², 28/07/2025) et avenue Antoine Senequier (72 m², 130 000 €, 1 806 €/m², 31/10/2025)</td></tr>
+        <tr><th>Charges d'exploitation retenues</th><td>Taxe foncière <strong>estimée 1 000 €</strong> (avis non communiqué) + charges de copropriété <strong>estimées 1 800 €</strong> (non communiquées) + assurance PNO 120 € + gestion locative 5 % et provision travaux 200 € (poste composite de 650 €) + comptabilité 400 €. Provision automatique du moteur (2,5 %) désactivée pour ne pas compter deux fois la provision travaux</td></tr>
+        <tr><th>Fiscalité</th><td>SCI à l'IS. Année 1 réelle : EBE 4 580 € moins intérêts d'emprunt 3 993 € (107 910 € à 3,7 %) moins la dotation aux amortissements 3 197 € (bâti à 80 % du prix sur 30 ans) = <strong>résultat imposable de -2 610 €, donc aucun IS dû en année 1</strong>. Convention prudente retenue pour les rendements publiés : IS de 15 % appliqué à l'EBE, soit 687 €/an, sans amortissement du bâti modélisé</td></tr>
+        <tr><th>Prix de revient</th><td><strong>129 492 €</strong> acte en main = prix 119 900 € + frais d'acquisition 9 592 € (8,00 %, retenus par le simulateur de l'annonce elle-même), sans travaux (aucun devis). Ratio coût/valeur de 0,87 : le bien est acheté à sa valeur, pas en dessous</td></tr>
+        <tr><th>Financement (doctrine du parc)</th><td>apport 10 %, prêt de 107 910 € sur 15 ans à 3,7 % et assurance emprunteur de 0,34 %, soit une mensualité de <strong>813 €/mois</strong> (0,00753 € par euro emprunté). Cash-flow après crédit, avant IS, de <strong>-431 €/mois</strong> au loyer de travail, -340 €/mois au loyer de marché et -548 €/mois au loyer d'un bail ancien : négatif dans les six lectures. Prix d'équilibre à 10 % d'apport : 56 312 € au loyer de travail</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Compte d'exploitation locatif — 119 900 € affichés, 129 492 € acte en main, SCI à l'IS</h2>
+    <p class="attractiveness-intro">On demande le bail et les charges. Le prix, lui, n'est pas le problème : à 1 817 €/m², cet appartement se situe sous le premier quartile de son quartier pour cette tranche de surface (1 978 €/m² sur 279 ventes DVF 2025 de 45 à 95 m² dans la boîte de coordonnées de l'annonce) et exactement au niveau des transactions réellement comparables de 2025 (1 810 €/m² sur 8 ventes d'appartements seuls) — il n'y a aucune décote à capter. Ce qui manque, c'est le chiffre qui décide de tout : le loyer du bail de quinze ans, que l'annonce ne publie pas. Entre 620 et 950 €/mois, le rendement net avant IS passe de 2,45 % à 5,20 % et le cash-flow de -548 à -251 €/mois. Même au loyer de marché de 851 €/mois, il reste à -340 €/mois, et il faudrait encaisser 1 229 €/mois (18,6 €/m²) pour un cash-flow nul — au-dessus de tout le marché du quartier, dont les relevés plafonnent à 950 €. <strong>Le prix n'est pas une anomalie, c'est le montage qui ne tient pas :</strong> un bail de quinze ans, des travaux de rafraîchissement à faire avec le locataire en place — donc au mieux à la rotation —, des charges de copropriété non communiquées sur un immeuble de 1961 avec ascenseur, et un quartier qui se traite 8,0 % sous la médiane communale.</p>
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Base — hypothèse de travail 750 €/mois, vacance 5 %</h3>
+        <p class="scenario-subtitle">750 €/mois de loyer retenu — EBE 382 €/mois — cash-flow -431 €/mois avant IS (-488 € après IS)</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts (loyer retenu x 12)</td><td class="num">9 000 €</td></tr>
+            <tr><td>Vacance locative 5 %</td><td class="num">-450 €</td></tr>
+            <tr><td>Gestion locative 5 %</td><td class="num">-450 €</td></tr>
+            <tr><td>Taxe foncière (estimée, 1 000 €)</td><td class="num">-1 000 €</td></tr>
+            <tr><td>Charges de copropriété (estimées, 1 800 €/an)</td><td class="num">-1 800 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">-120 €</td></tr>
+            <tr><td>Provision travaux</td><td class="num">-200 €</td></tr>
+            <tr><td>Comptabilité SCI à l'IS</td><td class="num">-400 €</td></tr>
+            <tr class="subtotal"><td>Excédent brut d'exploitation</td><td class="num">4 580 €</td></tr>
+            <tr><td>IS 15 % de l'EBE (convention prudente)</td><td class="num">-687 €</td></tr>
+            <tr class="highlight"><td>Net après IS</td><td class="num">3 893 €</td></tr>
+            <tr><td>CF net mensuel avant service de la dette (net après IS / 12)</td><td class="num">324 €/mois</td></tr>
+            <tr><td>EBE mensuel</td><td class="num">382 €/mois</td></tr>
+            <tr><td>Rendement brut (loyer / prix affiché)</td><td class="num">7,51 %</td></tr>
+            <tr class="highlight"><td>Rendement net avant IS sur l'acte en main</td><td class="num">3,54 %</td></tr>
+            <tr><td>Rendement net après IS sur l'acte en main</td><td class="num">3,01 %</td></tr>
+            <tr><td>Rendement net après IS sur la valeur (149 424 €)</td><td class="num">2,61 %</td></tr>
+            <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">84 815 €</td></tr>
+            <tr><td>Écart au prix affiché</td><td class="num">-35 085 €</td></tr>
+            <tr><td>Cash-flow mensuel après crédit, avant IS (apport 10 %)</td><td class="num">-431 €/mois</td></tr>
+            <tr><td>Cash-flow mensuel après crédit, après IS (convention prudente)</td><td class="num">-488 €/mois</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-optimiste">
+        <h3>Optimiste — vacance 3 %, gestion 4 %, provision 150 €</h3>
+        <p class="scenario-subtitle">750 €/mois de loyer retenu — EBE 408 €/mois — cash-flow -404 €/mois avant IS (-466 € après IS)</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts (loyer retenu x 12)</td><td class="num">9 000 €</td></tr>
+            <tr><td>Vacance locative 3 %</td><td class="num">-270 €</td></tr>
+            <tr><td>Gestion locative 4 %</td><td class="num">-360 €</td></tr>
+            <tr><td>Taxe foncière (estimée, 1 000 €)</td><td class="num">-1 000 €</td></tr>
+            <tr><td>Charges de copropriété (estimées, 1 800 €/an)</td><td class="num">-1 800 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">-120 €</td></tr>
+            <tr><td>Provision travaux</td><td class="num">-150 €</td></tr>
+            <tr><td>Comptabilité SCI à l'IS</td><td class="num">-400 €</td></tr>
+            <tr class="subtotal"><td>Excédent brut d'exploitation</td><td class="num">4 900 €</td></tr>
+            <tr><td>IS 15 % de l'EBE (convention prudente)</td><td class="num">-735 €</td></tr>
+            <tr class="highlight"><td>Net après IS</td><td class="num">4 165 €</td></tr>
+            <tr><td>CF net mensuel avant service de la dette (net après IS / 12)</td><td class="num">347 €/mois</td></tr>
+            <tr><td>EBE mensuel</td><td class="num">408 €/mois</td></tr>
+            <tr><td>Rendement brut (loyer / prix affiché)</td><td class="num">7,51 %</td></tr>
+            <tr class="highlight"><td>Rendement net avant IS sur l'acte en main</td><td class="num">3,78 %</td></tr>
+            <tr><td>Rendement net après IS sur l'acte en main</td><td class="num">3,22 %</td></tr>
+            <tr><td>Rendement net après IS sur la valeur (149 424 €)</td><td class="num">2,79 %</td></tr>
+            <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">90 741 €</td></tr>
+            <tr><td>Écart au prix affiché</td><td class="num">-29 159 €</td></tr>
+            <tr><td>Cash-flow mensuel après crédit, avant IS (apport 10 %)</td><td class="num">-404 €/mois</td></tr>
+            <tr><td>Cash-flow mensuel après crédit, après IS (convention prudente)</td><td class="num">-466 €/mois</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-pessimiste">
+        <h3>Pessimiste — vacance 10 %, TF 1 100 €, charges 2 400 €, provision 400 €</h3>
+        <p class="scenario-subtitle">750 €/mois de loyer retenu — EBE 269 €/mois — cash-flow -543 €/mois avant IS (-584 € après IS)</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts (loyer retenu x 12)</td><td class="num">9 000 €</td></tr>
+            <tr><td>Vacance locative 10 %</td><td class="num">-900 €</td></tr>
+            <tr><td>Gestion locative 5 %</td><td class="num">-450 €</td></tr>
+            <tr><td>Taxe foncière (estimée, 1 100 €)</td><td class="num">-1 100 €</td></tr>
+            <tr><td>Charges de copropriété (estimées, 2 400 €/an)</td><td class="num">-2 400 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">-120 €</td></tr>
+            <tr><td>Provision travaux</td><td class="num">-400 €</td></tr>
+            <tr><td>Comptabilité SCI à l'IS</td><td class="num">-400 €</td></tr>
+            <tr class="subtotal"><td>Excédent brut d'exploitation</td><td class="num">3 230 €</td></tr>
+            <tr><td>IS 15 % de l'EBE (convention prudente)</td><td class="num">-484 €</td></tr>
+            <tr class="highlight"><td>Net après IS</td><td class="num">2 746 €</td></tr>
+            <tr><td>CF net mensuel avant service de la dette (net après IS / 12)</td><td class="num">229 €/mois</td></tr>
+            <tr><td>EBE mensuel</td><td class="num">269 €/mois</td></tr>
+            <tr><td>Rendement brut (loyer / prix affiché)</td><td class="num">7,51 %</td></tr>
+            <tr class="highlight"><td>Rendement net avant IS sur l'acte en main</td><td class="num">2,49 %</td></tr>
+            <tr><td>Rendement net après IS sur l'acte en main</td><td class="num">2,12 %</td></tr>
+            <tr><td>Rendement net après IS sur la valeur (149 424 €)</td><td class="num">1,84 %</td></tr>
+            <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">59 815 €</td></tr>
+            <tr><td>Écart au prix affiché</td><td class="num">-60 085 €</td></tr>
+            <tr><td>Cash-flow mensuel après crédit, avant IS (apport 10 %)</td><td class="num">-543 €/mois</td></tr>
+            <tr><td>Cash-flow mensuel après crédit, après IS (convention prudente)</td><td class="num">-584 €/mois</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <table class="projection-table compare">
+      <thead><tr><th>Indicateur</th><th class="num">Base — 750 €</th><th class="num">Optimiste</th><th class="num">Pessimiste</th></tr></thead>
+      <tbody>
+        <tr><td>Loyers bruts annuels</td><td class="num">9 000 €</td><td class="num">9 000 €</td><td class="num">9 000 €</td></tr>
+        <tr><td>Excédent brut d'exploitation</td><td class="num">4 580 €</td><td class="num">4 900 €</td><td class="num">3 230 €</td></tr>
+        <tr><td>EBE mensuel</td><td class="num">382 €/mois</td><td class="num">408 €/mois</td><td class="num">269 €/mois</td></tr>
+        <tr><td>Rendement net avant IS (acte en main)</td><td class="num">3,54 %</td><td class="num">3,78 %</td><td class="num">2,49 %</td></tr>
+        <tr><td>Rendement net après IS (convention prudente)</td><td class="num">3,01 %</td><td class="num">3,22 %</td><td class="num">2,12 %</td></tr>
+        <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">84 815 €</td><td class="num">90 741 €</td><td class="num">59 815 €</td></tr>
+        <tr class="highlight"><td>Cash-flow mensuel après crédit, avant IS (apport 10 %)</td><td class="num">-431 €/mois</td><td class="num">-404 €/mois</td><td class="num">-543 €/mois</td></tr>
+        <tr><td>Cash-flow mensuel après crédit, après IS (convention prudente)</td><td class="num">-488 €/mois</td><td class="num">-466 €/mois</td><td class="num">-584 €/mois</td></tr>
+      </tbody>
+    </table>
+    <p class="attractiveness-intro">Repères de méthode : acte en main 129 492 € = prix affiché 119 900 € + frais d'acquisition 9 592 € (8,00 %, retenus par le simulateur de l'annonce, honoraires à la charge du vendeur) ; aucun travaux à l'acquisition, provision travaux annuelle comprise dans le poste composite d'entretien ; vacance 5 %, 3 % et 10 % ; gestion locative 5 %, 4 % et 5 % ; taxe foncière estimée 1 000 € puis 1 100 € ; charges de copropriété estimées 1 800 € puis 2 400 € ; assurance PNO 120 € ; comptabilité 400 €. <strong>Crédit (doctrine du parc) :</strong> apport 10 %, prêt de 107 910 € sur 15 ans à 3,7 % avec assurance emprunteur de 0,34 %, soit une mensualité de <strong>813 €/mois</strong> et 0,00753 € par euro emprunté. <strong>Convention de cash-flow :</strong> la mensualité de crédit est déduite de l'EBE pour le cash-flow « avant IS » (celui des scénarios) et du net après IS pour le cash-flow « après IS » sous convention prudente — les deux sont publiés partout. <strong>Fiscalité :</strong> SCI à l'IS ; l'année 1 réelle est en déficit (4 580 € d'EBE moins 3 993 € d'intérêts et 3 197 € de dotation, soit -2 610 €) et ne paie aucun impôt ; les rendements nets publiés retiennent malgré tout la convention prudente du moteur, <strong>IS de 15 % appliqué à l'EBE</strong> sans amortissement du bâti modélisé, soit 687 €/an.</p>
+  </section>
+  <section class="financial-projections">
+    <h2>Les cinq lectures du loyer — de 620 à 950 €/mois</h2>
+    <p class="attractiveness-intro">L'annonce ne publie aucun loyer. Le dossier se juge donc sur une fourchette, et chaque borne se calcule par le moteur sur les mêmes charges (1 000 € de taxe foncière estimée, 1 800 € de charges de copropriété estimées, 120 € de PNO, 400 € de comptabilité, gestion 5 % et provision travaux 200 €), la même vacance (5 %) et le même crédit (813 €/mois). <strong>Le prix demandé ne passe aucune des cinq barres :</strong> la meilleure lecture, à 950 €/mois, donne 5,20 % net avant IS et laisse encore un cash-flow de -251 €/mois ; la plus probable pour un bail de quinze ans, à 620 €/mois, tombe à 2,45 % et à -548 €/mois.</p>
+    <table class="projection-table compare">
+      <thead><tr><th>Lecture de loyer</th><th class="num">EBE</th><th class="num">Net avant IS</th><th class="num">Net après IS</th><th class="num">Plafond 5 %</th><th class="num">Cash-flow après crédit (avant IS / après IS)</th><th>Ce qu'elle suppose</th></tr></thead>
+      <tbody>
+        <tr><td>Bail ancien 620 €/mois — bail de quinze ans révisé sous IRL</td><td class="num">3 176 €</td><td class="num">2,45 %</td><td class="num">2,08 %</td><td class="num">58 815 €</td><td class="num">-548 / -588 €/mois</td><td>la lecture la plus probable d'un locataire en place depuis quinze ans</td></tr>
+        <tr class="highlight"><td>Base 750 €/mois — borne haute de l'hypothèse de travail</td><td class="num">4 580 €</td><td class="num">3,54 %</td><td class="num">3,01 %</td><td class="num">84 815 €</td><td class="num">-431 / -488 €/mois</td><td>le scénario de base publié de la fiche</td></tr>
+        <tr><td>Marché 851 €/mois — ancrage OLV sur 66 m² (12,9 €/m²)</td><td class="num">5 671 €</td><td class="num">4,38 %</td><td class="num">3,72 %</td><td class="num">105 015 €</td><td class="num">-340 / -411 €/mois</td><td>le locataire paye déjà le prix du marché</td></tr>
+        <tr><td>Haut de marché 950 €/mois — borne haute des relevés du quartier</td><td class="num">6 740 €</td><td class="num">5,20 %</td><td class="num">4,42 %</td><td class="num">124 815 €</td><td class="num">-251 / -335 €/mois</td><td>hypothèse haute de SeLoger pour le quartier</td></tr>
+        <tr><td>Marché 851 €/mois avec 2 400 €/an de charges de copropriété</td><td class="num">5 071 €</td><td class="num">3,92 %</td><td class="num">3,33 %</td><td class="num">93 904 €</td><td class="num">-390 / -453 €/mois</td><td>la deuxième inconnue du dossier</td></tr>
+      </tbody>
+    </table>
+    <p class="attractiveness-intro"><strong>Ce que le loyer fait au dossier, en une ligne :</strong> entre 620 et 950 €/mois — l'écart entre la borne basse d'un bail de quinze ans et le haut du marché du quartier —, l'EBE passe de 3 176 € à 6 740 €, le rendement net avant IS de 2,45 % à 5,20 %, le plafond 5 % de 58 815 € à 124 815 € et le cash-flow de -548 € à -251 €/mois. <strong>Aucune de ces bornes ne produit un cash-flow positif, et aucune n'atteint le seuil de 6,5 % net d'IS du parc.</strong> L'écart de rendement entre les deux extrêmes (2,75 points) est du même ordre que tout ce qu'une négociation de prix pourrait apporter — c'est dire si le bail commande le dossier.</p>
+  </section>
+  <section class="financial-projections">
+    <h2>Marché locatif du quartier — 830 à 950 €/mois hors charges</h2>
+    <p class="attractiveness-intro">Trois sources datées encadrent le loyer du quartier Saint-Jean-du-Var. L'<strong>Observatoire départemental des loyers du Var</strong> donne pour l'agglomération de Toulon un loyer médian de <strong>12,9 €/m²/mois hors charges</strong>, soit 851 € pour les 66 m² du bien — c'est l'ancrage retenu comme médiane de marché. <strong>SeLoger</strong> affiche pour le quartier un prix de location moyen de <strong>15,0 €/m²/mois</strong> (haut 23,3, bas 10,4), soit 990 € — un niveau qui reflète l'offre récente et remise au goût du jour, pas un T4 de 1961 occupé. <strong>RealAdvisor</strong> donne un loyer médian d'appartement de <strong>954 €</strong> dans le quartier, avec 80 % des biens entre 475 et 2 043 €. En croisant les trois, le marché du quartier se tient entre <strong>830 et 950 €/mois hors charges</strong>, et un bail de quinze ans révisé sous IRL (+1,15 %/an en 2026) se situe mécaniquement en dessous : c'est pourquoi l'hypothèse de travail retenue est de 620 à 750 €/mois.</p>
+    <table class="projection-table compare">
+      <thead><tr><th>Source</th><th class="num">Loyer €/m²/mois</th><th class="num">Pour 66 m²</th><th>Lecture</th></tr></thead>
+      <tbody>
+        <tr><td>Observatoire départemental des loyers du Var — agglomération de Toulon (hors charges)</td><td class="num">12,9 €</td><td class="num">851 €</td><td>l'ancrage de marché retenu : loyer médian hors charges sur le parc existant</td></tr>
+        <tr><td>SeLoger — quartier Saint-Jean-du-Var (moyenne, haut 23,3 / bas 10,4)</td><td class="num">15,0 €</td><td class="num">990 €</td><td>l'offre récente et présentée : un plafond, pas une référence pour un bien occupé et à rafraîchir</td></tr>
+        <tr><td>RealAdvisor — quartier, loyer médian d'un appartement (80 % entre 475 et 2 043 €)</td><td class="num">—</td><td class="num">954 €</td><td>recoupe l'ancrage OLV ; dispersion large, quartier hétérogène</td></tr>
+        <tr class="highlight"><td><strong>Marché du quartier retenu (hors charges)</strong></td><td class="num">12,6 à 14,4 €</td><td class="num">830 à 950 €</td><td>médiane 851 € ; au-delà, le locataire en place n'est pas le bon locataire</td></tr>
+        <tr><td><strong>Hypothèse de travail du dossier</strong> (bail de quinze ans, IRL)</td><td class="num">9,4 à 11,4 €</td><td class="num">620 à 750 €</td><td>publiée comme scénario de base, et c'est déjà la borne haute de l'hypothèse</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Le point de méthode.</strong> Un bien vendu loué ne se juge pas sur le loyer du marché : il se juge sur le bail. Entre le loyer du marché (851 €) et la borne basse d'un bail de quinze ans (620 €), il y a 37 % de revenu et 1,93 point de rendement net avant IS : <strong>c'est le seul chiffre qui décide, et c'est le seul que l'annonce ne donne pas.</strong> Toutes les autres données du dossier sont vérifiables et vérifiées — le prix, les surfaces annoncées, le marché DVF, les loyers du quartier. C'est pourquoi la fiche conclut sur une demande de pièces, pas sur un prix.</p>
+    </div>
+  </section>
+  <section class="financial-projections">
+    <h2>Marché de la vente — DVF 2025 réelle de Toulon et de son quartier</h2>
+    <p class="attractiveness-intro">Les 8 736 lignes de nature « Vente » enregistrées en 2025 sur la commune de Toulon (3 908 mutations lues, dont 3 829 de nature Vente) donnent un marché très liquide : <strong>2 749 ventes d'appartements</strong>, médiane 2 662 €/m² toutes surfaces. La tranche de surface du bien y est fournie — mais c'est le QUARTIER qui décide, et le quartier se sélectionne par les coordonnées du marqueur de l'annonce (43,116-43,128 N / 5,941-5,960 E). Méthode : valeur foncière de la mutation divisée par la somme des surfaces bâties de la mutation, surfaces supérieures à 5 m² et valeurs supérieures à 5 000 €.</p>
+    <table class="projection-table compare">
+      <thead><tr><th>Segment DVF 2025</th><th class="num">Ventes</th><th class="num">Médiane €/m²</th><th>Lecture</th></tr></thead>
+      <tbody>
+        <tr><td>Appartements, toutes surfaces — commune de Toulon</td><td class="num">2 749</td><td class="num">2 662 €</td><td>moyenne communale, non applicable au bien : le prix au m² décroît avec la surface</td></tr>
+        <tr><td>Appartements de 15 à 30 m² — commune</td><td class="num">231</td><td class="num">3 333 €</td><td>les petites surfaces se paient le plus cher au m²</td></tr>
+        <tr><td>Appartements de 30 à 45 m² — commune</td><td class="num">485</td><td class="num">2 878 €</td><td>prix médian de la tranche : 138 000 € pour les 45-60 m²</td></tr>
+        <tr><td>Appartements de 45 à 60 m² — commune</td><td class="num">641</td><td class="num">2 647 €</td><td>de 2 096 à 3 186 €/m² — la tranche voisine du bien, référence communale</td></tr>
+        <tr><td>Appartements de 60 à 90 m² — commune</td><td class="num">1 054</td><td class="num">2 532 €</td><td>la décote de surface se voit : 2 532 €/m² contre 2 878 €/m² sur 30-45 m²</td></tr>
+        <tr><td><strong>Quartier Saint-Jean-du-Var — tous appartements</strong></td><td class="num">438</td><td class="num">2 450 €</td><td>de 2 020 à 3 000 €/m² : le quartier se traite 8,0 % sous la médiane communale</td></tr>
+        <tr class="highlight"><td><strong>Quartier — 45 à 95 m², la tranche du bien</strong></td><td class="num">279</td><td class="num">2 264 €</td><td>de 1 978 à 2 684 €/m², prix médian 150 000 € : c'est la référence de cet appartement de 66 m²</td></tr>
+        <tr><td>Commune — 45 à 95 m² (même tranche, pour comparaison)</td><td class="num">1 762</td><td class="num">2 566 €</td><td>le quartier est 11,8 % sous la commune à surface comparable</td></tr>
+      </tbody>
+    </table>
+    <table class="projection-table compare">
+      <thead><tr><th>Transaction comparable (2025)</th><th class="num">Surface</th><th class="num">Prix</th><th class="num">€/m²</th><th>Lecture</th></tr></thead>
+      <tbody>
+        <tr><td>rue de Suez, 25/03/2025 — 1 lot vendu</td><td class="num">55 m²</td><td class="num">99 500 €</td><td class="num">1 809 €</td><td>dans la boîte de coordonnées de l'annonce</td></tr>
+        <tr><td>place Gustave Lambert, 30/04/2025 — 2 lots vendus</td><td class="num">52 m²</td><td class="num">94 000 €</td><td class="num">1 808 €</td><td>quartier immédiat, hors boîte de la sélection</td></tr>
+        <tr><td>rue Jean Aicard, 28/07/2025 — 2 lots vendus</td><td class="num">41 m²</td><td class="num">75 000 €</td><td class="num">1 829 €</td><td>quartier immédiat, hors boîte de la sélection</td></tr>
+        <tr><td>avenue Antoine Senequier, 31/10/2025 — 3 lots vendus</td><td class="num">72 m²</td><td class="num">130 000 €</td><td class="num">1 806 €</td><td>dans la boîte de coordonnées de l'annonce</td></tr>
+        <tr><td><strong>Médiane des 8 ventes d'appartements seuls de 45 à 95 m² à 1 800-1 835 €/m²</strong></td><td class="num">45 à 72 m²</td><td class="num">105 000 €</td><td class="num">1 810 €</td><td>le niveau où se traitent réellement les appartements de ce type dans le quartier</td></tr>
+        <tr class="highlight"><td><strong>Le bien analysé</strong>, au prix affiché, sur les 66 m² annoncés</td><td class="num">66 m²</td><td class="num">119 900 €</td><td class="num">1 817 €</td><td>0,4 % au-dessus de la médiane des comparables, sous le premier quartile du quartier (1 978 €)</td></tr>
+        <tr><td>Tranche 45-95 m² du quartier appliquée au bien (valeur retenue)</td><td class="num">66 m²</td><td class="num">149 424 €</td><td class="num">2 264 €</td><td>valeur après travaux et libre d'occupant : 130 548 à 177 144 € (Q1 à Q3)</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Ce que disent les chiffres — et le point qui distingue ce dossier.</strong> À 1 817 €/m², ce bien n'est <strong>ni une décote ni une anomalie</strong> : il est exactement au niveau des transactions réellement comparables de son quartier (1 810 €/m² de médiane sur 8 ventes d'appartements seuls de 45 à 95 m² en 2025), et sous le premier quartile de la tranche de surface du quartier (1 978 €/m²). <strong>Ce que ce prix paie, c'est l'état — l'annonce écrit elle-même « rénovation nécessaire » et « travaux de rafraîchissement » — et le locataire en place depuis quinze ans.</strong> Il n'y a donc aucune décote à capter pour compenser un loyer faible, et aucune marge de marchand de biens : le coût de revient avec 20 000 € de travaux atteint 149 492 €, soit 2 265 €/m² — exactement la médiane du quartier pour cette surface (2 264 €/m²) — et une revente à 95 % de cette valeur laisserait une marge négative de -7 539 €.</p>
+      <p class="attractiveness-intro"><strong>Référence interne de la commune</strong> (fiche <em>Marchés locaux</em> mise à jour le 21/09/2026) : marché 2 668 €/m², loyer de référence 13,0 €/m²/mois sur un lot type de 60 m², plafonds d'achat par m² habitable frais compris de 1 305 € (6,5 % net d'IS), 1 205 € (7,0 %) et 1 045 € (8,0 %) en vision patrimoniale, et 946 / 894 / 861 €/m² en vision marchand de biens. Ce dossier s'affiche à 1 817 €/m², soit <strong>1,39 fois le plafond patrimonial à 6,5 % net d'IS</strong> et 1,92 fois le plafond marchand de biens de la ville : le constat de la fiche de référence — aucune des douze villes du secteur n'offre le seuil patrimonial au prix de marché — vaut ici aussi, et pour une raison différente des dossiers de centre ancien : ce n'est pas le prix qui est cher, c'est le loyer qui n'est pas prouvé.</p>
+      <p class="attractiveness-intro"><strong>À lire aussi dans le dépôt</strong> — <a href="../marches-locaux/index.html">fiche de référence des seuils d'achat par ville</a> (21/09/2026, 12 communes), <a href="../2026-09-22-appartement-t4-saint-jean-toulon/index.html">appartement T4 de 77,45 m² au 7e étage, quartier Saint-Jean, Toulon</a> (22/09/2026), <a href="../2026-06-15-saint-jean-du-var-toulon-colocation-etudiante/index.html">Saint-Jean-du-Var, colocation étudiante</a> (15/06/2026), <a href="../2026-09-10-t4-66m2-champ-de-mars-toulon/index.html">T4 de 66 m² quartier Champ-de-Mars, Toulon</a> (10/09/2026), <a href="../2026-09-10-t4-73m2-aguillon-toulon/index.html">T4 de 73 m² quartier Aguillon, Toulon</a> (10/09/2026), <a href="../2026-09-11-t5-86m2-dutasta-mayol-toulon/index.html">T5 de 86 m² Dutasta-Mayol, Toulon</a> (11/09/2026) et <a href="../2026-09-22-appartement-t5-mourillon-toulon/index.html">T5 au Mourillon, Toulon</a> (22/09/2026). <strong>Celui-ci est le premier dossier du quartier Saint-Jean-du-Var jugé en lecture patrimoniale avec un bail en place :</strong> il donne le niveau de prix du quartier pour les prochains — 2 264 €/m² de médiane sur 279 ventes de 45 à 95 m², contre 1 978 €/m² au premier quartile, là où le dossier de colocation étudiante du même quartier avait été jugé sur des loyers de chambre.</p>
+    </div>
+  </section>
+  <section class="financial-projections">
+    <h2>Ce qu'il faudrait pour équilibrer — et la grille de travaux</h2>
+    <p class="attractiveness-intro">Trois contraintes se superposent au prix affiché : la trésorerie (le cash-flow est négatif dans les cinq lectures de loyer), le seuil de rendement (5 % net avant IS, la moitié de la cible de parc) et la valeur de sortie. Elles donnent trois plafonds qui ne se recoupent que très bas.</p>
+    <table class="projection-table compare">
+      <thead><tr><th>Levier</th><th class="num">Valeur</th><th>Lecture</th></tr></thead>
+      <tbody>
+        <tr><td>Loyer mensuel qu'il faudrait encaisser pour un cash-flow nul, charges du scénario de base inchangées</td><td class="num">1 229 €/mois</td><td>soit 18,6 €/m²/mois — au-dessus du haut de marché du quartier (950 €) : le dossier ne s'équilibre à aucun loyer réel</td></tr>
+        <tr><td>Apport pour un cash-flow nul au prix affiché, au loyer de marché de 851 €</td><td class="num">57 149 €</td><td>48 % du prix — très au-delà de la doctrine du parc (10 %)</td></tr>
+        <tr><td>Prix d'achat tenant 5 % net avant IS au loyer de marché (851 €)</td><td class="num">105 015 €</td><td>12 % sous le prix affiché</td></tr>
+        <tr><td>Prix d'achat tenant 5 % net avant IS au loyer de travail (750 €)</td><td class="num">84 815 €</td><td>29 % sous le prix affiché</td></tr>
+        <tr><td>Prix d'achat à cash-flow nul au loyer de travail (750 €)</td><td class="num">56 312 €</td><td>53 % sous le prix affiché : la moitié du prix</td></tr>
+      </tbody>
+    </table>
+    <h3>Grille de plafonds par tranche de travaux</h3>
+    <p class="attractiveness-intro">L'annonce déclare des travaux de rafraîchissement à faire sans les chiffrer, et aucun devis n'existe : le plafond ne se publie donc pas comme un chiffre unique mais comme une grille, prix d'achat affiché compris, chiffrée aux deux ancrages de loyer. Elle se lit simplement : <strong>plus l'enveloppe de travaux est lourde, plus le prix d'achat doit baisser</strong>, euro de travaux contre euro de prix (aux frais d'acquisition près, un euro de travaux coûte 1/1,08 = 0,93 € de prix).</p>
+    <table class="projection-table compare">
+      <thead><tr><th>Enveloppe de rafraîchissement</th><th class="num">Plafond 5 % net au loyer de marché (851 €)</th><th class="num">Plafond 5 % net au loyer de travail (750 €)</th></tr></thead>
+      <tbody>
+        <tr><td>Aucun travaux immédiat — hypothèse de la fiche : aucun devis n'existe, et l'annonce annonce pourtant des travaux « dans le temps »</td><td class="num">105 015 €</td><td class="num">84 815 €</td></tr>
+        <tr><td>10 000 € de rafraîchissement (peintures, sols, électricité partielle)</td><td class="num">95 756 €</td><td class="num">75 556 €</td></tr>
+        <tr><td>20 000 € de rafraîchissement lourd (salle de bain, électricité, menuiseries)</td><td class="num">86 496 €</td><td class="num">66 296 €</td></tr>
+        <tr><td>30 000 € de remise en état complète</td><td class="num">77 237 €</td><td class="num">57 037 €</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Le double effet des travaux.</strong> Ils pèsent deux fois : ils augmentent le prix de revient — donc le capital sur lequel on exige le rendement — et ils ne peuvent pas être exécutés avec le locataire en place, donc ils n'apportent ni hausse de loyer, ni valeur locative nouvelle avant son départ. Sur ce dossier, 20 000 € de travaux font tomber le plafond d'achat de 105 015 € à 86 496 € au loyer de marché : <strong>les travaux se paient sur le prix d'achat, pas sur l'espérance de loyer.</strong></p>
+      <p class="attractiveness-intro"><strong>Piste étudiée et écartée — la colocation.</strong> Le T4 compte trois chambres : à 400 à 430 € par chambre et par mois (soit 1 200 à 1 290 €/mois), l'affaire dégage 9 440 à 10 412 € d'EBE et un rendement net après IS de 6,20 % à 6,83 %, avec un cash-flow après crédit de -26 à 55 €/mois avant IS et de -144 à -75 €/mois après IS sous la convention prudente. C'est la seule lecture qui franchit la barre des 6 % net — et pourtant <strong>elle est à écarter</strong> : elle suppose le départ du locataire en place, donc un portage à vide de plusieurs mois, une division du T4 en trois chambres (travaux et autorisation), un apport supérieur au filtre de la SCI, et un bail meublé sur un quartier qui n'est pas étudiant. Elle détruirait aussi le seul argument de vente de l'annonce — « revenus locatifs immédiats dès la signature » — et ne dégage au mieux, à 430 € la chambre, que 55 €/mois avant IS, soit -75 €/mois après IS sous la convention prudente.</p>
+    </div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead><tr><th>Facteur de risque</th><th>Détail</th><th>Sévérité</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Loyer du bail de quinze ans JAMAIS communiqué : c'est lui qui décide de tout le dossier</td>
+          <td>L'annonce affirme « avec locataire en place depuis 15 ans » et « revenus locatifs immédiats dès la signature », et ne publie AUCUN loyer : ni le montant, ni la décomposition hors charges / provisions, ni la date d'effet, ni la durée restante, ni une quittance. Or tout le dossier se joue sur ce chiffre : entre 620 €/mois (bail ancien révisé sous IRL) et 950 €/mois (haut du marché du quartier), le rendement net avant IS passe de 2,45 % à 5,20 % et l'EBE de 3 176 € à 6 740 €. À 620 €, le plafond 5 % tombe à 58 815 €, soit la moitié du prix affiché. Et même au loyer de marché de 851 €/mois, il faudrait encaisser 1 229 €/mois (18,6 €/m²) pour que le cash-flow soit nul : c'est au-dessus de tout le marché du quartier. La pièce qui décide n'existe pas dans le dossier, et c'est ce qui justifie le caractère bloquant de ce risque : aucun des scénarios de loyer possibles ne produit un cash-flow positif au prix affiché</td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Charges de copropriété absentes de l'annonce : sur un immeuble de 1961 avec ascenseur, 1 800 à 2 400 €/an</td>
+          <td>La section copropriété de l'annonce ne publie ni nombre de lots, ni budget prévisionnel, ni charge annuelle du lot : elle se limite à « pas de procédure en cours ». Le modèle retient 1 800 €/an et teste 2 400 €/an. Chaque euro de charge sort du rendement : à 851 €/mois de loyer, passer de 1 800 à 2 400 €/an de charges fait tomber le rendement net avant IS de 4,38 % à 3,92 % et le cash-flow de −340 à −390 €/mois. La leçon du dossier de Brignoles du même jour est exactement celle-ci : 2 193 €/an de charges avec chauffage collectif ont absorbé 30 % d'un loyer de 610 €, et le bien était pourtant au prix du marché</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Travaux déclarés nécessaires par l'annonce elle-même, non chiffrés et inexécutables avec le locataire en place</td>
+          <td>L'annonce écrit que le bien « nécessitera des travaux de rafraîchissement dans le temps » — donc un état qui justifie le prix — sans donner le moindre montant, et la quasi-totalité des rafraîchissements sérieux (électricité, salle d'eau, peintures) suppose un logement vide. Avec un locataire en place depuis quinze ans, ces travaux attendent la rotation : ils ne peuvent ni améliorer le rendement immédiat, ni justifier une hausse de loyer avant un départ. C'est une promesse d'avenir payée au prix d'aujourd'hui</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>DPE D et GES B dans un immeuble de 1961 : facture énergétique annoncée jusqu'à 2 010 €/an</td>
+          <td>DPE D et GES B, facture annoncée de 1 460 à 2 010 €/an. Un D reste louable et le bien n'est pas dans le rouge réglementaire, mais la trajectoire énergétique est un fardeau croissant sur un T4 de 66 m² : la facture plafonne ce qu'un locataire acceptera de payer, et une mise aux normes se paie en appels de fonds ou en travaux individuels. À surveiller d'autant plus que le chauffage est individuel : la charge est portée par le locataire, donc répercutée sur le loyer négociable</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Marché du quartier plafonné sous la médiane communale : la plus-value de sortie est limitée</td>
+          <td>DVF 2025 : le quartier Saint-Jean-du-Var se traite à 2 450 €/m² de médiane (438 ventes d'appartements dans la boîte de coordonnées de l'annonce), soit 8,0 % sous la médiane communale toutes surfaces (2 662 €/m²) et 11,8 % sous la commune à tranche de surface comparable (2 566 €/m² sur 1 762 ventes de 45 à 95 m²). Le coût de revient — 129 492 € d'acte en main, plus 20 000 € de travaux de rafraîchissement — amène le coût de revient à 149 492 €, soit 2 265 €/m² : exactement la médiane du quartier pour la tranche de surface. Autrement dit, il faudrait revendre au prix médian du quartier pour seulement rentrer dans ses frais</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Locataire en place depuis quinze ans : bien non visitable librement, revente occupée décotée</td>
+          <td>Le bien se visite occupé, donc sans accès libre aux pièces ni au moindre diagnostic contradictoire, et la revente se négociera avec un bail en cours — ce que le marché paie toujours moins cher qu'un logement libre. C'est le revers de « revenus locatifs immédiats dès la signature » : ce qui est présenté comme un avantage est aussi une contrainte de sortie, sur un quartier dont le marché est documenté (279 ventes d'appartements de 45 à 95 m² en 2025 dans la boîte de l'annonce)</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Incohérences du gabarit de l'annonce : surface 66 ou 68 m², cave annoncée mais « Pas de cave », parking collectif sans place privative</td>
+          <td>Trois écarts dans la même page : la surface est de 66 m² en titre et 68 m² dans le texte (soit 3 % d'écart, qui changent le prix au m² de 1 817 à 1 763 €) ; le texte annonce une cave quand la fiche caractéristiques affiche « Pas de cave » ; et le « parking collectif » n'est pas un lot cédé par le règlement de copropriété. Aucun de ces points ne tue le dossier à lui seul, mais le certificat Carrez, l'état daté et le règlement de copropriété doivent les trancher par écrit avant toute offre</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict pass">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision"><p class="verdict-stance"><strong>On demande le bail et les charges. S'il ne produit pas au moins 850 € hors charges, on passe ; et même à ce loyer, on n'achète pas au-dessus de 105 015 €.</strong><br><br>Le raisonnement tient en deux temps, et le dossier échoue aux deux. D'abord le prix : il est bon — 1 817 €/m², sous le premier quartile de son quartier (1 978 €/m² sur 279 ventes de 45 à 95 m²) et au niveau exact des transactions réellement comparables de 2025 (1 810 €/m² sur 8 ventes d'appartements seuls). Il n'y a donc aucune décote à capter : on n'achète pas ce bien parce qu'il serait sous-évalué, mais parce que son rendement tiendrait — et il ne tient pas. Ensuite le revenu : au loyer de marché du quartier (851 €/mois, ancrage OLV), le rendement net avant IS est de 4,38 % sur les 129 492 € d'acte en main et 3,72 % après IS sous la convention prudente du moteur (IS de 15 % de l'EBE), contre les 6,5 % net d'IS que s'impose le parc. Le cash-flow est de -340 €/mois, et il faudrait un apport de 57 149 € (48 % du prix) pour l'annuler. Même au haut de marché de 950 €/mois — le maximum des relevés du quartier —, il reste -251 €/mois de déficit et 5,20 % net avant IS.<br><br><strong>Ce que cela implique pour une offre.</strong> Pour tenir 5 % net avant IS au loyer de marché, il faudrait payer <strong>105 015 €</strong>, soit 12 % sous le prix affiché ; et ce plafond baisse à 86 496 € dès 20 000 € de travaux, qui sont annoncés par l'annonce elle-même mais non chiffrés. Au loyer le plus probable — celui d'un bail de quinze ans, 620 à 750 € —, le plafond tombe entre 58 815 et 84 815 €, c'est-à-dire la moitié du prix affiché. <strong>Il n'y a pas de négociation possible sur ce dossier avant d'avoir vu le bail : le prix demandé est le prix du marché, et c'est le revenu qu'il faut vérifier.</strong><br><br><strong>Ce qu'on retient, en revanche, et qui vaut pour la suite du sourcing.</strong> C'est le premier dossier de Saint-Jean-du-Var jugé en lecture patrimoniale avec un bail en place, et il donne le niveau de prix du quartier pour les prochains : 2 264 €/m² de médiane sur 279 ventes de 45 à 95 m², 1 978 €/m² au premier quartile, et des transactions réellement comparables à 1 810 €/m². Sur un bien vendu loué, la règle de tri est simple : <strong>demander le montant du loyer et la charge annuelle du lot avant de discuter du prix</strong>, parce que c'est là que se joue le rendement, et pas dans les 2 m² d'écart de l'annonce.</p></div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> <strong>Trois ancres, et une seule est praticable.</strong> Sur le critère de rendement, le prix qui tient 5 % net avant IS est de <strong>105 015 €</strong> au loyer de marché (851 €/mois), soit 12 % sous le prix affiché — et de 58 815 à 84 815 € si le bail de quinze ans porte 620 à 750 €/mois. Sur le critère de trésorerie, la contrainte est plus brutale : à 10 % d'apport, le prix qui donne un cash-flow nul au loyer de travail est de <strong>56 312 €</strong>, et l'équilibre demanderait sinon un apport de 57 149 €, soit 48 % du prix. Sur le critère de valeur, enfin, la valeur retenue de 149 424 € (66 m² × 2 264 €/m², médiane du quartier sur 279 ventes de 45 à 95 m²) donne un ratio coût/valeur de <strong>0,87</strong> : le prix affiché achète le bien à sa valeur, sans décote.<br><br><strong>Ce qu'on retient comme cadre, si un contact devait être poursuivi.</strong> Un plafond unique et conditionnel : <strong>105 015 € acte en main compris, soit 97 236 € net vendeur</strong>, pour 5 % net avant IS au loyer de marché — c'est-à-dire 12 % sous le prix affiché, et seulement si le bail produit au moins 850 € hors charges. Grille de travaux : 95 756 € avec 10 000 € de rafraîchissement, 86 496 € avec 20 000 €, 77 237 € avec 30 000 €. Tous ces plafonds sont publiés avec leur hypothèse complète (vacance 5 %, gestion 5 %, charges estimées 1 800 €/an, crédit 813 €/mois) : sans cette précision, un plafond n'est pas défendable face à un vendeur. <strong>Au prix affiché et sans le bail, ce dossier ne s'achète pas.</strong></p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Le levier qui décide est le bail, et il n'existe qu'à une adresse : l'agence et le vendeur. Demander par écrit le bail en cours (date de signature, date d'effet, durée, loyer hors charges, provisions sur charges), la dernière régularisation de charges, les quittances des douze derniers mois et, si le locataire est en place depuis quinze ans, l'historique des révisions IRL. Sans ce document, on ne discute pas le prix : on discute au hasard</li>
+        <li>Deuxième pièce : les charges de copropriété. L'annonce n'en publie aucune sur un immeuble de 1961 avec ascenseur. Exiger le budget prévisionnel, le montant de la charge annuelle du lot, le nombre de lots, les trois derniers procès-verbaux d'assemblée générale et l'état daté. Chaque euro de charge sort du rendement : 0,46 point de rendement net avant IS entre 1 800 et 2 400 €/an, et le dossier de Brignoles du même jour montre ce que 2 193 €/an font à un loyer de 610 €</li>
+        <li>Troisième pièce : le certificat Carrez et le règlement de copropriété. L'annonce donne 66 m² en titre et 68 m² dans le texte — 3 % d'écart sur le prix au m² — et annonce une cave que la fiche caractéristiques dément (« Pas de cave »). Le règlement dira aussi si une place de stationnement est affectée au lot, ce que « parking collectif » ne dit pas</li>
+        <li>Quatrième pièce : les devis de rafraîchissement. L'annonce dit que le bien « nécessitera des travaux de rafraîchissement dans le temps » sans les chiffrer. Chaque euro de travaux se déduit du prix d'achat : le plafond 5 % tombe de 105 015 € à 86 496 € avec 20 000 € de travaux, et ces travaux ne sont pas exécutables avec le locataire en place</li>
+        <li>L'avis de taxe foncière et le DPE complet se demandent en même temps : l'avis donne la valeur locative cadastrale — seule base opposable — et le DPE complet dira si la facture annoncée (jusqu'à 2 010 €/an) est un plafond réel du loyer acceptable</li>
+        <li>Le prix au m² n'est PAS un levier ici, et il faut le dire pour rester crédible : à 1 817 €/m² le bien est sous le premier quartile de son quartier (1 978 €/m²) et au niveau des transactions comparables de 2025 (1 810 €/m² sur 8 ventes d'appartements seuls). Attaquer le prix de front se ferait démolir par n'importe quel agent avec deux transactions comparables. Le levier est le loyer, puis les charges, puis les travaux</li>
+        <li>Ce qui est attaquable, en revanche, c'est la contradiction de l'annonce : elle promet des « revenus locatifs immédiats dès la signature » et « une bonne rentabilité locative » sans publier le loyer, sur un immeuble dont elle ne publie pas non plus les charges. Poser par écrit que la rentabilité se calcule sur un loyer et une charge annuelle, et demander les deux chiffres, est la façon la plus rapide d'établir qu'on a lu le dossier — et de faire tomber l'argument de vente</li>
+        <li>Enfin, ne rien engager sans l'état daté, le règlement de copropriété et les trois derniers PV : ces pièces gratuites donnent la quote-part réelle de charges, les obligations du lot et l'état des décisions collectives — les trois données qui manquent pour chiffrer définitivement un immeuble de 1961 avec ascenseur</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS. Année 1 : EBE 4 580 € moins intérêts 3 993 € (107 910 € à 3,7 %) et dotation aux amortissements 3 197 € (bâti à 80 % du prix sur 30 ans) = résultat imposable de -2 610 €, négatif, donc aucun IS dû en année 1. Convention prudente retenue pour les rendements publiés : IS de 15 % appliqué à l'EBE, sans amortissement du bâti modélisé, soit 687 €/an. Seuil de décision du parc (6,5 % net d'IS) : 3,54 % net avant IS en base, 3,01 % après IS sous convention prudente, et 4,38 % au loyer de marché, contre 6,5 % exigés</p>
+      <p><strong>Convention de lecture des loyers :</strong> l'annonce ne publie aucun loyer. La ligne de revenu de la base est le loyer retenu, 750 €/mois — borne haute de l'hypothèse de travail pour un bail de quinze ans — et les quatre autres lectures (620, 851, 950 €/mois et 851 € avec 2 400 €/an de charges) sont calculées par le moteur et publiées en table. Une seule ligne de revenu est saisie en base : deux exploitations du même lot ne sont pas deux lots</p>
+      <p><strong>Frais d'acquisition :</strong> 9 592 € (8,00 %), retenus par le simulateur de l'annonce elle-même ; honoraires à la charge du vendeur. Prix de revient acte en main : 129 492 €, sans travaux (aucun devis — la fiche publie une grille de plafonds par tranche de travaux)</p>
+      <p><strong>Charges d'exploitation :</strong> taxe foncière estimée 1 000 €/an (avis non communiqué), charges de copropriété estimées 1 800 €/an (aucune charge publiée, variante 2 400 €/an testée), assurance PNO 120 €, gestion locative 5 % des loyers et provision travaux 200 € (poste composite de 650 €), comptabilité 400 €. Provision automatique de 2,5 % du moteur désactivée pour ne pas compter deux fois la provision travaux. Aucun poste laissé à zéro</p>
+      <p><strong>Financement (doctrine du parc) :</strong> apport 10 %, prêt de 107 910 € sur 15 ans à 3,7 % et assurance emprunteur de 0,34 %, soit une mensualité de 813 €/mois (0,00753 € par euro emprunté). Cash-flow de <strong>-431 €/mois</strong> au loyer de travail et -340 €/mois au loyer de marché. Ne pas lire cette fiche comme un dossier finançable : aucun scénario de loyer, y compris le haut du marché, ne produit un cash-flow positif au prix affiché</p>
+      <p><strong>Valeur de marché :</strong> 149 424 € (66 m² × 2 264 €/m², médiane DVF 2025 du quartier Saint-Jean-du-Var sur 279 ventes de 45 à 95 m² dans la boîte de coordonnées de l'annonce), fourchette 130 548 à 177 144 €. La médiane communale toutes surfaces (2 662 €/m², 2 749 ventes) n'est pas utilisée : elle mélange des surfaces non comparables. Comparables nommés à 1 810 €/m² de médiane sur 8 ventes d'appartements seuls de 2025</p>
+      <p><strong>Pièces à demander avant toute décision :</strong> le bail en cours et sa date, le loyer hors charges et les provisions sur charges, la dernière régularisation de charges, l'avis de taxe foncière, les trois derniers procès-verbaux d'assemblée générale, le montant des charges et le nombre de lots de la copropriété, le certificat Carrez exact (66 ou 68 m² ?), le DPE complet, et tout devis de rafraîchissement déjà obtenu</p>
+      <p><strong>Point de méthode :</strong> ce dossier est le premier de Saint-Jean-du-Var jugé en lecture patrimoniale avec un bail en place, et il fixe le niveau de prix du quartier pour les prochains — 2 264 €/m² de médiane sur 279 ventes de 45 à 95 m² contre 1 978 €/m² au premier quartile, et 1 810 €/m² pour les transactions réellement comparables. Règle de tri à retenir : sur un bien vendu loué, <strong>demander le loyer du bail et la charge annuelle du lot AVANT de discuter du prix</strong> — un prix au marché ne compense jamais un revenu inconnu</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier - 06 27 84 53 50 - sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
