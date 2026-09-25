@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse - Immeuble 2 lots, centre-ville — Saint-Maximin (83470)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Centre-ville, Saint-Maximin-la-Sainte-Baume (83470) — immeuble de 2 lots : T2 en duplex de 30 m² et studio d'environ 17 m² avec mezzanine au 3e étage, deux caves — adresse exacte non communiquée</p>
+  <p class="report-date">Analyse générée le 24 septembre 2026</p>
+  <p class="report-source">Source : SeLoger — annonce 261QSCIG43MJ (agence Nestenn Saint-Maximin, SAS IA IMMO, RCS 937733145 — mandat n°119, référence annonce 252)</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/saint-maximin-la-sainte-baume-83470/261QSCIG43MJ">https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/saint-maximin-la-sainte-baume-83470/261QSCIG43MJ</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Conservation en location longue durée des deux lots, avec les baux en cours — hypothèses haute et basse de loyers chiffrées en comparaison</strong> - SCI à l'IS : IS de 15 % appliqué à l'EBE, sans amortissement du bâti modélisé (aucune ventilation par composant établie) — seuil de décision : 5 % net avant IS</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix affiché</span><span class="card-value">160 000 €</span></div>
+    <div class="card"><span class="card-label">Surface habitable retenue</span><span class="card-value">47 m² habitables</span></div>
+    <div class="card"><span class="card-label">Prix / m² habitable</span><span class="card-value">3 404 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient (acte en main)</span><span class="card-value">172 800 €</span></div>
+    <div class="card"><span class="card-label">Valeur marché (DVF 2025)</span><span class="card-value">127 934 €</span></div>
+    <div class="card"><span class="card-label">Loyers retenus (baux en cours)</span><span class="card-value">1 070 €/mois</span></div>
+    <div class="card"><span class="card-label">Rendement net avant IS / après IS</span><span class="card-value">5,44 % / 4,63 %</span></div>
+    <div class="card card-verdict note-5-8"><span class="card-label">Note</span><span class="card-value">5,8/10</span></div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.4528" data-lon="5.8619" data-address="Centre-ville, Saint-Maximin-la-Sainte-Baume (83470) — immeuble de 2 lots : T2 en duplex de 30 m² et studio d'environ 17 m² avec mezzanine au 3e étage, deux caves — adresse exacte non communiquée"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité - Saint-Maximin-la-Sainte-Baume (83470) — centre-ville, 17 000 habitants, autoroute A8 à 5 minutes, Aix-en-Provence à 35 minutes</h2>
+    <p class="attractiveness-intro">Saint-Maximin-la-Sainte-Baume est un bourg de <strong>17 000 habitants</strong> à l'entrée de l'autoroute A8, à 35 minutes d'Aix-en-Provence : rue commerçante, marché, écoles, collège et lycée, et un bassin d'emploi qui fait vivre la commune à l'année. Le marché est documenté : <strong>276 mutations valides en 2025</strong> selon la base DVF, dont <strong>59 ventes d'appartements</strong> à une médiane de <strong>2 679 €/m²</strong> (premier quartile 2 023, troisième 3 462). La tranche 30-50 m², où tombent les deux lots, affiche une médiane de <strong>2 722 €/m² sur 5 ventes</strong> ; sous 30 m², il n'existe que deux ventes dans l'année (2 609 et 3 462 €/m²). Côté locatif, les annonces relevées sur place le 24/09/2026 donnent un studio meublé de 18 m² à 485 €, des 2 pièces de 640 à 817 € et des 3 pièces de 68 m² à 713 € : un marché fluide, avec de l'offre, mais un vrai marché de locataires à l'année.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <span class="attr-score"><strong>8/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Saint-Maximin-la-Sainte-Baume est à l'entrée de l'autoroute A8, à 35 minutes d'Aix-en-Provence et 45 minutes de Marseille, avec un bassin d'emploi propre (Sainte-Baume, vallée de l'Arc, zone de la Barque) : c'est l'une des communes les mieux desservies du centre-Var, et c'est ce qui soutient une demande locative à l'année plutôt que saisonnière</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Bourg de 17 000 habitants avec une rue commerçante active, un marché, un hypermarché et les chaînes nationales. Le bien est en centre-ville, donc à la meilleure adresse possible pour deux petites surfaces</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Écoles, collège et lycée sur la commune, plus les établissements d'Aix à 35 minutes : le profil type du locataire de studio et de T2 en centre-ville</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Bourg de la Sainte-Baume sans tension particulière, centre ancien en cours de repeuplement. Deux caves et un immeuble sans parties communes partagées limitent les nuisances de voisinage</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Marché locatif réel et documenté le 24/09/2026 : studio meublé de 18 m² à 485 €, 2 pièces de 33 à 56 m² entre 640 et 817 €, 3 pièces de 68 m² à 713 €, parking à 125 €. Mais l'offre de 2 pièces est abondante dans la commune, et sept annonces relevées un même jour pour 17 000 habitants signalent un marché locatif fluide, pas tendu : la rotation d'un studio et d'un T2 de 30 m² sera plus fréquente que celle d'un logement familial</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">276 mutations valides enregistrées dans la commune en 2025, dont 59 ventes d'appartements, médiane 2 679 €/m² : la profondeur du marché de revente est un vrai atout de sortie. Mais le prix d'entrée est déjà 35 % au-dessus de la valeur de marché des deux lots, donc sans espérance de plus-value : c'est un actif de rendement pur</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> un investisseur de rendement qui cherche un actif déjà loué, sans travaux, à tenir dans la durée : deux logements de 30 et 17 m², deux baux en cours, des compteurs individuels et une structure sans copropriété. Ce n'est pas un dossier de plus-value — le prix est 35 % au-dessus de la valeur de marché des deux lots — ni un dossier de promotion : c'est un dossier de loyer, et il ne vaut que par le montant des baux</p>
+      <p><strong>Conclusion :</strong> Adéquation moyenne (6,7/10). L'emplacement, la structure et l'état déclaré sont de vrais atouts : plein centre, deux logements déjà loués donc aucun délai de commercialisation, DPE D sans échéance avant 2034, compteurs individuels et pas de copropriété à financer. Deux éléments plombent le score. D'abord le prix : 3 404 €/m² habitables contre 2 679 €/m² de médiane communale, soit 35 % au-dessus de la valeur de marché des deux lots une fois les frais d'acquisition comptés — il n'y a aucune marge à capter à la revente. Ensuite et surtout l'inconnue des loyers : l'annonce vend une « rentabilité immédiate » sans communiquer un seul montant, et c'est cette ligne qui décide si le dossier est conforme à notre seuil de 5 % ou non</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Quatre lectures ont été testées : la conservation en location longue durée dans trois hypothèses de loyers (base à 1 070 €/mois, optimiste à 1 200 €, pessimiste à 920 €) et l'achat-rénovation-revente. C'est la première qui porte le dossier, et c'est la quatrième qui le condamne : il n'y a aucune décote d'entrée à capter.</p>
+    <table class="strategy-table">
+      <thead><tr><th>Stratégie</th><th>Lots</th><th>Rendement</th><th>Faisabilité</th><th>Risque</th></tr></thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Location longue durée des deux lots avec les baux en cours (base)</strong></td>
+          <td>2</td>
+          <td>5,44 % net avant IS sur l'acte en main (9 406 € d'EBE, 784 €/mois), 4,63 % après IS</td>
+          <td>immédiate : les deux logements sont loués, compteurs individuels, aucun travail annoncé. Il faut obtenir les deux baux avant l'offre</td>
+          <td>moyen — la doctrine de 5 % n'est tenue qu'avec 1 070 €/mois de loyers ; à 920 € elle tombe à 3,20 %</td>
+        </tr>
+        <tr>
+          <td><strong>Location longue durée, loyers hauts de la fourchette (optimiste)</strong></td>
+          <td>2</td>
+          <td>6,54 % net avant IS (11 298 € d'EBE), 5,56 % après IS, plafond 209 222 €</td>
+          <td>relocation du studio à 520 € et du T2 à 680 €, au niveau des comparables les plus chers relevés dans la commune</td>
+          <td>moyen — suppose de relouer les deux lots au haut du marché, avec un budget d'ameublement pour le studio</td>
+        </tr>
+        <tr>
+          <td><strong>Location longue durée, loyers bas et charges lourdes (pessimiste)</strong></td>
+          <td>2</td>
+          <td>3,20 % net avant IS (5 524 € d'EBE), 2,72 % après IS, plafond 102 289 €</td>
+          <td>loyers 920 €/mois, vacance 10 %, taxe foncière à 1 100 € et 1 000 € d'imprévu : c'est le scénario à retenir si un bail est sous-évalué</td>
+          <td>élevé — 3,20 % avant IS, sous la doctrine de 5 % : le prix ne passe plus</td>
+        </tr>
+        <tr>
+          <td><strong>Achat-rénovation-revente (marchand de biens)</strong></td>
+          <td>2</td>
+          <td>impossible au prix affiché : la valeur de marché des deux lots est de 127 934 € contre un prix de revient de 172 800 €, soit une marge négative de 44 866 € avant même les frais de revente</td>
+          <td>deux lots séparés exigeraient un état descriptif de division, payant, sur un immeuble aujourd'hui hors copropriété</td>
+          <td>bloquant sur ce plan de sortie — l'actif n'a aucune décote d'entrée à capter, il ne se défend que par le rendement</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale"><p>Le scénario de référence : loyers reconstruits à partir du marché relevé sur place le 24/09/2026 — studio meublé 480 € et T2 duplex 590 €, soit 1 070 €/mois —, vacance 5 %, gestion locative 5 %, taxe foncière estimée 900 €, charges d'immeuble 400 €, assurance 150 €, provision travaux 200 € et comptabilité 500 €. L'excédent brut d'exploitation ressort à <strong>9 406 €</strong> (784 €/mois) et le rendement net avant IS sur l'acte en main de <strong>5,44 %</strong> : la doctrine du parc, 5 % net avant IS, est tenue — mais de 44 points de base seulement, et le rendement après IS tombe à 4,63 %.<br><br>Toute la marge tient dans la ligne des loyers, qui n'est pas documentée. À <strong>920 €/mois</strong> — un bail sous-évalué, une vacance de 10 %, une taxe foncière à 1 100 € et 1 000 € d'imprévu — l'EBE tombe à 5 524 €, le rendement à <strong>3,20 %</strong> et le prix qui tiendrait notre seuil à <strong>102 289 €</strong>, très en dessous du prix affiché. À <strong>1 200 €/mois</strong> — studio à 520 €, T2 à 680 €, au niveau des comparables les plus chers de la commune — l'EBE monte à 11 298 €, le rendement à <strong>6,54 %</strong> et le plafond à <strong>209 222 €</strong>. Entre les deux hypothèses, 106 933 € de capacité de prix : c'est le montant exact de l'inconnue que porte cette annonce.<br><br>Ce que le dossier n'est pas, en revanche : une opération de revente. Avec un prix de revient de 172 800 € (acte en main) pour une valeur de marché de 127 934 € sur les deux lots, l'achat-rénovation-revente affiche une marge négative de 44 866 € avant même les frais de revente. C'est un actif de rendement pur, à son prix ou au-dessus de son prix.</p></div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Centre-ville, Saint-Maximin-la-Sainte-Baume (83470) — adresse exacte non communiquée</td></tr>
+        <tr><th>Vendeur / intermédiaire</th><td>Agence Nestenn Saint-Maximin (SAS IA IMMO, RCS 937733145) — annonce SeLoger 261QSCIG43MJ, mandat n°119, référence annonce 252</td></tr>
+        <tr><th>Composition</th><td>Immeuble de deux lots : appartement T2 en duplex de 30 m² et, au 3e étage, studio d'environ 17 m² avec mezzanine ; deux caves au niveau de l'entrée. Compteurs individuels</td></tr>
+        <tr><th>Statut</th><td><strong>Pas de copropriété</strong> : immeuble vraisemblablement détenu en totalité par un seul propriétaire. Aucune charge votée, aucun budget prévisionnel, aucun procès-verbal — et aucune mutualisation des travaux de structure, de couverture et de façade, entièrement à la charge de l'acquéreur</td></tr>
+        <tr><th>Surfaces</th><td>70 m² annoncés (2 286 €/m²), dont les deux caves. <strong>47 m² habitables retenus</strong> (30 + 17 m²), soit <strong>3 404 €/m² habitable</strong>. Aucune surface Carrez par lot, aucun plan</td></tr>
+        <tr><th>Occupation</th><td>Les deux logements sont <strong>loués</strong> (baux en cours annoncés). <strong>Montants, dates de signature et échéances non communiqués</strong> — c'est l'inconnue centrale du dossier</td></tr>
+        <tr><th>DPE / GES</th><td>DPE D / GES B — facture énergétique annoncée 670 à 920 €/an. Le logement reste louable sans échéance avant 2034 : pas de passif énergétique à porter. Date du diagnostic non communiquée, diagnostics électricité, plomb et amiante non joints</td></tr>
+        <tr><th>Travaux</th><td>« Ne nécessite aucun travaux » selon l'agence, <strong>sans devis, sans diagnostic et sans état de la couverture ni des caves</strong>. Le chiffrage retient 0 € de travaux à l'acquisition, une provision de 200 €/an en exploitation et le risque en matrice : à vérifier par un homme de l'art</td></tr>
+        <tr><th>Prix affiché</th><td><strong>160 000 €</strong>, honoraires à la charge du vendeur — 2 286 €/m² sur les 70 m² annoncés, <strong>3 404 €/m² sur les 47 m² habitables</strong></td></tr>
+        <tr><th>Valeur de marché retenue</th><td><strong>127 934 €</strong> (2 722 €/m² sur 47 m²), fourchette 120 000 à 138 000 € — médiane DVF 2025 de la tranche 30-50 m² de la commune, 5 ventes ; médiane communale des appartements 2 679 €/m² sur 59 ventes</td></tr>
+        <tr><th>Loyers retenus</th><td><strong>1 070 €/mois</strong> : studio meublé de 17 m² à 480 € et T2 duplex de 30 m² à 590 €. Aucun loyer communiqué par l'annonce — relevés du 24/09/2026 : studio meublé 18 m² à 485 €, 2 pièces de 33 m² à 680 €, de 45 m² à 640 €, de 47 m² à 817 € CC, de 56 m² à 660 €, 3 pièces de 68 m² à 713 €, maison meublée 63 m² à 772 €, parking à 125 €</td></tr>
+        <tr><th>Charges annuelles</th><td>Taxe foncière <strong>estimée 900 €</strong> (avis non communiqué, fourchette 700 à 1 100 €) + charges d'immeuble 400 € (pas de copropriété) + PNO 150 € + gestion locative et provision travaux 842 € + comptabilité 500 €. Aucun poste laissé à zéro</td></tr>
+        <tr><th>Fiscalité</th><td>SCI à l'IS : IS de 15 % appliqué à l'EBE, <strong>sans amortissement du bâti modélisé</strong> (aucune ventilation par composant établie sur cet immeuble ancien) — convention prudente et documentée. Le seuil de décision de la doctrine du parc porte sur le rendement net avant IS</td></tr>
+        <tr><th>Prix de revient</th><td><strong>172 800 €</strong> acte en main = prix 160 000 € + frais d'acquisition 12 800 € (8 %), sans travaux (aucun travaux annoncé)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Compte d'exploitation locatif — prix affiché 160 000 €, acte en main 172 800 €, SCI à l'IS</h2>
+    <p class="attractiveness-intro">C'est l'adresse qui est bonne, et le prix qui ne l'est pas. Un immeuble entier en centre-ville de Saint-Maximin, deux logements déjà loués, des compteurs individuels, un DPE D qui ne porte aucune échéance avant 2034 et des caves : sur le papier, c'est le profil du dossier de rendement qu'on cherche. Sauf que les 70 m² annoncés à 160 000 € comprennent les deux caves. La surface habitable est de 47 m², et le prix passe alors à 3 404 €/m² là où la médiane DVF 2025 des appartements de la commune est de 2 679 €/m² : 27 % au-dessus, sans aucune décote d'entrée à capter. Reste le rendement, qui est la seule raison d'acheter ce bien — et il se joue sur une ligne que l'annonce ne donne pas. Avec 1 070 €/mois de loyers reconstruits à partir du marché relevé sur place, l'excédent brut d'exploitation ressort à 9 406 €, soit 5,44 % net avant IS sur l'acte en main : le seuil de 5 % de la doctrine est tenu, de 44 points de base. À 920 €/mois, la même opération tombe à 3,20 % et le plafond d'achat à 102 289 €, sous le prix affiché. À 1 200 €/mois, elle monte à 6,54 % et le plafond à 209 222 €. Autrement dit, toute la marge du dossier est dans deux baux que personne n'a vus : l'annonce vend une « rentabilité immédiate » sans en donner le chiffre, et c'est exactement la première pièce à exiger.</p>
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Base — loyers reconstruits 1 070 €/mois</h3>
+        <p class="scenario-subtitle">1 070 €/mois de loyers, vacance 5 % — EBE 784 €/mois</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts annuels</td><td class="num">12 840 €</td></tr>
+            <tr><td>Vacance locative 5 %</td><td class="num">-642 €</td></tr>
+            <tr><td>Gestion locative 5 %</td><td class="num">-642 €</td></tr>
+            <tr><td>Taxe foncière (estimation)</td><td class="num">-900 €</td></tr>
+            <tr><td>Charges d'immeuble (pas de copropriété)</td><td class="num">-400 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">-150 €</td></tr>
+            <tr><td>Provision travaux et ameublement</td><td class="num">-200 €</td></tr>
+            <tr><td>Comptabilité SCI à l'IS</td><td class="num">-500 €</td></tr>
+            <tr class="subtotal"><td>Excédent brut d'exploitation</td><td class="num">9 406 €</td></tr>
+            <tr><td>IS 15 % sur l'EBE (aucun amortissement modélisé)</td><td class="num">-1 411 €</td></tr>
+            <tr class="highlight"><td>Net après IS</td><td class="num">7 995 €</td></tr>
+            <tr><td>EBE mensuel</td><td class="num">784 €/mois</td></tr>
+            <tr class="highlight"><td>Rendement net avant IS sur l'acte en main</td><td class="num">5,44 %</td></tr>
+            <tr><td>Rendement net après IS sur l'acte en main</td><td class="num">4,63 %</td></tr>
+            <tr><td>Rendement net après IS sur la valeur (127 934 €)</td><td class="num">6,25 %</td></tr>
+            <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">174 185 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-optimiste">
+        <h3>Optimiste — loyers 1 200 €/mois (520 + 680)</h3>
+        <p class="scenario-subtitle">1 200 €/mois de loyers, vacance 4 % — EBE 942 €/mois</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts annuels</td><td class="num">14 400 €</td></tr>
+            <tr><td>Vacance locative 4 %</td><td class="num">-576 €</td></tr>
+            <tr><td>Gestion locative 4 %</td><td class="num">-576 €</td></tr>
+            <tr><td>Taxe foncière (estimation)</td><td class="num">-800 €</td></tr>
+            <tr><td>Charges d'immeuble (pas de copropriété)</td><td class="num">-400 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">-150 €</td></tr>
+            <tr><td>Provision travaux et ameublement</td><td class="num">-100 €</td></tr>
+            <tr><td>Comptabilité SCI à l'IS</td><td class="num">-500 €</td></tr>
+            <tr class="subtotal"><td>Excédent brut d'exploitation</td><td class="num">11 298 €</td></tr>
+            <tr><td>IS 15 % sur l'EBE (aucun amortissement modélisé)</td><td class="num">-1 695 €</td></tr>
+            <tr class="highlight"><td>Net après IS</td><td class="num">9 603 €</td></tr>
+            <tr><td>EBE mensuel</td><td class="num">942 €/mois</td></tr>
+            <tr class="highlight"><td>Rendement net avant IS sur l'acte en main</td><td class="num">6,54 %</td></tr>
+            <tr><td>Rendement net après IS sur l'acte en main</td><td class="num">5,56 %</td></tr>
+            <tr><td>Rendement net après IS sur la valeur (127 934 €)</td><td class="num">7,51 %</td></tr>
+            <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">209 222 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-pessimiste">
+        <h3>Pessimiste — loyers 920 €/mois (400 + 520)</h3>
+        <p class="scenario-subtitle">920 €/mois de loyers, vacance 10 % — EBE 460 €/mois</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts annuels</td><td class="num">11 040 €</td></tr>
+            <tr><td>Vacance locative 10 %</td><td class="num">-1 104 €</td></tr>
+            <tr><td>Gestion locative 6 %</td><td class="num">-662 €</td></tr>
+            <tr><td>Taxe foncière (estimation)</td><td class="num">-1 100 €</td></tr>
+            <tr><td>Charges d'immeuble (pas de copropriété)</td><td class="num">-700 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">-150 €</td></tr>
+            <tr><td>Provision travaux et ameublement</td><td class="num">-300 €</td></tr>
+            <tr><td>Comptabilité SCI à l'IS</td><td class="num">-500 €</td></tr>
+            <tr><td>Imprévu travaux</td><td class="num">-1 000 €</td></tr>
+            <tr class="subtotal"><td>Excédent brut d'exploitation</td><td class="num">5 524 €</td></tr>
+            <tr><td>IS 15 % sur l'EBE (aucun amortissement modélisé)</td><td class="num">-829 €</td></tr>
+            <tr class="highlight"><td>Net après IS</td><td class="num">4 695 €</td></tr>
+            <tr><td>EBE mensuel</td><td class="num">460 €/mois</td></tr>
+            <tr class="highlight"><td>Rendement net avant IS sur l'acte en main</td><td class="num">3,20 %</td></tr>
+            <tr><td>Rendement net après IS sur l'acte en main</td><td class="num">2,72 %</td></tr>
+            <tr><td>Rendement net après IS sur la valeur (127 934 €)</td><td class="num">3,67 %</td></tr>
+            <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">102 289 €</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <table class="projection-table compare">
+      <thead><tr><th>Indicateur</th><th class="num">Base — 1 070 €/mois</th><th class="num">Optimiste — 1 200 €/mois</th><th class="num">Pessimiste — 920 €/mois</th></tr></thead>
+      <tbody>
+        <tr><td>Loyers bruts annuels</td><td class="num">12 840 €</td><td class="num">14 400 €</td><td class="num">11 040 €</td></tr>
+        <tr><td>Excédent brut d'exploitation</td><td class="num">9 406 €</td><td class="num">11 298 €</td><td class="num">5 524 €</td></tr>
+        <tr><td>EBE mensuel</td><td class="num">784 €/mois</td><td class="num">942 €/mois</td><td class="num">460 €/mois</td></tr>
+        <tr><td>Net après IS</td><td class="num">7 995 €</td><td class="num">9 603 €</td><td class="num">4 695 €</td></tr>
+        <tr><td>Rendement net avant IS (acte en main)</td><td class="num">5,44 %</td><td class="num">6,54 %</td><td class="num">3,20 %</td></tr>
+        <tr><td>Rendement net après IS (acte en main)</td><td class="num">4,63 %</td><td class="num">5,56 %</td><td class="num">2,72 %</td></tr>
+        <tr><td>Rendement net après IS sur la valeur (127 934 €)</td><td class="num">6,25 %</td><td class="num">7,51 %</td><td class="num">3,67 %</td></tr>
+        <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">174 185 €</td><td class="num">209 222 €</td><td class="num">102 289 €</td></tr>
+        <tr><td>Écart au prix affiché (160 000 €)</td><td class="num">14 185 €</td><td class="num">49 222 €</td><td class="num">-57 711 €</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Le seuil, et la seule ligne qui le fait bouger.</strong> La doctrine du parc exige 5 % net avant IS sur le prix de revient, ici 172 800 € d'acte en main (prix affiché 160 000 € + 12 800 € de frais, aucun travaux annoncé). En scénario de base, avec 1 070 €/mois de loyers reconstruits, l'excédent brut d'exploitation ressort à <strong>9 406 €</strong> — <strong>5,44 % net avant IS</strong>, soit 44 points de base au-dessus du seuil — et 4,63 % après IS. Ce résultat ne tient pas au prix, qui est 35 % trop haut, mais à la seule ligne des loyers : à 920 €/mois le dossier tombe à 3,20 % (« à fuir » sur le critère du rendement), à 1 200 €/mois il monte à 6,54 %. L'annonce vend une « rentabilité immédiate » sans communiquer un seul loyer : c'est la pièce à obtenir avant toute offre.</p>
+    </div>
+    <h3>Sensibilité du plafond d'achat aux seuls loyers (charges du scénario de base)</h3>
+    <table class="projection-table compare">
+      <thead><tr><th>Loyers mensuels</th><th>Hypothèse</th><th class="num">EBE</th><th class="num">Rendement net avant IS</th><th class="num">Achat max (5 % net avant IS)</th><th class="num">Écart au prix affiché</th></tr></thead>
+      <tbody>
+        <tr><td>900 €/mois</td><td>hypothèse basse</td><td class="num">7 570 €</td><td class="num">4,38 %</td><td class="num">140 185 €</td><td class="num">-19 815 €</td></tr>
+        <tr><td>1 000 €/mois</td><td>sous la base</td><td class="num">8 650 €</td><td class="num">5,01 %</td><td class="num">160 185 €</td><td class="num">185 €</td></tr>
+        <tr><td>1 070 €/mois</td><td>scénario de base</td><td class="num">9 406 €</td><td class="num">5,44 %</td><td class="num">174 185 €</td><td class="num">14 185 €</td></tr>
+        <tr><td>1 150 €/mois</td><td>hypothèse haute</td><td class="num">10 270 €</td><td class="num">5,94 %</td><td class="num">190 185 €</td><td class="num">30 185 €</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Comparaison avec l'autre dossier Saint-Maximin.</strong> Le second immeuble du centre-ville, 400 m² et 12 lots affichés 235 000 € chez Patrice Russo Immobilier (réf. VIM10001311), exige une rénovation lourde chiffrée à 450 000 € : son coût de revient ressort à <strong>2 695 €/m²</strong> face à une médiane communale de <strong>2 746 €/m²</strong> retenue dans son analyse du 22/09/2026, soit 2 % d'écart — une opération de promotion morte au prix demandé, où il faut renégocier le prix de 100 000 € ou passer. Le présent dossier joue dans une autre catégorie : <strong>aucun travaux à porter</strong>, deux logements déjà loués, un prix d'entrée de 172 800 € d'acte en main et un rendement de 5,44 % net avant IS qui passe le seuil de 5 % — mais avec 44 points de base de marge, quand l'autre dossier n'en a aucun. C'est donc bien celui-ci qui mérite la négociation, et la négociation se joue sur les baux, pas sur le prix.</p>
+    </div>
+    <p class="attractiveness-intro">Repères de méthode : acte en main 172 800 € = prix affiché 160 000 € + frais d'acquisition 12 800 € (8 %, honoraires à la charge du vendeur) ; aucun travaux à l'acquisition (aucun travaux annoncé), provision travaux et ameublement de 200 €/an en exploitation ; vacance 5 % en base, 4 % en hypothèse favorable, 10 % en hypothèse défavorable ; gestion locative 5 %, 4 % et 6 % selon les scénarios ; taxe foncière estimée 900 € (avis non communiqué) ; charges d'immeuble 400 € ; assurance PNO 150 € ; comptabilité 500 € ; SCI à l'IS avec IS de 15 % appliqué à l'EBE, sans amortissement du bâti modélisé ; valeur de marché 127 934 € (2 722 €/m², médiane DVF 2025 de la tranche 30-50 m² sur 5 ventes).</p>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead><tr><th>Facteur de risque</th><th>Détail</th><th>Sévérité</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Les montants des deux baux ne sont pas communiqués</td>
+          <td>C'est le risque numéro un, et il porte tout le dossier. L'annonce vend « une rentabilité immédiate » sans donner un seul loyer, en s'appuyant sur des baux en cours dont le montant, la date, la durée et le type (nue ou meublé) sont inconnus. Le chiffrage publié repose donc sur des loyers reconstruits à partir du marché : 5,44 % net avant IS à 1 070 €/mois, 6,54 % à 1 200 €, 3,20 % à 920 €. Notre seuil est de 5 % : l'écart entre les deux hypothèses vaut une recommandation. Exiger les deux baux, les dates d'échéance et les dernières quittances AVANT l'offre — s'il s'agit de baux anciens sous le marché, c'est le premier levier de négociation et la réponse au vendeur est non</td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Prix affiché 35 % au-dessus de la valeur de marché des deux lots</td>
+          <td>3 404 €/m² habitables demandés contre une médiane communale de 2 679 €/m² pour les appartements (59 ventes DVF 2025) et 2 722 €/m² sur la tranche 30-50 m² où tombent les deux lots : le rapport coût/valeur ressort à 1,35. Aucune espérance de plus-value, donc aucun coussin de sécurité : l'actif ne rend que ce qu'il loue, et il achète au-dessus de sa valeur</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>« Aucun travaux » non vérifié et non documenté</td>
+          <td>L'agence affirme qu'aucun travaux n'est nécessaire, sans devis, sans diagnostic électrique, sans état de la couverture ni de l'humidité des caves — sur un immeuble ancien de centre-ville dont l'acquéreur porte seul la structure, la toiture et la façade. Une couverture à reprendre ou une façade à ravaler sur cet immeuble coûte plusieurs années de loyer net, et rien de tout cela ne figure dans le prix. Visite d'un homme de l'art avant l'offre, et devis écrit sur les trois postes qui dérapent : électricité, couverture, traitement de l'humidité des caves</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Pas de copropriété : aucun budget prévisionnel, aucune mutualisation</td>
+          <td>L'immeuble est vraisemblablement détenu en totalité par un seul propriétaire : il n'existe donc ni charges votées, ni procès-verbal d'assemblée, ni état daté, ni budget prévisionnel à examiner — et surtout aucun copropriétaire avec qui partager la couverture, la façade et les réseaux. Le poste travaux de structure est à 100 % pour l'acquéreur, ce qui est le vrai coût caché de cette structure juridique. À chiffrer dans la négociation, pas après l'achat</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Surfaces minuscules : 17 m² et 30 m²</td>
+          <td>Deux petites surfaces, c'est une rotation locative élevée : un studio change de locataire tous les 12 à 24 mois, avec les frais de relocation, les petites vacances et le risque d'impayé qui vont avec. La vacance structurelle y est supérieure à celle d'un logement familial, et le scénario défavorable retient 10 %. À vérifier aussi : les 30 m² du T2 sont annoncés en duplex, ce qui mange de la surface utile au sol</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Studio vraisemblablement meublé : vacance 8 % et ameublement non chiffré</td>
+          <td>Le studio de 17 m² se loue meublé dans ce marché (studio meublé de 18 m² à 485 € relevé le 24/09/2026). Un meublé se reloue plus vite mais tourne plus vite aussi : la vacance de ce lot est de l'ordre de 8 %, supérieure à celle du T2, et le renouvellement du mobilier n'est chiffré nulle part (2 000 à 4 000 € par rotation complète). À intégrer dans la provision travaux et dans le budget d'entrée</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Taxe foncière inconnue</td>
+          <td>L'avis n'est pas communiqué. Estimation retenue 900 €/an, fourchette 700 à 1 100 € pour un immeuble de deux lots de 47 m² habitables. L'écart vaut 200 €/an, soit 0,7 % brut de rendement : l'avis de taxe foncière est une pièce à demander avec les baux, et à vérifier sur la fiche d'imposition réelle avant de signer</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Immeuble ancien en centre-ville, DPE D</td>
+          <td>DPE D / GES B : le logement reste louable sans échéance réglementaire avant 2034, et la facture énergétique annoncée (670 à 920 €/an) est cohérente avec un bâti déjà partiellement rénové. C'est le point rassurant du dossier : pas de passif énergétique à porter, pas d'interdiction de louer à l'horizon du plan. Reste à obtenir la date du diagnostic et à exiger les diagnostics électricité, plomb et amiante, non joints à l'annonce</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision"><p class="verdict-stance"><strong>À négocier — offrir 148 000 €, plafond 165 000 €</strong>, sous condition d'obtention des deux baux, de l'avis de taxe foncière et des diagnostics datés. Le raisonnement tient en un chiffre : avec les loyers reconstruits à partir du marché — 1 070 €/mois — le dossier rend 5,44 % net avant IS sur l'acte en main, donc il passe notre seuil de 5 %, mais de 44 points de base. Le prix qui tient exactement ce seuil est de <strong>174 185 €</strong>, au-dessus des 160 000 € demandés : la marge de négociation n'est pas là. Elle est dans les baux : à 920 €/mois le même bien ne vaut plus que 102 289 €, à 1 200 €/mois il en vaut 209 222. Personne ne sait aujourd'hui de quel côté de cette fourchette se situe l'immeuble, et l'annonce vend une « rentabilité immédiate » sans en donner le chiffre.<br><br><strong>Trois pièces suspensives, non négociables.</strong> Les deux <strong>baux en cours</strong>, avec leur montant, leur date et leur échéance, et les dernières quittances : c'est la seule donnée qui décide du dossier, et son absence dans une annonce qui parle de rentabilité immédiate est en soi un signal. L'<strong>avis de taxe foncière</strong> : 200 € d'écart valent 0,7 % de rendement brut. Les <strong>diagnostics datés</strong> — DPE, électricité, plomb, amiante — plus une visite d'homme de l'art sur les trois postes que « aucun travaux » ne couvre : couverture, électricité et humidité des caves, sur un immeuble dont l'acquéreur porte seul la structure.<br><br><strong>Ce qui rend le dossier défendable malgré tout.</strong> Il est loué, il est en centre-ville et il n'y a rien à faire : pas de copropriété à financer, pas de chantier, pas de passif énergétique (DPE D, aucune échéance avant 2034), des compteurs individuels. Et il passe le seuil de 5 % net avant IS en scénario de base, ce que peu de dossiers de la semaine font — encore faut-il que les baux soient effectivement à ce niveau, ce qui reste à vérifier.</p></div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> <strong>165 000 €, sous condition des baux.</strong> Le prix qui tient exactement 5 % net avant IS est de 174 185 € avec 1 070 €/mois de loyers : c'est un seuil, pas une cible, et il vaut donc 174 185 € sur un chiffrage dont les loyers ne sont pas documentés. Le plafond retenu est 165 000 €, soit 9 185 € de marge pour absorber les trois inconnues du dossier (taxe foncière, état de la couverture et des caves, ameublement du studio), et l'offre d'ouverture est 148 000 €, soit 7,5 % sous le prix affiché. Sensibilité du plafond aux seuls loyers, charges de base inchangées : à 900 €/mois 140 185 €, à 1 000 €/mois 160 185 €, à 1 070 €/mois 174 185 €, à 1 150 €/mois 190 185 €. Chaque tranche de 100 €/mois de loyer vaut 20 000 € de capacité de prix : c'est le seul chiffre à retenir de cette négociation. Si les baux révèlent 920 €/mois, le plafond tombe à 102 289 € et la réponse est non.</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Les montants des deux baux sont l'argument central, et l'annonce elle-même le fournit : elle vend une « rentabilité immédiate » sans donner un seul loyer. Demander les baux, les échéances et les quittances avant toute discussion de prix, et faire constater par écrit que le dossier n'est pas chiffrable sans eux</li>
+        <li>Le prix au m² habitable est le deuxième levier : 3 404 €/m² demandés contre 2 679 €/m² de médiane communale (59 ventes DVF 2025) et 2 722 €/m² sur la tranche 30-50 m² qui contient les deux lots. Les 70 m² annoncés incluent les caves : c'est la première correction à faire accepter par le vendeur</li>
+        <li>Chaque tranche de 100 €/mois de loyer vaut 20 000 € de capacité de prix : c'est le taux de change de cette négociation, et il se démontre en trois lignes (900 €/mois → 140 185 €, 1 070 €/mois → 174 185 €, 1 150 €/mois → 190 185 €)</li>
+        <li>« Ne nécessite aucun travaux » est une déclaration d'agence, pas un diagnostic : demander les dates de DPE et les rapports électricité, plomb et amiante, et faire visiter la couverture et les caves par un homme de l'art. Sur un immeuble sans copropriété, une couverture à reprendre est à 100 % pour l'acquéreur</li>
+        <li>L'absence de copropriété se retourne contre nous et doit se chiffrer : aucune mutualisation des travaux de structure, aucun budget prévisionnel, aucun copropriétaire avec qui partager une toiture ou une façade. C'est un argument de négociation légitime pour demander une décote sur le prix, ou du moins une garantie</li>
+        <li>La taxe foncière n'est pas communiquée : demander l'avis réel et la valeur locative cadastrale. L'écart entre 700 et 1 100 €/an vaut 0,7 % de rendement brut, soit plus que la marge dont le dossier dispose au-dessus du seuil de 5 %</li>
+        <li>Le studio de 17 m² est vraisemblablement loué meublé : demander l'état du mobilier et la provision de renouvellement (2 000 à 4 000 € par rotation complète), et vérifier la surface réelle du T2, annoncé en duplex, où l'escalier mange de la surface utile au sol</li>
+        <li>Le marché de revente est liquide — 276 mutations en 2025 —, mais le dossier n'a aucune espérance de plus-value à ce prix : ne pas se laisser vendre un argument patrimonial qui n'existe pas, et le dire. Cette sincérité est aussi ce qui rend crédible la demande de baisse</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS, IS de 15 % appliqué à l'EBE, sans amortissement du bâti modélisé — il n'existe aucune ventilation par composant sur cet immeuble ancien, et l'amortissement réel allégera l'impôt les premières années. Le seuil de décision du parc (5 % net avant IS) porte sur le rendement avant impôt : 5,44 % en base, 4,63 % après IS</p>
+      <p><strong>Frais d'acquisition :</strong> 12 800 € (8 %), honoraires à la charge du vendeur. Prix de revient acte en main : 172 800 €, sans travaux (aucun travaux annoncé)</p>
+      <p><strong>Loyers :</strong> 1 070 €/mois reconstruits (studio meublé 480 € + T2 duplex 590 €) — aucun loyer communiqué par l'annonce, les deux baux en cours ne sont pas chiffrés. Hypothèses de sensibilité : 1 200 €/mois (520 + 680) et 920 €/mois (400 + 520)</p>
+      <p><strong>Charges retenues :</strong> taxe foncière estimée 900 €/an (avis non communiqué), charges d'immeuble 400 €/an (pas de copropriété), PNO 150 €, gestion locative 5 % des loyers et provision travaux 200 € (poste composite de 842 €), comptabilité 500 €. Provision automatique de 2,5 % du moteur désactivée pour ne pas compter deux fois la provision travaux. Aucun poste laissé à zéro</p>
+      <p><strong>Valeur de marché :</strong> 127 934 € (2 722 €/m² sur les 47 m² habitables), fourchette 120 000 à 138 000 €. Ancrage : médiane DVF 2025 de la tranche 30-50 m² de Saint-Maximin, 5 ventes ; médiane communale des appartements 2 679 €/m² sur 59 ventes et 276 mutations valides dans l'année</p>
+      <p><strong>Contrôles à faire avant toute offre :</strong> les deux baux (montant, date, échéance, type) et les dernières quittances ; surfaces Carrez des deux lots et plan des logements ; diagnostics datés (DPE, électricité, plomb, amiante) ; état de la couverture, des façades et de l'humidité des caves par un homme de l'art ; avis de taxe foncière et valeur locative cadastrale ; statut de propriété de l'immeuble (détention en totalité à confirmer)</p>
+      <p><strong>Point de méthode :</strong> sur ce dossier, le seul paramètre qui déplace la décision est le loyer. Le prix de revient est connu (172 800 €), les travaux sont annoncés nuls, la valeur de marché est ancrée sur des ventes comparables — mais les loyers, qui font basculer le rendement de 3,20 % à 6,54 % et la capacité de prix de 102 289 € à 209 222 €, ne sont pas dans l'annonce. Aucune offre ne doit être signée avant de les avoir vus</p>
+      <p><strong>Comparaison — l'autre dossier Saint-Maximin :</strong> l'immeuble de 400 m² et 12 lots du centre-ville affiché 235 000 € chez Patrice Russo Immobilier (réf. VIM10001311) exige une rénovation lourde chiffrée à 450 000 € : son coût de revient ressort à 2 695 €/m² face à une médiane communale de 2 746 €/m² (analyse du 22/09/2026), soit un écart de 2 % qui condamne l'opération de promotion au prix demandé. Le présent dossier est l'exact inverse : aucun travaux à porter, deux logements loués, et un rendement qui passe le seuil de 5 %. Entre les deux, c'est lui qui mérite la négociation — mais à condition d'obtenir les baux, parce que la marge y est de 44 points de base quand celle de l'autre dossier n'existe pas</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier - 06 27 84 53 50 - sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
