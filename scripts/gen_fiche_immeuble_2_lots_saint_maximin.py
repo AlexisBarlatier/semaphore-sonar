@@ -36,6 +36,51 @@ VALEUR_RETENUE = round(SURF_HAB * PRIX_M2_TRANCHE_30_50)   # 47 x 2 722 = 127 93
 VALEUR_BASSE = 120000.0
 VALEUR_HAUTE = 138000.0
 
+# --- Credit (doctrine du parc) : chiffres du modele valide en amont -------------
+APPORT_PCT = 0.10
+TAUX_CREDIT = 0.037
+ASSURANCE_PCT = 0.0034           # assurance emprunteur, sur le capital emprunte
+DUREE_ANS = 15
+MENS_144 = 1084.42               # mensualite du pret de 144 000 EUR (15 ans, 3,7 %, assurance)
+MENS_PAR_EURO = MENS_144 / 144000.0        # 0,00753 EUR/mois par euro emprunte
+CHARGES_FIXES_BASE = 2150.0      # TF 900 + charges 400 + PNO 150 + provision 200 + compta 500
+PENTE_EBE = 10.8                 # EBE annuel = 10,8 x loyer mensuel - charges fixes (base)
+CONTROLES = []                   # (libelle, chiffre du modele, chiffre recalcule, tolerance)
+
+
+def calcule(libelle, modele, recalcule, tol=1.0):
+    """Controle de coherence : le chiffre publie doit sortir du modele."""
+    CONTROLES.append((libelle, modele, recalcule, tol))
+    assert abs(modele - recalcule) <= tol, (libelle, modele, recalcule)
+
+
+def mensualite(capital):
+    return capital * MENS_PAR_EURO
+
+
+def mensualite_actuarielle(capital, ans):
+    i = TAUX_CREDIT / 12.0
+    n = ans * 12
+    return capital * i / (1 - (1 + i) ** -n) + capital * ASSURANCE_PCT / 12.0
+
+
+def cashflow_mensuel(ebe, capital):
+    return ebe / 12.0 - mensualite(capital)
+
+
+def prix_cashflow_nul(ebe):
+    """Prix paye tel que 10 % d'apport donnent un cash-flow nul."""
+    return (ebe / 12.0) / ((1 - APPORT_PCT) * MENS_PAR_EURO)
+
+
+def loyer_cashflow_nul(capital, charges_fixes=CHARGES_FIXES_BASE):
+    """Loyer mensuel tel que l'EBE couvre l'annuite (charges du scenario de base)."""
+    return (12.0 * mensualite(capital) + charges_fixes) / PENTE_EBE
+
+
+def apport_cashflow_nul(prix, ebe):
+    return prix - (ebe / 12.0) / MENS_PAR_EURO
+
 
 def eur(v, dec=0):
     return f"{v:,.{dec}f}".replace(',', ' ').replace('.', ',')
@@ -432,6 +477,23 @@ def rec_immeuble_sm():
             ],
             "risques": [
                 {
+                    "facteur": "Cash-flow négatif sous crédit : le dossier échoue au critère du parc",
+                    "severite": 5,
+                    "detail": (
+                        f"Le dossier passe la grille de rendement (5,44 % net avant IS) mais pas le "
+                        f"critère de cash-flow. À 10 % d'apport, prêt de 144 000 € sur 15 ans à "
+                        f"3,7 % avec assurance emprunteur de 0,34 %, la mensualité est de 1 084 €/mois "
+                        f"quand l'exploitation dégage 784 €/mois en scénario de base : le cash-flow "
+                        f"est de -301 €/mois, soit -3 607 €/an, et il reste négatif dans les trois "
+                        f"scénarios (-143 €/mois en hypothèse favorable, -624 €/mois en hypothèse "
+                        f"défavorable). Pour que le bien couvre sa mensualité au prix affiché, il "
+                        f"faudrait 1 404 €/mois de loyers — 31 % de plus que notre base — ou un prix "
+                        f"de 115 649 €, ou un apport de 55 916 € (35 %). L'opération s'enrichit "
+                        f"(4,63 % après IS contre 3,7 % de taux d'intérêt) mais elle consomme "
+                        f"54 108 € de trésorerie sur quinze ans : elle ne se finance pas seule"
+                    ),
+                },
+                {
                     "facteur": "Les montants des deux baux ne sont pas communiqués",
                     "severite": 5,
                     "detail": (
@@ -638,6 +700,156 @@ def main():
             f'<td class="num">{eur(d["cap5"] - PRIX)} €</td></tr>')
     sens_html = "\n".join(sens_rows)
 
+    # ------------------------------------------------------------------
+    # Cash-flow apres credit (doctrine du parc) : chiffres du modele amont
+    # ------------------------------------------------------------------
+    CAP_BASE = PRIX * (1 - APPORT_PCT)                  # 144 000
+    MENS_BASE = mensualite(CAP_BASE)
+    CF_BASE = cashflow_mensuel(BASE['ebe'], CAP_BASE)
+    CF_BASE_AN = CF_BASE * 12.0
+    CALC = {
+        'affiche': (PRIX, CAP_BASE, BASE['ebe'], CF_BASE, CF_BASE_AN),
+        'offre': (148000.0, 148000.0 * (1 - APPORT_PCT), BASE['ebe'], None, None),
+        'plafond': (165000.0, 165000.0 * (1 - APPORT_PCT), BASE['ebe'], None, None),
+    }
+    for k in ('offre', 'plafond'):
+        p_, cap_, ebe_, _, _ = CALC[k]
+        cf_ = cashflow_mensuel(ebe_, cap_)
+        CALC[k] = (p_, cap_, ebe_, cf_, cf_ * 12.0)
+    CF_BEST = cashflow_mensuel(BEST['ebe'], CAP_BASE)
+    CF_WORST = cashflow_mensuel(WORST['ebe'], CAP_BASE)
+
+    # Controles : chaque chiffre publie doit sortir du modele
+    calcule("mensualite 144 000", 1084.0, MENS_BASE, 1.0)
+    calcule("cash-flow base /mois", -301.0, CF_BASE, 1.0)
+    calcule("cash-flow base /an", -3607.0, CF_BASE_AN, 1.0)
+    calcule("cash-flow a l'offre 148 000", -219.0, CALC['offre'][3], 1.0)
+    calcule("cash-flow au plafond 165 000", -334.0, CALC['plafond'][3], 1.0)
+    calcule("cash-flow optimistic", -143.0, CF_BEST, 1.0)
+    calcule("cash-flow pessimiste", -624.0, CF_WORST, 1.0)
+    calcule("loyers cash-flow nul (prix affiche)", 1404.0, loyer_cashflow_nul(CAP_BASE), 1.0)
+    calcule("prix cash-flow nul a 1 070 EUR", 115649.0, prix_cashflow_nul(BASE['ebe']), 5.0)
+    calcule("prix cash-flow nul a 1 200 EUR", 132911.0,
+            prix_cashflow_nul(calc(1200.0, 5.0, 5.0, 900.0, 400.0, 150.0, 200.0, 500.0)['ebe']), 10.0)
+    calcule("apport cash-flow nul a 148 000", 43916.0, apport_cashflow_nul(148000.0, BASE['ebe']), 5.0)
+    calcule("apport cash-flow nul a 160 000", 55916.0, apport_cashflow_nul(PRIX, BASE['ebe']), 5.0)
+    calcule("apport cash-flow nul a 165 000", 60916.0, apport_cashflow_nul(165000.0, BASE['ebe']), 5.0)
+    calcule("mensualite 20 ans", 891.0, mensualite_actuarielle(CAP_BASE, 20), 1.0)
+    calcule("mensualite 25 ans", 777.0, mensualite_actuarielle(CAP_BASE, 25), 2.0)
+    calcule("tresorerie consommee sur 15 ans", -54108.0, CF_BASE_AN * 15, 15.0)
+    calcule("service de la dette / capital (%)", 9.0,
+            12 * MENS_BASE / CAP_BASE * 100.0, 0.1)
+    calcule("rendement sur le capital emprunte (%)", 6.5, BASE['ebe'] / CAP_BASE * 100.0, 0.1)
+
+    def cf_carte(d, titre, sous):
+        return f"""      <div class="projection-card scenario-{titre}">
+        <h3>{sous}</h3>
+        <p class="scenario-subtitle">Prêt {eur(CAP_BASE)} € sur 15 ans — apport 10 %</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts mensuels</td><td class="num">{eur(d['brut']/12)} €</td></tr>
+            <tr><td>Net d'exploitation mensuel (EBE)</td><td class="num">{eur(d['ebe_mois'])} €</td></tr>
+            <tr><td>Mensualité de crédit (assurance incluse)</td><td class="num">-{eur(MENS_BASE)} €</td></tr>
+            <tr class="highlight"><td>Cash-flow mensuel</td><td class="num">{eur(d['ebe']/12 - MENS_BASE)} €</td></tr>
+            <tr><td>Cash-flow annuel</td><td class="num">{eur((d['ebe']/12 - MENS_BASE) * 12)} €</td></tr>
+        </tbody></table>
+      </div>"""
+
+    cf_cartes = [
+        cf_carte(BASE, "base", "Base — loyers 1 070 €/mois"),
+        cf_carte(BEST, "optimiste", "Optimiste — loyers 1 200 €/mois"),
+        cf_carte(WORST, "pessimiste", "Pessimiste — loyers 920 €/mois"),
+    ]
+
+    cf_prix_rows = []
+    for cle, lab in (('offre', "148 000 € — notre offre"),
+                     ('affiche', "160 000 € — prix affiché"),
+                     ('plafond', "165 000 € — plafond de négociation")):
+        p_, cap_, ebe_, cf_, cf_an = CALC[cle]
+        cf_prix_rows.append(
+            f'        <tr><td>{lab}</td><td class="num">{eur(cap_)} €</td>'
+            f'<td class="num">{eur(mensualite(cap_))} €</td>'
+            f'<td class="num">{eur(cf_)} €/mois</td><td class="num">{eur(cf_an)} €/an</td>'
+            f'<td class="num">{eur(loyer_cashflow_nul(cap_))} €/mois</td></tr>')
+    cf_prix_html = "\n".join(cf_prix_rows)
+
+    cf_besoins_rows = [
+        ("Loyers mensuels pour un cash-flow nul au prix affiché",
+         f"{eur(loyer_cashflow_nul(CAP_BASE))} €/mois",
+         f"contre {eur(1070)} €/mois retenus, soit +{fr(loyer_cashflow_nul(CAP_BASE)/1070.0*100.0 - 100.0, 0)} %"),
+        ("Prix d'achat à cash-flow nul, 10 % d'apport, loyers de 1 070 €/mois",
+         f"{eur(prix_cashflow_nul(BASE['ebe']))} €",
+         f"{fr(prix_cashflow_nul(BASE['ebe'])/PRIX*100.0 - 100.0, 1)} % sous le prix affiché"),
+        ("Prix d'achat à cash-flow nul, 10 % d'apport, loyers de 1 200 €/mois",
+         f"{eur(prix_cashflow_nul(calc(1200.0, 5.0, 5.0, 900.0, 400.0, 150.0, 200.0, 500.0)['ebe']))} €",
+         "charges du scénario de base, loyers de l'hypothèse favorable"),
+        ("Apport pour un cash-flow nul à 148 000 €",
+         f"{eur(apport_cashflow_nul(148000.0, BASE['ebe']))} €",
+         f"{fr(apport_cashflow_nul(148000.0, BASE['ebe'])/148000.0*100.0, 0)} % du prix"),
+        ("Apport pour un cash-flow nul à 160 000 €",
+         f"{eur(apport_cashflow_nul(PRIX, BASE['ebe']))} €",
+         f"{fr(apport_cashflow_nul(PRIX, BASE['ebe'])/PRIX*100.0, 0)} % du prix"),
+        ("Apport pour un cash-flow nul à 165 000 €",
+         f"{eur(apport_cashflow_nul(165000.0, BASE['ebe']))} €",
+         f"{fr(apport_cashflow_nul(165000.0, BASE['ebe'])/165000.0*100.0, 0)} % du prix"),
+        ("Durée 15 ans (plafond de la banque)",
+         f"{eur(mensualite_actuarielle(CAP_BASE, 15))} €/mois",
+         f"cash-flow {eur(BASE['ebe']/12 - mensualite_actuarielle(CAP_BASE, 15))} €/mois"),
+        ("Durée 20 ans",
+         f"{eur(mensualite_actuarielle(CAP_BASE, 20))} €/mois",
+         f"cash-flow {eur(BASE['ebe']/12 - mensualite_actuarielle(CAP_BASE, 20))} €/mois"),
+        ("Durée 25 ans",
+         f"{eur(mensualite_actuarielle(CAP_BASE, 25))} €/mois",
+         f"cash-flow {eur(BASE['ebe']/12 - mensualite_actuarielle(CAP_BASE, 25))} €/mois"),
+    ]
+    cf_besoins_html = "\n".join(
+        f'        <tr><td>{a}</td><td class="num">{b}</td><td>{c}</td></tr>'
+        for a, b, c in cf_besoins_rows)
+
+    INTERETS_AN1 = CAP_BASE * TAUX_CREDIT
+    # Chiffres fiscaux du modele amont (non recalculables depuis l'EBE : la
+    # dotation retenue en amont differe de celle du moteur, voir le log de build)
+    IS_AMORT_MODELE = 4267.0
+    IS_RESULTAT_MODELE = 1095.0
+    IS_IMPOT_MODELE = 164.0
+    cf_section = f"""  <section class="financial-projections">
+    <h2>Cash-flow après crédit — service de la dette, apport et durée</h2>
+    <p class="attractiveness-intro"><strong>Hypothèses de crédit (doctrine du parc) :</strong> apport 10 %, frais de notaire assumés à part, prêt de {eur(CAP_BASE)} € sur 15 ans à 3,7 %, assurance emprunteur 0,34 % du capital. Mensualité <strong>{eur(MENS_BASE)} €/mois</strong>, soit <strong>0,00753 € par euro emprunté</strong>. Comparée au net d'exploitation de {eur(BASE['ebe_mois'])} €/mois du scénario de base, cette mensualité ne peut pas être couverte.</p>
+    <div class="projections-grid">
+{chr(10).join(cf_cartes)}
+    </div>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>La conclusion est nette : ce dossier n'est pas finançable en l'état.</strong> Au prix affiché et avec 10 % d'apport, il manque <strong>{eur(abs(CF_BASE))} €/mois</strong> ({eur(abs(CF_BASE_AN))} €/an) au bien pour payer sa mensualité, et le déficit subsiste dans les trois scénarios de loyers : {eur(CF_BEST)} €/mois en hypothèse favorable, {eur(CF_WORST)} €/mois en hypothèse défavorable. Le rendement de {fr(BASE['rdt_ap'])} % après IS reste supérieur au taux du crédit de 3,7 %, donc l'opération s'enrichit — mais elle consomme {eur(abs(CF_BASE_AN * DUREE_ANS))} € de trésorerie sur quinze ans, et c'est la trésorerie qui décide d'un achat.</p>
+    </div>
+    <table class="projection-table compare">
+      <thead><tr><th>Prix payé</th><th class="num">Capital emprunté (90 %)</th><th class="num">Mensualité</th><th class="num">Cash-flow</th><th class="num">Cash-flow annuel</th><th class="num">Loyers requis pour un cash-flow nul</th></tr></thead>
+      <tbody>
+{cf_prix_html}
+      </tbody>
+    </table>
+    <h3>Ce qu'il faudrait pour un cash-flow nul</h3>
+    <table class="projection-table compare">
+      <thead><tr><th>Levier</th><th class="num">Valeur</th><th>Lecture</th></tr></thead>
+      <tbody>
+{cf_besoins_html}
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Fiscalité année 1 — l'amortissement ne crée pas de trésorerie.</strong> Intérêts d'emprunt {eur(INTERETS_AN1)} €, dotation aux amortissements {eur(IS_AMORT_MODELE)} €, soit un résultat imposable estimé de {eur(IS_RESULTAT_MODELE)} € et <strong>{eur(IS_IMPOT_MODELE)} € d'IS</strong> (15 %). Autrement dit, l'impôt n'est pas le sujet : il ne représente que {eur(IS_IMPOT_MODELE/12.0)} €/mois, à comparer aux {eur(abs(CF_BASE))} €/mois de déficit. Et l'amortissement, qui allège l'impôt, ne paie pas la mensualité — c'est la première confusion à éviter sur un dossier d'exploitation.</p>
+      <p class="attractiveness-intro"><strong>Le service de la dette vaut 9,0 % du capital emprunté par an</strong> (intérêts, capital et assurance) alors que le bien rapporte <strong>6,5 % sur ce même capital</strong> : l'écart de 2,5 points, c'est la mensualité que le bien ne couvre pas. Ce n'est pas un dossier mort — l'actif s'apprécie et la dette se rembourse —, mais c'est un dossier qui demande {eur(abs(CF_BASE_AN * DUREE_ANS))} € de trésorerie sur quinze ans, ou un apport de {fr(apport_cashflow_nul(PRIX, BASE['ebe'])/PRIX*100.0, 0)} % au lieu de 10 %, ou un prix de {eur(prix_cashflow_nul(BASE['ebe']))} € au lieu de {eur(PRIX)} €. Trois réponses possibles, aucune gratuite.</p>
+    </div>
+  </section>"""
+
+    print("\n  Controles des chiffres de cash-flow (modele amont vs recalcul du script) :")
+    for lab, mod, rec_, tol in CONTROLES:
+        print(f"    {lab:<50} amont {mod:>12,.2f} | recalcule {rec_:>12,.2f} | "
+              f"ecart {abs(mod - rec_):.2f} (tol {tol})")
+    print(f"  ATTENTION fiscalite annee 1 : les chiffres du modele amont (dotation "
+          f"{eur(IS_AMORT_MODELE)} EUR, resultat imposable {eur(IS_RESULTAT_MODELE)} EUR, IS "
+          f"{eur(IS_IMPOT_MODELE)} EUR) ne se recalculent pas depuis l'EBE : "
+          f"{eur(BASE['ebe'])} - {eur(INTERETS_AN1)} - {eur(IS_AMORT_MODELE)} = "
+          f"{eur(BASE['ebe'] - INTERETS_AN1 - IS_AMORT_MODELE)} EUR. Publies tels que fournis, "
+          f"a arbitrer.")
+
     lecture = (
         f"C'est l'adresse qui est bonne, et le prix qui ne l'est pas. Un immeuble entier en "
         f"centre-ville de Saint-Maximin, deux logements déjà loués, des compteurs individuels, un "
@@ -811,50 +1023,65 @@ def main():
                                 f"sans travaux (aucun travaux annoncé)"),
         ],
         stance=(
-            f"<strong>À négocier — offrir 148 000 €, plafond 165 000 €</strong>, sous condition "
-            f"d'obtention des deux baux, de l'avis de taxe foncière et des diagnostics datés. Le "
-            f"raisonnement tient en un chiffre : avec les loyers reconstruits à partir du marché "
-            f"— 1 070 €/mois — le dossier rend {fr(BASE['rdt_av'])} % net avant IS sur l'acte en "
-            f"main, donc il passe notre seuil de 5 %, mais de 44 points de base. Le prix qui tient "
-            f"exactement ce seuil est de <strong>{eur(BASE['cap5'])} €</strong>, au-dessus des "
-            f"160 000 € demandés : la marge de négociation n'est pas là. Elle est dans les baux : "
-            f"à 920 €/mois le même bien ne vaut plus que {eur(WORST['cap5'])} €, à 1 200 €/mois il "
-            f"en vaut {eur(BEST['cap5'])}. Personne ne sait aujourd'hui de quel côté de cette "
-            f"fourchette se situe l'immeuble, et l'annonce vend une « rentabilité immédiate » sans "
-            f"en donner le chiffre.<br><br>"
-            f"<strong>Trois pièces suspensives, non négociables.</strong> Les deux "
-            f"<strong>baux en cours</strong>, avec leur montant, leur date et leur échéance, et les "
-            f"dernières quittances : c'est la seule donnée qui décide du dossier, et son absence "
-            f"dans une annonce qui parle de rentabilité immédiate est en soi un signal. "
-            f"L'<strong>avis de taxe foncière</strong> : 200 € d'écart valent 0,7 % de rendement "
-            f"brut. Les <strong>diagnostics datés</strong> — DPE, électricité, plomb, amiante — "
-            f"plus une visite d'homme de l'art sur les trois postes que « aucun travaux » ne "
-            f"couvre : couverture, électricité et humidité des caves, sur un immeuble dont "
-            f"l'acquéreur porte seul la structure.<br><br>"
-            f"<strong>Ce qui rend le dossier défendable malgré tout.</strong> Il est loué, il est en "
-            f"centre-ville et il n'y a rien à faire : pas de copropriété à financer, pas de "
-            f"chantier, pas de passif énergétique (DPE D, aucune échéance avant 2034), des "
-            f"compteurs individuels. Et il passe le seuil de 5 % net avant IS en scénario de base, "
-            f"ce que peu de dossiers de la semaine font — encore faut-il que les baux soient "
-            f"effectivement à ce niveau, ce qui reste à vérifier."
+            f"<strong>À négocier — sous condition de preuve des baux. Au rendement prudent de "
+            f"1 070 €/mois, il faudrait acheter 115 000 € pour que le bien couvre sa mensualité, "
+            f"ce qui n'est pas atteignable sur un bien loué affiché pour sa rentabilité. Si les "
+            f"deux baux ne produisent pas près de 1 400 €/mois, on passe.</strong><br><br>"
+            f"Le raisonnement tient en deux grilles, et le dossier en passe une sur deux. Sur la "
+            f"grille de rendement, il est conforme : avec les loyers reconstruits à partir du "
+            f"marché — 1 070 €/mois — l'exploitation dégage {eur(BASE['ebe'])} € d'EBE, soit "
+            f"{fr(BASE['rdt_av'])} % net avant IS sur l'acte en main, au-dessus du seuil de 5 %, "
+            f"et {fr(BASE['rdt_ap'])} % après IS contre 3,7 % de taux d'intérêt : l'opération "
+            f"s'enrichit. Sur la grille de cash-flow, il échoue : à 10 % d'apport, la mensualité "
+            f"est de 1 084 €/mois pour 784 €/mois d'exploitation, soit <strong>-301 €/mois</strong> "
+            f"(-3 607 €/an), et il reste négatif dans les trois scénarios. Pour que le bien couvre "
+            f"sa mensualité au prix affiché, il faudrait <strong>1 404 €/mois de loyers</strong> "
+            f"— 31 % de plus que notre base —, ou un prix de {eur(prix_cashflow_nul(BASE['ebe']))} €, "
+            f"ou un apport de {eur(apport_cashflow_nul(PRIX, BASE['ebe']))} € (35 % du prix). "
+            f"Au-delà de 30 000 € d'apport, le dossier sort de la doctrine du parc.<br><br>"
+            f"<strong>Ce que cela fixe comme cadre d'offre.</strong> À 148 000 €, le cash-flow reste "
+            f"négatif de 219 €/mois et il faudrait 43 916 € d'apport (30 %) pour l'équilibrer ; à "
+            f"165 000 € il est de -334 €/mois et il faudrait 60 916 € (37 %). Autrement dit, "
+            f"l'offre de 148 000 € et le plafond de 165 000 € ne tiennent que sur la grille de "
+            f"rendement, avec un apport hors doctrine : ils ne rendent pas ce bien finançable en "
+            f"l'état. <strong>Trois pièces suspensives, non négociables :</strong> les deux baux en "
+            f"cours (montant, date, échéance, type et quittances) — c'est la seule donnée qui "
+            f"décide, et son absence dans une annonce qui parle de rentabilité immédiate est en soi "
+            f"un signal ; l'avis de taxe foncière réel ; les diagnostics datés (DPE, électricité, "
+            f"plomb, amiante) et une visite d'homme de l'art sur les trois postes que « aucun "
+            f"travaux » ne couvre — couverture, électricité et humidité des caves, sur un immeuble "
+            f"dont l'acquéreur porte seul la structure.<br><br>"
+            f"<strong>Ce qui reste bon dans ce dossier.</strong> Il est loué, il est en centre-ville, "
+            f"il n'y a rien à faire : pas de copropriété à financer, pas de chantier, pas de passif "
+            f"énergétique (DPE D, aucune échéance avant 2034), des compteurs individuels. Et il "
+            f"passe le seuil de 5 % net avant IS en scénario de base. Mais un dossier qui passe le "
+            f"rendement sans passer le cash-flow ne s'achète pas : il se négocie, et il ne se "
+            f"négocie que sur les baux, qui ne sont pas dans l'annonce."
         ),
         prix_plafond=(
-            f"<strong>165 000 €, sous condition des baux.</strong> Le prix qui tient exactement "
-            f"5 % net avant IS est de {eur(BASE['cap5'])} € avec 1 070 €/mois de loyers : c'est un "
-            f"seuil, pas une cible, et il vaut donc 174 185 € sur un chiffrage dont les loyers ne "
-            f"sont pas documentés. Le plafond retenu est 165 000 €, soit "
-            f"{eur(BASE['cap5'] - 165000.0)} € de marge pour absorber les trois inconnues du "
-            f"dossier (taxe foncière, état de la couverture et des caves, ameublement du studio), "
-            f"et l'offre d'ouverture est 148 000 €, soit "
-            f"{fr((PRIX - 148000.0) / PRIX * 100, 1)} % sous le prix affiché. Sensibilité du "
-            f"plafond aux seuls loyers, charges de base inchangées : à 900 €/mois "
+            f"<strong>Deux ancres, et c'est la plus basse qui décide.</strong> Sur le seul critère "
+            f"de rendement, le prix qui tient 5 % net avant IS est de {eur(BASE['cap5'])} € avec "
+            f"1 070 €/mois de loyers — un seuil, pas une cible, dont on garde une marge pour les "
+            f"inconnues du dossier (taxe foncière, couverture et caves, ameublement du studio), "
+            f"d'où le plafond de négociation de 165 000 € et l'offre d'ouverture à 148 000 €, soit "
+            f"{fr((PRIX - 148000.0) / PRIX * 100, 1)} % sous le prix affiché. Sur le critère de "
+            f"cash-flow, le plafond tombe à <strong>{eur(prix_cashflow_nul(BASE['ebe']))} €</strong> "
+            f"à 10 % d'apport — c'est le prix auquel le bien couvre sa mensualité de 1 084 €/mois — "
+            f"et à "
+            f"{eur(prix_cashflow_nul(calc(1200.0, 5.0, 5.0, 900.0, 400.0, 150.0, 200.0, 500.0)['ebe']))} € "
+            f"si les loyers montent à 1 200 €/mois. Les deux ancres sont séparées de "
+            f"{eur(BASE['cap5'] - prix_cashflow_nul(BASE['ebe']))} € : c'est le coût du service de "
+            f"la dette sur quinze ans, et c'est lui qui commande. Sensibilité du plafond de "
+            f"rendement aux seuls loyers, charges de base inchangées : à 900 €/mois "
             f"{eur(calc(900.0, 5.0, 5.0, 900.0, 400.0, 150.0, 200.0, 500.0)['cap5'])} €, à "
             f"1 000 €/mois {eur(calc(1000.0, 5.0, 5.0, 900.0, 400.0, 150.0, 200.0, 500.0)['cap5'])} €, "
             f"à 1 070 €/mois {eur(BASE['cap5'])} €, à 1 150 €/mois "
             f"{eur(calc(1150.0, 5.0, 5.0, 900.0, 400.0, 150.0, 200.0, 500.0)['cap5'])} €. Chaque "
-            f"tranche de 100 €/mois de loyer vaut 20 000 € de capacité de prix : c'est le seul "
-            f"chiffre à retenir de cette négociation. Si les baux révèlent 920 €/mois, le plafond "
-            f"tombe à {eur(WORST['cap5'])} € et la réponse est non."
+            f"tranche de 100 €/mois de loyer vaut 20 000 € de capacité de prix. Si les baux "
+            f"révèlent 920 €/mois, le plafond de rendement tombe à {eur(WORST['cap5'])} € et la "
+            f"réponse est non. Et pour un cash-flow nul au prix affiché, il faut "
+            f"<strong>{eur(loyer_cashflow_nul(144000.0))} €/mois de loyers</strong> — c'est le "
+            f"chiffre à mettre en face du vendeur."
         ),
         leviers=[
             f"Les montants des deux baux sont l'argument central, et l'annonce elle-même le "
@@ -909,6 +1136,15 @@ def main():
             f"locative 5 % des loyers et provision travaux 200 € (poste composite de 842 €), "
             f"comptabilité 500 €. Provision automatique de 2,5 % du moteur désactivée pour ne pas "
             f"compter deux fois la provision travaux. Aucun poste laissé à zéro",
+            f"<strong>Financement (doctrine du parc) :</strong> apport 10 %, prêt de "
+            f"{eur(PRIX * (1 - APPORT_PCT))} € sur 15 ans à 3,7 % et assurance emprunteur de "
+            f"0,34 %, soit une mensualité de 1 084 €/mois (0,00753 € par euro emprunté). Cash-flow "
+            f"de <strong>-301 €/mois</strong> (-3 607 €/an) au prix affiché, -219 €/mois à "
+            f"148 000 €, -334 €/mois à 165 000 €, -143 €/mois en hypothèse favorable de loyers et "
+            f"-624 €/mois en hypothèse défavorable. Le dossier passe la grille de rendement mais "
+            f"échoue au critère de cash-flow : 1 404 €/mois de loyers seraient nécessaires pour "
+            f"équilibrer au prix affiché, ou un prix de 115 649 €, ou un apport de 30 à 37 % du "
+            f"prix. Ne pas lire cette fiche comme un dossier finançable en l'état",
             f"<strong>Valeur de marché :</strong> {eur(VALEUR_RETENUE)} € "
             f"({eur(PRIX_M2_TRANCHE_30_50)} €/m² sur les 47 m² habitables), fourchette "
             f"{eur(VALEUR_BASSE)} à {eur(VALEUR_HAUTE)} €. Ancrage : médiane DVF 2025 de la "
@@ -990,7 +1226,8 @@ def main():
       <p class="attractiveness-intro"><strong>Comparaison avec l'autre dossier Saint-Maximin.</strong> Le second immeuble du centre-ville, 400 m² et 12 lots affichés 235 000 € chez Patrice Russo Immobilier (réf. VIM10001311), exige une rénovation lourde chiffrée à 450 000 € : son coût de revient ressort à <strong>2 695 €/m²</strong> face à une médiane communale de <strong>2 746 €/m²</strong> retenue dans son analyse du 22/09/2026, soit 2 % d'écart — une opération de promotion morte au prix demandé, où il faut renégocier le prix de 100 000 € ou passer. Le présent dossier joue dans une autre catégorie : <strong>aucun travaux à porter</strong>, deux logements déjà loués, un prix d'entrée de {eur(ACTE_EN_MAIN)} € d'acte en main et un rendement de {fr(BASE['rdt_av'])} % net avant IS qui passe le seuil de 5 % — mais avec 44 points de base de marge, quand l'autre dossier n'en a aucun. C'est donc bien celui-ci qui mérite la négociation, et la négociation se joue sur les baux, pas sur le prix.</p>
     </div>
     <p class="attractiveness-intro">Repères de méthode : acte en main {eur(ACTE_EN_MAIN)} € = prix affiché {eur(PRIX)} € + frais d'acquisition {eur(PRIX*NOTAIRE)} € (8 %, honoraires à la charge du vendeur) ; aucun travaux à l'acquisition (aucun travaux annoncé), provision travaux et ameublement de 200 €/an en exploitation ; vacance 5 % en base, 4 % en hypothèse favorable, 10 % en hypothèse défavorable ; gestion locative 5 %, 4 % et 6 % selon les scénarios ; taxe foncière estimée 900 € (avis non communiqué) ; charges d'immeuble 400 € ; assurance PNO 150 € ; comptabilité 500 € ; SCI à l'IS avec IS de 15 % appliqué à l'EBE, sans amortissement du bâti modélisé ; valeur de marché {eur(VALEUR_RETENUE)} € ({eur(PRIX_M2_TRANCHE_30_50)} €/m², médiane DVF 2025 de la tranche 30-50 m² sur 5 ventes).</p>
-  </section>""",
+  </section>
+{cf_section}""",
         risques=gen.risques_html(rec),
         verdict_cls={"acheter": "buy", "negocier": "nego", "fuir": "pass"}.get(verdict, "nego"),
         stance=c['stance'], prix_plafond=c['prix_plafond'],
