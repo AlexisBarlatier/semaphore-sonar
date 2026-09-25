@@ -8769,7 +8769,7 @@
         "frais_acquisition_euros": 12800.0,
         "frais_divers_euros": 0.0,
         "quote_part_bati_pct": 0.0,
-        "fiscalite_commentaire": "Convention de chiffrage retenue : IS à 15 % appliqué à l'EBE, sans amortissement du bâti. L'amortissement par composant d'un immeuble ancien détenu en totalité n'a pas été modélisé (aucune ventilation par composant n'est établie et aucun diagnostic technique n'est disponible) : le rendement après IS publié ici est donc le plus prudent des deux, et l'amortissement réel allégera l'impôt les premières années. Le seuil de décision de la doctrine du parc porte de toute façon sur le rendement net AVANT IS",
+        "fiscalite_commentaire": "Fiscalité année 1 : EBE 9 406 € moins intérêts d'emprunt 5 328 € et dotation aux amortissements 4 267 € (bâti à 80 % sur 30 ans) : le résultat imposable est un déficit de 189 €, donc aucun IS l'année 1 et déficit reporté. Convention prudente retenue pour les rendements nets publiés : IS de 15 % appliqué à l'EBE, sans amortissement du bâti modélisé, soit 1 411 €/an — c'est la lecture la plus défavorable. Le seuil de décision de la doctrine du parc porte de toute façon sur le rendement net AVANT IS",
         "charges": {
           "taxe_fonciere_annuelle_euros": 900.0,
           "taxe_fonciere_commentaire": "ESTIMATION 900 €/an — avis non communiqué. Fourchette 700 à 1 100 €/an pour un immeuble de deux lots de 47 m² habitables en centre-ville. Le scénario défavorable retient 1 100 € : l'inconnue vaut 200 €/an de rendement, soit 0,7 % brut",

@@ -291,13 +291,13 @@ def rec_immeuble_sm():
             "frais_divers_euros": 0.0,
             "quote_part_bati_pct": 0.0,
             "fiscalite_commentaire": (
-                "Convention de chiffrage retenue : IS à 15 % appliqué à l'EBE, sans amortissement "
-                "du bâti. L'amortissement par composant d'un immeuble ancien détenu en totalité "
-                "n'a pas été modélisé (aucune ventilation par composant n'est établie et aucun "
-                "diagnostic technique n'est disponible) : le rendement après IS publié ici est donc "
-                "le plus prudent des deux, et l'amortissement réel allégera l'impôt les premières "
-                "années. Le seuil de décision de la doctrine du parc porte de toute façon sur le "
-                "rendement net AVANT IS"
+                "Fiscalité année 1 : EBE 9 406 € moins intérêts d'emprunt 5 328 € et dotation aux "
+                "amortissements 4 267 € (bâti à 80 % sur 30 ans) : le résultat imposable est un "
+                "déficit de 189 €, donc aucun IS l'année 1 et déficit reporté. Convention prudente "
+                "retenue pour les rendements nets publiés : IS de 15 % appliqué à l'EBE, sans "
+                "amortissement du bâti modélisé, soit 1 411 €/an — c'est la lecture la plus "
+                "défavorable. Le seuil de décision de la doctrine du parc porte de toute façon sur "
+                "le rendement net AVANT IS"
             ),
             "charges": {
                 "taxe_fonciere_annuelle_euros": 900.0,
@@ -806,11 +806,13 @@ def main():
         for a, b, c in cf_besoins_rows)
 
     INTERETS_AN1 = CAP_BASE * TAUX_CREDIT
-    # Chiffres fiscaux du modele amont (non recalculables depuis l'EBE : la
-    # dotation retenue en amont differe de celle du moteur, voir le log de build)
+    # Fiscalite annee 1, recalculee depuis l'EBE du modele :
+    #   9 406 (loyers 12 840 - vacance 642 - gestion 642 - charges 2 150)
+    #   - 5 328 d'interets - 4 267 de dotation = deficit de 189 EUR -> aucun IS.
     IS_AMORT_MODELE = 4267.0
-    IS_RESULTAT_MODELE = 1095.0
-    IS_IMPOT_MODELE = 164.0
+    IS_RESULTAT_MODELE = round(BASE['ebe'] - INTERETS_AN1 - IS_AMORT_MODELE, 2)
+    IS_IMPOT_MODELE = 0.0
+    IS_CONVENTION_EBE = round(BASE['ebe'] * 0.15, 2)
     cf_section = f"""  <section class="financial-projections">
     <h2>Cash-flow après crédit — service de la dette, apport et durée</h2>
     <p class="attractiveness-intro"><strong>Hypothèses de crédit (doctrine du parc) :</strong> apport 10 %, frais de notaire assumés à part, prêt de {eur(CAP_BASE)} € sur 15 ans à 3,7 %, assurance emprunteur 0,34 % du capital. Mensualité <strong>{eur(MENS_BASE)} €/mois</strong>, soit <strong>0,00753 € par euro emprunté</strong>. Comparée au net d'exploitation de {eur(BASE['ebe_mois'])} €/mois du scénario de base, cette mensualité ne peut pas être couverte.</p>
@@ -834,7 +836,7 @@ def main():
       </tbody>
     </table>
     <div class="risk-matrix">
-      <p class="attractiveness-intro"><strong>Fiscalité année 1 — l'amortissement ne crée pas de trésorerie.</strong> Intérêts d'emprunt {eur(INTERETS_AN1)} €, dotation aux amortissements {eur(IS_AMORT_MODELE)} €, soit un résultat imposable estimé de {eur(IS_RESULTAT_MODELE)} € et <strong>{eur(IS_IMPOT_MODELE)} € d'IS</strong> (15 %). Autrement dit, l'impôt n'est pas le sujet : il ne représente que {eur(IS_IMPOT_MODELE/12.0)} €/mois, à comparer aux {eur(abs(CF_BASE))} €/mois de déficit. Et l'amortissement, qui allège l'impôt, ne paie pas la mensualité — c'est la première confusion à éviter sur un dossier d'exploitation.</p>
+      <p class="attractiveness-intro"><strong>Fiscalité année 1 — l'amortissement ne crée pas de trésorerie.</strong> Intérêts d'emprunt {eur(INTERETS_AN1)} €, dotation aux amortissements {eur(IS_AMORT_MODELE)} €, le résultat imposable de l'année 1 est un <strong>déficit de {eur(abs(IS_RESULTAT_MODELE))} €</strong> : <strong>aucun impôt l'année 1</strong>, et le déficit se reporte. Le moteur retient par ailleurs, pour les rendements nets publiés, la convention la plus prudente : IS de 15 % appliqué à l'EBE, soit {eur(IS_CONVENTION_EBE)} €/an, sans aucun amortissement du bâti. Dans les deux lectures, l'impôt n'est pas le sujet — il ne paie pas la mensualité, et c'est la première confusion à éviter sur un dossier d'exploitation. L'amortissement non plus ne fait pas disparaître l'impôt : il le reporte sur la plus-value de sortie, calculée sur la valeur nette comptable.</p>
       <p class="attractiveness-intro"><strong>Le service de la dette vaut 9,0 % du capital emprunté par an</strong> (intérêts, capital et assurance) alors que le bien rapporte <strong>6,5 % sur ce même capital</strong> : l'écart de 2,5 points, c'est la mensualité que le bien ne couvre pas. Ce n'est pas un dossier mort — l'actif s'apprécie et la dette se rembourse —, mais c'est un dossier qui demande {eur(abs(CF_BASE_AN * DUREE_ANS))} € de trésorerie sur quinze ans, ou un apport de {fr(apport_cashflow_nul(PRIX, BASE['ebe'])/PRIX*100.0, 0)} % au lieu de 10 %, ou un prix de {eur(prix_cashflow_nul(BASE['ebe']))} € au lieu de {eur(PRIX)} €. Trois réponses possibles, aucune gratuite.</p>
     </div>
   </section>"""
@@ -843,12 +845,10 @@ def main():
     for lab, mod, rec_, tol in CONTROLES:
         print(f"    {lab:<50} amont {mod:>12,.2f} | recalcule {rec_:>12,.2f} | "
               f"ecart {abs(mod - rec_):.2f} (tol {tol})")
-    print(f"  ATTENTION fiscalite annee 1 : les chiffres du modele amont (dotation "
-          f"{eur(IS_AMORT_MODELE)} EUR, resultat imposable {eur(IS_RESULTAT_MODELE)} EUR, IS "
-          f"{eur(IS_IMPOT_MODELE)} EUR) ne se recalculent pas depuis l'EBE : "
-          f"{eur(BASE['ebe'])} - {eur(INTERETS_AN1)} - {eur(IS_AMORT_MODELE)} = "
-          f"{eur(BASE['ebe'] - INTERETS_AN1 - IS_AMORT_MODELE)} EUR. Publies tels que fournis, "
-          f"a arbitrer.")
+    print(f"  Fiscalite annee 1 : EBE {eur(BASE['ebe'])} - interets {eur(INTERETS_AN1)} "
+          f"- dotation {eur(IS_AMORT_MODELE)} = {eur(IS_RESULTAT_MODELE)} EUR, soit un deficit "
+          f"et aucun IS l'annee 1. Convention prudente publiee par ailleurs : IS de 15 % sur "
+          f"l'EBE = {eur(IS_CONVENTION_EBE)} EUR/an.")
 
     lecture = (
         f"C'est l'adresse qui est bonne, et le prix qui ne l'est pas. Un immeuble entier en "
@@ -1014,10 +1014,13 @@ def main():
                                   "fourchette 700 à 1 100 €) + charges d'immeuble 400 € (pas de "
                                   "copropriété) + PNO 150 € + gestion locative et provision travaux "
                                   "842 € + comptabilité 500 €. Aucun poste laissé à zéro"),
-            ("Fiscalité", "SCI à l'IS : IS de 15 % appliqué à l'EBE, <strong>sans amortissement du "
-                          "bâti modélisé</strong> (aucune ventilation par composant établie sur cet "
-                          "immeuble ancien) — convention prudente et documentée. Le seuil de "
-                          "décision de la doctrine du parc porte sur le rendement net avant IS"),
+            ("Fiscalité", "SCI à l'IS. Calcul réel de l'année 1 : intérêts d'emprunt 5 328 € et "
+                           "dotation aux amortissements 4 267 € déduits de l'EBE, soit un "
+                           "<strong>déficit de 189 € et aucun impôt</strong>, le déficit étant "
+                           "reporté. Convention prudente retenue par ailleurs pour les rendements "
+                           "publiés : IS de 15 % appliqué à l'EBE, <strong>sans amortissement du "
+                           "bâti modélisé</strong>. Le seuil de décision de la doctrine du parc "
+                           "porte sur le rendement net avant IS"),
             ("Prix de revient", f"<strong>{eur(ACTE_EN_MAIN)} €</strong> acte en main = prix "
                                 f"{eur(PRIX)} € + frais d'acquisition {eur(PRIX*NOTAIRE)} € (8 %), "
                                 f"sans travaux (aucun travaux annoncé)"),
@@ -1119,11 +1122,12 @@ def main():
             "crédible la demande de baisse",
         ],
         meta=[
-            f"<strong>Régime fiscal retenu :</strong> SCI à l'IS, IS de 15 % appliqué à l'EBE, "
-            f"sans amortissement du bâti modélisé — il n'existe aucune ventilation par composant "
-            f"sur cet immeuble ancien, et l'amortissement réel allégera l'impôt les premières "
-            f"années. Le seuil de décision du parc (5 % net avant IS) porte sur le rendement avant "
-            f"impôt : {fr(BASE['rdt_av'])} % en base, {fr(BASE['rdt_ap'])} % après IS",
+            f"<strong>Régime fiscal retenu :</strong> SCI à l'IS. Année 1 : EBE {eur(BASE['ebe'])} € "
+            f"moins intérêts {eur(144000*0.037)} € et dotation aux amortissements 4 267 € = déficit "
+            f"de 189 €, donc aucun impôt à payer, déficit reporté. Convention prudente retenue pour "
+            f"les rendements publiés : IS de 15 % sur l'EBE, sans amortissement du bâti modélisé. "
+            f"Seuil de décision du parc (5 % net avant IS) : {fr(BASE['rdt_av'])} % en base, "
+            f"{fr(BASE['rdt_ap'])} % sous convention prudente",
             f"<strong>Frais d'acquisition :</strong> {eur(PRIX*NOTAIRE)} € (8 %), honoraires à la "
             f"charge du vendeur. Prix de revient acte en main : {eur(ACTE_EN_MAIN)} €, sans "
             f"travaux (aucun travaux annoncé)",
