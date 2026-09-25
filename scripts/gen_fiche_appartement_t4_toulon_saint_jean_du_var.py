@@ -1446,6 +1446,12 @@ def main():
           DVF_Q_4595_N,
           "recalculé à n=279, médiane 2 264 €/m², Q1 1 978, Q3 2 684, prix "
           "médian 150 000 €")
+    ecart("DVF commune : tranche 60-90 m²",
+          "n=1 051, médiane 2 537 €/m² (Q1 2 012, Q3 3 190)", DVF_APP_6090_N,
+          "recalculé à n=1 054, médiane 2 532 €/m² — la décote de surface que "
+          "le brief en tirait reste vraie (2 532 €/m² contre 2 878 €/m² sur "
+          "30-45 m²), les quartiles annoncés n'ont pas été publiés faute de "
+          "recalcul")
     ecart("Décote du quartier sous la médiane communale de Toulon", "21 %",
           round((1 - DVF_Q_MED / DVF_APP_MED) * 100.0, 1),
           "recalculée à 8,0 % toutes surfaces et 11,8 % à tranche de surface "
