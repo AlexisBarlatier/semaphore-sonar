@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse - Immeuble de rapport, centre vieille ville — Brignoles (83170)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Centre vieille ville, Brignoles (83170) — immeuble de rapport de trois lots : local commercial de 20 m² et cave de 17 m² au rez-de-chaussée, studio de 20 m² au 1er, duplex T2 de 47 m² au 2e — adresse exacte non communiquée</p>
+  <p class="report-date">Analyse générée le 25 septembre 2026</p>
+  <p class="report-source">Source : SeLoger — annonce 26UC8HRN61QJ (SAFTI, Maude MERRY conseiller indépendant, EI, RCS Draguignan 522063833, référence agence 1699409)</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/brignoles-83170/26UC8HRN61QJ">https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/brignoles-83170/26UC8HRN61QJ</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Investissement locatif</span>
+    <p>Stratégie retenue : <strong>Conservation en location longue durée des trois lots — studio, duplex T2 et local commercial — avec la variante « local vacant » chiffrée et publiée</strong> - SCI à l'IS : IS de 15 % appliqué à l'EBE, sans amortissement du bâti modélisé (convention prudente) — seuil de décision : 5 % net avant IS sur l'acte en main</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card"><span class="card-label">Prix affiché</span><span class="card-value">154 400 €</span></div>
+    <div class="card"><span class="card-label">Surface retenue (2 logements)</span><span class="card-value">67 m² (2 logements, hors cave)</span></div>
+    <div class="card"><span class="card-label">Prix / m² hors cave</span><span class="card-value">2 304 €/m²</span></div>
+    <div class="card"><span class="card-label">Prix de revient (acte en main)</span><span class="card-value">166 752 €</span></div>
+    <div class="card"><span class="card-label">Valeur marché (DVF 2025)</span><span class="card-value">122 700 €</span></div>
+    <div class="card"><span class="card-label">Loyers retenus (reconstruits)</span><span class="card-value">1 230 €/mois</span></div>
+    <div class="card"><span class="card-label">Rendement net avant IS / après IS</span><span class="card-value">6,41 % / 5,45 %</span></div>
+    <div class="card card-verdict note-6-0"><span class="card-label">Note</span><span class="card-value">6,0/10</span></div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.4058" data-lon="6.0617" data-address="Centre vieille ville, Brignoles (83170) — immeuble de rapport de trois lots : local commercial de 20 m² et cave de 17 m² au rez-de-chaussée, studio de 20 m² au 1er, duplex T2 de 47 m² au 2e — adresse exacte non communiquée"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité - Brignoles (83170) — centre vieille ville, 17 000 habitants, autoroute A8 à 10 minutes, Saint-Maximin à 30 minutes, Toulon à 1 heure</h2>
+    <p class="attractiveness-intro">Brignoles est la sous-préfecture du centre Var : <strong>17 000 habitants</strong>, rue commerçante de centre ancien, marché, écoles, collège et lycée, zone d'activité et entrée de l'autoroute A8 à dix minutes. Le marché est documenté : <strong>397 mutations de nature « Vente » en 2025</strong> selon la base DVF, dont <strong>168 ventes d'appartements</strong> à une médiane de <strong>2 246 €/m²</strong> (premier quartile 1 703, troisième 2 900) et <strong>142 ventes de maisons</strong> à <strong>2 841 €/m²</strong>. La tranche 30-60 m², où tombe le duplex de 47 m², affiche <strong>2 500 €/m² sur 79 ventes</strong> ; la tranche des moins de 30 m², où tombe le studio de 20 m², <strong>2 260 €/m² sur 8 ventes seulement</strong>. Côté locatif, les annonces relevées sur place le 25/09/2026 donnent une pièce de 36 m² en centre vieille ville à 450 € (12,5 €/m²), des 2 pièces à 680 €, un 3 pièces meublé de 50 m² à 800 € et une maison meublée de 100 m² à 1 450 € ; le loyer de référence de la commune est de 11,0 €/m²/mois sur un lot type de 60 m² (fiche de référence du 21/09/2026). C'est un marché de locataires à l'année, avec de l'offre — et, pour l'immeuble de rapport, un marché d'acquéreurs bien plus étroit : 41 mutations de deux logements et plus dans l'année.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+        <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Brignoles est à l'entrée de l'autoroute A8, à 30 minutes de Saint-Maximin et une heure de Toulon, avec un bassin d'emploi propre et une gare routière en centre-ville. La commune n'a pas de desserte ferroviaire voyageurs : c'est une ville de voiture, ce qui limite la cible locataire au premier chef un local commercial et un studio de centre ancien</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces & services</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Ville de 17 000 habitants avec une vie commerçante de centre ancien, un marché, une zone d'activité et les chaînes nationales. Le bien est dans la vieille ville, c'est-à-dire à l'adresse la plus passante du centre pour le local du rez-de-chaussée — mais la vacance commerciale du centre ancien n'est pas documentée et doit être vérifiée rue par rue</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Écoles & crèches</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Écoles, collège et lycée sur la commune, plus les établissements de Saint-Maximin et de Toulon : c'est le profil type du locataire d'un studio et d'un T2 de centre ancien</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Sécurité & cadre de vie</span>
+        <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Commune du centre Var sans tension particulière, centre ancien en cours de repeuplement. Un immeuble entier en monopropriété limite les nuisances de voisinage, mais la cave donne sur un escalier intérieur au local : la sécurité d'accès du commerce et de la cave est à vérifier sur place</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+        <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Marché locatif réel et documenté le 25/09/2026 : 86 annonces actives à Brignoles, 1 pièce de 36 m² à 450 €, 2 pièces de 37 m² à 680 €, 3 pièces meublé de 50 m² à 800 €, maison meublée de 100 m² à 1 450 €, parking à 120 €. Mais le loyer de référence de la commune est de 11,0 €/m²/mois sur un lot type de 60 m² (fiche du 21/09/2026) : l'hypothèse de 19 €/m²/mois retenue sur le studio de 20 m² est au-dessus de ce que le marché démontre, et c'est un point de négociation, pas un acquis</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme économique</span>
+        <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">397 mutations de nature « Vente » enregistrées dans la commune en 2025, dont 168 ventes d'appartements (médiane 2 246 €/m²) et 142 ventes de maisons (médiane 2 841 €/m²) : le marché de revente est liquide. Le marché de l'immeuble de rapport l'est beaucoup moins — 41 mutations de deux logements et plus, médiane 1 410 €/m² — et c'est celui-ci qui commande la sortie</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> un investisseur de rendement qui accepte un cash-flow légèrement négatif au départ contre un actif en centre-ville, déjà louable sans travaux annoncés (DPE D, aucune échéance réglementaire avant 2034) : un local commercial de 20 m² au rez-de-chaussée, un studio et un duplex en étages, dans un immeuble de 1940 en monopropriété. Ce n'est pas un dossier de plus-value : le prix affiché est au-dessus de la valeur de marché du produit comparable. C'est un dossier de loyer, et il ne vaut que par deux choses que l'annonce ne donne pas — le preneur du local et le montant des loyers</p>
+      <p><strong>Conclusion :</strong> Adéquation moyenne (6,5/10). L'emplacement, la structure et l'état déclaré sont de vrais atouts : plein centre de la vieille ville, trois lots louables sans travaux annoncés, DPE D sans échéance avant 2034, un local commercial qui apporte une source de revenu que n'ont pas les deux autres dossiers Brignoles du dépôt. Deux éléments plombent le score. D'abord le prix : 1 775 €/m² sur les lots bâtis contre 1 410 €/m² de médiane sur les 41 immeubles de rapport effectivement vendus en 2025 — le prix affiché est au-dessus du haut de la fourchette observée. Ensuite et surtout l'inconnue du local commercial : il pèse 23 % de la surface bâtie, aucun preneur n'est mentionné, et c'est lui qui fait passer le rendement de 6,41 % à 4,67 % selon qu'il est loué ou non</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Cinq lectures ont été testées : la conservation en location longue durée dans trois hypothèses de loyers (base à 1 230 €/mois, optimiste à 1 480 €, pessimiste à 810 €), la variante où le local commercial reste vacant toute l'année (930 €/mois) et l'achat-rénovation-revente. C'est la première qui porte le dossier, c'est la quatrième qui le fragilise et c'est la cinquième qui le condamne : il n'y a aucune décote d'entrée à capter.</p>
+    <table class="strategy-table">
+      <thead><tr><th>Stratégie</th><th>Lots</th><th>Rendement</th><th>Faisabilité</th><th>Risque</th></tr></thead>
+      <tbody>
+        <tr class="strategy-row selected">
+          <td><strong>Location longue durée des trois lots (base)</strong></td>
+          <td>3</td>
+          <td>6,41 % net avant IS sur l'acte en main (10 691 € d'EBE, 891 €/mois), 5,45 % après IS sous convention prudente</td>
+          <td>immédiate si le local trouve preneur : deux logements louables sans travaux annoncés. Il faut obtenir les baux et l'occupation du local avant toute offre</td>
+          <td>moyen — le seuil de rendement est tenu, mais le cash-flow est négatif de 156 €/mois et le dossier échoue au critère de trésorerie du parc</td>
+        </tr>
+        <tr>
+          <td><strong>Location longue durée, loyers hauts de la fourchette (optimiste)</strong></td>
+          <td>3</td>
+          <td>8,52 % net avant IS (14 212 € d'EBE), 7,24 % après IS, plafond 5 % 263 178 €</td>
+          <td>relocation du studio à 400 €, du duplex à 580 € et du local à 500 €, au niveau haut du marché relevé : c'est le seul scénario où le cash-flow redevient positif (+138 €/mois)</td>
+          <td>moyen — suppose de relouer les trois lots au haut du marché et que le local commercial trouve un preneur durable, dans un centre ancien dont la vacance commerciale n'est pas documentée</td>
+        </tr>
+        <tr>
+          <td><strong>Location longue durée, loyers bas, local en rotation et charges lourdes (pessimiste)</strong></td>
+          <td>3</td>
+          <td>2,90 % net avant IS (4 829 € d'EBE), 2,46 % après IS, plafond 5 % 89 422 €</td>
+          <td>loyers 810 €/mois, vacance 15 %, taxe foncière à 1 100 €, charges 700 € et provision 400 € : c'est le scénario à retenir si un bail est sous-évalué ou si le local reste vide plusieurs mois par an</td>
+          <td>élevé — 2,90 % net avant IS et un cash-flow de -644 €/mois : le prix ne passe plus, ni sur le rendement ni sur la trésorerie</td>
+        </tr>
+        <tr>
+          <td><strong>Variante publiée — local commercial vacant toute l'année</strong></td>
+          <td>2</td>
+          <td>4,67 % net avant IS (7 782 € d'EBE, 649 €/mois) sur 930 €/mois de loyers, 3,97 % après IS, plafond 5 % 144 119 €</td>
+          <td>hypothèse basse à retenir si aucun preneur ne se présente pour le local : le studio et le duplex se relouent, le local de 20 m² du centre ancien non — c'est la lecture la plus prudente du dossier</td>
+          <td>élevé — 144 119 € de plafond contre 154 400 € de prix affiché, soit 6,7 % au-dessus : le local fait basculer le dossier du rendement acceptable à la décote obligatoire</td>
+        </tr>
+        <tr>
+          <td><strong>Achat-rénovation-revente (marchand de biens)</strong></td>
+          <td>3</td>
+          <td>impossible au prix affiché : la valeur de marché de l'immeuble ressort à 122 700 € contre un prix de revient de 166 752 €, soit une marge négative de 44 052 € avant même les frais de revente et la fiscalité</td>
+          <td>aucune : l'immeuble n'a aucune décote d'entrée à capter, et le marché de revente des immeubles de rapport de la commune est étroit — 41 mutations de deux logements et plus en 2025, 10 seulement mêlant logement et local commercial</td>
+          <td>bloquant sur ce plan de sortie — l'actif ne se défend que par son rendement, et la division en lots ne se présume pas</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale"><p>Le scénario de référence : loyers reconstruits à partir du marché relevé sur place le 25/09/2026 — studio 380 €, duplex T2 550 € et local commercial 300 €, soit 1 230 €/mois —, vacance 8 %, gestion locative 5 %, taxe foncière estimée 900 € (avis non communiqué), charges d'immeuble 400 €, assurance 150 €, provision travaux 200 € et comptabilité 500 €. L'excédent brut d'exploitation ressort à <strong>10 691 €</strong> (891 €/mois) et le rendement net avant IS sur l'acte en main de <strong>6,41 %</strong> : la doctrine du parc, 5 % net avant IS, est tenue — mais de 141 points de base seulement, et le rendement après IS tombe à 5,45 %.<br><br>Toute la marge du dossier tient dans deux lignes qui ne sont pas dans l'annonce. Les loyers d'abord : à <strong>810 €/mois</strong> — un bail sous-évalué, une vacance de 15 %, une taxe foncière à 1 100 € et une provision de 400 € — l'EBE tombe à 4 829 €, le rendement à <strong>2,90 %</strong> et le prix qui tiendrait notre seuil à <strong>89 422 €</strong>. À <strong>1 480 €/mois</strong>, l'EBE monte à 14 212 €, le rendement à <strong>8,52 %</strong> et le plafond à <strong>263 178 €</strong>. Le local commercial ensuite, et c'est le poste décisif : sans preneur, avec seulement le studio et le duplex, les loyers tombent à 930 €/mois, l'EBE à 7 782 € et le plafond d'achat à <strong>144 119 €</strong>, soit 6,7 % sous le prix affiché. Entre l'hypothèse basse et l'hypothèse haute, 173 756 € de capacité de prix : c'est le montant exact de l'inconnue que porte cette annonce.<br><br>Ce que le dossier n'est pas, en revanche : une opération de revente. Avec un prix de revient de 166 752 € d'acte en main pour une valeur de marché retenue de 122 700 €, l'achat-rénovation-revente affiche une marge négative de 44 052 € avant même les frais de revente — et le marché de l'immeuble de rapport de la commune ne compte que 41 mutations dans l'année. C'est un actif de rendement pur, à son prix ou au-dessus de son prix.</p></div>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Centre vieille ville, Brignoles (83170) — adresse exacte non communiquée par l'agence</td></tr>
+        <tr><th>Vendeur / intermédiaire</th><td>SAFTI — Maude MERRY, conseiller indépendant (EI, RCS Draguignan 522063833) — annonce SeLoger 26UC8HRN61QJ, référence agence 1699409</td></tr>
+        <tr><th>Composition</th><td>Trois lots bâtis et une cave : local commercial de 20 m² au rez-de-chaussée (une pièce avec salle d'eau et WC, annoncé « peut être transformé en un studio ») et cave de 17 m² avec accès par escalier intérieur au local ; studio de 20 m² au 1er étage ; duplex T2 de 47 m² au 2e étage (deux chambres d'environ 9,50 et 11 m², dont une avec fenêtre sur couloir)</td></tr>
+        <tr><th>Statut</th><td>Aucune copropriété mentionnée : immeuble présumé en <strong>monopropriété</strong>. Aucune charge votée, aucun budget prévisionnel, aucune mutualisation des travaux de structure, de couverture et de façade — entièrement à la charge de l'acquéreur. À confirmer</td></tr>
+        <tr><th>Surfaces</th><td><strong>90 m² annoncés</strong> (1 716 €/m²), comprenant la cave et le local. <strong>87 m² de lots bâtis</strong> (20 + 20 + 47) plus la cave de 17 m², et <strong>67 m² retenus</strong> pour les deux logements, hors cave et hors local, soit <strong>2 304 €/m²</strong>. Aucun plan, aucune surface Carrez par lot</td></tr>
+        <tr><th>Occupation</th><td>L'annonce ne mentionne <strong>ni locataire, ni bail, ni loyer</strong> pour aucun des trois lots, et affirme « idéal investissement locatif » sans un seul chiffre : l'occupation est l'inconnue centrale du dossier, et elle porte d'abord sur le local commercial (23 % de la surface bâtie)</td></tr>
+        <tr><th>DPE / GES</th><td>DPE D / GES B — facture énergétique annoncée 810 à 1 140 €/an. Pas d'échéance réglementaire de location à l'horizon du plan : aucun passif énergétique à porter. Date du diagnostic non communiquée, diagnostics électricité, plomb et amiante non joints</td></tr>
+        <tr><th>Travaux</th><td>Aucun travaux annoncé, <strong>aucun devis et aucun diagnostic autre que le DPE</strong> sur un immeuble de 1940 : couverture, charpente, réseaux et humidité de la cave ne sont documentés par aucune pièce. Le chiffrage retient 0 € de travaux à l'acquisition et une provision de 200 €/an en exploitation ; le risque est porté à la matrice, à lever par une visite d'homme de l'art</td></tr>
+        <tr><th>Prix affiché</th><td><strong>154 400 €</strong>, honoraires à la charge du vendeur — 1 716 €/m² sur les 90 m² annoncés, <strong>1 775 €/m² sur les 87 m² de lots bâtis</strong>, 2 304 €/m² sur la base retenue de 67 m²</td></tr>
+        <tr><th>Valeur de marché retenue</th><td><strong>122 700 €</strong> (87 m² × 1 410 €/m², médiane DVF 2025 des 41 immeubles de rapport de la commune), fourchette 116 500 à 153 700 € ancrée sur deux transactions mixtes nommées du centre-ville (1 339 et 1 767 €/m²)</td></tr>
+        <tr><th>Loyers retenus</th><td><strong>1 230 €/mois</strong> reconstruits : studio de 20 m² à 380 €, duplex T2 de 47 m² à 550 € et local commercial de 20 m² à 300 €. Aucun loyer communiqué par l'annonce — relevés du 25/09/2026 : 36 m² à 450 € (12,5 €/m²), 2 pièces de 37 m² à 680 €, 3 pièces meublé de 50 m² à 800 €, maison meublée de 100 m² à 1 450 €, parking à 120 € ; loyer de référence communal 11,0 €/m²/mois sur 60 m²</td></tr>
+        <tr><th>Charges annuelles</th><td>Taxe foncière <strong>estimée 900 €</strong> (avis non communiqué, fourchette 700 à 1 100 €) + charges d'immeuble 400 € (pas de copropriété) + PNO 150 € + gestion locative et provision travaux 938 € + comptabilité 500 €. Aucun poste laissé à zéro</td></tr>
+        <tr><th>Fiscalité</th><td>SCI à l'IS. Calcul réel de l'année 1 : intérêts d'emprunt 5 142 € et dotation aux amortissements 4 117 € (bâti à 80 % sur 30 ans) déduits de l'EBE, soit un <strong>résultat imposable positif de 1 432 € et un IS de 215 €</strong> — l'amortissement ne suffit pas à effacer l'impôt sur ce dossier. Convention prudente retenue pour les rendements publiés : IS de 15 % appliqué à l'EBE (<strong>1 604 €/an</strong>), sans amortissement du bâti modélisé. Le seuil de décision porte sur le rendement net avant IS</td></tr>
+        <tr><th>Prix de revient</th><td><strong>166 752 €</strong> acte en main = prix 154 400 € + frais d'acquisition 12 352 € (8 %), sans travaux (aucun travaux annoncé)</td></tr>
+        <tr><th>Financement (doctrine du parc)</th><td>apport 10 %, prêt de 138 960 € sur 15 ans à 3,7 % et assurance emprunteur de 0,34 %, soit une mensualité de 1 046 €/mois (0,00753 € par euro emprunté). Cash-flow de <strong>-156 €/mois</strong> (-1 867 €/an) au prix affiché, +138 €/mois en hypothèse favorable, -644 €/mois en hypothèse défavorable et -398 €/mois si le local reste vide</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Compte d'exploitation locatif — prix affiché 154 400 €, acte en main 166 752 €, SCI à l'IS</h2>
+    <p class="attractiveness-intro">C'est le seul dossier de Brignoles qui passe la grille de rendement, et il échoue à celle de la trésorerie. L'immeuble fait 87 m² de lots bâtis pour 154 400 € : au prix affiché, 1 775 €/m² sur les lots bâtis, au-dessus du haut de la fourchette observée sur le produit comparable — les immeubles de rapport de la commune se traitent à 1 410 €/m² de médiane (41 mutations de deux logements et plus en 2025) — et 2 304 €/m² sur la base de 67 m² retenus pour les deux logements, hors cave et hors local. Avec des loyers reconstruits à partir du marché relevé le 25/09/2026 — studio 380 €, duplex 550 €, local commercial 300 €, soit 1 230 €/mois — l'excédent brut d'exploitation ressort à 10 691 €, soit 6,41 % net avant IS sur l'acte en main : le seuil de 5 % de la doctrine est tenu, de 141 points de base. Le rendement est donc là. Le problème est ailleurs, et il est dans le compte de trésorerie : à 10 % d'apport, la mensualité est de 1 046 €/mois pour 891 €/mois d'exploitation, soit un cash-flow de -156 €/mois. Et surtout, tout le dossier tient à un lot dont l'annonce ne dit rien : le local commercial de 20 m² du rez-de-chaussée, 23 % de la surface bâtie, sans preneur, sans bail et sans loyer. S'il reste vide, le dossier tombe à 4,67 % net avant IS et le plafond d'achat passe sous le prix affiché. Le prix n'est donc pas le problème principal — à 197 985 € le rendement tiendrait encore —, mais la preuve de l'occupation du local l'est entièrement.</p>
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Base — loyers reconstruits 1 230 €/mois (380 + 550 + 300)</h3>
+        <p class="scenario-subtitle">1 230 €/mois de loyers, vacance 8 % — EBE 891 €/mois</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts annuels</td><td class="num">14 760 €</td></tr>
+            <tr><td>Vacance locative 8 %</td><td class="num">-1 181 €</td></tr>
+            <tr><td>Gestion locative 5 %</td><td class="num">-738 €</td></tr>
+            <tr><td>Taxe foncière (estimation)</td><td class="num">-900 €</td></tr>
+            <tr><td>Charges d'immeuble (pas de copropriété)</td><td class="num">-400 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">-150 €</td></tr>
+            <tr><td>Provision travaux</td><td class="num">-200 €</td></tr>
+            <tr><td>Comptabilité SCI à l'IS</td><td class="num">-500 €</td></tr>
+            <tr class="subtotal"><td>Excédent brut d'exploitation</td><td class="num">10 691 €</td></tr>
+            <tr><td>IS 15 % de l'EBE (convention prudente)</td><td class="num">-1 604 €</td></tr>
+            <tr class="highlight"><td>Net après IS</td><td class="num">9 088 €</td></tr>
+            <tr><td>EBE mensuel</td><td class="num">891 €/mois</td></tr>
+            <tr class="highlight"><td>Rendement net avant IS sur l'acte en main</td><td class="num">6,41 %</td></tr>
+            <tr><td>Rendement net après IS sur l'acte en main</td><td class="num">5,45 %</td></tr>
+            <tr><td>Rendement net après IS sur la valeur (122 700 €)</td><td class="num">7,41 %</td></tr>
+            <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">197 985 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-optimiste">
+        <h3>Optimiste — loyers 1 480 €/mois</h3>
+        <p class="scenario-subtitle">1 480 €/mois de loyers, vacance 5 % — EBE 1 184 €/mois</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts annuels</td><td class="num">17 760 €</td></tr>
+            <tr><td>Vacance locative 5 %</td><td class="num">-888 €</td></tr>
+            <tr><td>Gestion locative 4 %</td><td class="num">-710 €</td></tr>
+            <tr><td>Taxe foncière (estimation)</td><td class="num">-800 €</td></tr>
+            <tr><td>Charges d'immeuble (pas de copropriété)</td><td class="num">-400 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">-150 €</td></tr>
+            <tr><td>Provision travaux</td><td class="num">-100 €</td></tr>
+            <tr><td>Comptabilité SCI à l'IS</td><td class="num">-500 €</td></tr>
+            <tr class="subtotal"><td>Excédent brut d'exploitation</td><td class="num">14 212 €</td></tr>
+            <tr><td>IS 15 % de l'EBE (convention prudente)</td><td class="num">-2 132 €</td></tr>
+            <tr class="highlight"><td>Net après IS</td><td class="num">12 080 €</td></tr>
+            <tr><td>EBE mensuel</td><td class="num">1 184 €/mois</td></tr>
+            <tr class="highlight"><td>Rendement net avant IS sur l'acte en main</td><td class="num">8,52 %</td></tr>
+            <tr><td>Rendement net après IS sur l'acte en main</td><td class="num">7,24 %</td></tr>
+            <tr><td>Rendement net après IS sur la valeur (122 700 €)</td><td class="num">9,85 %</td></tr>
+            <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">263 178 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-pessimiste">
+        <h3>Pessimiste — loyers 810 €/mois</h3>
+        <p class="scenario-subtitle">810 €/mois de loyers, vacance 15 % — EBE 402 €/mois</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts annuels</td><td class="num">9 720 €</td></tr>
+            <tr><td>Vacance locative 15 %</td><td class="num">-1 458 €</td></tr>
+            <tr><td>Gestion locative 6 %</td><td class="num">-583 €</td></tr>
+            <tr><td>Taxe foncière (estimation)</td><td class="num">-1 100 €</td></tr>
+            <tr><td>Charges d'immeuble (pas de copropriété)</td><td class="num">-700 €</td></tr>
+            <tr><td>Assurance PNO</td><td class="num">-150 €</td></tr>
+            <tr><td>Provision travaux</td><td class="num">-400 €</td></tr>
+            <tr><td>Comptabilité SCI à l'IS</td><td class="num">-500 €</td></tr>
+            <tr class="subtotal"><td>Excédent brut d'exploitation</td><td class="num">4 829 €</td></tr>
+            <tr><td>IS 15 % de l'EBE (convention prudente)</td><td class="num">-724 €</td></tr>
+            <tr class="highlight"><td>Net après IS</td><td class="num">4 104 €</td></tr>
+            <tr><td>EBE mensuel</td><td class="num">402 €/mois</td></tr>
+            <tr class="highlight"><td>Rendement net avant IS sur l'acte en main</td><td class="num">2,90 %</td></tr>
+            <tr><td>Rendement net après IS sur l'acte en main</td><td class="num">2,46 %</td></tr>
+            <tr><td>Rendement net après IS sur la valeur (122 700 €)</td><td class="num">3,35 %</td></tr>
+            <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">89 422 €</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <table class="projection-table compare">
+      <thead><tr><th>Indicateur</th><th class="num">Base — 1 230 €/mois</th><th class="num">Optimiste — 1 480 €/mois</th><th class="num">Pessimiste — 810 €/mois</th><th class="num">Local vacant — 930 €/mois</th></tr></thead>
+      <tbody>
+        <tr><td>Loyers bruts annuels</td><td class="num">14 760 €</td><td class="num">17 760 €</td><td class="num">9 720 €</td><td class="num">11 160 €</td></tr>
+        <tr><td>Excédent brut d'exploitation</td><td class="num">10 691 €</td><td class="num">14 212 €</td><td class="num">4 829 €</td><td class="num">7 782 €</td></tr>
+        <tr><td>EBE mensuel</td><td class="num">891 €/mois</td><td class="num">1 184 €/mois</td><td class="num">402 €/mois</td><td class="num">649 €/mois</td></tr>
+        <tr><td>Net après IS (convention prudente)</td><td class="num">9 088 €</td><td class="num">12 080 €</td><td class="num">4 104 €</td><td class="num">6 615 €</td></tr>
+        <tr><td>Rendement net avant IS (acte en main)</td><td class="num">6,41 %</td><td class="num">8,52 %</td><td class="num">2,90 %</td><td class="num">4,67 %</td></tr>
+        <tr><td>Rendement net après IS (acte en main)</td><td class="num">5,45 %</td><td class="num">7,24 %</td><td class="num">2,46 %</td><td class="num">3,97 %</td></tr>
+        <tr><td>Rendement net après IS sur la valeur (122 700 €)</td><td class="num">7,41 %</td><td class="num">9,85 %</td><td class="num">3,35 %</td><td class="num">5,39 %</td></tr>
+        <tr><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">197 985 €</td><td class="num">263 178 €</td><td class="num">89 422 €</td><td class="num">144 119 €</td></tr>
+        <tr><td>Écart au prix affiché (154 400 €)</td><td class="num">43 585 €</td><td class="num">108 778 €</td><td class="num">-64 978 €</td><td class="num">-10 281 €</td></tr>
+        <tr><td>Cash-flow mensuel après crédit (apport 10 %)</td><td class="num">-156 €/mois</td><td class="num">+138 €/mois</td><td class="num">-644 €/mois</td><td class="num">-398 €/mois</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Le seuil est tenu, de peu, et c'est le local qui le tient.</strong> La doctrine du parc exige 5 % net avant IS sur le prix de revient, ici 166 752 € d'acte en main (prix affiché 154 400 € + 12 352 € de frais, aucun travaux annoncé). En scénario de base, avec 1 230 €/mois de loyers reconstruits, l'excédent brut d'exploitation ressort à <strong>10 691 €</strong> — <strong>6,41 % net avant IS</strong>, soit 141 points de base au-dessus du seuil — et 5,45 % après IS. Ce résultat ne tient pas au prix mais à une ligne invisible dans l'annonce : le local commercial de 20 m², sans preneur, dont le loyer de 300 €/mois est une reconstruction. Sans lui, le dossier tombe à 4,67 % et le plafond de 5 % descend à 144 119 €, <strong>6,7 % sous le prix affiché</strong>. À l'inverse, un bail sous-évalué le 15 % de vacance fait tomber le rendement à 2,90 % et le plafond à 89 422 €.</p>
+    </div>
+    <h3>Sensibilité du plafond d'achat aux seuls loyers (charges du scénario de base)</h3>
+    <table class="projection-table compare">
+      <thead><tr><th>Loyers mensuels</th><th>Hypothèse</th><th class="num">EBE</th><th class="num">Rendement net avant IS</th><th class="num">Achat max (5 % net avant IS)</th><th class="num">Écart au prix affiché</th></tr></thead>
+      <tbody>
+        <tr><td>900 €/mois</td><td>hypothèse basse</td><td class="num">7 246 €</td><td class="num">4,35 %</td><td class="num">134 185 €</td><td class="num">-20 215 €</td></tr>
+        <tr><td>1 100 €/mois</td><td>local en rotation</td><td class="num">9 334 €</td><td class="num">5,60 %</td><td class="num">172 852 €</td><td class="num">18 452 €</td></tr>
+        <tr><td>1 230 €/mois</td><td>scénario de base</td><td class="num">10 691 €</td><td class="num">6,41 %</td><td class="num">197 985 €</td><td class="num">43 585 €</td></tr>
+        <tr><td>1 400 €/mois</td><td>hypothèse haute</td><td class="num">12 466 €</td><td class="num">7,48 %</td><td class="num">230 852 €</td><td class="num">76 452 €</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Deuxième lecture : ce que le dossier vaut sur son propre marché.</strong> Le prix affiché de 154 400 € ressort à 1 775 €/m² sur les 87 m² de lots bâtis (20 m² de local + 20 m² de studio + 47 m² de duplex, hors cave). Les immeubles de rapport réellement vendus à Brignoles en 2025 — 41 mutations de deux logements et plus — se traitent à une médiane de 1 410 €/m², de 326 à 2 131 €/m², et la transaction mixte la plus proche de ce bien (logement + local commercial, rue d'Entraigues) s'est faite à 1 339 €/m². Le prix affiché est donc au-dessus du haut de la fourchette de son propre marché : valeur retenue <strong>122 700 €</strong>, ratio coût/valeur de <strong>1,36</strong>. Sur la base de 67 m² retenus (les deux logements, hors cave et hors local) le prix ressort à 2 304 €/m², à comparer aux 2 246 €/m² de la médiane communale des appartements (168 ventes) : le rapprochement est trompeur dans les deux sens — un immeuble entier avec local commercial et cave se traite avec une décote de rendement, mais les petites surfaces de ce marché se vendent au-dessus de la médiane (2 500 €/m² sur la tranche 30-60 m²).</p>
+    </div>
+    <p class="attractiveness-intro">Repères de méthode : acte en main 166 752 € = prix affiché 154 400 € + frais d'acquisition 12 352 € (8 %, honoraires à la charge du vendeur) ; aucun travaux à l'acquisition (aucun travaux annoncé), provision travaux de 200 €/an en exploitation ; vacance 8 % en base, 5 % en hypothèse favorable, 15 % en hypothèse défavorable, 6 % dans la variante local vacant ; gestion locative 5 %, 4 % et 6 % selon les scénarios ; taxe foncière estimée 900 € (avis non communiqué) ; charges d'immeuble 400 € ; assurance PNO 150 € ; comptabilité 500 € ; SCI à l'IS avec IS de 15 % appliqué à l'EBE, sans amortissement du bâti modélisé (convention prudente — la dotation réelle de l'année 1, 4 117 €, laisse un résultat imposable positif de 1 432 € et un IS de 215 €) ; valeur de marché 122 700 € (1 410 €/m² sur les 87 m² de lots bâtis, médiane DVF 2025 des immeubles de rapport de la commune). <strong>Convention de lecture :</strong> le seuil de la doctrine du parc s'entend <em>avant</em> IS sur le prix de revient, soit 6,41 % ici ; le même rendement <em>après</em> IS ressort à 5,45 % sur l'acte en main et 7,41 % sur la valeur de marché retenue, tandis que le listing du dépôt affiche le net après IS sur le revient et sur le prix d'achat (5,4 % / 5,9 %). Les quatre chiffres décrivent la même exploitation sous quatre dénominateurs différents.</p>
+  </section>
+  <section class="financial-projections">
+    <h2>Cash-flow après crédit — service de la dette, apport et durée</h2>
+    <p class="attractiveness-intro"><strong>Hypothèses de crédit (doctrine du parc) :</strong> apport 10 %, frais de notaire assumés à part, prêt de 138 960 € sur 15 ans à 3,7 %, assurance emprunteur 0,34 % du capital. Mensualité <strong>1 046 €/mois</strong>, soit <strong>0,00753 € par euro emprunté</strong>. Comparée au net d'exploitation de 891 €/mois du scénario de base, cette mensualité ne peut pas être couverte : il manque <strong>156 €/mois</strong>.</p>
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Base — loyers 1 230 €/mois</h3>
+        <p class="scenario-subtitle">Prêt 138 960 € sur 15 ans — apport 10 %</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts mensuels</td><td class="num">1 230 €</td></tr>
+            <tr><td>Net d'exploitation mensuel (EBE)</td><td class="num">891 €</td></tr>
+            <tr><td>Mensualité de crédit (assurance incluse)</td><td class="num">-1 046 €</td></tr>
+            <tr class="highlight"><td>Cash-flow mensuel</td><td class="num">-156 €</td></tr>
+            <tr><td>Cash-flow annuel</td><td class="num">-1 867 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-optimiste">
+        <h3>Optimiste — loyers 1 480 €/mois</h3>
+        <p class="scenario-subtitle">Prêt 138 960 € sur 15 ans — apport 10 %</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts mensuels</td><td class="num">1 480 €</td></tr>
+            <tr><td>Net d'exploitation mensuel (EBE)</td><td class="num">1 184 €</td></tr>
+            <tr><td>Mensualité de crédit (assurance incluse)</td><td class="num">-1 046 €</td></tr>
+            <tr class="highlight"><td>Cash-flow mensuel</td><td class="num">138 €</td></tr>
+            <tr><td>Cash-flow annuel</td><td class="num">1 654 €</td></tr>
+        </tbody></table>
+      </div>
+      <div class="projection-card scenario-pessimiste">
+        <h3>Pessimiste — loyers 810 €/mois</h3>
+        <p class="scenario-subtitle">Prêt 138 960 € sur 15 ans — apport 10 %</p>
+        <table class="projection-table"><tbody>
+            <tr><td>Loyers bruts mensuels</td><td class="num">810 €</td></tr>
+            <tr><td>Net d'exploitation mensuel (EBE)</td><td class="num">402 €</td></tr>
+            <tr><td>Mensualité de crédit (assurance incluse)</td><td class="num">-1 046 €</td></tr>
+            <tr class="highlight"><td>Cash-flow mensuel</td><td class="num">-644 €</td></tr>
+            <tr><td>Cash-flow annuel</td><td class="num">-7 729 €</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Le dossier passe la grille de rendement, pas le critère de trésorerie.</strong> Au prix affiché et avec 10 % d'apport, il manque <strong>156 €/mois</strong> (1 867 €/an) au bien pour payer sa mensualité. Le déficit ne disparaît que dans l'hypothèse favorable de loyers (+138 €/mois) ; il s'aggrave à -644 €/mois dans l'hypothèse défavorable et reste à -398 €/mois si le local commercial ne trouve pas preneur. Le rendement net après IS (5,45 % sur l'acte en main) reste supérieur au taux du crédit de 3,7 %, donc l'opération s'enrichit à terme — mais elle consomme 27 998 € de trésorerie sur quinze ans, et c'est la trésorerie qui décide d'un achat.</p>
+    </div>
+    <table class="projection-table compare">
+      <thead><tr><th>Prix payé</th><th class="num">Capital emprunté (90 %)</th><th class="num">Mensualité</th><th class="num">Cash-flow</th><th class="num">Cash-flow annuel</th><th class="num">Loyers requis pour un cash-flow nul</th></tr></thead>
+      <tbody>
+        <tr><td>130 000 € — notre offre</td><td class="num">117 000 €</td><td class="num">881 €</td><td class="num">10 €/mois</td><td class="num">118 €/an</td><td class="num">1 219 €/mois</td></tr>
+        <tr><td>154 400 € — prix affiché</td><td class="num">138 960 €</td><td class="num">1 046 €</td><td class="num">-156 €/mois</td><td class="num">-1 867 €/an</td><td class="num">1 409 €/mois</td></tr>
+        <tr><td>140 000 € — plafond de négociation</td><td class="num">126 000 €</td><td class="num">949 €</td><td class="num">-58 €/mois</td><td class="num">-695 €/an</td><td class="num">1 297 €/mois</td></tr>
+      </tbody>
+    </table>
+    <h3>Ce qu'il faudrait pour un cash-flow nul</h3>
+    <table class="projection-table compare">
+      <thead><tr><th>Levier</th><th class="num">Valeur</th><th>Lecture</th></tr></thead>
+      <tbody>
+        <tr><td>Loyers mensuels pour un cash-flow nul au prix affiché</td><td class="num">1 409 €/mois</td><td>contre 1 230 €/mois retenus, soit +15 %</td></tr>
+        <tr><td>Prix d'achat à cash-flow nul, 10 % d'apport, loyers de 1 230 €/mois</td><td class="num">131 451 €</td><td>-14,9 % sous le prix affiché</td></tr>
+        <tr><td>Prix d'achat à cash-flow nul, 10 % d'apport, loyers de 1 480 €/mois</td><td class="num">174 735 €</td><td>charges du scénario de base, loyers de l'hypothèse favorable</td></tr>
+        <tr><td>Prix d'achat à cash-flow nul si le local reste vide</td><td class="num">95 686 €</td><td>-38,0 % sous le prix affiché — hors doctrine</td></tr>
+        <tr><td>Apport pour un cash-flow nul au prix affiché</td><td class="num">36 094 €</td><td>23 % du prix</td></tr>
+        <tr><td>Apport pour un cash-flow nul au prix affiché, local vide</td><td class="num">68 282 €</td><td>44 % du prix</td></tr>
+        <tr><td>Apport pour un cash-flow nul à 130 000 €</td><td class="num">11 694 €</td><td>9 % du prix — l'offre équilibre la trésorerie à apport quasi nul</td></tr>
+        <tr><td>Apport pour un cash-flow nul à 140 000 €</td><td class="num">21 694 €</td><td>15 % du prix</td></tr>
+        <tr><td>Durée 20 ans</td><td class="num">860 €/mois</td><td>cash-flow 31 €/mois</td></tr>
+        <tr><td>Durée 25 ans</td><td class="num">750 €/mois</td><td>cash-flow 141 €/mois</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Fiscalité année 1 — ici, l'amortissement ne suffit pas à effacer l'impôt.</strong> Intérêts d'emprunt 5 142 € (138 960 € à 3,7 %), dotation aux amortissements 4 117 € (bâti à 80 % sur 30 ans) : le résultat imposable de l'année 1 est <strong>positif, 1 432 €</strong>, soit <strong>215 € d'IS à 15 %</strong>. C'est une différence avec les dossiers où la dotation crée un déficit : ici l'exploitation dégage assez pour être imposée dès la première année. Le moteur retient par ailleurs, pour les rendements nets publiés, la convention la plus prudente : IS de 15 % appliqué à l'EBE, soit <strong>1 604 €/an</strong>, sans amortissement du bâti modélisé. Dans les deux lectures, l'impôt n'est pas le sujet du dossier — il ne représente que 15 % de l'EBE, et c'est la mensualité qui décide.</p>
+      <p class="attractiveness-intro"><strong>Le service de la dette vaut 9,0 % du capital emprunté par an</strong> (intérêts, capital et assurance) alors que le bien rapporte <strong>7,7 % sur ce même capital</strong> : l'écart, c'est la mensualité que le bien ne couvre pas. Ce n'est pas un dossier mort — l'actif s'apprécie, la dette se rembourse et le rendement passe le seuil de 5 % —, mais c'est un dossier qui demande 27 998 € de trésorerie sur quinze ans, ou un apport de 23 % au lieu de 10 %, ou un prix de 131 451 € au lieu de 154 400 €. Trois réponses possibles, aucune gratuite. Au-delà de 30 000 € d'apport, le dossier sort de la doctrine du parc.</p>
+    </div>
+  </section>
+  <section class="financial-projections">
+    <h2>Variante publiée — le local commercial reste vide</h2>
+    <p class="attractiveness-intro">C'est la seule vraie inconnue du dossier : l'annonce ne mentionne <strong>aucun preneur, aucun bail et aucun loyer</strong> pour le local de 20 m² du rez-de-chaussée, qui représente 23 % de la surface bâtie. La variante ci-dessous le compte <strong>vacant toute l'année</strong> : seuls le studio (380 €) et le duplex (550 €) produisent un loyer, soit <strong>930 €/mois</strong>, avec une vacance ramenée à 6 % sur les deux logements — un local structurellement vide n'est pas une provision statistique, c'est un revenu absent, et l'additionner au taux de vacance compterait deux fois la même perte.</p>
+    <table class="projection-table compare">
+      <thead><tr><th>Indicateur</th><th class="num">Scénario de base — 1 230 €/mois</th><th class="num">Local vacant — 930 €/mois</th><th class="num">Écart</th></tr></thead>
+      <tbody>
+        <tr><td>Loyers bruts annuels</td><td class="num">14 760 €</td><td class="num">11 160 €</td><td class="num">-3 600 €</td></tr>
+        <tr><td>Excédent brut d'exploitation</td><td class="num">10 691 €</td><td class="num">7 782 €</td><td class="num">-2 909 €</td></tr>
+        <tr><td>EBE mensuel</td><td class="num">891 €/mois</td><td class="num">649 €/mois</td><td class="num">-242 €/mois</td></tr>
+        <tr><td>Rendement net avant IS (acte en main)</td><td class="num">6,41 %</td><td class="num">4,67 %</td><td class="num">-1,74 pt</td></tr>
+        <tr><td>Rendement net après IS (acte en main)</td><td class="num">5,45 %</td><td class="num">3,97 %</td><td class="num">-1,48 pt</td></tr>
+        <tr class="highlight"><td>Prix d'achat tenant 5 % net avant IS</td><td class="num">197 985 €</td><td class="num">144 119 €</td><td class="num">-53 867 €</td></tr>
+        <tr><td>Écart au prix affiché (154 400 €)</td><td class="num">+43 585 €</td><td class="num">-10 281 €</td><td class="num">-53 867 €</td></tr>
+        <tr class="highlight"><td>Cash-flow mensuel après crédit</td><td class="num">-156 €/mois</td><td class="num">-398 €/mois</td><td class="num">-242 €/mois</td></tr>
+        <tr><td>Prix d'achat à cash-flow nul</td><td class="num">131 451 €</td><td class="num">95 686 €</td><td class="num">-35 764 €</td></tr>
+        <tr><td>Apport pour un cash-flow nul au prix affiché</td><td class="num">36 094 €</td><td class="num">68 282 €</td><td class="num">32 188 €</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Le local fait basculer le dossier.</strong> Sans lui, le plafond d'achat tenant 5 % net avant IS tombe à <strong>144 119 €</strong>, soit <strong>6,7 % sous le prix affiché</strong>, et il faudrait un apport de 68 282 € (44 % du prix) pour équilibrer la trésorerie — hors doctrine. Autrement dit : acheter ce dossier sans preuve de l'occupation du local, c'est acheter un rendement de 4,67 % au prix d'un rendement de 6,41 %. <strong>Aucun engagement sans le bail du local ou, à défaut, une décote de 20 000 € qui paie sa vacance.</strong></p>
+    </div>
+  </section>
+  <section class="financial-projections">
+    <h2>Marché local — DVF 2025 réelle de la commune et fiche de référence</h2>
+    <p class="attractiveness-intro">Les 397 mutations de nature « Vente » enregistrées en 2025 à Brignoles donnent un marché résidentiel liquide et un marché d'immeuble de rapport beaucoup plus étroit. Méthode : valeur foncière de la mutation divisée par la somme des surfaces bâties de la mutation, surfaces supérieures à 5 m² et valeurs supérieures à 5 000 €.</p>
+    <table class="projection-table compare">
+      <thead><tr><th>Segment DVF 2025 — Brignoles (83023)</th><th class="num">Mutations</th><th class="num">Médiane €/m²</th><th>Lecture</th></tr></thead>
+      <tbody>
+        <tr><td>Appartements, toutes surfaces</td><td class="num">168</td><td class="num">2 246 €</td><td>premier quartile 1 703, troisième 2 900</td></tr>
+        <tr><td>Appartements de moins de 30 m²</td><td class="num">8</td><td class="num">2 260 €</td><td>tranche du studio de 20 m² — échantillon étroit</td></tr>
+        <tr><td>Appartements de 30 à 60 m²</td><td class="num">79</td><td class="num">2 500 €</td><td>tranche du duplex de 47 m²</td></tr>
+        <tr><td>Appartements de 60 m² et plus</td><td class="num">81</td><td class="num">2 062 €</td><td>le prix au m² décroît avec la surface</td></tr>
+        <tr><td>Maisons</td><td class="num">142</td><td class="num">2 841 €</td><td>autre produit, cité pour situer le marché</td></tr>
+        <tr class="highlight"><td>Immeubles de rapport — deux logements et plus</td><td class="num">41</td><td class="num">1 410 €</td><td>de 326 à 2 131 €/m² — c'est le produit comparable</td></tr>
+        <tr><td>Immeubles mêlant logement et local commercial</td><td class="num">10</td><td class="num">—</td><td>de 789 à 3 593 €/m² : marché très étroit</td></tr>
+      </tbody>
+    </table>
+    <table class="projection-table compare">
+      <thead><tr><th>Transaction comparable</th><th class="num">Surface</th><th class="num">Prix</th><th class="num">€/m²</th></tr></thead>
+      <tbody>
+        <tr><td>rue d'Entraigues, 30/01/2025 — 4 lignes (deux appartements et un local commercial)</td><td class="num">127 m²</td><td class="num">170 000 €</td><td class="num">1 339 €</td></tr>
+        <tr><td>rue Jules Ferry, 01/04/2025 — 3 lignes (un appartement, un local et une dépendance)</td><td class="num">79 m²</td><td class="num">139 600 €</td><td class="num">1 767 €</td></tr>
+        <tr class="highlight"><td><strong>Le bien analysé</strong>, au prix affiché, sur les 87 m² de lots bâtis</td><td class="num">87 m²</td><td class="num">154 400 €</td><td class="num">1 775 €</td></tr>
+      </tbody>
+    </table>
+    <div class="risk-matrix">
+      <p class="attractiveness-intro"><strong>Ce que disent les chiffres.</strong> À 1 775 €/m² sur les lots bâtis, le prix affiché se situe au-dessus du haut de la fourchette observée sur le produit comparable (1 410 €/m² de médiane sur 41 mutations, jusqu'à 2 131 €/m²) et très au-dessus de la transaction mixte la plus proche (1 339 €/m² rue d'Entraigues). Sur la base retenue de 67 m² (les deux logements, hors cave et hors local), il ressort à 2 304 €/m², à comparer aux 2 246 €/m² de médiane communale toutes surfaces — mais cette comparaison est trop favorable, parce qu'un immeuble entier avec local commercial et cave se traite avec une décote de rendement, pas au prix de l'appartement moyen. La valeur de marché retenue ici est donc <strong>122 700 €</strong>, fourchette 116 500 à 153 700 € : elle est ancrée sur le produit réellement comparable, pas sur la moyenne communale.</p>
+      <p class="attractiveness-intro"><strong>Référence interne de la commune</strong> (fiche <em>Marchés locaux</em> mise à jour le 21/09/2026) : marché 2 325 €/m², loyer de référence 11,0 €/m²/mois sur un lot type de 60 m², plafonds d'achat par m² habitable frais compris de 1 021 € (6,5 % net d'IS), 943 € (7,0 %) et 818 € (8,0 %) en vision patrimoniale, et 558 / 516 / 489 €/m² en vision marchand de biens. La fiche conclut qu'aucune des douze villes du secteur n'offre le seuil patrimonial au prix de marché et que c'est la lecture marchand de biens qui est praticable : ce dossier n'échappe pas à la règle, puisque son prix d'entrée (166 752 € d'acte en main) est très au-dessus de tous ces plafonds.</p>
+      <p class="attractiveness-intro"><strong>À lire aussi dans le dépôt</strong> — <a href="../2026-09-18-immeuble-rapport-brignoles-centre/index.html">Immeuble de rapport Brignoles centre (18/09/2026)</a>, <a href="../2026-09-20-immeuble-rapport-brignoles-centre-ancien/index.html">Immeuble de rapport Brignoles centre ancien, 3 T3, Site Patrimonial Remarquable (20/09/2026)</a> et la <a href="../marches-locaux/index.html">fiche de référence des marchés locaux</a> (mise à jour du 21/09/2026), qui donne pour Brignoles les plafonds d'achat utilisés ici. Les deux dossiers précédents portaient sur des immeubles de centre ancien sans local commercial ou avec réhabilitation lourde ; celui-ci est le seul du lot dont le rendement en l'état passe le seuil de 5 % net avant IS — et le seul dont la décision tient à un local commercial dont personne ne connaît l'occupation.</p>
+    </div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead><tr><th>Facteur de risque</th><th>Détail</th><th>Sévérité</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Local commercial de 20 m² sans preneur ni bail : 23 % de la surface bâtie</td>
+          <td>C'est le poste qui décide du dossier, et il n'est documenté nulle part : aucun bail, aucun preneur, aucun loyer, aucune durée. Le local représente 20 m² sur 87 m² de lots bâtis, soit 23 %. Selon qu'il est loué ou vide, le rendement net avant IS passe de 6,41 % à 4,67 %, le plafond d'achat de 197 985 € à 144 119 € et le cash-flow de -156 €/mois à -398 €/mois. La vacance commerciale du centre ancien de Brignoles n'est pas documentée : à vérifier en mairie et par un relevé des locaux vides de la rue AVANT toute offre</td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Aucun loyer, aucun bail, aucune taxe foncière, aucune charge</td>
+          <td>L'annonce affirme « idéal investissement locatif » et ne donne pas un seul chiffre d'exploitation : ni loyer, ni bail, ni date d'échéance, ni taxe foncière, ni charge, ni travaux. Le chiffrage publié repose donc sur des loyers reconstruits à partir du marché relevé le 25/09/2026 : 6,41 % net avant IS à 1 230 €/mois, 8,52 % à 1 480 €, 2,90 % à 810 €. L'écart entre les hypothèses vaut une recommandation. Exiger les trois baux ou attestations de location, les quittances et l'avis de taxe foncière AVANT l'offre : une annonce qui vend de la rentabilité sans en donner le chiffre dit quelque chose du dossier</td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Immeuble de 1940 : couverture, charpente et réseaux non documentés</td>
+          <td>Aucun devis, aucun diagnostic électricité, plomb ou amiante, aucun état de la couverture, de la charpente ni de l'humidité de la cave — seul le DPE est joint. Sur un immeuble entier en monopropriété, ces postes sont à 100 % pour l'acquéreur : une couverture à reprendre ou une électricité à mettre aux normes sur trois niveaux coûte plusieurs années de loyer net, et rien de tout cela n'est dans le prix. Visite d'un homme de l'art et devis écrits avant l'offre, sur les trois postes qui dérapent : électricité, couverture, humidité de la cave</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Cash-flow négatif sous crédit : le dossier échoue au critère du parc</td>
+          <td>Le dossier passe la grille de rendement (6,41 % net avant IS au prix affiché) mais pas le critère de trésorerie. À 10 % d'apport, prêt de 138 960 € sur 15 ans à 3,7 % avec assurance emprunteur de 0,34 %, la mensualité est de 1 046 €/mois quand l'exploitation dégage 891 €/mois en scénario de base : le cash-flow est de -156 €/mois, soit -1 867 €/an, et il ne redevient positif que dans l'hypothèse favorable (+138 €/mois). Si le local reste vide, il faut 68 282 € d'apport (44 % du prix) pour équilibrer — très au-delà de la doctrine du parc</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Marché de revente de l'immeuble de rapport très étroit</td>
+          <td>Le marché résidentiel de la commune est liquide (397 mutations en 2025), mais celui de l'immeuble de rapport ne l'est pas : 41 mutations de deux logements et plus dans l'année, médiane 1 410 €/m², et seulement 10 transactions mêlant logement et local commercial. La sortie se fera donc sur un marché d'acquéreurs de rendement, à un prix dicté par le rendement obtenu, et non par la valeur des lots pris séparément. À ce prix d'entrée, la revente suppose de retrouver le même acquéreur — c'est un actif qui se garde, pas qui se retourne</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Cave de 17 m² annoncée, puis contredite par la fiche « Pas de cave »</td>
+          <td>Le texte de l'annonce décrit une cave de 17 m² avec accès par escalier intérieur au local commercial ; la fiche « caractéristiques » du même bien indique « Pas de cave ». Les deux documents portent sur le même lot et ne peuvent pas être vrais en même temps. L'enjeu n'est pas la surface de la cave mais ce que la contradiction dit du dossier : aucune pièce n'a été vérifiée avant publication, ni les surfaces, ni les diagnostics. À lever par écrit avant l'offre — et à vérifier au titre de l'exposition à l'humidité et de l'usage réel du volume</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Chambre du duplex avec fenêtre sur couloir : défaut de jour, 9,50 m² à qualifier</td>
+          <td>Sur les deux chambres du duplex (environ 9,50 et 11 m²), une a une fenêtre sur couloir. Une pièce qui ne prend pas le jour sur l'extérieur n'est pas une chambre de plein droit au sens du règlement sanitaire départemental, et le logement ne se commercialise pas comme un T3 : au mieux comme un T2 avec pièce annexe. Cela réduit la valeur locative du lot et complique la revente à un acquéreur familial. À qualifier par le règlement de copropriété, le PLU et le règlement sanitaire avant de compter le lot comme un T2 — et à faire baisser le loyer cible en conséquence</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Transformation du local en studio annoncée mais non instruite (changement d'usage)</td>
+          <td>L'annonce écrit que le local « peut être transformé en un studio » : c'est une hypothèse d'agence, pas une autorisation. Passer un local commercial en habitation suppose de vérifier le changement d'usage, le destinataire de l'autorisation d'urbanisme, les règles du PLU et du secteur sauvegardé, la desserte en réseau et le chiffrage des travaux (création d'une cuisine, d'une salle d'eau aux normes, isolation, électricité). Aucun de ces points n'est documenté. La transformation partirait en surcoût sans bouquet de diagnostics et sans devis — et c'est le seul levier du dossier, puisque le local est la variable qui décide</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Taxe foncière inconnue</td>
+          <td>L'avis n'est pas communiqué. Estimation retenue 900 €/an, fourchette 700 à 1 100 € pour un immeuble de trois lots en centre ancien. L'écart vaut 200 €/an, soit 0,12 % de rendement net avant IS sur l'acte en main — modeste en soi, mais à demander : c'est une pièce gratuite, et l'avis donne la valeur locative cadastrale d'un bien dont aucune surface Carrez par lot n'est publiée</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Aucun plan, aucune surface Carrez par lot, visite virtuelle non liée</td>
+          <td>L'annonce repose sur 12 photographies et une visite virtuelle annoncée mais non liée dans la page. Aucun plan n'est joint et aucune surface Carrez n'est donnée par lot : or c'est la surface par lot qui détermine le loyer réglementaire de chaque logement et l'article de surface carrez. Les 90 m² annoncés comprennent la cave et le local, ce qui les compare à tort aux surfaces habitables de la commune. Le dossier n'est pas vérifiable à distance : tout chiffrage publié ici repose sur des surfaces déclaratives</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision"><p class="verdict-stance"><strong>À négocier — offrir 130 000 €, plafond 140 000 €. Au-delà de ce plafond, le dossier ne se finance plus : il faut un apport de 36 094 € pour équilibrer la trésorerie au prix affiché, et 68 282 € si le local commercial ne trouve pas preneur.</strong><br><br>Le raisonnement tient en deux grilles, et le dossier en passe une sur deux. Sur la grille de rendement, il est conforme : avec les loyers reconstruits à partir du marché — 1 230 €/mois — l'exploitation dégage 10 691 € d'EBE, soit 6,41 % net avant IS sur l'acte en main, au-dessus du seuil de 5 %, et 5,45 % après IS contre 3,7 % de taux d'intérêt : l'opération s'enrichit. Sur la grille de trésorerie, il échoue : à 10 % d'apport, la mensualité est de 1 046 €/mois pour 891 €/mois d'exploitation, soit <strong>-156 €/mois</strong> (-1 867 €/an). Pour équilibrer au prix affiché, il faudrait <strong>1 409 €/mois de loyers</strong> — 15 % de plus que notre base —, ou un prix de 131 451 €, ou un apport de 36 094 € (23 % du prix). Au-delà de 30 000 € d'apport, le dossier sort de la doctrine du parc.<br><br><strong>Ce que cela fixe comme cadre d'offre.</strong> À <strong>130 000 €</strong>, le rendement monte à 7,61 % net avant IS et le cash-flow revient à l'équilibre (+10 €/mois) avec la mensualité de 881 €/mois : c'est le prix qui tient les deux grilles à la fois. À <strong>140 000 €</strong> — notre plafond — le rendement est de 7,07 % et le déficit mensuel est ramené de 156 € à 58 €. Entre les deux, la négociation se joue sur un montant qui reste dans la doctrine du parc. <strong>Trois pièces suspensives, non négociables :</strong> le bail du local commercial ou, à défaut, une décote d'au moins 20 000 € qui paie sa vacance — c'est la seule donnée qui décide, et s'il est libre depuis plus de six mois la réponse change ; les loyers des deux logements avec leurs quittances ; l'avis de taxe foncière et les diagnostics datés (électricité, plomb, amiante, état de la couverture, de la charpente et de l'humidité de la cave), sur un immeuble de 1940 dont l'acquéreur porte seul la structure.<br><br><strong>Ce qui reste bon dans ce dossier.</strong> C'est le seul des immeubles de rapport Brignoles du dépôt dont le rendement en l'état passe le seuil de 5 % net avant IS, sans travaux annoncés et sans passif énergétique (DPE D, aucune échéance avant 2034). Il apporte une source de revenu que n'ont ni l'immeuble du 18/09/2026 ni celui du 20/09/2026 : un local commercial de 20 m² en rez-de-chaussée de la vieille ville. Mais un dossier qui passe le rendement sans passer la trésorerie ne s'achète pas au prix affiché : il se négocie, et il ne se négocie pas en aveugle — sans preuve des baux et de l'occupation du local, on ne s'engage pas.</p></div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond recommandé :</strong> <strong>Trois ancres, et c'est la trésorerie qui commande.</strong> Sur le seul critère de rendement, le prix qui tient 5 % net avant IS est de 197 985 € avec 1 230 €/mois de loyers — un seuil, pas une cible, et il est très au-dessus du prix affiché : la grille de rendement n'est donc pas contraignante ici, ce qui est rare et ce qui explique la tentation. Sur le critère de trésorerie, la contrainte est brutale : à 10 % d'apport, le prix qui donne un cash-flow nul est de <strong>131 451 €</strong> — c'est le prix auquel le bien couvre sa mensualité de 1 046 €/mois — et il tombe à <strong>95 686 €</strong> si le local commercial reste vide toute l'année : 35 764 € de capacité de prix, littéralement le prix du local. Sur le critère de valeur de marché, enfin, la valeur retenue est de 122 700 € (87 m² × 1 410 €/m², médiane DVF 2025 des immeubles de rapport de la commune) : un ratio coût/valeur de 0,95 plafonnerait le prix à 107 931 €, et le prix affiché ressort à un ratio de 1,36. C'est dire que le prix affiché achète au-dessus de ce que le produit vaut sur son propre marché.<br><br><strong>Ce qu'on propose.</strong> Une offre à <strong>130 000 €</strong>, qui rend les deux grilles conformes à la fois (rendement 7,61 %, cash-flow à l'équilibre, apport 11 694 €), et un <strong>plafond de 140 000 €</strong> au-delà duquel on passe. Ce plafond de 140 000 € n'est pas un confort : à ce prix, le rendement est de 7,07 % net avant IS mais le cash-flow reste négatif de 58 €/mois, et il faut 21 694 € d'apport pour le ramener à zéro — encore dans la doctrine, mais juste. Sensibilité du plafond de rendement aux seuls loyers, charges de base inchangées : à 900 €/mois 134 185 €, à 1 100 €/mois 172 852 €, à 1 230 €/mois 197 985 €, à 1 400 €/mois 230 852 €. Chaque tranche de 100 €/mois de loyer vaut environ 18 500 € de capacité de prix : c'est le taux de change de cette négociation. Et si le local commercial reste vide, le plafond tombe à 144 119 € et la réponse est non, sauf décote de 20 000 €.</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Le local commercial est l'argument central, et l'annonce le fournit elle-même : elle vend « idéal investissement locatif » sans donner un seul loyer, pour un lot qui pèse 23 % de la surface bâtie. Demander le bail, le preneur, la durée et les quittances du local AVANT toute discussion de prix, et faire constater par écrit que le dossier n'est pas chiffrable sans eux</li>
+        <li>Le prix au m² est le deuxième levier, mais il faut le poser sur la bonne base : 1 716 €/m² ne se compare à rien, puisque les 90 m² annoncés comprennent la cave. Sur les 87 m² de lots bâtis, le prix affiché ressort à 1 775 €/m², au-dessus du haut de la fourchette des immeubles de rapport réellement vendus dans la commune en 2025 (médiane 1 410 €/m², 41 mutations), et au-dessus de la transaction mixte de la rue Jules Ferry (1 767 €/m²). Deux pièces de DVF suffisent à le démontrer</li>
+        <li>Le défaut de jour de la chambre du duplex (environ 9,50 m² avec fenêtre sur couloir) doit être qualifié avant l'offre : une pièce sans jour naturel sur l'extérieur n'est pas une chambre de plein droit, le lot ne se commercialise donc pas comme un T3 — et c'est un argument de baisse du loyer ou du prix, pas un détail de plan</li>
+        <li>L'annonce se contredit elle-même sur la cave : le texte décrit 17 m² avec accès par escalier intérieur, la fiche « caractéristiques » indique « Pas de cave ». À faire lever par écrit par l'agence, avec la surface de chaque lot — c'est ce qui établit que rien du dossier n'a été vérifié avant publication</li>
+        <li>Aucun diagnostic autre que le DPE n'est joint, sur un immeuble de 1940 en monopropriété où la couverture, la charpente et les réseaux sont à 100 % pour l'acquéreur : demander les diagnostics électricité, plomb et amiante, et faire visiter la couverture et la cave par un homme de l'art. Une toiture à reprendre coûte plusieurs années de loyer net</li>
+        <li>La taxe foncière n'est pas communiquée : demander l'avis réel et la valeur locative cadastrale. L'écart entre 700 et 1 100 €/an vaut 200 €/an, soit plus de 40 % de la marge dont le dossier dispose au-dessus du seuil de 5 % — et l'avis, gratuit à demander, donne la seule surface opposable en l'absence de plan</li>
+        <li>L'hypothèse de loyer du studio est la plus généreuse du modèle : 380 € pour 20 m² ressortent à 19 €/m²/mois quand l'annonce de 36 m² relevée le 25/09/2026 se loue 450 €, soit 12,5 €/m². À faire confirmer par des annonces locatives comparables avant de considérer le rendement de base comme acquis</li>
+        <li>L'absence de copropriété se retourne contre nous et doit se chiffrer : aucune mutualisation des travaux de structure, aucun budget prévisionnel, aucun copropriétaire avec qui partager une toiture ou une façade. C'est un argument de négociation légitime — et si une copropriété existe, exiger immédiatement le budget prévisionnel et les trois derniers procès-verbaux d'assemblée</li>
+        <li>Le marché de revente est liquide (397 mutations en 2025) mais celui de l'immeuble de rapport ne l'est pas (41 mutations de deux logements et plus, 10 seulement mêlant logement et local commercial) : ne pas se laisser vendre un argument patrimonial à ce prix d'entrée, où le ratio coût/valeur ressort à 1,36. Cette sincérité est aussi ce qui rend crédible la demande de baisse</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS. Année 1 : EBE 10 691 € moins intérêts 5 142 € et dotation aux amortissements 4 117 € (bâti à 80 % sur 30 ans) = résultat imposable de 1 432 €, positif, donc IS de 15 % soit 215 €. Convention prudente retenue pour les rendements publiés : IS de 15 % sur l'EBE, sans amortissement du bâti modélisé, soit 1 604 €/an. Seuil de décision du parc (5 % net avant IS) : 6,41 % en base, 5,45 % sous convention prudente</p>
+      <p><strong>Frais d'acquisition :</strong> 12 352 € (8 %), honoraires à la charge du vendeur. Prix de revient acte en main : 166 752 €, sans travaux (aucun travaux annoncé)</p>
+      <p><strong>Loyers :</strong> 1 230 €/mois reconstruits (studio 380 € + duplex 550 € + local commercial 300 €) — aucun loyer communiqué par l'annonce. Hypothèses de sensibilité : 1 480 €/mois (favorable), 810 €/mois (défavorable) et 930 €/mois (local commercial vacant toute l'année)</p>
+      <p><strong>Charges retenues :</strong> taxe foncière estimée 900 €/an (avis non communiqué), charges d'immeuble 400 €/an (pas de copropriété), PNO 150 €, gestion locative 5 % des loyers et provision travaux 200 € (poste composite de 938 €), comptabilité 500 €. Provision automatique de 2,5 % du moteur désactivée pour ne pas compter deux fois la provision travaux. Aucun poste laissé à zéro</p>
+      <p><strong>Financement (doctrine du parc) :</strong> apport 10 %, prêt de 138 960 € sur 15 ans à 3,7 % et assurance emprunteur de 0,34 %, soit une mensualité de 1 046 €/mois (0,00753 € par euro emprunté). Cash-flow de <strong>-156 €/mois</strong> (-1 867 €/an) au prix affiché, +138 €/mois en hypothèse favorable, -644 €/mois en hypothèse défavorable, -398 €/mois si le local reste vide. Prix d'équilibre à 10 % d'apport : 131 451 € en base et 95 686 € local vide. Apport nécessaire pour un cash-flow nul au prix affiché : 36 094 € (23 % du prix), et 68 282 € (44 %) si le local est vide. Ne pas lire cette fiche comme un dossier finançable en l'état</p>
+      <p><strong>Valeur de marché :</strong> 122 700 € (87 m² de lots bâtis × 1 410 €/m²), fourchette 116 500 à 153 700 €. Ancrage : médiane DVF 2025 des 41 mutations d'immeubles de rapport de la commune, encadrée par deux transactions mixtes nommées du centre-ville (1 339 €/m² rue d'Entraigues le 30/01/2025, 1 767 €/m² rue Jules Ferry le 01/04/2025). La médiane communale des appartements (2 246 €/m²) n'est pas applicable à un immeuble entier avec local et cave. Le prix affiché ressort à un ratio coût/valeur de 1,36</p>
+      <p><strong>Contrôles à faire avant toute offre :</strong> le bail du local commercial et son occupation réelle ; les loyers des deux logements, leurs baux, échéances et quittances ; avis de taxe foncière et valeur locative cadastrale ; diagnostics datés (DPE, électricité, plomb, amiante) et état de la couverture, de la charpente et de l'humidité de la cave par un homme de l'art ; surfaces Carrez par lot et plan des trois niveaux ; statut de propriété (monopropriété ou copropriété) ; pièces d'urbanisme si la transformation du local en studio est envisagée</p>
+      <p><strong>Point de méthode :</strong> sur ce dossier, le seul paramètre qui déplace la décision n'est pas le prix — la grille de rendement tiendrait jusqu'à 197 985 € — mais l'occupation du local commercial et le montant réel des loyers. Le local représente 23 % de la surface bâtie et fait passer le rendement de 6,41 % à 4,67 %, le plafond d'197 985 € à 144 119 € et le cash-flow de -156 €/mois à -398 €/mois. Aucune offre ne doit être signée avant d'avoir vu le bail ou l'état de vacance de ce lot</p>
+      <p><strong>Comparaison — les autres dossiers Brignoles du dépôt :</strong> l'immeuble de rapport du centre (230 000 € affichés le 20/09/2026, trois T3 de 196 m² en Site Patrimonial Remarquable) exigeait une rénovation lourde et un DPE absent ; celui du 18/09/2026 portait sur le centre-ville également. Le présent dossier est le seul dont le rendement en l'état passe le seuil de 5 % net avant IS (6,41 %), sans travaux annoncés et sans passif énergétique — mais c'est aussi le seul dont la décision tient à un local commercial dont personne ne connaît l'occupation, et c'est ce qui doit décider de l'ordre de priorité : celui-ci se négocie en premier, à condition d'obtenir les baux</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier - 06 27 84 53 50 - sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+    var map = L.map('map-container').setView([lat, lon], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
