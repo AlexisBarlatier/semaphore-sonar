@@ -3,7 +3,7 @@
     "schema": "analyses-v2-entrees",
     "generated_at": "2026-09-10T00:00:00+00:00",
     "source": "saisie-agent",
-    "count": 68
+    "count": 69
   },
   "analyses": [
     {
@@ -8909,6 +8909,237 @@
           "état descriptif de division ou statut de propriété de l'immeuble (détention en totalité à confirmer)",
           "date d'effet des baux et état des lieux des deux logements"
         ]
+      }
+    },
+    {
+      "slug": "2026-09-25-immeuble-rapport-brignoles-vieille-ville",
+      "date_analyse": "2026-09-25",
+      "date_maj": null,
+      "titre": "Immeuble de rapport en centre vieille ville — local commercial de 20 m², studio de 20 m² et duplex T2 de 47 m², cave de 17 m² — Brignoles (83170)",
+      "bien": {
+        "type_bien": "immeuble",
+        "sous_type": null,
+        "type_detail": "Immeuble de rapport du centre vieille ville de Brignoles, construit en 1940, composé de trois lots bâtis et d'une cave : au rez-de-chaussée un local commercial de 20 m² (une pièce avec salle d'eau et WC, annoncé « peut être transformé en un studio ») et une cave de 17 m² dont l'accès se fait par un escalier intérieur au local ; au 1er étage un studio de 20 m² (pièce de vie avec cuisine, salle d'eau, WC) ; au 2e étage un duplex de 47 m² de type T2 (pièce de vie avec cuisine d'environ 18 m², salle d'eau et WC, puis à l'étage deux chambres d'environ 9,50 et 11 m² dont une avec fenêtre sur couloir). DPE D, GES B, facture énergétique annoncée entre 810 et 1 140 €/an. L'annonce ne communique AUCUN loyer, AUCUN bail, AUCUNE taxe foncière, AUCUNE charge et AUCUN travaux, et affirme seulement « idéal investissement locatif » : le chiffrage repose donc entièrement sur des loyers reconstruits. La fiche « caractéristiques » de l'annonce indique « Pas de cave » alors que le texte décrit une cave de 17 m² — incohérence à lever avant l'offre. Aucun plan n'est joint, 12 photographies sont publiées, une visite virtuelle est annoncée mais non liée dans l'annonce. Aucun diagnostic autre que le DPE n'est communiqué",
+        "neuf": false,
+        "adresse": {
+          "texte": "Centre vieille ville, Brignoles (83170) — adresse exacte non communiquée par l'agence",
+          "ville": "Brignoles",
+          "code_postal": "83170"
+        },
+        "surfaces": {
+          "texte": "90 m² annoncés (1 716 €/m²) ; 87 m² de lots bâtis (20 local + 20 studio + 47 duplex) plus une cave de 17 m². Base retenue : 67 m² pour les deux logements (studio 20 m² + duplex 47 m²), hors cave et hors local, soit 2 304 €/m²",
+          "carrez_m2": 67.0
+        },
+        "lots": {
+          "count": 3,
+          "surface_par_lot_m2": null,
+          "nature": "Trois lots bâtis : local commercial de 20 m² au RDC (une pièce avec salle d'eau et WC), studio de 20 m² au 1er, duplex T2 de 47 m² au 2e (deux chambres d'environ 9,50 et 11 m²), plus une cave de 17 m² accessible par l'escalier intérieur du local. Aucune surface Carrez par lot, aucun plan, aucun diagnostic daté autre que le DPE",
+          "lots_distincts": 3
+        },
+        "copro": {
+          "charges_annuelles_euros": 400.0,
+          "charges_source": "Aucune copropriété n'est mentionnée : l'immeuble est présumé détenu en totalité par un seul propriétaire, donc sans charges votées, sans budget prévisionnel et sans mutualisation des travaux de structure. Le poste saisi (400 €/an) couvre l'entretien courant, porté seul par l'acquéreur. À CONFIRMER : si l'immeuble relève d'une copropriété, le budget prévisionnel doit être obtenu, ce qui augmenterait d'autant les charges"
+        },
+        "travaux": {
+          "montant_euros": 0.0,
+          "nature": "Aucun travaux annoncé et aucun devis communiqué. Immeuble de 1940 : couverture, charpente, réseaux et humidité de la cave ne sont documentés par aucune pièce, et le seul diagnostic joint est le DPE. Aucune enveloppe n'est donc engagée à l'acquisition — le chiffrage se fait en l'état, avec une provision de 200 €/an en exploitation et le risque porté à la matrice — mais le risque travaux est réel et non chiffrable avant une visite d'homme de l'art : sur une couverture, une charpente ou une électricité à reprendre, la facture se compte en années de loyer net"
+        }
+      },
+      "annonce": {
+        "plateforme": "SeLoger",
+        "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/brignoles-83170/26UC8HRN61QJ",
+        "prix_affiche_euros": 154400.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche",
+        "prix_commentaire": "154 400 € honoraires à la charge du vendeur, soit 1 716 €/m² sur les 90 m² annoncés, 1 775 €/m² sur les 87 m² de lots bâtis et 2 304 €/m² sur la base de 67 m² (les deux logements, hors cave et hors local). La médiane DVF 2025 des appartements de la commune est de 2 246 €/m² et celle des immeubles de rapport (deux logements et plus) de 1 410 €/m² : le prix affiché se situe au-dessus du haut de la fourchette observée pour ce dernier marché. Vendeur : SAFTI, Maude MERRY, conseiller indépendant (EI, RCS Draguignan 522063833), référence agence 1699409"
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 116500.0,
+          "haute_euros": 153700.0,
+          "retenue_euros": 122700.0,
+          "source": "Ancrage DVF 2025 sur le produit réellement comparable — l'immeuble de rapport — et non sur la moyenne communale des appartements. Deux transactions mixtes (logement + local commercial) du centre-ville : 127 m² vendus 170 000 € le 30/01/2025 rue d'Entraigues, soit 1 339 €/m² ; et 79 m² vendus 139 600 € le 01/04/2025 rue Jules Ferry, soit 1 767 €/m². Les 41 mutations de 2025 comportant au moins deux logements donnent une médiane de 1 410 €/m² (de 326 à 2 131 €/m²) et les 10 mutations mêlant logement et local commercial de 789 à 3 593 €/m². Valeur retenue 122 700 € = 87 m² × 1 410 €/m², fourchette 116 500 à 153 700 €. La médiane communale des appartements (2 246 €/m², 168 ventes) n'est pas applicable : un immeuble entier avec local commercial et cave se traite avec une décote de rendement, et la fiche de référence du secteur le confirme",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "Studio de 20 m², 1er étage (pièce de vie avec cuisine, salle d'eau, WC)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 380.0,
+            "occupe": true,
+            "note": "Aucun bail communiqué : 380 €/mois retenus, reconstruits. Point de prudence à porter au dossier : 380 € sur 20 m² ressortent à 19 €/m²/mois, au-dessus du ratio de l'annonce de 1 pièce de 36 m² relevée à 450 € (12,5 €/m²) — c'est l'hypothèse la plus généreuse du modèle, et la variante défavorable la ramène à 280 €. Le loyer de référence de la commune est de 11,0 €/m²/mois sur un lot type de 60 m² (fiche marches-locaux du 21/09/2026)"
+          },
+          {
+            "lot": "Duplex T2 de 47 m², 2e étage (deux chambres d'environ 9,50 et 11 m²)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 550.0,
+            "occupe": true,
+            "note": "Aucun bail communiqué : 550 €/mois retenus, soit 11,7 €/m²/mois, reconstruits à partir des annonces relevées le 25/09/2026 à Brignoles (2 pièces de 37 m² à 680 € en zone d'activité, 3 pièces meublé de 50 m² à 800 €). La chambre d'environ 9,50 m² avec fenêtre sur couloir ne se qualifie pas comme chambre de plein droit : à instruire avant de compter le lot comme un vrai T2"
+          },
+          {
+            "lot": "Local commercial de 20 m² au rez-de-chaussée (avec salle d'eau et WC)",
+            "quantite": 1,
+            "loyer_mensuel_euros": 300.0,
+            "occupe": true,
+            "note": "C'est la seule vraie inconnue du dossier : aucun bail, aucun preneur, aucun loyer mentionné pour un lot qui représente 23 % de la surface bâtie (20 m² sur 87 m²). 300 €/mois retenus en hypothèse de base, soit 15 €/m²/mois. La vacance locative du commerce n'est pas documentée dans le centre ancien de Brignoles : la variante publiée « local vacant toute l'année » chiffre le dossier à 930 €/mois de loyers au total, soit 4,67 % net avant IS et un plafond de 144 119 € sous le prix affiché"
+          }
+        ],
+        "notes": "L'annonce ne communique aucun loyer alors qu'elle affirme « idéal investissement locatif » : les trois loyers sont donc reconstruits, et c'est l'annonce du local commercial qui est la plus fragile — 300 €, aucun preneur mentionné. Loyers relevés sur place le 25/09/2026 (86 annonces actives à Brignoles) : 1 pièce de 36 m² en centre vieille ville 450 € (12,5 €/m²) ; 2 pièces de 37 m² en rez-de-chaussée de zone d'activité 680 € (18,4 €/m²) ; 3 pièces meublé de 50 m² avec parking 800 € ; maison meublée de 4 pièces de 100 m² sur 800 m² de terrain 1 450 € ; place de parking 120 €. Le loyer de référence de la commune est de 11,0 €/m²/mois sur un lot type de 60 m² (fiche de référence du 21/09/2026). Scénario de base : studio 380 € + duplex 550 € + local 300 € = 1 230 €/mois. Hypothèse favorable : 1 480 €/mois. Hypothèse défavorable : 810 €/mois. Variante local vacant : 930 €/mois. Entre l'hypothèse basse et l'hypothèse haute, le rendement net avant IS passe de 2,90 % à 8,52 % et le plafond d'achat de 89 422 € à 263 178 € : c'est le montant exact de l'inconnue que porte cette annonce, et le local du rez-de-chaussée en est le premier poste"
+      },
+      "hypotheses": {
+        "vacance_base_pct": 8.0,
+        "vacance_best_pct": 5.0,
+        "vacance_worst_pct": 15.0,
+        "vacance_justification": "8 % en scénario de base : trois lots sur trois niveaux, dont un local commercial et un studio, dont la rotation est plus rapide que celle d'un logement familial. 5 % en hypothèse favorable si les trois lots restent loués. 15 % en hypothèse défavorable, parce qu'un studio et un local commercial peuvent se libérer la même année et qu'un local vide se reloue en plusieurs mois, pas en plusieurs semaines. La variante « local vacant » retient 6 % de vacance sur les deux logements seuls, le local étant compté à zéro : une vacance structurelle n'est pas une provision statistique, elle s'ajoute lot à lot",
+        "frais_acquisition_euros": 12352.0,
+        "frais_divers_euros": 0.0,
+        "quote_part_bati_pct": 0.0,
+        "duree_amortissement_ans": 30,
+        "fiscalite_commentaire": "SCI à l'IS. Calcul réel de l'année 1 : EBE 10 691 € moins intérêts d'emprunt 5 142 € (138 960 € à 3,7 %) moins la dotation aux amortissements 4 117 € (bâti à 80 % sur 30 ans) = résultat imposable de 1 432 €, POSITIF, donc IS de 15 % soit 215 € — contrairement aux dossiers où l'amortissement crée un déficit. Convention prudente retenue pour les rendements nets publiés : IS de 15 % appliqué à l'EBE, sans amortissement du bâti modélisé, soit 1 604 €/an — c'est la lecture la plus défavorable, et c'est elle que le moteur applique ici (quote_part_bati_pct = 0). Le seuil de décision de la doctrine du parc porte de toute façon sur le rendement net AVANT IS",
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 900.0,
+          "taxe_fonciere_commentaire": "ESTIMATION 900 €/an — avis non communiqué par le vendeur. Fourchette 700 à 1 100 €/an pour un immeuble de trois lots et 87 m² de lots bâtis en centre ancien. Le scénario défavorable retient 1 100 € : l'inconnue vaut 200 €/an, soit 0,13 % de rendement net avant IS sur l'acte en main",
+          "charges_copro_annuelles_euros": 400.0,
+          "charges_copro_commentaire": "Aucune copropriété mentionnée : aucun budget prévisionnel, aucune charge votée. 400 €/an provisionnés pour l'entretien courant des parties communes et de la cave, porté seul par le propriétaire. Le scénario défavorable retient 700 €",
+          "pno_annuelle_euros": 150.0,
+          "pno_commentaire": "Assurance propriétaire non occupant de l'immeuble et de ses trois lots. Immeuble de 1940 en centre ancien, un local commercial et deux logements",
+          "entretien_annuel_euros": 938.0,
+          "entretien_commentaire": "Poste composite, détaillé : gestion locative 738 € (5 % des 14 760 € de loyers bruts du scénario de base) + provision travaux 200 € = 938 €. Le moteur ne connaît ni la ligne de gestion locative ni celle de provision gros travaux : les deux sont fondues ici pour que l'EBE publié corresponde au modèle chiffré. La provision automatique du moteur (2,5 % des loyers) est désactivée : l'additionner à la provision explicite compterait deux fois la même cagnotte. Hypothèse favorable : gestion 4 % et provision 100 €, soit 810 €. Hypothèse défavorable : gestion 6 %, provision 400 €, soit 983 €",
+          "comptabilite_annuelle_euros": 500.0,
+          "comptabilite_commentaire": "Comptabilité de la SCI à l'IS, trois lots dont un local commercial (TVA et bail commercial) : à mutualiser si d'autres lots entrent dans la même structure",
+          "provision_desactivee": true
+        }
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Conservation en location longue durée des trois lots — studio, duplex T2 et local commercial",
+          "code": "ld-nue",
+          "lots": 3
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Location longue durée des trois lots (base)",
+            "lots": 3,
+            "rendement": "6,41 % net avant IS sur l'acte en main (10 691 € d'EBE, 891 €/mois), 5,45 % après IS sous convention prudente",
+            "faisabilite": "immédiate si le local trouve preneur : deux logements louables sans travaux annoncés. Il faut obtenir les baux et l'occupation du local avant toute offre",
+            "risque": "moyen — le seuil de rendement est tenu, mais le cash-flow est négatif de 156 €/mois et le dossier échoue au critère de trésorerie du parc"
+          },
+          {
+            "strategie": "Location longue durée, loyers hauts de la fourchette (optimiste)",
+            "lots": 3,
+            "rendement": "8,52 % net avant IS (14 212 € d'EBE), 7,24 % après IS, plafond 5 % 263 178 €",
+            "faisabilite": "relocation du studio à 400 €, du duplex à 580 € et du local à 500 €, au niveau haut du marché relevé : c'est le seul scénario où le cash-flow redevient positif (+138 €/mois)",
+            "risque": "moyen — suppose de relouer les trois lots au haut du marché et que le local commercial trouve un preneur durable, dans un centre ancien dont la vacance commerciale n'est pas documentée"
+          },
+          {
+            "strategie": "Location longue durée, loyers bas, local en rotation et charges lourdes (pessimiste)",
+            "lots": 3,
+            "rendement": "2,90 % net avant IS (4 829 € d'EBE), 2,46 % après IS, plafond 5 % 89 422 €",
+            "faisabilite": "loyers 810 €/mois, vacance 15 %, taxe foncière à 1 100 €, charges 700 € et provision 400 € : c'est le scénario à retenir si un bail est sous-évalué ou si le local reste vide plusieurs mois par an",
+            "risque": "élevé — 2,90 % net avant IS et un cash-flow de -644 €/mois : le prix ne passe plus, ni sur le rendement ni sur la trésorerie"
+          },
+          {
+            "strategie": "Variante publiée — local commercial vacant toute l'année",
+            "lots": 2,
+            "rendement": "4,67 % net avant IS (7 782 € d'EBE, 649 €/mois) sur 930 €/mois de loyers, 3,97 % après IS, plafond 5 % 144 119 €",
+            "faisabilite": "hypothèse basse à retenir si aucun preneur ne se présente pour le local : le studio et le duplex se relouent, le local de 20 m² du centre ancien non — c'est la lecture la plus prudente du dossier",
+            "risque": "élevé — 144 119 € de plafond contre 154 400 € de prix affiché, soit 6,7 % au-dessus : le local fait basculer le dossier du rendement acceptable à la décote obligatoire"
+          },
+          {
+            "strategie": "Achat-rénovation-revente (marchand de biens)",
+            "lots": 3,
+            "rendement": "impossible au prix affiché : la valeur de marché de l'immeuble ressort à 122 700 € contre un prix de revient de 166 752 €, soit une marge négative de 44 052 € avant même les frais de revente et la fiscalité",
+            "faisabilite": "aucune : l'immeuble n'a aucune décote d'entrée à capter, et le marché de revente des immeubles de rapport de la commune est étroit — 41 mutations de deux logements et plus en 2025, 10 seulement mêlant logement et local commercial",
+            "risque": "bloquant sur ce plan de sortie — l'actif ne se défend que par son rendement, et la division en lots ne se présume pas"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 6,
+            "justification": "Brignoles est à l'entrée de l'autoroute A8, à 30 minutes de Saint-Maximin et une heure de Toulon, avec un bassin d'emploi propre et une gare routière en centre-ville. La commune n'a pas de desserte ferroviaire voyageurs : c'est une ville de voiture, ce qui limite la cible locataire au premier chef un local commercial et un studio de centre ancien"
+          },
+          {
+            "dimension": "commerces",
+            "score": 7,
+            "justification": "Ville de 17 000 habitants avec une vie commerçante de centre ancien, un marché, une zone d'activité et les chaînes nationales. Le bien est dans la vieille ville, c'est-à-dire à l'adresse la plus passante du centre pour le local du rez-de-chaussée — mais la vacance commerciale du centre ancien n'est pas documentée et doit être vérifiée rue par rue"
+          },
+          {
+            "dimension": "ecoles",
+            "score": 7,
+            "justification": "Écoles, collège et lycée sur la commune, plus les établissements de Saint-Maximin et de Toulon : c'est le profil type du locataire d'un studio et d'un T2 de centre ancien"
+          },
+          {
+            "dimension": "securite",
+            "score": 6,
+            "justification": "Commune du centre Var sans tension particulière, centre ancien en cours de repeuplement. Un immeuble entier en monopropriété limite les nuisances de voisinage, mais la cave donne sur un escalier intérieur au local : la sécurité d'accès du commerce et de la cave est à vérifier sur place"
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 6,
+            "justification": "Marché locatif réel et documenté le 25/09/2026 : 86 annonces actives à Brignoles, 1 pièce de 36 m² à 450 €, 2 pièces de 37 m² à 680 €, 3 pièces meublé de 50 m² à 800 €, maison meublée de 100 m² à 1 450 €, parking à 120 €. Mais le loyer de référence de la commune est de 11,0 €/m²/mois sur un lot type de 60 m² (fiche du 21/09/2026) : l'hypothèse de 19 €/m²/mois retenue sur le studio de 20 m² est au-dessus de ce que le marché démontre, et c'est un point de négociation, pas un acquis"
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 7,
+            "justification": "397 mutations de nature « Vente » enregistrées dans la commune en 2025, dont 168 ventes d'appartements (médiane 2 246 €/m²) et 142 ventes de maisons (médiane 2 841 €/m²) : le marché de revente est liquide. Le marché de l'immeuble de rapport l'est beaucoup moins — 41 mutations de deux logements et plus, médiane 1 410 €/m² — et c'est celui-ci qui commande la sortie"
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Local commercial de 20 m² sans preneur ni bail : 23 % de la surface bâtie",
+            "severite": 5,
+            "detail": "C'est le poste qui décide du dossier, et il n'est documenté nulle part : aucun bail, aucun preneur, aucun loyer, aucune durée. Le local représente 20 m² sur 87 m² de lots bâtis, soit 23 %. Selon qu'il est loué ou vide, le rendement net avant IS passe de 6,41 % à 4,67 %, le plafond d'achat de 197 985 € à 144 119 € et le cash-flow de -156 €/mois à -398 €/mois. La vacance commerciale du centre ancien de Brignoles n'est pas documentée : à vérifier en mairie et par un relevé des locaux vides de la rue AVANT toute offre"
+          },
+          {
+            "facteur": "Aucun loyer, aucun bail, aucune taxe foncière, aucune charge",
+            "severite": 5,
+            "detail": "L'annonce affirme « idéal investissement locatif » et ne donne pas un seul chiffre d'exploitation : ni loyer, ni bail, ni date d'échéance, ni taxe foncière, ni charge, ni travaux. Le chiffrage publié repose donc sur des loyers reconstruits à partir du marché relevé le 25/09/2026 : 6,41 % net avant IS à 1 230 €/mois, 8,52 % à 1 480 €, 2,90 % à 810 €. L'écart entre les hypothèses vaut une recommandation. Exiger les trois baux ou attestations de location, les quittances et l'avis de taxe foncière AVANT l'offre : une annonce qui vend de la rentabilité sans en donner le chiffre dit quelque chose du dossier"
+          },
+          {
+            "facteur": "Immeuble de 1940 : couverture, charpente et réseaux non documentés",
+            "severite": 4,
+            "detail": "Aucun devis, aucun diagnostic électricité, plomb ou amiante, aucun état de la couverture, de la charpente ni de l'humidité de la cave — seul le DPE est joint. Sur un immeuble entier en monopropriété, ces postes sont à 100 % pour l'acquéreur : une couverture à reprendre ou une électricité à mettre aux normes sur trois niveaux coûte plusieurs années de loyer net, et rien de tout cela n'est dans le prix. Visite d'un homme de l'art et devis écrits avant l'offre, sur les trois postes qui dérapent : électricité, couverture, humidité de la cave"
+          },
+          {
+            "facteur": "Cash-flow négatif sous crédit : le dossier échoue au critère du parc",
+            "severite": 4,
+            "detail": "Le dossier passe la grille de rendement (6,41 % net avant IS au prix affiché) mais pas le critère de trésorerie. À 10 % d'apport, prêt de 138 960 € sur 15 ans à 3,7 % avec assurance emprunteur de 0,34 %, la mensualité est de 1 046 €/mois quand l'exploitation dégage 891 €/mois en scénario de base : le cash-flow est de -156 €/mois, soit -1 867 €/an, et il ne redevient positif que dans l'hypothèse favorable (+138 €/mois). Si le local reste vide, il faut 68 282 € d'apport (44 % du prix) pour équilibrer — très au-delà de la doctrine du parc"
+          },
+          {
+            "facteur": "Marché de revente de l'immeuble de rapport très étroit",
+            "severite": 3,
+            "detail": "Le marché résidentiel de la commune est liquide (397 mutations en 2025), mais celui de l'immeuble de rapport ne l'est pas : 41 mutations de deux logements et plus dans l'année, médiane 1 410 €/m², et seulement 10 transactions mêlant logement et local commercial. La sortie se fera donc sur un marché d'acquéreurs de rendement, à un prix dicté par le rendement obtenu, et non par la valeur des lots pris séparément. À ce prix d'entrée, la revente suppose de retrouver le même acquéreur — c'est un actif qui se garde, pas qui se retourne"
+          },
+          {
+            "facteur": "Cave de 17 m² annoncée, puis contredite par la fiche « Pas de cave »",
+            "severite": 3,
+            "detail": "Le texte de l'annonce décrit une cave de 17 m² avec accès par escalier intérieur au local commercial ; la fiche « caractéristiques » du même bien indique « Pas de cave ». Les deux documents portent sur le même lot et ne peuvent pas être vrais en même temps. L'enjeu n'est pas la surface de la cave mais ce que la contradiction dit du dossier : aucune pièce n'a été vérifiée avant publication, ni les surfaces, ni les diagnostics. À lever par écrit avant l'offre — et à vérifier au titre de l'exposition à l'humidité et de l'usage réel du volume"
+          },
+          {
+            "facteur": "Chambre du duplex avec fenêtre sur couloir : défaut de jour, 9,50 m² à qualifier",
+            "severite": 3,
+            "detail": "Sur les deux chambres du duplex (environ 9,50 et 11 m²), une a une fenêtre sur couloir. Une pièce qui ne prend pas le jour sur l'extérieur n'est pas une chambre de plein droit au sens du règlement sanitaire départemental, et le logement ne se commercialise pas comme un T3 : au mieux comme un T2 avec pièce annexe. Cela réduit la valeur locative du lot et complique la revente à un acquéreur familial. À qualifier par le règlement de copropriété, le PLU et le règlement sanitaire avant de compter le lot comme un T2 — et à faire baisser le loyer cible en conséquence"
+          },
+          {
+            "facteur": "Transformation du local en studio annoncée mais non instruite (changement d'usage)",
+            "severite": 3,
+            "detail": "L'annonce écrit que le local « peut être transformé en un studio » : c'est une hypothèse d'agence, pas une autorisation. Passer un local commercial en habitation suppose de vérifier le changement d'usage, le destinataire de l'autorisation d'urbanisme, les règles du PLU et du secteur sauvegardé, la desserte en réseau et le chiffrage des travaux (création d'une cuisine, d'une salle d'eau aux normes, isolation, électricité). Aucun de ces points n'est documenté. La transformation partirait en surcoût sans bouquet de diagnostics et sans devis — et c'est le seul levier du dossier, puisque le local est la variable qui décide"
+          },
+          {
+            "facteur": "Taxe foncière inconnue",
+            "severite": 2,
+            "detail": "L'avis n'est pas communiqué. Estimation retenue 900 €/an, fourchette 700 à 1 100 € pour un immeuble de trois lots en centre ancien. L'écart vaut 200 €/an, soit 0,12 % de rendement net avant IS sur l'acte en main — modeste en soi, mais à demander : c'est une pièce gratuite, et l'avis donne la valeur locative cadastrale d'un bien dont aucune surface Carrez par lot n'est publiée"
+          },
+          {
+            "facteur": "Aucun plan, aucune surface Carrez par lot, visite virtuelle non liée",
+            "severite": 2,
+            "detail": "L'annonce repose sur 12 photographies et une visite virtuelle annoncée mais non liée dans la page. Aucun plan n'est joint et aucune surface Carrez n'est donnée par lot : or c'est la surface par lot qui détermine le loyer réglementaire de chaque logement et l'article de surface carrez. Les 90 m² annoncés comprennent la cave et le local, ce qui les compare à tort aux surfaces habitables de la commune. Le dossier n'est pas vérifiable à distance : tout chiffrage publié ici repose sur des surfaces déclaratives"
+          }
+        ],
+        "champs_manquants": []
       }
     }
   ]
