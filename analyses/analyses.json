@@ -3,7 +3,7 @@
     "schema": "analyses-v2-entrees",
     "generated_at": "2026-09-10T00:00:00+00:00",
     "source": "saisie-agent",
-    "count": 69
+    "count": 70
   },
   "analyses": [
     {
@@ -9137,6 +9137,214 @@
             "facteur": "Aucun plan, aucune surface Carrez par lot, visite virtuelle non liée",
             "severite": 2,
             "detail": "L'annonce repose sur 12 photographies et une visite virtuelle annoncée mais non liée dans la page. Aucun plan n'est joint et aucune surface Carrez n'est donnée par lot : or c'est la surface par lot qui détermine le loyer réglementaire de chaque logement et l'article de surface carrez. Les 90 m² annoncés comprennent la cave et le local, ce qui les compare à tort aux surfaces habitables de la commune. Le dossier n'est pas vérifiable à distance : tout chiffrage publié ici repose sur des surfaces déclaratives"
+          }
+        ],
+        "champs_manquants": []
+      }
+    },
+    {
+      "slug": "2026-09-25-appartement-t2-brignoles-vendu-loue",
+      "date_analyse": "2026-09-25",
+      "date_maj": null,
+      "titre": "Appartement T2 de 48,71 m² au rez-de-chaussée, vendu loué 610 € charges comprises — résidence avec parc arboré, 58 rue Jules Ferry, Brignoles (83170)",
+      "bien": {
+        "type_bien": "appartement",
+        "sous_type": null,
+        "type_detail": "Appartement T2 de 48,71 m² Carrez (2 pièces, 1 chambre) au rez-de-chaussée sur 4 étages, sans ascenseur, dans une résidence de 1970 avec parc arboré, quartier « Extension Années 50-70 », 58 rue Jules Ferry à Brignoles. Terrasse de 7 m², cuisine indépendante avec loggia, séjour plein sud, salle d'eau, WC indépendant, cave privative. Deux balcons, double vitrage, portail automatique, aucun ascenseur. Chauffage central collectif au fioul (pétrole), eau froide comprise dans les charges. DPE D, GES D, facture énergétique estimée de 1 260 à 1 720 €/an. L'annonce ne communique NI taxe foncière, NI budget prévisionnel de copropriété, NI diagnostic technique global : seule la charge annuelle du lot (2 193 €, 183 €/mois, chauffage et eau froide compris) est publiée, et c'est elle qui décide du dossier. Aucun plan, aucun procès-verbal d'assemblée générale, aucun état daté. « Parking libre au sein de la résidence » : l'annonce ne vend PAS une place privative, mais un stationnement en libre accès — aucun lot cessible de ce côté.",
+        "neuf": false,
+        "adresse": {
+          "texte": "58 rue Jules Ferry, 83170 Brignoles — résidence avec parc arboré, quartier « Extension Années 50-70 »",
+          "ville": "Brignoles",
+          "code_postal": "83170"
+        },
+        "surfaces": {
+          "texte": "48,71 m² Carrez annoncés (2 053 €/m²), 2 pièces et 1 chambre ; terrasse de 7 m², deux balcons et une cave privative en supplément",
+          "carrez_m2": 48.71
+        },
+        "lots": {
+          "count": 1,
+          "surface_par_lot_m2": 48.71,
+          "nature": "lot n°898 (52/6347èmes) pour l'appartement et lot n°909 (4/6347èmes) pour la cave, soit 56/6 347èmes de la copropriété (0,88 %). « Parking libre au sein de la résidence » : aucune place privative, donc aucun lot de stationnement cessible séparément, et aucun revenu annexe possible. Copropriété de 179 lots, aucune procédure en cours selon l'annonce",
+          "lots_distincts": 1
+        },
+        "copro": {
+          "charges_annuelles_euros": 2193.0,
+          "charges_source": "2 193 €/an, soit 183 €/mois, avec le CHAUFFAGE COLLECTIF AU FIOUL ET L'EAU FROIDE COMPRIS DANS LES CHARGES. C'est le chiffre qui tue le dossier : le poste représente 30,0 % du loyer de 610 € du bail, et il est structurel — il ne dépend ni du locataire, ni de la gestion du propriétaire, ni du prix d'achat. Il ramène le loyer réellement encaissable à 427,25 €/mois. Le détail n'est pas communiqué (ni budget prévisionnel, ni répartition chauffage/ascenseur/parties communes), et aucune régularisation n'est fournie : c'est la première pièce à demander"
+        },
+        "travaux": {
+          "montant_euros": 0.0,
+          "nature": "Aucun travaux annoncé, bien déclaré entretenu : l'annonce retient donc 0 € à l'acquisition et la fiche se contente d'une provision travaux de 150 €/an en exploitation. Le risque travaux n'est pas là mais dans la copropriété : chaudière collective au fioul de 1970, 179 lots, aucun diagnostic technique global (DTG) et aucun dossier de chaufferie (DCE) ni plan pluriannuel de travaux (PPT) fournis. Une conversion de chauffage se vote et se paie en appels de fonds, sur un lot qui porte 56/6 347èmes — et aucun des trois derniers procès-verbaux d'assemblée générale n'est joint pour dire où en est le projet ni ce que la copropriété a déjà voté. Enveloppe non chiffrable avant obtention des PV et du DCE : elle n'est pas dans le prix, et c'est volontairement que le record ne l'inscrit pas en travaux immédiats — l'inscrire supposerait un devis, qui n'existe pas"
+        }
+      },
+      "annonce": {
+        "plateforme": "SeLoger",
+        "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/brignoles-83170/269U5FFWGIGA",
+        "prix_affiche_euros": 99999.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche",
+        "prix_commentaire": "99 999 € honoraires à la charge du vendeur, soit 2 053 €/m² sur les 48,71 m² Carrez, et 107 999 € acte en main (le simulateur de l'annonce retient déjà 8 000 € de frais, soit 8,00 %). Le prix au m² est EXACTEMENT celui du marché de la tranche de surface du bien : la médiane DVF 2025 des appartements de 45 à 60 m² à Brignoles est de 2 109 €/m² sur 33 ventes, contre 2 053 €/m² demandés ici. Vendeur : ABC IMMO BRIGNOLES, Mirlinda ZUMBEROVIC EI, RSAC Draguignan 991000282, référence annonce 1680"
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 87240.0,
+          "haute_euros": 126940.0,
+          "retenue_euros": 102730.0,
+          "source": "Ancrage DVF 2025 sur la SEULE tranche de surface du bien, 45 à 60 m², et non sur la moyenne communale des appartements (2 246 €/m², 168 ventes) qui mélange des surfaces non comparables. 33 ventes d'appartements de 45 à 60 m² en 2025 à Brignoles : médiane 2 109 €/m², premier quartile 1 791, troisième 2 606. Valeur retenue 102 730 € = 48,71 m² × 2 109 €/m² ; fourchette 87 240 à 126 940 €. Repère de contrôle : le seul comparable nommé de la même rue que l'agence, un immeuble de 79 m² et 3 lots vendu 139 600 € le 01/04/2025 (1 767 €/m²), porte sur un produit mixte (un appartement de 70 m², un local de 9 m² et une dépendance) — il n'est pas comparable à un T2 et n'est pas utilisé pour la valeur, seulement cité. La tranche 30 à 45 m² se traite à 2 863 €/m² (médiane de prix 114 000 € sur 46 ventes) et la tranche 60 à 90 m² à 2 188 €/m² : le prix au m² est en cloche sur les petites surfaces, ce qui confirme qu'une moyenne communale n'est pas un ancrage",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "Appartement T2 de 48,71 m² au rez-de-chaussée — bail nu en cours, loyer de 610 € charges comprises",
+            "quantite": 1,
+            "loyer_mensuel_euros": 427.25,
+            "occupe": true,
+            "note": "UNE SEULE LIGNE DE REVENU, celle de la stratégie retenue : le loyer du bail encaissable, 427,25 €/mois. Le bail porte 610 € CHARGES COMPRISES ; les charges de copropriété du lot sont de 2 193 €/an, soit 183 €/mois (30,0 % du loyer). Le loyer hors charges réellement encaissable est donc 610 − 183 = 427,25 €/mois, soit 5 127 €/an. Les 2 193 €/an ne sont PAS saisis une seconde fois dans les charges d'exploitation : ils sont déjà consommés par cette ligne de loyer (les saisir deux fois compterait deux fois la même charge). Variantes chiffrées dans le rationale et publiées sur la page : hypothèse favorable à 610 €/mois de facial et 4 % de gestion (3,26 % net avant IS), hypothèse défavorable à 10 % de vacance (2,44 %), et lecture inverse où le bail porterait 610 € nets de provisions sur charges (4,76 % net avant IS, cash-flow toujours négatif). Loyer facial : 12,5 €/m²/mois contre une référence communale de 11,0 €/m²/mois sur un lot type de 60 m² — la face locative est correcte, c'est la copropriété qui mange le rendement. Loyers relevés sur place le 25/09/2026 (86 annonces actives à Brignoles) : 1 pièce de 36 m² en vieille ville 450 € (12,5 €/m²), 2 pièces de 37 m² en rez-de-chaussée 680 €, 3 pièces meublé de 50 m² 800 €, place de parking 120 €. Aucune régularisation de charges, aucune quittance et aucun bail écrit ne sont joints : le loyer de 610 € CC est déclaratif, et sa décomposition exacte est la première pièce à exiger"
+          }
+        ],
+        "notes": "Le chiffre qui tue le dossier est publié par l'annonce elle-même : 2 193 €/an de charges de copropriété, avec chauffage collectif au fioul et eau froide compris, soit 183 €/mois et 30,0 % du loyer de 610 €. L'annonce affirme dans le même souffle « vendu loué avec un bail nu 610 € charges comprises, offrant une rentabilité brute d'environ 7 % » : ce 7 % n'existe pas, parce qu'il prend pour base un loyer que le propriétaire ne touche pas. Brut affiché par l'agence sur le loyer facial : 7,32 % du prix affiché. Brut réel sur le loyer encaissable : 5,13 %. Net avant IS sur l'acte en main : 2,93 %. Le prix, lui, n'est pas le problème : à 2 053 €/m² le bien est exactement au prix du marché de sa tranche de surface. C'est la structure de la copropriété et du bail qui ferme le dossier."
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 3.0,
+        "vacance_worst_pct": 10.0,
+        "vacance_justification": "5 % en scénario de base : un T2 de rez-de-chaussée avec terrasse, cave et stationnement libre se reloue dans un marché documenté (86 annonces actives à Brignoles le 25/09/2026, loyer de référence 11,0 €/m²/mois). 3 % en hypothèse favorable, le locataire en place étant déjà dans les lieux à l'achat. 10 % en hypothèse défavorable, parce que la rotation d'un T2 de 1970 chauffé au fioul collectif dans une copropriété de 179 lots est plus lente que celle d'un logement individuel, et parce qu'un départ en cours de bail oblige à reprendre le loyer au niveau du marché hors charges — soit 8,8 €/m²/mois, pas 12,5 €/m²/mois",
+        "frais_acquisition_euros": 8000.0,
+        "frais_divers_euros": 0.0,
+        "quote_part_bati_pct": 0.0,
+        "duree_amortissement_ans": 30,
+        "fiscalite_commentaire": "SCI à l'IS. Calcul réel de l'année 1 : EBE 3 164 € moins intérêts d'emprunt 3 330 € (89 999 € à 3,7 %) moins la dotation aux amortissements 2 667 € (bâti à 80 % du prix sur 30 ans) = résultat imposable de -2 832 €, NÉGATIF, donc AUCUN IS dû en année 1 (le déficit est reporté). Convention prudente retenue pour les rendements nets publiés, comme sur les autres fiches du parc : IS de 15 % appliqué à l'EBE, sans amortissement du bâti modélisé (quote_part_bati_pct = 0), soit 475 €/an — c'est la lecture la plus défavorable, et c'est elle que le moteur applique. Le seuil de décision du parc porte de toute façon sur le rendement net AVANT IS. À noter : la fiscalité n'est pas le sujet de ce dossier, elle le protège — c'est la copropriété et la mensualité qui le tuent",
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 800.0,
+          "taxe_fonciere_commentaire": "ESTIMATION 800 €/an — avis jamais communiqué par le vendeur ni par l'agent. Fourchette plausible 700 à 900 €/an pour un T2 de 48,71 m² en résidence de 1970 ; l'hypothèse défavorable retient 900 €. L'inconnue vaut moins de 0,1 point de rendement net, mais l'avis de taxe foncière est gratuit à demander et donne la valeur locative cadastrale — le seul chiffre opposable en l'absence de plan",
+          "charges_copro_annuelles_euros": 0.0,
+          "charges_copro_commentaire": "ZÉRO DANS CETTE LIGNE, ET C'EST VOLONTAIRE : les 2 193 €/an de charges de copropriété du lot (chauffage collectif au fioul et eau froide compris, soit 183 €/mois) sont DÉJÀ DÉDUITS du loyer du bail. Le bail porte 610 € charges comprises et le loyer saisi dans marche.loyers est de 427,25 €/mois (610 − 183). Saisir ici les 2 193 €/an compterait deux fois la même charge et diviserait le résultat par trois. La charge est consignée en entrée dans bien.copro.charges_annuelles_euros = 2 193 €, et elle est publiée en clair sur la fiche. Elle reste le premier poste de risque du dossier : c'est une charge structurelle, récurrente et non pilotable par le propriétaire",
+          "pno_annuelle_euros": 100.0,
+          "pno_commentaire": "Assurance propriétaire non occupant du lot, 100 €/an : les murs et les parties communes sont assurés par la copropriété, la PNO couvre les loyers et les recours du locataire. Les locaux sont loués, la PNO est obligatoire",
+          "entretien_annuel_euros": 406.35,
+          "entretien_commentaire": "Poste composite, détaillé : gestion locative 256 € (5 % des 5 127 € de loyers encaissables) + provision travaux de 150 € = 406 €. Le moteur ne connaît ni la ligne de gestion locative ni celle de provision gros travaux : les deux sont fondues ici pour que l'EBE publié corresponde au modèle chiffré. La provision automatique du moteur (2,5 % des loyers) est désactivée pour ne pas compter deux fois la même cagnotte. Hypothèse favorable : gestion 4 % et provision 100 €, soit 305 €. Hypothèse défavorable : gestion 5 % et provision 320 €, soit 576 € — c'est le montant qui reproduit exactement les 2 638 € d'EBE et le plafond de 48 851 € du modèle validé en amont",
+          "comptabilite_annuelle_euros": 400.0,
+          "comptabilite_commentaire": "Comptabilité de la SCI à l'IS, 400 €/an : un logement loué nu, régime réel, avec une copropriété à surveiller (régularisations de charges et appels de fonds à passer en charges). À mutualiser dès qu'un second lot entre dans la même structure",
+          "provision_desactivee": true
+        }
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Conservation du bail nu en cours — location longue durée nue de l'appartement T2, loyer encaissable de 427,25 €/mois",
+          "code": "ld-nue",
+          "lots": 1
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Conservation du bail nu en cours — 610 € charges comprises, soit 427,25 €/mois encaissables",
+            "lots": 1,
+            "rendement": "2,93 % net avant IS sur l'acte en main (3 164 € d'EBE, 264 €/mois), 2,49 % sous la convention prudente d'IS, plafond 5 % 58 598 € contre 99 999 € affichés",
+            "faisabilite": "immédiate : le bien est vendu loué, aucun travaux annoncé, et le locataire en place règle 610 € charges comprises. Reste à obtenir la décomposition du bail (loyer hors charges et provisions) et la dernière régularisation",
+            "risque": "élevé — 30,0 % du loyer part en charges de copropriété, le cash-flow est négatif de 414 €/mois et le prix d'équilibre de trésorerie est très en dessous du prix affiché"
+          },
+          {
+            "strategie": "Hypothèse favorable — vacance 3 %, gestion 4 %, taxe foncière 650 €, provision 100 €",
+            "lots": 1,
+            "rendement": "3,26 % net avant IS (3 518 € d'EBE, 293 €/mois), 2,77 % après IS sous convention prudente, plafond 5 % 65 150 €",
+            "faisabilite": "il faudrait que le locataire reste en place, qu'aucune régularisation de charges ne tombe et que la taxe foncière ressorte à 650 € : trois conditions cumulées pour ne pas atteindre le seuil",
+            "risque": "moyen — c'est la lecture la plus favorable possible sur un bail déjà signé, et elle laisse encore le dossier à plus de 3 points du seuil de rendement du parc"
+          },
+          {
+            "strategie": "Hypothèse défavorable — vacance 10 %, taxe foncière 900 €, provision travaux 320 €",
+            "lots": 1,
+            "rendement": "2,44 % net avant IS (2 638 € d'EBE, 220 €/mois), 2,08 % après IS, plafond 5 % 48 851 €, cash-flow −458 €/mois",
+            "faisabilite": "c'est le scénario à retenir si le locataire part, si les charges de copropriété augmentent au vote du budget ou si une régularisation de chauffage tombe — trois choses qui arrivent dans une copropriété de 179 lots chauffée au fioul",
+            "risque": "élevé — 2,44 % net avant IS et −458 €/mois de trésorerie : le dossier n'est plus un investissement, c'est une charge"
+          },
+          {
+            "strategie": "Lecture inverse — le bail porterait 610 € NETS de provisions sur charges (les provisions couvrant la copropriété)",
+            "lots": 1,
+            "rendement": "4,76 % net avant IS (5 138 € d'EBE, 428 €/mois), 4,04 % après IS sous convention prudente, plafond 5 % 95 148 €, cash-flow −250 €/mois",
+            "faisabilite": "hypothèse à publier parce qu'elle est la seule que le vendeur pourrait opposer : elle suppose que les 610 € du bail soient du loyer et que les provisions sur charges soient payées en sus par le locataire, à un niveau couvrant les 2 193 €/an de copropriété. Aucune pièce ne le démontre, et la régularisation de charges le dirait en une ligne",
+            "risque": "moyen — même dans cette lecture la plus favorable au vendeur, le net ne remonte qu'à 4,76 % avant IS (4,04 % après IS), le plafond à 95 148 € reste 4,9 % sous le prix affiché et le cash-flow reste négatif : le dossier échoue dans toutes les lectures"
+          },
+          {
+            "strategie": "Achat-rénovation-revente (marchand de biens)",
+            "lots": 1,
+            "rendement": "impossible au prix affiché : la valeur de marché de la tranche de surface est de 102 730 € contre un prix de revient de 107 999 €, soit une marge négative de 5 269 € avant même les frais de revente et la fiscalité",
+            "faisabilite": "aucune : il n'y a aucune décote d'entrée à capter, le bien est exactement au prix du marché de sa tranche de surface. Aucun levier de division (un seul lot habitable, une cave, pas de place privative) et aucune plus-value d'usage possible sans travaux",
+            "risque": "bloquant sur ce plan de sortie — l'actif ne se défend que par son rendement, et son rendement est mangé par la copropriété"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 5,
+            "justification": "Brignoles n'a pas de desserte ferroviaire voyageurs : c'est une ville de voiture, avec l'entrée de l'autoroute A8 à quelques minutes, Saint-Maximin à 30 minutes et Toulon à une heure. Le quartier « Extension Années 50-70 » est en périphérie immédiate du centre, desservi par les lignes de bus urbaines. Correct pour un locataire motorisé, limitant pour un locataire sans voiture — et donc pour le vivier de candidats d'un T2 de 48 m²"
+          },
+          {
+            "dimension": "commerces",
+            "score": 6,
+            "justification": "Ville de 17 000 habitants avec commerces de centre, un marché, des zones commerciales et les enseignes nationales à proximité immédiate de l'axe. Le quartier est résidentiel : les commerces de proximité sont à quelques minutes, pas en bas de l'immeuble. Un T2 de 48 m² avec terrasse et cave se loue sur ce profil"
+          },
+          {
+            "dimension": "ecoles",
+            "score": 7,
+            "justification": "Écoles, collège et lycée sur la commune, plus les établissements de Saint-Maximin : c'est le profil type du locataire d'un T2 familial de 48 m² avec terrasse et parc arboré dans la résidence"
+          },
+          {
+            "dimension": "securite",
+            "score": 6,
+            "justification": "Commune du centre Var sans tension particulière. Résidence fermée avec portail automatique et parc arboré : c'est un argument réel de commercialisation et de fidélisation du locataire. Contrepartie : une copropriété de 179 lots, donc des parties communes étendues et un budget d'entretien collectif élevé — c'est précisément là que passe le rendement (voir la fiche : 2 193 €/an de charges)"
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 7,
+            "justification": "Marché locatif réel et documenté le 25/09/2026 : 86 annonces actives à Brignoles, 1 pièce de 36 m² à 450 € (12,5 €/m²), 2 pièces de 37 m² à 680 €, 3 pièces meublé de 50 m² à 800 €, place de parking à 120 €, et un loyer de référence communal de 11,0 €/m²/mois sur un lot type de 60 m². Le loyer facial du bail (12,5 €/m²/mois, charges comprises) est au-dessus de cette référence : la demande ne fait pas défaut, la rotation d'un T2 à 610 € CC est plausible en une à deux visites"
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 7,
+            "justification": "397 mutations de nature « Vente » enregistrées à Brignoles en 2025, dont 168 ventes d'appartements (médiane 2 246 €/m²) et 142 ventes de maisons (médiane 2 841 €/m²) : le marché de revente est liquide, et la tranche 45-60 m² affiche 33 ventes à 2 109 €/m² — un bien acheté au prix de cette tranche se revend dans son marché. C'est le point fort du dossier : le prix est bon"
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Charges de copropriété de 2 193 €/an, chauffage collectif compris, soit 30,0 % du loyer : le poste qui tue le dossier",
+            "severite": 5,
+            "bloquant": true,
+            "detail": "2 193 €/an, 182,75 €/mois, chauffage collectif au fioul et eau froide compris : 30,0 % du loyer de 610 € du bail. Le propriétaire n'encaisse donc que 427,25 €/mois pour un loyer facial de 610 €, soit 5 127 € par an. C'est une charge structurelle — elle ne dépend ni du locataire, ni de la gestion, ni du prix d'achat — et c'est elle qui plafonne le rendement net avant IS à 2,93 % au prix affiché, quand le seuil du parc est de 6,5 % net d'IS. Aucune négociation réaliste ne rattrape l'écart : il faudrait payer le bien 58 598 € pour atteindre 5 % net avant IS (−41 %) et 38 908 € pour un cash-flow nul (−61 %). Le dossier est donc mort par sa structure, quel que soit le rendement qu'on imagine : c'est ce qui justifie le caractère bloquant de ce risque"
+          },
+          {
+            "facteur": "Bail de 610 € charges comprises dont la décomposition n'est pas fournie : tout le calcul en dépend",
+            "severite": 4,
+            "detail": "L'annonce écrit « vendu loué avec un bail nu à 610 € charges comprises » et n'en donne ni la date, ni la durée, ni la décomposition entre loyer et provisions sur charges. Or c'est cette décomposition qui décide de tout : si les 610 € sont charges comprises, le net avant IS est de 2,93 % ; si les 610 € sont du loyer hors charges avec provisions payées en sus (lecture inverse publiée), il remonte à 4,76 % — mais reste négatif en trésorerie (−250 €/mois). L'écart entre les deux lectures vaut 1,8 point de rendement et 1 974 €/an de résultat, sur un dossier dont la marge au-dessus du seuil est nulle dans les deux cas. Exiger le bail écrit et la dernière régularisation de charges AVANT toute offre"
+          },
+          {
+            "facteur": "Chaudière collective au fioul de 1970 dans une copropriété de 179 lots, sans DCE ni PPT communiqués",
+            "severite": 4,
+            "detail": "Résidence de 1970, chauffage central collectif au fioul, 179 lots : la conversion de la chaufferie est une échéance structurelle, écologique et réglementaire, pas une hypothèse. Aucun dossier de chaufferie (DCE), aucun diagnostic technique global, aucun plan pluriannuel de travaux et aucun des trois derniers procès-verbaux d'assemblée générale ne sont joints : on ne sait donc ni ce qui a été voté, ni ce qui est provisionné au budget prévisionnel, ni ce qui arrive. Un lot qui porte 56/6347èmes (0,88 %) supportera sa quote-part d'un appel de fonds dont personne ne connaît le montant — et une conversion de chauffage se compte en dizaines de milliers d'euros pour la copropriété. C'est la raison qui rend le dossier non chiffrable avant les PV : première pièce à demander"
+          },
+          {
+            "facteur": "Cash-flow négatif structurel : le dossier échoue au critère de trésorerie du parc, dans tous les scénarios",
+            "severite": 4,
+            "detail": "À 10 % d'apport, prêt de 89 999 € sur 15 ans à 3,7 % avec assurance emprunteur de 0,34 %, la mensualité est de 678 €/mois quand l'exploitation dégage 264 €/mois en scénario de base : cash-flow de −414 €/mois, soit −4 968 €/an, et −74 533 € de trésorerie consommée sur quinze ans. Il est négatif dans TOUS les scénarios : −250 €/mois dans la lecture inverse la plus favorable au vendeur, −385 €/mois en hypothèse favorable, −458 €/mois en hypothèse défavorable. Pour l'équilibrer au prix affiché, il faudrait un apport de 64 982 € (65 % du prix) au lieu de 10 % : très au-delà de la doctrine du parc. Ce n'est pas un déficit de démarrage qu'on absorbe, c'est un déficit permanent"
+          },
+          {
+            "facteur": "Diagnostics : DPE D et GES D au chauffage collectif au fioul, facture annoncée jusqu'à 1 720 €/an",
+            "severite": 3,
+            "detail": "DPE D et GES D, facture énergétique estimée entre 1 260 et 1 720 €/an : le lot n'est pas dans le rouge réglementaire aujourd'hui (un D reste louable), mais l'étiquette est portée par un chauffage collectif au fioul que la copropriété devra convertir. Les logements classés G ne pourront plus être loués à partir de 2028 ; un D n'est pas concerné, mais la conversion fera basculer la classe à la hausse si elle est faite, ou à la baisse dans l'attractivité si elle ne l'est pas. La facture annoncée est en outre une charge supportée par le locataire via les provisions : elle limite ce qu'un locataire acceptera de payer en loyer"
+          },
+          {
+            "facteur": "Taxe foncière jamais communiquée",
+            "severite": 2,
+            "detail": "L'avis n'est pas joint. Estimation retenue 800 €/an, fourchette 700 à 900 € : l'inconnue vaut environ 0,1 point de rendement net au prix affiché, sur un dossier qui échoue pour 3,5 points. Le sujet n'est donc pas le montant mais ce que l'avis donne gratuitement : la valeur locative cadastrale, seule base opposable d'évaluation, et un repère de surface en l'absence de plan. Pièce à demander"
+          },
+          {
+            "facteur": "Absence d'ascenseur sur 4 étages — non bloquant ici, mais à porter à la revente",
+            "severite": 2,
+            "detail": "L'appartement est au rez-de-chaussée : l'absence d'ascenseur ne le pénalise donc pas à l'usage, et c'est un point favorable de commercialisation (personnes âgées, poussettes). Elle reste un passif relatif dans une copropriété de 1970 de 4 étages, que les acheteurs relèveront à la revente — et le financement d'un ascenseur se vote, se compte et se paie par appels de fonds"
+          },
+          {
+            "facteur": "« Parking libre au sein de la résidence » : aucune place privative, donc aucun actif cessible",
+            "severite": 2,
+            "detail": "L'annonce écrit « parking libre au sein de la résidence », c'est-à-dire un stationnement en libre accès, pas un lot de copropriété. Le dossier vend donc deux lots (l'appartement n°898 et la cave n°909) et aucun revenu annexe : pas de place à louer séparément (120 €/mois relevés à Brignoles le 25/09/2026, soit 1 440 €/an qu'on ne peut pas compter), pas d'actif cessible à la revente, et une qualité de service dépendant du nombre de véhicules de la copropriété. Le vendeur doit dire si un parking est affecté au lot par le règlement, et l'état daté le dirait"
           }
         ],
         "champs_manquants": []
