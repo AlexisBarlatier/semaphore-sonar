@@ -3,7 +3,7 @@
     "schema": "analyses-v2-entrees",
     "generated_at": "2026-09-10T00:00:00+00:00",
     "source": "saisie-agent",
-    "count": 71
+    "count": 72
   },
   "analyses": [
     {
@@ -9555,6 +9555,209 @@
             "facteur": "Incohérences du gabarit de l'annonce : surface 66 ou 68 m², cave annoncée mais « Pas de cave », parking collectif sans place privative",
             "severite": 2,
             "detail": "Trois écarts dans la même page : la surface est de 66 m² en titre et 68 m² dans le texte (soit 3 % d'écart, qui changent le prix au m² de 1 817 à 1 763 €) ; le texte annonce une cave quand la fiche caractéristiques affiche « Pas de cave » ; et le « parking collectif » n'est pas un lot cédé par le règlement de copropriété. Aucun de ces points ne tue le dossier à lui seul, mais le certificat Carrez, l'état daté et le règlement de copropriété doivent les trancher par écrit avant toute offre"
+          }
+        ],
+        "champs_manquants": []
+      }
+    },
+    {
+      "slug": "2026-09-25-appartement-t3-brignoles-centre-vieille-ville",
+      "date_analyse": "2026-09-25",
+      "date_maj": null,
+      "titre": "Appartement T3 de 48 m² avec mezzanine au 2e étage sur 6 étages, sans ascenseur, à rafraîchir — quartier Centre Vieille Ville, Brignoles (83170)",
+      "bien": {
+        "type_bien": "appartement",
+        "sous_type": null,
+        "type_detail": "Appartement T3/F3 (3 pièces, 2 chambres) de 48 m², « espace supplémentaire » en mezzanine non compté dans la surface annoncée, au 2e étage sur 6 étages, sans ascenseur, immeuble de 1948, quartier Centre Vieille Ville à Brignoles (83170). Non meublé, cuisine ouverte, chauffage individuel électrique, ni cave ni balcon ni terrasse, 1 lot détenu dans une copropriété de 6 lots, 6 photos. DPE D, GES B, facture énergétique annoncée de 620 à 880 €/an. Honoraires à la charge du vendeur, simulateur d'acquisition de l'annonce à 6 720 € (8,0 %). LE POINT QUI COMMANDE TOUT : l'annonce déclare elle-même que « le syndicat des copropriétaires fait l'objet d'une procédure citée à l'article L. 721-1 du code de la construction et de l'habitation ». Une copropriété de 6 lots avec procédure, c'est un budget prévisionnel insuffisant, des travaux à financer et un acheteur qui se demande pourquoi un bien se vend 14 % sous la médiane de son quartier. Aucun des quatre documents qui répondraient (procès-verbaux des trois dernières assemblées, état daté, appels de fonds votés, diagnostics complets) n'est joint.",
+        "neuf": false,
+        "adresse": {
+          "texte": "Quartier Centre Vieille Ville, Brignoles (83170) — adresse exacte non publiée dans l'annonce ; agence SAFTI, Coralie Marcelin EI (RSAC Draguignan), secteur Brignoles",
+          "ville": "Brignoles",
+          "code_postal": "83170"
+        },
+        "surfaces": {
+          "texte": "48 m² annoncés (1 750 €/m²), 3 pièces et 2 chambres, plus une mezzanine présentée comme « espace supplémentaire » : cette surface n'entre pas dans le Carrez, donc elle ne se paie pas au prix du m² habitable et elle ne se loue pas comme une pièce — mais elle explique qu'un T3 de 48 m² tienne 2 chambres. Le certificat Carrez de la mezzanine et des combles reste à obtenir",
+          "carrez_m2": 48.0
+        },
+        "lots": {
+          "count": 1,
+          "surface_par_lot_m2": 48.0,
+          "nature": "Un seul lot : l'appartement T3 de 48 m², dans une copropriété de 6 lots (source : annonce). Ni cave, ni grenier, ni place de stationnement dans la fiche caractéristiques — donc aucun lot annexe cessible et aucun revenu annexe. La copropriété de 6 lots est petite : c'est là que les travaux votés se partagent le plus mal, et c'est là qu'une procédure de l'article L. 721-1 pèse le plus lourd",
+          "lots_distincts": 1
+        },
+        "copro": {
+          "charges_annuelles_euros": 540.0,
+          "charges_source": "540 €/an, ANNONCÉS par l'annonce — la seule charge d'exploitation du dossier qui ne soit pas une estimation. Au loyer de marché retenu (576 €/mois), elle absorbe 7,81 % des revenus : c'est quatre fois moins que le dossier de Brignoles du même jour (2 193 €/an, 30 % du loyer, chauffage collectif au fioul) et c'est le meilleur point du dossier. MAIS elle n'est PAS sanctuarisée : une copropriété de 6 lots sous procédure L. 721-1, c'est précisément le scénario dans lequel la charge annuelle double en deux ans. Le modèle teste donc la variante 1 080 €/an"
+        },
+        "travaux": {
+          "montant_euros": 0.0,
+          "nature": "Aucun devis, donc aucun montant retenu : le modèle publie une GRILLE par enveloppe (10 000, 20 000, 30 000 €) et non un chiffre. Le bien est de 1948, en DPE D, non meublé, « à rafraîchir » — mais l'annonce ne décrit aucune dégradation, aucune photo ne montre de désordre et le chauffage comme la cuisine sont donnés pour récents. À l'inverse, une copropriété sous procédure peut apporter des travaux d'office sur les parties communes (toiture, façade, réseaux) qu'aucune expertise individuelle ne révèle : c'est exactement ce que l'état daté et les trois derniers PV doivent chiffrer"
+        }
+      },
+      "annonce": {
+        "plateforme": "SeLoger",
+        "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/brignoles-83170/2665KPL9U1PX",
+        "prix_affiche_euros": 84000.0,
+        "prix_retenu_euros": null,
+        "prix_statut": "affiche",
+        "prix_commentaire": "84 000 € honoraires à la charge du vendeur, soit 1 750 €/m² sur 48 m² — et 90 720 € d'acte en main avec les 6 720 € de frais affichés par le simulateur de l'annonce. L'annonce écrit elle-même que le bien est « moins cher que des biens comparables dans la région » : le calcul lui donne raison sur le prix, et tort sur l'implication. Sous la médiane du quartier, il n'y a pas de décote à capter — il y a un prix de marché qui intègre déjà la procédure de copropriété, l'absence d'ascenseur et un T3 de 48 m² dont une partie de la surface utile est une mezzanine"
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 70320.0,
+          "haute_euros": 110160.0,
+          "retenue_euros": 97536.0,
+          "source": "DVF 2025, ancrage sur le QUARTIER et non sur la commune : 24 ventes d'appartements de 45 à 60 m² dans le centre ancien de Brignoles, médiane 2 032 €/m², premier quartile 1 465 €/m², troisième quartile 2 295 €/m², prix médian 103 050 €. Contrôle par deux sources indépendantes : SeLoger donne le quartier Centre Vieille Ville à 1 953 €/m² de moyenne (bornes 1 465 à 2 930 — la borne basse est exactement le Q1 DVF) et Meilleurs Agents l'appartement brignolais à 2 250 €/m² toutes surfaces. Valeur retenue = 48 m² × 2 032 €/m² = 97 536 €",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "Appartement T3 de 48 m² — bien libre, non meublé, à rafraîchir",
+            "quantite": 1,
+            "loyer_mensuel_euros": 576.0,
+            "occupe": false,
+            "note": "UNE SEULE LIGNE DE REVENU, à 576 €/mois (12,00 €/m²), soit 6 912 €/an bruts. Trois ancrages datés convergent : la fiche de référence interne du 21/09/2026 retient 11,00 €/m² pour un lot type de 60 m² (soit 528 €) ; Trackstone donne 12,00 €/m² pour l'appartement brignolais (576 €) ; SeLoger estime la ville à 13,00 €/m² (624 €). Les annonces réelles du secteur confirment : 70 m² affichés à 786 €/mois (11,2 €/m²) et 70 m² à 855 € charges comprises (12,2 €/m²). LA FOURCHETTE PUBLIÉE EST DONC 528 À 624 €/MOIS, et c'est un loyer nu hors charges : dans une copropriété de 6 lots, les charges locatives récupérables se refacturent au locataire, mais une provision sur charges mal calibrée sur un immeuble de 1948 se retourne toujours contre le bailleur à la régularisation"
+          }
+        ],
+        "notes": "LE DOSSIER NE SE JUGE PAS SUR SON PRIX, ET C'EST EXACTEMENT L'INVERSE DU RÉFLEXE : à 1 750 €/m², le bien est 13,9 % SOUS la médiane de son quartier pour sa tranche de surface et 17,0 % sous la médiane communale de la même tranche — un écart qui ne se trouve pas sur un marché où la fiche de référence montre qu'aucune des douze villes du secteur n'atteint le seuil patrimonial au prix de marché. Ce prix bas s'explique et s'assume : procédure de copropriété en cours, 2e étage sans ascenseur dans un immeuble de 1948, T3 de 48 m² dont la troisième pièce utile est une mezzanine hors Carrez. Ce qui décide de l'affaire n'est donc pas le prix affiché, mais les deux inconnues qui l'ont produit : le coût réel de la procédure de copropriété et le montant des travaux à venir. Le rendement net avant IS au loyer médian est de 4,66 % pour un plafond 5 % à 78 348 € : le prix est 6,7 % trop cher pour la doctrine, mais il n'est pas absurde — c'est un dossier de pièces, pas un dossier mort"
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 3.0,
+        "vacance_worst_pct": 10.0,
+        "vacance_justification": "5,00 % en scénario de base : le bien est libre, donc il n'y a ni loyer acquis ni vacance héritée — mais il y a une vacance de mise en location au départ (annonces, visites, travaux) et un marché locatif brignolais peu tendu, où un T3 sans ascenseur au 2e étage se reloue en quelques semaines, pas en quelques jours. À 3 % en hypothèse favorable (locataire trouvé et en place dès le premier mois) et 10 % en hypothèse défavorable, avec une remise en état, un repaint et une recherche longue sur un bien atypique",
+        "frais_acquisition_euros": 6720.0,
+        "frais_divers_euros": 0.0,
+        "quote_part_bati_pct": 0.0,
+        "duree_amortissement_ans": 30,
+        "fiscalite_commentaire": "SCI à l'IS. Calcul réel de l'année 1 : EBE 4 230 moins intérêts d'emprunt 2 797 (75 600 à 3,7 %) moins dotation aux amortissements 2 240 (bâti à 80 % du prix affiché sur 30 ans) = -807, soit un DÉFICIT : aucun IS dû en année 1, et le résultat se reconduit tant que les intérêts et la dotation dépassent l'EBE. Les rendements nets publiés restent sous la convention prudente du moteur (IS de 15 % de l'EBE), dite explicitement — c'est la lecture la plus défavorable, donc celle qui décide. Seuil de décision du parc : 6,5 % net d'IS",
+        "charges": {
+          "taxe_fonciere_annuelle_euros": 800.0,
+          "taxe_fonciere_commentaire": "ESTIMATION 800 €/an — l'avis de taxe foncière n'est pas communiqué par le vendeur ni par l'agence, et c'est la deuxième pièce à exiger. Repère de calcul : l'ancienne base départementale du Var taxe environ 50 % de la valeur locative cadastrale, et une valeur locative cadastrale de T3 ancien à Brignoles tourne autour de 3 000 € : l'ordre de grandeur de 800 € tient, mais il se vérifie par l'avis, pas par l'estimation",
+          "charges_copro_annuelles_euros": 540.0,
+          "charges_copro_commentaire": "540 €/an ANNONCÉS (45 €/mois), soit 7,81 % du loyer brut de marché : c'est un rapport sain pour un immeuble de 1948 sans ascenseur, et c'est la seule donnée d'exploitation que l'annonce fournit. Deux réserves, toutes deux comptables : une copropriété de 6 lots sous procédure L. 721-1 peut voter demain une augmentation du budget ou un emprunt de travaux, et une charge annoncée à 540 € pour six lots (3 240 € de budget annuel) est un budget de copropriété très maigre — précisément le profil d'une copropriété qui n'a pas provisionné",
+          "pno_annuelle_euros": 100.0,
+          "pno_commentaire": "Assurance propriétaire non occupant du lot, 100 €/an : le logement est libre à la vente, donc assuré en PNO jusqu'à sa mise en location, puis en assurance propriétaire bailleur",
+          "entretien_annuel_euros": 496.0,
+          "entretien_commentaire": "Poste composite, détaillé : gestion locative 346 € (5,00 % des 6 912 € de loyers bruts, même en gestion directe, le temps passé se paie en heures) plus une provision de travaux et de renouvellement de 150 €/an (peintures, chauffe-eau, VMC, robinetterie : un appartement de 1948 consomme cette provision, pas moins). Le moteur ajoute par ailleurs une provision de rénovation automatique de 2,5 % des loyers (173 €/an) : elle est DÉSACTIVÉE sur cette fiche (provision_desactivee) parce que la ligne ci-dessus la couvre déjà — la compter deux fois serait compter deux fois la même dépense",
+          "comptabilite_annuelle_euros": 400.0,
+          "comptabilite_commentaire": "Comptabilité de la SCI à l'IS, 400 €/an : un logement loué nu au régime réel, avec amortissements, tableaux d'amortissement et liasse fiscale. C'est le coût du régime qui rend l'année 1 déficitaire et qui protège l'EBE de l'impôt",
+          "provision_desactivee": true
+        }
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Location nue longue durée au prix de marché — loyer retenu 576 €/mois (12,00 €/m²), sous conditions suspensives de pièces",
+          "code": "ld-nue",
+          "lots": 1
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Plancher de marché — loyer de 528 €/mois (11,00 €/m²), ancrage de la fiche de référence interne (lot type de 60 m²)",
+            "lots": 1,
+            "rendement": "4,09 % net avant IS sur l'acte en main (3 712 € d'EBE), 3,48 % après IS sous convention prudente",
+            "faisabilite": "c'est le prix qu'un locataire de Brignoles acceptera de payer sans négocier pour un T3 de 48 m² sans ascenseur : le loyer s'ajuste, mais il s'ajuste vers le bas",
+            "risque": "-260 €/mois de cash-flow avant IS et un plafond 5 % à 68 748 € : la lecture qui ne pardonnerait aucun imprévu de travaux"
+          },
+          {
+            "strategie": "Scénario de base — loyer de 576 €/mois (12,00 €/m²), ancrage Trackstone, charges de copropriété telles qu'annoncées (540 €/an)",
+            "lots": 1,
+            "rendement": "4,66 % net avant IS, 3,96 % après IS, 3,69 % sur la valeur de marché",
+            "faisabilite": "la seule lecture que la doctrine du parc accepte de regarder en face : 48 m² en centre ancien de Brignoles se louent à ce niveau, et les charges annoncées le permettent",
+            "risque": "le rendement net avant IS reste à 4,66 % pour un seuil de parc à 6,5 % : -217 €/mois de cash-flow avant IS au prix affiché, et il faudrait payer 78 348 € pour atteindre 5 % net"
+          },
+          {
+            "strategie": "Haut de marché — loyer de 624 €/mois (13,00 €/m²), ancrage SeLoger ville",
+            "lots": 1,
+            "rendement": "5,24 % net avant IS (4 749 € d'EBE), 4,45 % après IS",
+            "faisabilite": "tenable seulement si le bien est remis en état et reloué à un ménage venant de l'extérieur : c'est le haut de la fourchette constatée, pas la moyenne",
+            "risque": "même à 624 €/mois la trésorerie reste négative (-174 €/mois avant IS) : l'écart au seuil n'est pas un problème de loyer"
+          },
+          {
+            "strategie": "Variante de risque — loyer de base (576 €/mois) et charges de copropriété doublées à 1 080 €/an, ce qu'un budget mal provisionné produit en deux ans",
+            "lots": 1,
+            "rendement": "4,07 % net avant IS, 3,46 % après IS",
+            "faisabilite": "c'est la variante à retenir tant que les procès-verbaux ne sont pas lus : 90 €/mois de charges pour un lot de 48 m² n'est pas une hypothèse de catastrophe, c'est une hypothèse de copropriété de 6 lots",
+            "risque": "chaque euro de charge annuelle en plus retire 19 € de prix acceptable : le plafond 5 % tombe de 78 348 € à 68 348 €, soit 12,8 % de prix en moins pour la même exigence de rendement"
+          },
+          {
+            "strategie": "Piste étudiée et écartée — colocation meublée à deux chambres, 420 à 450 € par chambre et par mois",
+            "lots": 1,
+            "rendement": "6,64 à 7,24 % net après IS, 7 082 à 7 730 € d'EBE",
+            "faisabilite": "c'est la seule lecture qui franchit le seuil du parc — mais elle suppose de meubler deux chambres, un règlement de copropriété qui l'autorise, et un marché de la colocation qui n'existe pas à Brignoles (aucune demande étudiante structurelle) ; la mezzanine hors Carrez ne se loue pas comme une chambre",
+            "risque": "un bail meublé sur un T3 de 48 m² en centre ancien se reloue mal et se vide vite : c'est la stratégie qui transforme un revenu modeste mais certain en revenu élevé mais discontinu, sur un bien déjà atypique"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 6,
+            "justification": "Brignoles est une sous-préfecture du Var reliée par l'A8 et la D554, avec une gare sur la ligne Carnoules-Gardanne et un réseau de bus urbain : on rejoint Toulon et Aix par la route, pas par un train cadencé. Pour un T3 de centre ancien, c'est suffisant — la cible est locale — mais ce n'est pas un emplacement de navetteur pendulaire, et cela plafonne la demande extérieure"
+          },
+          {
+            "dimension": "commerces",
+            "score": 7,
+            "justification": "Centre Vieille Ville commerçant : boutiques, marchés, services publics et professions de santé à pied, hypermarchés en périphérie. C'est le point fort objectif de l'emplacement, et c'est ce qui fait qu'un T3 de 48 m² se reloue ici à 12,00 €/m² sans miracle commercial"
+          },
+          {
+            "dimension": "ecoles",
+            "score": 7,
+            "justification": "Brignoles concentre les établissements de la couronne (écoles, collèges, lycée Raynouard, formations post-bac) à quelques minutes à pied du centre ancien : la ville est un pôle scolaire local, ce qui soutient la demande de logements familiaux et de petites surfaces"
+          },
+          {
+            "dimension": "securite",
+            "score": 6,
+            "justification": "Aucune tension spécifique documentée sur le quartier dans les sources consultées, et aucun élément de l'annonce ne signale de désordre. Réserve de méthode : un bâti ancien très dense et des parties communes d'immeuble de 1948 demandent des portes et une serrurerie en état — poste à vérifier lors de la visite, pas à supposer"
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 6,
+            "justification": "Trois ancrages datés donnent un loyer de 528 à 624 €/mois pour 48 m², et les annonces réelles du secteur confirment (70 m² à 786 €/mois, 70 m² à 855 € charges comprises). La demande existe, mais elle n'est ni tendue ni étudiante : seuls 2 chambres pour 3 pièces, une mezzanine hors Carrez comme troisième espace, pas d'ascenseur. Un T3 de centre ancien se reloue, il ne s'arrache pas"
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 5,
+            "justification": "Marché de sous-préfecture : 168 ventes d'appartements en 2025 à l'échelle communale et 116 dans la boîte du centre ancien, avec un prix médian de l'ancien autour de 2 500 €/m² et une progression annuelle faible. Les prix montent moins vite que l'inflation : dans ce dossier le rendement locatif est le seul moteur de performance, la plus-value n'en est pas un"
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Procédure de copropriété en cours (art. L. 721-1 du code de la construction et de l'habitation) sans aucun document communiqué",
+            "severite": 4,
+            "bloquant": false,
+            "detail": "L'annonce déclare elle-même que « le syndicat des copropriétaires fait l'objet d'une procédure citée à l'article L. 721-1 ». Ce que la mention ne dit pas : l'objet de la procédure, les travaux votés et non payés, l'existence d'un emprunt de copropriété, le montant des impayés et le budget prévisionnel réel. Sur une copropriété de 6 lots, un seul copropriétaire défaillant pèse jusqu'à un sixième des charges — et les appels de fonds exceptionnels tombent sur les copropriétaires solvables, c'est-à-dire sur l'acheteur. Ce risque n'est pas encore bloquant parce qu'il n'est pas quantifié : il le devient dès que l'état daté et les trois derniers procès-verbaux le chiffrent. Condition suspensive obligatoire"
+          },
+          {
+            "facteur": "Le prix bas est le prix du risque : rien ne prouve que la décote de 13,9 % soit suffisante",
+            "severite": 4,
+            "bloquant": false,
+            "detail": "À 1 750 €/m², le bien est sous les 24 ventes de sa tranche dans le centre ancien (médiane 2 032 €/m²). Sur un marché où cette décote n'existe pas par accident, elle paie quelque chose : procédure, ascenseur absent, mezzanine comptée dans le gabarit. La vraie question n'est pas « est-ce moins cher que le quartier ? » mais « est-ce assez moins cher pour absorber le travaux et les charges qui viennent ? ». Si la copropriété annonce 20 000 € d'appels de fonds au nom du lot, la décote est intégralement consommée"
+          },
+          {
+            "facteur": "Rendement structurellement sous le seuil du parc : 4,66 % net avant IS pour 6,5 % visés",
+            "severite": 3,
+            "bloquant": false,
+            "detail": "Au loyer médian de marché (576 €/mois) et avec les charges annoncées, l'affaire dégage 4 231 € d'EBE, soit 4,66 % net avant IS sur l'acte en main — et 5,24 % seulement en montant au haut de la fourchette de loyer. Le seuil de parc est 6,5 % net d'IS : il faudrait payer 60 268 € (soit 28,3 % de moins) pour l'atteindre. Ce n'est pas un mauvais dossier, c'est un dossier qui ne s'achète pas pour son rendement"
+          },
+          {
+            "facteur": "Mezzanine hors Carrez et T3 de 48 m² : gabarit atypique, surface utile surestimée",
+            "severite": 3,
+            "bloquant": false,
+            "detail": "L'annonce vend un T3 de 48 m² et décrit un « espace supplémentaire » en mezzanine : cette surface n'est pas comptée dans le Carrez, ne se loue pas comme une pièce habitable et ne se revend pas au prix du m². Le prix au m² affiché (1 750 €) est donc plutôt un prix haut de gamme du gabarit réel : ramenée à une surface utile de 55 m², l'opération ressort à 1 527 €/m². Faire trancher par le certificat Carrez et par le règlement de copropriété (mezzanine déclarée en surface habitable ou non)"
+          },
+          {
+            "facteur": "Immeuble de 1948, 2e étage sans ascenseur, DPE D : cible locative et acheteurs réduits",
+            "severite": 3,
+            "bloquant": false,
+            "detail": "DPE D et GES B avec une facture annoncée de 620 à 880 € — ce n'est pas une passoire thermique et le bien reste louable, mais la trajectoire réglementaire et la perte de pouvoir d'achat des locataires pèsent sur le loyer négociable. Un 2e étage sans ascenseur retire les locataires âgés ou chargés d'enfants en bas âge, et réduit la cible à la revente. À Brignoles, où le centre ancien est bâti en hauteur, c'est une contrainte durable, pas un détail"
+          },
+          {
+            "facteur": "Travaux non chiffrés et estimation d'exploitation non vérifiable (taxe foncière, charges futures)",
+            "severite": 2,
+            "bloquant": false,
+            "detail": "Trois chiffres du modèle sont des ESTIMATIONS, dites explicitement : la taxe foncière (800 €/an, avis non communiqué), la provision de travaux (150 €/an) et l'enveloppe de rafraîchissement (publiée en grille de 10 000 à 30 000 €). Seules les charges de copropriété (540 €/an) sont annoncées. Ce n'est pas un risque de perte sèche, c'est un risque de précision : demander l'avis de taxe foncière, le dernier appel de charges et un devis de rafraîchissement avant toute offre"
           }
         ],
         "champs_manquants": []
