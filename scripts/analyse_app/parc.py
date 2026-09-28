@@ -40,14 +40,18 @@ PNO_VERRERIE_ANNUELLE_EUR = 598.91          # refacturée : neutre
 # Prêt Crédit Mutuel dédié : 71 500 € (prix HT) à 3,70 % fixe sur 180 mois,
 # TEG 5,64 %, échéance 546,79 €/mois assurance comprise (1re 05/05/2026,
 # dernière 05/04/2041), cautions solidaires d'Alexis et Rémy Barlatier. Reste dû
-# au 28/09/2026 : 70 002 €. Contrôle : 518,19 € de capital et intérêts + 28,60 €
-# d'assurance emprunteur = 546,79 € — l'assurance est DANS le prélèvement, ne
-# jamais la compter deux fois.
+# au 28/09/2026 : 70 002,14 €. Contrôle au tableau d'amortissement reçu le
+# 28/09/2026 : 302,35 € de capital + 215,84 € d'intérêts + 28,60 € d'assurance =
+# 546,79 € — l'assurance est DANS le prélèvement, ne jamais la compter deux fois.
 PRET_VERRERIE_EUR = 71500.0
 PRET_VERRERIE_TAUX = 0.0370
 PRET_VERRERIE_MENSUALITE_EUR = 546.79
 PRET_VERRERIE_ENCOURS_EUR = 70002.0
 ASSURANCE_EMPRUNTEUR_ANNUELLE_EUR = 343.20   # 4,00 €/10 000 €/mois sur 71 500 €
+# Intérêts d'une année pleine, lus au tableau d'amortissement Crédit Mutuel du
+# 28/09/2026 (175 échéances, de 05/10/2026 à 05/04/2041) : 2 494 € en 2027,
+# 2 353 € en 2028, 1 024 € en 2036. Ils décroissent — l'IS montera d'autant.
+INTERETS_VERRERIE_ANNEE_PLEINE_EUR = 2493.66
 
 # --- La Garde : 2 places extérieures, achetées sur fonds personnels -----------
 # 11 400 € (5 700 € la place), avancés par Alexis et Rémy et prêtés à la SCI en
@@ -66,12 +70,13 @@ LOYER_LA_GARDE_CIBLE_MAX_EUR = 60.0
 
 # --- IS : reconstitution, pas un chiffre du fisc ------------------------------
 # Base = loyers − structure − assurance emprunteur − intérêts − amortissements.
-# Année pleine : 18 605 € de loyers, 1 248 € de structure, 374 € d'assurance et
-# 2 646 € d'intérêts. Reste 1 829 € d'IS si le cabinet amortit la part bâtie des
-# places, 2 151 € sinon — soit 152 à 179 €/mois. La provision de 100 €/mois en
-# couvre 56 à 66 %. Le vrai chiffre tombera au premier arrêté de comptes.
-IS_ESTIME_MIN_ANNUEL_EUR = 1830.0
-IS_ESTIME_MAX_ANNUEL_EUR = 2150.0
+# Année pleine : 18 605 € de loyers, 1 248 € de structure, 343 € d'assurance et
+# 2 494 € d'intérêts. Reste 1 856 € d'IS si le cabinet amortit la part bâtie des
+# places, 2 178 € sinon — soit 155 à 182 €/mois. La provision de 100 €/mois en
+# couvre 55 à 65 %. Le vrai chiffre tombera au premier arrêté de comptes.
+# L'exercice en cours est plus léger : le prêt n'a couru qu'à partir de mai.
+IS_ESTIME_MIN_ANNUEL_EUR = 1860.0
+IS_ESTIME_MAX_ANNUEL_EUR = 2180.0
 
 
 def loyers_verrerie_annuels():
@@ -90,19 +95,19 @@ def ebe_verrerie(pno_annuelle=0.0):
             - pno_annuelle)
 
 
-def interets_verrerie_annee1(taux=None):
-    """Intérêts de la première année pleine du prêt Crédit Mutuel."""
-    return PRET_VERRERIE_ENCOURS_EUR * (PRET_VERRERIE_TAUX if taux is None else taux)
+def interets_verrerie_annee_pleine():
+    """Intérêts d'une année pleine, lus au tableau d'amortissement."""
+    return INTERETS_VERRERIE_ANNEE_PLEINE_EUR
 
 
-def is_estime_verrerie(amortissement_annuel=0.0, taux_pret=None):
+def is_estime_verrerie(amortissement_annuel=0.0):
     """IS estimé sur la Verrerie seule, intérêts et assurance emprunteur déduits.
 
     Reste une reconstitution : le vrai chiffre tombe à l'arrêté de comptes.
     """
     return IS_RATE * max(0.0, ebe_verrerie()
                          - ASSURANCE_EMPRUNTEUR_ANNUELLE_EUR
-                         - interets_verrerie_annee1(taux_pret)
+                         - interets_verrerie_annee_pleine()
                          - amortissement_annuel)
 
 
