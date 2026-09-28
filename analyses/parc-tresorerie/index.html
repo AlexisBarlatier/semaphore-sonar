@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trésorerie du parc — état au 28 septembre 2026 — Sémaphore Patrimoine</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<main class="report">
+
+  <header class="report-header">
+    <p class="report-breadcrumb">Note interne — trésorerie du parc</p>
+    <h1>Ce que le parc dégage aujourd'hui, et ce qu'il dégagera avec La Garde</h1>
+    <p class="report-address">SCI Sémaphore Patrimoine — La Verrerie (13 parkings, La Valentine, Marseille) et La Garde (2 places extérieures)</p>
+    <p class="report-date">État au 28 septembre 2026 · projection à douze mois</p>
+    <p class="report-source">Source des chiffres : <code>scripts/analyse_app/parc.py</code>, alimenté par le tableau d'amortissement Crédit Mutuel du 28 septembre 2026 et les factures de loyer SCHINDLER</p>
+  </header>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Loyers Verrerie</span>
+      <span class="card-value">18 605 € /an</span>
+    </div>
+    <div class="card">
+      <span class="card-label">EBE</span>
+      <span class="card-value">17 357 € /an</span>
+    </div>
+    <div class="card">
+      <span class="card-label">IS estimé</span>
+      <span class="card-value">1 856 à 2 178 € /an</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Flux après échéance</span>
+      <span class="card-value">718 à 745 € /mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Réserve au 28 septembre 2026</span>
+      <span class="card-value">4 529,11 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Effort mensuel</span>
+      <span class="card-value">500 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Parc + La Garde</span>
+      <span class="card-value">795 à 838 € /mois</span>
+    </div>
+    <div class="card card-verdict note-8">
+      <span class="card-label">Trésorerie libre</span>
+      <span class="card-value">295 à 338 € /mois</span>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Lecture</h2>
+    <p>Le parc tient aujourd'hui sur un seul locataire : SCHINDLER, bail commercial, 18 605 € de loyers par an, taxe foncière et assurance refacturées. L'EBE ressort à <strong>17 357 €</strong>, dont on retire 546,79 € d'échéance Crédit Mutuel chaque mois et l'impôt sur les sociétés. Reste <strong>718 à 745 € par mois</strong> selon que le cabinet amortit ou non la part bâtie des places. C'est le vrai chiffre du parc, et il recoupe la somme que Rémy retient chaque mois.</p>
+    <p>Les deux places de La Garde, achetées 11 400 € sur fonds personnels et prêtées à la SCI, ne produisent rien tant qu'elles sont vacantes. Louées à 50, 55 ou 60 € la place, elles ajoutent <strong>76 à 94 € par mois</strong> après impôt et après leur quote-part de taxe foncière. Le compte courant d'associé se rembourse en plus, sur vingt ans, à 47,50 € par mois : cet argent quitte la SCI mais revient aux associés. Le parc passe alors de 718 € à <strong>795 € par mois</strong>.</p>
+    <p>Ce qui reste libre après l'effort de réserve de 500 €, c'est <strong>295 à 338 € par mois</strong> aujourd'hui, davantage dès que La Garde est louée. La réserve, elle, atteint 10 706 € dans un an et 36 961 € dans cinq ans : c'est à la fois le coussin de vacance et la capacité d'apport du parc.</p>
+  </section>
+
+  <section class="financial-projections">
+    <h2>La Verrerie, compte d'exploitation sur une année pleine</h2>
+    <table class="projection-table">
+      <thead><tr><th>Poste</th><th>Annuel</th><th>Mensuel</th></tr></thead>
+      <tbody>
+        <tr><td>Loyers SCHINDLER (4 trimestres)</td><td>18 605 €</td><td>1 550 €</td></tr>
+        <tr><td>Banque et cabinet comptable</td><td>-1 248 €</td><td>-104 €</td></tr>
+        <tr><td><strong>EBE</strong></td><td><strong>17 357 €</strong></td><td><strong>1 446 €</strong></td></tr>
+        <tr><td>Intérêts du prêt Crédit Mutuel</td><td>-2 494 €</td><td>-208 €</td></tr>
+        <tr><td>Assurance emprunteur</td><td>-343 €</td><td>-29 €</td></tr>
+        <tr><td>Impôt sur les sociétés (15 %)</td><td>-1 856 à -2 178 €</td><td>-155 à -182 €</td></tr>
+        <tr><td>Échéance de prêt, capital et intérêts</td><td>-6 561 €</td><td>-546,79 €</td></tr>
+        <tr><td><strong>Flux de trésorerie</strong></td><td><strong>8 618 à 8 939 €</strong></td><td><strong>718 à 745 €</strong></td></tr>
+      </tbody>
+    </table>
+    <p class="projection-note">La taxe foncière (784 €) et l'assurance du bien (598,91 €) sont refacturées au locataire : elles ne sont donc pas des charges, et les compter ici les compterait deux fois. L'assurance emprunteur, elle, est comprise dans l'échéance de 546,79 €.</p>
+  </section>
+
+  <section class="financial-projections">
+    <h2>La réserve vacance et travaux, notre mini-ALUR interne</h2>
+    <p>La vacance locative et la provision travaux sont placées sur un fonds monétaire euro, à 2.84 % net de frais, produits bruts d'impôt sur les sociétés. Le solde de départ est celui constaté au 28 septembre 2026, l'effort de 500 € par mois tant qu'aucun nouveau dossier ne se matérialise.</p>
+    <table class="projection-table">
+      <thead><tr><th>Échéance</th><th>Solde de la réserve</th><th>Ce qu'elle couvre</th></tr></thead>
+      <tbody>
+        <tr><td>Un an</td><td>10 706 €</td><td>6,9 mois de loyer Verrerie</td></tr>
+        <tr><td>Deux ans</td><td>17 035 €</td><td>un sinistre courant ou une vacance longue</td></tr>
+        <tr><td>Trois ans</td><td>23 517 €</td><td>les appels de fonds d'une copropriété qui vote</td></tr>
+        <tr><td>Cinq ans</td><td>36 961 €</td><td>un apport partiel sur un nouveau lot</td></tr>
+        <tr><td>Dix ans</td><td>73 549 €</td><td>l'autofinancement d'un dossier entier</td></tr>
+      </tbody>
+    </table>
+    <p class="projection-note">Jalons : 15 000 € en <strong>21 mois</strong> (début 2028), 30 000 € en <strong>48 mois</strong>, 50 000 € en <strong>83 mois</strong>. C'est cette réserve, et non le compte courant, qui desserre le filtre des 30 000 € d'apport.</p>
+  </section>
+
+  <section class="financial-projections">
+    <h2>La Garde, 11 400 € avancés sur fonds personnels</h2>
+    <p>Deux places extérieures, achetées 11 400 € et prêtées à la SCI en compte courant. Pas d'assurance dommage : une place extérieure n'en porte pas. Objectif locatif de 50 à 60 € par place et par mois, hors charges.</p>
+    <table class="projection-table">
+      <thead><tr><th>Loyer par place</th><th>Loyers annuels</th><th>Net après IS</th><th>Après remboursement du compte courant</th><th>Rendement brut</th></tr></thead>
+      <tbody>
+        <tr><td>50 €</td><td>1 200 €</td><td>76 €/mois</td><td>29 €/mois</td><td>10,5 %</td></tr>
+        <tr><td>55 €</td><td>1 320 €</td><td>85 €/mois</td><td>38 €/mois</td><td>11,6 %</td></tr>
+        <tr><td>60 €</td><td>1 440 €</td><td>94 €/mois</td><td>46 €/mois</td><td>12,6 %</td></tr>
+      </tbody>
+    </table>
+    <p class="projection-note">Charge retenue : 120 € de taxe foncière par an, les charges de copropriété étant refacturées au preneur. Le compte courant se rembourse sur 240 mois, soit 47,50 € par mois, capital compris : ce n'est pas une charge, c'est de l'argent qui revient aux associés.</p>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Les trois scénarios</h2>
+    <table class="comparison-table">
+      <thead><tr><th>Scénario</th><th>Hypothèses</th><th>Flux mensuel</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Base</strong></td><td>Verrerie louée à SCHINDLER, La Garde louée à 55 € la place, réserve alimentée de 500 €/mois</td><td>718 à 745 €/mois de flux Verrerie, 85 €/mois de La Garde, soit <strong>803 à 830 €/mois</strong> avant l'effort de réserve</td></tr><tr><td><strong>Favorable</strong></td><td>La Garde part à 60 € la place et le cabinet amortit la part bâtie des places de La Verrerie</td><td><strong>838 €/mois</strong>, dont 500 à la réserve et 338 € restant libres</td></tr><tr><td><strong>Défavorable</strong></td><td>La Garde reste vacante six mois et la toiture de La Verrerie est appelée par la copropriété</td><td>un mois de vacance sur La Verrerie coûte 1 550 € ; la réserve de 10 706 € à un an absorbe 6,9 mois de loyer, et couvre les appels de fonds courants sans toucher au flux</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Conventions de calcul</h2>
+    <p>• L'impôt est reconstitué sur l'EBE diminué des intérêts réels du prêt et de l'assurance emprunteur. Le cabinet n'a pas encore dit s'il amortit la part bâtie des places : d'où la fourchette.</p>
+    <p>• L'échéance Crédit Mutuel de 546,79 € comprend le capital, les intérêts et l'assurance emprunteur : elle n'est retranchée qu'une fois.</p>
+    <p>• Les loyers de La Garde sont comptés hors charges, avec 120 € de taxe foncière à notre charge et une vacance nulle la première année.</p>
+    <p>• Les intérêts du prêt La Verrerie fondent d'environ 140 € par an : l'impôt montera d'autant, à provisionner.</p>
+  </section>
+
+  <footer class="report-footer">
+    <p>Note interne Sémaphore Patrimoine, générée automatiquement depuis <code>parc.py</code> le 28 septembre 2026. Chaque chiffre de cette page est contrôlé à la génération : si une donnée change, la page ne se reconstruit pas.</p>
+  </footer>
+
+</main>
+</body>
+</html>
