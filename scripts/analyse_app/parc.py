@@ -39,13 +39,15 @@ TF_VERRERIE_ANNUELLE_EUR = 784.0            # refacturée : neutre
 PNO_VERRERIE_ANNUELLE_EUR = 598.91          # refacturée : neutre
 # Prêt Crédit Mutuel dédié : 71 500 € (prix HT) à 3,70 % fixe sur 180 mois,
 # TEG 5,64 %, échéance 546,79 €/mois assurance comprise (1re 05/05/2026,
-# dernière 05/04/2041), assurance emprunteur 374 €/an, cautions solidaires
-# d'Alexis et Rémy Barlatier. Reste dû au 28/09/2026 : 70 002 €.
+# dernière 05/04/2041), cautions solidaires d'Alexis et Rémy Barlatier. Reste dû
+# au 28/09/2026 : 70 002 €. Contrôle : 518,19 € de capital et intérêts + 28,60 €
+# d'assurance emprunteur = 546,79 € — l'assurance est DANS le prélèvement, ne
+# jamais la compter deux fois.
 PRET_VERRERIE_EUR = 71500.0
 PRET_VERRERIE_TAUX = 0.0370
 PRET_VERRERIE_MENSUALITE_EUR = 546.79
 PRET_VERRERIE_ENCOURS_EUR = 70002.0
-ASSURANCE_EMPRUNTEUR_ANNUELLE_EUR = 374.0
+ASSURANCE_EMPRUNTEUR_ANNUELLE_EUR = 343.20   # 4,00 €/10 000 €/mois sur 71 500 €
 
 # --- La Garde : 2 places extérieures, achetées sur fonds personnels -----------
 # 11 400 € (5 700 € la place), avancés par Alexis et Rémy et prêtés à la SCI en
@@ -105,15 +107,16 @@ def is_estime_verrerie(amortissement_annuel=0.0, taux_pret=None):
 
 
 def flux_verrerie_mensuel(is_annuel=None, amortissement_annuel=0.0):
-    """Ce qui reste chaque mois après structure, IS, assurance et échéance.
+    """Ce qui reste chaque mois après structure, IS et échéance.
 
     C'est le flux qui doit recouper la somme retenue par Rémy (700 €/mois).
     """
     if is_annuel is None:
         is_annuel = is_estime_verrerie(amortissement_annuel)
+    # L'assurance emprunteur est comprise dans l'échéance : la retrancher ici
+    # serait la compter deux fois (elle reste déduite de la base d'IS).
     return (loyers_verrerie_annuels() / 12
             - BANQUE_MENSUEL_EUR - COMPTABLE_MENSUEL_EUR
-            - ASSURANCE_EMPRUNTEUR_ANNUELLE_EUR / 12
             - is_annuel / 12
             - PRET_VERRERIE_MENSUALITE_EUR)
 
