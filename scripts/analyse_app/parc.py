@@ -34,24 +34,32 @@ TF_VERRERIE_ANNUELLE_EUR = 784.0  # refacturée : neutre en résultat,
                                   # ne pas la compter deux fois
 ASSURANCE_VERRERIE_REFACTUREE = True
 
-# --- La Garde : 2 places extérieures, prêt Crédit Mutuel ----------------------
-# 70 002 EUR d'encours, 546,79 EUR/mois. Le couple encours/mensualité implique
-# un taux de 4,98 % si le prêt court jusqu'à fin 2041, de 3,7 % s'il s'arrête
-# vers fin 2040 : les intérêts de la première année vont de 2 590 à 3 490 EUR.
-# À confirmer sur le tableau d'amortissement — plus le taux est bas, plus le
-# résultat imposable est haut.
+# --- La Garde : 2 places extérieures, PROJET NON DÉMARRÉ au 28/09/2026 --------
+# Offre de prêt Crédit Mutuel, pas encore mobilisée : aucun intérêt à déduire
+# tant que l'acquisition n'est pas faite et le prêt tiré. Le loyer ne sera
+# facturé qu'après l'achat. 70 002 EUR / 546,79 EUR/mois : le couple implique
+# 4,98 % si le prêt court jusqu'à fin 2041, 3,7 % s'il s'arrête vers fin 2040.
+# Quand il démarrera : les intérêts (2 590 à 3 490 EUR/an) allégeront l'IS de
+# 390 à 525 EUR/an. Une franchise faisant courir les intérêts conserve cette
+# déduction ; une franchise « gratuite » qui les supprime la fait perdre.
 PRET_LA_GARDE_ENCOURS_EUR = 70002.0
 PRET_LA_GARDE_MENSUALITE_EUR = 546.79
+PRET_LA_GARDE_DEMARRE = False
 
 # --- IS : reconstitution, pas un chiffre du fisc ------------------------------
-# Base = loyers − charges − amortissements − intérêts. Une place de surface n'a
-# presque rien d'amortissable (le terrain ne s'amortit pas) : que la part bâtie
-# soit de 0 ou de 90 %, et selon le taux du prêt La Garde, l'IS de la Verrerie
-# ressort entre 1 830 et 2 350 EUR/an, soit 152 à 196 EUR/mois, 9 à 12 % des
-# loyers. Le vrai chiffre tombera au premier arrêté de comptes ; la provision de
-# 100 EUR/mois en couvre la moitié.
-IS_ESTIME_MIN_ANNUEL_EUR = 1830.0
-IS_ESTIME_MAX_ANNUEL_EUR = 2350.0
+# Base = loyers − charges − amortissements − intérêts. La Garde n'ayant pas
+# démarré, il n'y a AUCUN intérêt à déduire aujourd'hui : que la part bâtie des
+# 13 places soit de 0 ou de 90 %, l'IS ressort entre 2 350 et 2 740 EUR/an, soit
+# 196 à 228 EUR/mois, 12 à 14 % des loyers. Quand La Garde démarrera, la
+# fourchette descend vers 1 830-2 350. La provision de 100 EUR/mois en couvre
+# 44 à 51 % : c'est la première ligne à corriger. Le vrai chiffre tombera au
+# premier arrêté de comptes.
+# À OBTENIR : la mensualité du prêt d'acquisition de la Verrerie (85 800 EUR en
+# 04/2026). Sans elle le flux ne se recoupe pas : 1 624 € de loyers − 104 € de
+# structure − ~228 € d'IS = 1 292 €/mois, là où le dossier retient 840 €/mois.
+# L'écart de ~452 €/mois (5 424 €/an) n'a pas d'explication au dossier.
+IS_ESTIME_MIN_ANNUEL_EUR = 2350.0
+IS_ESTIME_MAX_ANNUEL_EUR = 2740.0
 
 
 def ebe_verrerie(pno_annuelle=0.0):
@@ -66,12 +74,14 @@ def ebe_verrerie(pno_annuelle=0.0):
             - pno_annuelle)
 
 
-def is_estime_verrerie(amortissement_annuel=0.0, taux_pret=0.0498):
-    """IS estimé sur la Verrerie seule, intérêts du prêt La Garde déduits.
+def is_estime_verrerie(amortissement_annuel=0.0, taux_pret=0.0):
+    """IS estimé sur la Verrerie seule.
 
-    Reste une reconstitution : le vrai chiffre tombe au premier arrêté de comptes.
+    `taux_pret` vaut 0 par défaut parce que le prêt La Garde n'est pas mobilisé :
+    dès qu'il le sera, passer le taux réel (les intérêts se déduisent). Reste une
+    reconstitution : le vrai chiffre tombe au premier arrêté de comptes.
     """
-    interets = PRET_LA_GARDE_ENCOURS_EUR * taux_pret
+    interets = PRET_LA_GARDE_ENCOURS_EUR * taux_pret if PRET_LA_GARDE_DEMARRE else 0.0
     return IS_RATE * max(0.0, ebe_verrerie() - amortissement_annuel - interets)
 
 
