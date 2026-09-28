@@ -7,6 +7,8 @@ Définitions retenues (alignées skill, version 2026-09) :
 - revenus bruts annuels   = Σ (lots × loyer mensuel × 12)
 - EBE = revenus bruts × (1 − vacance_base/100) − charges annuelles
         − provision rénovation (2,5 % × revenus bruts, règle interne)
+        + produits du placement de la réserve (vacance + provision travaux,
+          « mini-ALUR » interne, taux saisi dans la fiche ; 0 par défaut)
 - amortissement annuel    = quote_part_bati × prix retenu / durée
         (sous-sol/surélevé bâti amortissable ; extérieur non ; MDB : 0 ;
          résidentiel : quote-part bâti 90 %, durée 30 ans par défaut)
@@ -26,6 +28,10 @@ from .schema import champs_manquants
 
 IS_RATE = 0.15
 PROVISION_RENOVATION_PCT = 2.5      # cagnotte travaux (règle interne)
+# Rendement du placement de la réserve vacance + travaux (« mini-ALUR » interne).
+# Défaut à 0 : les fiches déjà publiées ne bougent pas tant que le taux n'est pas
+# saisi explicitement dans `hypotheses.taux_placement_reserve_pct`.
+TAUX_RESERVE_DEFAUT = 0.0
 DUREE_AMORTISSEMENT_DEFAUT_ANS = 30
 QUOTE_PART_BATI_DEFAUT = 90.0       # % du prix de revient (fiche MILOS 09/2026)
 
@@ -154,7 +160,39 @@ def ebe(record):
     if vacance is None:
         return None          # taux de vacance non renseigné : pas calculable
     charges, _ = charges_annuelles(record)
-    return revenus * (1.0 - vacance / 100.0) - charges
+    produits, _ = produits_reserve(record)
+    return revenus * (1.0 - vacance / 100.0) - charges + produits
+
+
+def reserve_annuelle(record):
+    """Réserve annuelle : vacance statistique + provision travaux non consommée.
+
+    C'est notre « mini-ALUR » interne : la trésorerie correspondante n'est pas
+    perdue, elle est mise de côté pour la vacance et les travaux. Son rendement
+    est celui d'un placement monétaire, imposé à l'IS comme le reste du résultat.
+    """
+    revenus = revenus_bruts_annuels(record)
+    vacance = _g(record, "hypotheses", "vacance_base_pct")
+    if revenus is None or vacance is None:
+        return None
+    _, lignes = charges_annuelles(record)
+    return revenus * vacance / 100.0 + (lignes.get("provision_renovation") or 0.0)
+
+
+def produits_reserve(record):
+    """(produits financiers annuels, réserve annuelle).
+
+    Le taux n'est appliqué que s'il est saisi explicitement dans la fiche
+    (`hypotheses.taux_placement_reserve_pct`), pour ne pas modifier les fiches
+    déjà publiées. Le retour est BRUT d'IS : l'impôt est appliqué par `fiscal()`,
+    via l'EBE, plus haut dans le résultat.
+    """
+    reserve = reserve_annuelle(record)
+    taux = _g(record, "hypotheses", "taux_placement_reserve_pct",
+              default=TAUX_RESERVE_DEFAUT) or 0.0
+    if reserve is None or not taux:
+        return 0.0, reserve
+    return reserve * taux / 100.0, reserve
 
 
 def prix_revient(record):
@@ -188,8 +226,11 @@ def fiscal(record):
         return None
     resultat = e - amort
     is_annuel = IS_RATE * max(0.0, resultat)
+    produits, reserve = produits_reserve(record)
     return {
         "ebe": round(e, 2),
+        "produits_reserve": round(produits, 2),
+        "reserve_annuelle": round(reserve, 2) if reserve is not None else None,
         "amortissement": round(amort, 2),
         "resultat_fiscal": round(resultat, 2),
         "is_annuel": round(is_annuel, 2),

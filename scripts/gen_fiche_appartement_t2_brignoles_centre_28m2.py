@@ -167,16 +167,18 @@ calcule("valeur retenue", VALEUR, 60000, 1)
 calcule("valeur au m²", round(VALEUR_M2), 2120, 1)
 calcule("revenus bruts", C["revenus_bruts_annuels"], 7080, 1)
 calcule("acte en main", AEM, 64800, 1)
-calcule("EBE", round(EBE), 5616, 1)
+calcule("EBE", round(EBE), 5626, 1)
+calcule("réserve annuelle (mini-ALUR)", round(C["fiscal"]["reserve_annuelle"]), 354, 1)
+calcule("produits du placement de la réserve", round(C["fiscal"]["produits_reserve"], 2), 10.05, 0.05)
 calcule("amortissement du bâti", round(C["fiscal"]["amortissement"]), 1944, 1)
-calcule("IS", round(IS), 551, 1)
-calcule("net après IS", round(NET), 5065, 1)
+calcule("IS", round(IS), 552, 1)
+calcule("net après IS", round(NET), 5074, 1)
 calcule("mensualité de crédit", round(MENS), 327, 1)
-calcule("cash-flow mensuel", round(CF), 95, 1)
-calcule("rendement net sur valeur", round(C["rendements"]["net_sur_valeur_pct"], 2), 8.44, 0.01)
-calcule("rendement net sur revient", round(C["rendements"]["net_sur_revient_pct"], 2), 7.82, 0.01)
-calcule("rendement brut sur revient", round(C["rendements"]["brut_sur_revient_pct"], 2), 8.67, 0.01)
-calcule("doctrine 5 % net avant IS", round(DOCTRINE, 2), 8.67, 0.01)
+calcule("cash-flow mensuel", round(CF), 96, 1)
+calcule("rendement net sur valeur", round(C["rendements"]["net_sur_valeur_pct"], 2), 8.46, 0.01)
+calcule("rendement net sur revient", round(C["rendements"]["net_sur_revient_pct"], 2), 7.83, 0.01)
+calcule("rendement brut sur revient", round(C["rendements"]["brut_sur_revient_pct"], 2), 8.68, 0.01)
+calcule("doctrine 5 % net avant IS", round(DOCTRINE, 2), 8.68, 0.01)
 calcule("ratio coût / valeur", round(C["ratio_cout_valeur"], 3), 1.080, 0.001)
 calcule("note du moteur", NOTE, 7.2, 0.05)
 calcule("charges annuelles", CHARGES_TOTAL, 1110, 1)
@@ -184,8 +186,24 @@ calcule("charges de détention (copro + TF)", DETENTION, 860, 1)
 calcule("part des charges dans les loyers bruts", round(CHARGES_TOTAL / LOYERS_AN * 100, 1), 15.7, 0.2)
 calcule("apport total", APPORT_CASH, 10800, 1)
 # Contrôles croisés avec les chiffres publiés dans le fil le 28/09
-calcule("EBE du modèle validé en chat", round(EBE), 5616, 1)
-calcule("net du modèle validé en chat (hors intérêts)", round(NET), 5065, 1)
+calcule("EBE du modèle validé en chat", round(EBE), 5626, 1)
+calcule("net du modèle validé en chat (hors intérêts)", round(NET), 5074, 1)
+
+
+def cumul_reserve(ans):
+    """Réserve cumulée après n années : on place la réserve annuelle, les produits
+    sont imposés à l'IS avant d'être replacés (comme le reste du résultat)."""
+    solde = 0.0
+    for _ in range(ans):
+        solde = (solde + C["fiscal"]["reserve_annuelle"]) * (1 + (TAUX_RESERVE / 100.0) * (1 - 0.15))
+    return solde
+
+
+TAUX_RESERVE = float(H.get("taux_placement_reserve_pct") or 0.0)
+RESERVE_5 = cumul_reserve(5)
+RESERVE_10 = cumul_reserve(10)
+calcule("réserve cumulée après 5 ans", round(RESERVE_5, -1), 1890, 40)
+calcule("réserve cumulée après 10 ans", round(RESERVE_10, -1), 4100, 80)
 
 # --------------------------------------------------------------------------
 # Échelles
@@ -220,9 +238,9 @@ for loyer in (650.0, 590.0, 570.0, 550.0, 530.0, 500.0):
 S_BEST = variante(vacance=2.0)
 S_BASE = variante(vacance=5.0)
 S_WORST = variante(vacance=20.0)
-calcule("scénario base — EBE", round(S_BASE[1]["fiscal"]["ebe"]), 5616, 1)
-calcule("scénario optimiste — EBE", round(S_BEST[1]["fiscal"]["ebe"]), 5828, 1)
-calcule("scénario pessimiste — EBE", round(S_WORST[1]["fiscal"]["ebe"]), 4554, 1)
+calcule("scénario base — EBE", round(S_BASE[1]["fiscal"]["ebe"]), 5626, 1)
+calcule("scénario optimiste — EBE", round(S_BEST[1]["fiscal"]["ebe"]), 5832, 1)
+calcule("scénario pessimiste — EBE", round(S_WORST[1]["fiscal"]["ebe"]), 4594, 1)
 
 CF_NUL_PRIX = plafond(0.0, kind="cf")
 CF_91_PRIX = plafond(91.0, kind="cf")
@@ -343,6 +361,8 @@ def bloc_scenario(c, titre, sous_titre, prix, classe, vacance):
         f'            <tr class="secondary"><td>Charges de copropriété</td><td class="num">−{eur(CH["charges_copro_annuelles_euros"])}</td></tr>\n'
         f'            <tr class="secondary"><td>Taxe foncière</td><td class="num">−{eur(CH["taxe_fonciere_annuelle_euros"])}</td></tr>\n'
         f'            <tr class="secondary"><td>Assurance et comptabilité</td><td class="num">−{eur(CH["pno_annuelle_euros"] + CH["comptabilite_annuelle_euros"])}</td></tr>\n'
+        f'            <tr class="scenario-subtitle"><td>Réserve vacance et travaux mise de côté — non dépensée, placée à {nfr(TAUX_RESERVE, 2)} %</td><td class="num">{eur(c["fiscal"]["reserve_annuelle"])}</td></tr>\n'
+        f'            <tr class="secondary"><td>Produits du placement de la réserve</td><td class="num">+{eur(f["produits_reserve"], 2)}</td></tr>\n'
         f'            <tr class="subtotal"><td>EBE avant impôt</td><td class="num">{eur(f["ebe"])}</td></tr>\n'
         f'            <tr><td>Amortissement du bâti (90 % / 30 ans)</td><td class="num">−{eur(f["amortissement"])}</td></tr>\n'
         f'            <tr><td>IS (15 % du résultat)</td><td class="num">−{eur(f["is_annuel"])}</td></tr>\n'
@@ -414,6 +434,37 @@ def bloc_charges():
                 f'<td class="num">{eur(DETENTION)}</td><td class="scenario-subtitle">'
                 f'{eur(DETENTION / 12.0)} par mois, {pct(DETENTION / LOYERS_AN * 100, 0)} des loyers : '
                 f'c\'est le poste qu\'aucune négociation de prix ne réduit</td></tr>')
+    return "\n".join(html)
+
+
+def bloc_reserve():
+    """Notre « mini-ALUR » interne : la réserve vacance et travaux, placée."""
+    r = C["fiscal"]["reserve_annuelle"]
+    p = C["fiscal"]["produits_reserve"]
+    lignes = [
+        ("Réserve constituée chaque année", eur(r),
+         f"{nfr(100 * r / LOYERS_AN, 1)} % des loyers bruts — vacance statistique de "
+         f"{nfr(H['vacance_base_pct'], 1)} % ({eur(LOYERS_AN * H['vacance_base_pct'] / 100.0)}) "
+         "et provision travaux quand elle est activée. Cet argent reste dans la société : il est mis de côté, "
+         "pas dépensé"),
+        ("Support du placement", "Fonds monétaire en euros",
+         "notre « compte à terme » interne : disponible à tout moment pour une vacance ou une réparation, "
+         "sans casser le cash-flow ni toucher au crédit"),
+        ("Taux retenu", nfr(TAUX_RESERVE, 2) + " % net de frais",
+         "relevé sur la page du fonds le 28/09/2026 — 2 Md€ d'actifs"),
+        ("Produits de la première année, bruts d'IS", "+" + eur(p, 2),
+         "imposés à l'IS comme le reste du résultat : pour une société à l'IS, les plus-values réalisées "
+         "comme les latentes sont imposables, les latentes étant réintégrées fiscalement à la clôture"),
+        ("Réserve cumulée après cinq ans", eur(RESERVE_5),
+         f"soit {pct(RESERVE_5 / AEM * 100, 1)} du prix de revient — de quoi absorber un remplacement de "
+         "chauffe-eau ou une remise en peinture sans emprunter"),
+        ("Réserve cumulée après dix ans", eur(RESERVE_10),
+         f"soit {pct(RESERVE_10 / AEM * 100, 1)} du prix de revient, avec les produits imposés puis replacés"),
+    ]
+    html = []
+    for label, valeur, note in lignes:
+        html.append(f'          <tr><td>{label}</td><td class="num">{valeur}</td>'
+                    f'<td class="scenario-subtitle">{note}</td></tr>')
     return "\n".join(html)
 
 
@@ -557,6 +608,18 @@ TEMPLATE = """<!DOCTYPE html>
   </section>
 
   <section class="strategy-exploration">
+    <h2>La réserve vacance et travaux : notre mini-ALUR interne</h2>
+    <p>Une vacance de 5 % n'est pas une perte sèche. L'argent correspondant reste dans la société — il n'est ni dépensé ni perdu — et il n'a aucune raison de dormir sur le compte courant : il est placé en fonds monétaire en euros, disponible à tout moment pour une vacance ou une réparation. C'est notre mini-ALUR interne, la version maison du plan pluriannuel de travaux : une réserve alimentée par les loyers, et non par une prime d'assurance.</p>
+    <table class="identity-table">
+      <thead><tr><th>Poste</th><th>Montant</th><th>Commentaire</th></tr></thead>
+      <tbody>
+{reserve_bloc}
+      </tbody>
+    </table>
+    <p class="strategy-rationale">Les produits sont <strong>bruts d'IS</strong> : pour une société à l'IS, les plus-values réalisées comme les latentes sont imposables, ces dernières étant réintégrées fiscalement à la clôture de l'exercice. Le taux de {taux_reserve} % est donc net de frais de gestion mais avant impôt, et c'est ainsi qu'il entre dans le calcul — {produits} de produits sur ce lot, {produits_mois} par mois de cash-flow en plus. L'effet chiffré est modeste sur un seul lot, et ce n'est pas là qu'est le gain : la réserve existe au lieu d'être un poste d'écriture, elle atteint {reserve5} après cinq ans et {reserve10} après dix, et elle joue à contre-cycle — dans le scénario pessimiste à 20 % de vacance, 1 416 € sont mis de côté et rapportent 40 € la première année, au moment précis où le cash-flow a besoin de chaque euro.</p>
+  </section>
+
+  <section class="strategy-exploration">
     <h2>Le dossier résiste-t-il au loyer ?</h2>
     <p>Le loyer est la seule hypothèse fragile du dossier : 590 € pour 28,3 m², c'est {loyer_m2} le mètre carré, quand les meublés de 24 à 30 m² du centre s'affichent entre 500 et 550 €/mois (17 à 19 €/m²). Testons jusqu'où il peut descendre, au prix de l'offre :</p>
     <table class="projection-table">
@@ -583,10 +646,10 @@ TEMPLATE = """<!DOCTYPE html>
     <p class="verdict-decision">On achète, au prix de l'offre.</p>
     <p class="verdict-stance">À {prix} net vendeur, le dossier est autoporté : <strong>{cf} par mois</strong> de cash-flow après impôt et après mensualité, un rendement net d'IS de {rdt_valeur} sur la valeur, un apport de {apport} reconstitué par le cash-flow en {mois_apport} mois. Le bien couvre sa mensualité, la trésorerie est positive, le net avant IS dépasse 5 % — les trois règles de la maison sont tenues en même temps.</p>
     <div class="verdict-details">
-      <p><strong>Ce que la note récompense, et ce qu'elle ne dit pas.</strong> Le moteur sort {note}/10, « à acheter », avec une composante rendement au maximum et une composante prix faible (ratio coût/valeur de {ratio}). Traduction : nous n'achetons pas sous la valeur, nous achetons <em>à</em> la valeur, et c'est le loyer en place plus le levier sur vingt ans qui font le rendement. Un acquéreur qui paierait comptant toucherait 8,7 % brut sur son capital immobilisé, contre 10 à 12 % sur nos places de parking : c'est le crédit qui rend ce lot intéressant, pas la décote.</p>
+      <p><strong>Ce que la note récompense, et ce qu'elle ne dit pas.</strong> Le moteur sort {note}/10, « à acheter », avec une composante rendement au maximum et une composante prix faible (ratio coût/valeur de {ratio}). Traduction : nous n'achetons pas sous la valeur, nous achetons <em>à</em> la valeur, et c'est le loyer en place plus le levier sur vingt ans qui font le rendement. Un acquéreur qui paierait comptant toucherait 8,68 % brut sur son capital immobilisé : c'est le crédit qui rend ce lot intéressant, pas la décote.</p>
       <p><strong>Le premier risque est le loyer, pas le bien.</strong> 590 € pour 28,3 m², c'est 12 % au-dessus de la moyenne du segment ; une relocation au prix du marché ferait tomber le cash-flow de {cf} à {cf_530} par mois. Ce n'est pas un motif de refus — le locataire est en place et le scénario pessimiste à 20 % de vacance reste positif — mais c'est la raison pour laquelle le prix ne peut pas être celui de l'annonce : à {prix_affiche}, la même relocation ramènerait le cash-flow à {cf_affiche} par mois.</p>
       <p><strong>Trois conditions avant de signer.</strong> La visite des lieux, qui doit confirmer l'état décrit et la surface Carrez de 28,3 m². Les documents — appels de fonds, procès-verbaux d'assemblée, état daté, avis de taxe foncière, diagnostics datés, bail signé — qui ne doivent révéler aucun élément de nature à modifier l'état du bien ou les conditions de sa location. Et la clarification du sort des 30 € de charges de copropriété : récupérés sur le locataire, ils ajoutent une vingtaine d'euros par mois au cash-flow.</p>
-      <p><strong>Une convention à connaître.</strong> Le moteur ne déduit jamais les intérêts d'emprunt de la base imposable. Dans une SCI à l'IS ils le sont : la première année, les {interets} d'intérêts échappent à l'IS, soit environ {gain_interets} par mois de cash-flow en plus. Le chiffre publié ici ({cf}) est donc le plus prudent, pas le plus flatteur.</p>
+      <p><strong>Deux conventions à connaître.</strong> Le moteur ne déduit jamais les intérêts d'emprunt de la base imposable. Dans une SCI à l'IS, ils le sont : la première année, les {interets} d'intérêts échappent à l'IS, soit environ {gain_interets} par mois de cash-flow en plus. Et la réserve vacance et travaux est bien placée à {taux_reserve} %, mais ses produits sont comptés bruts d'IS — pour une société à l'IS, les plus-values réalisées comme latentes sont imposables, les latentes étant réintégrées à la clôture. Le cash-flow publié ici, {cf} par mois, est donc le plus prudent des deux, pas le plus flatteur.</p>
     </div>
     <p class="verdict-meta">Note du moteur : {note}/10 ({verdict}). Rendement net d'IS sur valeur : {rdt_valeur}. Rendement net d'IS sur prix de revient : {rdt_revient}. Cash-flow au prix de l'offre : {cf} par mois. Cash-flow au prix affiché : {cf_affiche} par mois. Ratio coût/valeur : {ratio}.</p>
   </section>
@@ -600,7 +663,7 @@ TEMPLATE = """<!DOCTYPE html>
 
   <section class="report-signature">
     <p>Analyse produite le 28 septembre 2026 pour <span class="signature-names">Alexis et Rémy Barlatier</span> — Sémaphore Patrimoine.</p>
-    <p class="report-source">Conventions de calcul : frais d'acquisition {frais} (8 % du prix), SCI à l'IS, amortissement du bâti à 90 % du prix de revient sur 30 ans, IS de 15 % du résultat — le moteur ne déduit pas les intérêts d'emprunt. Crédit de {pret} (90 %) sur vingt ans à 3,45 % et assurance 0,34 %, apport de 10 %. Valeur de marché {valeur_m2} issue des ventes notariées de la commune, tranche 25-32 m².</p>
+    <p class="report-source">Conventions de calcul : frais d'acquisition {frais} (8 % du prix), SCI à l'IS, amortissement du bâti à 90 % du prix de revient sur 30 ans, IS de 15 % du résultat — le moteur ne déduit pas les intérêts d'emprunt. Crédit de {pret} (90 %) sur vingt ans à 3,45 % et assurance 0,34 %, apport de 10 %. Valeur de marché {valeur_m2} issue des ventes notariées de la commune, tranche 25-32 m². Réserve vacance et travaux placée à {taux_reserve} % net de frais, produits comptés bruts d'IS.</p>
   </section>
 
 </main>
@@ -633,6 +696,10 @@ def main():
         echelle=bloc_echelle(), echelle_nue=bloc_echelle_nue(),
         projections=bloc_projections(), comparaison=bloc_comparaison(),
         charges_bloc=bloc_charges(), risques=bloc_risques(), robustesse=bloc_robustesse(),
+        reserve_bloc=bloc_reserve(), taux_reserve=nfr(TAUX_RESERVE, 2),
+        produits=eur(C["fiscal"]["produits_reserve"], 2),
+        produits_mois=euro_signe(C["fiscal"]["produits_reserve"] / 12.0, 2),
+        reserve5=eur(RESERVE_5), reserve10=eur(RESERVE_10),
         verdict_cls=VERDICT_CLS, note=str(NOTE).replace(".", ","), verdict=VERDICT,
         rdt_valeur=pct(C["rendements"]["net_sur_valeur_pct"]),
         rdt_revient=pct(C["rendements"]["net_sur_revient_pct"]),
