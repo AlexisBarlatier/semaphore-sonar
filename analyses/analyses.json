@@ -10139,7 +10139,9 @@
         "frais_acquisition_euros": 4800.0,
         "frais_acquisition_commentaire": "8 % du prix (4 800 €), barème du simulateur de l'annonce et des devis notaire constatés sur le secteur pour un bien ancien.",
         "quote_part_bati_pct": 90.0,
-        "duree_amortissement_ans": 30
+        "duree_amortissement_ans": 30,
+        "taux_placement_reserve_pct": 2.84,
+        "taux_placement_reserve_commentaire": "La vacance statistique de 5 % (354 €/an) et la provision travaux ne sont pas perdues : elles forment notre « mini-ALUR » interne, placé sur un fonds monétaire en euros. Taux retenu 2,84 % net de frais, relevé sur la page du fonds le 28/09/2026 (Spiko Euro, actifs 2 Md€). Produits bruts d'IS : 10,05 €/an sur ce lot, imposés à l'IS comme le reste du résultat — pour une société à l'IS, les plus-values réalisées comme latentes sont imposables, les latentes étant réintégrées fiscalement à la clôture de l'exercice."
       },
       "analyse": {
         "branche": "residentiel",
