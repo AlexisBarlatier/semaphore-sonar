@@ -28,7 +28,7 @@ ICI = os.path.dirname(os.path.abspath(__file__))
 RACINE = os.path.dirname(ICI)
 sys.path.insert(0, ICI)
 
-from analyse_app import engine, scoring  # noqa: E402
+from analyse_app import engine, scoring, parc  # noqa: E402
 
 SLUG = "2026-08-09-brignoles-centre-t2-28m2"
 SORTIE = os.path.join(RACINE, "analyses", SLUG, "index.html")
@@ -204,6 +204,32 @@ RESERVE_5 = cumul_reserve(5)
 RESERVE_10 = cumul_reserve(10)
 calcule("réserve cumulée après 5 ans", round(RESERVE_5, -1), 1890, 40)
 calcule("réserve cumulée après 10 ans", round(RESERVE_10, -1), 4100, 80)
+
+# --- La réserve du parc, déjà constituée (voir scripts/analyse_app/parc.py) ---
+RESERVE_PARC = parc.RESERVE_EUR
+EFFORT_PARC = parc.EFFORT_MENSUEL_EUR
+
+
+def reserve_parc(mois):
+    """Trajectoire de la réserve du parc : effort mensuel + produits imposés à l'IS."""
+    return parc.trajectoire(mois, TAUX_RESERVE)
+
+
+def mois_pour(cible):
+    return parc.mois_pour(cible, TAUX_RESERVE)
+
+
+RESERVE_PARC_1 = reserve_parc(12)
+RESERVE_PARC_5 = reserve_parc(60)
+RESERVE_PARC_10 = reserve_parc(120)
+MOIS_15K, MOIS_30K, MOIS_50K = mois_pour(15000), mois_pour(30000), mois_pour(50000)
+calcule("réserve du parc à un an", round(RESERVE_PARC_1, -1), 10710, 20)
+calcule("réserve du parc à cinq ans", round(RESERVE_PARC_5, -1), 36960, 60)
+calcule("réserve du parc à dix ans", round(RESERVE_PARC_10, -1), 73550, 80)
+calcule("mois pour porter la réserve à 15 000 €", MOIS_15K, 21, 1)
+calcule("mois pour porter la réserve à 30 000 €", MOIS_30K, 48, 1)
+calcule("mois pour porter la réserve à 50 000 €", MOIS_50K, 83, 1)
+calcule("réserve du parc en mois de loyer de ce lot", round(RESERVE_PARC / LOYER, 1), 7.7, 0.15)
 
 # --------------------------------------------------------------------------
 # Échelles
@@ -442,24 +468,31 @@ def bloc_reserve():
     r = C["fiscal"]["reserve_annuelle"]
     p = C["fiscal"]["produits_reserve"]
     lignes = [
-        ("Réserve constituée chaque année", eur(r),
-         f"{nfr(100 * r / LOYERS_AN, 1)} % des loyers bruts — vacance statistique de "
-         f"{nfr(H['vacance_base_pct'], 1)} % ({eur(LOYERS_AN * H['vacance_base_pct'] / 100.0)}) "
-         "et provision travaux quand elle est activée. Cet argent reste dans la société : il est mis de côté, "
-         "pas dépensé"),
+        ("Ce que ce lot apporte à la réserve", eur(r) + " /an",
+         f"la vacance statistique de {nfr(H['vacance_base_pct'], 1)} % "
+         f"({eur(LOYERS_AN * H['vacance_base_pct'] / 100.0)}) et la provision travaux quand elle est "
+         "activée. Cet argent reste dans la société : il est mis de côté, pas dépensé"),
+        ("Sa part des produits, bruts d'IS", "+" + eur(p, 2),
+         "imposés à l'IS comme le reste du résultat : pour une société à l'IS, les plus-values réalisées "
+         "comme les latentes sont imposables, les latentes étant réintégrées fiscalement à la clôture"),
         ("Support du placement", "Fonds monétaire en euros",
          "notre « compte à terme » interne : disponible à tout moment pour une vacance ou une réparation, "
          "sans casser le cash-flow ni toucher au crédit"),
         ("Taux retenu", nfr(TAUX_RESERVE, 2) + " % net de frais",
          "relevé sur la page du fonds le 28/09/2026 — 2 Md€ d'actifs"),
-        ("Produits de la première année, bruts d'IS", "+" + eur(p, 2),
-         "imposés à l'IS comme le reste du résultat : pour une société à l'IS, les plus-values réalisées "
-         "comme les latentes sont imposables, les latentes étant réintégrées fiscalement à la clôture"),
-        ("Réserve cumulée après cinq ans", eur(RESERVE_5),
-         f"soit {pct(RESERVE_5 / AEM * 100, 1)} du prix de revient — de quoi absorber un remplacement de "
-         "chauffe-eau ou une remise en peinture sans emprunter"),
-        ("Réserve cumulée après dix ans", eur(RESERVE_10),
-         f"soit {pct(RESERVE_10 / AEM * 100, 1)} du prix de revient, avec les produits imposés puis replacés"),
+        ("La réserve du parc, déjà constituée", eur(RESERVE_PARC),
+         f"au {parc.DATE_RELEVE}, soit {nfr(RESERVE_PARC / LOYER, 1)} mois du loyer de ce lot : une vacance ou "
+         "une réparation ici ne se paient pas sur le cash-flow, la réserve les couvre"),
+        ("Effort mensuel du parc", eur(EFFORT_PARC) + " /mois hors intérêts",
+         f"soit {eur(EFFORT_PARC * 12)} par an, tant qu'aucun nouveau dossier ne se matérialise"),
+        ("Réserve du parc à un an", eur(RESERVE_PARC_1),
+         "avec les produits imposés puis replacés dans la réserve"),
+        ("Réserve du parc à cinq ans", eur(RESERVE_PARC_5),
+         f"de quoi payer des travaux lourds sur un lot, ou l'apport d'un dossier — {eur(15000)} sont atteints "
+         f"dans {MOIS_15K} mois, {eur(30000)} dans {MOIS_30K} mois"),
+        ("Réserve du parc à dix ans", eur(RESERVE_PARC_10),
+         f"soit {pct(RESERVE_PARC_10 / AEM * 100, 0)} du prix de revient de ce lot — la réserve travaille "
+         "pour le parc, pas seulement pour ce lot"),
     ]
     html = []
     for label, valeur, note in lignes:
@@ -616,7 +649,9 @@ TEMPLATE = """<!DOCTYPE html>
 {reserve_bloc}
       </tbody>
     </table>
-    <p class="strategy-rationale">Les produits sont <strong>bruts d'IS</strong> : pour une société à l'IS, les plus-values réalisées comme les latentes sont imposables, ces dernières étant réintégrées fiscalement à la clôture de l'exercice. Le taux de {taux_reserve} % est donc net de frais de gestion mais avant impôt, et c'est ainsi qu'il entre dans le calcul — {produits} de produits sur ce lot, {produits_mois} par mois de cash-flow en plus. L'effet chiffré est modeste sur un seul lot, et ce n'est pas là qu'est le gain : la réserve existe au lieu d'être un poste d'écriture, elle atteint {reserve5} après cinq ans et {reserve10} après dix, et elle joue à contre-cycle — dans le scénario pessimiste à 20 % de vacance, 1 416 € sont mis de côté et rapportent 40 € la première année, au moment précis où le cash-flow a besoin de chaque euro.</p>
+    <p class="strategy-rationale">Les produits sont <strong>bruts d'IS</strong> : pour une société à l'IS, les plus-values réalisées comme les latentes sont imposables, ces dernières étant réintégrées fiscalement à la clôture de l'exercice. Le taux de {taux_reserve} % est donc net de frais de gestion mais avant impôt, et c'est ainsi qu'il entre dans le calcul — {produits} de produits sur ce lot, {produits_mois} par mois de cash-flow en plus. L'effet chiffré est modeste sur un seul lot, et ce n'est pas là qu'est le gain.</p>
+    <p>Ce qui compte, c'est que <strong>la réserve existe déjà</strong> : {reserve_parc} au {date_releve}, soit {reserve_parc_mois} mois du loyer de ce lot. Une vacance ici, ou un chauffe-eau à remplacer, ne se paient ni sur le cash-flow ni sur le crédit : la réserve les couvre, et elle remonte avec l'effort mensuel de {effort_parc} que le parc lui affecte tant qu'aucun nouveau dossier ne se matérialise, soit {effort_parc_an} par an hors intérêts. Trajectoire, produits imposés puis replacés : {reserve_parc1} dans un an, {reserve_parc5} dans cinq ans, {reserve_parc10} dans dix.</p>
+    <p>Elle joue aussi à contre-cycle, et c'est là son intérêt pour ce dossier précis : dans le scénario pessimiste à 20 % de vacance, la ligne de réserve de ce lot monte à 1 416 € et ses produits à 40 € la première année, au moment exact où le cash-flow a besoin de chaque euro. Et elle devient la capacité d'engagement du parc — {eur_15k} atteints dans {mois_15k} mois, {eur_30k} dans {mois_30k} mois, {eur_50k} dans {mois_50k} mois —, c'est-à-dire l'apport d'un dossier aujourd'hui hors de notre filtre, financé par la rente du parc et non par une ligne de trésorerie.</p>
   </section>
 
   <section class="strategy-exploration">
@@ -699,7 +734,13 @@ def main():
         reserve_bloc=bloc_reserve(), taux_reserve=nfr(TAUX_RESERVE, 2),
         produits=eur(C["fiscal"]["produits_reserve"], 2),
         produits_mois=euro_signe(C["fiscal"]["produits_reserve"] / 12.0, 2),
-        reserve5=eur(RESERVE_5), reserve10=eur(RESERVE_10),
+        reserve_parc=eur(RESERVE_PARC), reserve_parc_mois=nfr(RESERVE_PARC / LOYER, 1),
+        date_releve=parc.DATE_RELEVE,
+        effort_parc=eur(EFFORT_PARC), effort_parc_an=eur(EFFORT_PARC * 12),
+        reserve_parc1=eur(RESERVE_PARC_1), reserve_parc5=eur(RESERVE_PARC_5),
+        reserve_parc10=eur(RESERVE_PARC_10),
+        eur_15k=eur(15000), eur_30k=eur(30000), eur_50k=eur(50000),
+        mois_15k=MOIS_15K, mois_30k=MOIS_30K, mois_50k=MOIS_50K,
         verdict_cls=VERDICT_CLS, note=str(NOTE).replace(".", ","), verdict=VERDICT,
         rdt_valeur=pct(C["rendements"]["net_sur_valeur_pct"]),
         rdt_revient=pct(C["rendements"]["net_sur_revient_pct"]),
