@@ -19,16 +19,20 @@ IS_RATE = 0.15                  # produits imposés à l'IS avant d'être replac
 
 # --- Coûts de structure de la SCI (relevé du 28/09/2026) ---------------------
 # Charges mensuelles connues : 104 EUR/mois, soit 1 248 EUR/an, 6,4 % des loyers
-# de la Verrerie. L'assurance propriétaire non occupant et une éventuelle
-# gestion locative ne sont pas encore chiffrées ici.
+# de la Verrerie. Aucune assurance ni taxe foncière à ajouter pour la Verrerie :
+# les deux sont refacturées au locataire, donc neutres en résultat (les compter
+# serait les compter deux fois). Une éventuelle gestion locative reste à chiffrer.
 BANQUE_MENSUEL_EUR = 20.0
 COMPTABLE_MENSUEL_EUR = 84.0     # abonnement du cabinet pour la SCI entière :
                                  # le marginal par lot reste à ~150 EUR/an
 
 # --- Verrerie : 13 places acquises 85 800 EUR en 04/2026 ----------------------
+# Bail net : loyer hors charges, taxe foncière et assurance refacturées
+# intégralement, charges locatives au preneur. L'EBE est donc presque le loyer.
 LOYER_VERRERIE_MENSUEL_EUR = 1624.0
-TF_VERRERIE_ANNUELLE_EUR = 784.0  # refacturée au locataire : neutre en résultat,
+TF_VERRERIE_ANNUELLE_EUR = 784.0  # refacturée : neutre en résultat,
                                   # ne pas la compter deux fois
+ASSURANCE_VERRERIE_REFACTUREE = True
 
 # --- La Garde : 2 places extérieures, prêt Crédit Mutuel ----------------------
 # 70 002 EUR d'encours, 546,79 EUR/mois. Le couple encours/mensualité implique
@@ -43,15 +47,20 @@ PRET_LA_GARDE_MENSUALITE_EUR = 546.79
 # Base = loyers − charges − amortissements − intérêts. Une place de surface n'a
 # presque rien d'amortissable (le terrain ne s'amortit pas) : que la part bâtie
 # soit de 0 ou de 90 %, et selon le taux du prêt La Garde, l'IS de la Verrerie
-# ressort entre 1 800 et 2 300 EUR/an, soit 150 à 195 EUR/mois, 9 à 12 % des
+# ressort entre 1 830 et 2 350 EUR/an, soit 152 à 196 EUR/mois, 9 à 12 % des
 # loyers. Le vrai chiffre tombera au premier arrêté de comptes ; la provision de
 # 100 EUR/mois en couvre la moitié.
-IS_ESTIME_MIN_ANNUEL_EUR = 1800.0
-IS_ESTIME_MAX_ANNUEL_EUR = 2300.0
+IS_ESTIME_MIN_ANNUEL_EUR = 1830.0
+IS_ESTIME_MAX_ANNUEL_EUR = 2350.0
 
 
-def ebe_verrerie(pno_annuelle=200.0):
-    """EBE annuel de la Verrerie, hors IS et hors service de la dette."""
+def ebe_verrerie(pno_annuelle=0.0):
+    """EBE annuel de la Verrerie, hors IS et hors service de la dette.
+
+    `pno_annuelle` vaut 0 par défaut : l'assurance est refacturée en totalité au
+    locataire, la porter ici la compterait deux fois. La taxe foncière, également
+    refacturée, n'entre pas non plus dans le compte.
+    """
     return (LOYER_VERRERIE_MENSUEL_EUR * 12
             - (BANQUE_MENSUEL_EUR + COMPTABLE_MENSUEL_EUR) * 12
             - pno_annuelle)
