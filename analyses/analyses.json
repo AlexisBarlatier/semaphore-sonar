@@ -3,7 +3,7 @@
     "schema": "analyses-v2-entrees",
     "generated_at": "2026-09-10T00:00:00+00:00",
     "source": "saisie-agent",
-    "count": 72
+    "count": 73
   },
   "analyses": [
     {
@@ -9762,6 +9762,170 @@
         ],
         "champs_manquants": []
       }
+    },
+    {
+      "slug": "2026-09-28-parking-19-places-roquebrune-sur-argens",
+      "date_analyse": "2026-09-28",
+      "date_maj": "2026-09-28",
+      "titre": "19 places de parking extérieures — La Bouverie, Roquebrune-sur-Argens (83520)",
+      "bien": {
+        "type_bien": "parking",
+        "sous_type": "exterieur",
+        "type_detail": "19 places de parking extérieures à ciel ouvert dans une résidence fermée (dont 1 place PMR), arceaux individuels rabattables, clôture périphérique",
+        "neuf": false,
+        "adresse": {
+          "texte": "Résidence fermée, quartier La Bouverie, Roquebrune-sur-Argens (83520) — mitoyenne de la résidence services seniors Les Jardins d'Arcadie (90 logements, ouverture 2024). Adresse exacte non communiquée dans l'annonce.",
+          "ville": "Roquebrune-sur-Argens",
+          "code_postal": "83520",
+          "quartier": "La Bouverie"
+        },
+        "surfaces": {
+          "texte": "19 places extérieures sur enrobé, marquage peint, miroir de sortie, 1 place PMR"
+        },
+        "lots": {
+          "count": 19,
+          "nature": "Structure non communiquée : 19 lots distincts ou lot unique (numéros et tantièmes à obtenir). La vente à la découpe dépend de cette réponse ; à défaut, modificatif de règlement de copropriété.",
+          "lots_distincts": null
+        },
+        "copro": {
+          "charges_annuelles_euros": 2280.0,
+          "charges_source": "120 €/place/an retenues (2 280 €/an) — estimation, budget prévisionnel non communiqué. Référence : places extérieures du secteur taxées 24 à 120 €/an/place."
+        },
+        "travaux": {
+          "montant_euros": 0.0,
+          "nature": "Aucun travaux annoncé ; enrobé et marquage en état apparent sur les photos. État réel à constater sur place."
+        }
+      },
+      "annonce": {
+        "plateforme": "leboncoin",
+        "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3244883630",
+        "prix_affiche_euros": 110000.0,
+        "prix_retenu_euros": 110000.0,
+        "prix_statut": "affiche",
+        "vendeur": "FIDUCIA (SIRET 53365365500035), mandat réf. RBCOFPKG01 — honoraires à la charge du vendeur. Prix ramené de 150 000 € à 110 000 € (−26,7 %), 35 favoris."
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 58776.0,
+          "haute_euros": 81413.0,
+          "retenue_euros": 58776.0,
+          "source": "Capitalisation de la fourchette de loyers constatée dans la commune (40 à 50 €/place/mois) au seuil de cash-flow du groupe (apport 10 %, 15 ans à 3,70 %, SCI à l'IS, charges 3 040 €/an) : 58 776 € net vendeur à 40 €/place et 81 413 € net vendeur à 50 €/place, soit 3 093 à 4 285 €/place. Le repère per-place du groupe (≤ 6 500 € acte en main pour une place extérieure) supposerait 80 à 125 €/place, loyers constatés à La Seyne et à La Garde mais inexistants à La Bouverie.",
+          "confiance": "faible"
+        },
+        "loyers": [
+          {
+            "lot": "19 places extérieures — loyer de référence constaté",
+            "quantite": 19,
+            "loyer_mensuel_euros": 40.0,
+            "occupe": false,
+            "note": "Aucun bail produit par le vendeur (annonce : disponibilité 12/2025). 40 €/mois/place = seule comparables extérieure constatée dans la commune (Village, 2,50 x 5,00 m, éclairée, 24h/24, 12 mois mini) ; les deux places en liste d'attente sont à 30 et 32 €/mois mais en souterrain fermé et vidéosurveillé, le box sous-sol le plus cher à 68 €. Fourchette retenue 40 à 50 €/place, l'agence annonçant 50 à 90 € sans bail."
+          }
+        ],
+        "notes": "Aucune annonce de location de parking publiée dans la commune sur SeLoger et Logic-Immo (la recherche renvoie Fréjus, Saint-Raphaël et Les Arcs, 8 à 12 km) ; une seule annonce de vente dans la commune, le lot lui-même. Aucun opérateur (Yespark, Zenpark) implanté. Stationnement résidentiel non contraint à La Bouverie, parking public du stade gratuit à proximité immédiate."
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 0.0,
+        "vacance_worst_pct": 20.0,
+        "frais_acquisition_euros": 8800.0,
+        "charges": {
+          "charges_copro_annuelles_euros": 2280.0,
+          "charges_copro_commentaire": "120 €/place/an retenues — estimation, budget prévisionnel à obtenir. Référence : places extérieures du groupe à 24 et 120 €/an.",
+          "taxe_fonciere_annuelle_euros": 760.0,
+          "taxe_fonciere_commentaire": "40 €/place/an estimés (places extérieures du groupe taxées 30 à 75 €/an) — aucun avis de TF communiqué.",
+          "provision_desactivee": true,
+          "provision_commentaire": "Provision rénovation désactivée : place extérieure sans bâti, aucun travaux retenu ; les charges de copropriété portent déjà la provision travaux du syndic."
+        }
+      },
+      "analyse": {
+        "branche": "parking",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Location longue durée après test de loyer et achat à la découpe des seules places louées",
+          "code": "parking-ld",
+          "lots": 19
+        },
+        "strategies_explorees": [],
+        "attractivite": [
+          {
+            "dimension": "tension_stationnement",
+            "score": 3,
+            "justification": "Quartier pavillonnaire au milieu des vignes : stationnement résidentiel non contraint, parking public du stade gratuit à proximité immédiate, zone bleue 1h30 seulement au centre commercial. Aucune annonce de location de parking publiée dans la commune."
+          },
+          {
+            "dimension": "densite_residentielle",
+            "score": 4,
+            "justification": "La Bouverie est bâti en maisons individuelles ; le seul collectif voisin est la résidence services seniors Les Jardins d'Arcadie (90 logements, 2024), qui dispose de son propre stationnement."
+          },
+          {
+            "dimension": "accessibilite",
+            "score": 5,
+            "justification": "Quartier à 6 km du centre de Roquebrune, sur l'axe Roquebrune–Fréjus (RD N7), mais le lot est en impasse résidentielle : pas de stationnement de transit, pas de clientèle de passage."
+          },
+          {
+            "dimension": "securite_acces",
+            "score": 4,
+            "justification": "Résidence fermée, clôture périphérique, arceaux individuels rabattables et miroir de sortie. Nombre de badges et tarif non communiqués : un accès sans badge individualisé limite la location à des tiers."
+          },
+          {
+            "dimension": "protection",
+            "score": 1,
+            "justification": "Places extérieures à ciel ouvert, non abritées : aucune protection contre la grêle, le sel ou le soleil, loyer inférieur à un souterrain et aucun bâti amortissable en SCI à l'IS (amortissement nul, l'IS frappe l'EBE entier)."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 3,
+            "justification": "Deux places en liste d'attente dans la commune à 30 et 32 €/mois, mais en souterrain gardé et vidéosurveillé : la demande existe sur le segment bas. Aucun opérateur implanté, aucune location publiée, aucun bail produit par le vendeur pour ce lot."
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Fourchette de loyer annoncée non démontrée",
+            "severite": 5,
+            "detail": "L'agence annonce 50 à 90 €/place (7,5 à 10 %) sans produire un seul bail. Le marché constaté est de 40 €/place pour l'unique extérieure comparable et de 30 à 32 € pour des souterrains gardés en liste d'attente. Au prix affiché de 110 000 €, le cash-flow s'équilibre à 63,6 €/place (net après IS), au-dessus de tout ce qui est observé dans la commune : à 40 €/place le déficit est de 347 €/mois."
+          },
+          {
+            "facteur": "Vacance structurelle du lot",
+            "severite": 4,
+            "detail": "19 places d'un coup dans un quartier où le stationnement n'est pas contraint. Au prix de 81 400 €, chaque place vide coûte 40 €/mois de cash-flow : 15 places louées sur 19 laissent −162 €/mois, 11 laissent −323 €/mois. C'est le risque principal, et il justifie l'achat à la découpe."
+          },
+          {
+            "facteur": "Divisibilité du lot non établie",
+            "severite": 4,
+            "detail": "Le vendeur n'a pas dit si les 19 places forment 19 lots distincts ou un lot unique. Si le lot est unique, la vente à la découpe exige un modificatif de règlement de copropriété (état descriptif de division modificatif) et une vente partielle laisse une position minoritaire. Réponse exigée avant l'offre."
+          },
+          {
+            "facteur": "Charges de copropriété et taxe foncière estimées",
+            "severite": 3,
+            "detail": "120 €/place/an de charges et 40 €/place/an de TF retenues, sans budget prévisionnel ni avis de TF. Si les charges doublaient (240 €/place), le cash-flow au prix de 81 400 € passerait de l'équilibre à −190 €/mois."
+          },
+          {
+            "facteur": "TVA sur la cession",
+            "severite": 3,
+            "detail": "Vendeur professionnel : si la cession des places est soumise à TVA, l'acte en main est à recalculer intégralement (droits de mutation réduits mais TVA 20 % sur le prix). Divergence relevée sur une annonce du même lot : 40 € dans le champ prix et 60 € charges comprises dans le texte."
+          },
+          {
+            "facteur": "Travaux de copropriété votés",
+            "severite": 3,
+            "detail": "Aucun appel de fonds ni procès-verbal d'assemblée générale communiqué. 19 places portent leurs tantièmes de charges communes : un ravalement ou une reprise de clôture les appelle au prorata."
+          },
+          {
+            "facteur": "Accès et badges",
+            "severite": 2,
+            "detail": "Nombre de badges d'accès et tarif non communiqués. Sans badge individualisé par place, la location à des locataires extérieurs à la résidence devient impraticable."
+          },
+          {
+            "facteur": "Éloignement du bassin d'emploi littoral",
+            "severite": 2,
+            "detail": "La Bouverie est à 6 km du centre de Roquebrune et à 20 km de Fréjus–Saint-Raphaël : la demande locative de stationnement se concentre sur le littoral, pas sur ce quartier pavillonnaire."
+          }
+        ]
+      },
+      "legacy": {
+        "source": "saisie-agent",
+        "importe_le": "2026-09-28"
+      },
+      "champs_manquants": []
     }
   ]
 }

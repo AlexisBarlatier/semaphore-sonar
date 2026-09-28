@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — 19 places de parking extérieures — La Bouverie, Roquebrune-sur-Argens (83520)</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">19 places de parking extérieures à ciel ouvert — résidence fermée, quartier La Bouverie, Roquebrune-sur-Argens (83520)</p>
+  <p class="report-date">Analyse générée le 28 septembre 2026</p>
+  <p class="report-source">Source : Leboncoin — FIDUCIA (professionnel, SIRET 53365365500035), réf. RBCOFPKG01 — honoraires à la charge du vendeur</p>
+  <div class="report-source-link"><a href="https://www.leboncoin.fr/ad/ventes_immobilieres/3244883630">https://www.leboncoin.fr/ad/ventes_immobilieres/3244883630</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Placement parking — protocole de test</span>
+    <p>Stratégie retenue : <strong>location longue durée après test du loyer, achat des seules places louées</strong> — SCI à l'IS (15 %)</p>
+  </div>
+
+  <!-- === Cartes de synthèse === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix affiché</span>
+      <span class="card-value">110 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Places</span>
+      <span class="card-value">19 extérieures</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix demandé / place</span>
+      <span class="card-value">5 789 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix du protocole</span>
+      <span class="card-value">58 776 € à 81 413 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient affiché</span>
+      <span class="card-value">118 800 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Loyers retenus</span>
+      <span class="card-value">760 €/mois (19 × 40 €)</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rendement net d'IS (affiché / protocole)</span>
+      <span class="card-value">4,02 % / 7,07 %</span>
+    </div>
+    <div class="card card-verdict note-5">
+      <span class="card-label">Note</span>
+      <span class="card-value">5,3/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.5008734" data-lon="6.6443455" data-address="Quartier La Bouverie, Roquebrune-sur-Argens (83520) — coordonnées du village, adresse exacte non communiquée dans l'annonce"></div>
+  </section>
+
+  <!-- === Attractivité === -->
+  <section class="attractiveness">
+    <h2>Attractivité — La Bouverie, Roquebrune-sur-Argens</h2>
+    <p class="attractiveness-intro">Quartier pavillonnaire au milieu des vignes, à 6 km du centre de Roquebrune. Le stationnement résidentiel n'y est pas contraint, le parking public du stade est gratuit à proximité immédiate et la zone bleue du centre commercial ne tient que 1 h 30 : la tension qui fait le prix d'une place ailleurs n'existe pas ici. Le seul collectif voisin, la résidence services seniors Les Jardins d'Arcadie (90 logements, 2024), dispose de son propre stationnement. Aucune annonce de location de parking n'est publiée dans la commune, aucun opérateur n'y est implanté.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Tension stationnement</span>
+          <span class="attr-score"><strong>3/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:30%"></div></div>
+        <p class="attr-detail">Quartier pavillonnaire au milieu des vignes : stationnement résidentiel non contraint, parking public du stade gratuit à proximité immédiate, zone bleue 1h30 seulement au centre commercial. Aucune annonce de location de parking publiée dans la commune.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Densite residentielle</span>
+          <span class="attr-score"><strong>4/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:40%"></div></div>
+        <p class="attr-detail">La Bouverie est bâti en maisons individuelles ; le seul collectif voisin est la résidence services seniors Les Jardins d'Arcadie (90 logements, 2024), qui dispose de son propre stationnement.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Accessibilite</span>
+          <span class="attr-score"><strong>5/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Quartier à 6 km du centre de Roquebrune, sur l'axe Roquebrune–Fréjus (RD N7), mais le lot est en impasse résidentielle : pas de stationnement de transit, pas de clientèle de passage.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Securite acces</span>
+          <span class="attr-score"><strong>4/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:40%"></div></div>
+        <p class="attr-detail">Résidence fermée, clôture périphérique, arceaux individuels rabattables et miroir de sortie. Nombre de badges et tarif non communiqués : un accès sans badge individualisé limite la location à des tiers.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Protection</span>
+          <span class="attr-score"><strong>1/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:10%"></div></div>
+        <p class="attr-detail">Places extérieures à ciel ouvert, non abritées : aucune protection contre la grêle, le sel ou le soleil, loyer inférieur à un souterrain et aucun bâti amortissable en SCI à l'IS (amortissement nul, l'IS frappe l'EBE entier).</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+          <span class="attr-score"><strong>3/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:30%"></div></div>
+        <p class="attr-detail">Deux places en liste d'attente dans la commune à 30 et 32 €/mois, mais en souterrain gardé et vidéosurveillé : la demande existe sur le segment bas. Aucun opérateur implanté, aucune location publiée, aucun bail produit par le vendeur pour ce lot.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> résidents des maisons voisines cherchant une seconde place ou un abri pour un véhicule supplémentaire, locataires des Jardins d'Arcadie sans place attitrée, artisans et vans du quartier.</p>
+      <p><strong>Conclusion :</strong> Le dossier ne se juge pas sur le prix affiché mais sur le loyer que le lot produit réellement. À 110 000 €, il faudrait que les places partent à 62,6 €/place pour que le cash-flow soit à l'équilibre ; le seul comparable extérieur constaté dans la commune est à 40 €/place, et l'agence, qui annonce 50 à 90 €, ne produit aucun bail. À 40 €/place, le prix d'équilibre est 58 776 €, soit 3 093 €/place contre 5 789 € demandés. Le repère per-place du groupe pour une place extérieure (6 500 € acte en main) supposerait un loyer de 80 à 125 €/place : c'est le niveau constaté à La Seyne et à La Garde, pas à La Bouverie. Acheter sur ce repère ici, c'est payer un loyer qui n'existe pas.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Le lot s'analyse comme un produit de rendement locatif dont le loyer n'est pas établi. Deux stratégies s'opposent : payer le prix demandé en pariant sur la fourchette de l'agence, ou mesurer le loyer avant de payer.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net d'IS</th>
+          <th>Valeur après tx</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row">
+          <td>Location longue durée <strong>au prix affiché</strong> — écartée</td>
+          <td>19</td>
+          <td>4,02 % (loyer 40 €)</td>
+          <td>58 776 €</td>
+          <td><span class="ratio-badge ratio-mauvais">2,021</span></td>
+          <td><span class="badge-faisabilite faisabilite-haute">Immédiate</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-low" style="width:33%"></div></div></div></td>
+        </tr>
+        <tr class="strategy-row selected">
+          <td><strong>Location longue durée au prix du protocole</strong> (58 776 € à 81 413 €) après test de loyer et achat des seules places louées</td>
+          <td>19</td>
+          <td>7,07 % (loyer 40 €)</td>
+          <td>58 776 €</td>
+          <td><span class="ratio-badge ratio-ok">1,15</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Un trimestre de test</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-low" style="width:33%"></div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>Le protocole transforme une estimation en mesure : l'agence commercialise elle-même, sous mandat, en descendant de 90 à 50 €/place par paliers de 10 €, et le prix suit le loyer signé (58 776 € si le marché ressort à 40 €, 81 413 € à 50 €). Les paliers 90, 80 et 70 € sont tenus au prix demandé, très en dessous de ce que vaudraient ces loyers : l'offre est donc à la hausse pour le vendeur, pas à la baisse. L'achat se fait ensuite à la découpe, place par place, au prix unitaire du palier retenu, les invendus comptés à moitié : seules les places louées sont payées plein tarif.</p>
+    </div>
+  </section>
+
+  <!-- === Échelle du protocole === -->
+  <section class="strategy-exploration">
+    <h2>Échelle du protocole — le prix suit le loyer signé</h2>
+    <p class="attractiveness-intro">Le prix demandé est tenu à 110 000 € sur les quatre premiers paliers, puis descend. Le « prix d'équilibre » est le prix auquel le revenu net après IS couvre exactement la mensualité du prêt (apport 10 %, 15 ans à 3,70 %, assurance 0,34 %, charges 3 040 €/an, SCI à l'IS).</p>
+    <table class="comparison-table">
+      <thead>
+        <tr><th>Palier</th><th>Loyer testé</th><th>Notre prix</th><th>Net après IS</th><th>Cash-flow mensuel</th><th>Prix d'équilibre</th><th>€/place payés</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>1</td><td>90 €</td><td><strong>110 000 €</strong> (tenu)</td><td class="num">13 986 €</td><td class="num">+420 €/mois</td><td class="num">171 960 €</td><td class="num">5 789 €</td></tr>
+          <tr><td>2</td><td>80 €</td><td><strong>110 000 €</strong> (tenu)</td><td class="num">12 145 €</td><td class="num">+267 €/mois</td><td class="num">149 323 €</td><td class="num">5 789 €</td></tr>
+          <tr><td>3</td><td>70 €</td><td><strong>110 000 €</strong> (tenu)</td><td class="num">10 304 €</td><td class="num">+113 €/mois</td><td class="num">126 686 €</td><td class="num">5 789 €</td></tr>
+          <tr><td>4</td><td>60 €</td><td><strong>110 000 €</strong> (tenu)</td><td class="num">8 463 €</td><td class="num">−40 €/mois</td><td class="num">104 050 €</td><td class="num">5 789 €</td></tr>
+          <tr><td>5</td><td>50 €</td><td><strong>81 413 €</strong> (descend)</td><td class="num">6 622 €</td><td class="num">0 €/mois</td><td class="num">81 413 €</td><td class="num">4 285 €</td></tr>
+          <tr><td>6</td><td>40 €</td><td><strong>58 776 €</strong> (descend)</td><td class="num">4 780 €</td><td class="num">0 €/mois</td><td class="num">58 776 €</td><td class="num">3 093 €</td></tr>
+      </tbody>
+    </table>
+    <p class="attractiveness-intro"><strong>Lecture :</strong> aux paliers 90, 80 et 70 €, le prix demandé est très en dessous de ce que vaudraient ces loyers : l'offre est à la hausse pour le vendeur. C'est au palier 60 € que le prix demandé n'est plus tenable (cash-flow négatif de 40 €/mois) et qu'il faut descendre. Un palier ne compte que s'il produit au moins 5 000 €/an de loyers signés, soit 5 places à 90 €, 8 à 60 €, 9 à 50 € ou 11 à 40 € : sans ce seuil, un locataire isolé à 90 € valoriserait 19 places.</p>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Résidence fermée, quartier La Bouverie, Roquebrune-sur-Argens (83520) — mitoyenne de la résidence services seniors Les Jardins d'Arcadie (90 logements, ouverture 2024). Adresse exacte non communiquée dans l'annonce.</td></tr>
+        <tr><th>Type</th><td>19 places de parking extérieures à ciel ouvert, dont 1 place PMR — enrobé, marquage peint, arceaux individuels rabattables, clôture périphérique, miroir de sortie</td></tr>
+        <tr><th>Vendeur</th><td>FIDUCIA (SIRET 53365365500035), réf. RBCOFPKG01 — honoraires à la charge du vendeur. Prix ramené de 150 000 € à 110 000 € (−26,7 %), 35 favoris, disponibilité annoncée 12/2025.</td></tr>
+        <tr><th>Structure du lot</th><td>Non communiquée : 19 lots distincts ou lot unique (numéros et tantièmes à obtenir). La vente à la découpe en dépend ; à défaut, modificatif de règlement de copropriété.</td></tr>
+        <tr><th>Occupation</th><td>Aucun bail produit par le vendeur. Le bien est présenté libre.</td></tr>
+        <tr><th>Loyer de référence</th><td>40 €/mois/place — seule place extérieure comparable constatée dans la commune. Fourchette retenue 40 à 50 € ; l'agence annonce 50 à 90 € sans bail.</td></tr>
+        <tr><th>Charges de copropriété</th><td>120 €/place/an retenues (2 280 €/an) — estimation, budget prévisionnel à obtenir. Référence : places extérieures du groupe taxées 24 à 120 €/an/place.</td></tr>
+        <tr><th>Taxe foncière</th><td>40 €/place/an estimés (760 €/an) — aucun avis de TF communiqué ; places extérieures du groupe taxées 30 à 75 €/an.</td></tr>
+        <tr><th>Amortissement</th><td>Aucun : place extérieure sans bâti. L'IS de 15 % frappe donc l'EBE entier, ce qui pèse environ 15 % sur le cash-flow.</td></tr>
+        <tr><th>Travaux</th><td>0 € annoncé — enrobé et marquage en état apparent sur les photos, à constater sur place.</td></tr>
+        <tr><th>DPE</th><td>Non applicable (stationnement).</td></tr>
+        <tr><th>Valeur retenue</th><td>58 776 € net vendeur, soit 3 093 €/place : capitalisation du loyer constaté de 40 €/place au seuil de cash-flow du groupe. À 50 €/place, elle monte à 81 413 € (4 285 €/place).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+    <p class="attractiveness-intro">Charges retenues 3 040 €/an (copropriété 2 280 € + taxe foncière 760 €), frais d'acquisition 8 800 €, aucun travaux. Place extérieure sans bâti : l'amortissement est nul, l'IS de 15 % frappe donc l'EBE entier. Les trois scénarios balaient les loyers que le protocole doit trancher.</p>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Loyer 40 €/place (comparable constaté) — vacance 5 % — prix du protocole 58 776 €</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Prix payé</td><td class="num">58 776 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td class="num">9 120 €</td></tr>
+            <tr><td>Vacance locative (5 %)</td><td class="num">−456 €</td></tr>
+            <tr class="secondary"><td>Charges (copropriété 2 280 € + TF 760 €)</td><td class="num">−3 040 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">5 624 €</td></tr>
+            <tr><td>Amortissement (place extérieure)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">5 624 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−844 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">4 780 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">0 €</td></tr>
+            <tr><td>Prix d'équilibre de ce loyer</td><td class="num">58 776 €</td></tr>
+            <tr><td>Rendement net sur revient</td><td class="num">7,07 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Optimiste</h3>
+        <p class="scenario-subtitle">Loyer 60 €/place (palier de l'agence) — vacance 0 % — prix demandé tenu 110 000 €</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Prix payé</td><td class="num">110 000 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td class="num">13 680 €</td></tr>
+            <tr><td>Vacance locative (0 %)</td><td class="num">−0 €</td></tr>
+            <tr class="secondary"><td>Charges (copropriété 2 280 € + TF 760 €)</td><td class="num">−3 040 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">10 640 €</td></tr>
+            <tr><td>Amortissement (place extérieure)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">10 640 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−1 596 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">9 044 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">+8 €</td></tr>
+            <tr><td>Prix d'équilibre de ce loyer</td><td class="num">104 050 €</td></tr>
+            <tr><td>Rendement net sur revient</td><td class="num">7,61 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Pessimiste</h3>
+        <p class="scenario-subtitle">Loyer 35 €/place — vacance 20 % — au prix du protocole 58 776 €</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Prix payé</td><td class="num">58 776 €</td></tr>
+            <tr><td>Revenu brut annuel</td><td class="num">7 980 €</td></tr>
+            <tr><td>Vacance locative (20 %)</td><td class="num">−1 596 €</td></tr>
+            <tr class="secondary"><td>Charges (copropriété 2 280 € + TF 760 €)</td><td class="num">−3 040 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">3 344 €</td></tr>
+            <tr><td>Amortissement (place extérieure)</td><td class="num">0 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">3 344 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−502 €</td></tr>
+            <tr><td>CF net annuel</td><td class="num">2 842 €</td></tr>
+            <tr class="highlight"><td>CF net mensuel</td><td class="num">−161 €</td></tr>
+            <tr><td>Prix d'équilibre de ce loyer</td><td class="num">34 948 €</td></tr>
+            <tr><td>Rendement net sur revient</td><td class="num">4,21 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Indicateur</th><th>Base — 40 €/place</th><th>Optimiste — 50 €/place</th><th>Pessimiste — 35 €/place</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Prix payé</td><td class="num">58 776 €</td><td class="num">110 000 €</td><td class="num">58 776 €</td></tr>
+          <tr><td>EBE avant IS</td><td class="num">5 624 €</td><td class="num">10 640 €</td><td class="num">3 344 €</td></tr>
+          <tr><td>IS</td><td class="num">844 €</td><td class="num">1 596 €</td><td class="num">502 €</td></tr>
+          <tr><td>Net après IS / an</td><td class="num">4 780 €</td><td class="num">9 044 €</td><td class="num">2 842 €</td></tr>
+          <tr><td>CF net mensuel</td><td class="num">0 €/mois</td><td class="num">+8 €/mois</td><td class="num">−161 €/mois</td></tr>
+          <tr><td>Rendement net sur revient</td><td class="num">7,07 %</td><td class="num">7,61 %</td><td class="num">4,21 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="projection-summary" style="margin-top:2rem;">
+      <h3>Sensibilité à l'occupation — loyer 40 €/place, prix 58 776 €</h3>
+      <p class="attractiveness-intro">Places comptées une par une (sans provision de vacance en plus), au prix du protocole 58 776 €. La grille montre ce que coûte chaque place vide : c'est le risque principal du dossier, et la raison de l'achat à la découpe.</p>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Places louées</th><th>EBE / an</th><th>IS</th><th>CF net / mois</th><th>Rendement net sur revient</th></tr>
+        </thead>
+        <tbody>
+          <tr class="highlight"><td>19 / 19</td><td class="num">6 080 €</td><td class="num">912 €</td><td class="num">+32 €</td><td class="num">7,65 %</td></tr>
+          <tr><td>17 / 19</td><td class="num">5 120 €</td><td class="num">768 €</td><td class="num">−36 €</td><td class="num">6,44 %</td></tr>
+          <tr><td>15 / 19</td><td class="num">4 160 €</td><td class="num">624 €</td><td class="num">−104 €</td><td class="num">5,23 %</td></tr>
+          <tr><td>13 / 19</td><td class="num">3 200 €</td><td class="num">480 €</td><td class="num">−172 €</td><td class="num">4,03 %</td></tr>
+          <tr><td>11 / 19</td><td class="num">2 240 €</td><td class="num">336 €</td><td class="num">−240 €</td><td class="num">2,82 %</td></tr>
+          <tr><td>9 / 19</td><td class="num">1 280 €</td><td class="num">192 €</td><td class="num">−308 €</td><td class="num">1,61 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fourchette de loyer annoncée non démontrée</td>
+          <td>L'agence annonce 50 à 90 €/place (7,5 à 10 %) sans produire un seul bail. Le marché constaté est de 40 €/place pour l'unique extérieure comparable et de 30 à 32 € pour des souterrains gardés en liste d'attente. Au prix affiché de 110 000 €, le cash-flow s'équilibre à 63,6 €/place (net après IS), au-dessus de tout ce qui est observé dans la commune : à 40 €/place le déficit est de 347 €/mois.</td>
+          <td><span class="severity severity-5">5/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance structurelle du lot</td>
+          <td>19 places d'un coup dans un quartier où le stationnement n'est pas contraint. Au prix de 81 400 €, chaque place vide coûte 40 €/mois de cash-flow : 15 places louées sur 19 laissent −162 €/mois, 11 laissent −323 €/mois. C'est le risque principal, et il justifie l'achat à la découpe.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Divisibilité du lot non établie</td>
+          <td>Le vendeur n'a pas dit si les 19 places forment 19 lots distincts ou un lot unique. Si le lot est unique, la vente à la découpe exige un modificatif de règlement de copropriété (état descriptif de division modificatif) et une vente partielle laisse une position minoritaire. Réponse exigée avant l'offre.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Charges de copropriété et taxe foncière estimées</td>
+          <td>120 €/place/an de charges et 40 €/place/an de TF retenues, sans budget prévisionnel ni avis de TF. Si les charges doublaient (240 €/place), le cash-flow au prix de 81 400 € passerait de l'équilibre à −190 €/mois.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>TVA sur la cession</td>
+          <td>Vendeur professionnel : si la cession des places est soumise à TVA, l'acte en main est à recalculer intégralement (droits de mutation réduits mais TVA 20 % sur le prix). Divergence relevée sur une annonce du même lot : 40 € dans le champ prix et 60 € charges comprises dans le texte.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Travaux de copropriété votés</td>
+          <td>Aucun appel de fonds ni procès-verbal d'assemblée générale communiqué. 19 places portent leurs tantièmes de charges communes : un ravalement ou une reprise de clôture les appelle au prorata.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Accès et badges</td>
+          <td>Nombre de badges d'accès et tarif non communiqués. Sans badge individualisé par place, la location à des locataires extérieurs à la résidence devient impraticable.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Éloignement du bassin d'emploi littoral</td>
+          <td>La Bouverie est à 6 km du centre de Roquebrune et à 20 km de Fréjus–Saint-Raphaël : la demande locative de stationnement se concentre sur le littoral, pas sur ce quartier pavillonnaire.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>On négocie, et on ne paie pas le prix affiché.</strong> Au prix affiché de 110 000 €  le lot produit 5 624 € d'EBE pour 4 780 € après IS  soit un cash-flow de −347 €/mois et un rendement net d'IS de 4 02 %. Ce n'est pas un dossier de rendement  c'est un dossier de test : le seul comparable extérieur constaté dans la commune est à 40 €/place  l'agence annonce 50 à 90 € sans produire un bail  et il faudrait 62 6 €/place pour que le prix demandé tienne. À 40 €/place  la valeur du lot est 58 776 € et le cash-flow s'équilibre exactement. On négocie donc sur ce prix  sous condition d'un test locatif de quatre mois mené sous mandat du vendeur  et on n'achète que les places louées.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond : 58 776 € tant que le loyer n'est pas mesuré</strong> (3 093 €/place, soit 14 678 € de cash à sortir apport et frais compris). Au-dessus, le dossier ne couvre plus sa mensualité si le marché ressort à 40 €/place. Si le test démontre 50 €/place, le plafond monte à 81 413 € (4 285 €/place, 16 941 € de cash) et le prix demandé de 110 000 € reste hors d'atteinte : il faudrait 62,6 €/place pour l'équilibrer.</p>
+      <p><strong>Leviers de négociation :</strong></p>
+      <ul>
+        <li>Prendre l'agence à son propre process : commercialiser sous son mandat, en descendant de 90 à 50 €/place par paliers de 10 €, le prix suivant le loyer signé. Aux paliers 90, 80 et 70 €, notre offre dépasse la valeur du loyer annoncé : c'est une offre à la hausse, pas un marchandage.</li>
+        <li>Négocier à la découpe : ne payer plein tarif que les places louées (3 093 €/place à 40 € €), les invendus comptés à moitié. Chaque place louée augmente notre offre d'environ 3 100 € ; chaque place vide la diminue et coûte au vendeur ses charges.</li>
+        <li>Écrire la grille en condition suspensive et non en option ferme, avec indemnité d'immobilisation séquestrée de 3 000 € payable seulement si nous ne donnons pas suite alors que le seuil est atteint.</li>
+        <li>Sortie : aucune location jusqu'à 40 €/place, on se retire. Sortie anticipée possible après trois paliers vides (70, 60 et 50 €).</li>
+        <li>Exiger avant toute offre : nombre de places louées et baux écrits, structure du lot (19 lots distincts ou lot unique), budget prévisionnel de charges, avis de taxe foncière, travaux votés, nombre de badges, statut TVA de la cession.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 %) — amortissement nul (place extérieure sans bâti), frais d'acquisition 8 800 €, aucun travaux</p>
+      <p><strong>Hypothèses retenues :</strong> loyer 40 € €/place/mois, vacance 5 %, charges 3 040 €/an, financement 90 % sur 15 ans à 3,70 % avec apport de 10 %</p>
+      <p><strong>Note :</strong> 5,3/10 — à négocier</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
