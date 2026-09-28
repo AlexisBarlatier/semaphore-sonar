@@ -51,7 +51,10 @@ ASSURANCE_EMPRUNTEUR_ANNUELLE_EUR = 374.0
 # 11 400 € (5 700 € la place), avancés par Alexis et Rémy et prêtés à la SCI en
 # compte courant d'associé. Objectif locatif : 50 à 60 € par place et par mois
 # hors charges, soit 1 200 à 1 440 €/an et 10,5 à 12,6 % brut sur les 11 400 €.
-# Charges (copropriété, TF, PNO) encore à chiffrer. Convention de prêt : in fine
+# Pas de PNO : place extérieure, aucune assurance obligatoire — décision de Rémy
+# (le conducteur couvre son véhicule, la copropriété porte sa RC sur les parties
+# communes). Reste à chiffrer : les charges de copropriété et la taxe foncière.
+# Convention de prêt : in fine
 # à 3 %, refonte prévue en amortissable sur 240 mois. À 0 % la SCI ne déduit
 # rien et les associés ne paient rien : c'est neutre, et c'est plus simple.
 PRET_ASSOCIES_LA_GARDE_EUR = 11400.0
