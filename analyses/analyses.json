@@ -1144,79 +1144,6 @@
       ]
     },
     {
-      "slug": "2026-08-09-brignoles-centre-t2-28m2",
-      "date_analyse": "2026-08-09",
-      "date_maj": null,
-      "titre": "Centre Vieille Ville, Brignoles (83170)",
-      "bien": {
-        "type_bien": "appartement",
-        "sous_type": null,
-        "type_detail": "Appartement T2 — 28 m²",
-        "neuf": null,
-        "adresse": {
-          "texte": "Centre Vieille Ville, Brignoles (83170)",
-          "ville": "Brignoles",
-          "code_postal": "83170"
-        },
-        "surfaces": {
-          "texte": "28 m²"
-        },
-        "lots": null,
-        "copro": {
-          "charges_annuelles_euros": null,
-          "charges_source": null
-        },
-        "travaux": {
-          "montant_euros": null,
-          "nature": null
-        }
-      },
-      "annonce": {
-        "plateforme": null,
-        "url": "https://www.seloger.com/annonces/achat/appartement/brignoles-83/centre-vieille-ville/26GAKUBNVE7T.htm",
-        "prix_affiche_euros": 67000.0,
-        "prix_retenu_euros": null,
-        "prix_statut": "affiche"
-      },
-      "marche": {
-        "valeur": null,
-        "loyers": null,
-        "notes": null
-      },
-      "hypotheses": {
-        "vacance_base_pct": null,
-        "vacance_best_pct": null,
-        "vacance_worst_pct": null,
-        "charges": {},
-        "frais_acquisition_euros": null
-      },
-      "analyse": {
-        "branche": "residentiel",
-        "type_operation": "locatif",
-        "strategie_retenue": {
-          "nom": null,
-          "code": "ld-nue",
-          "lots": null
-        },
-        "strategies_explorees": [],
-        "attractivite": [],
-        "risques": []
-      },
-      "legacy": {
-        "source": "html-import",
-        "importe_le": "2026-09-06"
-      },
-      "champs_manquants": [
-        "marche.valeur",
-        "marche.loyers",
-        "hypotheses.vacance_base_pct",
-        "hypotheses.charges.taxe_fonciere",
-        "hypotheses.charges.copro",
-        "analyse.attractivite",
-        "analyse.risques"
-      ]
-    },
-    {
       "slug": "2026-08-08-ollioules-centre-immeuble-4-lots",
       "date_analyse": "2026-08-08",
       "date_maj": null,
@@ -10130,6 +10057,190 @@
           }
         ]
       }
+    },
+    {
+      "slug": "2026-08-09-brignoles-centre-t2-28m2",
+      "date_analyse": "2026-08-09",
+      "date_maj": "2026-09-28",
+      "titre": "Appartement T2 de 28,3 m² au 2e étage sur 3, refait à neuf en 2022 et vendu loué en meublé 590 €/mois — quartier Centre Vieille Ville, Brignoles (83170)",
+      "bien": {
+        "type_bien": "appartement",
+        "sous_type": null,
+        "type_detail": "Appartement T2 de 28,3 m² Carrez au 2e étage sur 3, sans ascenseur, quartier Centre Vieille Ville à Brignoles. Refait à neuf en 2022, immeuble dont la toiture a été refaite en 2018 et une façade en 2023. Bail MEUBLÉ en cours depuis janvier 2023, loyer de 590 €/mois hors eau et électricité, dépôt de garantie de 1 180 € constitué, locataire qui reste en place après la vente. DPE D, GES B, chauffage individuel électrique (le locataire paie l'énergie), cuisinière et mobilier en place. Aucun travaux voté ni à l'étude dans la copropriété. Permis de louer obtenu, fibre raccordée. Vendeur particulier : les pièces de copropriété, l'avis de taxe foncière et les diagnostics datés ne sont pas encore produits, ils sont couverts par les conditions suspensives de l'offre (visite des lieux et documents ne devant révéler aucun élément de nature à modifier l'état du bien ou les conditions de sa location).",
+        "neuf": false,
+        "adresse": {
+          "texte": "Centre Vieille Ville, Brignoles (83170) — adresse exacte non communiquée par le vendeur",
+          "ville": "Brignoles",
+          "code_postal": "83170",
+          "quartier": "Centre Vieille Ville"
+        },
+        "surfaces": {
+          "texte": "28,3 m² Carrez (surface relevée par le propriétaire, certificat à joindre au compromis)",
+          "carrez_m2": 28.3
+        },
+        "lots": {
+          "count": 1,
+          "surface_par_lot_m2": 28.3,
+          "nature": "Un seul lot : l'appartement. Ni cave, ni parking, ni dépendance annoncés — aucun lot annexe cessible et aucun revenu annexe possible. Copropriété de centre ancien sans travaux voté ni à l'étude.",
+          "lots_distincts": 1
+        },
+        "copro": {
+          "charges_annuelles_euros": 360.0,
+          "charges_source": "30 €/mois annoncés par le propriétaire le 28/09/2026, soit 360 €/an — chiffre déclaratif : les deux derniers appels de fonds et le budget prévisionnel restent à obtenir. Aucun travaux voté ni à l'étude, toiture refaite en 2018, façade en 2023."
+        },
+        "travaux": {
+          "montant_euros": 0.0,
+          "nature": "Aucun travaux engagé à l'acquisition : appartement refait à neuf en 2022, toiture d'immeuble refaite en 2018 et façade en 2023, aucun travaux voté ni à l'étude en copropriété. Le risque travaux n'est donc pas dans le prix mais dans le long terme de la copropriété, porté à la matrice de risques."
+        }
+      },
+      "annonce": {
+        "plateforme": "SeLoger",
+        "url": "https://www.seloger.com/annonces/achat/appartement/brignoles-83/centre-vieille-ville/26GAKUBNVE7T.htm",
+        "prix_affiche_euros": 75000.0,
+        "prix_retenu_euros": 60000.0,
+        "prix_statut": "offre",
+        "prix_commentaire": "75 000 € affichés par un vendeur particulier, soit 2 651 €/m² sur 28,3 m² — 20 % au-dessus de la médiane DVF de la tranche 25-32 m² de la commune (2 119 €/m² sur 32 mutations 2024-2025). Offre déposée à 60 000 € net vendeur, soit 2 120 €/m², le solde et les frais d'acquisition restant à notre charge, avec condition suspensive de prêt de 54 000 € (90 % du prix) à 4,00 % maximum, visite des lieux et production des diagnostics datés, de l'avis de taxe foncière, des appels de fonds et des procès-verbaux de copropriété. Validité quinze jours, jusqu'au 13 octobre 2026. Le bien est en ligne depuis début août sans mouvement de prix."
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 52000.0,
+          "haute_euros": 65000.0,
+          "retenue_euros": 60000.0,
+          "source": "DVF 2024-2025, tranche 25-32 m² de Brignoles : 32 mutations, médiane 2 119 €/m², soit 60 000 € pour 28,3 m². Comparables directs de 28 m², tous lots uniques : 42 000 € (rue des Grands Escaliers, 10/2024, 1 500 €/m²), 52 250 € (rue des Lanciers, 12/2025, 1 866 €/m²), 58 000 € (rue des Lanciers, 06/2025, 2 071 €/m²), 63 000 € (rue de la Trinité, 04/2025, 2 250 €/m²), 63 550 € (rue des Lanciers, 06/2025, 2 270 €/m²) — médiane 58 000 €. Bornes de la fourchette : 52 000 € (quartile bas de la tranche) et 65 000 € (les ventes de 29-30 m² signées entre 2 167 et 2 500 €/m²). La valeur retenue est donc le prix du marché, pas une décote : l'offre à 60 000 € n'est pas un achat sous valeur, c'est un achat à sa valeur.",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "Appartement T2 de 28,3 m² au 2e étage — bail meublé en cours, locataire en place",
+            "quantite": 1,
+            "loyer_mensuel_euros": 590.0,
+            "occupe": true,
+            "note": "UNE SEULE LIGNE DE REVENU, celle du bail en cours : 590 €/mois hors eau et électricité, soit 20,8 €/m², 7 080 €/an bruts. C'est le haut du marché de son segment — les meublés de 24 à 30 m² relevés au centre de Brignoles le 28/09/2026 s'affichent entre 500 et 550 €/mois (un studio meublé de 27,85 m² à 520 €, un T1 meublé de 24 m² à 530 € charges comprises, un studio meublé de 25 m² à 520 €, un T2 de 30 m² à 514 €), et le loyer moyen communal toutes surfaces est de 11 à 13 €/m². Conséquence : aucun potentiel de progression sur le revenu, toute la valeur est dans le prix d'achat, et une relocation au prix du marché coûterait une soixantaine d'euros par mois. Le scénario base retient 5 % de vacance."
+          }
+        ],
+        "notes": "Segment locatif étroit mais réel : les meublés de 24 à 30 m² du centre s'affichent à 500-550 €/mois et la demande est portée par le permis de louer et le statut de sous-préfecture. Le loyer en place de 590 € est 12 % au-dessus de la moyenne de son segment : c'est un atout tant que le locataire reste, une décote à la relocation ensuite."
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 2.0,
+        "vacance_worst_pct": 20.0,
+        "vacance_justification": "5 % en base : un bail meublé en cours avec un locataire qui reste en place après la vente, mais un préavis d'un mois seulement en meublé, donc une vacance structurelle plus élevée qu'en nu. Scénario optimiste 2 % (locataire en place plusieurs années), scénario pessimiste 20 % (départ, quatre mois de vacance et relocation sous le loyer en place).",
+        "charges": {
+          "charges_copro_annuelles_euros": 360.0,
+          "charges_copro_commentaire": "30 €/mois annoncés par le propriétaire le 28/09/2026. Aucun travaux voté ni à l'étude, toiture 2018, façade 2023. Les deux derniers appels de fonds restent à obtenir.",
+          "taxe_fonciere_annuelle_euros": 500.0,
+          "taxe_fonciere_commentaire": "500 €/an annoncés par le propriétaire le 28/09/2026. Chiffre déclaratif : l'avis de taxe foncière est dans les conditions suspensives de l'offre. Taux global de Brignoles à confirmer sur l'avis.",
+          "pno_annuelle_euros": 100.0,
+          "comptabilite_annuelle_euros": 150.0,
+          "comptabilite_commentaire": "Coût marginal du lot : l'abonnement du cabinet est déjà porté par le parc, il ne reste que deux opérations mensuelles (loyer et charges) et deux annuelles (assurance et taxe foncière). Retenir 150 €/an, jamais 600.",
+          "provision_desactivee": true,
+          "provision_commentaire": "La provision travaux automatique de 2,5 % des loyers (168 €/an) n'est pas appliquée : appartement refait à neuf en 2022, toiture 2018, façade 2023, aucun travaux voté ni à l'étude. Elle est remplacée par les deux scénarios de vacance et par la matrice de risques, qui porte le risque de copropriété. L'appliquer ramènerait le cash-flow de +95 à +81 €/mois."
+        },
+        "frais_acquisition_euros": 4800.0,
+        "frais_acquisition_commentaire": "8 % du prix (4 800 €), barème du simulateur de l'annonce et des devis notaire constatés sur le secteur pour un bien ancien.",
+        "quote_part_bati_pct": 90.0,
+        "duree_amortissement_ans": 30
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Location meublée longue durée, locataire en place",
+          "code": "ld-meuble",
+          "lots": null
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Location meublée longue durée — locataire en place",
+            "rendement": "8,4 % net d'IS sur valeur",
+            "faisabilite": "Immédiate, bail en cours",
+            "risque": "faible"
+          },
+          {
+            "strategie": "Location nue — conversion du bail",
+            "rendement": "7,4 % net d'IS sur valeur",
+            "faisabilite": "Immédiate mais destructive",
+            "risque": "élevé — on perd le locataire en place et le mobilier n'est plus amorti"
+          },
+          {
+            "strategie": "Location courte durée",
+            "rendement": "non retenu",
+            "faisabilite": "Réglementation incertaine",
+            "risque": "élevé — rotation, gestion, et un loyer déjà au haut du marché local"
+          },
+          {
+            "strategie": "Revente à la découpe",
+            "rendement": "sans objet",
+            "faisabilite": "Impossible",
+            "risque": "le lot est unique et l'immeuble en copropriété"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 4,
+            "justification": "Brignoles n'a pas de gare : la plus proche est à Carnoules, à une dizaine de kilomètres. Réseau de cars départemental et autoroute A8 à 15 km. La voiture est indispensable, ce qui pèse sur la demande locative de petits logements."
+          },
+          {
+            "dimension": "commerces",
+            "score": 7,
+            "justification": "Centre ancien commerçant, marché provençal, supermarchés et zone commerciale à moins de 2 km. Sous-préfecture : l'offre de services est celle d'un bassin de 17 000 habitants."
+          },
+          {
+            "dimension": "ecoles",
+            "score": 7,
+            "justification": "Écoles primaires du centre, collèges et lycée Raynouard sur la commune. L'offre scolaire complète soutient la demande des jeunes actifs et des familles."
+          },
+          {
+            "dimension": "securite",
+            "score": 5,
+            "justification": "Centre ancien vivant mais étroit, avec les incivilités nocturnes habituelles de ce type de tissu. Le logement est au 2e étage, avec un permis de louer délivré par la commune, ce qui encadre déjà la qualité des lots mis en location."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 7,
+            "justification": "Les meublés de 24 à 30 m² du centre s'affichent entre 500 et 550 €/mois et partent : c'est exactement le segment du bien. Le locataire en place depuis janvier 2023 confirme l'attractivité du lot."
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 5,
+            "justification": "179 ventes d'appartements par an sur la commune, un marché réel et liquide pour le secteur, mais une économie locale modeste et un prix au m² stable. La tranche 25-32 m² ne représente que 16 mutations sur deux ans : le marché est étroit à la revente."
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Loyer en place au haut du marché",
+            "severite": 3,
+            "detail": "590 € pour 28,3 m², soit 20,8 €/m², quand les meublés de 24 à 30 m² du centre s'affichent entre 500 et 550 €/mois (17 à 19 €/m²). Une relocation au prix du marché ramènerait le cash-flow de +95 à +62 €/mois et ferait tomber le ratio bancaire de 1,43 à 1,23. Le bail en cours protège le dossier, pas la négociation."
+          },
+          {
+            "facteur": "Rotation propre au meublé",
+            "severite": 3,
+            "detail": "Un bail meublé se dénoue avec un préavis d'un mois, contre trois en location nue. La vacance structurelle est donc plus élevée : le scénario pessimiste teste 20 %, soit quatre mois de vacance et une relocation sous le loyer en place."
+          },
+          {
+            "facteur": "Pièces de copropriété non produites",
+            "severite": 3,
+            "detail": "Aucun appel de fonds, aucun procès-verbal d'assemblée, aucun état daté, aucun avis de taxe foncière, aucun diagnostic daté. Les 360 € de charges et les 500 € de taxe foncière sont déclaratifs. Les conditions suspensives de l'offre couvrent ces pièces, mais un budget prévisionnel en dérive ou des travaux votés changeraient le plafond."
+          },
+          {
+            "facteur": "Copropriété de centre ancien",
+            "severite": 2,
+            "detail": "Toiture refaite en 2018, façade en 2023, aucun travaux voté ni à l'étude : le passif immédiat est écarté. Reste le risque de long terme, une toiture ou une façade se reposant à quinze ou vingt ans, sur un lot unique qui en portera sa quote-part."
+          },
+          {
+            "facteur": "Liquidité à la revente",
+            "severite": 2,
+            "detail": "Brignoles écoule environ 180 appartements par an, mais la tranche 25-32 m² ne compte que 32 mutations sur deux ans, dont la moitié au-dessus de 2 100 €/m². Un 28 m² meublé du centre ancien se revend, plus lentement qu'un T3 : la sortie doit être prévue, pas supposée."
+          },
+          {
+            "facteur": "Fiscalité de sortie en SCI",
+            "severite": 2,
+            "detail": "Plus-value imposée à l'IS puis PFU à la distribution : l'argent revient à la structure, pas aux associés. Ce n'est un problème que le jour où la doctrine impose de rendre l'apport."
+          }
+        ]
+      },
+      "champs_manquants": []
     }
   ]
 }
