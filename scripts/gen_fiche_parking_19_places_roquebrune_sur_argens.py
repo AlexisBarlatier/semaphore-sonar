@@ -131,12 +131,29 @@ for i, L in enumerate(PALIERS, start=1):
     _, c, _, _, _ = variante(loyer=L, vacance=5.0, prix=PRIX_AFFICHE)
     net = c["fiscal"]["net_apres_is"]
     eq = equilibre(net)
-    tenu = PRIX_AFFICHE if L >= 60 else eq
+    # Règle du groupe (28/09/2026) : aucun palier accepté avec un cash-flow négatif.
+    # Le prix demandé n'est donc tenu que tant que le net après IS couvre la mensualité
+    # à ce loyer ; au-delà, le prix descend au niveau d'équilibre du palier.
+    tenu = PRIX_AFFICHE if net / 12.0 - MENS_AFFICHE >= 0 else eq
     cf = net / 12.0 - tenu * ANNUITE
-    calcule(f"équilibre palier {L:.0f} €", None, None)
     lignes_echelle.append({"palier": i, "loyer": L, "net": net, "eq": eq,
                            "tenu": tenu, "cf": cf,
                            "rdt_revient": net / (tenu + FRAIS) * 100})
+
+palier_tenu_min = min(l["loyer"] for l in lignes_echelle if l["tenu"] == PRIX_AFFICHE)
+calcule("dernier palier tenu au prix affiché", palier_tenu_min, 70.0, 0.1)
+
+# Note du moteur selon le prix payé : elle ne mesure pas la remise consentie mais le
+# prix payé rapporté à la valeur des loyers. Vérifiée ligne à ligne.
+NOTES_PRIX = []
+for prix, attendu, libelle in ((110000.0, 5.3, "prix affiché"),
+                               (81413.0, 5.3, "palier 50 €"),
+                               (62933.0, 6.0, "seuil de 6,0"),
+                               (58776.0, 6.3, "palier 40 €"),
+                               (56402.0, 6.5, "seuil d'achat")):
+    _, _, n, v, _ = variante(loyer=LOYER_REF, vacance=5.0, prix=prix)
+    calcule(f"note au prix {prix:.0f} €", n, attendu, 0.05)
+    NOTES_PRIX.append({"prix": prix, "note": n, "verdict": v, "libelle": libelle})
 
 # Scénarios publiés dans les projections
 S_BASE = variante(loyer=LOYER_REF, vacance=5.0, prix=equilibre(
@@ -258,17 +275,26 @@ def bloc_strategie():
 def bloc_echelle():
     lignes = []
     for l in lignes_echelle:
-        tenu = eur(l["tenu"])
-        if l["palier"] <= 4:
-            tenu = f"<strong>{eur(l['tenu'])}</strong> (tenu)"
+        if l["tenu"] == PRIX_AFFICHE:
+            tenu = f"<strong>{eur(l['tenu'])}</strong> (tenu, CF positif)"
         else:
-            tenu = f"<strong>{eur(l['tenu'])}</strong> (descend)"
+            tenu = f"<strong>{eur(l['tenu'])}</strong> (descend au seuil de CF nul)"
         lignes.append(
             f"          <tr><td>{l['palier']}</td><td>{eur(l['loyer'])}</td><td>{tenu}</td>"
             f"<td class=\"num\">{eur(l['net'])}</td>"
             f'<td class="num">{euro_signe(l["cf"])}/mois</td>'
             + f"<td class=\"num\">{eur(l['eq'])}</td>"
             f"<td class=\"num\">{eur(l['tenu'] / N_PLACES)}</td></tr>")
+    return "\n".join(lignes)
+
+
+def bloc_notes():
+    lignes = []
+    for x in NOTES_PRIX:
+        lignes.append(
+            f'          <tr><td>{eur(x["prix"])} <span class="scenario-subtitle">({x["libelle"]})</span></td>'
+            f'<td class="num"><strong>{str(x["note"]).replace(".", ",")}/10</strong></td>'
+            f'<td>{x["verdict"]}</td></tr>')
     return "\n".join(lignes)
 
 
@@ -484,7 +510,18 @@ TEMPLATE = """<!DOCTYPE html>
 {echelle}
       </tbody>
     </table>
-    <p class="attractiveness-intro"><strong>Lecture :</strong> aux paliers 90, 80 et 70 €, le prix demandé est très en dessous de ce que vaudraient ces loyers : l'offre est à la hausse pour le vendeur. C'est au palier 60 € que le prix demandé n'est plus tenable (cash-flow négatif de 40 €/mois) et qu'il faut descendre. Un palier ne compte que s'il produit au moins 5 000 €/an de loyers signés, soit 5 places à 90 €, 8 à 60 €, 9 à 50 € ou 11 à 40 € : sans ce seuil, un locataire isolé à 90 € valoriserait 19 places.</p>
+    <p class="attractiveness-intro"><strong>Lecture :</strong> aux paliers 90, 80 et 70 €, le prix demandé est très en dessous de ce que vaudraient ces loyers : l'offre est à la hausse pour le vendeur. À partir du palier 60 €, le prix demandé ne couvre plus la mensualité : il descend au niveau d'équilibre, parce qu'aucun palier avec un cash-flow négatif n'est accepté, même de 40 €/mois. Un palier ne compte que s'il produit au moins 5 000 €/an de loyers signés, soit 5 places à 90 €, 8 à 60 €, 9 à 50 € ou 11 à 40 € : sans ce seuil, un locataire isolé à 90 € valoriserait 19 places.</p>
+
+    <h3 style="margin-top:2rem;">Ce que la grille donne comme note</h3>
+    <p class="attractiveness-intro">La note du moteur ne récompense pas la remise obtenue : elle compare le prix payé, frais compris, à la valeur des loyers du lot. Entre 110 000 € et 67 600 €, elle ne bouge pas — tenir le prix demandé sur les paliers de loyer ne suffit donc pas à faire basculer le dossier. Elle passe 6,0 à 62 900 € et 6,5 (à acheter) à 56 400 €, soit 2 970 €/place. C'est exactement ce que permet l'achat à la découpe : payer plein tarif les seules places louées et moitié prix les invendus abaisse le prix moyen sous cette ligne.</p>
+    <table class="comparison-table">
+      <thead>
+        <tr><th>Prix payé</th><th>Note</th><th>Verdict</th></tr>
+      </thead>
+      <tbody>
+{notes}
+      </tbody>
+    </table>
   </section>
 
   <!-- === Fiche d'identité === -->
@@ -629,6 +666,7 @@ def main():
         strategie=bloc_strategie(),
         conf=CONF,
         echelle=bloc_echelle(),
+        notes=bloc_notes(),
         identite=bloc_identite(),
         projections=bloc_projections(),
         comparaison=bloc_comparaison(),
@@ -643,7 +681,7 @@ def main():
             f"l'agence annonce 50 à 90 € sans produire un bail, et il faudrait {LOYER_EQUILIBRE_FR} €/place "
             f"pour que le prix demandé tienne. À {eur(LOYER_REF)}/place, la valeur du lot est {eur(PRIX_BASE)} et le "
             f"cash-flow s'équilibre exactement. On négocie donc sur ce prix, sous condition d'un test locatif de "
-            f"quatre mois mené sous mandat du vendeur, et on n'achète que les places louées."
+            f"cinq mois mené sous mandat du vendeur, et on n'achète que les places louées."
         ).replace(",", " "),
         LOYER_EQUILIBRE_FR=LOYER_EQUILIBRE_FR,
         prix_affiche=eur(PRIX_AFFICHE),

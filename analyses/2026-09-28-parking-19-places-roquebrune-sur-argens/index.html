@@ -171,15 +171,30 @@
         <tr><th>Palier</th><th>Loyer testé</th><th>Notre prix</th><th>Net après IS</th><th>Cash-flow mensuel</th><th>Prix d'équilibre</th><th>€/place payés</th></tr>
       </thead>
       <tbody>
-          <tr><td>1</td><td>90 €</td><td><strong>110 000 €</strong> (tenu)</td><td class="num">13 986 €</td><td class="num">+420 €/mois</td><td class="num">171 960 €</td><td class="num">5 789 €</td></tr>
-          <tr><td>2</td><td>80 €</td><td><strong>110 000 €</strong> (tenu)</td><td class="num">12 145 €</td><td class="num">+267 €/mois</td><td class="num">149 323 €</td><td class="num">5 789 €</td></tr>
-          <tr><td>3</td><td>70 €</td><td><strong>110 000 €</strong> (tenu)</td><td class="num">10 304 €</td><td class="num">+113 €/mois</td><td class="num">126 686 €</td><td class="num">5 789 €</td></tr>
-          <tr><td>4</td><td>60 €</td><td><strong>110 000 €</strong> (tenu)</td><td class="num">8 463 €</td><td class="num">−40 €/mois</td><td class="num">104 050 €</td><td class="num">5 789 €</td></tr>
-          <tr><td>5</td><td>50 €</td><td><strong>81 413 €</strong> (descend)</td><td class="num">6 622 €</td><td class="num">0 €/mois</td><td class="num">81 413 €</td><td class="num">4 285 €</td></tr>
-          <tr><td>6</td><td>40 €</td><td><strong>58 776 €</strong> (descend)</td><td class="num">4 780 €</td><td class="num">0 €/mois</td><td class="num">58 776 €</td><td class="num">3 093 €</td></tr>
+          <tr><td>1</td><td>90 €</td><td><strong>110 000 €</strong> (tenu, CF positif)</td><td class="num">13 986 €</td><td class="num">+420 €/mois</td><td class="num">171 960 €</td><td class="num">5 789 €</td></tr>
+          <tr><td>2</td><td>80 €</td><td><strong>110 000 €</strong> (tenu, CF positif)</td><td class="num">12 145 €</td><td class="num">+267 €/mois</td><td class="num">149 323 €</td><td class="num">5 789 €</td></tr>
+          <tr><td>3</td><td>70 €</td><td><strong>110 000 €</strong> (tenu, CF positif)</td><td class="num">10 304 €</td><td class="num">+113 €/mois</td><td class="num">126 686 €</td><td class="num">5 789 €</td></tr>
+          <tr><td>4</td><td>60 €</td><td><strong>104 050 €</strong> (descend au seuil de CF nul)</td><td class="num">8 463 €</td><td class="num">0 €/mois</td><td class="num">104 050 €</td><td class="num">5 476 €</td></tr>
+          <tr><td>5</td><td>50 €</td><td><strong>81 413 €</strong> (descend au seuil de CF nul)</td><td class="num">6 622 €</td><td class="num">0 €/mois</td><td class="num">81 413 €</td><td class="num">4 285 €</td></tr>
+          <tr><td>6</td><td>40 €</td><td><strong>58 776 €</strong> (descend au seuil de CF nul)</td><td class="num">4 780 €</td><td class="num">0 €/mois</td><td class="num">58 776 €</td><td class="num">3 093 €</td></tr>
       </tbody>
     </table>
-    <p class="attractiveness-intro"><strong>Lecture :</strong> aux paliers 90, 80 et 70 €, le prix demandé est très en dessous de ce que vaudraient ces loyers : l'offre est à la hausse pour le vendeur. C'est au palier 60 € que le prix demandé n'est plus tenable (cash-flow négatif de 40 €/mois) et qu'il faut descendre. Un palier ne compte que s'il produit au moins 5 000 €/an de loyers signés, soit 5 places à 90 €, 8 à 60 €, 9 à 50 € ou 11 à 40 € : sans ce seuil, un locataire isolé à 90 € valoriserait 19 places.</p>
+    <p class="attractiveness-intro"><strong>Lecture :</strong> aux paliers 90, 80 et 70 €, le prix demandé est très en dessous de ce que vaudraient ces loyers : l'offre est à la hausse pour le vendeur. À partir du palier 60 €, le prix demandé ne couvre plus la mensualité : il descend au niveau d'équilibre, parce qu'aucun palier avec un cash-flow négatif n'est accepté, même de 40 €/mois. Un palier ne compte que s'il produit au moins 5 000 €/an de loyers signés, soit 5 places à 90 €, 8 à 60 €, 9 à 50 € ou 11 à 40 € : sans ce seuil, un locataire isolé à 90 € valoriserait 19 places.</p>
+
+    <h3 style="margin-top:2rem;">Ce que la grille donne comme note</h3>
+    <p class="attractiveness-intro">La note du moteur ne récompense pas la remise obtenue : elle compare le prix payé, frais compris, à la valeur des loyers du lot. Entre 110 000 € et 67 600 €, elle ne bouge pas — tenir le prix demandé sur les paliers de loyer ne suffit donc pas à faire basculer le dossier. Elle passe 6,0 à 62 900 € et 6,5 (à acheter) à 56 400 €, soit 2 970 €/place. C'est exactement ce que permet l'achat à la découpe : payer plein tarif les seules places louées et moitié prix les invendus abaisse le prix moyen sous cette ligne.</p>
+    <table class="comparison-table">
+      <thead>
+        <tr><th>Prix payé</th><th>Note</th><th>Verdict</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>110 000 € <span class="scenario-subtitle">(prix affiché)</span></td><td class="num"><strong>5,3/10</strong></td><td>negocier</td></tr>
+          <tr><td>81 413 € <span class="scenario-subtitle">(palier 50 €)</span></td><td class="num"><strong>5,3/10</strong></td><td>negocier</td></tr>
+          <tr><td>62 933 € <span class="scenario-subtitle">(seuil de 6,0)</span></td><td class="num"><strong>6,0/10</strong></td><td>negocier</td></tr>
+          <tr><td>58 776 € <span class="scenario-subtitle">(palier 40 €)</span></td><td class="num"><strong>6,3/10</strong></td><td>negocier</td></tr>
+          <tr><td>56 402 € <span class="scenario-subtitle">(seuil d'achat)</span></td><td class="num"><strong>6,5/10</strong></td><td>acheter</td></tr>
+      </tbody>
+    </table>
   </section>
 
   <!-- === Fiche d'identité === -->
@@ -369,7 +384,7 @@
   <section class="verdict nego">
     <h2>Recommandation</h2>
     <div class="verdict-decision">
-      <p class="verdict-stance"><strong>On négocie, et on ne paie pas le prix affiché.</strong> Au prix affiché de 110 000 €  le lot produit 5 624 € d'EBE pour 4 780 € après IS  soit un cash-flow de −347 €/mois et un rendement net d'IS de 4 02 %. Ce n'est pas un dossier de rendement  c'est un dossier de test : le seul comparable extérieur constaté dans la commune est à 40 €/place  l'agence annonce 50 à 90 € sans produire un bail  et il faudrait 62 6 €/place pour que le prix demandé tienne. À 40 €/place  la valeur du lot est 58 776 € et le cash-flow s'équilibre exactement. On négocie donc sur ce prix  sous condition d'un test locatif de quatre mois mené sous mandat du vendeur  et on n'achète que les places louées.</p>
+      <p class="verdict-stance"><strong>On négocie, et on ne paie pas le prix affiché.</strong> Au prix affiché de 110 000 €  le lot produit 5 624 € d'EBE pour 4 780 € après IS  soit un cash-flow de −347 €/mois et un rendement net d'IS de 4 02 %. Ce n'est pas un dossier de rendement  c'est un dossier de test : le seul comparable extérieur constaté dans la commune est à 40 €/place  l'agence annonce 50 à 90 € sans produire un bail  et il faudrait 62 6 €/place pour que le prix demandé tienne. À 40 €/place  la valeur du lot est 58 776 € et le cash-flow s'équilibre exactement. On négocie donc sur ce prix  sous condition d'un test locatif de cinq mois mené sous mandat du vendeur  et on n'achète que les places louées.</p>
     </div>
     <div class="verdict-details">
       <p><strong>Prix plafond : 58 776 € tant que le loyer n'est pas mesuré</strong> (3 093 €/place, soit 14 678 € de cash à sortir apport et frais compris). Au-dessus, le dossier ne couvre plus sa mensualité si le marché ressort à 40 €/place. Si le test démontre 50 €/place, le plafond monte à 81 413 € (4 285 €/place, 16 941 € de cash) et le prix demandé de 110 000 € reste hors d'atteinte : il faudrait 62,6 €/place pour l'équilibrer.</p>
