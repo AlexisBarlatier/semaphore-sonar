@@ -205,6 +205,7 @@ def main():
         risques.append('<tr><td>%s</td><td class="sev sev-%d">%d/5</td><td>%s</td></tr>' % (item["facteur"], item["severite"], item["severite"], item["detail"]))
 
     html = TEMPLATE.format(
+        url=RECORD["annonce"]["url"],
         titre=RECORD["titre"],
         prix=eur(prix), prix_m2=eur(prix / 50.0),
         brut=pct(rend["brut_sur_revient_pct"]), net_revient=pct(rend["net_sur_revient_pct"]),
@@ -253,6 +254,7 @@ TEMPLATE = """<!DOCTYPE html>
     <h1>{titre}</h1>
     <p class="report-address">Hyper centre, quartier Est — La Seyne-sur-Mer (83500) · annonce Leboncoin 3280288123 · iad France, réf. 2126420</p>
     <p class="report-date">Prix affiché {prix} · analysé le 2 octobre 2026</p>
+    <p class="report-source-link">Annonce d'origine : <a href="{url}" rel="noopener">{url}</a></p>
     <p class="report-source">Analyse produite pour Alexis et Rémy Barlatier — Sémaphore Patrimoine. Tous les chiffres sont recalculés par le moteur du dépôt ; les pièces annoncées et non produites sont listées dans « Confiance et limites ».</p>
   </header>
 
