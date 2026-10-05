@@ -21,6 +21,8 @@ PARAGRAPHES = [
 ]
 
 QUESTIONS = [
+    "Quelle est la surface exacte du local ? L'annonce indique 38 m² dans son titre et 32 m² "
+    "dans son descriptif. S'agit-il d'une surface mesurée ou cadastrale ?",
     "Quel est le montant de la taxe foncière, et pour quelle année ?",
     "Le local génère-t-il une cotisation foncière des entreprises (CFE) à la charge du "
     "propriétaire, et pour quel montant ?",
@@ -75,6 +77,7 @@ TEMPLATE = """<!DOCTYPE html>
   <section class="strategy-exploration">
     <h2>Pourquoi ces questions et pas d'autres</h2>
     <ul>
+      <li><strong>La surface</strong> — l'annonce donne deux métrages différents : 38 m² dans son titre, 32 m² dans son descriptif. Six mètres carrés d'écart sur un local de cette taille, c'est près de 20 %. Cela change le loyer au m², le prix au m² et la faisabilité d'une division. À faire confirmer au mètre, et sur quelle base — mesurée, cadastrale ou surface de plancher.</li>
       <li><strong>La taxe foncière et la CFE</strong> — ce sont les deux seules charges que nous ne connaissons pas, et ce sont elles qui décident du loyer minimum acceptable. Sans elles, aucun chiffrage n'est solide.</li>
       <li><strong>Le règlement de copropriété</strong> — un local identifié comme cave ou comme local commercial ne se loue pas de la même façon. C'est la question qui peut arrêter le dossier à elle seule.</li>
       <li><strong>L'électrification</strong> — l'annonce écrit « pouvant être électrifié ». Cela veut dire qu'il ne l'est pas. C'est un coût à intégrer, pas un détail.</li>
