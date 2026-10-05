@@ -10,7 +10,7 @@ import os
 import re
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SORTIE = os.path.join(RACINE, "analyses", "modele-mail-questions-agence", "index.html")
+SORTIE = os.path.join(RACINE, "analyses", "mail-questions-agence", "index.html")
 
 OBJET = "Local de stockage 32 m², Saint-Raphaël — questions avant visite"
 
