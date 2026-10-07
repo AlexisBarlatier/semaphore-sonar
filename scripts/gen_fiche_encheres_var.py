@@ -29,6 +29,9 @@ VENTES = [
     ("Deux locaux commerciaux + courette de service", "Saint-Raphaël", "4 septembre 2026", 113.63, 68000., None,
      "Restaurant fermé depuis 3 ans (lot 57), autre en exploitation (lot 56)",
      "Ensemble Port Santa Lucia, avenue Raymond Poincaré. 35,29 m² et 78,34 m² + courette 28 m²"),
+    ("Local commercial + cave, loué par bail commercial", "Vidauban", "16 septembre 2026", 94.91, 30000., 78000.,
+     "Occupé, bail commercial depuis 2011, loyer 715 €/mois",
+     "3 avenue Maximin Martin. 42,90 m² + local 1,50 m² + cave 50,51 m². Tribunal de Marseille"),
 ]
 
 LECTURES = [
