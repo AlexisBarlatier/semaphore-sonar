@@ -32,6 +32,9 @@ VENTES = [
     ("Local commercial + cave, loué par bail commercial", "Vidauban", "16 septembre 2026", 94.91, 30000., 78000.,
      "Occupé, bail commercial depuis 2011, loyer 715 €/mois",
      "3 avenue Maximin Martin. 42,90 m² + local 1,50 m² + cave 50,51 m². Tribunal de Marseille"),
+    ("Appartement + séchoir", "Vidauban", "16 septembre 2026", 51.82, 24000., 65000.,
+     "Inoccupé",
+     "9 avenue Maximin Martin. Appartement 51,82 m² Carrez (lot 3) + séchoir (lot 4). Tribunal de Marseille"),
 ]
 
 LECTURES = [
