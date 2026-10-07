@@ -136,7 +136,7 @@ TEMPLATE = """<!DOCTYPE html>
 
   <section class="strategy-exploration">
     <h2>L'essentiel en une ligne</h2>
-    <p>Sur les <strong>{nb} ventes relevées</strong>, <strong>une n'a trouvé aucun preneur</strong> et les quatre autres sont parties de <strong>+{e_min} %</strong> ({v_min}) à <strong>+{e_max} %</strong> ({v_max}) au-dessus de leur mise à prix. Autrement dit : <strong>la mise à prix ne dit rien de la valeur du bien</strong>, ni dans un sens ni dans l'autre. Elle est fixée par le créancier sur sa créance. Ce qui compte, c'est ce que la salle accepte de payer — et quand elle n'accepte pas, le lot reste invendu.</p>
+    <p>Sur les <strong>{nb} ventes relevées</strong>, <strong>une n'a trouvé aucun preneur</strong> et les autres sont parties de <strong>+{e_min} %</strong> ({v_min}) à <strong>+{e_max} %</strong> ({v_max}) au-dessus de leur mise à prix. Autrement dit : <strong>la mise à prix ne dit rien de la valeur du bien</strong>, ni dans un sens ni dans l'autre. Elle est fixée par le créancier sur sa créance. Ce qui compte, c'est ce que la salle accepte de payer — et quand elle n'accepte pas, le lot reste invendu.</p>
   </section>
 
   <section class="financial-projections">
