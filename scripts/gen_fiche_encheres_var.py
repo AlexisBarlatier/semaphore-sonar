@@ -26,12 +26,18 @@ VENTES = [
      "Libre", "68 Les Matins Clairs, place Jean Piquemal"),
     ("Appartement dans une maison de village, 2 niveaux", "Carcès", "4 septembre 2026", 65.0, 30000., 31000.,
      "Occupé, bail d'habitation", "3 rue du Maréchal Foch, lots 8 et 9, avec grenier"),
+    ("Deux locaux commerciaux + courette de service", "Saint-Raphaël", "4 septembre 2026", 113.63, 68000., None,
+     "Restaurant fermé depuis 3 ans (lot 57), autre en exploitation (lot 56)",
+     "Ensemble Port Santa Lucia, avenue Raymond Poincaré. 35,29 m² et 78,34 m² + courette 28 m²"),
 ]
 
 LECTURES = [
     ("La mise à prix ne dit rien de la valeur",
-     "Quatre ventes du même département, de +3,3 % à +348 %. La mise à prix est fixée par le créancier sur sa créance, "
-     "pas sur le bien. Elle ne rentre dans aucun de nos calculs."),
+     "Cinq ventes du même département, de +3 % à +348 % sur les quatre qui ont trouvé preneur. La mise à prix est "
+     "fixée par le créancier sur sa créance, pas sur le bien. Elle ne rentre dans aucun de nos calculs."),
+    ("Un lot peut ne pas se vendre, et c'est l'information la plus utile",
+     "Saint-Raphaël, deux locaux commerciaux dont un restaurant fermé depuis trois ans : 68 000 € de mise à prix, "
+     "aucun enchérisseur. Quand la mise à prix dépasse ce que la salle accepte de payer, le lot reste au créancier."),
     ("Une mise à prix basse est un appât, pas une aubaine",
      "Tourrettes : 23 000 € affichés, 103 000 € adjugés — le prix de marché d'une maisonnette avec jardin dans un secteur "
      "touristique. Tout le monde a vu l'aubaine, personne n'en a eu."),
@@ -65,15 +71,24 @@ def eur(v, dec=0):
 
 
 def main():
-    lignes = []
+    lignes, ecarts = [], []
     for nom, ville, date, surf, mise, res, occ, note in VENTES:
-        ecart = (res / mise - 1) * 100
-        pm2 = (res / surf) if surf else None
+        if res:
+            ecart = (res / mise - 1) * 100
+            ecarts.append(ecart)
+            col_res = "<strong>%s</strong>" % eur(res)
+            col_ecart = "+%s %%" % nfr(ecart, 1)
+            pm2 = (res / surf) if surf else None
+        else:
+            col_res = "aucun enchérisseur"
+            col_ecart = "<strong>non requise</strong>"
+            pm2 = None
         lignes.append(
-            "        <tr><td><strong>%s</strong><br><span class=\"ville\">%s — %s</span></td>"
-            "<td class=\"num\">%s</td><td class=\"num\">%s</td><td class=\"num\"><strong>%s</strong></td>"
+            "        <tr><td><strong>%s</strong><br><span class=\"ville\">%s — %s</span>"
+            "<br><span class=\"note\">%s</span></td>"
+            "<td class=\"num\">%s</td><td class=\"num\">%s</td><td class=\"num\">%s</td>"
             "<td class=\"num\">%s</td><td class=\"num\">%s</td><td>%s</td></tr>"
-            % (nom, ville, date, eur(mise), eur(res), "+%s %%" % nfr(ecart, 1),
+            % (nom, ville, date, note, eur(mise), col_res, col_ecart,
                eur(pm2) if pm2 else "n. c.", eur(surf, 2) if surf else "n. c.", occ or "—")
         )
     lectures = "\n".join(
@@ -81,9 +96,9 @@ def main():
     avenir = "\n".join(
         "        <tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>" % (d, v, b, n)
         for d, v, b, n in A_VENIR)
-    ecarts = [(r / m - 1) * 100 for _, _, _, _, m, r, _, _ in VENTES]
-    mini = min(VENTES, key=lambda x: x[5] / x[4])
-    maxi = max(VENTES, key=lambda x: x[5] / x[4])
+    vendus = [v for v in VENTES if v[5]]
+    mini = min(vendus, key=lambda x: x[5] / x[4])
+    maxi = max(vendus, key=lambda x: x[5] / x[4])
 
     html = TEMPLATE.format(
         lignes="\n".join(lignes), lectures=lectures, avenir=avenir,
@@ -118,7 +133,7 @@ TEMPLATE = """<!DOCTYPE html>
 
   <section class="strategy-exploration">
     <h2>L'essentiel en une ligne</h2>
-    <p>Sur les <strong>{nb} ventes relevées</strong>, l'écart entre la mise à prix et le prix d'adjudication va de <strong>+{e_min} %</strong> ({v_min}) à <strong>+{e_max} %</strong> ({v_max}). <strong>La mise à prix ne dit donc rien de la valeur du bien.</strong> Elle est fixée par le créancier sur sa créance. Ce qui compte, c'est ce que la salle est prête à payer.</p>
+    <p>Sur les <strong>{nb} ventes relevées</strong>, <strong>une n'a trouvé aucun preneur</strong> et les quatre autres sont parties de <strong>+{e_min} %</strong> ({v_min}) à <strong>+{e_max} %</strong> ({v_max}) au-dessus de leur mise à prix. Autrement dit : <strong>la mise à prix ne dit rien de la valeur du bien</strong>, ni dans un sens ni dans l'autre. Elle est fixée par le créancier sur sa créance. Ce qui compte, c'est ce que la salle accepte de payer — et quand elle n'accepte pas, le lot reste invendu.</p>
   </section>
 
   <section class="financial-projections">
@@ -148,7 +163,7 @@ TEMPLATE = """<!DOCTYPE html>
 {avenir}
       </tbody>
     </table>
-    <p class="scenario-subtitle">La plus utile des données manque encore : <strong>un lot qui ne part pas</strong>. Sur les {nb} ventes relevées, toutes ont trouvé preneur. Un lot invendu dira si la mise à prix peut être trop haute — et c'est l'information la plus rare sur ce marché.</p>
+    <p class="scenario-subtitle">La donnée la plus instructive du relevé est désormais là : <strong>un lot qui ne part pas</strong>. Il dit l'inverse des autres lignes — qu'une mise à prix peut être trop haute, et que la salle le fait savoir en restant muette. À chaque audience, on relève donc trois choses : le prix d'adjudication, le nombre de mains levées, et les lots qui restent sans preneur.</p>
   </section>
 
   <footer class="report-footer">
