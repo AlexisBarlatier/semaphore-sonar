@@ -13,7 +13,7 @@ import re
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SORTIE = os.path.join(RACINE, "analyses", "2026-10-08-toulon-aguillon-t4-73m2", "index.html")
 
-PRIX = 150360.0
+PRIX = 150360.0 * 0.90   # scénario de négociation : 10 % sous le prix affiché, soit 135 324 €
 SURF = 73.37
 CHARGES = 960.0
 TF = 1200.0          # hypothese, non communiquee
@@ -124,7 +124,7 @@ TEMPLATE = """<!DOCTYPE html>
     <p class="report-breadcrumb">Analyse — Sémaphore Patrimoine</p>
     <h1>Toulon Aguillon — T4 de 73,37 m², potentiel colocation</h1>
     <p class="report-address">Toulon (83000), quartier Aguillon · 4 pièces, 3 chambres, 1er étage avec ascenseur · terrasse · DPE E</p>
-    <p class="report-source">Source : SeLoger, réf. 268HPZBNXGLW. Prix affiché {prix}, soit {pm2}/m². <strong>Aucun loyer n'est annoncé par le vendeur</strong> : la fiche raisonne donc en grille, à partir du relevé de marché réalisé le 8 octobre 2026.</p>
+    <p class="report-source">Source : SeLoger, réf. 268HPZBNXGLW. Prix affiché <strong>150 360 €</strong>. <strong>Cette fiche est calculée sur un scénario de négociation : 135 324 €, soit 10 % sous le prix affiché.</strong> Aucun loyer n'étant annoncé par le vendeur, la fiche raisonne en grille, à partir du relevé de marché réalisé le 8 octobre 2026.</p>
   </header>
 
   <section class="strategy-exploration">
