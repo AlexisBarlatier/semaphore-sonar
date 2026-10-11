@@ -112,7 +112,7 @@ def main():
 TEMPLATE = """<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8">\n<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Toulon Aguillon — T4 73 m², potentiel colocation</title>
 <link rel="stylesheet" href="../style.css">

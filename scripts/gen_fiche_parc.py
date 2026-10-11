@@ -103,6 +103,7 @@ HTML = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trésorerie du parc — état au {parc.DATE_RELEVE} — Sémaphore Patrimoine</title>
 <link rel="stylesheet" href="../../style.css">

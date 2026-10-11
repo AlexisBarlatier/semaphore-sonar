@@ -358,7 +358,7 @@ S_RATIO = COMP["s_ratio"]
 HTML = f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8">\n<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Immeuble 9 rue Daguerre, Saint-Maximin-la-Sainte-Baume — analyse du 28 septembre 2026</title>
 <link rel="stylesheet" href="../../style.css">
