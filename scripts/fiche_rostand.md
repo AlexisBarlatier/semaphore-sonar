@@ -8,6 +8,10 @@
 - Statut 10/09/2026 : **offre d'achat à 6 000 €/place, soit 66 000 € net vendeur** (prix catalogue 8 000 €/place) + frais d'acquisition 1 980 € → **prix de revient 67 980 €** (6 180 €/place)
 - Statut 11/09/2026 : **contre-offre du promoteur** (réponse direction via 1964.immo) — **8 emplacements maximum à 7 000 €/place, soit 56 000 € TTC, frais de notaire à notre charge** (≈ 7 248 €/place tout compris) ; ni l'option 11 places ni l'option 4 places ne sont retenues. Argument avancé : l'enjeu de la direction reste le déstockage des commerces/bureaux, les parkings n'étant que la variable d'ajustement. Validité de notre offre initiale : 25/09/2026.
 - Usage retenu : location longue durée — loyers du quartier : fourchette envisagée **54 à 65 €/mois/place** (retenu 60 €/m)
+  - **Hypothèse validée le 08/10/2026** par un relevé d'annonces à La Seyne-sur-Mer : un **box fermé de 10 m² au secteur Berthe est loué 110 €/mois** (annonce Leboncoin 3151215141, Foncia, charges 0 €/an, 26 500 € demandés). Le rapport entre un box fermé et une place nue en sous-sol est cohérent avec notre fourchette : 110 € pour un volume clos et exclusif, 55-60 € pour une place dans un parking collectif du même quartier. Réserve : le 110 € reste un produit différent du nôtre, il ne fixe pas notre loyer, il le borne par le haut.
+- Statut 08/10/2026 : **dossier clos** — offre refusée par la direction du promoteur (réponse du 08/10/2026), après la contre-offre du 11/09 à 7 000 €/place sur 8 emplacements. Rémy clôture.
+  - Ce que le dossier laisse derrière lui et qui reste réutilisable : la **norme des 100 mois de loyer** (6 000 € pour 60 €/mois sur un sous-sol neuf, soit 8,3 ans), et l'hypothèse de loyer 54-65 €/place désormais adossée à un relevé réel. À réutiliser sur tout lot de stationnement comparable.
+  - Si le promoteur revient sur le stock de parkings restant, le prix plafond de référence est **67 700 € net vendeur**, calculé sur le bas de fourchette (54 €/mois/place).
 
 ## Financement
 - Demande : **59 400 €** (90 % du prix net vendeur) sur 15 ans à 3,70 % → mensualité **447,33 €/mois** (assurance 0,34 % incluse)

@@ -123,7 +123,7 @@ def main():
 TEMPLATE = """<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8">\n<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ventes aux enchères dans le Var — relevé des résultats</title>
 <link rel="stylesheet" href="../style.css">

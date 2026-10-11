@@ -532,7 +532,7 @@ def bloc_risques():
 TEMPLATE = """<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8">\n<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Appartement T2 de 28,3 m² — Centre Vieille Ville, Brignoles (83170) — Sémaphore Patrimoine</title>
 <link rel="stylesheet" href="../../style.css">

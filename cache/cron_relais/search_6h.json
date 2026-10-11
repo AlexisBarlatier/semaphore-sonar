@@ -1,0 +1,61 @@
+[
+  {
+    "id": "1a0cd01e46ce3ef9",
+    "threadId": "1a0ccf43a2c8ebfd",
+    "from": "Google <no-reply@accounts.google.com>",
+    "to": "semaphoresonar@gmail.com",
+    "subject": "Security alert",
+    "date": "Wed, 23 Sep 2026 06:44:06 GMT",
+    "snippet": "A new sign-in on Linux semaphoresonar@gmail.com We noticed a new sign-in to your Google Account on a Linux device. If this was you, you don&#39;t need to do anything. If not, we&#39;ll help you secure",
+    "labels": [
+      "UNREAD",
+      "IMPORTANT",
+      "CATEGORY_UPDATES",
+      "INBOX"
+    ]
+  },
+  {
+    "id": "1a0ccf544c5be44b",
+    "threadId": "1a0ccf544c5be44b",
+    "from": "Google <no-reply@accounts.google.com>",
+    "to": "semaphoresonar@gmail.com",
+    "subject": "2-Step Verification turned on",
+    "date": "Wed, 23 Sep 2026 06:30:20 GMT",
+    "snippet": "2-Step Verification turned on semaphoresonar@gmail.com Your Google Account semaphoresonar@gmail.com is now protected with 2-Step Verification. When you sign in on a new or untrusted device, you&#39;ll",
+    "labels": [
+      "UNREAD",
+      "CATEGORY_UPDATES",
+      "INBOX"
+    ]
+  },
+  {
+    "id": "1a0ccf4c83124fa6",
+    "threadId": "1a0ccf43a2c8ebfd",
+    "from": "Google <no-reply@accounts.google.com>",
+    "to": "semaphoresonar@gmail.com",
+    "subject": "Security alert",
+    "date": "Wed, 23 Sep 2026 06:29:48 GMT",
+    "snippet": "Authenticator app added as sign-in step semaphoresonar@gmail.com If you didn&#39;t add the Authenticator app, someone might be using your account. Check and secure your account now. Check activity You",
+    "labels": [
+      "UNREAD",
+      "IMPORTANT",
+      "CATEGORY_UPDATES",
+      "INBOX"
+    ]
+  },
+  {
+    "id": "1a0ccf43a2c8ebfd",
+    "threadId": "1a0ccf43a2c8ebfd",
+    "from": "Google <no-reply@accounts.google.com>",
+    "to": "semaphoresonar@gmail.com",
+    "subject": "Security alert",
+    "date": "Wed, 23 Sep 2026 06:29:12 GMT",
+    "snippet": "New passkey added to your account semaphoresonar@gmail.com If you didn&#39;t add a passkey, someone might be using your account. Check and secure your account now. Check activity You can also see",
+    "labels": [
+      "UNREAD",
+      "IMPORTANT",
+      "CATEGORY_UPDATES",
+      "INBOX"
+    ]
+  }
+]
