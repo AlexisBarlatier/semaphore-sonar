@@ -88,8 +88,25 @@ def mdb_compte(prix, ca, travaux=MDB_TRAVAUX):
                 roi_an=((1 + nette / revient) ** (12.0 / MDB_MOIS) - 1) * 100)
 
 
+def mdb_prix_roi_exact(ca, cible=0.15, travaux=MDB_TRAVAUX):
+    """Prix tel que la plus-value nette d'IS égale la cible × prix de revient."""
+    lo, hi = 10000.0, 2000000.0
+    for _ in range(80):
+        mid = (lo + hi) / 2
+        if mdb_compte(mid, ca, travaux)["nette"] > cible * mdb_compte(mid, ca, travaux)["revient"]:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2
+
+
 def mdb_prix_pour(ca, cible=0.15, travaux=MDB_TRAVAUX):
-    """Prix d'achat pour un ROI cible sur la durée de portage : revient_max = 0,85 × net de revente / (1 + cible)."""
+    """Prix pour une cible de ROI net d'impôt : revient_max = 0,85 × net de revente / (1 + cible).
+
+    La formule est conservatrice : elle laisse en réalité 20 % de ROI net, notre cible
+    marchand de biens. Le prix correspondant à un ROI net strictement égal à la cible se
+    calcule par itération, avec mdb_prix_roi_exact().
+    """
     net_revente = ca * (1 - MDB_HONORAIRES)
     revient_max = 0.85 * net_revente / (1 + cible)
     portage_hors_acte = MDB_PORTAGE_TAUX * (travaux * 0.6) * (MDB_MOIS / 12)
@@ -186,12 +203,14 @@ def main():
     expl65, expl70 = (LOYER_EN_PLACE * 12 / 0.065, LOYER_EN_PLACE * 12 / 0.07)
     expl65_stab = LOYER_MARCHE * 12 / 0.065
     comptes = [mdb_compte(PRIX, ca) for ca in (ca_q1, ca_med, ca_q3)]
-    prix15 = [mdb_prix_pour(ca) for ca in (ca_q1, ca_med, ca_q3)]
+    prix15 = [mdb_prix_pour(ca) for ca in (ca_q1, ca_med, ca_q3)]      # cible 20 % net
+    prix_roi15 = mdb_prix_roi_exact(ca_med)                            # cible 15 % net exacte
     ca_carrez = ca_med * 0.92
     carrez_compte = mdb_compte(PRIX, ca_carrez)
     carrez_prix = mdb_prix_pour(ca_carrez)
     calcule("CA découpe à la médiane", ca_med, 845938.0, 500.0)
-    calcule("prix d'achat pour 15 % de ROI à la médiane", prix15[1], 404168.0, 2000.0)
+    calcule("prix d'achat pour 20 % de ROI net à la médiane", prix15[1], 404168.0, 2000.0)
+    calcule("prix d'achat pour 15 % de ROI net à la médiane", prix_roi15, 470547.0, 2000.0)
     lignes_dvf = "\n".join(
         "        <tr><td>%s</td><td class=\"num\">%s m²</td><td class=\"num\">%s à %s</td>"
         "<td class=\"num\">%s</td><td class=\"num\">%s</td></tr>"
@@ -295,7 +314,8 @@ def main():
         mdb_is=eur(comptes[1]["impot"]), mdb_nette=eur(comptes[1]["nette"]),
         mdb_roi=nfr(comptes[1]["roi"], 1), mdb_roi_an=nfr(comptes[1]["roi_an"], 1),
         mdb_roi_q1=nfr(comptes[0]["roi"], 1), mdb_roi_q3=nfr(comptes[2]["roi"], 1),
-        mdb_cible=nfr(15, 0),
+        mdb_cible=nfr(20, 0), prix_roi15=eur(prix_roi15),
+        roi_affiche=nfr(comptes[1]["roi"], 1), roi_affiche_an=nfr(comptes[1]["roi_an"], 1),
         prix15_q1=eur(prix15[0]), prix15_med=eur(prix15[1]), prix15_q3=eur(prix15[2]),
         prix15_med_carrez=eur(carrez_prix), ca_carrez=eur(ca_carrez),
         roi_carrez=nfr(carrez_compte["roi"], 1),
@@ -452,7 +472,7 @@ TEMPLATE = """<!DOCTYPE html>
 {lignes_prix15}
       </tbody>
     </table>
-    <p class="scenario-subtitle">Prix d'achat qui laisse <strong>{mdb_cible} % de ROI</strong> sur {mdb_mois} mois. À la médiane et pour {mdb_travaux} de travaux, c'est <strong>{prix15_med}</strong>, soit {prix15_med_ecart} % sous le prix affiché. Deux réserves : si les 222 m² annoncés sont des surfaces habitables et que le Carrez ressort 8 % en dessous, la revente médiane tombe à {ca_carrez}, le ROI au prix affiché à {roi_carrez} % et le prix cible à <strong>{prix15_med_carrez}</strong> ; et <strong>l'immeuble est un seul lot : la division juridique est à créer avant toute vente à la découpe</strong>, ce qui ajoute trois à six mois et un coût qui n'est ici provisionné qu'au plancher.</p>
+    <p class="scenario-subtitle">Prix d'achat qui laisse <strong>{mdb_cible} % de ROI net d'impôt</strong> sur {mdb_mois} mois : à la médiane et pour {mdb_travaux} de travaux, c'est <strong>{prix15_med}</strong>, soit {prix15_med_ecart} % sous le prix affiché. Pour un ROI net de 15 % seulement, le prix monterait à <strong>{prix_roi15}</strong> — et au prix affiché, le compte ressort à {roi_affiche} % de ROI, soit environ {roi_affiche_an} % par an : mieux qu'un placement sans risque, très loin de notre cible. Deux réserves : si les 222 m² annoncés sont des surfaces habitables et que le Carrez ressort 8 % en dessous, la revente médiane tombe à {ca_carrez}, le ROI au prix affiché à {roi_carrez} % et le prix cible à <strong>{prix15_med_carrez}</strong> ; et <strong>l'immeuble est un seul lot : la division juridique est à créer avant toute vente à la découpe</strong>, ce qui ajoute trois à six mois et un coût qui n'est ici provisionné qu'au plancher.</p>
   </section>
 
   <section class="financial-projections">
@@ -473,7 +493,7 @@ TEMPLATE = """<!DOCTYPE html>
   <section class="strategy-exploration">
     <h2>Verdict</h2>
     <p><strong>Deux lectures, et c'est la seconde qui porte le dossier.</strong> En location au prix affiché : {net_revient} % net sur le prix de revient à l'assiette réellement encaissée, cash-flow de {cf} par mois, rapport EBE / annuité de {ratio} — le bien ne tient pas, et les deux plafonds de financement ({plafond} pour la banque, {plafond_rdt} pour le rendement de 5 %) sont très loin sous la demande. <strong>En achat de parc, l'immeuble vaut {expl70} à {expl65} capitalisé sur les loyers encaissés</strong> — {expl65_stab} au plus si les quatre lots étaient loués. Le prix demandé n'est donc défendable que dans cette seconde hypothèse, et sans aucune marge pour nous.</p>
-    <p class="strategy-rationale">En marchand de biens, le constat s'inverse, mais le prix a bougé. Avec les loyers réels, la façade à {mdb_facade}, {mdb_volets} de volets, la division à créer et {mdb_mois} mois de portage, le compte d'opération au prix affiché ressort à <strong>{mdb_roi} % de ROI à la médiane</strong> des comparables. <strong>Le prix qui laisse {mdb_cible} % est désormais {prix15_med}</strong> — contre 431 000 € tant que la façade, les volets et la division n'étaient pas connus. C'est le prix de référence, et il ne remonte pas tant que le devis du maçon n'est pas remis et l'indemnité d'assurance du T1 arbitrée.<br><strong>L'exécution retenue reste le plan phasé</strong> : le T1 remis en état et reloué pour stabiliser le crédit ({cf4} par mois de trésorerie), puis une vente à chaque fin de bail, pour une sortie de trésorerie initiale de {sortie_initiale} au lieu de {sortie_totale}. Trois conditions restent ouvertes : la taxe foncière, le devis de la façade, et le rattachement de l'indemnité d'assurance — sans elle, le premier lot du phasage se paie deux fois.</p>
+    <p class="strategy-rationale">En marchand de biens, le constat s'inverse, mais le prix a bougé. Avec les loyers réels, la façade à {mdb_facade}, {mdb_volets} de volets, la division à créer et {mdb_mois} mois de portage, le compte d'opération au prix affiché ressort à <strong>{mdb_roi} % de ROI à la médiane</strong> des comparables. <strong>Le prix qui laisse {mdb_cible} % net est désormais {prix15_med}</strong> — et {prix_roi15} pour un simple 15 % net — contre 431 000 € tant que la façade, les volets et la division n'étaient pas connus. Au prix affiché, le compte ressort à {roi_affiche} % net sur {mdb_mois} mois, soit {roi_affiche_an} % par an. C'est le prix de référence, et il ne remonte pas tant que le devis du maçon n'est pas remis et l'indemnité d'assurance du T1 arbitrée.<br><strong>L'exécution retenue reste le plan phasé</strong> : le T1 remis en état et reloué pour stabiliser le crédit ({cf4} par mois de trésorerie), puis une vente à chaque fin de bail, pour une sortie de trésorerie initiale de {sortie_initiale} au lieu de {sortie_totale}. Trois conditions restent ouvertes : la taxe foncière, le devis de la façade, et le rattachement de l'indemnité d'assurance — sans elle, le premier lot du phasage se paie deux fois.</p>
   </section>
 
   <footer class="report-footer">
