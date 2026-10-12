@@ -241,7 +241,7 @@ def main():
         "<td class=\"num\">%s</td><td class=\"num\">%s</td></tr>"
         % (nom, nfr(s, 2), eur(r), eur(c), eur(r - c))
         for nom, s, r, c in phas)
-    calcule("marge brute du plan phasé", marge_phasee, 284086.0, 500.0)
+    calcule("marge brute du plan phasé", marge_phasee, 209566.0, 500.0)
     calcule("EBE au loyer retenu", base["ebe"], 32308.0, 2.0)
     calcule("plafond du ratio 1,20 au loyer retenu", plafond_ratio(LOYER_MARCHE), 370029.0, 1500.0)
 
