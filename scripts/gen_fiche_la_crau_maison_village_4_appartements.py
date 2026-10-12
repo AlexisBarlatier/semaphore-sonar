@@ -29,11 +29,12 @@ LOTS = [("T1 — RDC Sud, mezzanine et dressing (libre)", 44.19, 590.0),
         ("T3 — 1er étage, trois chambres et terrasse", 77.30, 890.0),
         ("T4 — 2e étage, trois chambres et terrasse", 81.48, 930.0)]
 SURF_REELLE = sum(l[1] for l in LOTS)
-LOYER_MARCHE = sum(l[2] for l in LOTS)
+LOYER_MARCHE = sum(l[2] for l in LOTS)          # quatre lots loués : la cible après travaux du T1
+LOYER_EN_PLACE = LOYER_MARCHE - LOTS[0][2]      # trois baux en cours, T1 vide : ce qui rentre aujourd'hui
 
 FRAIS = 0.08
 TRAVAUX = 30000.0          # provision : « quelques travaux de rafraîchissement », aucun devis
-TF = 2500.0                # provision : non communiquée
+TF = 3115.0                # avis communiqué le 12 octobre 2026 (Rémy)
 CHARGES = 1500.0           # monopropriété : aucun syndic, aucune charge de copropriété — entretien et assurance de l'immeuble
 PNO = 400.0
 VACANCE = 0.95
@@ -118,7 +119,7 @@ def eur(v, dec=0):
 
 
 def signe(v):
-    return ("%+.0f €" % v).replace("-", "\u2212").replace("+", "\u002b")
+    return ("−" if v < 0 else "+") + nfr(abs(v)) + " €"
 
 
 def exploitation(loyer):
@@ -148,17 +149,17 @@ def plafond_rendement(loyer, cible=0.05):
 
 
 def main():
-    base = exploitation(LOYER_MARCHE)
-    basses = exploitation(LOYER_MARCHE * 0.90)
-    hautes = exploitation(LOYER_MARCHE * 1.20)
+    base = exploitation(LOYER_EN_PLACE)
+    basses = exploitation(LOYER_EN_PLACE * 0.90)
+    hautes = exploitation(LOYER_MARCHE)
 
     lignes_lots = "\n".join(
         "        <tr><td>%s</td><td class=\"num\">%s m²</td><td>%s</td><td class=\"num\">%s</td>"
         "<td class=\"num\">%s</td><td>%s</td></tr>"
         % (nom, nfr(surf, 2), ann, eur(loyer), eur(loyer / surf), source)
         for nom, surf, loyer, ann, source in (
-            ("T1 — RDC Sud, mezzanine et dressing", 44.19, 590.0, "T1 ≈ 45 m²",
-             "libre, en attente des travaux couverts par l'assurance"),
+            ("T1 — RDC Sud, mezzanine et dressing", 44.19, 0.0, "T1 ≈ 45 m²",
+             "vide : sinistre, travaux couverts par l'assurance, relouage attendu à 590 €"),
             ("T2 — RDC Est", 37.96, 640.0, "T2 ≈ 38 m²",
              "loué, 16,9 €/m² : au-dessus de la fourchette relevée"),
             ("T3 — 1er étage, trois chambres", 77.30, 890.0, "T3 ≈ 80 m²",
@@ -167,9 +168,9 @@ def main():
              "loué, 11,4 €/m² : la décote des grandes surfaces"),
         ))
 
-    grille = [(LOYER_MARCHE * f, plafond_cf_nul(LOYER_MARCHE * f),
-               plafond_ratio(LOYER_MARCHE * f), plafond_rendement(LOYER_MARCHE * f))
-              for f in (0.90, 1.00, 1.10, 1.20)]
+    grille = [(LOYER_EN_PLACE * f, plafond_cf_nul(LOYER_EN_PLACE * f),
+               plafond_ratio(LOYER_EN_PLACE * f), plafond_rendement(LOYER_EN_PLACE * f))
+              for f in (0.90, 1.00, 1.12, 1.24)]
     lignes_grille = "\n".join(
         "        <tr><td>%s</td><td class=\"num\">%s</td><td class=\"num\">%s</td>"
         "<td class=\"num\">%s</td><td class=\"num\">%s</td><td class=\"num\">%s</td></tr>"
@@ -177,11 +178,13 @@ def main():
            nfr((min(ratio_p, rdt_p) / PRIX - 1) * 100, 0))
         for rev, cf_nul, ratio_p, rdt_p in grille)
 
-    calcule("loyers retenus (baux en place)", LOYER_MARCHE, 3050.0, 1.0)
+    calcule("loyers des baux en place", LOYER_EN_PLACE, 2460.0, 1.0)
+    calcule("loyers à quatre lots loués", LOYER_MARCHE, 3050.0, 1.0)
 
     # --- lecture marchand de biens ---
     ca_q1, ca_med, ca_q3 = (ca_decoupe(i) for i in (2, 3, 4))
-    expl65, expl70 = LOYER_MARCHE * 12 / 0.065, LOYER_MARCHE * 12 / 0.07
+    expl65, expl70 = (LOYER_EN_PLACE * 12 / 0.065, LOYER_EN_PLACE * 12 / 0.07)
+    expl65_stab = LOYER_MARCHE * 12 / 0.065
     comptes = [mdb_compte(PRIX, ca) for ca in (ca_q1, ca_med, ca_q3)]
     prix15 = [mdb_prix_pour(ca) for ca in (ca_q1, ca_med, ca_q3)]
     ca_carrez = ca_med * 0.92
@@ -245,8 +248,8 @@ def main():
         % (nom, nfr(s, 2), eur(r), eur(c), eur(r - c))
         for nom, s, r, c in phas)
     calcule("marge brute du plan phasé", marge_phasee, 209566.0, 500.0)
-    calcule("EBE au loyer retenu", base["ebe"], 30370.0, 2.0)
-    calcule("plafond du ratio 1,20 au loyer retenu", plafond_ratio(LOYER_MARCHE), 347833.0, 1500.0)
+    calcule("EBE au loyer en place", base["ebe"], 23029.0, 2.0)
+    calcule("plafond du ratio 1,20 au loyer en place", plafond_ratio(LOYER_EN_PLACE), 263755.0, 1500.0)
 
     html = TEMPLATE.format(
         url=URL_ANNONCE, url_iad=URL_IAD, prix=eur(PRIX), surf_annoncee=nfr(SURF_ANNONCEE, 0),
@@ -254,22 +257,24 @@ def main():
         carrez=nfr(CARREZ, 2), annexes=nfr(ANNEXES, 2),
         ecart_lots=nfr(SURF_REELLE - SURF_LOTS_ANNONCE, 0),
         pm2_reel=eur(PRIX / SURF_REELLE), loyer_marche=eur(LOYER_MARCHE),
-        loyers_an=eur(LOYER_MARCHE * 12), loyer_m2=nfr(LOYER_MARCHE / SURF_REELLE, 2),
+        loyer_en_place=eur(LOYER_EN_PLACE), loyers_an=eur(LOYER_EN_PLACE * 12),
+        loyer_m2=nfr(LOYER_EN_PLACE / (SURF_REELLE - LOTS[0][1]), 2),
+        surf_louee=nfr(SURF_REELLE - LOTS[0][1], 2),
         acte=eur(ACTE), travaux=eur(TRAVAUX), revient=eur(REVIENT), capital=eur(CAPITAL),
         mens=eur(MENSU), tf=eur(TF), charges=eur(CHARGES), pno=eur(PNO),
         frais_fixes=eur(TF + CHARGES + PNO), appar=eur(ACTE * APPORT),
         brut=nfr(base["brut"], 2), ebe=eur(base["ebe"]), net_an=eur(base["net"]),
         net_m=eur(base["net_m"]), net_revient=nfr(base["net_revient"], 2),
         net_acte=nfr(base["net_acte"], 2), cf=signe(base["cf"]), ratio=nfr(base["ratio"], 2),
-        ch_pct=nfr((TF + CHARGES + PNO) / (LOYER_MARCHE * 12) * 100, 1),
+        ch_pct=nfr((TF + CHARGES + PNO) / (LOYER_EN_PLACE * 12) * 100, 1),
         basse_net=nfr(basses["net_revient"], 2), basse_cf=signe(basses["cf"]),
         haute_net=nfr(hautes["net_revient"], 2), haute_cf=signe(hautes["cf"]),
-        plafond=eur(plafond_ratio(LOYER_MARCHE)),
-        plafond_bas=eur(plafond_ratio(LOYER_MARCHE * 0.90)),
-        plafond_haut=eur(plafond_ratio(LOYER_MARCHE * 1.20)),
-        plafond_rdt=eur(plafond_rendement(LOYER_MARCHE)),
-        plafond_ecart=nfr((1 - plafond_ratio(LOYER_MARCHE) / PRIX) * 100, 0),
-        ecart_rdt=nfr(plafond_rendement(LOYER_MARCHE) - PRIX, 0),
+        plafond=eur(plafond_ratio(LOYER_EN_PLACE)),
+        plafond_bas=eur(plafond_ratio(LOYER_EN_PLACE * 0.90)),
+        plafond_haut=eur(plafond_ratio(LOYER_MARCHE)),
+        plafond_rdt=eur(plafond_rendement(LOYER_EN_PLACE)),
+        plafond_ecart=nfr((1 - plafond_ratio(LOYER_EN_PLACE) / PRIX) * 100, 0),
+        ecart_rdt=nfr(plafond_rendement(LOYER_EN_PLACE) - PRIX, 0),
         lignes_lots=lignes_lots, lignes_grille=lignes_grille,
         lignes_dvf=lignes_dvf, lignes_mdb=lignes_mdb, lignes_prix15=lignes_prix15,
         lignes_phase=lignes_phase,
@@ -282,7 +287,7 @@ def main():
         loyer_vacant=eur(LOTS[0][2]), loyers3=eur(LOYER_MARCHE - LOTS[0][2]),
         ca_q1=eur(ca_q1), ca_med=eur(ca_med), ca_q3=eur(ca_q3),
         ca_med_m2=nfr(ca_med / SURF_REELLE, 0),
-        expl65=eur(expl65), expl70=eur(expl70),
+        expl65=eur(expl65), expl70=eur(expl70), expl65_stab=eur(expl65_stab),
         mdb_travaux=eur(MDB_TRAVAUX), mdb_travaux_m2=nfr(MDB_TRAVAUX / SURF_REELLE, 0),
         mdb_facade=eur(MDB_FACADE), mdb_volets=eur(MDB_VOLETS),
         mdb_edd=eur(MDB_EDD), mdb_mois=MDB_MOIS, mdb_portage=eur(comptes[1]["portage"]),
@@ -335,7 +340,7 @@ TEMPLATE = """<!DOCTYPE html>
     <p class="report-breadcrumb">Analyse — Sémaphore Patrimoine</p>
     <h1>La Crau — maison de village, {n_lots} appartements indépendants</h1>
     <p class="report-address">La Crau (83260), quartier Centre Ville Sud · {surf_annoncee} m² annoncés, {surf} m² sur les quatre lots · 3 des 4 logements loués · bâti de 1930 · DPE D</p>
-    <p class="report-source">Sources : <a href="{url}">l'annonce Logic-Immo, réf. 26V49XQZ4PZT</a> (iad France, Brice Lacordaire, réf. 2131728) et <a href="{url_iad}">la fiche iad du même bien</a>, complétées le 12 octobre 2026 par le dossier envoyé par l'agence — plans des quatre lots et diagnostics techniques. <strong>L'agence a répondu le 12 octobre 2026</strong> : loyers en place des trois baux (3 050 €/mois au total), immeuble en <strong>un seul lot</strong> sans division juridique, compteurs d'eau et d'électricité individuels, T1 libre en attente de travaux couverts par l'assurance, façade à reprendre pour environ 14 000 € plus les volets. La taxe foncière reste inconnue.</p>
+    <p class="report-source">Sources : <a href="{url}">l'annonce Logic-Immo, réf. 26V49XQZ4PZT</a> (iad France, Brice Lacordaire, réf. 2131728) et <a href="{url_iad}">la fiche iad du même bien</a>, complétées le 12 octobre 2026 par le dossier envoyé par l'agence — plans des quatre lots et diagnostics techniques. <strong>L'agence a répondu le 12 octobre 2026</strong> : loyers en place des trois baux (3 050 €/mois au total), immeuble en <strong>un seul lot</strong> sans division juridique, compteurs d'eau et d'électricité individuels, T1 libre en attente de travaux couverts par l'assurance, façade à reprendre pour environ 14 000 € plus les volets. La <strong>taxe foncière est connue : 3 115 €</strong> pour 2026, contre 2 500 € provisionnés. L'état des risques du 14 avenue de la Libération, lui, n'a jamais été transmis : celui du dossier porte sur une autre maison, au 745 chemin de Peiracous à Forcalqueiret.</p>
   </header>
 
   <section class="strategy-exploration">
@@ -370,7 +375,7 @@ TEMPLATE = """<!DOCTYPE html>
 {lignes_lots}
       </tbody>
     </table>
-    <p class="scenario-subtitle">Total en place : <strong>{loyer_marche} par mois</strong>, soit {loyers_an} par an et <strong>{loyer_m2} au m² des {surf} m² louables</strong>. Ce sont les loyers des baux en cours, communiqués par l'agence le 12 octobre 2026 : la fiche ne chiffre plus sur des estimations de marché. Les deux grandes surfaces sortent à 11,4 et 11,5 €/m² contre 16,9 €/m² pour le T2 — la décote des grandes surfaces, ordinaire sur le bourg, et une marge de relouage à la rotation plutôt qu'un loyer à corriger.</p>
+    <p class="scenario-subtitle"><strong>Ce qui rentre aujourd'hui : {loyer_en_place} par mois, soit {loyers_an} par an et {loyer_m2} au m² des {surf_louee} m² loués</strong> — les trois baux en cours, communiqués par l'agence le 12 octobre 2026. Le T1 ne produit rien : il est vide depuis un sinistre, et sa remise en état par l'assurance n'est pas datée. Remis en état et reloué à 590 €, l'immeuble encaisserait {loyer_marche} par mois : <strong>c'est une cible, pas un revenu.</strong></p>
   </section>
 
   <section class="financial-projections">
@@ -398,14 +403,14 @@ TEMPLATE = """<!DOCTYPE html>
 {lignes_grille}
       </tbody>
     </table>
-    <p class="scenario-subtitle">À l'assiette de marché ({loyer_marche} par mois), le plafond du prêteur ressort à <strong>{plafond}</strong> — <strong>{plafond_ecart} % sous le prix affiché</strong> — tandis que le rendement de 5 % ne serait atteint qu'à <strong>{plafond_rdt}</strong>, soit {ecart_rdt} sous la demande. Les deux ancres sont donc sous le prix : ce n'est pas le loyer qui bloque, c'est le prix.</p>
-    <p class="scenario-subtitle">Sensibilité : à 10 % de loyers en moins, le plafond du prêteur tombe à {plafond_bas} ; à 20 % de loyers en plus, il monte à {plafond_haut} — <strong>toujours sous les {prix} demandés</strong>. Aucune hypothèse de loyer plausible dans ce bourg ne fait passer le prix affiché.</p>
+    <p class="scenario-subtitle">À l'assiette réellement encaissée ({loyer_en_place} par mois), le plafond du prêteur ressort à <strong>{plafond}</strong> — <strong>{plafond_ecart} % sous le prix affiché</strong> — tandis que le rendement de 5 % ne serait atteint qu'à <strong>{plafond_rdt}</strong>, soit {ecart_rdt} sous la demande. Les deux ancres sont donc sous le prix : ce n'est pas le loyer qui bloque, c'est le prix.</p>
+    <p class="scenario-subtitle">Sensibilité : à 10 % de loyers en moins, le plafond du prêteur tombe à {plafond_bas} ; au T1 reloué à 590 € — l'hypothèse la plus favorable, celle des quatre lots loués — il monte à {plafond_haut} — <strong>toujours sous les {prix} demandés</strong>. Aucune hypothèse de loyer plausible dans ce bourg ne fait passer le prix affiché.</p>
   </section>
 
   <section class="strategy-exploration">
     <h2>Ce qui décide, et ce qui inquiète</h2>
     <ul>
-      <li><strong>Les loyers sont désormais connus — 3 050 €/mois, baux en place.</strong> Ils sortent 5 % sous notre estimation de marché, et c'est la seule bonne nouvelle du dernier échange : plus rien ne repose sur une hypothèse de loyer. Ce qui reste inconnu a changé de nature : c'est la taxe foncière, et surtout <strong>la division, qui n'existe pas</strong>.</li>
+      <li><strong>Ce qui rentre, c'est 2 460 €/mois, pas 3 050.</strong> Le T1 est vide depuis un sinistre et ne produit rien : seuls les trois baux payent, sur une assiette 20 % plus basse que celle du potentiel. Chaque mois de vacance du T1 coûte environ 560 € de trésorerie au propriétaire — c'est précisément ce que l'assurance indemnise aujourd'hui, et l'indemnité s'arrête à la vente. Dater la remise en état est la première chose à faire écrire.</li>
       <li><strong>Le T1 est libre à cause d'un sinistre, et les travaux sont couverts par l'assurance.</strong> C'est le lot qu'on referait en premier dans le plan phasé, et une partie de la dépense est déjà prise en charge. Deux points à faire écrire : <strong>qui réalise les travaux, dans quel délai</strong>, et <strong>à qui revient l'indemnité si la vente intervient avant qu'ils soient faits</strong> — sur un achat-revente, elle doit nous être transférée ou déduite du prix.</li>
       <li><strong>La mairie financerait une partie de la façade.</strong> L'agence l'annonce sans montant ni accord : « après dépôt de dossier, la mairie finance une partie ». C'est un gain non chiffré, à ne pas inscrire au compte d'opération avant d'avoir la délibération, mais qui peut absorber une partie des {mdb_facade}.</li>
       <li><strong>Le vendeur est une SCI, pas un particulier.</strong> SCI COPA DE ROSA, propriétaire du 14 avenue de la Libération. Une cession de parts éviterait les droits de mutation — de l'ordre de 7 à 8 % du prix, soit 30 à 40 000 € à ce niveau — mais elle suppose d'auditer les comptes et les dettes de la société. C'est la seule piste qui puisse améliorer le prix sans toucher au vendeur.</li>
@@ -428,7 +433,7 @@ TEMPLATE = """<!DOCTYPE html>
       </tbody>
     </table>
     <p class="scenario-subtitle">Revendus à la découpe, les quatre lots représentent <strong>{ca_q1} au premier quartile, {ca_med} à la médiane et {ca_q3} au troisième quartile</strong>, soit {ca_med_m2} €/m² à la médiane. Le prix affiché ressort à <strong>{pm2_reel}</strong> : très en dessous du marché de la revente.</p>
-    <p class="strategy-rationale">Mais la comparaison qui compte est ailleurs. <strong>En bloc, pour un investisseur locatif, le bien vaut ce que rapporte son exploitation</strong> — {loyers_an} par an capitalisés à 6,5 à 7 %, soit entre {expl70} et {expl65}. <strong>Le prix demandé se situe exactement à ce niveau.</strong> Il n'y a donc aucune marge en achat-revente en bloc : la marge entière est dans l'exécution de la découpe, et c'est une opération de marchand de biens, pas un achat de parc.</p>
+    <p class="strategy-rationale">Mais la comparaison qui compte est ailleurs. <strong>En bloc, pour un investisseur locatif, le bien vaut ce que rapporte son exploitation</strong> — {loyers_an} par an encaissés capitalisés à 6,5 à 7 %, soit entre {expl70} et {expl65}. <strong>Le prix demandé est au-dessus</strong> : il faudrait les quatre lots loués, T1 compris, pour approcher {expl65_stab}. Il n'y a donc aucune marge en achat-revente en bloc, et même une perte : la marge entière est dans l'exécution de la découpe, et c'est une opération de marchand de biens, pas un achat de parc.</p>
   </section>
 
   <section class="financial-projections">
@@ -467,7 +472,7 @@ TEMPLATE = """<!DOCTYPE html>
 
   <section class="strategy-exploration">
     <h2>Verdict</h2>
-    <p><strong>Deux lectures, et c'est la seconde qui porte le dossier.</strong> En location au prix affiché : {net_revient} % net sur le prix de revient au loyer réel, cash-flow de {cf} par mois, rapport EBE / annuité de {ratio} — le bien ne tient pas, et les deux plafonds de financement ({plafond} pour la banque, {plafond_rdt} pour le rendement de 5 %) restent loin sous la demande. <strong>En achat de parc, ce dossier est au point mort</strong> : l'exploitation vaut {expl70} à {expl65} capitalisée en bloc, à comparer aux {prix} demandés.</p>
+    <p><strong>Deux lectures, et c'est la seconde qui porte le dossier.</strong> En location au prix affiché : {net_revient} % net sur le prix de revient à l'assiette réellement encaissée, cash-flow de {cf} par mois, rapport EBE / annuité de {ratio} — le bien ne tient pas, et les deux plafonds de financement ({plafond} pour la banque, {plafond_rdt} pour le rendement de 5 %) sont très loin sous la demande. <strong>En achat de parc, l'immeuble vaut {expl70} à {expl65} capitalisé sur les loyers encaissés</strong> — {expl65_stab} au plus si les quatre lots étaient loués. Le prix demandé n'est donc défendable que dans cette seconde hypothèse, et sans aucune marge pour nous.</p>
     <p class="strategy-rationale">En marchand de biens, le constat s'inverse, mais le prix a bougé. Avec les loyers réels, la façade à {mdb_facade}, {mdb_volets} de volets, la division à créer et {mdb_mois} mois de portage, le compte d'opération au prix affiché ressort à <strong>{mdb_roi} % de ROI à la médiane</strong> des comparables. <strong>Le prix qui laisse {mdb_cible} % est désormais {prix15_med}</strong> — contre 431 000 € tant que la façade, les volets et la division n'étaient pas connus. C'est le prix de référence, et il ne remonte pas tant que le devis du maçon n'est pas remis et l'indemnité d'assurance du T1 arbitrée.<br><strong>L'exécution retenue reste le plan phasé</strong> : le T1 remis en état et reloué pour stabiliser le crédit ({cf4} par mois de trésorerie), puis une vente à chaque fin de bail, pour une sortie de trésorerie initiale de {sortie_initiale} au lieu de {sortie_totale}. Trois conditions restent ouvertes : la taxe foncière, le devis de la façade, et le rattachement de l'indemnité d'assurance — sans elle, le premier lot du phasage se paie deux fois.</p>
   </section>
 
