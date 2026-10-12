@@ -100,6 +100,18 @@ def mdb_prix_roi_exact(ca, cible=0.15, travaux=MDB_TRAVAUX):
     return (lo + hi) / 2
 
 
+def mdb_point_mort(prix=PRIX, ca=845938.0):
+    """Niveau de travaux au-delà duquel l'opération perd de l'argent au prix affiché."""
+    lo, hi = 0.0, 600000.0
+    for _ in range(80):
+        mid = (lo + hi) / 2
+        if mdb_compte(prix, ca, mid)["nette"] > 0:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2
+
+
 def mdb_prix_pour(ca, cible=0.15, travaux=MDB_TRAVAUX):
     """Prix pour une cible de ROI net d'impôt : revient_max = 0,85 × net de revente / (1 + cible).
 
@@ -203,13 +215,15 @@ def main():
     expl65, expl70 = (LOYER_EN_PLACE * 12 / 0.065, LOYER_EN_PLACE * 12 / 0.07)
     expl65_stab = LOYER_MARCHE * 12 / 0.065
     comptes = [mdb_compte(PRIX, ca) for ca in (ca_q1, ca_med, ca_q3)]
-    prix15 = [mdb_prix_pour(ca) for ca in (ca_q1, ca_med, ca_q3)]      # cible 20 % net
+    prix15 = [mdb_prix_roi_exact(ca, 0.20) for ca in (ca_q1, ca_med, ca_q3)]   # cible 20 % net
     prix_roi15 = mdb_prix_roi_exact(ca_med)                            # cible 15 % net exacte
+    point_mort = mdb_point_mort(PRIX, ca_med)
+    calcule("point mort travaux au prix affiché", point_mort, 200191.0, 1500.0)
     ca_carrez = ca_med * 0.92
     carrez_compte = mdb_compte(PRIX, ca_carrez)
-    carrez_prix = mdb_prix_pour(ca_carrez)
+    carrez_prix = mdb_prix_roi_exact(ca_carrez, 0.20)
     calcule("CA découpe à la médiane", ca_med, 845938.0, 500.0)
-    calcule("prix d'achat pour 20 % de ROI net à la médiane", prix15[1], 404168.0, 2000.0)
+    calcule("prix d'achat pour 20 % de ROI net à la médiane", prix15[1], 440228.0, 2000.0)
     calcule("prix d'achat pour 15 % de ROI net à la médiane", prix_roi15, 470547.0, 2000.0)
     lignes_dvf = "\n".join(
         "        <tr><td>%s</td><td class=\"num\">%s m²</td><td class=\"num\">%s à %s</td>"
@@ -244,8 +258,9 @@ def main():
     lignes_prix15 = "\n".join(
         "        <tr><td>%s</td><td class=\"num\">%s</td><td class=\"num\">%s</td>"
         "<td class=\"num\">%s</td><td class=\"num\">%s</td></tr>"
-        % (lab, eur(ca), eur(mdb_prix_pour(ca, travaux=40000.0)),
-           eur(mdb_prix_pour(ca, travaux=MDB_TRAVAUX)), eur(mdb_prix_pour(ca, travaux=133000.0)))
+        % (lab, eur(ca), eur(mdb_prix_roi_exact(ca, 0.20, travaux=40000.0)),
+           eur(mdb_prix_roi_exact(ca, 0.20, travaux=MDB_TRAVAUX)),
+           eur(mdb_prix_roi_exact(ca, 0.20, travaux=133000.0)))
         for lab, ca in (("Revente au Q1 des comparables", ca_q1),
                         ("Revente à la médiane", ca_med),
                         ("Revente au Q3", ca_q3)))
@@ -316,6 +331,7 @@ def main():
         mdb_roi_q1=nfr(comptes[0]["roi"], 1), mdb_roi_q3=nfr(comptes[2]["roi"], 1),
         mdb_cible=nfr(20, 0), prix_roi15=eur(prix_roi15),
         roi_affiche=nfr(comptes[1]["roi"], 1), roi_affiche_an=nfr(comptes[1]["roi_an"], 1),
+        point_mort=eur(point_mort), point_mort_m2=nfr(point_mort / SURF_REELLE, 0),
         prix15_q1=eur(prix15[0]), prix15_med=eur(prix15[1]), prix15_q3=eur(prix15[2]),
         prix15_med_carrez=eur(carrez_prix), ca_carrez=eur(ca_carrez),
         roi_carrez=nfr(carrez_compte["roi"], 1),
@@ -472,7 +488,7 @@ TEMPLATE = """<!DOCTYPE html>
 {lignes_prix15}
       </tbody>
     </table>
-    <p class="scenario-subtitle">Prix d'achat qui laisse <strong>{mdb_cible} % de ROI net d'impôt</strong> sur {mdb_mois} mois : à la médiane et pour {mdb_travaux} de travaux, c'est <strong>{prix15_med}</strong>, soit {prix15_med_ecart} % sous le prix affiché. Pour un ROI net de 15 % seulement, le prix monterait à <strong>{prix_roi15}</strong> — et au prix affiché, le compte ressort à {roi_affiche} % de ROI, soit environ {roi_affiche_an} % par an : mieux qu'un placement sans risque, très loin de notre cible. Deux réserves : si les 222 m² annoncés sont des surfaces habitables et que le Carrez ressort 8 % en dessous, la revente médiane tombe à {ca_carrez}, le ROI au prix affiché à {roi_carrez} % et le prix cible à <strong>{prix15_med_carrez}</strong> ; et <strong>l'immeuble est un seul lot : la division juridique est à créer avant toute vente à la découpe</strong>, ce qui ajoute trois à six mois et un coût qui n'est ici provisionné qu'au plancher.</p>
+    <p class="scenario-subtitle">Prix d'achat qui laisse <strong>{mdb_cible} % de ROI net d'impôt</strong> sur {mdb_mois} mois : à la médiane et pour {mdb_travaux} de travaux, c'est <strong>{prix15_med}</strong>, soit {prix15_med_ecart} % sous le prix affiché. Pour un ROI net de 15 % seulement, le prix monterait à <strong>{prix_roi15}</strong> — et au prix affiché, le compte ressort à {roi_affiche} % de ROI, soit environ {roi_affiche_an} % par an : mieux qu'un placement sans risque, très loin de notre cible. <strong>Et le point mort : au prix affiché, l'opération tombe à zéro à {point_mort} de travaux, soit {point_mort_m2} €/m².</strong> Au-delà, elle perd de l'argent, quel que soit le prix de revente observé en 2024-2025. Deux réserves : si les 222 m² annoncés sont des surfaces habitables et que le Carrez ressort 8 % en dessous, la revente médiane tombe à {ca_carrez}, le ROI au prix affiché à {roi_carrez} % et le prix cible à <strong>{prix15_med_carrez}</strong> ; et <strong>l'immeuble est un seul lot : la division juridique est à créer avant toute vente à la découpe</strong>, ce qui ajoute trois à six mois et un coût qui n'est ici provisionné qu'au plancher.</p>
   </section>
 
   <section class="financial-projections">
