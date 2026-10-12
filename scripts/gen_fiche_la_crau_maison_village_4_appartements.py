@@ -225,6 +225,23 @@ def main():
                         ("Revente à la médiane", ca_med),
                         ("Revente au Q3", ca_q3)))
     calcule("surface Carrez des quatre lots", SURF_REELLE, 240.93, 0.05)
+    # --- plan phasé : un lot à la fois, au rythme des baux ---
+    acq_m2 = PRIX * (1 + FRAIS) / SURF_REELLE
+    phas = [(l[0], l[1], l[1] * d[3], l[1] * (acq_m2 + VA_TRAVAUX_M2)) for l, d in zip(LOTS, DVF)]
+    marge_phasee = sum(r - c for _, _, r, c in phas)
+    revient_phase = PRIX * (1 + FRAIS) + SURF_REELLE * VA_TRAVAUX_M2 + MDB_EDD
+    ca_net_phase = ca_med * (1 - MDB_HONORAIRES)
+    sortie_initiale = PRIX * (1 + FRAIS) * APPORT + LOTS[0][1] * VA_TRAVAUX_M2 + MDB_EDD
+    sortie_totale = PRIX * (1 + FRAIS) * APPORT + SURF_REELLE * VA_TRAVAUX_M2 + MDB_EDD
+    mens_phase = PRIX * (1 + FRAIS) * (1 - APPORT) * COEF20
+    ebe3 = ((LOYER_MARCHE - LOTS[0][2]) * 12 * VACANCE - TF - CHARGES - PNO) / 12
+    ebe4 = (LOYER_MARCHE * 12 * VACANCE - TF - CHARGES - PNO) / 12
+    lignes_phase = "\n".join(
+        "        <tr><td>%s</td><td class=\"num\">%s m²</td><td class=\"num\">%s</td>"
+        "<td class=\"num\">%s</td><td class=\"num\">%s</td></tr>"
+        % (nom, nfr(s, 2), eur(r), eur(c), eur(r - c))
+        for nom, s, r, c in phas)
+    calcule("marge brute du plan phasé", marge_phasee, 284086.0, 500.0)
     calcule("EBE au loyer retenu", base["ebe"], 32308.0, 2.0)
     calcule("plafond du ratio 1,20 au loyer retenu", plafond_ratio(LOYER_MARCHE), 370029.0, 1500.0)
 
@@ -252,6 +269,14 @@ def main():
         ecart_rdt=nfr(plafond_rendement(LOYER_MARCHE) - PRIX, 0),
         lignes_lots=lignes_lots, lignes_grille=lignes_grille,
         lignes_dvf=lignes_dvf, lignes_mdb=lignes_mdb, lignes_prix15=lignes_prix15,
+        lignes_phase=lignes_phase,
+        marge_phasee=eur(marge_phasee), revient_phase=eur(revient_phase),
+        ca_net_phase=eur(ca_net_phase), sortie_initiale=eur(sortie_initiale),
+        sortie_totale=eur(sortie_totale), mens_phase=eur(mens_phase),
+        ebe3=eur(ebe3), ebe4=eur(ebe4), cf3=signe(ebe3 - mens_phase), cf4=signe(ebe4 - mens_phase),
+        marge_phasee_pct=nfr(marge_phasee / revient_phase * 100, 0),
+        acq_m2=eur(acq_m2), va_m2=eur(VA_TRAVAUX_M2),
+        loyer_vacant=eur(LOTS[0][2]), loyers3=eur(LOYER_MARCHE - LOTS[0][2]),
         ca_q1=eur(ca_q1), ca_med=eur(ca_med), ca_q3=eur(ca_q3),
         ca_med_m2=nfr(ca_med / SURF_REELLE, 0),
         expl65=eur(expl65), expl70=eur(expl70),
@@ -418,10 +443,24 @@ TEMPLATE = """<!DOCTYPE html>
     <p class="scenario-subtitle">Prix d'achat qui laisse <strong>{mdb_cible} % de ROI</strong> sur {mdb_mois} mois. À la médiane et pour {mdb_travaux} de travaux, c'est <strong>{prix15_med}</strong>, soit {prix15_med_ecart} % sous le prix affiché. Deux réserves : si les 222 m² annoncés sont des surfaces habitables et que le Carrez ressort 8 % en dessous, la revente médiane tombe à {ca_carrez}, le ROI au prix affiché à {roi_carrez} % et le prix cible à <strong>{prix15_med_carrez}</strong> ; et trois des quatre lots sont loués, donc la découpe suppose des congés pour vendre, avec les délais que cela impose.</p>
   </section>
 
+  <section class="financial-projections">
+    <h2>Lecture 4 — le plan phasé, un lot à la fois</h2>
+    <p class="attractiveness-intro">Trois des quatre logements sont loués : on ne peut de toute façon pas livrer des lots libres sans congé pour vendre — préavis de six mois, à l'échéance du bail. <strong>Le phasage n'est donc pas un confort, c'est la seule exécution possible</strong> — et c'est aussi la plus rentable, parce qu'on ne mobilise pas l'enveloppe de travaux d'un coup et que les loyers continuent de payer le crédit pendant l'opération.</p>
+    <table class="projection-table">
+      <thead><tr><th>Lot</th><th>Surface Carrez</th><th>Revente à la médiane</th><th>Coût acquisition + travaux</th><th>Marge brute</th></tr></thead>
+      <tbody>
+{lignes_phase}
+      </tbody>
+    </table>
+    <p class="scenario-subtitle">Coût de revient par lot : {acq_m2} d'acquisition frais compris, plus {va_m2} de remise en état. <strong>Marge brute de l'opération phasée : {marge_phasee}</strong>, soit {marge_phasee_pct} % du prix de revient — avant portage, intérêts et impôt, mais aussi avant les loyers encaissés pendant l'opération.</p>
+    <p class="strategy-rationale"><strong>Ce que le phasage change, c'est la trésorerie.</strong> Sortie au démarrage : apport plus les travaux du premier lot et la division, soit <strong>{sortie_initiale}</strong> — au lieu de <strong>{sortie_totale}</strong> si les quatre lots étaient refaits d'un coup. Le reste s'autofinance par les ventes successives.</p>
+    <p class="scenario-subtitle"><strong>Le point de vigilance est la période de vacance.</strong> Tant que le lot libre ne produit rien, l'immeuble tourne en déficit : {loyers3} de loyers pour {mens_phase} de mensualité, soit {cf3} par mois. Les quatre lots loués ramènent la trésorerie à {cf4}. <strong>La première étape n'est donc pas de vendre le lot libre, mais de le remettre en état et de le louer</strong> — il stabilise le crédit, et les ventes se font ensuite au rythme des départs.</p>
+  </section>
+
   <section class="strategy-exploration">
     <h2>Verdict</h2>
     <p><strong>Deux lectures, et c'est la seconde qui porte le dossier.</strong> En location au prix affiché : {net_revient} % net sur le prix de revient, cash-flow de {cf} par mois, rapport EBE / annuité de {ratio} — le bien ne tient pas, et les deux plafonds de financement ({plafond} pour la banque, {plafond_rdt} pour le rendement) sont sous la demande.</p>
-    <p class="strategy-rationale">En marchand de biens, le constat s'inverse : les ventes réelles du bourg valorisent les quatre lots entre {ca_q1} et {ca_q3} revendus à la découpe, quand le prix demandé correspond à la valeur d'exploitation en bloc. Au prix affiché et avec {mdb_travaux} de travaux, l'opération ressort à <strong>{mdb_roi} % de ROI sur {mdb_mois} mois</strong> à la médiane des comparables ({mdb_roi_an} % en rythme annuel) — tout juste notre cible de {mdb_cible} %. Le prix qui la laisse entièrement est <strong>{prix15_med}</strong>. Deux conditions restent non levées : le chiffrage réel des travaux — amiante et électricité à traiter — et la sortie des trois baux, qui commande le calendrier de la découpe.</p>
+    <p class="strategy-rationale">En marchand de biens, le constat s'inverse : les ventes réelles du bourg valorisent les quatre lots entre {ca_q1} et {ca_q3} revendus à la découpe, quand le prix demandé correspond à la valeur d'exploitation en bloc. Au prix affiché et avec {mdb_travaux} de travaux, l'opération ressort à <strong>{mdb_roi} % de ROI sur {mdb_mois} mois</strong> à la médiane des comparables ({mdb_roi_an} % en rythme annuel) — tout juste notre cible de {mdb_cible} %. Le prix qui la laisse entièrement est <strong>{prix15_med}</strong>, et <strong>l'exécution retenue est le plan phasé</strong> — le lot libre remis en état et reloué d'abord pour stabiliser le crédit ({cf4} par mois de trésorerie), puis une vente à chaque fin de bail, avec une sortie de trésorerie initiale de {sortie_initiale} au lieu de {sortie_totale}. Deux conditions restent non levées : le chiffrage réel des travaux — amiante et électricité à traiter — et la sortie des trois baux, qui commande le calendrier de la découpe.</p>
   </section>
 
   <footer class="report-footer">
