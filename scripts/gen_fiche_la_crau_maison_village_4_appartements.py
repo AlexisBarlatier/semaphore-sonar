@@ -33,7 +33,7 @@ LOYER_MARCHE = sum(l[2] for l in LOTS)
 FRAIS = 0.08
 TRAVAUX = 30000.0          # provision : « quelques travaux de rafraîchissement », aucun devis
 TF = 2500.0                # provision : non communiquée
-CHARGES = 1500.0           # provision : structure juridique non précisée (monopropriété ou copro)
+CHARGES = 1500.0           # monopropriété : aucun syndic, aucune charge de copropriété — entretien et assurance de l'immeuble
 PNO = 400.0
 VACANCE = 0.95
 IS = 0.15                  # convention prudente : IS sur l'EBE, intérêts non déduits
@@ -336,7 +336,7 @@ TEMPLATE = """<!DOCTYPE html>
 
   <section class="strategy-exploration">
     <h2>Le bien</h2>
-    <p>Maison de village sur deux étages, découpée en <strong>{n_lots} appartements indépendants</strong>, chacun avec son entrée : un T2 au rez-de-chaussée sud avec mezzanine et dressing, un T2 au rez-de-chaussée est, et deux T4 de trois chambres aux 1er et 2e étages, chacun avec sa terrasse. Deux caves, cage d'escalier commune : <strong>{annexes} m² hors Carrez</strong> au total.</p>
+    <p>Maison de village sur deux étages, découpée en <strong>{n_lots} appartements indépendants</strong>, chacun avec son entrée : un T2 au rez-de-chaussée sud avec mezzanine et dressing, un T2 au rez-de-chaussée est, et deux T4 de trois chambres aux 1er et 2e étages, chacun avec sa terrasse. Deux caves, cage d'escalier commune : <strong>{annexes} m² hors Carrez</strong> au total. <strong>Immeuble en monopropriété</strong> — aucun syndic, aucune charge de copropriété : l'entretien de la maison est entièrement à notre charge, et il n'existe aucun fonds travaux mutualisé. C'est un poste à provisionner, pas une économie.</p>
     <p class="projection-note"><strong>Le certificat de superficie du 27 janvier 2022 donne {carrez} m² Carrez</strong>, détaillés pièce par pièce — exactement la surface globale annoncée, mais <strong>{ecart_lots} m² de plus que la somme des surfaces « environ » de l'annonce, qui minore chaque lot</strong>. Le tableau ci-dessous confronte les deux. DPE de 2022, bâti de 1930, chauffage électrique, facture théorique de 3 335 à 4 513 €/an ; état déclaré « rénovation nécessaire », sans devis.</p>
   </section>
 
@@ -348,7 +348,7 @@ TEMPLATE = """<!DOCTYPE html>
       <li><strong>Électricité : anomalies relevées.</strong> Le rapport de 2022 relève des anomalies au titre de la sécurité des personnes, dont l'absence de protection adaptée par les dispositifs différentiels et des observations sur les socles de prises. À intégrer au budget de remise en état.</li>
       <li><strong>Termites.</strong> Le bourg est en zone délimitée par arrêté préfectoral ; les parties visitées ne montrent pas d'indice, mais des éléments restent inaccessibles (plénum, poutres anciennes conservées).</li>
       <li><strong>Diagnostics du mauvais immeuble.</strong> L'agence a joint un second dossier, référence 598, daté de mars 2016 : il porte sur une maison au 745 chemin du Peiracous à Forcalqueiret, propriété d'un tiers. C'est l'adresse du vendeur, pas celle du bien — à écarter, mais cela dit le sérieux du dossier transmis.</li>
-      <li><strong>Ce qui manque toujours.</strong> Les trois baux et leurs loyers, l'avis de taxe foncière, les charges de copropriété, le chiffrage des travaux, l'état descriptif de division et l'état des risques. Rien de tout cela n'est arrivé.</li>
+      <li><strong>Ce qui manque toujours.</strong> Les trois baux et leurs loyers, l'avis de taxe foncière, le chiffrage des travaux, l'état des risques — et la réponse à la question qui commande tout le reste : <strong>la division en quatre est-elle juridique, ou seulement physique ?</strong> Un état descriptif de division et un règlement de copropriété se créent avant de vendre lot par lot, et cela prend trois à six mois. Deux autres points à obtenir dans le même envoi : les compteurs d'électricité et d'eau sont-ils individuels par logement, et la taxe foncière porte-t-elle sur un seul avis pour l'immeuble entier.</li>
     </ul>
   </section>
 
@@ -446,6 +446,7 @@ TEMPLATE = """<!DOCTYPE html>
   <section class="financial-projections">
     <h2>Lecture 4 — le plan phasé, un lot à la fois</h2>
     <p class="attractiveness-intro">Trois des quatre logements sont loués : on ne peut de toute façon pas livrer des lots libres sans congé pour vendre — préavis de six mois, à l'échéance du bail. <strong>Le phasage n'est donc pas un confort, c'est la seule exécution possible</strong> — et c'est aussi la plus rentable, parce qu'on ne mobilise pas l'enveloppe de travaux d'un coup et que les loyers continuent de payer le crédit pendant l'opération.</p>
+    <p class="scenario-subtitle"><strong>Le préalable est la division.</strong> Si les quatre logements ne sont séparés que physiquement, il faut d'abord créer l'état descriptif de division et le règlement de copropriété — trois à six mois, et un coût retenu ici au plancher de {mdb_edd} : une division à instruire de zéro coûte plutôt 8 000 à 15 000 €. Chaque millier d'euros au-dessus se déduit du prix d'achat au même montant. Et tant que la copropriété n'existe pas, on ne peut vendre que l'immeuble entier — c'est-à-dire au prix d'exploitation, pas à celui de la découpe.</p>
     <table class="projection-table">
       <thead><tr><th>Lot</th><th>Surface Carrez</th><th>Revente à la médiane</th><th>Coût acquisition + travaux</th><th>Marge brute</th></tr></thead>
       <tbody>
