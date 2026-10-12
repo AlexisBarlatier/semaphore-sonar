@@ -16,10 +16,17 @@ SORTIE = os.path.join(RACINE, "analyses", "2026-10-12-la-crau-maison-village-4-a
                       "index.html")
 URL_ANNONCE = ("https://www.logic-immo.com/detail-annonce/vente/provence-alpes-cote-d-azur/"
                "var-83/la-crau-83260/26V49XQZ4PZT")
+URL_IAD = "https://www.iadfrance.fr/annonce/immeuble-vente-la-crau-240m2/r2131728"
 
 PRIX = 500000.0
-SURF_ANNONCEE = 240.0
-LOTS = [("T1", 40.0, 620.0), ("T2", 38.0, 640.0), ("T3", 67.0, 800.0), ("T4", 77.0, 950.0)]
+SURF_ANNONCEE = 240.0          # surface globale annoncée
+SURF_LOTS_ANNONCE = 222.0      # somme des surfaces « environ » de l'annonce, lot par lot
+CARREZ = 240.94                # certificat de superficie NOSTIKA, 27 janvier 2022
+ANNEXES = 53.16                # deux caves, deux terrasses et cage d'escalier, hors Carrez
+LOTS = [("T2 — RDC Sud, mezzanine et dressing", 44.19, 650.0),
+        ("T2 — RDC Est", 37.96, 640.0),
+        ("T4 — 1er étage, trois chambres et terrasse", 77.30, 950.0),
+        ("T4 — 2e étage, trois chambres et terrasse", 81.48, 980.0)]
 SURF_REELLE = sum(l[1] for l in LOTS)
 LOYER_MARCHE = sum(l[2] for l in LOTS)
 
@@ -37,10 +44,10 @@ APPORT = 0.10
 # Quartiles des ventes d'APPARTEMENTS à La Crau (INSEE 83047) : extraction
 # geo-DVF du 12 octobre 2026, millésimes 2024 et 2025, 129 ventes retenues.
 # Chaque lot est valorisé sur la tranche de surface qui le contient.
-DVF = [("T2", 38.0, 3286.0, 3890.0, 4184.0),
-       ("T1", 40.0, 3347.0, 4009.0, 5362.0),
-       ("T3", 67.0, 2655.0, 3544.0, 4166.0),
-       ("T4", 77.0, 2778.0, 3282.0, 3707.0)]
+DVF = [("T2 — RDC Sud", 44.19, 3347.0, 4009.0, 5362.0),
+       ("T2 — RDC Est", 37.96, 3286.0, 3890.0, 4184.0),
+       ("T4 — 1er étage", 77.30, 2778.0, 3282.0, 3707.0),
+       ("T4 — 2e étage", 81.48, 2778.0, 3282.0, 3707.0)]
 MDB_TRAVAUX = 90000.0      # remise en état des quatre lots, à chiffrer
 MDB_EDD = 8000.0           # état descriptif de division, notaire, géomètre (si les lots ne sont pas divisés)
 MDB_MOIS = 18
@@ -143,16 +150,18 @@ def main():
     hautes = exploitation(LOYER_MARCHE * 1.20)
 
     lignes_lots = "\n".join(
-        "        <tr><td>%s</td><td class=\"num\">%s m²</td><td class=\"num\">%s</td>"
-        "<td class=\"num\">%s / m²</td><td>%s</td></tr>"
-        % (nom, nfr(surf, 0), eur(loyer), eur(loyer / surf), source)
-        for nom, surf, loyer, source in (
-            ("T1 (1er étage)", 40.0, 620.0, "T2 de 40 m² relevé à 650 € ; T1 meublé de 25 m² à 525 €"),
-            ("T2 (2e étage, deux chambres)", 38.0, 640.0, "T2 de 40 m² relevé à 650 €"),
-            ("T3 (3e étage, terrasse tropézienne)", 67.0, 800.0,
-             "T3 de 70 m² à 970 €, T3 de 75 m² à 840 €, T3 de 78 m² à 780 €"),
-            ("T4 (dernier étage, terrasse)", 77.0, 950.0,
-             "aucun T4 relevé dans le bourg : extrapolation sous la fourchette communale de 14 à 18 €/m²"),
+        "        <tr><td>%s</td><td class=\"num\">%s m²</td><td>%s</td><td class=\"num\">%s</td>"
+        "<td class=\"num\">%s</td><td>%s</td></tr>"
+        % (nom, nfr(surf, 2), ann, eur(loyer), eur(loyer / surf), source)
+        for nom, surf, loyer, ann, source in (
+            ("T2 — RDC Sud, mezzanine et dressing", 44.19, 650.0, "≈ 40 m²",
+             "T2 de 40 m² relevé à 650 € ; dressing 4,25 m² et mezzanine 4,70 m² hors Carrez"),
+            ("T2 — RDC Est", 37.96, 640.0, "≈ 38 m²",
+             "T2 de 40 m² relevé à 650 €, borne basse retenue"),
+            ("T4 — 1er étage, trois chambres", 77.30, 950.0, "T3 ≈ 67 m²",
+             "T3 de 70 m² à 970 €, de 75 m² à 840 €, de 78 m² à 780 €"),
+            ("T4 — 2e étage, trois chambres", 81.48, 980.0, "T4 ≈ 77 m²",
+             "aucun T4 relevé : 12,0 €/m², sous la fourchette communale de 14 à 18 €/m²"),
         ))
 
     grille = [(LOYER_MARCHE * f, plafond_cf_nul(LOYER_MARCHE * f),
@@ -165,7 +174,7 @@ def main():
            nfr((min(ratio_p, rdt_p) / PRIX - 1) * 100, 0))
         for rev, cf_nul, ratio_p, rdt_p in grille)
 
-    calcule("loyers de marché retenus", LOYER_MARCHE, 3010.0, 1.0)
+    calcule("loyers de marché retenus", LOYER_MARCHE, 3220.0, 1.0)
 
     # --- lecture marchand de biens ---
     ca_q1, ca_med, ca_q3 = (ca_decoupe(i) for i in (2, 3, 4))
@@ -175,8 +184,8 @@ def main():
     ca_carrez = ca_med * 0.92
     carrez_compte = mdb_compte(PRIX, ca_carrez)
     carrez_prix = mdb_prix_pour(ca_carrez)
-    calcule("CA découpe à la médiane", ca_med, 798342.0, 500.0)
-    calcule("prix d'achat pour 15 % de ROI à la médiane", prix15[1], 401726.0, 2000.0)
+    calcule("CA découpe à la médiane", ca_med, 845938.0, 500.0)
+    calcule("prix d'achat pour 15 % de ROI à la médiane", prix15[1], 430966.0, 2000.0)
     lignes_dvf = "\n".join(
         "        <tr><td>%s</td><td class=\"num\">%s m²</td><td class=\"num\">%s à %s</td>"
         "<td class=\"num\">%s</td><td class=\"num\">%s</td></tr>"
@@ -215,13 +224,15 @@ def main():
         for lab, ca in (("Revente au Q1 des comparables", ca_q1),
                         ("Revente à la médiane", ca_med),
                         ("Revente au Q3", ca_q3)))
-    calcule("surface réelle des quatre lots", SURF_REELLE, 222.0, 0.5)
-    calcule("EBE au loyer retenu", base["ebe"], 29914.0, 2.0)
-    calcule("plafond du ratio 1,20 au loyer retenu", plafond_ratio(LOYER_MARCHE), 342600.0, 1500.0)
+    calcule("surface Carrez des quatre lots", SURF_REELLE, 240.93, 0.05)
+    calcule("EBE au loyer retenu", base["ebe"], 32308.0, 2.0)
+    calcule("plafond du ratio 1,20 au loyer retenu", plafond_ratio(LOYER_MARCHE), 370029.0, 1500.0)
 
     html = TEMPLATE.format(
-        url=URL_ANNONCE, prix=eur(PRIX), surf_annoncee=nfr(SURF_ANNONCEE, 0),
-        surf=nfr(SURF_REELLE, 0), pm2=eur(PRIX / SURF_ANNONCEE),
+        url=URL_ANNONCE, url_iad=URL_IAD, prix=eur(PRIX), surf_annoncee=nfr(SURF_ANNONCEE, 0),
+        surf=nfr(SURF_REELLE, 2), pm2=eur(PRIX / SURF_ANNONCEE),
+        carrez=nfr(CARREZ, 2), annexes=nfr(ANNEXES, 2),
+        ecart_lots=nfr(SURF_REELLE - SURF_LOTS_ANNONCE, 0),
         pm2_reel=eur(PRIX / SURF_REELLE), loyer_marche=eur(LOYER_MARCHE),
         loyers_an=eur(LOYER_MARCHE * 12), loyer_m2=nfr(LOYER_MARCHE / SURF_REELLE, 2),
         acte=eur(ACTE), travaux=eur(TRAVAUX), revient=eur(REVIENT), capital=eur(CAPITAL),
@@ -295,13 +306,25 @@ TEMPLATE = """<!DOCTYPE html>
     <p class="report-breadcrumb">Analyse — Sémaphore Patrimoine</p>
     <h1>La Crau — maison de village, {n_lots} appartements indépendants</h1>
     <p class="report-address">La Crau (83260), quartier Centre Ville Sud · {surf_annoncee} m² annoncés, {surf} m² sur les quatre lots · 3 des 4 logements loués · bâti de 1930 · DPE D</p>
-    <p class="report-source">Source : <a href="{url}">l'annonce Logic-Immo, réf. 26V49XQZ4PZT</a> (iad France, Brice Lacordaire, réf. 2131728). Prix affiché <strong>{prix}</strong>. <strong>Les loyers des trois baux en cours ne sont pas communiqués</strong> : la demande de pièces est partie le 8 octobre 2026. Cette fiche chiffre donc sur le relevé de marché du bourg, en retenant les bornes basses annonce par annonce.</p>
+    <p class="report-source">Sources : <a href="{url}">l'annonce Logic-Immo, réf. 26V49XQZ4PZT</a> (iad France, Brice Lacordaire, réf. 2131728) et <a href="{url_iad}">la fiche iad du même bien</a>, complétées le 12 octobre 2026 par le dossier envoyé par l'agence — plans des quatre lots et diagnostics techniques. <strong>Les loyers des trois baux en cours, la taxe foncière et les charges ne sont toujours pas communiqués</strong> : la fiche chiffre donc sur le relevé de marché du bourg, et sur le certificat de superficie pour les surfaces.</p>
   </header>
 
   <section class="strategy-exploration">
     <h2>Le bien</h2>
-    <p>Maison de village sur deux étages, découpée en <strong>{n_lots} appartements indépendants</strong> : T1 d'environ 40 m², T2 d'environ 38 m², T3 d'environ 67 m² avec terrasse, T4 d'environ 77 m² avec terrasse. Cave, deux terrasses, exposition annoncée lumineuse. Surface Carrez par lot non communiquée : les surfaces retenues sont celles de l'annonce.</p>
-    <p class="projection-note"><strong>État déclaré « rénovation nécessaire »</strong>, sans devis ni chiffrage — sur un bâti de 1930. DPE D, GES B. Une partie du rez-de-chaussée n'est pas exploitée (elle sert de cave aux locataires) : la surface et les accès ne sont pas communiqués, c'est le premier point à lever.</p>
+    <p>Maison de village sur deux étages, découpée en <strong>{n_lots} appartements indépendants</strong>, chacun avec son entrée : un T2 au rez-de-chaussée sud avec mezzanine et dressing, un T2 au rez-de-chaussée est, et deux T4 de trois chambres aux 1er et 2e étages, chacun avec sa terrasse. Deux caves, cage d'escalier commune : <strong>{annexes} m² hors Carrez</strong> au total.</p>
+    <p class="projection-note"><strong>Le certificat de superficie du 27 janvier 2022 donne {carrez} m² Carrez</strong>, détaillés pièce par pièce — exactement la surface globale annoncée, mais <strong>{ecart_lots} m² de plus que la somme des surfaces « environ » de l'annonce, qui minore chaque lot</strong>. Le tableau ci-dessous confronte les deux. DPE de 2022, bâti de 1930, chauffage électrique, facture théorique de 3 335 à 4 513 €/an ; état déclaré « rénovation nécessaire », sans devis.</p>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Ce que dit le dossier technique reçu le 12 octobre</h2>
+    <ul>
+      <li><strong>Surfaces.</strong> Certificat de superficie NOSTIKA du 27 janvier 2022 : {carrez} m² Carrez au total, dont {annexes} m² d'annexes hors Carrez. Le détail pièce par pièce permet de reconstituer les quatre lots — c'est la seule base fiable pour une revente à la découpe.</li>
+      <li><strong>Amiante : présence confirmée.</strong> Conduits de fluides en fibres-ciment dans les combles, en bon état, amiante fortement lié. Aucun danger en l'état, mais <strong>tout percement ou dépose impose un repérage complémentaire et une entreprise certifiée</strong> — c'est un poste à chiffrer dans les travaux, pas une clause de style.</li>
+      <li><strong>Électricité : anomalies relevées.</strong> Le rapport de 2022 relève des anomalies au titre de la sécurité des personnes, dont l'absence de protection adaptée par les dispositifs différentiels et des observations sur les socles de prises. À intégrer au budget de remise en état.</li>
+      <li><strong>Termites.</strong> Le bourg est en zone délimitée par arrêté préfectoral ; les parties visitées ne montrent pas d'indice, mais des éléments restent inaccessibles (plénum, poutres anciennes conservées).</li>
+      <li><strong>Diagnostics du mauvais immeuble.</strong> L'agence a joint un second dossier, référence 598, daté de mars 2016 : il porte sur une maison au 745 chemin du Peiracous à Forcalqueiret, propriété d'un tiers. C'est l'adresse du vendeur, pas celle du bien — à écarter, mais cela dit le sérieux du dossier transmis.</li>
+      <li><strong>Ce qui manque toujours.</strong> Les trois baux et leurs loyers, l'avis de taxe foncière, les charges de copropriété, le chiffrage des travaux, l'état descriptif de division et l'état des risques. Rien de tout cela n'est arrivé.</li>
+    </ul>
   </section>
 
   <section class="financial-projections">
@@ -313,7 +336,7 @@ TEMPLATE = """<!DOCTYPE html>
   <section class="financial-projections">
     <h2>La grille des loyers, lot par lot</h2>
     <table class="projection-table">
-      <thead><tr><th>Lot</th><th>Surface</th><th>Loyer retenu</th><th>Au m²</th><th>Base du relevé du 8-9 octobre 2026</th></tr></thead>
+      <thead><tr><th>Lot</th><th>Surface Carrez</th><th>Sur l'annonce</th><th>Loyer retenu</th><th>Au m²</th><th>Base du relevé des 8-9 octobre 2026</th></tr></thead>
       <tbody>
 {lignes_lots}
       </tbody>
@@ -354,7 +377,7 @@ TEMPLATE = """<!DOCTYPE html>
     <h2>Ce qui décide, et ce qui inquiète</h2>
     <ul>
       <li><strong>Les trois baux, et rien d'autre.</strong> Trois des quatre logements sont loués et aucun loyer n'est communiqué. Toute la fiche repose sur le marché du bourg : si les baux sortent 20 % sous le relevé, les plafonds ci-dessus baissent d'autant, et aucun prix ne tient plus.</li>
-      <li><strong>Le prix est celui du marché, pas celui d'une décote.</strong> {pm2_reel} au m² réellement louable pour un immeuble entier à rénover dans un bourg : il n'y a pas de coussin de sécurité, contrairement à ce que laisse croire un prix au m² calculé sur les {surf_annoncee} m² annoncés.</li>
+      <li><strong>Le prix au m² est bas — mais au m² des logements, pas des murs.</strong> {pm2_reel} au m² Carrez contre {ca_med_m2} €/m² pour la revente des logements du bourg : la décote apparente vient de ce que l'immeuble s'achète au prix d'une exploitation locative et se revend au prix d'acquéreurs occupants. C'est là, et nulle part ailleurs, qu'est la marge.</li>
       <li><strong>Le rafraîchissement n'est pas chiffré.</strong> « Quelques travaux » sur du 1930 : l'enveloppe retenue ici est une provision de {travaux}, et chaque 10 000 € de travaux en plus retire environ 10 000 € du plafond de prix.</li>
       <li><strong>Taxe foncière et charges inconnues.</strong> Provisionnées ensemble à {frais_fixes} par an, soit {ch_pct} % des loyers bruts. Sur un immeuble de quatre logements en village, ce poste peut être le double — et il se déduit directement du prix.</li>
       <li><strong>La partie de rez-de-chaussée non exploitée.</strong> Elle sert de cave aux locataires. Sa surface, ses accès et son usage possible ne sont pas communiqués : c'est le seul levier de valeur du lot, et il n'est ni chiffré ni même décrit.</li>
@@ -398,7 +421,7 @@ TEMPLATE = """<!DOCTYPE html>
   <section class="strategy-exploration">
     <h2>Verdict</h2>
     <p><strong>Deux lectures, et c'est la seconde qui porte le dossier.</strong> En location au prix affiché : {net_revient} % net sur le prix de revient, cash-flow de {cf} par mois, rapport EBE / annuité de {ratio} — le bien ne tient pas, et les deux plafonds de financement ({plafond} pour la banque, {plafond_rdt} pour le rendement) sont sous la demande.</p>
-    <p class="strategy-rationale">En marchand de biens, le constat s'inverse : les ventes réelles du bourg valorisent les quatre lots entre {ca_q1} et {ca_q3} revendus à la découpe, quand le prix demandé correspond à la valeur d'exploitation en bloc. <strong>La marge existe donc, mais elle est dans l'exécution, pas dans le prix affiché.</strong> Offre défendable : <strong>{prix15_med}</strong>, qui laisse {mdb_cible} % de ROI sur {mdb_mois} mois avec {mdb_travaux} de travaux — sous deux conditions non levées à ce jour : la confirmation des surfaces Carrez lot par lot, et la sortie des trois baux en cours.</p>
+    <p class="strategy-rationale">En marchand de biens, le constat s'inverse : les ventes réelles du bourg valorisent les quatre lots entre {ca_q1} et {ca_q3} revendus à la découpe, quand le prix demandé correspond à la valeur d'exploitation en bloc. Au prix affiché et avec {mdb_travaux} de travaux, l'opération ressort à <strong>{mdb_roi} % de ROI sur {mdb_mois} mois</strong> à la médiane des comparables ({mdb_roi_an} % en rythme annuel) — tout juste notre cible de {mdb_cible} %. Le prix qui la laisse entièrement est <strong>{prix15_med}</strong>. Deux conditions restent non levées : le chiffrage réel des travaux — amiante et électricité à traiter — et la sortie des trois baux, qui commande le calendrier de la découpe.</p>
   </section>
 
   <footer class="report-footer">
