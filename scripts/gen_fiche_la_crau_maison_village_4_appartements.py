@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """Fiche « La Crau — maison de village, 4 appartements indépendants ».
 
-Fiche de travail : les loyers des trois baux en cours ne sont pas communiqués
-par le vendeur (demande de pièces envoyée le 8 octobre 2026). La grille est donc
-construite sur le relevé de marché réalisé à La Crau les 8 et 9 octobre 2026,
-en retenant les bornes basses annonce par annonce.
+Réponse de l'agence du 12 octobre 2026 : loyers en place des trois baux
+(somme 3 050 €/mois), immeuble en un seul lot sans division juridique,
+compteurs individuels, T1 libre en attente de travaux couverts par
+l'assurance, façade à reprendre (14 000 € annoncés) plus les volets.
 
 Sortie : analyses/2026-10-12-la-crau-maison-village-4-appartements/index.html
 """
@@ -23,10 +23,11 @@ SURF_ANNONCEE = 240.0          # surface globale annoncée
 SURF_LOTS_ANNONCE = 222.0      # somme des surfaces « environ » de l'annonce, lot par lot
 CARREZ = 240.94                # certificat de superficie NOSTIKA, 27 janvier 2022
 ANNEXES = 53.16                # deux caves, deux terrasses et cage d'escalier, hors Carrez
-LOTS = [("T2 — RDC Sud, mezzanine et dressing", 44.19, 650.0),
+# Loyer en place (baux communiqués par l'agence le 12/10/2026). Le T1 est libre.
+LOTS = [("T1 — RDC Sud, mezzanine et dressing (libre)", 44.19, 590.0),
         ("T2 — RDC Est", 37.96, 640.0),
-        ("T4 — 1er étage, trois chambres et terrasse", 77.30, 950.0),
-        ("T4 — 2e étage, trois chambres et terrasse", 81.48, 980.0)]
+        ("T3 — 1er étage, trois chambres et terrasse", 77.30, 890.0),
+        ("T4 — 2e étage, trois chambres et terrasse", 81.48, 930.0)]
 SURF_REELLE = sum(l[1] for l in LOTS)
 LOYER_MARCHE = sum(l[2] for l in LOTS)
 
@@ -48,9 +49,11 @@ DVF = [("T2 — RDC Sud", 44.19, 3347.0, 4009.0, 5362.0),
        ("T2 — RDC Est", 37.96, 3286.0, 3890.0, 4184.0),
        ("T4 — 1er étage", 77.30, 2778.0, 3282.0, 3707.0),
        ("T4 — 2e étage", 81.48, 2778.0, 3282.0, 3707.0)]
-MDB_TRAVAUX = 90000.0      # remise en état des quatre lots, à chiffrer
-MDB_EDD = 8000.0           # état descriptif de division, notaire, géomètre (si les lots ne sont pas divisés)
-MDB_MOIS = 18
+MDB_FACADE = 14000.0       # réfection de la façade, estimation du maçon rapportée par l'agence
+MDB_VOLETS = 6000.0        # volets à repeindre ou remplacer, non chiffrés par l'agence
+MDB_TRAVAUX = 90000.0 + MDB_FACADE + MDB_VOLETS   # remise en état des lots plus façade et volets
+MDB_EDD = 8000.0           # division à créer : un seul lot aujourd'hui (plancher, 8 000 à 15 000 €)
+MDB_MOIS = 24              # portage allongé : la division juridique s'instruit avant la première vente
 MDB_PORTAGE_TAUX = 0.042   # coût du portage annuel sur le capital engagé
 MDB_HONORAIRES = 0.05      # frais de commercialisation des lots
 VA_TRAVAUX_M2 = 400.0      # convention maison : simple rafraîchissement
@@ -154,14 +157,14 @@ def main():
         "<td class=\"num\">%s</td><td>%s</td></tr>"
         % (nom, nfr(surf, 2), ann, eur(loyer), eur(loyer / surf), source)
         for nom, surf, loyer, ann, source in (
-            ("T2 — RDC Sud, mezzanine et dressing", 44.19, 650.0, "≈ 40 m²",
-             "T2 de 40 m² relevé à 650 € ; dressing 4,25 m² et mezzanine 4,70 m² hors Carrez"),
-            ("T2 — RDC Est", 37.96, 640.0, "≈ 38 m²",
-             "T2 de 40 m² relevé à 650 €, borne basse retenue"),
-            ("T4 — 1er étage, trois chambres", 77.30, 950.0, "T3 ≈ 67 m²",
-             "T3 de 70 m² à 970 €, de 75 m² à 840 €, de 78 m² à 780 €"),
-            ("T4 — 2e étage, trois chambres", 81.48, 980.0, "T4 ≈ 77 m²",
-             "aucun T4 relevé : 12,0 €/m², sous la fourchette communale de 14 à 18 €/m²"),
+            ("T1 — RDC Sud, mezzanine et dressing", 44.19, 590.0, "T1 ≈ 45 m²",
+             "libre, en attente des travaux couverts par l'assurance"),
+            ("T2 — RDC Est", 37.96, 640.0, "T2 ≈ 38 m²",
+             "loué, 16,9 €/m² : au-dessus de la fourchette relevée"),
+            ("T3 — 1er étage, trois chambres", 77.30, 890.0, "T3 ≈ 80 m²",
+             "loué, 11,5 €/m² : la décote des grandes surfaces"),
+            ("T4 — 2e étage, trois chambres", 81.48, 930.0, "T4 ≈ 85 m²",
+             "loué, 11,4 €/m² : la décote des grandes surfaces"),
         ))
 
     grille = [(LOYER_MARCHE * f, plafond_cf_nul(LOYER_MARCHE * f),
@@ -174,7 +177,7 @@ def main():
            nfr((min(ratio_p, rdt_p) / PRIX - 1) * 100, 0))
         for rev, cf_nul, ratio_p, rdt_p in grille)
 
-    calcule("loyers de marché retenus", LOYER_MARCHE, 3220.0, 1.0)
+    calcule("loyers retenus (baux en place)", LOYER_MARCHE, 3050.0, 1.0)
 
     # --- lecture marchand de biens ---
     ca_q1, ca_med, ca_q3 = (ca_decoupe(i) for i in (2, 3, 4))
@@ -185,7 +188,7 @@ def main():
     carrez_compte = mdb_compte(PRIX, ca_carrez)
     carrez_prix = mdb_prix_pour(ca_carrez)
     calcule("CA découpe à la médiane", ca_med, 845938.0, 500.0)
-    calcule("prix d'achat pour 15 % de ROI à la médiane", prix15[1], 430966.0, 2000.0)
+    calcule("prix d'achat pour 15 % de ROI à la médiane", prix15[1], 404168.0, 2000.0)
     lignes_dvf = "\n".join(
         "        <tr><td>%s</td><td class=\"num\">%s m²</td><td class=\"num\">%s à %s</td>"
         "<td class=\"num\">%s</td><td class=\"num\">%s</td></tr>"
@@ -242,8 +245,8 @@ def main():
         % (nom, nfr(s, 2), eur(r), eur(c), eur(r - c))
         for nom, s, r, c in phas)
     calcule("marge brute du plan phasé", marge_phasee, 209566.0, 500.0)
-    calcule("EBE au loyer retenu", base["ebe"], 32308.0, 2.0)
-    calcule("plafond du ratio 1,20 au loyer retenu", plafond_ratio(LOYER_MARCHE), 370029.0, 1500.0)
+    calcule("EBE au loyer retenu", base["ebe"], 30370.0, 2.0)
+    calcule("plafond du ratio 1,20 au loyer retenu", plafond_ratio(LOYER_MARCHE), 347833.0, 1500.0)
 
     html = TEMPLATE.format(
         url=URL_ANNONCE, url_iad=URL_IAD, prix=eur(PRIX), surf_annoncee=nfr(SURF_ANNONCEE, 0),
@@ -281,6 +284,7 @@ def main():
         ca_med_m2=nfr(ca_med / SURF_REELLE, 0),
         expl65=eur(expl65), expl70=eur(expl70),
         mdb_travaux=eur(MDB_TRAVAUX), mdb_travaux_m2=nfr(MDB_TRAVAUX / SURF_REELLE, 0),
+        mdb_facade=eur(MDB_FACADE), mdb_volets=eur(MDB_VOLETS),
         mdb_edd=eur(MDB_EDD), mdb_mois=MDB_MOIS, mdb_portage=eur(comptes[1]["portage"]),
         mdb_revient=eur(comptes[1]["revient"]), mdb_honoraires=eur(comptes[1]["honoraires"]),
         mdb_is=eur(comptes[1]["impot"]), mdb_nette=eur(comptes[1]["nette"]),
@@ -331,7 +335,7 @@ TEMPLATE = """<!DOCTYPE html>
     <p class="report-breadcrumb">Analyse — Sémaphore Patrimoine</p>
     <h1>La Crau — maison de village, {n_lots} appartements indépendants</h1>
     <p class="report-address">La Crau (83260), quartier Centre Ville Sud · {surf_annoncee} m² annoncés, {surf} m² sur les quatre lots · 3 des 4 logements loués · bâti de 1930 · DPE D</p>
-    <p class="report-source">Sources : <a href="{url}">l'annonce Logic-Immo, réf. 26V49XQZ4PZT</a> (iad France, Brice Lacordaire, réf. 2131728) et <a href="{url_iad}">la fiche iad du même bien</a>, complétées le 12 octobre 2026 par le dossier envoyé par l'agence — plans des quatre lots et diagnostics techniques. <strong>Les loyers des trois baux en cours, la taxe foncière et les charges ne sont toujours pas communiqués</strong> : la fiche chiffre donc sur le relevé de marché du bourg, et sur le certificat de superficie pour les surfaces.</p>
+    <p class="report-source">Sources : <a href="{url}">l'annonce Logic-Immo, réf. 26V49XQZ4PZT</a> (iad France, Brice Lacordaire, réf. 2131728) et <a href="{url_iad}">la fiche iad du même bien</a>, complétées le 12 octobre 2026 par le dossier envoyé par l'agence — plans des quatre lots et diagnostics techniques. <strong>L'agence a répondu le 12 octobre 2026</strong> : loyers en place des trois baux (3 050 €/mois au total), immeuble en <strong>un seul lot</strong> sans division juridique, compteurs d'eau et d'électricité individuels, T1 libre en attente de travaux couverts par l'assurance, façade à reprendre pour environ 14 000 € plus les volets. La taxe foncière reste inconnue.</p>
   </header>
 
   <section class="strategy-exploration">
@@ -361,12 +365,12 @@ TEMPLATE = """<!DOCTYPE html>
   <section class="financial-projections">
     <h2>La grille des loyers, lot par lot</h2>
     <table class="projection-table">
-      <thead><tr><th>Lot</th><th>Surface Carrez</th><th>Sur l'annonce</th><th>Loyer retenu</th><th>Au m²</th><th>Base du relevé des 8-9 octobre 2026</th></tr></thead>
+      <thead><tr><th>Lot</th><th>Surface Carrez</th><th>Sur l'annonce</th><th>Loyer en place</th><th>Au m²</th><th>Renseignements de l'agence, 12 octobre 2026</th></tr></thead>
       <tbody>
 {lignes_lots}
       </tbody>
     </table>
-    <p class="scenario-subtitle">Total retenu : <strong>{loyer_marche} par mois</strong>, soit {loyers_an} par an et <strong>{loyer_m2} au m² des {surf} m² louables</strong>. Le marché communal relevé se situe entre 14 et 18 €/m² : la grille est délibérément construite sur les bornes basses, et le T4 est extrapolé faute de comparable de sa taille.</p>
+    <p class="scenario-subtitle">Total en place : <strong>{loyer_marche} par mois</strong>, soit {loyers_an} par an et <strong>{loyer_m2} au m² des {surf} m² louables</strong>. Ce sont les loyers des baux en cours, communiqués par l'agence le 12 octobre 2026 : la fiche ne chiffre plus sur des estimations de marché. Les deux grandes surfaces sortent à 11,4 et 11,5 €/m² contre 16,9 €/m² pour le T2 — la décote des grandes surfaces, ordinaire sur le bourg, et une marge de relouage à la rotation plutôt qu'un loyer à corriger.</p>
   </section>
 
   <section class="financial-projections">
@@ -401,9 +405,12 @@ TEMPLATE = """<!DOCTYPE html>
   <section class="strategy-exploration">
     <h2>Ce qui décide, et ce qui inquiète</h2>
     <ul>
-      <li><strong>Les trois baux, et rien d'autre.</strong> Trois des quatre logements sont loués et aucun loyer n'est communiqué. Toute la fiche repose sur le marché du bourg : si les baux sortent 20 % sous le relevé, les plafonds ci-dessus baissent d'autant, et aucun prix ne tient plus.</li>
+      <li><strong>Les loyers sont désormais connus — 3 050 €/mois, baux en place.</strong> Ils sortent 5 % sous notre estimation de marché, et c'est la seule bonne nouvelle du dernier échange : plus rien ne repose sur une hypothèse de loyer. Ce qui reste inconnu a changé de nature : c'est la taxe foncière, et surtout <strong>la division, qui n'existe pas</strong>.</li>
+      <li><strong>Le T1 est libre à cause d'un sinistre, et les travaux sont couverts par l'assurance.</strong> C'est le lot qu'on referait en premier dans le plan phasé, et une partie de la dépense est déjà prise en charge. Deux points à faire écrire : <strong>qui réalise les travaux, dans quel délai</strong>, et <strong>à qui revient l'indemnité si la vente intervient avant qu'ils soient faits</strong> — sur un achat-revente, elle doit nous être transférée ou déduite du prix.</li>
+      <li><strong>La mairie financerait une partie de la façade.</strong> L'agence l'annonce sans montant ni accord : « après dépôt de dossier, la mairie finance une partie ». C'est un gain non chiffré, à ne pas inscrire au compte d'opération avant d'avoir la délibération, mais qui peut absorber une partie des {mdb_facade}.</li>
+      <li><strong>Le vendeur est une SCI, pas un particulier.</strong> SCI COPA DE ROSA, propriétaire du 14 avenue de la Libération. Une cession de parts éviterait les droits de mutation — de l'ordre de 7 à 8 % du prix, soit 30 à 40 000 € à ce niveau — mais elle suppose d'auditer les comptes et les dettes de la société. C'est la seule piste qui puisse améliorer le prix sans toucher au vendeur.</li>
       <li><strong>Le prix au m² est bas — mais au m² des logements, pas des murs.</strong> {pm2_reel} au m² Carrez contre {ca_med_m2} €/m² pour la revente des logements du bourg : la décote apparente vient de ce que l'immeuble s'achète au prix d'une exploitation locative et se revend au prix d'acquéreurs occupants. C'est là, et nulle part ailleurs, qu'est la marge.</li>
-      <li><strong>Le rafraîchissement n'est pas chiffré.</strong> « Quelques travaux » sur du 1930 : l'enveloppe retenue ici est une provision de {travaux}, et chaque 10 000 € de travaux en plus retire environ 10 000 € du plafond de prix.</li>
+      <li><strong>Le rafraîchissement n'est pas chiffré.</strong> « Quelques travaux » sur du 1930 : l'enveloppe retenue ici est une provision de {travaux} pour la location nue, et chaque 10 000 € en plus retire environ 10 000 € du plafond de prix. Le chiffrage de découpe, lui, intègre la façade à {mdb_facade} annoncés par le maçon, plus {mdb_volets} de volets provisionnés : ce sont des travaux de copropriété au sens où ils portent sur les murs, pas sur un lot.</li>
       <li><strong>Taxe foncière et charges inconnues.</strong> Provisionnées ensemble à {frais_fixes} par an, soit {ch_pct} % des loyers bruts. Sur un immeuble de quatre logements en village, ce poste peut être le double — et il se déduit directement du prix.</li>
       <li><strong>La partie de rez-de-chaussée non exploitée.</strong> Elle sert de cave aux locataires. Sa surface, ses accès et son usage possible ne sont pas communiqués : c'est le seul levier de valeur du lot, et il n'est ni chiffré ni même décrit.</li>
       <li><strong>La concentration géographique.</strong> Ce serait le troisième dossier vivant de notre pile dans le même secteur (Pignans, Gonfaron, Brignoles) : ces bourgs partagent le même marché locatif mince et la même liquidité étroite à la revente.</li>
@@ -426,7 +433,7 @@ TEMPLATE = """<!DOCTYPE html>
 
   <section class="financial-projections">
     <h2>Le compte de l'opération de découpe, au prix affiché</h2>
-    <p class="attractiveness-intro">Travaux de remise en état provisionnés à {mdb_travaux} ({mdb_travaux_m2} €/m², convention maison du simple rafraîchissement), division et frais annexes {mdb_edd}, portage {mdb_mois} mois à 4,2 % l'an, commercialisation des lots à 5 % du chiffre d'affaires, impôt sur les sociétés à 15 % puis 25 %.</p>
+    <p class="attractiveness-intro">Travaux de remise en état des quatre lots provisionnés à 90 000 € (la convention maison de 400 €/m²), <strong>plus la façade à {mdb_facade} annoncés par le maçon et {mdb_volets} de volets provisionnés</strong> — des travaux qui portent sur les murs et non sur un lot, donc dus par le propriétaire quel que soit le scénario. Division et frais annexes {mdb_edd} : c'est un plancher, l'immeuble est aujourd'hui un seul lot. Portage {mdb_mois} mois à 4,2 % l'an, commercialisation des lots à 5 % du chiffre d'affaires, impôt sur les sociétés à 15 % puis 25 %.</p>
     <table class="projection-table">
       <thead><tr><th>Poste</th><th>Revente au Q1</th><th>Revente à la médiane</th><th>Revente au Q3</th></tr></thead>
       <tbody>
@@ -440,7 +447,7 @@ TEMPLATE = """<!DOCTYPE html>
 {lignes_prix15}
       </tbody>
     </table>
-    <p class="scenario-subtitle">Prix d'achat qui laisse <strong>{mdb_cible} % de ROI</strong> sur {mdb_mois} mois. À la médiane et pour {mdb_travaux} de travaux, c'est <strong>{prix15_med}</strong>, soit {prix15_med_ecart} % sous le prix affiché. Deux réserves : si les 222 m² annoncés sont des surfaces habitables et que le Carrez ressort 8 % en dessous, la revente médiane tombe à {ca_carrez}, le ROI au prix affiché à {roi_carrez} % et le prix cible à <strong>{prix15_med_carrez}</strong> ; et trois des quatre lots sont loués, donc la découpe suppose des congés pour vendre, avec les délais que cela impose.</p>
+    <p class="scenario-subtitle">Prix d'achat qui laisse <strong>{mdb_cible} % de ROI</strong> sur {mdb_mois} mois. À la médiane et pour {mdb_travaux} de travaux, c'est <strong>{prix15_med}</strong>, soit {prix15_med_ecart} % sous le prix affiché. Deux réserves : si les 222 m² annoncés sont des surfaces habitables et que le Carrez ressort 8 % en dessous, la revente médiane tombe à {ca_carrez}, le ROI au prix affiché à {roi_carrez} % et le prix cible à <strong>{prix15_med_carrez}</strong> ; et <strong>l'immeuble est un seul lot : la division juridique est à créer avant toute vente à la découpe</strong>, ce qui ajoute trois à six mois et un coût qui n'est ici provisionné qu'au plancher.</p>
   </section>
 
   <section class="financial-projections">
@@ -460,8 +467,8 @@ TEMPLATE = """<!DOCTYPE html>
 
   <section class="strategy-exploration">
     <h2>Verdict</h2>
-    <p><strong>Deux lectures, et c'est la seconde qui porte le dossier.</strong> En location au prix affiché : {net_revient} % net sur le prix de revient, cash-flow de {cf} par mois, rapport EBE / annuité de {ratio} — le bien ne tient pas, et les deux plafonds de financement ({plafond} pour la banque, {plafond_rdt} pour le rendement) sont sous la demande.</p>
-    <p class="strategy-rationale">En marchand de biens, le constat s'inverse : les ventes réelles du bourg valorisent les quatre lots entre {ca_q1} et {ca_q3} revendus à la découpe, quand le prix demandé correspond à la valeur d'exploitation en bloc. Au prix affiché et avec {mdb_travaux} de travaux, l'opération ressort à <strong>{mdb_roi} % de ROI sur {mdb_mois} mois</strong> à la médiane des comparables ({mdb_roi_an} % en rythme annuel) — tout juste notre cible de {mdb_cible} %. Le prix qui la laisse entièrement est <strong>{prix15_med}</strong>, et <strong>l'exécution retenue est le plan phasé</strong> — le lot libre remis en état et reloué d'abord pour stabiliser le crédit ({cf4} par mois de trésorerie), puis une vente à chaque fin de bail, avec une sortie de trésorerie initiale de {sortie_initiale} au lieu de {sortie_totale}. Deux conditions restent non levées : le chiffrage réel des travaux — amiante et électricité à traiter — et la sortie des trois baux, qui commande le calendrier de la découpe.</p>
+    <p><strong>Deux lectures, et c'est la seconde qui porte le dossier.</strong> En location au prix affiché : {net_revient} % net sur le prix de revient au loyer réel, cash-flow de {cf} par mois, rapport EBE / annuité de {ratio} — le bien ne tient pas, et les deux plafonds de financement ({plafond} pour la banque, {plafond_rdt} pour le rendement de 5 %) restent loin sous la demande. <strong>En achat de parc, ce dossier est au point mort</strong> : l'exploitation vaut {expl70} à {expl65} capitalisée en bloc, à comparer aux {prix} demandés.</p>
+    <p class="strategy-rationale">En marchand de biens, le constat s'inverse, mais le prix a bougé. Avec les loyers réels, la façade à {mdb_facade}, {mdb_volets} de volets, la division à créer et {mdb_mois} mois de portage, le compte d'opération au prix affiché ressort à <strong>{mdb_roi} % de ROI à la médiane</strong> des comparables. <strong>Le prix qui laisse {mdb_cible} % est désormais {prix15_med}</strong> — contre 431 000 € tant que la façade, les volets et la division n'étaient pas connus. C'est le prix de référence, et il ne remonte pas tant que le devis du maçon n'est pas remis et l'indemnité d'assurance du T1 arbitrée.<br><strong>L'exécution retenue reste le plan phasé</strong> : le T1 remis en état et reloué pour stabiliser le crédit ({cf4} par mois de trésorerie), puis une vente à chaque fin de bail, pour une sortie de trésorerie initiale de {sortie_initiale} au lieu de {sortie_totale}. Trois conditions restent ouvertes : la taxe foncière, le devis de la façade, et le rattachement de l'indemnité d'assurance — sans elle, le premier lot du phasage se paie deux fois.</p>
   </section>
 
   <footer class="report-footer">
