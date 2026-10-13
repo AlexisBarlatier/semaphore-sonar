@@ -30,11 +30,13 @@ PRIX = 95000.0
 LECTURE = (
     "Sept emplacements dans une résidence de 2022, dont cinq en sous-sol sécurisé : le produit est le "
     "meilleur de la gamme stationnement, et le secteur est dense. Ce qui bloque, c'est le prix. À 95 000 €, "
-    "le lot revient à 13 571 € par emplacement, au-dessus du plafond de doctrine d'une place en sous-sol "
-    "(10 800 €) avant même de calculer le rendement, et il rend 4,86 % net d'IS pour un plancher de branche "
-    "de 8 %. Au loyer de marché relevé (620 €/mois pour les sept), il faudrait 56 000 € pour que le lot "
-    "couvre sa charge, et environ 50 000 € pour atteindre le plancher de rendement. Aucune place n'étant "
-    "louée aujourd'hui, le dossier part de zéro revenu : c'est une offre basse ou rien."
+    "la sortie place par place est ouverte, et les prix unitaires relevés à Toulon (17 000 à 27 500 € "
+    "l'emplacement en sous-sol) sont bien supérieurs aux 13 571 € par place que demande ce lot. Mais il "
+    "achète une rente, pas un stock : à 95 000 €, le lot rend 4,86 % net d'IS pour un plancher de 8 %, et "
+    "son solde mensuel est négatif de 230 €. Au loyer de marché relevé (620 €/mois pour les sept), il "
+    "faudrait 56 000 € pour que le lot couvre sa charge, et environ 50 000 € pour atteindre le plancher de "
+    "rendement. Aucune place n'étant louée aujourd'hui, le dossier part de zéro revenu : à ce prix, c'est "
+    "une offre basse ou rien."
 )
 
 CONF = (
@@ -49,14 +51,17 @@ CONF = (
 GARDE_FOUS = """        <li><strong>Plafond de doctrine : 67 000 € acte en main</strong> (2 extérieures à 6 500 € + 5 emplacements de sous-sol à 10 800 €). Le prix affiché — 95 000 € hors frais, soit 13 571 € par emplacement — est au-dessus de la ligne de son produit avant tout calcul.</li>
         <li><strong>Prix d'autofinancement : 58 500 € net vendeur</strong> — le prix auquel les 620 €/mois couvrent la charge du lot. C'est le plafond dur de l'offre.</li>
         <li><strong>Plancher de rendement (8 % net d'IS) : 50 000 €</strong>, et 56 000 € pour la note du moteur. Le repère des 100 mois de loyer donne 62 000 € — les trois ancres encadrent la même zone.</li>
-        <li><strong>À exiger avant toute offre :</strong> statut des lots (sept lots distincts ou lot unique) et numéros de lots, appel de charges et budget prévisionnel, avis de taxe foncière, PV des assemblées depuis la livraison, règlement de copropriété (location à un non-résident), ancienneté du titre du vendeur pour le droit de mutation.</li>"""
+        <li><strong>Sortie à l'unité :</strong> les sept lots sont distincts, la revente place par place est ouverte. Les annonces toulonnaises affichent 17 000 à 27 500 € pour un emplacement en sous-sol sécurisé (19 000 € Serinette-La Barre, 23 000 € pour 13 m², 27 000 € Pont du Las et Bon Rencontre), contre 13 571 € par place ici — mais ce sont des prix demandés, souvent pour des garages fermés, et il faut retrancher frais, délai et friction. Une sortie possible n'est pas un argument pour payer plus cher.</li>
+        <li><strong>À exiger avant toute offre :</strong> numéros des sept lots et tantièmes, appel de charges et budget prévisionnel, avis de taxe foncière, PV des assemblées depuis la livraison, règlement de copropriété (location à un non-résident), ancienneté du titre du vendeur pour le droit de mutation.</li>"""
 
 STANCE = "On offre bas, une seule fois, et on ne poursuit pas."
 VERDICT_TEXTE = (
     "Le dossier ne mérite pas d'être travaillé au prix demandé : sept emplacements vides à commercialiser "
     "d'un coup, aucun bail en place, un prix par emplacement supérieur au plafond de doctrine, et un solde "
     "mensuel négatif de 230 € au prix affiché. Mais il ne coûte rien de le tester : une offre basse ferme, "
-    "sans réserve, sur un lot qui traîne depuis longtemps, se refuse ou se saisit — elle ne se négocie pas."
+    "sans réserve, sur un lot qui traîne depuis longtemps, se refuse ou se saisit — elle ne se négocie pas. Les sept lots distincts "
+    "améliorent la sortie (on peut revendre place par place) sans changer le verdict au prix affiché : la valeur unitaire retenue "
+    "(91 000 € pour les sept) est au niveau du prix demandé, pas au-dessus."
 )
 PERFORMANCE = (
     "4,86 % de rendement net après IS sur un prix de revient de 102 125 € (95 000 € + 7 125 € de frais) "
@@ -96,6 +101,7 @@ def bloc_cartes_parking(d):
         ("Prix affiché", gen.eur(PRIX)),
         ("Emplacements", "7 (2 extérieurs, 4 en sous-sol, 1 double)"),
         ("Prix demandé par emplacement", gen.eur(PRIX / N)),
+        ("Valeur unitaire retenue", "8 000 € (extérieur) à 15 000 € (sous-sol) — 91 000 € pour les sept"),
         ("Prix de revient affiché", gen.eur(d["revient"])),
         ("Loyer retenu", gen.eur(LOYER) + "/mois pour les 7"),
         ("Prix en mois de loyer", gen.nfr(PRIX / LOYER) + " mois — repère du groupe : 100"),
@@ -118,7 +124,7 @@ def bloc_identite_parking(d):
         ("Taxe foncière", gen.eur(r["hypotheses"]["charges"]["taxe_fonciere_annuelle_euros"]) + "/an — " + r["hypotheses"]["charges"]["taxe_fonciere_commentaire"]),
         ("Frais d'acquisition", gen.eur(FRAIS) + " — " + r["hypotheses"]["frais_acquisition_commentaire"]),
         ("Amortissement", gen.eur(d["f"]["amortissement"]) + "/an — cinq emplacements sur sept sont bâtis (quote-part 71 % du prix de revient, sur 30 ans)"),
-        ("Structure du lot", "Non communiquée : sept lots distincts ou lot unique. La revente à l'unité en dépend."),
+        ("Structure du lot", "Sept lots de copropriété distincts, un par emplacement — statut confirmé par le vendeur le 13 octobre 2026. La revente à l'unité est juridiquement possible."),
         ("Valeur retenue", gen.eur(r["marche"]["valeur"]["retenue_euros"]) + " — " + r["marche"]["valeur"]["source"]),
     ]
     return "\n".join(f"        <tr><th>{k}</th><td>{v}</td></tr>" for k, v in lignes)
@@ -190,7 +196,9 @@ def main():
         perf_score=gen.nfr(d["comp"]["s_performance"], 1), secu_score=gen.nfr(d["comp"]["s_securite"], 1),
         adeq_score=gen.nfr(d["comp"]["s_adequation"], 1), risque_score=gen.nfr(d["comp"]["s_risque"], 1),
         prix_affiche=gen.eur(PRIX),
-    ).replace("{strategie}", gen.bloc_strategie(d))
+    ).replace("{strategie}", gen.bloc_strategie(d)).replace(
+        "Analyse générée le 13 octobre 2026",
+        "Analyse générée le 13 octobre 2026 — mise à jour le 13 octobre 2026 (sept lots de copropriété distincts confirmés)")
 
     residuels = [m for m in re.findall(r"\{[a-z_][a-z_0-9]*\}", html) if m not in ("{s}", "{z}", "{x}", "{y}")]
     if residuels:
