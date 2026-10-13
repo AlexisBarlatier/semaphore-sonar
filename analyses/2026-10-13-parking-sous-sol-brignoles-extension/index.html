@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Place de parking en sous-sol, Brignoles — résidence récente</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">1 place de stationnement en sous-sol sécurisé — résidence livrée il y a 18 mois, Brignoles (83170)</p>
+  <p class="report-date">Analyse générée le 13 octobre 2026</p>
+  <p class="report-source">Source : Leboncoin — particulier (profil « surace ») — vente directe sans honoraires</p>
+  <div class="report-source-link"><a href="https://www.leboncoin.fr/ad/ventes_immobilieres/3135454276">https://www.leboncoin.fr/ad/ventes_immobilieres/3135454276</a></div>
+</header>
+
+<main>
+
+  <!-- === Bannière stratégie === -->
+  <div class="strategy-banner">
+    <span class="strategy-badge">Placement parking — une place, un loyer</span>
+    <p>Stratégie retenue : <strong>location longue durée de la place, à un prix qui couvre sa propre charge</strong> — SCI à l'IS (15 %)</p>
+  </div>
+
+  <!-- === Cartes de synthèse === -->
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix affiché</span>
+      <span class="card-value">11 500 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Nature</span>
+      <span class="card-value">1 place en sous-sol sécurisé (bip), résidence de 18 mois</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Loyer de marché retenu</span>
+      <span class="card-value">75 €/mois — bande relevée 50 à 80 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur de revente retenue</span>
+      <span class="card-value">10 000 € à 12 500 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient affiché</span>
+      <span class="card-value">13 425 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix demandé en mois de loyer</span>
+      <span class="card-value">153 mois — repère du groupe : 100</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rendement net d'IS (revient / valeur)</span>
+      <span class="card-value">4,44 % / 5,19 %</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Note</span>
+      <span class="card-value">3,0/10</span>
+    </div>
+  </section>
+
+  <!-- === Carte === -->
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.4057" data-lon="6.0614" data-address="Brignoles (83170) — coordonnées de la commune, l'annonce ne communique pas l'adresse exacte"></div>
+  </section>
+
+  <!-- === Attractivité === -->
+  <section class="attractiveness">
+    <h2>Attractivité — Brignoles, quartier Extension années 80-90</h2>
+    <p class="attractiveness-intro">Brignoles a rendu payant le stationnement du centre (1,70 €/h, en enclos et en souterrain) et compte 17 000 habitants : la demande de places privatives existe. Le quartier du lot n'est pas le centre ancien mais un secteur d'extension, où les résidences récentes ont leurs propres parkings : la tension y est plus faible, et le premier concurrent de cette place est l'offre abondante des autres places de la même résidence. La place est située près de l'ascenseur, avec un accès piéton direct — un vrai avantage de commercialité pour un locataire qui gare sa voiture et monte chez lui.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Tension stationnement</span>
+          <span class="attr-score"><strong>6/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:60%"></div></div>
+        <p class="attr-detail">Stationnement payant en enclos et en souterrain depuis 2025 (1,70 €/h) dans une commune de 17 000 habitants, mais quartier d'extension où les résidences récentes disposent de leurs propres parkings : tension réelle, pas pénurie.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Densite residentielle</span>
+          <span class="attr-score"><strong>8/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Résidence livrée il y a 18 mois et tissu collectif dense des extensions 1980-1990 : vivier de locataires sur place.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Accessibilite</span>
+          <span class="attr-score"><strong>8/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:80%"></div></div>
+        <p class="attr-detail">Sous-sol avec bip, place située près de l'ascenseur : entrée et sortie à pied directes, manœuvre sans contrainte signalée.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Securite acces</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Sous-sol sécurisé avec bip, circulations éclairées en commun. Ni vidéo ni gardiennage annoncés.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Protection</span>
+          <span class="attr-score"><strong>9/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:90%"></div></div>
+        <p class="attr-detail">Sous-sol : ni intempéries ni dégradations, hauteur sous poutre et canalisations à respecter. Bâti amortissable en SCI à l'IS.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+          <span class="attr-score"><strong>5/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Marché locatif relevé étroit (50 à 80 €/mois), place vide depuis la livraison, aucun bail ni locataire produit par le vendeur, délai de relocation inconnu.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> résident de la résidence cherchant une seconde place (véhicule supplémentaire, utilitaire, moto), riverain du quartier sans garage, professionnel du secteur ayant besoin d'un abri sûr pour un véhicule de service.</p>
+      <p><strong>Conclusion :</strong> Une place en sous-sol sécurisé dans une résidence de 18 mois, sans travaux, dans une commune où le stationnement en centre-ville est payant depuis 2025 : le produit est bon, le prix ne l'est pas. À 11 500 €, la place demande 153 mois de loyer pour être payée, quand notre repère est de 100 mois (7 500 € pour un loyer de 75 €). Il faudrait la louer 113 €/mois pour qu'elle couvre seulement sa charge, alors que le vendeur lui-même en annonce 100 € — et que la bande relevée à Brignoles s'arrête à 80 €/mois. Le prix auquel le dossier cesse d'être perdant est 7 334 €, soit 4 166 € de moins que ce qui est demandé.</p>
+    </div>
+  </section>
+
+  <!-- === Stratégie d'exploitation === -->
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Trois lectures du même lot : payer le prix affiché et parier sur un loyer de 100 €, payer le prix affiché au loyer réel du marché, ou payer le prix que le loyer réel finance. Les deux premières ne tiennent pas, la troisième fixe le plafond.</p>
+    <table class="strategy-table">
+      <thead>
+        <tr>
+          <th>Stratégie</th>
+          <th>Lots</th>
+          <th>Rendement net d'IS (revient)</th>
+          <th>Valeur revente</th>
+          <th>Ratio coût/valeur</th>
+          <th>Faisabilité</th>
+          <th>Risque</th>
+          <th>Adéquation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="strategy-row">
+          <td>Location longue durée <strong>au prix affiché</strong> — écartée</td>
+          <td>1</td>
+          <td>4,44 % (loyer 75 €)</td>
+          <td>11 500 €</td>
+          <td><span class="ratio-badge ratio-mauvais">1,167</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Relocation à trouver</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-low" style="width:42%"></div></div></div></td>
+        </tr>
+        <tr class="strategy-row">
+          <td>Location au prix affiché <strong>au loyer annoncé par le vendeur</strong> (100 €/mois) — écartée aussi</td>
+          <td>1</td>
+          <td>6,11 % (loyer 100 €)</td>
+          <td>11 500 €</td>
+          <td><span class="ratio-badge ratio-mauvais">1,167</span></td>
+          <td><span class="badge-faisabilite faisabilite-faible">Loyer non constaté</span></td>
+          <td><span class="badge-risque risque-eleve">Élevé</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-low" style="width:42%"></div></div></div></td>
+        </tr>
+        <tr class="strategy-row selected">
+          <td><strong>Location longue durée au prix du marché locatif et du cash-flow</strong> — sous 7 334 € de prix payé</td>
+          <td>1</td>
+          <td>6,14 % (loyer 75 €)</td>
+          <td>10 000 € à 12 500 €</td>
+          <td><span class="ratio-badge ratio-bon">0,820</span></td>
+          <td><span class="badge-faisabilite faisabilite-moyenne">Négociation de −35 %</span></td>
+          <td><span class="badge-risque risque-modere">Modéré</span></td>
+          <td><div class="adeq-cell"><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:58%"></div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="strategy-rationale">
+      <p>Le seul chiffre qui décide ici est le loyer, et personne ne le connaît : la place est vide, le vendeur n'a ni bail ni locataire, et la bande locale va de 50 à 80 €/mois. À 75 €/mois — le haut de cette bande, tenable seulement grâce au sous-sol sécurisé et à l'ascenseur — le prix d'équilibre est 7 334 €, et le plafond de doctrine du groupe pour une place en sous-sol est 10 800 € acte en main, soit 8 875 € de prix. Le prix demandé est au-dessus des deux, et l'écart n'est pas un malentendu de négociation : c'est le prix du marché local des places (11 000 à 13 000 €), que les loyers de cette commune ne portent pas.</p>
+    </div>
+  </section>
+
+  <!-- === Échelle des prix === -->
+  <section class="strategy-exploration">
+    <h2>Échelle des prix — ce que la place vaut au loyer de 75 €/mois</h2>
+    <p class="attractiveness-intro">Le rendement, le solde mensuel et la note sont recalculés par le moteur à chaque prix, loyer de marché retenu constant (75 €/mois), vacance 10 %. Le solde mensuel se lit sous la convention du groupe : frais d'acquisition sortis comptant, solde porté sur quinze ans, intérêts et assurance compris.</p>
+    <table class="comparison-table">
+      <thead>
+        <tr><th>Prix payé</th><th>Prix de revient</th><th>Net avant IS / revient</th><th>Net d'IS / revient</th><th>Solde mensuel net</th><th>Mois de loyer</th><th>Note</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>5 000 €</td><td class="num">6 925 €</td><td class="num">9,11 %</td><td class="num">8,19 %</td><td class="num">+13 €/mois</td><td class="num">67</td><td class="num">7,0/10</td></tr>
+          <tr><td>6 000 €</td><td class="num">7 925 €</td><td class="num">7,96 %</td><td class="num">7,21 %</td><td class="num">+7 €/mois</td><td class="num">80</td><td class="num">6,2/10</td></tr>
+          <tr><td>6 500 €</td><td class="num">8 425 €</td><td class="num">7,49 %</td><td class="num">6,81 %</td><td class="num">+4 €/mois</td><td class="num">87</td><td class="num">5,8/10</td></tr>
+          <tr><td>7 000 €</td><td class="num">8 925 €</td><td class="num">7,07 %</td><td class="num">6,46 %</td><td class="num">+1 €/mois</td><td class="num">93</td><td class="num">5,4/10</td></tr>
+          <tr><td>7 500 €</td><td class="num">9 425 €</td><td class="num">6,69 %</td><td class="num">6,14 %</td><td class="num">−3 €/mois</td><td class="num">100</td><td class="num">5,0/10</td></tr>
+          <tr><td>8 000 €</td><td class="num">9 925 €</td><td class="num">6,35 %</td><td class="num">5,85 %</td><td class="num">−6 €/mois</td><td class="num">107</td><td class="num">4,7/10</td></tr>
+          <tr><td>9 000 €</td><td class="num">10 925 €</td><td class="num">5,77 %</td><td class="num">5,36 %</td><td class="num">−12 €/mois</td><td class="num">120</td><td class="num">4,0/10</td></tr>
+          <tr><td>10 000 €</td><td class="num">11 925 €</td><td class="num">5,29 %</td><td class="num">4,95 %</td><td class="num">−19 €/mois</td><td class="num">133</td><td class="num">3,4/10</td></tr>
+          <tr><td>10 800 €</td><td class="num">12 725 €</td><td class="num">4,96 %</td><td class="num">4,66 %</td><td class="num">−24 €/mois</td><td class="num">144</td><td class="num">3,2/10</td></tr>
+          <tr class="highlight"><td>11 500 €</td><td class="num">13 425 €</td><td class="num">4,70 %</td><td class="num">4,44 %</td><td class="num">−28 €/mois</td><td class="num">153</td><td class="num">3,0/10</td></tr>
+      </tbody>
+    </table>
+    <p class="attractiveness-intro"><strong>Trois ancres, toutes sous le prix demandé :</strong> le plafond de doctrine du groupe pour une place en sous-sol (10 800 € acte en main, soit 8 875 € de prix), le repère des 100 mois de loyer (7 500 €), et le prix auquel le net d'IS couvre la charge du lot, soit 7 334 €. Le prix affiché de 11 500 € est au-dessus des trois, et le plancher de rendement de la branche parking (8 % net d'IS sur revient) n'est atteint qu'à 5 100 € de prix payé — un prix que le vendeur n'acceptera pas sur une place qu'il affiche 11 500 €.</p>
+    <p class="attractiveness-intro">Sur cette place, <strong>les charges fixes pèsent plus lourd que le prix d'achat</strong> : 160 €/an de copropriété et de taxe foncière pour 900 €/an de loyers, soit 17,8 %. Notre seuil de refus est de 15 %. Si l'appel de charges ressort à 150 €/an plutôt que 80 €, le prix d'équilibre perd encore 732 €, sans qu'aucun chiffre du vendeur ne change.</p>
+  </section>
+
+  <!-- === Relevé de loyers === -->
+  <section class="strategy-exploration">
+    <h2>Relevé de loyers — ce que le marché dit, ce que le vendeur annonce</h2>
+    <table class="comparison-table">
+      <thead>
+        <tr><th>Source</th><th>Loyer</th><th>Détail</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>Fiche place Caramy (Brignoles, sous-sol sécurisé, résidence neuve)</td><td class="num"><strong>75 €/mois</strong></td><td>8 baux écrits à 55 €, 9e place signée à 70 €, loyer de marché retenu 75 € (relevé 27/08/2026)</td></tr>
+          <tr><td>Foncia — résidence Ramba Liberté</td><td class="num"><strong>80 €/mois CC</strong></td><td>annonce de location, charges comprises</td></tr>
+          <tr><td>leboncoin — parking, quartier Extension années 50-70</td><td class="num"><strong>80 €/mois</strong></td><td>annonce de location, 10/2026</td></tr>
+          <tr><td>SeLoger — agence REX, centre vieille ville</td><td class="num"><strong>55 €/mois</strong></td><td>annonce de location, 10/2026</td></tr>
+          <tr><td>Zimo — place en sous-sol sécurisée avec télécommande</td><td class="num"><strong>50 €/mois</strong></td><td>annonce de location, 10/2026</td></tr>
+          <tr><td>Vendeur du lot étudié</td><td class="num"><strong>100 €/mois</strong></td><td>annonce seulement — aucun bail, aucun locataire, aucune annonce locative publiée</td></tr>
+      </tbody>
+    </table>
+    <p class="attractiveness-intro">La bande de marché s'arrête à 80 €/mois, charges comprises, et le dernier bail signé dans la commune sur un produit comparable (place Caramy, sous-sol sécurisé, résidence neuve) l'a été à 70 €/mois. Les 100 €/mois de l'annonce ne sont pas adossés à un locataire : c'est une fourchette de commercial, pas un loyer. Au loyer annoncé, le dossier reste d'ailleurs négatif : 894 € d'EBE, 6,11 % de rendement net d'IS sur revient et un solde mensuel de −10 € après charge du lot.</p>
+  </section>
+
+  <!-- === Fiche d'identité === -->
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+      <tbody>
+        <tr><th>Adresse</th><td>Brignoles (83170), quartier « Extension années 80-90 », résidence livrée il y a 18 mois. Adresse exacte et numéro de rue non communiqués dans l'annonce ; la place porte le n° 1015 au sol.</td></tr>
+        <tr><th>Type</th><td>1 place de stationnement en sous-sol sécurisé, accès par bip, place située près de l'ascenseur. Béton brut, trois côtés fermés par des murs, poutre porteuse en travers du plafond, canalisations au fond et au mur droit, chemin de câbles suspendu.</td></tr>
+        <tr><th>Vendeur</th><td>Particulier (profil « surace », membre depuis 2014, numéro vérifié) — vente directe, sans honoraires d'agence. Annonce affichée « Urgent », avec mention « Baisse de prix », 25 favoris, disponibilité annoncée 11/2026.</td></tr>
+        <tr><th>Structure du lot</th><td>Non communiquée : lot de copropriété autonome ou rattaché à un logement, nombre de tantièmes inconnu. La location à un non-résident et la revente séparée en dépendent.</td></tr>
+        <tr><th>Occupation</th><td>Aucune : place vendue libre, sans locataire. Le revenu encaissé à l'achat est nul, et la relocation est à trouver.</td></tr>
+        <tr><th>Loyer de marché retenu</th><td>75 €/mois — haut de la bande relevée à Brignoles (50 à 80 €/mois) pour un sous-sol sécurisé récent. Le vendeur annonce 100 €/mois sans bail : non retenu.</td></tr>
+        <tr><th>Charges de copropriété</th><td>80 €/an retenus (estimé — fourchette 50 à 150 €/an pour un sous-sol). Non communiquées dans l'annonce : l'appel de charges est à exiger.</td></tr>
+        <tr><th>Taxe foncière</th><td>80 €/an — montant saisi par le vendeur dans l'annonce, à recouper avec l'avis de taxe foncière.</td></tr>
+        <tr><th>Charges fixes / loyers</th><td>160 €/an pour 900 €/an de loyers, soit 17,78 % : au-dessus du seuil de 15 % au-delà duquel un petit lot se refuse. C'est le premier point à vérifier, avant même le prix.</td></tr>
+        <tr><th>Amortissement</th><td>Bâti amortissable (sous-sol) : 403 €/an, soit 90 % du prix de revient sur 30 ans. L'IS est donc de 34 € au scénario de base, et non de 15 % de l'EBE.</td></tr>
+        <tr><th>Travaux</th><td>0 € — place en état dans une résidence récente. Le boxage évoqué par le vendeur (porte à poser, 3 000 à 5 000 €) suppose une autorisation d'assemblée générale qui n'existe pas à ce jour : hors offre.</td></tr>
+        <tr><th>DPE</th><td>Non applicable (stationnement).</td></tr>
+        <tr><th>Valeur retenue</th><td>11 500 € net vendeur, fourchette 10 000 € à 12 500 € — comparables places en sous-sol à Brignoles (11 000 à 13 000 €/place, médiane 12 000 €), avec la décote retenue pour une place vendue seule hors centre.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Projections financières === -->
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+    <p class="attractiveness-intro">Frais d'acquisition 1 925 €, aucun travaux, charges 160 €/an (copropriété 80 € estimée + taxe foncière 80 € affichée) et provision travaux de 2,5 % des loyers. Place en sous-sol : le bâti est amortissable (90 % du prix de revient sur 30 ans), l'IS porte donc sur le résultat après amortissement. Les trois scénarios balaient la vacance et le loyer de la branche parking, au prix affiché.</p>
+
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Loyer 75 €/mois (marché relevé) — vacance 10 % — prix affiché 11 500 €</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Prix payé</td><td class="num">11 500 €</td></tr>
+            <tr><td>Loyer retenu</td><td class="num">75 €/mois</td></tr>
+            <tr><td>Revenu brut annuel</td><td class="num">900 €</td></tr>
+            <tr><td>Vacance locative (10 %)</td><td class="num">−90 €</td></tr>
+            <tr class="secondary"><td>Charges (copropriété 80 € + TF 80 € + provision 2,5 %)</td><td class="num">−182 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">631 €</td></tr>
+            <tr><td>Amortissement du bâti (30 ans)</td><td class="num">−403 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">228 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−34 €</td></tr>
+            <tr><td>CF net annuel (exploitation)</td><td class="num">596 €</td></tr>
+            <tr class="highlight"><td>Solde mensuel net, charge du lot déduite</td><td class="num">−28 €/mois</td></tr>
+            <tr><td>Rendement net d'IS sur revient</td><td class="num">4,44 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Best</h3>
+        <p class="scenario-subtitle">Loyer 82 €/mois (+10 %) — vacance 5 % — relocation immédiate au prix affiché 11 500 €</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Prix payé</td><td class="num">11 500 €</td></tr>
+            <tr><td>Loyer retenu</td><td class="num">82 €/mois</td></tr>
+            <tr><td>Revenu brut annuel</td><td class="num">990 €</td></tr>
+            <tr><td>Vacance locative (5 %)</td><td class="num">−50 €</td></tr>
+            <tr class="secondary"><td>Charges (copropriété 80 € + TF 80 € + provision 2,5 %)</td><td class="num">−185 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">758 €</td></tr>
+            <tr><td>Amortissement du bâti (30 ans)</td><td class="num">−403 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">355 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−53 €</td></tr>
+            <tr><td>CF net annuel (exploitation)</td><td class="num">705 €</td></tr>
+            <tr class="highlight"><td>Solde mensuel net, charge du lot déduite</td><td class="num">−19 €/mois</td></tr>
+            <tr><td>Rendement net d'IS sur revient</td><td class="num">5,25 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Worst</h3>
+        <p class="scenario-subtitle">Loyer 60 €/mois (−20 %) — vacance 25 % (trois mois de vide par an) — prix affiché 11 500 €</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Prix payé</td><td class="num">11 500 €</td></tr>
+            <tr><td>Loyer retenu</td><td class="num">60 €/mois</td></tr>
+            <tr><td>Revenu brut annuel</td><td class="num">720 €</td></tr>
+            <tr><td>Vacance locative (25 %)</td><td class="num">−180 €</td></tr>
+            <tr class="secondary"><td>Charges (copropriété 80 € + TF 80 € + provision 2,5 %)</td><td class="num">−178 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">368 €</td></tr>
+            <tr><td>Amortissement du bâti (30 ans)</td><td class="num">−403 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">-35 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−0 €</td></tr>
+            <tr><td>CF net annuel (exploitation)</td><td class="num">368 €</td></tr>
+            <tr class="highlight"><td>Solde mensuel net, charge du lot déduite</td><td class="num">−47 €/mois</td></tr>
+            <tr><td>Rendement net d'IS sur revient</td><td class="num">2,74 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projection-summary">
+      <h3>Synthèse comparative — au prix affiché de 11 500 €</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Indicateur</th><th>Base — 75/mois</th><th>Best — 82,5/mois</th><th>Worst — 60/mois</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Loyer retenu</td><td class="num">75 €/mois</td><td class="num">82 €/mois</td><td class="num">60 €/mois</td></tr>
+          <tr><td>EBE avant IS</td><td class="num">631 €</td><td class="num">758 €</td><td class="num">368 €</td></tr>
+          <tr><td>IS</td><td class="num">34 €</td><td class="num">53 €</td><td class="num">0 €</td></tr>
+          <tr><td>Net après IS / an</td><td class="num">596 €</td><td class="num">705 €</td><td class="num">368 €</td></tr>
+          <tr><td>Solde mensuel net</td><td class="num">−28 €/mois</td><td class="num">−19 €/mois</td><td class="num">−47 €/mois</td></tr>
+          <tr><td>Rendement net d'IS sur revient</td><td class="num">4,44 %</td><td class="num">5,25 %</td><td class="num">2,74 %</td></tr>
+        </tbody>
+      </table>
+      <p class="attractiveness-intro">Aucun des trois scénarios ne couvre la charge du lot : la meilleure hypothèse, un loyer 10 % au-dessus du marché haut avec relocation immédiate, laisse encore −19 €/mois à notre charge. Le dossier ne se sauve pas par l'exploitation, seulement par le prix.</p>
+    </div>
+  </section>
+
+  <!-- === Matrice de risques === -->
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Facteur de risque</th>
+          <th>Détail</th>
+          <th>Sévérité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Loyer de 100 €/mois annoncé sans aucun bail</td>
+          <td>« Peut facilement se louer dans les 100 € » : aucun locataire, aucun bail, aucune annonce locative produite. La bande relevée à Brignoles est de 50 à 80 €/mois, sous-sol sécurisé inclus. Le prix se calcule sur le marché, pas sur la phrase du vendeur.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Poids des charges fixes sur 900 € de loyers</td>
+          <td>Charges de copropriété non communiquées (80 €/an estimés) et taxe foncière de 80 €/an affichée : 160 €/an, soit 17,8 % des loyers annuels — au-dessus du seuil de 15 % au-delà duquel un petit lot se refuse. Appel de charges et avis de taxe foncière à exiger avant toute offre.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Lot distinct ou rattaché au logement, et règlement de copropriété</td>
+          <td>L'annonce ne donne ni numéro de lot, ni tantièmes, ni le caractère autonome de la place. Un lot rattaché à un logement ne se loue pas séparément et ne se revend pas seul ; le règlement doit confirmer la location à un non-résident.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Appel de fonds de copropriété — résidence de 18 mois</td>
+          <td>Les résidences récentes votent souvent les travaux de parachèvement (étanchéité de dalle, ventilation, éclairage) dans leurs premières assemblées. Un appel de 500 à 1 500 € par place efface un à deux ans de loyer.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Vacance d'entrée et marché locatif étroit</td>
+          <td>Place vendue vide : aucun revenu avant la relocation, et le délai n'est pas connu. Le produit est binaire — trois mois de vide représentent 25 % de l'année. Rien ne prouve que le haut de la bande se signe ici.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Liquidité à la revente</td>
+          <td>Frais d'acquisition de l'ordre de 17 % du prix sur ce ticket, et 20 à 25 % sur un aller-retour : un parking s'achète pour la rente, jamais pour une marge de revente.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Boxage annoncé par le vendeur</td>
+          <td>« Il sera sans doute boxable, il suffira de faire passer cela en AG » : affirmation non vérifiée. La photo montre trois côtés fermés (favorable à une porte) mais une poutre porteuse en travers et des canalisations à laisser accessibles. On n'achète pas sur une autorisation à venir ; le budget d'une porte (3 000 à 5 000 €) reste hors offre.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+        <tr>
+          <td>Droits de mutation : première mutation ou revente</td>
+          <td>Résidence achevée depuis 18 mois : le droit réduit n'est attaché qu'à la première mutation dans les cinq ans. Si le vendeur tient son lot d'un précédent acquéreur, le droit commun s'applique — environ 600 € d'écart sur ce ticket.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- === Verdict === -->
+  <section class="verdict pass">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>On ne paie pas ce prix.</strong> À 11 500 €, la place produit 631 € d'EBE et 596 € après IS, soit 4,44 % de rendement net sur un acte en main de 13 425 € — la moitié du plancher de 8 % de la branche — pour un cash-flow de −28 €/mois, charge du lot déduite. La place est saine, récente, sécurisée, sans travaux : le refus porte sur le prix, rien d'autre. À 153 mois de loyer, ce lot se paie au niveau du marché local des places, mais pas des loyers de Brignoles.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Prix plafond : 5 100 € de prix payé</strong> (7 025 € acte en main, frais compris) — c'est le prix au-delà duquel la note ne peut plus remonter, le rendement net d'IS passant sous le plancher de 8 % de la branche. Le calcul retient les frais d'acquisition réels du barème notaire, qui ne baissent pas avec le prix : à ce prix, la note atteint 6,5 (« à acheter »), et c'est donc à la fois le prix plafond et le prix cible. Au prix demandé, le rendement net d'IS sur revient est de 4,44 % pour un plancher de 8 %, et le bien est payé 1,17 fois sa valeur de revente retenue.</p>
+      <p><strong>Ce que le dossier aurait demandé :</strong> 7 334 € de prix payé pour que le net d'IS couvre la charge du lot à 75/mois, soit 4 166 € sous le prix affiché (36,23 %). Un tel écart n'est pas une négociation ordinaire : il place le vendeur sous la valeur de marché de son propre lot, sur la base des loyers constatés dans sa commune. C'est la raison pour laquelle la fiche conclut au refus plutôt qu'à une offre.</p>
+      <p><strong>Ce qui ferait rouvrir le dossier :</strong></p>
+      <ul>
+        <li>Un bail écrit, ou une promesse de bail, à 100 €/mois ou plus, avec un locataire identifié : cela déplacerait le prix d'équilibre vers 10 089 € et rapprocherait le dossier de la valeur demandée, sans l'atteindre.</li>
+        <li>Un prix ramené à 7 334 € net vendeur. En dessous de 8 875 €, la place entre même dans le plafond de doctrine du groupe pour un sous-sol.</li>
+        <li>Des charges de copropriété confirmées sous 80 €/an et une taxe foncière réelle : sur 900 € de loyers, chaque tranche de 300 € de charges annuelles coûte environ 27 €/mois de loyer, donc du prix.</li>
+      </ul>
+      <p><strong>Pièces à exiger avant toute reprise du contact :</strong> numéro de lot et tantièmes, appel de charges et budget prévisionnel, procès-verbaux des assemblées depuis la livraison, avis de taxe foncière, clause du règlement sur la location à un non-résident, ancienneté du titre du vendeur (droit réduit ou droit commun).</p>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 %) — amortissement du bâti 403 €/an, frais d'acquisition 1 925 €, aucun travaux</p>
+      <p><strong>Hypothèses retenues :</strong> loyer 75 €/mois, vacance 10 % en base, charges 160 €/an, amortissement sur 30 ans, placement de la réserve à 2,84 %</p>
+      <p><strong>Note :</strong> 3,0/10 — à fuir</p>
+    </div>
+  </section>
+
+  <!-- === Signature === -->
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
