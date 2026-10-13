@@ -569,14 +569,19 @@ def main():
           "soit 757 €/mois pour 63 m² — un loyer en place au-dessus de la moyenne communale"],
          ["58 m², Champ de Mars", "900 €/mois", "annonce du 13/10/2026 — surface plus petite, même quartier"],
          ["63 m², Toulon", "840 € CC", "annonce de location du 13/10/2026"],
+         ["T4 de 64 m² (63,85 m² loi Boutin) rénové, 3 chambres, Champs de Mars / Saint-Jean-du-Var, "
+          "3e étage, cave, balcon ouest, loggia fermée — Ascenseur : non", "850 € HC + 100 € de charges",
+          "annonce Ageris réf LOC-T4NYM relevée le 13/10/2026 — comparable strict du dossier à l'ascenseur près "
+          "(notre bien en a un, ce qui vaut une prime, pas un changement d'échelle)"],
          ["T4 de 67 m², Toulon", "1 020 €/mois", "annonce de particulier du 13/10/2026"],
          ["Cible colocation — chambre meublée, Toulon", "450 € CC",
           "relevé du 28/09/2026 : 13 annonces, masse principale 420 à 520 € ; Champ de Mars 480 € pour 11 m²"]])
     t["releve"] += ("\n    <p class=\"attractiveness-intro\"><strong>Ce que le relevé établit :</strong> le loyer "
-        "encaissé n'est pas sous le marché — il est au-dessus de la moyenne communale au mètre carré. Il n'y a "
-        "donc pas de rattrapage à attendre d'une relocation nue (environ 850 à 900 €, une fois le bail terminé) : "
-        "la seule voie de revenu supplémentaire est la colocation, chiffrée à 1 350 €/mois, et elle est verrouillée "
-        "par le bail "
+        "encaissé n'est pas sous le marché — il est au-dessus de la moyenne communale au mètre carré, et à "
+        "50 € seulement du comparable strict du quartier (un T4 de 64 m² rénové, trois chambres, cave et balcon, "
+        "loué 850 € hors charges). Il n'y a donc pas de rattrapage à attendre d'une relocation nue (850 à 900 €, "
+        "une fois le bail terminé) : 50 € par mois, soit 600 € par an, ne déplacent aucun prix. La seule voie de "
+        "revenu supplémentaire est la colocation, chiffrée à 1 350 €/mois, et elle est verrouillée par le bail "
         "jusqu'en septembre 2029.</p>")
 
     d = prepare(lat, lon, map_addr, adresse, t["lecture"], t["conf"], t["releve"], t["scenarios"],
