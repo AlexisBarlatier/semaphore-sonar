@@ -169,14 +169,29 @@ RECORD = {
                           "isolation) et sur le délai de relocation",
             },
             {
-                "strategie": "Revente à l'unité des cinq lots après division",
+                "strategie": "Conservation des cinq lots, revente des deux T2 créés",
                 "lots": 5,
-                "performance": "Le mètre carré d'appartement se négocie 2 200 à 2 400 € à Brignoles contre "
-                               "685 €/m² payés pour l'ensemble : la marge théorique est là, la faisabilité n'y est pas",
-                "valeur_sortie": "Dépend d'une division en lots de copropriété, qui suppose l'accord de la "
-                                 "copropriété et un géomètre",
-                "faisabilite": "Longue et incertaine : l'immeuble est en copropriété avec l'immeuble accolé",
-                "risque": "élevé — c'est une opération de marchand de biens déguisée en immeuble de rapport",
+                "performance": "Le locatif reste à 5,49 % net d'IS, mais la création des deux T2 dégage un cash "
+                               "de l'ordre de 115 000 € de marge brute pour 52 500 € de travaux et de division",
+                "valeur_sortie": "176 000 € attendus de la revente des deux T2 créés (2 × 88 000 €, DVF des T2 "
+                                 "de 30 à 60 m² à Brignoles), nets de 8 800 € de frais de vente",
+                "faisabilite": "Elle repose entièrement sur trois autorisations : le PLU, le règlement de la "
+                               "copropriété partagée avec l'immeuble accolé, et la faisabilité technique des "
+                               "réseaux et des évacuations",
+                "risque": "modéré sur la marge, élevé sur la faisabilité : sans les autorisations, il ne reste "
+                          "que l'immeuble loué du scénario base",
+            },
+            {
+                "strategie": "Revente à l'unité des sept lots après division",
+                "lots": 7,
+                "performance": "ROI de 15,4 % à 18,9 % selon le régime de droits, mais ramené à 0,3 % en stress "
+                               "et négatif si la sortie tombe à 580 000 € : la marge tient à une seule hypothèse",
+                "valeur_sortie": "626 000 € attendus des sept lots, contre 450 000 € si l'on revend l'existant "
+                                 "sans créer les T2, ce qui donne une perte de 7 000 à 24 000 €",
+                "faisabilite": "Trente mois de portage, une division, un diagnostic technique global et des "
+                               "locataires à libérer lot par lot",
+                "risque": "élevé — marché de sortie étroit (191 ventes de T2 en deux ans à Brignoles, huit par "
+                          "mois toutes surfaces confondues)",
             },
         ],
         "attractivite": [

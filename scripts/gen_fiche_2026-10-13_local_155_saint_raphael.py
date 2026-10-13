@@ -199,7 +199,7 @@ def bloc_strategie(d):
         ratio_cls = "ratio-bon" if ratio < 0.95 else ("ratio-ok" if ratio <= 1.05 else "ratio-mauvais")
         badge = {"modéré": ("risque-modere", "Modéré"), "élevé": ("risque-eleve", "Élevé"),
                  "faible": ("risque-faible", "Faible")}.get(st["risque"], ("risque-modere", "Modéré"))
-        fais = "faisabilite-haute" if st["faisabilite"].startswith("Immédiate") else "faisabilite-basse"
+        fais = "faisabilite-haute" if st["faisabilite"].startswith("Immédiate") else "faisabilite-faible"
         sel = ' class="strategy-row selected"' if st["retenue"] else ' class="strategy-row"'
         lignes.append(
             f"        <tr{sel}>\n          <td>{st['strategie']}</td>\n          <td>{st['lots']}</td>\n"
@@ -345,7 +345,7 @@ TEMPLATE = """<!DOCTYPE html>
   <section class="strategy-exploration">
     <h2>Stratégie d'exploitation</h2>
     <p class="attractiveness-intro">{intro_strategie}</p>
-{strategie}
+{strategie_html}
     <div class="strategy-rationale">
       <p>{conf}</p>
     </div>
@@ -613,7 +613,7 @@ def main():
         cartes=bloc_cartes(d), lat=lat, lon=lon, map_addr=map_addr,
         quartier=t["quartier"], intro_attractivite=t["intro_attractivite"],
         attractivite=bloc_attractivite(d), profil=t["profil"], lecture=t["lecture"],
-        intro_strategie=t["intro_strategie"], conf=t["conf"],
+        intro_strategie=t["intro_strategie"], conf=t["conf"], strategie_html=bloc_strategie(d),
         releve=t["releve"], grille=bloc_grille_loyer(d), identite=bloc_identite(d),
         intro_projections=t["intro_projections"], projections=projections,
         risques=bloc_risques(d), verdict_cls=d["classe"], stance=t["stance"],
@@ -625,7 +625,7 @@ def main():
         perf_score=nfr(d["comp"]["s_performance"], 1), secu_score=nfr(d["comp"]["s_securite"], 1),
         adeq_score=nfr(d["comp"]["s_adequation"], 1), risque_score=nfr(d["comp"]["s_risque"], 1),
         prix_affiche=eur(d["prix"]),
-    ).replace("{strategie}", bloc_strategie(d))
+    )
 
     residuels = [m for m in re.findall(r"\{[a-z_][a-z_0-9]*\}", html) if m not in ("{s}", "{z}", "{x}", "{y}")]
     if residuels:
