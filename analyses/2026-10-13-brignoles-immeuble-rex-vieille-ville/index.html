@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse — Immeuble de rapport 460 m² : 4 T2 loués, local commercial de 140 m² et deux T2 à créer — Brignoles centre</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Analyse d'investissement</h1>
+  <p class="report-address">Immeuble de rapport 460 m² — centre vieille ville, Brignoles (83170)</p>
+  <p class="report-date">Analyse générée le 13 octobre 2026</p>
+  <p class="report-source">Source : SeLoger — AGENCE REX, Brignoles (37 square Saint-Louis, RCS 502760127) — mandat réf. 2189P, honoraires à la charge du vendeur. L'immeuble est géré par l'agence, ce qui explique la qualité du suivi locatif annoncé (« locataires à jour »)</p>
+  <div class="report-source-link"><a href="https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/brignoles-83170/26VY29CFCY11">https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/brignoles-83170/26VY29CFCY11</a></div>
+</header>
+
+<main>
+
+  <div class="strategy-banner">
+    <span class="strategy-badge">Immeuble de rapport loué — 4 T2 et un local commercial</span>
+    <p>Stratégie retenue : <strong>conservation de l'immeuble loué, création des deux T2 à l'étude</strong> — SCI à l'IS (15 %)</p>
+  </div>
+
+  <section class="summary-cards">
+    <div class="card">
+      <span class="card-label">Prix affiché</span>
+      <span class="card-value">315 000 € (685 €/m²)</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Prix de revient</span>
+      <span class="card-value">340 200 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Valeur de capitalisation retenue</span>
+      <span class="card-value">290 000 €</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Loyers encaissés</span>
+      <span class="card-value">2 219 €/mois (26 630 €/an, tous lots)</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Rendement net d'IS (revient / valeur)</span>
+      <span class="card-value">5,49 % / 6,44 %</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Ratio coût / valeur</span>
+      <span class="card-value">1,173</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Note</span>
+      <span class="card-value">4,7/10</span>
+    </div>
+    <div class="card">
+      <span class="card-label">Verdict</span>
+      <span class="card-value">À négocier</span>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <h2>Localisation</h2>
+    <div id="map-container" data-lat="43.4058" data-lon="6.0616" data-address="Centre vieille ville, Brignoles (83170) — coordonnées du centre ancien, adresse exacte non communiquée"></div>
+  </section>
+
+  <section class="attractiveness">
+    <h2>Attractivité — centre vieille ville, Brignoles</h2>
+    <p class="attractiveness-intro">Brignoles, ville-centre du centre Var, avec son bassin d'emploi administratif, hospitalier et commercial : cinq lots loués, des locataires annoncés à jour, un collège public et un collège privé à moins de 900 m, et des parkings à proximité selon l'annonce. C'est un immeuble de rendement dans un marché profond mais peu dynamique — la médiane des appartements y est de 2 393 €/m² sur 419 mutations, avec des valeurs très dispersées. On n'y vient pas chercher la plus-value : on y vient chercher du loyer.</p>
+    <div class="attractiveness-grid">
+      <div class="attr-card">
+        <span class="attr-label">Transports</span>
+          <span class="attr-score"><strong>5/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Centre de Brignoles : la commune est traversée par la nationale 7 et desservie par les cars régionaux ; pas de gare, les déplacements se font en voiture.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Commerces</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Cœur de la vieille ville, proche des parkings et des écoles selon l'annonce : commerces et services à pied, ce qui porte la demande locative des T2.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Ecoles</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Collège public Jean Moulin à 870 m et collège privé Sainte-Jeanne-d'Arc à 409 m, écoles primaires publiques et privées dans le même rayon : c'est un secteur pavé pour les familles, mais aussi pour les personnels.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Securite</span>
+          <span class="attr-score"><strong>5/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Vieille ville ancienne, bâti dense et hétérogène : cadre de vie correct mais sans marque de standing, et un immeuble de six étages à rafraîchir.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Demande locative</span>
+          <span class="attr-score"><strong>7/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:70%"></div></div>
+        <p class="attr-detail">Les cinq lots sont loués et les locataires à jour : la demande existe et elle est constatée sur ce bien. Brignoles est la ville-centre du centre Var, avec un bassin d'emploi administratif, hospitalier et commercial qui alimente le locatif courant.</p>
+      </div>
+      <div class="attr-card">
+        <span class="attr-label">Dynamisme</span>
+          <span class="attr-score"><strong>5/10</strong></span>
+        <div class="attr-bar-track"><div class="attr-bar-fill" style="width:50%"></div></div>
+        <p class="attr-detail">Marché profond mais peu dynamique : médiane DVF 2 393 €/m² pour les appartements sur 419 mutations, avec des valeurs hétérogènes (Q1 1 811 / Q3 3 214). C'est un marché de rendement, pas de plus-value rapide.</p>
+      </div>
+    </div>
+    <div class="attractiveness-summary">
+      <p><strong>Profil locataire cible :</strong> locataires de logements courants (jeunes actifs, personnels du secteur public et de santé, familles monoparentales) pour les T2, et une activité de service ou de proximité pour le local commercial de plus de 140 m², dont la nature n'est pas connue.</p>
+      <p><strong>Conclusion :</strong> 8,45 % de rendement brut affiché, 5,49 % net après IS : tout l'écart est dans les charges, la vacance et l'impôt — et dans un prix de revient qui dépasse de 17 % la valeur de capitalisation des loyers. Le dossier passe le seuil de rendement de 0,5 point, ce qui veut dire qu'il ne le passe pas vraiment : une charge de copropriété mal annoncée, un lot vide, et le voilà sous la barre. Ce qui peut le changer en mieux : la répartition des loyers (si le local commercial est loué sous sa valeur, il y a une marge) et les deux T2 à créer. Ce qui peut le casser : le détail des baux et l'état réel des six étages.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Stratégie d'exploitation</h2>
+    <p class="attractiveness-intro">Trois lectures : conserver l'immeuble tel qu'il est loué, créer les deux T2 annoncés comme possibles, ou revendre à l'unité après division. La première est la seule qui existe aujourd'hui ; la deuxième est un projet sans plan ni devis ; la troisième se heurte à une copropriété partagée avec l'immeuble accolé.</p>
+conservation de l'immeuble loué, création des deux T2 à l'étude
+    <div class="strategy-rationale">
+      <p>Le dossier est simple à lire : 26 630 € de loyers encaissés, 315 000 € demandés, 8,45 % de rendement brut — personne n'affiche ça dans le Var. Mais le brut n'est pas le net : après 5 % de vacance, 3 465 € de charges fixes, une provision d'entretien de 2 000 € et l'IS, il reste 1 557 € par mois, soit 5,49 % du prix de revient pour un plancher de 5 %. Et comme le prix de revient dépasse de 17 % la valeur de capitalisation des loyers, la note ne peut pas s'élever. Deux chiffres décideront de tout : la répartition des loyers par lot, et l'état réel de l'immeuble.</p>
+    </div>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Relevé de marché — ce qui fonde le loyer retenu</h2>
+    <table class="comparison-table">
+      <thead>
+        <tr><th>Source</th><th>Loyer / repère</th><th>Détail</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>Loyers encaissés sur l'immeuble (total annoncé)</td><td class="num">26 630 €/an</td><td class="num">cinq lots : 4 T2 et un local commercial de plus de 140 m² — « locataires à jour »</td></tr>
+          <tr><td>T2 de 34,7 m², centre de Brignoles (relevé du dépôt)</td><td class="num">490 €/mois</td><td class="num">soit 14,1 €/m² — loyer nu de référence sur la commune</td></tr>
+          <tr><td>T2 de 38 m², Brignoles (annonce de particulier)</td><td class="num">500 €/mois</td><td class="num">comparable direct des T2 de l'immeuble</td></tr>
+          <tr><td>T2 de 43,8 m², Le Luc (bail d'avril 2025)</td><td class="num">520 €/mois</td><td class="num">commune voisine, même bassin de vie</td></tr>
+          <tr><td>T2 de 28 m² meublé, Brignoles centre</td><td class="num">590 €/mois</td><td class="num">20,8 €/m² — loyer meublé, non comparable directement</td></tr>
+          <tr><td>DVF 2024-2025, appartements Brignoles (83170)</td><td class="num">2 393 €/m² médiane</td><td class="num">n = 419 mutations, Q1 1 811 / Q3 3 214 ; 2 200 €/m² pour les 3-5 pièces de 60 à 120 m²</td></tr>
+          <tr><td>DVF 2024-2025, locaux commerciaux Brignoles</td><td class="num">2 000 €/m² médiane</td><td class="num">n = 57, surface médiane 118 m², Q1 1 220 / Q3 4 369</td></tr>
+      </tbody>
+    </table>
+    <p class="attractiveness-intro"><strong>Ce que le relevé établit :</strong> si les quatre T2 sont loués au marché — 490 à 520 € par mois —, ils absorbent à eux seuls 1 850 à 2 000 € des 2 219 € mensuels, et il ne reste que 220 à 370 € par mois pour un local commercial de plus de 140 m², soit 1,6 à 2,6 €/m². Deux lectures possibles, et elles sont opposées : soit ce local est loué très en dessous de sa valeur, et c'est une marge de revalorisation à l'échéance du bail ; soit ce sont les T2 qui sont en dessous, et il n'y a rien à reprendre. C'est la première question à poser à l'agence, avant même de visiter.</p>
+  </section>
+
+  <section class="strategy-exploration">
+    <h2>Sensibilité au loyer mensuel — prix affiché de 315 000 €</h2>
+    <p class="attractiveness-intro">Chaque ligne est recalculée par le moteur à partir du même lot, vacance 5 %, charges inchangées. Le solde mensuel se lit sous la convention du groupe : frais d'acquisition sortis comptants, solde du prix porté sur quinze ans, intérêts et assurance compris. La dernière ligne montre la cible de colocation, hors bail en place.</p>
+    <table class="comparison-table">
+      <thead>
+        <tr><th>Loyer mensuel</th><th>EBE / an</th><th>Net après IS</th><th>Solde mensuel net</th><th>Rendement net sur revient</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>1 800 €/mois</td><td class="num">15 521 €</td><td class="num">14 724 €</td><td class="num">−908 €/mois</td><td class="num">4,33 %</td></tr>
+          <tr><td>2 000 €/mois</td><td class="num">17 746 €</td><td class="num">16 615 €</td><td class="num">−750 €/mois</td><td class="num">4,88 %</td></tr>
+          <tr class="highlight"><td>2 219 €/mois</td><td class="num">20 185 €</td><td class="num">18 688 €</td><td class="num">−578 €/mois</td><td class="num">5,49 %</td></tr>
+          <tr><td>2 600 €/mois</td><td class="num">24 421 €</td><td class="num">22 289 €</td><td class="num">−278 €/mois</td><td class="num">6,55 %</td></tr>
+          <tr><td>3 159 €/mois</td><td class="num">30 643 €</td><td class="num">27 577 €</td><td class="num">+163 €/mois</td><td class="num">8,11 %</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="identity-sheet">
+    <h2>Fiche d'identité</h2>
+    <table class="identity-table">
+        <tr><th>Adresse</th><td>Centre vieille ville, Brignoles (83170) — adresse exacte non communiquée par l'agence</td></tr>
+        <tr><th>Type</th><td>Immeuble de 6 étages en centre ancien de Brignoles, en copropriété avec l'immeuble accolé : un local commercial de plus de 140 m² en rez-de-chaussée, 4 T2 loués de 35 à 50 m² aux étages, deux T2 supplémentaires à créer (R+1 et R+4) et une terrasse en R+5 — 460 m² annoncés au total. DPE E / GES B, état « rénovation nécessaire »</td></tr>
+        <tr><th>Vendeur</th><td>AGENCE REX, Brignoles (37 square Saint-Louis, RCS 502760127) — mandat réf. 2189P, honoraires à la charge du vendeur. L'immeuble est géré par l'agence, ce qui explique la qualité du suivi locatif annoncé (« locataires à jour »)</td></tr>
+        <tr><th>Occupation</th><td>Cinq lots loués — 4 T2 de 35 à 50 m² et un local commercial de plus de 140 m² — « locataires à jour » selon l'agence. Le détail des baux (dates, durées, échéances) et des loyers par lot n'est pas communiqué. Deux T2 supplémentaires sont à créer en R+1 et R+4, plus une terrasse en R+5.</td></tr>
+        <tr><th>Loyers encaissés</th><td>2 219 €/mois, soit 26 630 €/an pour l'ensemble des cinq lots — fait annoncé par l'agence, non réparti par lot. Repères du marché brignolais : T2 de 34,7 m² nu à 490 €/mois, T2 de 38 m² à 500 €, T2 de 43,8 m² au Luc à 520 €. Quatre T2 au marché absorbent 1 850 à 2 000 €/mois, ce qui ne laisse que 220 à 370 € pour un local de plus de 140 m² : la répartition est serrée, et c'est le premier chiffre à obtenir de l'agence.</td></tr>
+        <tr><th>Charges de copropriété</th><td>492 €/an — Charges trimestrielles annoncées à 123 €, soit 492 €/an — le montant est présenté sans préciser s'il s'entend pour l'immeuble ou par lot. À vérifier : s'il s'agit de 123 € par trimestre et par lot, la charge annuelle approche 2 500 € et le rendement perd plus d'un demi-point</td></tr>
+        <tr><th>Taxe foncière</th><td>1 663 €/an — 1 663 €/an annoncés — c'est le seul poste de charges documenté du dossier, avis à exiger pour confirmation</td></tr>
+        <tr><th>Entretien et grosses réparations</th><td>2 000 €/an — 2 000 €/an provisionnés : immeuble de six étages en centre ancien, « rénovation nécessaire », en copropriété avec l'immeuble accolé. Ce poste couvre l'entretien courant, les parties communes et la remise en état entre deux locataires. La provision travaux du moteur (2,5 % des loyers) s'y ajoute</td></tr>
+        <tr><th>Frais d'acquisition</th><td>25 200 € — 8 % du prix (25 200 €), dans le régime ancien ; honoraires à la charge du vendeur</td></tr>
+        <tr><th>Amortissement</th><td>10 206 €/an — 90 % du prix de revient sur 30 ans (bâti)</td></tr>
+        <tr><th>DPE</th><td>E / GES B — état annoncé « rénovation nécessaire ». Pas d'échéance d'interdiction de location pour un logement classé E, mais le poste travaux reste à chiffrer, chauffage compris.</td></tr>
+        <tr><th>Valeur retenue</th><td>290 000 € — Un immeuble de rapport se valorise par capitalisation du revenu : loyers encaissés 26 630 €/an moins charges non refacturables (TF 1 663 € et copropriété 492 €), soit 24 475 € nets. Retenue : 290 000 € au taux de 8,4 %, cohérent avec un immeuble de centre ancien à rafraîchir, en copropriété, dont quatre des cinq baux ne sont pas détaillés. Contrôle par le marché : DVF 2024-2025 à Brignoles (83170), appartements médiane 2 393 €/m² (n = 419) et 2 200 €/m² pour les 3-5 pièces de 60 à 120 m² (n = 177), locaux commerciaux médiane 2 000 €/m² (n = 57) — le prix demandé (685 €/m² sur 460 m²) est très en dessous, ce qui est normal pour un immeuble de rapport vendu sur ses loyers et non sur ses mètres carrés.</td></tr>
+    </table>
+  </section>
+
+  <section class="financial-projections">
+    <h2>Projections financières — SCI à l'IS</h2>
+    <p class="attractiveness-intro">Un seul lot d'exploitation pour commencer : l'ensemble des cinq baux, à 26 630 €/an encaissés. Le scénario base conserve ce revenu avec 5 % de vacance ; le scénario best ajoute les deux T2 à créer (45 000 € de travaux, 470 € par logement) ; le scénario worst réalise le risque du dossier — le départ du preneur du local commercial, avec 12 % de vacance et un entretien majoré.</p>
+    <div class="projections-grid">
+      <div class="projection-card scenario-base">
+        <h3>Scénario Base</h3>
+        <p class="scenario-subtitle">Loyers encaissés 26 630 €/an — vacance 5 % — prix affiché 315 000 €</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer retenu</td><td class="num">2 219 €/mois</td></tr>
+            <tr><td>Revenu brut annuel</td><td class="num">26 630 €</td></tr>
+            <tr><td>Vacance locative (5 %)</td><td class="num">−1 332 €</td></tr>
+            <tr class="secondary"><td>Charges de détention</td><td class="num">−5 171 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">20 185 €</td></tr>
+            <tr><td>Amortissement du bâti</td><td class="num">−10 206 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">9 979 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−1 497 €</td></tr>
+            <tr><td>Résultat net après IS (exploitation)</td><td class="num">18 688 €</td></tr>
+            <tr class="highlight"><td>Solde mensuel net</td><td class="num">−578 €/mois</td></tr>
+            <tr><td>Rendement net d'IS sur revient</td><td class="num">5,49 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-best">
+        <h3>Scénario Best</h3>
+        <p class="scenario-subtitle">Deux T2 créés et loués 470 €/mois chacun — vacance 4 % — plus 45 000 € de travaux</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer retenu</td><td class="num">3 159 €/mois</td></tr>
+            <tr><td>Revenu brut annuel</td><td class="num">37 910 €</td></tr>
+            <tr><td>Vacance locative (4 %)</td><td class="num">−1 516 €</td></tr>
+            <tr class="secondary"><td>Charges de détention</td><td class="num">−5 453 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">31 011 €</td></tr>
+            <tr><td>Amortissement du bâti</td><td class="num">−11 556 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">19 455 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−2 918 €</td></tr>
+            <tr><td>Résultat net après IS (exploitation)</td><td class="num">28 093 €</td></tr>
+            <tr class="highlight"><td>Solde mensuel net</td><td class="num">−99 €/mois</td></tr>
+            <tr><td>Rendement net d'IS sur revient</td><td class="num">7,29 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="projection-card scenario-worst">
+        <h3>Scénario Worst</h3>
+        <p class="scenario-subtitle">Local commercial vide, seuls les T2 encaissent — vacance 12 % — charges et réparations au bailleur</p>
+        <table class="projection-table">
+          <tbody>
+            <tr><td>Loyer retenu</td><td class="num">1 750 €/mois</td></tr>
+            <tr><td>Revenu brut annuel</td><td class="num">21 000 €</td></tr>
+            <tr><td>Vacance locative (12 %)</td><td class="num">−2 520 €</td></tr>
+            <tr class="secondary"><td>Charges de détention</td><td class="num">−6 530 €</td></tr>
+            <tr class="subtotal"><td>EBE avant IS</td><td class="num">12 036 €</td></tr>
+            <tr><td>Amortissement du bâti</td><td class="num">−10 206 €</td></tr>
+            <tr><td>Résultat fiscal</td><td class="num">1 830 €</td></tr>
+            <tr><td>IS (15 %)</td><td class="num">−275 €</td></tr>
+            <tr><td>Résultat net après IS (exploitation)</td><td class="num">11 762 €</td></tr>
+            <tr class="highlight"><td>Solde mensuel net</td><td class="num">−1 155 €/mois</td></tr>
+            <tr><td>Rendement net d'IS sur revient</td><td class="num">3,46 %</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="risk-matrix">
+    <h2>Matrice de risques</h2>
+    <table class="risk-table">
+      <thead>
+        <tr><th>Facteur de risque</th><th>Détail</th><th>Sévérité</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Le détail des loyers par lot n'est pas communiqué</td>
+          <td>L'agence annonce 26 630 €/an pour cinq lots, sans dire ce que paie chacun. Or les repères du marché brignolais (T2 de 35 à 50 m² loués 490 à 520 €) rendent le total difficile à répartir : quatre T2 au marché absorbent 1 850 à 2 000 € par mois, laissant 220 à 370 € pour un local commercial de plus de 140 m². Tout le dossier dépend de la lecture de cette répartition — marge de revalorisation d'un côté, loyers sous le marché de l'autre.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>« Rénovation nécessaire » sur un immeuble de six étages</td>
+          <td>Le DPE est classé E et l'état intérieur est annoncé « rénovation nécessaire ». Dans un immeuble de centre ancien en copropriété avec un immeuble accolé, les postes qui coûtent (toiture, façade, colonnes, électricité des communs, étanchéité de la terrasse) ne se voient pas dans 492 € de charges annuelles. Un appel de fonds voté efface deux ans de loyer net.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Local commercial : bail, preneur et destination</td>
+          <td>Un local de plus de 140 m² en rez-de-chaussée de vieille ville est le lot qui peut le plus facilement rester vide, et le seul dont la valeur dépend d'une activité. Ni l'activité, ni la durée du bail, ni l'échéance, ni la destination au règlement ne sont données. En cas de départ, la relocation d'une telle surface prend des mois.</td>
+          <td><span class="severity severity-4">4/5</span></td>
+        </tr>
+        <tr>
+          <td>Charges annoncées invraisemblablement basses</td>
+          <td>123 € par trimestre pour six étages, un local commercial et une copropriété partagée ne peut pas être la charge de l'ensemble. Si ce montant s'entend par lot, la charge réelle approche 2 500 €/an, soit 0,6 point de rendement net en moins. À faire confirmer écrit par écrit, avec le budget prévisionnel et les trois derniers PV.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Copropriété avec l'immeuble accolé</td>
+          <td>L'immeuble n'est pas autonome : les décisions de travaux, le ravalement, la toiture et l'étanchéité se prennent avec les copropriétaires voisins. C'est une contrainte de gouvernance qui pèse sur le calendrier des travaux et sur la capacité à décider seul.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Écart au plafond de rendement</td>
+          <td>Au prix affiché, le rendement net après IS sur prix de revient ressort à 5,6 % pour un plancher de 5 % : le dossier passe tout juste le seuil, et il le repasse sous la barre dès que les charges de copropriété sont corrigées à la hausse ou qu'un lot se vide.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Création de deux logements : autorisations et devis</td>
+          <td>L'annonce valorise la « possibilité de faire deux appartements T2 de plus en R+1 et R+4 » sans plan, sans devis et sans vérification du PLU ni du règlement de copropriété. Tant que ces trois pièces manquent, cette valeur ne peut pas être payée.</td>
+          <td><span class="severity severity-3">3/5</span></td>
+        </tr>
+        <tr>
+          <td>Non accessible aux personnes à mobilité réduite</td>
+          <td>Mentionné dans les caractéristiques : le rez-de-chaussée commercial n'est pas accessible PMR. Pour une activité de service recevant du public, c'est un obstacle réglementaire à instruire avant de compter sur ce lot comme locatif de longue durée.</td>
+          <td><span class="severity severity-2">2/5</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="verdict nego">
+    <h2>Recommandation</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>On négocie — mais après avoir posé deux questions précises à l'agence.</strong> Cinq lots loués, une ville-centre, 8,45 % de rendement brut affiché : sur le papier, c'est le calibre que nous cherchons. Dans les faits, le dossier repose sur un chiffre global dont personne ne connaît la décomposition, sur des charges de copropriété qui ne peuvent pas être aussi basses qu'annoncé, et sur un immeuble de six étages annoncé « rénovation nécessaire ». À 315 000 €, le rendement net après IS est de 5,49 % pour un plancher de 5 %, le solde mensuel reste négatif de 578 € et le prix de revient dépasse de 17 % la valeur de capitalisation. Le dossier passe le seuil de rendement de justesse — c'est exactement le genre de dossier qui peut basculer dans un sens ou dans l'autre selon les réponses.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Performance :</strong> 5,49 % de rendement net après IS sur un prix de revient de 340 200 €, pour un plancher de branche de 5 % : performance 5,5/10, pile au niveau du seuil. Ratio prix de revient sur valeur de revente : 1,173 — le prix payé dépasse de 17 % la capitalisation des loyers, ce qui plafonne la note à 6,4. EBE avant IS : 20 185 €/an. L'amortissement du bâti (10 206 €/an) limite l'IS à 1 497 €.</p>
+      <p><strong>Prix plafond et prix cible :</strong> Prix plafond 295 500 € et prix cible 252 500 €, soit 6 % et 20 % sous le prix affiché. À 295 500 €, le rendement net d'IS frôle 5,8 % et le solde mensuel reste négatif d'environ 470 €. À 252 500 €, le rendement approche 7 % et le solde descend sous 250 € par mois. Seul un prix proche de 224 500 € rendrait l'immeuble autofinancé — et cela ne se discute pas avec une agence qui gère l'immeuble et connaît ses loyers.</p>
+      <p><strong>Garde-fous chiffrés :</strong></p>
+      <ul>
+        <li><strong>Le prix plafond est de 295 500 €</strong> — au-dessus, la note reste bloquée par la marge de sécurité (le prix de revient dépasse la valeur de capitalisation) et le dossier ne peut plus passer la barre. Soit 19 500 € sous le prix affiché (−6 %).</li>
+        <li><strong>Le prix cible est de 252 500 €</strong> (−20 % du prix affiché, et 247 500 € aux frais d'acquisition réels) : c'est le prix auquel la note franchit 6,5. C'est le champ d'une négociation véritable, pas d'un refus.</li>
+        <li><strong>Le prix d'autofinancement est d'environ 224 500 €</strong> : c'est le prix auquel les 26 630 €/an couvrent la charge de l'immeuble. À ce niveau, le rendement net d'IS approche 7 %.</li>
+        <li><strong>Pièces à exiger avant toute offre :</strong> le détail des cinq baux (dates d'effet, durées, échéances triennales, loyers, dépôts de garantie) et les trois dernières quittances de chaque lot, le bail du local commercial avec son activité, le budget prévisionnel et les trois derniers PV d'assemblée générale de la copropriété, les diagnostics (DPE complet, électricité, amiante), un chiffrage des deux T2 à créer avec l'avis du PLU et l'accord de la copropriété, et l'état de la toiture, de la façade comme de la terrasse en R+5.</li>
+        <li><strong>Point de méthode :</strong> le loyer retenu est le total réellement encaissé, jamais une reconstitution — mais sa répartition par lot n'est pas connue, et c'est la première question à poser. Si le local commercial ne pèse que 220 à 370 € par mois pour 140 m², c'est soit une marge de revalorisation, soit le signe que rien n'a été révisé depuis des années.</li>
+      </ul>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 %) — amortissement du bâti 10 206 €/an, frais d'acquisition 25 200 €, provision travaux 2,5 % des loyers</p>
+      <p><strong>Hypothèses retenues :</strong> loyer 2 219 €/mois encaissé, vacance 5 % en base, charges 5 171 €/an, placement de la réserve à 2,84 %</p>
+      <p><strong>Note :</strong> 4,7/10 — à négocier (performance 5,8/10, sécurité 2,4/10, emplacement 6,1/10, risque 4,0/10)</p>
+    </div>
+  </section>
+
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+
+</main>
+
+<script>
+  (function() {
+    var mapEl = document.getElementById('map-container');
+    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
+    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
+    var addr = mapEl.getAttribute('data-address');
+
+    if (isNaN(lat) || isNaN(lon)) {
+      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
+      return;
+    }
+
+    var map = L.map('map-container').setView([lat, lon], 14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(map);
+    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
+  })();
+</script>
+
+</body>
+</html>
