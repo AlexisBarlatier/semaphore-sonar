@@ -85,7 +85,7 @@ def bloc_strategie(d):
         ratio_cls = "ratio-bon" if ratio < 0.95 else ("ratio-ok" if ratio <= 1.05 else "ratio-mauvais")
         badge = {"modéré": ("risque-modere", "Modéré"), "élevé": ("risque-eleve", "Élevé"),
                  "faible": ("risque-faible", "Faible")}.get(st["risque"], ("risque-modere", "Modéré"))
-        fais = "faisabilite-haute" if st["faisabilite"].startswith("Immédiate") else "faisabilite-basse"
+        fais = "faisabilite-haute" if st["faisabilite"].startswith("Immédiate") else "faisabilite-faible"
         sel = ' class="strategy-row selected"' if st["retenue"] else ' class="strategy-row"'
         lignes.append(
             f"        <tr{sel}>\n          <td>{st['strategie']}</td>\n          <td>{st['lots']}</td>\n"
@@ -168,10 +168,12 @@ TEXTES = {
     "profil": "locataires de logements courants (jeunes actifs, personnels du secteur public et de santé, "
         "familles monoparentales) pour les T2, et une activité de service ou de proximité pour le local "
         "commercial de plus de 140 m², dont la nature n'est pas connue.",
-    "intro_strategie": "Trois lectures : conserver l'immeuble tel qu'il est loué, créer les deux T2 annoncés "
-        "comme possibles, ou revendre à l'unité après division. La première est la seule qui existe "
-        "aujourd'hui ; la deuxième est un projet sans plan ni devis ; la troisième se heurte à une copropriété "
-        "partagée avec l'immeuble accolé.",
+    "intro_strategie": "Quatre lectures chiffrées. Conserver l'immeuble tel qu'il est loué : 5,49 % net "
+        "d'IS, c'est la seule qui existe aujourd'hui. Créer les deux T2 et les louer : 7,29 %, mais c'est un "
+        "projet sans plan ni devis. Créer les deux T2 et les revendre en gardant le reste en location : la "
+        "marge estimée est de l'ordre de 115 000 € avant impôt, et c'est la voie qui monétise le plus vite la "
+        "valeur créée. Revendre les sept lots après division : 15 à 19 % de ROI, mais la marge ne survit pas "
+        "au stress, et revendre l'existant sans créer les T2 se solde par une perte.",
     "intro_projections": "Un seul lot d'exploitation pour commencer : l'ensemble des cinq baux, à 26 630 €/an "
         "encaissés. Le scénario base conserve ce revenu avec 5 % de vacance ; le scénario best ajoute les deux "
         "T2 à créer (45 000 € de travaux, 470 € par logement) ; le scénario worst réalise le risque du dossier "
@@ -284,24 +286,27 @@ def main():
             "rdt": cc["rendements"]["net_sur_revient_pct"],
         })
 
-    plans = [
-        ("Conservation", LOYER_BASE, 5.0, 0.0, 290000.0),
-        ("Création des deux T2", LOYER_BEST, 4.0, TRAVAUX_BEST, 350000.0),
-        ("Revente à l'unité", LOYER_BASE, 8.0, 0.0, 340000.0),
-    ]
+    def plan(nom):
+        """Le plan de chiffrage de chaque stratégie, choisi sur le libellé exact."""
+        if "revente des deux T2 créés" in nom:
+            return (LOYER_BASE, 5.0, TRAVAUX_BEST + 7500.0, 176000.0, "cash 176 000 €")
+        if nom.startswith("Revente à l'unité"):
+            return (LOYER_BEST, 8.0, 105000.0, 626000.0, "627 000 €")
+        if nom.startswith("Création des deux T2"):
+            return (LOYER_BEST, 4.0, TRAVAUX_BEST, 350000.0, "350 000 €")
+        return (LOYER_BASE, 5.0, 0.0, 290000.0, "290 000 €")
+
     d["strategies"] = []
     for st in r["analyse"]["strategies_explorees"]:
-        for prefixe, loyer_s, vac_s, trav_s, valeur_s in plans:
-            if st["strategie"].startswith(prefixe):
-                rr = variante(r, loyer=loyer_s, vacance=vac_s, travaux=trav_s)
-                cc = engine.compute(rr)
-                d["strategies"].append({
-                    "strategie": st["strategie"], "lots": st["lots"], "c": cc, "loyer": loyer_s,
-                    "rdt": cc["rendements"]["net_sur_revient_pct"], "ratio": cc["ratio_cout_valeur"],
-                    "faisabilite": st["faisabilite"], "risque": st["risque"],
-                    "valeur": valeur_s, "retenue": st["strategie"].startswith("Conservation"),
-                })
-                break
+        loyer_s, vac_s, trav_s, valeur_s, _lbl = plan(st["strategie"])
+        rr = variante(r, loyer=loyer_s, vacance=vac_s, travaux=trav_s)
+        cc = engine.compute(rr)
+        d["strategies"].append({
+            "strategie": st["strategie"], "lots": st["lots"], "c": cc, "loyer": loyer_s,
+            "rdt": cc["rendements"]["net_sur_revient_pct"], "ratio": cc["ratio_cout_valeur"],
+            "faisabilite": st["faisabilite"], "risque": st["risque"],
+            "valeur": valeur_s, "retenue": st["strategie"].startswith("Conservation en l'état"),
+        })
 
     autofin = prix_autofinancement(d)
 
@@ -356,7 +361,7 @@ def main():
         cartes=bloc_cartes(d), lat=lat, lon=lon, map_addr=map_addr,
         quartier=t["quartier"], intro_attractivite=t["intro_attractivite"],
         attractivite=bloc_attractivite(d), profil=t["profil"], lecture=t["lecture"],
-        intro_strategie=t["intro_strategie"], conf=t["conf"],
+        intro_strategie=t["intro_strategie"], conf=t["conf"], strategie_html=bloc_strategie(d),
         releve=t["releve"], grille=bloc_grille_loyer(d), identite=bloc_identite(d),
         intro_projections=t["intro_projections"], projections=projections,
         risques=bloc_risques(d), verdict_cls=d["classe"], stance=t["stance"],
@@ -367,7 +372,7 @@ def main():
         perf_score=nfr(d["comp"]["s_performance"], 1), secu_score=nfr(d["comp"]["s_securite"], 1),
         adeq_score=nfr(d["comp"]["s_adequation"], 1), risque_score=nfr(d["comp"]["s_risque"], 1),
         prix_affiche=eur(d["prix"]),
-    ).replace("{strategie}", bloc_strategie(d))
+    )
 
     residuels = [m for m in re.findall(r"\{[a-z_][a-z_0-9]*\}", html) if m not in ("{s}", "{z}", "{x}", "{y}")]
     if residuels:
