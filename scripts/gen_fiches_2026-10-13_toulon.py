@@ -132,6 +132,12 @@ def prepare(slug, lat, lon, map_addr, adresse, lecture, conf, releve, scenarios,
     return d
 
 
+def _lien_secondaire(r):
+    """Seconde URL de portail quand le même bien est diffusé par deux agences."""
+    u = r["annonce"].get("url_secondaire")
+    return f'<div class="report-source-link"><a href="{u}">{u}</a></div>' if u else ""
+
+
 def bloc_cartes(d):
     cartes = [
         ("Prix affiché", eur(d["prix"])),
@@ -276,6 +282,7 @@ TEMPLATE = """<!DOCTYPE html>
   <p class="report-date">Analyse générée le 13 octobre 2026</p>
   <p class="report-source">Source : SeLoger — {vendeur}</p>
   <div class="report-source-link"><a href="{url}">{url}</a></div>
+  {lien_secondaire}
 </header>
 
 <main>
@@ -491,7 +498,8 @@ TEXTES[SLUG_A].update({
       "chambres plus petites ou mal desservies. Retenir 400 € serait prudent mais condamne le dossier ; retenir "
       "450 € est la médiane observée. C'est ce chiffre-là qui est publié, et c'est celui que le prix doit "
       "supporter.</p>",
-    "garde_fous": """        <li><strong>Le prix plafond est de 125 000 €</strong> (rendement net d'IS de 5 % sur prix de revient, soit 26 % sous le prix affiché). Au-dessus, le dossier reste sous son plancher de branche.</li>
+    "garde_fous": """        <li><strong>Le bien est diffusé deux fois, à deux prix.</strong> BRETTE IMMOBILIER l'affiche à 170 000 € (prix barré 180 000 €) et IBOX JAURÈS, 323 rue Jean Jaurès à Toulon, à 180 000 € — même surface, même étage, même copropriété de 88 lots, même DPE C. C'est le prix le plus bas qui fait foi, et l'écart de 10 000 € entre les deux mandataires est un point d'appui de négociation : le vendeur a déjà accepté 170 000 € sur un mandat.</li>
+        <li><strong>Le prix plafond est de 125 000 €</strong> (rendement net d'IS de 5 % sur prix de revient, soit 26 % sous le prix affiché). Au-dessus, le dossier reste sous son plancher de branche.</li>
         <li><strong>Le prix d'autofinancement est d'environ 80 000 €</strong> : c'est le prix auquel les 1 350 €/mois couvrent la charge du lot. Il n'existe pas de marché à ce niveau pour un T4 toulonnais aménagé : ce n'est donc pas une négociation, c'est un constat de trésorerie.</li>
         <li><strong>Charges à faire préciser :</strong> 2 012 €/an de copropriété (26,8 €/m²/an, haut du barème) plus 1 400 € de taxe foncière estimée : 3 412 €/an avant fluides. Chaque tranche de 500 € de charges annuelles en plus coûte environ 45 €/mois de loyer.</li>
         <li><strong>Pièces à exiger avant toute offre :</strong> trois derniers PV d'assemblée générale et budget prévisionnel (copropriété de 88 lots de 1948), avis de taxe foncière, certificat Carrez, statut du garage (lot distinct ou non), et l'état du mobilier laissé sur place.</li>""",
@@ -587,7 +595,7 @@ def main():
 
         html = TEMPLATE.format(
             titre=r["titre"], adresse_courte=t["adresse_courte"], vendeur=r["annonce"]["vendeur"],
-            url=r["annonce"]["url"], badge=t["badge"], strategie=t["strategie"],
+            url=r["annonce"]["url"], lien_secondaire=_lien_secondaire(r), badge=t["badge"], strategie=t["strategie"],
             cartes=bloc_cartes(d), lat=lat, lon=lon, map_addr=map_addr,
             quartier=t["quartier"], intro_attractivite=t["intro_attractivite"],
             attractivite=bloc_attractivite(d), profil=t["profil"], lecture=t["lecture"],
