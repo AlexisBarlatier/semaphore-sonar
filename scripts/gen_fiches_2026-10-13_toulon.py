@@ -499,7 +499,7 @@ TEXTES[SLUG_A].update({
       "450 € est la médiane observée. C'est ce chiffre-là qui est publié, et c'est celui que le prix doit "
       "supporter.</p>",
     "garde_fous": """        <li><strong>Le loyer réel est supérieur à celui de l'annonce.</strong> La convention de colocation du 26 juillet 2022, communiquée par l'associé, porte un loyer global de <strong>1 280 €/mois</strong> pour les trois chambres (450 € / 450 € / 380 €), quand l'annonce n'en escompte que 1 200 € (400 € par chambre). La colocation y est un usage installé depuis quatre ans, pas un potentiel à créer : c'est le point le plus favorable du dossier. Attention à l'écart de mémoire sur la chambre 3 : 380 € au contrat, 330 € évoqués par l'associé.</li>
-        <li><strong>Tout dépend d'une chambre de bonne.</strong> La seule annonce IBOX JAURÈS la mentionne (« une chambre de bonne complète ce bien ») ; la convention de 2022 ne décrit que trois chambres, elle est donc un lot distinct. Avec les trois chambres indexées (1 380 €/mois) et une quatrième chambre à 400 €, soit 1 780 €/mois, le revenu passe de 16 200 à 21 360 €/an, le rendement net d'IS de 3,80 % à 5,86 %, la note de 4,7 à 6,1 et le prix plafond de 125 000 à <strong>183 000 €</strong> — au-dessus du prix affiché. Sans elle, le dossier se refuse. C'est la première question à poser aux deux agences, par écrit : surface, étage, accès, numéro de lot, état, et si la pièce est comprise dans les 75 m² Carrez ou vendue en plus.</li>
+        <li><strong>La chambre de bonne ne sera pas un revenu.</strong> Elle est située à 6 m² : en dessous de 9 m² et de 20 m³, une pièce ne peut pas être louée comme logement, donc pas de quatrième loyer. Ce qu'elle vaut est une valeur d'annexe à la revente, de l'ordre de 8 000 à 20 000 €. Elle explique en revanche l'écart de surface entre la convention de colocation de 2022 (68 m²) et l'annonce (75 m²) : l'agence compte l'annexe dans la surface, et le prix réel ressort à 2 500 €/m² sur 68 m², pas à 2 267 €/m² sur 75 m². À faire confirmer par écrit : surface exacte, fenêtre ou pas, hauteur sous plafond, numéro de lot.</li>
         <li><strong>Le bien est diffusé deux fois, à deux prix.</strong> BRETTE IMMOBILIER l'affiche à 170 000 € (prix barré 180 000 €) et IBOX JAURÈS, 323 rue Jean Jaurès à Toulon, à 180 000 € — même surface, même étage, même copropriété de 88 lots, même DPE C. C'est le prix le plus bas qui fait foi, et l'écart de 10 000 € entre les deux mandataires est un point d'appui de négociation : le vendeur a déjà accepté 170 000 € sur un mandat.</li>
         <li><strong>Le prix plafond est de 125 000 €</strong> (rendement net d'IS de 5 % sur prix de revient, soit 26 % sous le prix affiché). Au-dessus, le dossier reste sous son plancher de branche.</li>
         <li><strong>Le prix d'autofinancement est d'environ 80 000 €</strong> : c'est le prix auquel les 1 350 €/mois couvrent la charge du lot. Il n'existe pas de marché à ce niveau pour un T4 toulonnais aménagé : ce n'est donc pas une négociation, c'est un constat de trésorerie.</li>
@@ -510,12 +510,13 @@ TEXTES[SLUG_A].update({
         "Mais à 170 000 €, le lot rend 3,80 % net d'IS pour un plancher de 5 %, et son solde mensuel reste négatif de "
         "571 €/mois sur un logement qui produirait 1 350 €. Les prix qui rendraient le dossier tenable — 125 000 € pour "
         "le rendement, environ 80 000 € pour la charge du lot — sont hors du marché de ce quartier : le dossier se "
-        "refuse, et pourrait se rouvrir seulement si le vendeur accepte un prix de rendement. Une seule "
-        "inconnue peut renverser cette conclusion : la chambre de bonne que mentionne l'une des deux annonces. "
-        "Avec les loyers réellement servis en 2022 (1 280 € pour trois chambres, contre 1 200 € escomptés par "
-        "l'annonce) et une quatrième chambre à 400 €, le prix plafond passe de 125 000 à 183 000 €, la note de "
-        "4,6 à 6,4 et le bien s'autofinance sur vingt ans au prix affiché. Deux pièces décident donc du dossier : "
-        "le bail en cours, et le statut de la chambre de bonne."),
+        "refuse, et pourrait se rouvrir seulement si le vendeur accepte un prix de rendement. "
+        "Ce que la convention de colocation de 2022 dit, en revanche, est plus solide que le prix : le loyer "
+        "réellement servi y était de 1 280 € pour trois chambres (450 € / 450 € / 380 €), quand l'annonce n'en "
+        "escompte que 1 200 €, et la colocation y est un usage installé depuis quatre ans. La chambre de bonne, "
+        "elle, fait 6 m² : sous le seuil de décence, elle ne se loue pas. Le dossier se juge donc sur trois "
+        "chambres et un loyer réel supérieur à celui de l'annonce, ce qui le rend meilleur qu'il n'y paraît, "
+        "mais pas encore finançable au prix demandé."),
     "performance": ("3,80 % de rendement net après IS sur un prix de revient de 183 600 €, pour un plancher de branche "
         "de 5 % — soit une performance de 3,0/10. Ratio prix de revient sur valeur de revente : 1,02. EBE avant IS : "
         "7 238 €/an. L'amortissement du bâti (5 508 €/an) limite l'IS à 259 €, mais ne sauve pas la trésorerie."),
