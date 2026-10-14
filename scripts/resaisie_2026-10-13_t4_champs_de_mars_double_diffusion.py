@@ -37,7 +37,9 @@ COPRO = ("2 012 €/an annoncés par BRETTE IMMOBILIER, 2 200 €/an par IBOX JA
 
 RISQUE_CHAMBRE = {
     "facteur": "Chambre de bonne mentionnée par une seule des deux annonces — c'est elle qui décide du dossier",
-    "detail": "L'annonce IBOX JAURÈS précise « une chambre de bonne complète ce bien » ; celle de BRETTE "
+    "detail": "La convention de colocation de juillet 2022 ne mentionne que trois chambres dans l'appartement : "
+              "la chambre de bonne, si elle existe, est donc un lot distinct, ce qui est cohérent avec l'annonce "
+              "IBOX qui la présente « en complément ». L'annonce IBOX JAURÈS précise « une chambre de bonne complète ce bien » ; celle de BRETTE "
               "IMMOBILIER ne la mentionne pas, et ses caractéristiques ne portent ni cave ni chambre "
               "supplémentaire. Surface, étage, accès et statut de lot sont inconnus. C'est l'inconnue qui "
               "commande tout : avec une quatrième chambre louée 400 €/mois en meublé, le revenu passe de "
@@ -48,10 +50,18 @@ RISQUE_CHAMBRE = {
     "severite": 4,
 }
 
-NOTE_MARCHE = ("VARIANTE CONDITIONNELLE — chambre de bonne : si elle est louable séparément en meublé, "
-               "une quatrième chambre à 400 €/mois porte les revenus à 21 000 €/an, le rendement net d'IS à "
-               "5,86 % sur prix de revient, la note à 6,1/10 et le prix plafond à 183 000 €, contre "
-               "125 000 € sans elle. Ce chiffrage n'entre pas dans l'assiette publiée, faute de pièce.")
+NOTE_MARCHE = ("DONNÉE RÉELLE — convention de colocation du 26 juillet 2022, communiquée par l'associé dont "
+               "la fille occupait la chambre 3 : appartement du 3e étage, 68 m² annoncés, trois chambres, loyer "
+               "global 1 280 €/mois réparti 450 € / 450 € / 380 €, électricité et eau réparties à 33,33 % entre "
+               "les colocataires, internet et maintenance de l'électroménager à la charge du bailleur. Deux "
+               "enseignements : la colocation est un usage installé dans ce logement depuis 2022, et l'annonce "
+               "qui affiche 400 € par chambre est EN DESSOUS du loyer réellement servi il y a quatre ans "
+               "(450 € pour deux des trois chambres). "
+               "VARIANTE CONDITIONNELLE — chambre de bonne : avec les trois chambres indexées (1 380 €/mois) et "
+               "une quatrième chambre louée 400 €, soit 1 780 €/mois, le plafond atteint 183 000 € et le prix "
+               "d'autofinancement sur vingt ans 179 500 €, contre 96 000 € et 76 000 € pour les trois chambres "
+               "seules. Sans la chambre de bonne le dossier ne tient pas ; avec elle, il s'autofinance au prix "
+               "affiché. Chiffrage non retenu dans l'assiette publiée, faute de pièce sur ce lot.")
 
 RISQUE = {
     "facteur": "Même bien diffusé par deux agences à deux prix",
