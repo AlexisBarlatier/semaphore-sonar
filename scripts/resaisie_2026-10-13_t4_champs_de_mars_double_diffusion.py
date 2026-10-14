@@ -8,6 +8,7 @@ réf. 3753JS) à 180 000 €. Même bien : T4 de 75 m², 3e étage sur 6 avec as
 
 Usage : python3 scripts/resaisie_2026-10-13_t4_champs_de_mars_double_diffusion.py [--ecrire]
 """
+import copy
 import json
 import sys
 from pathlib import Path
@@ -34,6 +35,24 @@ COPRO = ("2 012 €/an annoncés par BRETTE IMMOBILIER, 2 200 €/an par IBOX JA
          "copropriété de 88 lots, aucune procédure syndicale en cours. Retenu : 2 012 €/an, le montant le "
          "plus bas ; budget prévisionnel et trois derniers PV à exiger")
 
+RISQUE_CHAMBRE = {
+    "facteur": "Chambre de bonne mentionnée par une seule des deux annonces — c'est elle qui décide du dossier",
+    "detail": "L'annonce IBOX JAURÈS précise « une chambre de bonne complète ce bien » ; celle de BRETTE "
+              "IMMOBILIER ne la mentionne pas, et ses caractéristiques ne portent ni cave ni chambre "
+              "supplémentaire. Surface, étage, accès et statut de lot sont inconnus. C'est l'inconnue qui "
+              "commande tout : avec une quatrième chambre louée 400 €/mois en meublé, le revenu passe de "
+              "16 200 à 21 000 €/an, le rendement net d'IS de 3,80 % à 5,86 %, la note de 4,7 à 6,1 et le "
+              "prix plafond de 125 000 à 183 000 €. Sans elle, le dossier se refuse au prix affiché ; avec "
+              "elle, il s'achète. À faire préciser par écrit avant toute proposition : surface, étage, accès, "
+              "numéro de lot, état, et si elle est comprise dans les 75 m² Carrez ou vendue en plus.",
+    "severite": 4,
+}
+
+NOTE_MARCHE = ("VARIANTE CONDITIONNELLE — chambre de bonne : si elle est louable séparément en meublé, "
+               "une quatrième chambre à 400 €/mois porte les revenus à 21 000 €/an, le rendement net d'IS à "
+               "5,86 % sur prix de revient, la note à 6,1/10 et le prix plafond à 183 000 €, contre "
+               "125 000 € sans elle. Ce chiffrage n'entre pas dans l'assiette publiée, faute de pièce.")
+
 RISQUE = {
     "facteur": "Même bien diffusé par deux agences à deux prix",
     "detail": "BRETTE IMMOBILIER affiche 170 000 € (prix barré 180 000 €) et IBOX JAURÈS 180 000 € pour le "
@@ -58,8 +77,11 @@ def main():
     rec["bien"]["surfaces"]["texte"] = SURFACES
     rec["bien"]["copro"]["charges_source"] = COPRO
     rec["date_maj"] = "2026-10-14"
-    if not any(r["facteur"] == RISQUE["facteur"] for r in rec["analyse"]["risques"]):
-        rec["analyse"]["risques"].append(dict(RISQUE))
+    for risque in (RISQUE, RISQUE_CHAMBRE):
+        if not any(r["facteur"] == risque["facteur"] for r in rec["analyse"]["risques"]):
+            rec["analyse"]["risques"].append(dict(risque))
+    if "VARIANTE CONDITIONNELLE" not in rec["marche"].get("notes", ""):
+        rec["marche"]["notes"] = rec["marche"].get("notes", "").rstrip() + " " + NOTE_MARCHE
 
     print("vendeur avant :", avant["vendeur"][:90])
     print("url secondaire :", rec["annonce"]["url_secondaire"])
@@ -69,6 +91,13 @@ def main():
     plafond, det = scoring.prix_plafond(rec)
     print(f"note {n} {v} | net/revient {c['rendements']['net_sur_revient_pct']:.2f} % | "
           f"plafond {plafond} € ({det}) | cible {scoring.prix_cible(rec)}")
+    r_ch = copy.deepcopy(rec)
+    r_ch["marche"]["loyers"].append({"lot": "Chambre de bonne (hypothèse)", "quantite": 1,
+                                     "loyer_mensuel_euros": 400.0, "occupe": False, "note": "variante"})
+    c_ch = engine.compute(r_ch)
+    print(f"variante avec 4e chambre a 400 €/mois : net/revient "
+          f"{c_ch['rendements']['net_sur_revient_pct']:.2f} % | note {scoring.note_et_verdict(r_ch, c_ch)[0]} | "
+          f"plafond {scoring.prix_plafond(r_ch)[0]:,.0f} €")
     print(f"risques : {len(rec['analyse']['risques'])} (sévérité moyenne "
           f"{sum(r['severite'] for r in rec['analyse']['risques'])/len(rec['analyse']['risques']):.2f})")
     if not ecrire:

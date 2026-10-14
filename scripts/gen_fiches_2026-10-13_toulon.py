@@ -498,7 +498,8 @@ TEXTES[SLUG_A].update({
       "chambres plus petites ou mal desservies. Retenir 400 € serait prudent mais condamne le dossier ; retenir "
       "450 € est la médiane observée. C'est ce chiffre-là qui est publié, et c'est celui que le prix doit "
       "supporter.</p>",
-    "garde_fous": """        <li><strong>Le bien est diffusé deux fois, à deux prix.</strong> BRETTE IMMOBILIER l'affiche à 170 000 € (prix barré 180 000 €) et IBOX JAURÈS, 323 rue Jean Jaurès à Toulon, à 180 000 € — même surface, même étage, même copropriété de 88 lots, même DPE C. C'est le prix le plus bas qui fait foi, et l'écart de 10 000 € entre les deux mandataires est un point d'appui de négociation : le vendeur a déjà accepté 170 000 € sur un mandat.</li>
+    "garde_fous": """        <li><strong>Tout dépend d'une chambre de bonne.</strong> La seule annonce IBOX JAURÈS la mentionne (« une chambre de bonne complète ce bien »), celle de BRETTE IMMOBILIER non. Avec une quatrième chambre louée 400 €/mois en meublé, le revenu passe de 16 200 à 21 000 €/an, le rendement net d'IS de 3,80 % à 5,86 %, la note de 4,7 à 6,1 et le prix plafond de 125 000 à <strong>183 000 €</strong> — au-dessus du prix affiché. Sans elle, le dossier se refuse. C'est la première question à poser aux deux agences, par écrit : surface, étage, accès, numéro de lot, état, et si la pièce est comprise dans les 75 m² Carrez ou vendue en plus.</li>
+        <li><strong>Le bien est diffusé deux fois, à deux prix.</strong> BRETTE IMMOBILIER l'affiche à 170 000 € (prix barré 180 000 €) et IBOX JAURÈS, 323 rue Jean Jaurès à Toulon, à 180 000 € — même surface, même étage, même copropriété de 88 lots, même DPE C. C'est le prix le plus bas qui fait foi, et l'écart de 10 000 € entre les deux mandataires est un point d'appui de négociation : le vendeur a déjà accepté 170 000 € sur un mandat.</li>
         <li><strong>Le prix plafond est de 125 000 €</strong> (rendement net d'IS de 5 % sur prix de revient, soit 26 % sous le prix affiché). Au-dessus, le dossier reste sous son plancher de branche.</li>
         <li><strong>Le prix d'autofinancement est d'environ 80 000 €</strong> : c'est le prix auquel les 1 350 €/mois couvrent la charge du lot. Il n'existe pas de marché à ce niveau pour un T4 toulonnais aménagé : ce n'est donc pas une négociation, c'est un constat de trésorerie.</li>
         <li><strong>Charges à faire préciser :</strong> 2 012 €/an de copropriété (26,8 €/m²/an, haut du barème) plus 1 400 € de taxe foncière estimée : 3 412 €/an avant fluides. Chaque tranche de 500 € de charges annuelles en plus coûte environ 45 €/mois de loyer.</li>
@@ -508,7 +509,10 @@ TEXTES[SLUG_A].update({
         "Mais à 170 000 €, le lot rend 3,80 % net d'IS pour un plancher de 5 %, et son solde mensuel reste négatif de "
         "571 €/mois sur un logement qui produirait 1 350 €. Les prix qui rendraient le dossier tenable — 125 000 € pour "
         "le rendement, environ 80 000 € pour la charge du lot — sont hors du marché de ce quartier : le dossier se "
-        "refuse, et pourrait se rouvrir seulement si le vendeur accepte un prix de rendement."),
+        "refuse, et pourrait se rouvrir seulement si le vendeur accepte un prix de rendement. Une seule "
+        "inconnue peut renverser cette conclusion : la chambre de bonne que mentionne l'une des deux annonces. "
+        "Si elle est louable, le dossier passe de 3,80 % à 5,86 % net d'IS, sa note de 4,7 à 6,1 et son prix "
+        "plafond de 125 000 à 183 000 € — et 170 000 € devient un prix défendable."),
     "performance": ("3,80 % de rendement net après IS sur un prix de revient de 183 600 €, pour un plancher de branche "
         "de 5 % — soit une performance de 3,0/10. Ratio prix de revient sur valeur de revente : 1,02. EBE avant IS : "
         "7 238 €/an. L'amortissement du bâti (5 508 €/an) limite l'IS à 259 €, mais ne sauve pas la trésorerie."),
