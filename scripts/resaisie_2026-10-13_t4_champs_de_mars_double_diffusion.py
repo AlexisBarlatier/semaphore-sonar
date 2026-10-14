@@ -36,17 +36,18 @@ COPRO = ("2 012 €/an annoncés par BRETTE IMMOBILIER, 2 200 €/an par IBOX JA
          "plus bas ; budget prévisionnel et trois derniers PV à exiger")
 
 RISQUE_CHAMBRE = {
-    "facteur": "Chambre de bonne mentionnée par une seule des deux annonces — c'est elle qui décide du dossier",
+    "facteur": "Chambre de bonne de 6 m² : une annexe, pas un quatrième revenu",
     "detail": "La convention de colocation de juillet 2022 ne mentionne que trois chambres dans l'appartement : "
               "la chambre de bonne, si elle existe, est donc un lot distinct, ce qui est cohérent avec l'annonce "
               "IBOX qui la présente « en complément ». L'annonce IBOX JAURÈS précise « une chambre de bonne complète ce bien » ; celle de BRETTE "
               "IMMOBILIER ne la mentionne pas, et ses caractéristiques ne portent ni cave ni chambre "
               "supplémentaire. Surface, étage, accès et statut de lot sont inconnus. C'est l'inconnue qui "
-              "commande tout : avec une quatrième chambre louée 400 €/mois en meublé, le revenu passe de "
-              "16 200 à 21 000 €/an, le rendement net d'IS de 3,80 % à 5,86 %, la note de 4,7 à 6,1 et le "
-              "prix plafond de 125 000 à 183 000 €. Sans elle, le dossier se refuse au prix affiché ; avec "
-              "elle, il s'achète. À faire préciser par écrit avant toute proposition : surface, étage, accès, "
-              "numéro de lot, état, et si elle est comprise dans les 75 m² Carrez ou vendue en plus.",
+              "plus bas que le seuil de décence (9 m², 20 m³) : elle ne peut pas être louée comme logement et "
+              "n'donnera donc pas le quatrième loyer qui aurait fait basculer le dossier. Sa seule valeur est "
+              "celle d'une annexe à la revente, de l'ordre de 8 000 à 20 000 €. Elle explique en revanche "
+              "l'écart de surface entre la convention de colocation (68 m²) et l'annonce (75 m²) : l'agence "
+              "compte l'annexe dans la surface, et le prix réel est de 2 500 €/m² sur 68 m². À faire préciser "
+              "par écrit : surface exacte, présence d'une fenêtre, hauteur sous plafond, et numéro de lot.",
     "severite": 4,
 }
 
@@ -57,11 +58,11 @@ NOTE_MARCHE = ("DONNÉE RÉELLE — convention de colocation du 26 juillet 2022,
                "enseignements : la colocation est un usage installé dans ce logement depuis 2022, et l'annonce "
                "qui affiche 400 € par chambre est EN DESSOUS du loyer réellement servi il y a quatre ans "
                "(450 € pour deux des trois chambres). "
-               "VARIANTE CONDITIONNELLE — chambre de bonne : avec les trois chambres indexées (1 380 €/mois) et "
-               "une quatrième chambre louée 400 €, soit 1 780 €/mois, le plafond atteint 183 000 € et le prix "
-               "d'autofinancement sur vingt ans 179 500 €, contre 96 000 € et 76 000 € pour les trois chambres "
-               "seules. Sans la chambre de bonne le dossier ne tient pas ; avec elle, il s'autofinance au prix "
-               "affiché. Chiffrage non retenu dans l'assiette publiée, faute de pièce sur ce lot.")
+               "ANNEXE — la pièce est située à 6 m² par l'associé : en dessous de 9 m² et de 20 m³, elle ne "
+               "peut pas être louée comme logement, donc elle n'donnera pas de quatrième loyer. Elle vaut sa "
+               "revente comme cave ou rangement, de l'ordre de 8 000 à 20 000 €. Elle explique aussi l'écart de "
+               "surface entre la convention (68 m² en 2022) et l'annonce (75 m²) : le prix ressort à 2 500 €/m² "
+               "sur 68 m², pas à 2 267 €/m² sur 75 m². Le dossier se juge donc sur les trois chambres.")
 
 RISQUE = {
     "facteur": "Même bien diffusé par deux agences à deux prix",
@@ -87,6 +88,8 @@ def main():
     rec["bien"]["surfaces"]["texte"] = SURFACES
     rec["bien"]["copro"]["charges_source"] = COPRO
     rec["date_maj"] = "2026-10-14"
+    rec["analyse"]["risques"] = [r for r in rec["analyse"]["risques"]
+                                 if "Chambre de bonne" not in r["facteur"]]
     for risque in (RISQUE, RISQUE_CHAMBRE):
         if not any(r["facteur"] == risque["facteur"] for r in rec["analyse"]["risques"]):
             rec["analyse"]["risques"].append(dict(risque))
