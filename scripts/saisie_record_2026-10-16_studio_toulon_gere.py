@@ -215,16 +215,18 @@ def fiche():
                            "comptes de GSA Résidences (exploitant du groupe Grand Sud Accueil, "
                            "SIRET 419 948 781) sont la première pièce à demander : c'est le locataire "
                            "unique, donc le dossier lui-même"},
-                {"facteur": "Bail à quatorze mois du terme, avec droit au renouvellement de "
-                            "l'exploitant", "severite": 4,
-                 "detail": "Le bail commercial 3/6/9 court du 01/01/2018 au 31/12/2027. Un bail "
-                           "commercial confère au preneur un droit au renouvellement : refuser le "
-                           "renouvellement oblige le bailleur à une indemnité d'éviction que "
-                           "l'intermédiaire lui-même chiffre à 12 000-15 000 € par studio en "
-                           "résidence étudiante, soit le quart du prix payé. La reprise du studio "
-                           "suppose donc une défaillance ou un départ de l'exploitant, pas un simple "
-                           "refus de notre part : c'est la condition du scénario haut, et elle ne se "
-                           "décide pas à la signature"},
+                {"facteur": "Terme du bail au 31/12/2027 : le loyer rejoint la valeur locative, "
+                            "et le refus de renouvellement se paie", "severite": 4,
+                 "detail": "Le 3/6/9 court du 01/01/2018 au 31/12/2027. Au terme, le loyer est fixé "
+                           "à la valeur locative dès que la variation dépasse 10 % (art. L145-34 du "
+                           "code de commerce), l'augmentation étant étalée à +10 % par an : soit le "
+                           "preneur accepte le loyer de marché et reste, soit il part et on reloue au "
+                           "prix normal. Le refus de renouvellement est l'autre voie, et il ouvre en "
+                           "principe une indemnité d'éviction que l'intermédiaire chiffre lui-même à "
+                           "12 000-15 000 € par studio, règle d'ordre public à laquelle aucune clause "
+                           "ne déroge. Elle se budgète avant de congédier, et elle est économiquement "
+                           "dominée : le lot loué au loyer de marché capitalise 62 000 à 74 500 € "
+                           "contre 53 000 à 56 000 € pour le même lot libre après indemnité"},
                 {"facteur": "Loyer 40 % sous le marché tant que le bail court", "severite": 3,
                  "detail": "285 €/mois pour 26,64 m² meublé, contre une tranche de 400 à 530 € pour "
                            "un meublé de cette taille dans la même ville. L'indexation du bail ne "
@@ -296,10 +298,13 @@ def main():
                           f"vers la médiane du DVF des moins de 30 m² (3 351 €/m²) au lieu de la "
                           f"décote de bail, soit plusieurs dizaines de milliers d'euros de plus que "
                           f"le prix payé",
-         "faisabilite": "Subordonnée au départ ou à la défaillance de l'exploitant : un refus de "
-                        "renouvellement de notre part coûte une indemnité d'éviction estimée à "
-                        "12 000-15 000 €",
-         "risque": "c'est le scénario qui fait le dossier, et il ne se commande pas : il s'attend"},
+         "faisabilite": "Au terme du bail, et non à la défaillance du preneur : soit il accepte le "
+                        "loyer de la valeur locative et reste, soit il part et on reloue au prix du "
+                        "marché. Un refus de renouvellement de notre part ouvre en principe une "
+                        "indemnité d'éviction de 12 000 à 15 000 €, règle d'ordre public : elle se "
+                        "budgète avant de congédier, elle ne s'improvise pas",
+         "risque": "modéré — le point d'appui est le renouvellement, pas la défaillance du preneur, et il "
+                   "tombe à une date connue dès la lecture du bail"},
         {"strategie": "Revente en l'état, sous bail, au marché des studios gérés",
          "lots": 1,
          "performance": "Sortie de secours : les studios de résidences gérées comparables s'affichent "
