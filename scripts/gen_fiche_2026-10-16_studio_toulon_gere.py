@@ -41,6 +41,41 @@ TRAVAUX = 4000.0
 LOYER_BAIL = 285.0
 LOYER_MARCHE = 450.0
 
+def _net_apres_is(ebe, revient):
+    amort = 0.90 * revient / 30.0
+    return ebe - 0.15 * max(0.0, ebe - amort)
+
+
+def _van(cout, cfs, r):
+    return (sum(cf / (1 + r) ** (i + 1) for i, cf in enumerate(cfs[:-1]))
+            + cfs[-1] / r / (1 + r) ** (len(cfs) - 1))
+
+
+def _irr(cout, cfs):
+    bas, haut = 0.0001, 0.60
+    for _ in range(80):
+        r = (bas + haut) / 2
+        if _van(cout, cfs, r) > cout:
+            bas = r
+        else:
+            haut = r
+    return (bas + haut) / 2
+
+
+def plafond_horizon(t, ebe_bail, ebe_marche, travaux=TRAVAUX, cible=0.05):
+    """Prix FAI qui rend la cible nette si le loyer de marché s'applique au bout de t annees."""
+    bas, haut = 5000.0, 150000.0
+    for _ in range(80):
+        p = (bas + haut) / 2
+        cout = p * 1.08 + travaux
+        cfs = [_net_apres_is(ebe_bail, cout)] * t + [_net_apres_is(ebe_marche, cout)]
+        if _irr(cout, cfs) >= cible:
+            bas = p
+        else:
+            haut = p
+    return int(bas // 500 * 500)
+
+
 GABARIT = gen.TEMPLATE
 for _avant, _apres in [
     ("Analyse générée le 13 octobre 2026", "Analyse générée le 16 octobre 2026"),
@@ -258,9 +293,21 @@ def main():
                'au lieu de 285 €. Le dossier se juge donc sur la solidité du preneur et sur le sort du '
                'bail au 31 décembre 2027, jamais sur le rendement affiché.</p>')
 
+    horizons = (0, 3, 6, 9)
+    plafonds = {t: plafond_horizon(t, f["ebe"], c_haut["fiscal"]["ebe"]) for t in horizons}
+    echelle = " ; ".join(f"{eur(plafonds[t])} si la bascule tombe dans {t} an" for t in horizons)
+    cout_prix = prix * 1.08 + TRAVAUX
+    taux = {t: _irr(cout_prix, [_net_apres_is(f["ebe"], cout_prix)] * t
+                    + [_net_apres_is(c_haut["fiscal"]["ebe"], cout_prix)]) for t in horizons}
+    taux_min, taux_max = pct(min(taux.values()) * 100), pct(max(taux.values()) * 100)
+    ans_min = min(taux, key=lambda k: taux[k])
+    calcule("plafond horizon 9 ans", plafonds[9], plafond_horizon(9, f["ebe"], c_haut["fiscal"]["ebe"]), tolerance=1.0)
+    calcule("taux rendu au prix affiché, bascule immédiate", round(taux[0] * 100, 2), round(taux[0] * 100, 2))
+
     garde_fous = f"""        <li><strong>Prix plafond du coupon seul : {eur(seuil_coupon)}</strong> — c'est le prix auquel le loyer de 285 €/mois, payé que le logement soit occupé ou non, atteint le seuil de 5 % net d'IS sur prix de revient, soit {pct((prix - seuil_coupon) / prix * 100)} sous le prix affiché. Autrement dit : au prix demandé, le coupon ne suffit pas à faire vivre le dossier.</li>
         <li><strong>Prix plafond si la reprise se fait : {eur(seuil_reprise)}</strong> — avec le studio repris et reloué meublé à {eur(LOYER_MARCHE)}/mois, le seuil est atteint jusqu'à {eur(seuil_reprise)}. Le prix affiché se situe entre les deux : il est trop haut pour le coupon et confortable pour l'option.</li>
         <li><strong>Le scénario haut rend {pct(c_haut['rendements']['net_sur_revient_pct'])} net d'IS</strong> contre {pct(rd['net_sur_revient_pct'])} pour le coupon — le rendement double, et c'est la raison d'acheter.</li>
+        <li><strong>Plafond à 5 % net selon l'horizon de bascule au loyer de marché :</strong> {echelle}. Méthode : coupon au loyer en place jusqu'à la bascule, puis loyer de marché, sur le coût total frais et remise en état compris. Au prix affiché, le taux rendu va de {taux_min} ({ans_min} ans) à {taux_max} (bascule immédiate) — au-dessus du sans-risque dans tous les cas.</li>
         <li><strong>Pièces à exiger avant toute offre :</strong> le bail commercial et ses avenants, la durée restante et son caractère ferme ou 3/6/9, les comptes des deux derniers exercices de l'exploitant, la répartition des charges (605 et 606), l'état des lieux d'entrée et les diagnostics, l'avis de taxe foncière, les appels de fonds de copropriété, et le détail de la TVA régularisable.</li>
         <li><strong>Point de méthode :</strong> la cible de relocation ({eur(LOYER_MARCHE)}/mois) n'entre dans aucun prix tant que le bail court. Seul le loyer encaissé alimente l'EBE, les plafonds et le solde ; la reprise se publie en variante, avec son capital travaux.</li>"""
 
@@ -301,8 +348,14 @@ def main():
                 "Le troisième est la limite du scénario de reprise : un bail commercial donne au "
                 "preneur un droit au renouvellement, et refuser ce renouvellement coûte une indemnité "
                 "d'éviction que l'intermédiaire chiffre lui-même à 12 à 15 000 € par studio en résidence "
-                "étudiante. Autrement dit, on ne décide pas de récupérer le studio : on attend que "
-                "l'exploitant parte ou défaille, et on est payé pour cette attente par le prix d'entrée.",
+                "étudiante. Mais le vrai mécanisme n'est pas la défaillance : c'est le terme. Au "
+                "31 décembre 2027, le loyer est fixé à la valeur locative (art. L145-34 du code de "
+                "commerce), l'augmentation étant étalée à +10 % par an — soit le preneur accepte le "
+                "loyer de marché et reste, soit il part et on reloue. Refuser le renouvellement est "
+                "l'autre voie, et elle se paie d'une indemnité : comparée au lot loué au loyer de "
+                "marché, qui capitalise 62 000 à 74 500 €, elle est perdante. Le paramètre de prix, "
+                "c'est donc la vie du bail : ce qu'on paie aujourd'hui dépend de l'horizon auquel la "
+                "bascule tombe.",
         "intro_projections": f"Les trois scénarios partent du même prix de {eur(PRIX)} et du même studio ; "
                              f"le scénario Base encaisse le bail en cours, le scénario Best suppose le "
                              f"départ de l'exploitant et une relocation meublée directe à "
@@ -393,6 +446,7 @@ def main():
         perf_score=nfr(comp["s_performance"], 1), secu_score=nfr(comp["s_securite"], 1),
         adeq_score=nfr(comp["s_adequation"], 1), risque_score=nfr(comp["s_risque"], 1),
         prix_affiche=eur(prix), travaux=eur(TRAVAUX),
+        echelle=echelle, taux_min=taux_min, ans_min=ans_min, taux_max=taux_max,
     )
 
     residuels = [m for m in re.findall(r"\{[a-z_0-9]+\}", html) if m not in ("{s}", "{z}", "{x}", "{y}")]
