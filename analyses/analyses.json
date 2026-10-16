@@ -3,7 +3,7 @@
     "schema": "analyses-v2-entrees",
     "generated_at": "2026-09-10T00:00:00+00:00",
     "source": "saisie-agent",
-    "count": 85
+    "count": 87
   },
   "analyses": [
     {
@@ -12392,6 +12392,395 @@
         ]
       },
       "champs_manquants": []
+    },
+    {
+      "slug": "2026-10-16-maison-village-cuers-annexes",
+      "date_analyse": "2026-10-16",
+      "date_maj": "2026-10-16",
+      "titre": "Maison de village avec dépendance, patio et trois garages — Cuers (83390)",
+      "bien": {
+        "type_bien": "maison",
+        "sous_type": null,
+        "type_detail": "Maison de village mitoyenne d'un côté, construite en 1967, sur deux niveaux : premier étage habitable (séjour, cuisine, deux chambres décrites, salle de bains) et rez-de-chaussée composé d'un patio en pierre, d'une dépendance de 41 m² ouverte sur le jardin par des baies vitrées, d'une pièce aménageable de 23 m², de trois garages de 15 m² et d'une cave de 21 m². Chauffage au fioul, DPE F, GES F, terrain de 400 m².",
+        "neuf": false,
+        "adresse": {
+          "texte": "Les Rayols-Saint Lazare-Les Bousquets, Cuers (83390) — adresse exacte non communiquée par l'agence",
+          "ville": "Cuers",
+          "code_postal": "83390",
+          "quartier": "Les Rayols-Saint Lazare-Les Bousquets"
+        },
+        "surfaces": {
+          "texte": "131 m² annoncés « 5 pièces principales », non ventilés par niveau, dont le descriptif détaille 41 m² de dépendance, 23 m² de pièce aménageable et trois garages de 15 m². La surface réellement habitable n'est pas établie : le titre annonce 4 chambres, le champ caractéristiques 1, le descriptif 2. Chiffrage retenu sur 110 m² habitables supposés, la fourchette 95-131 m² déplaçant la valeur de sortie de près de 100 000 €"
+        },
+        "lots": {
+          "count": 1,
+          "nature": "Une maison et son bloc d'annexes sur un même titre : un logement à l'étage, une dépendance de 41 m², une pièce de 23 m², trois garages de 15 m², une cave de 21 m² et 400 m² de terrain. Monopropriété, aucune copropriété, mitoyenneté d'un seul côté",
+          "lots_distincts": 1
+        },
+        "copro": {
+          "charges_annuelles_euros": 0.0,
+          "charges_source": "Aucune charge de copropriété : maison de village en monopropriété, mitoyenne d'un côté. L'entretien des extérieurs, du patio et du jardin est porté par la ligne d'entretien"
+        },
+        "travaux": {
+          "montant_euros": 85000.0,
+          "nature": "Aucun devis au dossier. Rafraîchissement du logement et des annexes, remplacement du chauffage au fioul, remontée du DPE de F vers E au minimum (un logement classé F ne peut plus être loué à compter du 1er janvier 2028 et son loyer n'est plus révisable), aménagement de la dépendance pour un usage d'atelier ou de local. Barèmes retenus : rafraîchissement 300 à 600 €/m², rénovation énergétique globale 200 à 450 €/m², chauffage fioul à remplacer 15 000 à 25 000 €. Scénario central 85 000 €, soit 650 €/m² sur 131 m² annoncés ; fourchette 60 000 à 140 000 € tant que le chantier n'est pas devisé"
+        }
+      },
+      "annonce": {
+        "plateforme": "seloger",
+        "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/cuers-83390/266G8B6TVPB6",
+        "prix_affiche_euros": 367000.0,
+        "prix_retenu_euros": 367000.0,
+        "prix_statut": "affiche",
+        "vendeur": "Olivier Kircher — Laforêt Cuers (EK CONSEIL, RCS 899934822), réf. annonce 2987 — honoraires à la charge du vendeur"
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 320000.0,
+          "haute_euros": 420000.0,
+          "retenue_euros": 360000.0,
+          "source": "DVF Cuers (83049) : maisons de 80 à 150 m², médiane 3 590 €/m², premier quartile 2 868, troisième 4 204, montant médian 343 205 € sur 152 ventes ; maisons de plus de 150 m², médiane 1 699 €/m² (la grande surface décote de plus de moitié). Appliqué aux 131 m² annoncés, cela donne 375 700 à 470 300 €. Retenue 360 000 €, sous le premier quartile, pour un bien classé F, mitoyen d'un côté, à rafraîchir, dont la surface habitable réelle est inférieure au chiffre annoncé et dont une partie de la valeur est portée par les annexes. Comparable direct de la base interne : maison de village de 80,53 m² habitables avec garage de 42 m², annexe de 30 m² et grenier de 27,5 m², affichée 300 000 € le 23/06/2026 à Cuers — soit 2 173 €/m² sur la seule surface habitable. Aucune transaction individuelle de la tranche n'est disponible dans notre extraction : la valeur est extrapolée de la tranche, et l'offre s'ancre sur la borne basse",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "Logement du premier étage, loué nu en bail d'habitation",
+            "quantite": 1,
+            "loyer_mensuel_euros": 900.0,
+            "occupe": false,
+            "note": "Estimé — à vérifier avec un relevé de location de maison sur la commune. Ancrages du 16/10/2026 : appartement T3 de 78 m² en cœur de village à 780 €/mois (10,0 €/m²), appartement de 92,9 m² (4 pièces, 3 chambres) annoncé par Laforêt Cuers à 1 006 €/mois (10,8 €/m²) ; baux en cours d'un immeuble de six logements suivi en juin 2026 : 10,4 à 14,4 €/m² sur de petites surfaces. Haut du marché local tenu par une maison de 123 m², 4 chambres et 400 m² de terrain affichée 1 650 €/mois. Retenu 900 €/mois sur environ 90 m², sous ce haut de fourchette parce que le logement est classé F, mitoyen d'un côté et à rafraîchir. Aucune maison n'est proposée à la location sur la commune au 16/10/2026 : le marché de la maison est étroit, ce qui joue sur les deux sens, à la relocation comme à la revente"
+          },
+          {
+            "lot": "Annexes : dépendance de 41 m², pièce de 23 m², trois garages de 15 m², cave",
+            "quantite": 1,
+            "loyer_mensuel_euros": 450.0,
+            "occupe": false,
+            "note": "Poste estimé, marché non publié : le relevé du 16/10/2026 ne rend que quatre locaux professionnels sur la commune, dont un local de 45 m² en surface de vente annoncé 560 €/mois. Le seuil retenu est celui de notre doctrine : 10 à 12 % du capital travaux engagé sur les annexes (25 000 à 40 000 €) exigent 250 à 470 €/mois. L'annexe est la seule partie du bien qui échappe au calendrier du DPE et au gel des loyers, un local d'activité n'étant pas un logement : un bail signé vaut ici mieux que n'importe quel relevé, la valeur du poste se marque conditionnelle"
+          }
+        ],
+        "notes": "Assiette entièrement POST-TRAVAUX : le bien est vendu libre, rien n'est louable en l'état (DPE F, chauffage au fioul, aucune production aujourd'hui). Les 16 200 €/an retenus sont une cible, pas un encaissement, et ils ne courent qu'après le chantier et la signature de deux baux. C'est la lecture de dette du dossier : acheter ici, c'est payer aujourd'hui un revenu qui n'existe pas encore."
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 2.0,
+        "vacance_worst_pct": 12.0,
+        "taux_placement_reserve_pct": 2.84,
+        "quote_part_bati_pct": 90.0,
+        "vacance_justification": "Deux baux sur le même titre, un logement et un bloc d'annexes : 5 % en base, 2 % en best, 12 % en worst — les deux unités vacantes en même temps, configuration plausible sur une commune où aucune maison n'est proposée à la location",
+        "charges": {
+          "charges_copro_annuelles_euros": 0.0,
+          "charges_copro_commentaire": "Aucune charge de copropriété, maison en monopropriété. Le poste est reconstitué dans la ligne d'entretien (jardin de 400 m², patio, extérieurs)",
+          "taxe_fonciere_annuelle_euros": 1800.0,
+          "taxe_fonciere_commentaire": "1 800 €/an ESTIMÉS — aucun avis communiqué. Repères internes à Cuers : 1 285 €/an pour une maison de village de 80 m² habitables, 2 900 €/an pour un immeuble de 200 m². La commune applique un taux de taxe foncière sur le bâti de 53,63 % en 2025, l'un des plus élevés du Var : l'avis réel est à exiger avant toute offre",
+          "entretien_annuel_euros": 1300.0,
+          "entretien_commentaire": "1 300 €/an : gestion locative déléguée à 6 % des loyers (972 €) et entretien courant du logement, du jardin de 400 m² et des annexes. Une maison individuelle avec terrain porte ce que la copropriété porterait ailleurs",
+          "pno_annuelle_euros": 300.0,
+          "comptabilite_annuelle_euros": 0.0
+        },
+        "frais_acquisition_euros": 29360.0,
+        "frais_acquisition_commentaire": "8 % du prix (29 360 €), régime ancien ; honoraires à la charge du vendeur, donc hors base de calcul"
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Logement à l'étage loué nu, annexes louées séparément comme locaux d'activité",
+          "code": "ld-nue",
+          "lots": 2
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Logement à l'étage loué nu, annexes louées séparément",
+            "lots": 2,
+            "performance": "Deux baux sur un même titre, 1 350 €/mois de recettes cibles, pour un rendement net après IS de 2.41 % sur un prix de revient de 481 360 €. Le logement seul, sans les annexes, n'apporterait que 5 007 €/an d'EBE en moins : c'est l'annexe qui fait basculer le compte",
+            "valeur_sortie": "Les annexes se lisent au lot : trois garages de 15 m² et une dépendance de 41 m², soit de l'ordre de 60 000 à 80 000 € de valeur de revente potentielle indépendamment du logement. Cette valeur ne se réalise qu'avec un accès indépendant et un acheteur : elle n'entre dans aucun plafond",
+            "faisabilite": "Sans autorisation tant que les annexes restent des locaux accessoires du logement ; déclaration préalable, vérification du PLU et places de stationnement dès qu'on en fait un logement ou un local d'activité autonome",
+            "risque": "modéré — le loyer de l'annexe n'est pas constaté, il se valide par un bail avant l'acte"
+          },
+          {
+            "strategie": "Location nue de la maison entière, un seul bail",
+            "lots": 1,
+            "performance": "Assiette 1 500 €/mois, rendement net après IS de 2.91 % sur 456 360 € de prix de revient. C'est la variante la plus simple à documenter et la plus faible : le locataire paie les annexes au rabais, et le logement reste soumis au calendrier du DPE",
+            "valeur_sortie": "Le lot entier se revend comme une maison de village, à la décote des grandes surfaces de la commune",
+            "faisabilite": "Immédiate après rafraîchissement : un seul bail, aucune autorisation",
+            "risque": "faible en exploitation, mais c'est la variante qui produit le moins"
+          },
+          {
+            "strategie": "Colocation meublée à l'étage, annexes louées séparément",
+            "lots": 5,
+            "performance": "Trois chambres à 430 € et les annexes, soit 1 740 €/mois, pour un rendement de 3.21 % après 10 000 € de travaux et d'ameublement supplémentaires. Aucun relevé de colocation n'existe sur la commune : la cible repose sur un raisonnement, pas sur un constat, et une maison de village sans séjour partagé rénové se loue mal en colocation",
+            "valeur_sortie": "Aucune prime de valeur à la revente : un acheteur familial ne paie pas plus cher un bien découpé en chambres",
+            "faisabilite": "Chambres à créer, séjour à sacrifier en partie, mobilier et fluides à financer : c'est un chantier et une exploitation, pas un investissement passif",
+            "risque": "élevé — seul levier de revenu théorique, sans preuve de demande locale"
+          },
+          {
+            "strategie": "Division en deux logements (rez-de-chaussée aménagé en T3) et annexes louées",
+            "lots": 3,
+            "performance": "Le gain de loyer est de 2 225 €/an d'EBE pour 35 000 € de travaux supplémentaires, soit 6.4 % du capital engagé : sous notre cible de 10 à 12 % pour un capital travaux, et le second logement tombe sous le seuil de surface et de stationnement du PLU à vérifier",
+            "valeur_sortie": "Deux logements valent moins au mètre carré qu'une maison à Cuers : 2 609 à 3 134 €/m² pour les appartements contre 3 590 €/m² pour les maisons (DVF, tranches 45-80 m² et 80-150 m²)",
+            "faisabilite": "Déclaration préalable, vérification de la zone du PLU, places de stationnement à créer, compteurs d'eau et d'électricité à séparer, réseaux à reprendre",
+            "risque": "élevé — délai d'instruction en condition suspensive, et un capital travaux mieux employé ailleurs"
+          },
+          {
+            "strategie": "Achat, rafraîchissement puis revente à la découpe (marchand de biens)",
+            "lots": 4,
+            "performance": "Écartée : 303 945 € à 405 410 € de produit de revente (105 à 115 m² de logements au prix des appartements de la commune, plus trois garages) contre 506 360 € de prix de revient avec 110 000 € de travaux. À Cuers l'appartement se vend 2 609 à 3 134 €/m² quand la maison se vend 3 590 €/m² : découper une maison en lots d'habitation détruit du prix au mètre carré au lieu d'en créer",
+            "valeur_sortie": "303 945 € à 405 410 € de sortie contre 506 360 € de revient, hors portage et hors honoraires de vente",
+            "faisabilite": "Division en lots ou en volumes à créer, plan de vente, portage de 18 à 24 mois, TVA et structure commerciale à mettre en place",
+            "risque": "élevé — et sans objet : l'opération est perdante avant même d'être risquée"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 6,
+            "justification": "Cuers est sur l'A57 et dispose d'une gare TER (Cuers-Pierrefeu) qui met Toulon à une vingtaine de minutes ; la commune vit de l'emploi toulonnais. Aucun transport urbain dense pour autant, et rien ne se fait sans voiture depuis ce quartier."
+          },
+          {
+            "dimension": "commerces",
+            "score": 6,
+            "justification": "Bourg de 11 500 à 13 000 habitants avec commerces de proximité, marché hebdomadaire et services de santé. Le bien est annoncé « aux portes de Cuers », à 400 m du collège : c'est le centre élargi, pas l'hypercentre commerçant."
+          },
+          {
+            "dimension": "ecoles",
+            "score": 7,
+            "justification": "Collège public La Ferrage à 405 m et ensemble privé Sainte-Marthe à 293 m, écoles primaires sur la commune. La clientèle familiale existe, mais le collège public ressort mal noté dans nos fiches antérieures sur la commune."
+          },
+          {
+            "dimension": "securite",
+            "score": 5,
+            "justification": "Commune pavillonnaire sans quartier prioritaire, mais nos deux dossiers de juin 2026 relevaient des incivilités et un déficit d'image sur le centre-ville et le quartier Clovade. Maison de village mitoyenne : la tranquillité dépend du voisinage immédiat."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 5,
+            "justification": "Marché locatif sans tension forte : deux annonces de location d'appartements sur la commune au 16/10/2026 et aucune maison à louer. Les baux en cours d'un immeuble comparable se situent entre 10,4 et 14,4 €/m² : la demande porte sur les petites surfaces, pas sur les maisons de 130 m²."
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 5,
+            "justification": "Revenu médian autour de 23 000 €, chômage proche de 9 à 11 %, croissance démographique réelle mais dépendance à l'emploi toulonnais. Marché sans fièvre : la plus-value n'est pas le moteur de ce dossier, et il ne faut pas l'attendre en consolation d'un rendement absent."
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Prix d'achat très au-dessus de ce que les loyers portent",
+            "severite": 5,
+            "detail": "Prix affiché 367 000 €, prix de revient 481 360 € une fois les frais d'acquisition et les travaux budgétés, pour un rendement net après IS de 2.41 % contre un plancher de branche de 5 %. Le prix qui atteint ce plancher ressort à 122 500 € : l'écart dépasse 240 000 €, soit plus de 65 % du prix affiché. Une remise de cette ampleur n'existe pas sur un bien affiché dans sa tranche de marché — ce n'est pas un dossier à négocier, c'est un dossier qui n'existe pas à ce prix."
+          },
+          {
+            "facteur": "Surface habitable inconnue",
+            "severite": 4,
+            "detail": "Le portail annonce 131 m² « 5 pièces », le descriptif décrit deux chambres et une pièce aménageable de 23 m², le champ caractéristiques en annonce une seule. Selon que la surface habitable réelle est de 105 ou de 131 m², le prix au mètre carré passe de 3 500 à 2 802 €/m² et la valeur de sortie varie de près de 100 000 €. Plans, diagnostic de surface et hauteurs sous plafond à exiger avant tout chiffrage : c'est la première question du dossier."
+          },
+          {
+            "facteur": "DPE F : location interdite au 1er janvier 2028, loyers gelés",
+            "severite": 4,
+            "detail": "Un logement classé F ne peut plus être mis en location à compter du 1er janvier 2028 et son loyer n'est plus révisable. La remontée du diagnostic n'est donc pas une option d'agrément : elle commande le calendrier et une part du budget. Chauffage au fioul à remplacer, cuve à contrôler, audit énergétique obligatoire à la vente d'une passoire en monopropriété."
+          },
+          {
+            "facteur": "Aucun devis sur un bâti ancien de 1967",
+            "severite": 3,
+            "detail": "Rafraîchissement, chauffage et énergie chiffrés à 85 000 € au barème, sans un seul devis. Toiture, planchers et évacuations d'une maison mitoyenne sont les postes invisibles : ils se vérifient en ouvrant, pas en visitant, et ils peuvent doubler l'enveloppe."
+          },
+          {
+            "facteur": "Loyer des annexes non constaté",
+            "severite": 3,
+            "detail": "Le marché des ateliers, dépôts et garages de village n'est pas publié : le loyer retenu de 450 €/mois est un seuil de doctrine, pas un constat. Il se valide par un bail signé avant l'acte, sinon le poste reste une hypothèse sur laquelle le prix ne peut pas être payé."
+          },
+          {
+            "facteur": "Liquidité de revente étroite",
+            "severite": 3,
+            "detail": "Peu d'acquéreurs pour une maison de village avec annexes à Cuers, et une décote de plus de moitié constatée sur les surfaces de plus de 150 m² dans la commune. Le bien se revend au prix d'un logement familial, pas au prix d'un programme, et la valeur des garages isolés dépend d'un marché local étroit qui ne se présume pas."
+          },
+          {
+            "facteur": "Deux baux, deux calendriers",
+            "severite": 2,
+            "detail": "Séparer le logement et les annexes double la rotation et les impayés possibles, et suppose des compteurs en état ou une division des réseaux. Le gain de revenu marginal se paie en gestion."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "2026-10-16-studio-26m2-toulon-porte-italie-gere",
+      "date_analyse": "2026-10-16",
+      "date_maj": "2026-10-16",
+      "titre": "Studio de 26,64 m² loué sous bail commercial à un exploitant — Campus Porte d'Italie, Toulon (83000)",
+      "bien": {
+        "type_bien": "appartement",
+        "sous_type": "studio",
+        "type_detail": "T1 de 26,64 m² Carrez, meublé, dans une résidence étudiante exploitée par GSA Résidences, quartier Porte d'Italie, à proximité du campus. DPE D, GES B. Vendus meublés, occupés, sous bail commercial consenti à l'exploitant : aucune occupation personnelle n'est possible, l'acquéreur perçoit un loyer que le logement soit occupé ou non.",
+        "neuf": false,
+        "adresse": {
+          "texte": "Quartier Porte d'Italie, Toulon (83000) — résidence étudiante, adresse exacte non communiquée",
+          "ville": "Toulon",
+          "code_postal": "83000",
+          "quartier": "Porte d'Italie"
+        },
+        "surfaces": {
+          "texte": "26,64 m² Carrez (T1), 26 m² annoncés au portail"
+        },
+        "lots": {
+          "count": 1,
+          "nature": "Un studio dans une résidence gérée : l'acquéreur devient bailleur de locaux commerciaux vis-à-vis de l'exploitant, qui sous-loue aux étudiants. Le lot est vendu meublé et occupé",
+          "lots_distincts": 1
+        },
+        "copro": {
+          "charges_annuelles_euros": 380.0,
+          "charges_source": "380 € HT/an de charges non récupérables annoncées par le vendeur. Aucun budget prévisionnel ni PV d'assemblée générale communiqué : le poste est à vérifier sur les appels de fonds réels"
+        },
+        "travaux": {
+          "montant_euros": 4000.0,
+          "nature": "Aucun travail à la charge de l'acquéreur tant que le bail court : l'entretien courant (article 605 du code civil) incombe à l'exploitant, les grosses réparations (606) au propriétaire. 4 000 € provisionnés pour la remise en état du studio au départ de l'exploitant, après dix ans d'exploitation étudiante : peintures, sols, sanitaires, mobilier"
+        }
+      },
+      "annonce": {
+        "plateforme": "leboncoin",
+        "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3229330779",
+        "url_secondaire": "https://gensdeconfiance.com/fr/ui/post/realestate__sale/72b9b28e-5357-48c8-82d9-4b9c4c8d0f49",
+        "prix_affiche_euros": 46920.0,
+        "prix_retenu_euros": 46920.0,
+        "prix_statut": "affiche",
+        "vendeur": "Le Revenu Pierre (SIRET 49960425400031), spécialiste de la revente de LMNP en résidences gérées, réf. 8238f-toulon-gsa — honoraires partagés entre l'acheteur et le vendeur. Le bien est diffusé simultanément sur LeBonCoin et sur Gens de Confiance, aux mêmes chiffres"
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 58000.0,
+          "haute_euros": 76000.0,
+          "retenue_euros": 68000.0,
+          "source": "DVF Toulon (83137) : appartements de moins de 30 m², médiane 3 351 €/m², premier quartile 2 760, sur 737 ventes — soit 73 500 à 89 300 € pour 26,64 m². Comparables directs de la même famille, studios de résidences gérées à Toulon : 21 m² annoncés 58 164 € (2 770 €/m²) et un studio GSA Résidences Mayol à 57 500 € (2 875 €/m²). Retenue 68 000 €, soit 2 553 €/m², sous le premier quartile communal : le studio porte un bail qui arrive à terme le 31/12/2027 avec un loyer 40 % sous le marché, et le marché de revente de ces lots est un marché d'investisseurs, étroit par construction",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "Studio meublé loué à l'exploitant par bail commercial",
+            "quantite": 1,
+            "loyer_mensuel_euros": 285.0,
+            "occupe": true,
+            "note": "Loyer en place : 3 420 € HT/an, soit 285 €/mois et 10,7 €/m², sous bail commercial 3/6/9 du 01/01/2018 au 31/12/2027 avec GSA Résidences, indexé. C'est un loyer très inférieur au marché du studio meublé à Toulon : relevé du 16/10/2026 — studio meublé de 18 m² à Sainte-Anne à 589 € charges comprises (33 €/m²), T2 meublé de 37 m² en basse ville à 680 € (18 €/m²), soit une tranche de 15 à 20 €/m² pour un meublé de cette taille, donc 400 à 530 €/mois. Variante chiffrée hors assiette : reprise du studio et location meublée directe à 450 €/mois après le départ de l'exploitant, avec 4 000 € de remise en état"
+          }
+        ],
+        "notes": "Assiette EN PLACE : le loyer est garanti par le bail commercial tant que l'exploitant paie, que le logement soit occupé ou non. Mais ce bail expire le 31/12/2027, soit dans quatorze mois : le dossier n'est pas un rendement long, c'est un coupon court adossé à une option sur la reprise du studio. La vacance de 5 % retenue en base est la provision de défaillance de l'exploitant, pas une vacance locative : pendant quatorze mois, la seule façon de perdre le loyer est que le preneur cesse de payer"
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 2.0,
+        "vacance_worst_pct": 12.0,
+        "taux_placement_reserve_pct": 2.84,
+        "quote_part_bati_pct": 90.0,
+        "vacance_justification": "Un seul preneur, une société d'exploitation : la vacance n'est pas locative, elle est la provision de défaillance du preneur. 5 % en base (0,6 mois de loyer par an), 2 % en best, 12 % en worst — défaillance en cours de bail, sans loyer pendant la procédure et studio à remettre en état",
+        "charges": {
+          "charges_copro_annuelles_euros": 380.0,
+          "charges_copro_commentaire": "380 € HT/an de charges non récupérables annoncées par le vendeur, à confirmer sur les appels de fonds",
+          "taxe_fonciere_annuelle_euros": 642.0,
+          "taxe_fonciere_commentaire": "642 €/an annoncés par le vendeur, aucun avis communiqué. C'est 18,8 % du loyer annuel : pour un studio occupé, le poste est lourd, et l'avis de taxe foncière est à exiger",
+          "entretien_annuel_euros": 0.0,
+          "entretien_commentaire": "Aucune gestion à notre charge : l'exploitant assure l'entretien courant (605) et la commercialisation. Le propriétaire garde les grosses réparations (606), qui ne se provisionnent pas dans le compte courant mais dans la réserve travaux du moteur",
+          "pno_annuelle_euros": 150.0,
+          "comptabilite_annuelle_euros": 0.0
+        },
+        "frais_acquisition_euros": 3754.0,
+        "frais_acquisition_commentaire": "3 754 € annoncés par le vendeur, soit 8,2 % du prix HT. Dans ce schéma d'acquisition, le 1 320 € de TVA affichée comme récupérable se récupère par l'acquéreur assujetti et se paie par l'acquéreur particulier : à faire trancher dans l'acte, la base HT ou TTC n'est pas indifférente"
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Portage du bail commercial en place, puis reprise du studio et location meublée directe à l'échéance",
+          "code": "ld-meuble",
+          "lots": 1
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Portage du bail commercial en place jusqu'au terme du 31/12/2027",
+            "lots": 1,
+            "performance": "285 €/mois encaissés sans gestion, indexés, pour un rendement net après IS de 3.56 % sur un prix de revient de 54 674 €. Quatorze mois de coupon, puis la question se repose : renouvellement, défaillance ou reprise",
+            "valeur_sortie": "68 000 € de valeur retenue pour un acte en main de 50 674 €, soit un ratio de 0.80 : la décote est la marge de sécurité du dossier",
+            "faisabilite": "Immédiate : le bail est en place, le loyer court, rien à faire ni à gérer",
+            "risque": "modéré à court terme, élevé au terme : tout dépend de ce que décide l'exploitant au 31/12/2027"
+          },
+          {
+            "strategie": "Reprise du studio et location meublée directe après le départ de l'exploitant",
+            "lots": 1,
+            "performance": "450 €/mois après 4 000 € de remise en état, soit 3 834 € d'EBE annuel et 6.41 % net après IS : le rendement double par rapport au coupon, au prix de la gestion",
+            "valeur_sortie": "Studio libre et loué meublé au marché : la valeur de revente remonte vers la médiane du DVF des moins de 30 m² (3 351 €/m²) au lieu de la décote de bail, soit plusieurs dizaines de milliers d'euros de plus que le prix payé",
+            "faisabilite": "Subordonnée au départ ou à la défaillance de l'exploitant : un refus de renouvellement de notre part coûte une indemnité d'éviction estimée à 12 000-15 000 €",
+            "risque": "c'est le scénario qui fait le dossier, et il ne se commande pas : il s'attend"
+          },
+          {
+            "strategie": "Revente en l'état, sous bail, au marché des studios gérés",
+            "lots": 1,
+            "performance": "Sortie de secours : les studios de résidences gérées comparables s'affichent 2 770 à 2 875 €/m², quand celui-ci est acheté autour de 1 800 €/m². La revente rapporte si le bail est encore long ; à quatorze mois du terme, elle ne rapporte rien de plus qu'aujourd'hui",
+            "valeur_sortie": "Entre 58 000 et 76 000 € selon la durée de bail restante vendue avec le lot",
+            "faisabilite": "Simple en apparence, mais le prix dépend entièrement de la durée du bail : un bail à un an ne se vend pas",
+            "risque": "faible, mais sans gain : c'est une porte de sortie, pas une stratégie"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 8,
+            "justification": "Porte d'Italie est le secteur du campus toulonnais et le mieux desservi de la ville : gare de Toulon à quelques minutes, réseau de bus dense, accès direct aux axes vers l'est. Un studio destiné aux étudiants se loue sur cette desserte avant toute autre chose."
+          },
+          {
+            "dimension": "commerces",
+            "score": 7,
+            "justification": "Quartier du campus : commerces de proximité, restauration, supermarchés et services dans le périmètre piéton du campus. C'est ce qui permet de relouer un meublé sans voiture."
+          },
+          {
+            "dimension": "ecoles",
+            "score": 9,
+            "justification": "Le moteur de la demande est là : université de Toulon, IUT, écoles d'ingénieurs et de gestion regroupés sur le secteur Porte d'Italie et La Garde. La demande étudiante est structurelle, et c'est exactement la clientèle que vise ce studio."
+          },
+          {
+            "dimension": "securite",
+            "score": 5,
+            "justification": "Quartier animé et très passant, avec la délinquance d'un secteur étudiant la nuit. L'exploitation en résidence gérée limite le risque locatif, elle ne le supprime pas : la remise en état et les impayés étudiants restent chez l'exploitant tant que le bail court, et reviennent au propriétaire après."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 8,
+            "justification": "Demande étudiante soutenue et renouvelée chaque année, sur la seule ville du Var où elle est concentrée. Relevé du 16/10/2026 : 31 studios meublés proposés à la location sur Toulon, de 18 à 37 m², entre 18 et 33 €/m² : la demande est là, l'offre aussi, ce qui plafonne le loyer par le haut."
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 6,
+            "justification": "Toulon reste une ville à revenu médian modeste, mais le secteur universitaire et militaire la soutient. Le marché n'est pas haussière : on n'achète pas ce studio pour la plus-value, on l'achète pour son prix d'entrée et son loyer."
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Dépendance à l'exploitant : tout le loyer tient à sa signature",
+            "severite": 4,
+            "detail": "Le propriétaire ne choisit ni les locataires, ni les baux, ni les réparations : c'est l'exploitant qui exploite. Un défaut de paiement ne se voit qu'à l'échéance, et la clause résolutoire prend du temps. Les comptes de GSA Résidences (exploitant du groupe Grand Sud Accueil, SIRET 419 948 781) sont la première pièce à demander : c'est le locataire unique, donc le dossier lui-même"
+          },
+          {
+            "facteur": "Bail à quatorze mois du terme, avec droit au renouvellement de l'exploitant",
+            "severite": 4,
+            "detail": "Le bail commercial 3/6/9 court du 01/01/2018 au 31/12/2027. Un bail commercial confère au preneur un droit au renouvellement : refuser le renouvellement oblige le bailleur à une indemnité d'éviction que l'intermédiaire lui-même chiffre à 12 000-15 000 € par studio en résidence étudiante, soit le quart du prix payé. La reprise du studio suppose donc une défaillance ou un départ de l'exploitant, pas un simple refus de notre part : c'est la condition du scénario haut, et elle ne se décide pas à la signature"
+          },
+          {
+            "facteur": "Loyer 40 % sous le marché tant que le bail court",
+            "severite": 3,
+            "detail": "285 €/mois pour 26,64 m² meublé, contre une tranche de 400 à 530 € pour un meublé de cette taille dans la même ville. L'indexation du bail ne comble pas cet écart : il n'y a aucun rattrapage à attendre avant le terme, et c'est précisément ce qui explique la décote du prix"
+          },
+          {
+            "facteur": "TVA et base de prix",
+            "severite": 2,
+            "detail": "1 320 € de TVA présentée comme récupérable, sur un prix de 46 920 € affiché TTC. La régularisation de TVA sur vingt ans est un poste classique de ces reventes et l'acquéreur particulier ne récupère rien : à faire écrire dans l'acte et dans la promesse, avec le montant de TVA déjà régularisée par les propriétaires successifs"
+          },
+          {
+            "facteur": "Remise en état après dix ans d'exploitation étudiante",
+            "severite": 3,
+            "detail": "L'entretien courant est à l'exploitant, les grosses réparations au propriétaire. Au départ de l'exploitant, le studio est rendu dans l'état d'usure d'une exploitation intensive : 4 000 € provisionnés au barème, davantage si les sanitaires et les sols sont repris. Aucun état des lieux d'entrée ni diagnostic complet n'a été communiqué"
+          },
+          {
+            "facteur": "Marché de revente étroit",
+            "severite": 2,
+            "detail": "Un studio sous bail commercial ne s'adresse qu'à des investisseurs, et accepte un seul profil d'acquéreur : celui qui veut le coupon. La sortie la plus liquide est justement le scénario haut, studio libre et loué meublé au marché — même logique que nos dossiers de petits lots : on achète le prix, pas l'exploitation vendue par l'intermédiaire"
+          }
+        ]
+      }
     }
   ]
 }
