@@ -120,22 +120,25 @@ def fiche():
             "notes": "Assiette EN PLACE : le loyer est garanti par le bail commercial tant que "
                      "l'exploitant paie, que le logement soit occupé ou non. Mais ce bail expire le "
                      "31/12/2027, soit dans quatorze mois : le dossier n'est pas un rendement long, "
-                     "c'est un coupon court adossé à une option sur la reprise du studio. La vacance "
-                     "de 5 % retenue en base est la provision de défaillance de l'exploitant, pas une "
-                     "vacance locative : pendant quatorze mois, la seule façon de perdre le loyer est "
-                     "que le preneur cesse de payer",
+                     "c'est un coupon court adossé à une option sur la reprise du studio. Aucune vacance "
+                     "n'est retenue : un bail commercial fait payer le loyer que le logement soit "
+                     "occupé ou non, et c'est la contrepartie du loyer bas consenti au preneur. Le "
+                     "risque n'est donc pas l'absence de locataire, c'est la signature de "
+                     "l'exploitant : il est traité au scénario Worst, pas en provision "
+                     "systématique",
         },
         "hypotheses": {
-            "vacance_base_pct": 5.0,
-            "vacance_best_pct": 2.0,
+            "vacance_base_pct": 0.0,
+            "vacance_best_pct": 0.0,
             "vacance_worst_pct": 12.0,
             "taux_placement_reserve_pct": 2.84,
             "quote_part_bati_pct": 90.0,
-            "vacance_justification": "Un seul preneur, une société d'exploitation : la vacance n'est "
-                                     "pas locative, elle est la provision de défaillance du preneur. "
-                                     "5 % en base (0,6 mois de loyer par an), 2 % en best, 12 % en "
-                                     "worst — défaillance en cours de bail, sans loyer pendant la "
-                                     "procédure et studio à remettre en état",
+            "vacance_justification": "Aucune vacance en base ni en best : un bail commercial fait "
+                                     "payer le loyer que le logement soit occupé ou non, c'est la "
+                                     "contrepartie du loyer bas. Le risque est la signature du "
+                                     "preneur, pas l'occupation du lot, et il se traite en scénario "
+                                     "Worst (12 % — défaillance en cours de bail, loyers suspendus "
+                                     "pendant la procédure et studio à remettre en état)",
             "charges": {
                 "charges_copro_annuelles_euros": 380.0,
                 "charges_copro_commentaire": "380 € HT/an de charges non récupérables annoncées par le "

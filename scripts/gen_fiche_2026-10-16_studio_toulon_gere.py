@@ -57,6 +57,13 @@ for _avant, _apres in [
      "<th>Rendement net sur revient</th>"),
     ("La dernière ligne montre la cible de colocation, hors bail en place.",
      ""),
+    ("Chaque ligne est recalculée par le moteur à partir du même lot, vacance 5 %, charges "
+     "inchangées. Le solde mensuel se lit sous la convention du groupe : frais d'acquisition "
+     "sortis comptants, solde du prix porté sur quinze ans, intérêts et assurance compris.",
+     "Chaque ligne est recalculée par le moteur à partir du même lot, sur le loyer encaissé de "
+     "285 €/mois, payé que le logement soit occupé ou non, charges inchangées. Le solde mensuel se "
+     "lit sous la convention du groupe : frais d'acquisition sortis comptants, solde du prix porté "
+     "sur quinze ans, intérêts et assurance compris."),
 ]:
     if _avant not in GABARIT:
         raise SystemExit("chaîne du gabarit absente : " + _avant[:60])
@@ -168,14 +175,15 @@ def main():
     # scénarios
     scenarios = []
     for sc in (
-        {"libelle": "Scénario Base", "classe": "scenario-base", "loyer": LOYER_BAIL, "vacance": 5.0,
+        {"libelle": "Scénario Base", "classe": "scenario-base", "loyer": LOYER_BAIL, "vacance": 0.0,
          "travaux": TRAVAUX,
-         "sous_titre": f"Bail commercial en place, {eur(LOYER_BAIL)}/mois — vacance 5 % — prix affiché "
-                       f"{eur(prix)} — remise en état provisionnée à la reprise"},
-        {"libelle": "Scénario Best", "classe": "scenario-best", "loyer": LOYER_MARCHE, "vacance": 5.0,
+         "sous_titre": f"Bail commercial en place, {eur(LOYER_BAIL)}/mois payés que le logement soit "
+                       f"occupé ou non — prix affiché {eur(prix)} — remise en état provisionnée à la "
+                       f"reprise"},
+        {"libelle": "Scénario Best", "classe": "scenario-best", "loyer": LOYER_MARCHE, "vacance": 0.0,
          "travaux": TRAVAUX,
          "sous_titre": f"Exploitant parti ou défaillant : studio repris et reloué meublé à "
-                       f"{eur(LOYER_MARCHE)}/mois — vacance 5 % — prix affiché {eur(prix)}"},
+                       f"{eur(LOYER_MARCHE)}/mois — prix affiché {eur(prix)}"},
         {"libelle": "Scénario Worst", "classe": "scenario-worst", "loyer": LOYER_BAIL, "vacance": 12.0,
          "travaux": 8000.0,
          "sous_titre": "Défaillance de l'exploitant en cours de bail : loyers suspendus pendant la "
@@ -250,7 +258,7 @@ def main():
                'au lieu de 285 €. Le dossier se juge donc sur la solidité du preneur et sur le sort du '
                'bail au 31 décembre 2027, jamais sur le rendement affiché.</p>')
 
-    garde_fous = f"""        <li><strong>Prix plafond du coupon seul : {eur(seuil_coupon)}</strong> — c'est le prix auquel le loyer de 285 €/mois atteint le seuil de 5 % net d'IS sur prix de revient, soit 35 % sous le prix affiché. Autrement dit : au prix demandé, le coupon ne suffit pas à faire vivre le dossier.</li>
+    garde_fous = f"""        <li><strong>Prix plafond du coupon seul : {eur(seuil_coupon)}</strong> — c'est le prix auquel le loyer de 285 €/mois, payé que le logement soit occupé ou non, atteint le seuil de 5 % net d'IS sur prix de revient, soit {pct((prix - seuil_coupon) / prix * 100)} sous le prix affiché. Autrement dit : au prix demandé, le coupon ne suffit pas à faire vivre le dossier.</li>
         <li><strong>Prix plafond si la reprise se fait : {eur(seuil_reprise)}</strong> — avec le studio repris et reloué meublé à {eur(LOYER_MARCHE)}/mois, le seuil est atteint jusqu'à {eur(seuil_reprise)}. Le prix affiché se situe entre les deux : il est trop haut pour le coupon et confortable pour l'option.</li>
         <li><strong>Le scénario haut rend {pct(c_haut['rendements']['net_sur_revient_pct'])} net d'IS</strong> contre {pct(rd['net_sur_revient_pct'])} pour le coupon — le rendement double, et c'est la raison d'acheter.</li>
         <li><strong>Pièces à exiger avant toute offre :</strong> le bail commercial et ses avenants, la durée restante et son caractère ferme ou 3/6/9, les comptes des deux derniers exercices de l'exploitant, la répartition des charges (605 et 606), l'état des lieux d'entrée et les diagnostics, l'avis de taxe foncière, les appels de fonds de copropriété, et le détail de la TVA régularisable.</li>
@@ -310,8 +318,9 @@ def main():
                          f"studio est de {eur(68000)}, soit un ratio coût/valeur de "
                          f"{nfr(c['ratio_cout_valeur'], 2)}, et la reprise du studio le ferait passer à "
                          f"{pct(c_haut['rendements']['net_sur_revient_pct'])}. Ce que le prix affiché "
-                         f"achète, c'est une option sur ce studio, et une option qui coûte 35 % sous le "
-                         f"premier quartile du marché mérite d'être travaillée.",
+                         f"achète, c'est une option sur ce studio, et une option achetée "
+                         f"{pct((2760.0 - prix / gen.SURFACE) / 2760.0 * 100)} sous le premier quartile "
+                         f"du marché mérite d'être travaillée.",
         "performance": f"{pct(rd['net_sur_revient_pct'])} de rendement net après IS sur un prix de revient "
                        f"de {eur(c['prix_revient_total'])}, pour un plancher de branche de 5 % : "
                        f"performance {nfr(comp['s_performance'], 1)}/10. EBE avant IS : {eur(f['ebe'])}. "
@@ -353,14 +362,14 @@ def main():
          "<th>Rendement net sur revient</th>",
          "<th>Prix d'achat</th><th>EBE / an</th><th>Net après IS</th><th>Solde mensuel net</th>"
          "<th>Rendement net sur revient</th>"),
-        ("Chaque ligne est recalculée par le moteur à partir du même lot, vacance 5 %, charges "
-         "inchangées. Le solde mensuel se lit sous la convention du groupe : frais d'acquisition "
-         "sortis comptants, solde du prix porté sur quinze ans, intérêts et assurance compris. "
-         "La dernière ligne montre la cible de colocation, hors bail en place.",
+        ("Chaque ligne est recalculée par le moteur à partir du même lot, loyer dû que le logement "
+         "soit occupé ou non, charges inchangées. Le solde mensuel se lit sous la convention du groupe : "
+         "frais d'acquisition sortis comptants, solde du prix porté sur quinze ans, intérêts et "
+         "assurance compris.",
          "Chaque ligne est recalculée par le moteur à partir du même lot, sur le loyer encaissé de "
-         "285 €/mois, vacance 5 %, charges inchangées. Le solde mensuel se lit sous la convention du "
-         "groupe : frais d'acquisition sortis comptants, solde du prix porté sur quinze ans, intérêts "
-         "et assurance compris."),
+         "285 €/mois, payé que le logement soit occupé ou non, charges inchangées. Le solde mensuel se "
+         "lit sous la convention du groupe : frais d'acquisition sortis comptants, solde du prix porté "
+         "sur quinze ans, intérêts et assurance compris."),
     ]
 
     gabarit = GABARIT
