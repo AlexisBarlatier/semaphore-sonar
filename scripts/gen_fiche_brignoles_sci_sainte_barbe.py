@@ -110,9 +110,10 @@ def record(loyer):
                 {"libelle": "Travaux réels 5 à 6 fois le budget annoncé", "severite": 5, "bloquant": False,
                  "detail": "20 000 € annoncés pour finir le 6e lot ; électricité seule déjà chiffrée 9 124 € pour deux lots, "
                            "et aucune isolation (sols, murs, toiture). Enveloppe réaliste 115 000 à 130 000 €."},
-                {"libelle": "Loyers 25 % au-dessus du marché, deux lots vides", "severite": 4, "bloquant": False,
-                 "detail": "3 040 € pour 220 m² Carrez font 13,8 €/m² contre 11,0 de marché. Deux des cinq baux sont "
-                           "des départs récents : le prix du loyer explique la vacance, pas seulement l'état."},
+                {"libelle": "Loyers 25 % au-dessus du marché, deux lots sans locataire", "severite": 4, "bloquant": False,
+                 "detail": "Cinq baux signés entre 2019 et 2025, mais trois lots occupés : deux lots ne produisent rien aujourd'hui. "
+                           "Le motif n'est pas documenté — départ, congé, ou lot jamais reloué. Les loyers à 13,8 €/m² contre 11,0 de marché "
+                           "sont une explication possible, pas un constat."},
                 {"libelle": "Installation électrique dangereuse sur les cinq lots", "severite": 4, "bloquant": False,
                  "detail": "Les cinq DDT concluent à des anomalies avec recommandation d'agir pour éliminer les dangers."},
                 {"libelle": "Sixième logement à créer", "severite": 3, "bloquant": False,
@@ -307,7 +308,8 @@ Les baux, les mesures Carrez et les diagnostics reçus le 23 octobre 2026 disent
 <tr><td><strong>Total</strong></td><td class="num">220,04 m²</td><td class="num"><strong>{total_baux}</strong></td><td class="num">100 €</td><td>—</td></tr>
 </table>
 <p>3 040 €/mois sur 220 m² Carrez, soit <strong>13,8 €/m²</strong> quand le marché de Brignoles tourne autour de 11,0 €/m².
-Les loyers portent 25 % de trop : c'est l'explication des deux départs, avant même l'état de l'immeuble.
+Les loyers portent 25 % de trop par rapport au marché : c'est une explication possible de la vacance, pas une preuve.
+Cinq baux signés et trois lots occupés laissent deux lots sans locataire aujourd'hui, sans que le motif soit documenté.
 À la relocation, l'assiette redescend à 2 500-2 600 €/mois pour les cinq lots.</p>
 </section>
 
