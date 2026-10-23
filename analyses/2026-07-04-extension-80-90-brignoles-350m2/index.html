@@ -1,342 +1,156 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Analyse — Extension Années 80-90, Brignoles (83170)</title>
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche de synthèse — Immeuble 6 logements, 17 avenue Dréo, Brignoles (83170)</title>
+<link rel="stylesheet" href="../../style.css">
+<style>
+  .fiche-synthese { max-width: 980px; margin: 0 auto; padding: 0 20px 60px; }
+  .fiche-synthese h2 { margin-top: 42px; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px; }
+  .fiche-synthese h3 { margin-top: 26px; }
+  .fiche-synthese table { width: 100%; border-collapse: collapse; margin: 14px 0 22px; font-size: 0.94rem; }
+  .fiche-synthese th { text-align: left; background: #f3f4f6; padding: 9px 10px; border-bottom: 2px solid #d1d5db; font-weight: 600; }
+  .fiche-synthese td { padding: 8px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  .fiche-synthese td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .fiche-synthese tr.ligne-base { background: #fff7ed; font-weight: 600; }
+  .fiche-synthese .alerte { background: #fef2f2; border-left: 4px solid #dc2626; padding: 16px 18px; margin: 22px 0; }
+  .fiche-synthese .info { background: #f0f9ff; border-left: 4px solid #0284c7; padding: 16px 18px; margin: 22px 0; }
+  .fiche-synthese ul { padding-left: 22px; }
+  .fiche-synthese li { margin-bottom: 7px; }
+  .fiche-synthese .kpi { display: flex; flex-wrap: wrap; gap: 14px; margin: 22px 0; }
+  .fiche-synthese .kpi div { flex: 1 1 190px; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 16px; background: #fafafa; }
+  .fiche-synthese .kpi span { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: #6b7280; }
+  .fiche-synthese .kpi strong { display: block; font-size: 1.35rem; margin-top: 6px; }
+</style>
 </head>
 <body>
-
 <header class="report-header">
   <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
-  <h1>Analyse d'investissement</h1>
-  <p class="report-address">Extension Années 80-90, Brignoles (83170)</p>
-  <p class="report-date">Analyse générée le 4 juillet 2026</p>
-  <p class="report-source">Source : Logic-Immo — Annonce 26BDT36AS59N — HAPPYSSIMMO / IMVESTIGO</p>
+  <h1>Fiche de synthèse</h1>
+  <p class="report-address">Immeuble 6 logements — 17 avenue Dréo, Brignoles (83170)</p>
+  <p class="report-date">Dossier ouvert le 4 juillet 2026, mis à jour le 23 octobre 2026 après réception des baux, des cinq dossiers de diagnostics et des deux devis électricité</p>
+  <p class="report-source">Vendeur : SCI Sainte Barbe (Jean-Bernard Léon). Mandataire : Deborah Vacchino, réseau Happyssimmo, réf. 2074DV.2. Prix affiché 399 000 €, honoraires à la charge du vendeur.</p>
   <div class="report-source-link"><a href="https://www.logic-immo.com/detail-vente-263831147.htm">https://www.logic-immo.com/detail-vente-263831147.htm</a></div>
 </header>
 
-<main>
+<main class="fiche-synthese">
 
-  <!-- === Bannière stratégie === -->
-  <div class="strategy-banner">
-    <span class="strategy-badge">Investissement locatif</span>
-    <p>Stratégie retenue : <strong>Location nue longue durée — 6 appartements (3 T3 + 3 T2)</strong> — SCI à l'IS (15 % sur les bénéfices)</p>
-  </div>
+<section>
+<div class="alerte">
+<strong>Ce que l'annonce dit, et ce que les pièces disent.</strong>
+L'annonce vend un immeuble de 350 m², six logements loués, 3 100 €/mois, avec 20 000 € pour finir le dernier lot.
+Les baux, les mesures Carrez et les diagnostics reçus le 23 octobre 2026 disent autre chose : <strong>220 m² Carrez</strong>,
+<strong>trois lots occupés sur six</strong>, et une remise en état qui coûte cinq à six fois le budget annoncé.
+</div>
 
-  <!-- === Cartes de synthèse (8) === -->
-  <section class="summary-cards">
-    <div class="card">
-      <span class="card-label">Prix d'achat</span>
-      <span class="card-value">420 000 €</span>
-    </div>
-    <div class="card">
-      <span class="card-label">Surface</span>
-      <span class="card-value">350 m²</span>
-    </div>
-    <div class="card">
-      <span class="card-label">Prix / m²</span>
-      <span class="card-value">1 200 €/m²</span>
-    </div>
-    <div class="card">
-      <span class="card-label">Prix de revient</span>
-      <span class="card-value">473 600 €</span>
-    </div>
-    <div class="card">
-      <span class="card-label">Valeur marché</span>
-      <span class="card-value">770 000 €</span>
-    </div>
-    <div class="card">
-      <span class="card-label">Revenus bruts</span>
-      <span class="card-value">3 740/mois</span>
-    </div>
-    <div class="card">
-      <span class="card-label">Rentabilité</span>
-      <span class="card-value">6,4 % / 3,9 %</span>
-    </div>
-    <div class="card card-verdict note-8">
-      <span class="card-label">Note</span>
-      <span class="card-value">8,9/10</span>
-    </div>
-  </section>
+<div class="kpi">
+  <div><span>Prix affiché</span><strong>399 000 €</strong></div>
+  <div><span>Prix au m² Carrez</span><strong>1 813 €</strong></div>
+  <div><span>Surface Carrez mesurée</span><strong>220,04 m²</strong></div>
+  <div><span>Prix de revient travaux compris</span><strong>543 925 €</strong></div>
+</div>
+</section>
 
-  <!-- === Carte === -->
-  <section class="map-section">
-    <h2>Localisation</h2>
-    <div id="map-container" data-lat="43.405" data-lon="6.062" data-address="Extension Années 80-90, Brignoles (83170)"></div>
-  </section>
+<section>
+<h2>Les trois surfaces, et celle qui fait foi</h2>
+<table>
+<tr><th>Source</th><th class="num">Surface</th><th>Ce qu'elle vaut</th></tr>
+<tr><td>Annonce</td><td class="num">350 m²</td><td>Surface commerciale, non opposable</td></tr>
+<tr><td>Baux (surfaces déclarées)</td><td class="num">257,64 m²</td><td>Surface habitable déclarative, majorée</td></tr>
+<tr class="ligne-base"><td>DDT — mesure Loi Carrez</td><td class="num">220,04 m²</td><td>Seul chiffre opposable et comparable au marché</td></tr>
+</table>
+<p>Un tiers de la surface annoncée n'existe pas. Le prix au m² réel est donc <strong>1 813 €</strong> et non 1 140 €/m² comme le laisse croire l'annonce.</p>
+</section>
 
-  <!-- === Attractivité du quartier === -->
-  <section class="attractiveness">
-    <h2>Attractivité du quartier</h2>
-    <p class="attractiveness-intro">Quartier résidentiel « Extension Années 80-90 » au nord-est du centre-ville de Brignoles. Secteur calme à dominante pavillonnaire et petits collectifs, proche des axes principaux (A8, D43) et des commodités du centre (5 min en voiture). Bonne desserte scolaire, tissu commercial dense. La présence de QPV à proximité et une vacance locative communale de 9,3 % nuancent le dynamisme locatif.</p>
-    <div class="attractiveness-grid">
-      <div class="attr-card"><span class="attr-label">Transports</span><div class="attr-bar-track"><div class="attr-bar-fill attr-score-6" style="width:60%"></div></div><span class="attr-detail">Gare SNCF, A8 à 5 min, bus urbains — correct sans être exceptionnel</span></div>
-<div class="attr-card"><span class="attr-label">Commerces &amp; services</span><div class="attr-bar-track"><div class="attr-bar-fill attr-score-7" style="width:70%"></div></div><span class="attr-detail">48 commerces, 9 supermarchés, hypermarché — bien équipé</span></div>
-<div class="attr-card"><span class="attr-label">Écoles &amp; crèches</span><div class="attr-bar-track"><div class="attr-bar-fill attr-score-8" style="width:80%"></div></div><span class="attr-detail">9 écoles, 3 collèges, 5 lycées — excellent pour les familles</span></div>
-<div class="attr-card"><span class="attr-label">Sécurité &amp; cadre de vie</span><div class="attr-bar-track"><div class="attr-bar-fill attr-score-5" style="width:50%"></div></div><span class="attr-detail">Score Fonciris 72/100, QPV à proximité — perception mitigée</span></div>
-<div class="attr-card"><span class="attr-label">Demande locative</span><div class="attr-bar-track"><div class="attr-bar-fill attr-score-7" style="width:70%"></div></div><span class="attr-detail">43,4 % de locataires, 9,3 % de vacance communale — marché actif</span></div>
-<div class="attr-card"><span class="attr-label">Dynamisme économique</span><div class="attr-bar-track"><div class="attr-bar-fill attr-score-5" style="width:50%"></div></div><span class="attr-detail">Revenu médian modeste, bassin d'emploi varois — économique mais sans excès</span></div>
-    </div>
-    <div class="attractiveness-summary">
-      <p><strong>Profil locataire cible :</strong> Familles monoparentales, couples de jeunes actifs, salariés du bassin brignolais et toulonnais recherchant un logement rénové bien desservi à prix modéré.</p>
-      <p><strong>Conclusion :</strong> Quartier fonctionnel et abordable, bien adapté au locatif de masse. Le point de vigilance principal est la proximité de QPV qui peut freiner certains profils CSP+. La demande locative est réelle mais le taux de vacance communal (9,3 %) rappelle qu'il faut rester compétitif sur le loyer.</p>
-    </div>
-  </section>
+<section>
+<h2>Les cinq baux reçus</h2>
+<table>
+<tr><th>Lot</th><th class="num">Carrez</th><th class="num">Loyer</th><th class="num">Charges</th><th>Date d'effet</th></tr>
+<tr><td>RDC — fond de cour</td><td class="num">36,85</td><td class="num">530 €</td><td class="num">20 €</td><td>février 2019</td></tr><tr><td>1er gauche</td><td class="num">39,00</td><td class="num">540 €</td><td class="num">20 €</td><td>1er septembre 2025</td></tr><tr><td>1er droite</td><td class="num">48,67</td><td class="num">670 €</td><td class="num">20 €</td><td>19 avril 2023</td></tr><tr><td>2e gauche</td><td class="num">44,92</td><td class="num">650 €</td><td class="num">20 €</td><td>1er mai 2024</td></tr><tr><td>2e droite</td><td class="num">50,60</td><td class="num">650 €</td><td class="num">20 €</td><td>7 août 2025</td></tr>
+<tr><td><strong>Total</strong></td><td class="num">220,04 m²</td><td class="num"><strong>3 040 €</strong></td><td class="num">100 €</td><td>—</td></tr>
+</table>
+<p>3 040 €/mois sur 220 m² Carrez, soit <strong>13,8 €/m²</strong> quand le marché de Brignoles tourne autour de 11,0 €/m².
+Les loyers portent 25 % de trop : c'est l'explication des deux départs, avant même l'état de l'immeuble.
+À la relocation, l'assiette redescend à 2 500-2 600 €/mois pour les cinq lots.</p>
+</section>
 
-  <!-- === Stratégie d'exploitation === -->
-  <section class="strategy-exploration">
-    <h2>Stratégie d'exploitation</h2>
-    <p class="attractiveness-intro">Plusieurs stratégies ont été évaluées pour ce bien. La ligne verte indique celle retenue pour les projections.</p>
-    <table class="strategy-table">
-      <thead>
-        <tr>
-          <th>Stratégie</th>
-          <th>Lots</th>
-          <th>Rendement net</th>
-          <th>Valeur après tx</th>
-          <th>Ratio coût/valeur</th>
-          <th>Faisabilité</th>
-          <th>Risque</th>
-          <th>Adéquation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="strategy-retained">
-  <td>A. Location nue 6 lots</td>
-  <td>6</td>
-  <td>6,4 %</td>
-  <td>770 000 €</td>
-  <td><span class="ratio-bon">0,62</span></td>
-  <td>Immédiate</td>
-  <td><span class="risk-low">Faible</span></td>
-  <td><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:65%"></div></div></td>
-</tr>
-<tr>
-  <td>B. Colocation meublée (T3)</td>
-  <td>9 chambres</td>
-  <td>~7,5 %</td>
-  <td>~790 000 €</td>
-  <td><span class="ratio-bon">0,60</span></td>
-  <td>6 mois + 15 k€ meubles</td>
-  <td><span class="risk-mid">Modéré</span></td>
-  <td><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:60%"></div></div></td>
-</tr>
-<tr>
-  <td>C. Marchand de biens</td>
-  <td>6 lots</td>
-  <td>ROI ~15 %</td>
-  <td>850 000 €</td>
-  <td><span class="ratio-ok">0,56</span></td>
-  <td>12 mois + 80 k€</td>
-  <td><span class="risk-high">Élevé</span></td>
-  <td><div class="adeq-bar-track"><div class="adeq-bar-fill adeq-mid" style="width:55%"></div></div></td>
-</tr>
-      </tbody>
-    </table>
-    <div class="strategy-rationale">
-      <p>La location nue longue durée est la stratégie la plus efficiente : 5 des 6 lots sont déjà rénovés, le rendement net de 6,4 % est solide, et le ratio coût/valeur de 0,62 offre une marge de sécurité confortable. La colocation meublée améliorerait le rendement mais introduit du turnover et des coûts d'ameublement (15 k€) pour un gain net limité. Le marchand de biens est théoriquement rentable (ratio 0,56) mais les 5 lots déjà rénovés laissent peu de valeur à créer — la plus-value viendrait surtout de la décote à l'achat, pas de la rénovation.</p>
-    </div>
-  </section>
+<section>
+<h2>Le budget travaux : 20 000 € annoncés, 115 000 € chiffrés</h2>
+<ul>
+<li><strong>Électricité</strong> — les cinq DDT concluent à des anomalies avec recommandation d'agir pour éliminer les dangers. Deux devis de l'électricien Fouassier (Brignoles) : 4 287 € et 4 837 € pour deux logements seulement, soit environ 22 500 € pour les cinq.</li>
+<li><strong>Isolation</strong> — aucune, ni sols, ni murs, ni toiture. Enveloppe 55 000 à 65 000 € sur six logements.</li>
+<li><strong>Aménagement du sixième lot</strong> — 40 000 €, et non 20 000 €.</li>
+</ul>
+<p>Total : <strong>115 000 €</strong>. Les 20 000 € annoncés ne couvrent même pas l'électricité des lots existants.</p>
+</section>
 
-  <!-- === Fiche d'identité === -->
-  <section class="identity-sheet">
-    <h2>Fiche d'identité du bien</h2>
-    <table class="identity-table">
-      <tbody>
-        <tr><td>Type</td><td>Immeuble de rapport — 6 appartements (3 T3 + 3 T2)</td></tr>
-<tr><td>Surface totale</td><td>350 m²</td></tr>
-<tr><td>Année de construction</td><td>1948</td></tr>
-<tr><td>DPE / GES</td><td>C / B — performant pour l'âge du bâti</td></tr>
-<tr><td>État</td><td>5 logements rénovés, 1 T2 à finir (travaux estimés 20 000 €)</td></tr>
-<tr><td>Annexes</td><td>Espaces de stockage privatifs par logement, terrasse, cours intérieures</td></tr>
-<tr><td>Taxe foncière</td><td>4 600 €/an (12,4 % du revenu brut — à vérifier avec l'avis réel)</td></tr>
-<tr><td>Charges</td><td>Mono-propriété : ~3 900 €/an estimés (assurance 700 + entretien 2 000 + électricité 200 + provision gros travaux 1 000)</td></tr>
-<tr><td>Vendeur</td><td>Professionnel — HAPPYSSIMMO / SAS IMVESTIGO (Hyères)</td></tr>
-<tr><td>Adresse exacte</td><td>Non communiquée dans l'annonce — à demander avant toute offre</td></tr>
-      </tbody>
-    </table>
-  </section>
+<section>
+<h2>Le DPE, lot par lot</h2>
+<table>
+<tr><th>Lot</th><th class="num">Classe</th><th class="num">kWh/m²/an</th><th class="num">GES</th></tr>
+<tr><td>RDC</td><td class="num">E</td><td class="num">286</td><td class="num">11</td></tr><tr><td>1er droite</td><td class="num">C</td><td class="num">128</td><td class="num">4</td></tr>
+<tr><td colspan="4">Les trois autres lots sont diagnostiqués mais leur classe n'a pas encore été relevée. Aucune passoire : pas d'échéance réglementaire à court terme.</td></tr>
+</table>
+</section>
 
-  <!-- === Projections financières === -->
-  <section class="financial-projections">
-    <h2>Projections financières</h2>
+<section>
+<h2>Le compte, selon l'assiette de loyers</h2>
+<table>
+<tr><th>Assiette</th><th class="num">Loyer</th><th class="num">EBE</th><th class="num">Net / revient</th><th class="num">Net / valeur</th><th class="num">Prix plafond</th></tr>
+<tr class="ligne-base"><td>3 lots occupés sur 5 (encaissé)</td><td class="num">1 824 €</td><td class="num">12 484 €</td><td class="num">2,30 %</td><td class="num">3,20 %</td><td class="num">110 000 €</td></tr><tr><td>5 lots reloués au loyer de marché (11,5 €/m²)</td><td class="num">2 526 €</td><td class="num">20 498 €</td><td class="num">3,65 %</td><td class="num">5,10 %</td><td class="num">249 500 €</td></tr><tr><td>5 lots au marché + 6e lot aménagé à 640 €</td><td class="num">3 166 €</td><td class="num">27 805 €</td><td class="num">4,80 %</td><td class="num">6,69 %</td><td class="num">292 000 €</td></tr><tr><td>6 lots aux loyers des baux en place</td><td class="num">3 680 €</td><td class="num">33 674 €</td><td class="num">5,71 %</td><td class="num">7,97 %</td><td class="num">292 000 €</td></tr>
+</table>
+<p>La ligne surlignée est la seule qui soit encaissée aujourd'hui : <strong>trois lots sur six</strong>.
+Les autres sont des cibles, pas des revenus — et un lot vide ne paie pas sa taxe foncière.</p>
+<div class="info">
+<strong>Le chiffre à retenir.</strong> Sur l'assiette réelle, l'exploitation dégage <strong>12 484 €</strong> par an,
+soit un solde d'exploitation de <strong>+1 040 €/mois</strong>, pour un prix de revient de 543 925 €.
+Tous lots loués et le sixième aménagé, on monte à <strong>27 805 €</strong> et <strong>+2 174 €/mois</strong>.
+</div>
+</section>
 
-    <div class="projections-grid">
-      <div class="projection-card scenario-base">
-        <h3>Scénario Base</h3>
-        <p class="scenario-subtitle">Vacance 5% — Loyer marché — Charges annoncées</p>
-        <table class="projection-table">
-          <tbody>
-            <tr><td>Revenu brut annuel</td><td>44 880 €</td></tr>
-<tr><td>Vacance (5 %)</td><td>−2 244 €</td></tr>
-<tr><td>Taxe foncière</td><td>−4 600 €</td></tr>
-<tr><td>Charges mono-propriété</td><td>−3 900 €</td></tr>
-<tr><td>PNO + Comptable</td><td>−850 €</td></tr>
-<tr><td><strong>EBE</strong></td><td><strong>33 286 €</strong></td></tr>
-<tr><td>Amortissement (bâti + travaux)</td><td>−13 200 €</td></tr>
-<tr><td>Résultat fiscal</td><td>20 086 €</td></tr>
-<tr><td>IS (15 %)</td><td>−3 013 €</td></tr>
-<tr><td><strong>Résultat net</strong></td><td><strong>30 273 €</strong></td></tr>
-<tr><td>Cash flow mensuel</td><td>2 523 €</td></tr>
-<tr><td>CF amort. réintégré</td><td>3 623 €</td></tr>
-<tr><td><strong>Rendement net / prix revient</strong></td><td><strong>6,4 %</strong></td></tr>
-<tr><td>Rendement net / valeur marché</td><td>3,9 %</td></tr>
-          </tbody>
-        </table>
-      </div>
+<section>
+<h2>La grille de prix</h2>
+<table>
+<tr><th>Critère</th><th class="num">Prix</th><th>Écart au prix affiché</th></tr>
+<tr class="ligne-base"><td>Prix affiché</td><td class="num">399 000 €</td><td>—</td></tr>
+<tr><td>Plafond sur l'assiette encaissée</td><td class="num">110 000 €</td><td class="num">-72,4 %</td></tr>
+<tr><td>Plafond tous lots loués et sixième aménagé</td><td class="num">292 000 €</td><td class="num">-26,8 %</td></tr>
+</table>
+<p>Le plafond le plus haut suppose que la relocation réussisse au loyer de marché, que le sixième lot soit créé
+et que les 115 000 € de travaux tiennent. Il reste <strong>sous le prix affiché</strong>. Ce dossier ne s'achète donc pas
+au prix demandé, quelle que soit la lecture retenue.</p>
+</section>
 
-      <div class="projection-card scenario-best">
-        <h3>Scénario Optimiste</h3>
-        <p class="scenario-subtitle">Vacance 2% — Loyer +5% — Charges -10%</p>
-        <table class="projection-table">
-          <tbody>
-            <tr><td>Revenu brut annuel</td><td>47 124 €</td></tr>
-<tr><td>Vacance (2 %)</td><td>−942 €</td></tr>
-<tr><td>Taxe foncière</td><td>−4 600 €</td></tr>
-<tr><td>Charges mono-propriété</td><td>−3 510 €</td></tr>
-<tr><td>PNO + Comptable</td><td>−765 €</td></tr>
-<tr><td><strong>EBE</strong></td><td><strong>37 767 €</strong></td></tr>
-<tr><td>Amortissement (bâti + travaux)</td><td>−13 200 €</td></tr>
-<tr><td>Résultat fiscal</td><td>24 567 €</td></tr>
-<tr><td>IS (15 %)</td><td>−3 685 €</td></tr>
-<tr><td><strong>Résultat net</strong></td><td><strong>34 082 €</strong></td></tr>
-<tr><td>Cash flow mensuel</td><td>2 840 €</td></tr>
-<tr><td>CF amort. réintégré</td><td>3 940 €</td></tr>
-<tr><td><strong>Rendement net / prix revient</strong></td><td><strong>7,2 %</strong></td></tr>
-<tr><td>Rendement net / valeur marché</td><td>4,4 %</td></tr>
-          </tbody>
-        </table>
-      </div>
+<section>
+<h2>Risques</h2>
+<ul>
+<li><strong>Travaux sous-estimés d'un facteur cinq.</strong> La pièce reçue chiffre l'électricité seule à 9 124 € pour deux lots ; le vendeur annonce 20 000 € pour finir un sixième lot sans isolation.</li>
+<li><strong>Loyers au-dessus du marché.</strong> 13,8 €/m² contre 11,0. Reconduire les baux en place, c'est reconduire la vacance.</li>
+<li><strong>Deux lots vides.</strong> L'annonce ne le dit pas. Aucun revenu tant qu'ils ne sont pas reloués, et la taxe foncière de 4 600 € tombe chaque année.</li>
+<li><strong>Sixième lot non mesuré.</strong> Le permis de 2012 en prévoyait six ; le dernier n'est ni diagnostiqué ni chiffré.</li>
+<li><strong>Monopropriété SCI.</strong> Pas de charges de copropriété, mais pas de vote pour arbitrer les travaux non plus : tout repose sur le vendeur puis sur nous.</li>
+</ul>
+</section>
 
-      <div class="projection-card scenario-worst">
-        <h3>Scénario Pessimiste</h3>
-        <p class="scenario-subtitle">Vacance 12% — Loyer -10% — Charges +20%</p>
-        <table class="projection-table">
-          <tbody>
-            <tr><td>Revenu brut annuel</td><td>40 392 €</td></tr>
-<tr><td>Vacance (12 %)</td><td>−4 847 €</td></tr>
-<tr><td>Taxe foncière</td><td>−4 600 €</td></tr>
-<tr><td>Charges mono-propriété</td><td>−4 680 €</td></tr>
-<tr><td>PNO + Comptable</td><td>−1 020 €</td></tr>
-<tr><td>Travaux imprévus</td><td>−3 000 €</td></tr>
-<tr><td><strong>EBE</strong></td><td><strong>21 325 €</strong></td></tr>
-<tr><td>Amortissement (bâti + travaux)</td><td>−13 200 €</td></tr>
-<tr><td>Résultat fiscal</td><td>8 125 €</td></tr>
-<tr><td>IS (15 %)</td><td>−1 219 €</td></tr>
-<tr><td><strong>Résultat net</strong></td><td><strong>20 106 €</strong></td></tr>
-<tr><td>Cash flow mensuel</td><td>1 676 €</td></tr>
-<tr><td>CF amort. réintégré</td><td>2 776 €</td></tr>
-<tr><td><strong>Rendement net / prix revient</strong></td><td><strong>4,2 %</strong></td></tr>
-<tr><td>Rendement net / valeur marché</td><td>2,6 %</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+<section class="verdict pass">
+<h2>Recommandation</h2>
+<p><strong>À fuir — note 1,8/10.</strong></p>
+<p>À 399 000 €, l'immeuble s'achète <strong>3,6 fois</strong> le plafond calculé sur la seule assiette
+réellement encaissée, et encore <strong>37 % au-dessus</strong> de celui qui suppose la relocation réussie
+et le sixième lot créé.
+La négociation n'est pas une question de pourcentage : il faudrait que le vendeur abandonne un quart du prix
+pour qu'un dossier de revenu redevienne un dossier de revenu.</p>
+<p>Deux conditions avant toute proposition : un devis isolation et aménagement signé, et la date de libération
+des deux lots vides avec l'état dans lequel ils seront rendus. Sans ces pièces, le chiffrage restera une estimation
+et les 115 000 € eux-mêmes ne sont pas garantis.</p>
+</section>
 
-    <div class="projection-summary">
-      <h3>Synthèse comparative</h3>
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th>Indicateur</th>
-            <th>Base</th>
-            <th>Optimiste</th>
-            <th>Pessimiste</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Revenu brut</td><td>44 880 €</td><td>47 124 €</td><td>40 392 €</td></tr>
-<tr><td>EBE</td><td>33 286 €</td><td>37 767 €</td><td>21 325 €</td></tr>
-<tr><td>IS</td><td>3 013 €</td><td>3 685 €</td><td>1 219 €</td></tr>
-<tr><td>Résultat net</td><td>30 273 €</td><td>34 082 €</td><td>20 106 €</td></tr>
-<tr><td>Cash flow mensuel</td><td>2 523 €</td><td>2 840 €</td><td>1 676 €</td></tr>
-<tr><td>CF amort. réintégré</td><td>3 623 €</td><td>3 940 €</td><td>2 776 €</td></tr>
-<tr><td>Rendement net / revient</td><td>6,4 %</td><td>7,2 %</td><td>4,2 %</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- === Matrice de risques === -->
-  <section class="risk-matrix">
-    <h2>Matrice de risques</h2>
-    <table class="risk-table">
-      <thead>
-        <tr>
-          <th>Facteur de risque</th>
-          <th>Détail</th>
-          <th>Sévérité</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Taxe foncière élevée</td><td>4 600 €/an = 12,4 % du revenu brut — pèse sur l'EBE. À vérifier avec l'avis réel.</td><td class="severity severity-3">3/5</td></tr>
-<tr><td>Adresse exacte inconnue</td><td>« Extension Années 80-90 » couvre un périmètre hétérogène. La valeur marché peut varier de ±15 % selon la rue exacte.</td><td class="severity severity-2">2/5</td></tr>
-<tr><td>Dépassement travaux T2</td><td>Les 20 000 € annoncés pour le 6ᵉ lot sont une estimation. Un dépassement de 5-10 k€ est possible.</td><td class="severity severity-2">2/5</td></tr>
-<tr><td>Mono-propriété : portage intégral</td><td>Pas de syndic pour mutualiser les charges — le propriétaire assume 100 % de l'entretien.</td><td class="severity severity-2">2/5</td></tr>
-<tr><td>QPV à proximité</td><td>Quartiers prioritaires à proximité — peut freiner les profils CSP+ et exercer une pression baissière sur les loyers.</td><td class="severity severity-3">3/5</td></tr>
-<tr><td>Vacance locative communale</td><td>9,3 % de logements vacants (INSEE) — rester compétitif sur le loyer est indispensable.</td><td class="severity severity-2">2/5</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- === Verdict === -->
-  <section class="verdict verdict-acheter">
-    <h2>Recommandation</h2>
-    <div class="verdict-decision">
-      <p class="verdict-stance">Ce dossier est une opportunité d'investissement locatif solide. À 1 200 €/m², l'immeuble s'achète avec une décote de ~45 % sur la valeur de marché (~2 200 €/m²). Avec 5 lots déjà rénovés, un DPE C (rare pour du 1948), et un rendement net de 6,4 % après IS, le couple rendement/risque est favorable. Le point de vigilance principal est la taxe foncière élevée (12,4 % du revenu brut) et l'absence d'adresse exacte — ces deux points doivent être levés avant l'offre. À 420 000 €, c'est un achat recommandé.</p>
-    </div>
-    <div class="verdict-details">
-      <p><strong>Prix plafond recommandé :</strong> 420 000 € (prix facial — décote déjà significative de ~45 % sur le marché ; une négociation à 400 000 € renforcerait le rendement à 6,8 % net)</p>
-      <p><strong>Leviers de négociation :</strong></p>
-      <ul>
-        <li>Taxe foncière de 4 600 €/an — exiger l'avis réel et négocier si le montant est supérieur</li>
-<li>T2 à finir : les 20 000 € sont une estimation — obtenir un devis avant l'offre</li>
-<li>DPE C sur un bâti de 1948 : vérifier l'année des travaux d'isolation (factures à l'appui)</li>
-<li>Mono-propriété : absence de fonds travaux mutualisé — intégrer ce risque dans l'offre</li>
-<li>Adresse exacte à obtenir avant toute proposition — si la rue est moins bien cotée, réviser le prix</li>
-      </ul>
-    </div>
-    <div class="verdict-meta">
-      <p><strong>Régime fiscal retenu :</strong> SCI à l'IS (15 % sur les bénéfices, amortissement du bâti sur 30 ans et des travaux sur 10 ans)</p>
-      <p><strong>Estimation frais de notaire :</strong> ~33 600 € (8 % d'un achat dans l'ancien)</p>
-      <p><strong>Enveloppe travaux estimée :</strong> 20 000 € (finition du 6ᵉ lot T2 — estimation à confirmer par devis)</p>
-    </div>
-  </section>
-
-  <!-- === Signature === -->
-  <footer class="report-signature">
-    <p>Analyse réalisée par</p>
-    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
-    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
-  </footer>
+<footer>
+<p class="report-footer">Fiche de synthèse interne — Sémaphore Patrimoine. Chiffres calculés par le moteur d'analyse du dépôt sur les pièces reçues le 23 octobre 2026 (cinq DDT, deux devis électricité, cinq baux).</p>
+</footer>
 
 </main>
-
-<script>
-  (function() {
-    var mapEl = document.getElementById('map-container');
-    var lat  = parseFloat(mapEl.getAttribute('data-lat'));
-    var lon  = parseFloat(mapEl.getAttribute('data-lon'));
-    var addr = mapEl.getAttribute('data-address');
-
-    if (isNaN(lat) || isNaN(lon)) {
-      mapEl.innerHTML = '<p class="map-fallback">Coordonnées non disponibles pour « ' + addr + ' »</p>';
-      return;
-    }
-
-    var map = L.map('map-container').setView([lat, lon], 15);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors',
-      maxZoom: 19
-    }).addTo(map);
-    L.marker([lat, lon]).addTo(map).bindPopup(addr).openPopup();
-  })();
-</script>
-
 </body>
 </html>
