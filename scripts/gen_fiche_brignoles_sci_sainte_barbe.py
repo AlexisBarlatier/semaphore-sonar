@@ -23,7 +23,7 @@ from analyse_app import engine, scoring  # noqa: E402
 SLUG = "2026-07-04-extension-80-90-brignoles-350m2"
 SURFACE_CARREZ = 220.04
 PRIX = 399000.0
-TRAVAUX = 115000.0
+TRAVAUX = 130000.0
 TF = 4600.0
 CHARGES = {
     "taxe_fonciere_annuelle_euros": TF,
@@ -35,8 +35,8 @@ CHARGES = {
 }
 LOYERS = [
     ("Cinq baux en cours — un par lot (3 040 €/mois)", 3040.0),
-    ("Relocation des cinq lots au loyer de marché (11,5 €/m²)", 2526.0),
-    ("Marché + sixième lot aménagé à 640 €", 3166.0),
+    ("Relocation au loyer médian de la commune (13,1 €/m², DHUP 2025)", 2882.0),
+    ("Loyer médian + sixième lot aménagé à 640 €", 3522.0),
     ("Si deux lots sont réellement vides (à confirmer)", 1824.0),
 ]
 TOLERANT = os.environ.get("HERMES_TOLERANT") == "1"
@@ -107,13 +107,14 @@ def record(loyer):
                 ("dynamisme", 5, "Commune administratrice du Var, bassin d'emploi modeste"),
             ]],
             "risques": [
-                {"libelle": "Travaux réels 5 à 6 fois le budget annoncé", "severite": 5, "bloquant": False,
+                {"libelle": "Travaux réels 6 à 7 fois le budget annoncé", "severite": 5, "bloquant": False,
                  "detail": "20 000 € annoncés pour finir le 6e lot ; électricité seule déjà chiffrée 9 124 € pour deux lots, "
-                           "et aucune isolation (sols, murs, toiture). Enveloppe réaliste 115 000 à 130 000 €."},
-                {"libelle": "Loyers 25 % au-dessus du marché, occupation à confirmer", "severite": 4, "bloquant": False,
+                           "aucune isolation (sols, murs, toiture), et le lot brut vaut 45 000 € à lui seul. Enveloppe réaliste "
+                           "130 000 à 140 000 €, dont la part existant ne peut se faire qu'au départ des locataires."},
+                {"libelle": "Loyers dans le haut du marché, occupation à confirmer", "severite": 3, "bloquant": False,
                  "detail": "Cinq baux signés entre 2019 et 2025 couvrent les cinq lots, mais l'agence évoque trois appartements occupés. "
-                           "Aucun congé ni état des lieux de sortie n'est fourni. Les loyers à 13,8 €/m² contre 11,0 de marché "
-                           "rendent une vacance plausible sans la démontrer."},
+                           "Aucun congé ni état des lieux de sortie n'est fourni. À 13,8 €/m² contre 13,1 de médiane communale, "
+                           "les loyers sont hauts mais dans le marché : ils n'expliquent pas seuls une vacance."},
                 {"libelle": "Installation électrique dangereuse sur les cinq lots", "severite": 4, "bloquant": False,
                  "detail": "Les cinq DDT concluent à des anomalies avec recommandation d'agir pour éliminer les dangers."},
                 {"libelle": "Sixième logement à créer", "severite": 3, "bloquant": False,
@@ -186,8 +187,23 @@ def main():
     # DPE relevés sur les deux DDT lisibles
     dpe = [("RDC", "E", "286", "11"), ("1er droite", "C", "128", "4")]
 
+    annonces = [
+        ("T2 36 m² — Zimo, Brignoles", "36,00", "535", "14,9"),
+        ("T2 51 m² — Orpi (bien loué)", "51,18", "746", "14,6"),
+        ("T3 55 m² — Locagestion", "55,00", "780", "14,2"),
+        ("T3 70 m² — Les Clés", "70,00", "870", "12,4"),
+        ("T4 97 m² — SeLoger", "97,00", "1 167", "12,0"),
+        ("T4 73 m² — Rentola", "73,00", "755", "10,3"),
+        ("T3 66 m² — FNAIM", "66,00", "630", "9,5"),
+    ]
+    marche_html = "".join(
+        f"<tr><td>{a[0]}</td><td class=\"num\">{a[1]} m²</td><td class=\"num\">{a[2]}\u00a0€</td>"
+        f"<td class=\"num\">{a[3]}\u00a0€</td></tr>" for a in annonces
+    )
+
     html = TEMPLATE.format(
         slug=SLUG,
+        marche=marche_html,
         prix=eur(PRIX),
         prix_m2=eur(PRIX / SURFACE_CARREZ),
         surface=nfr(SURFACE_CARREZ, 2),
@@ -310,21 +326,39 @@ mais l'agence évoque trois appartements occupés, et aucun document ne tranche.
 {baux}
 <tr><td><strong>Total</strong></td><td class="num">220,04 m²</td><td class="num"><strong>{total_baux}</strong></td><td class="num">100 €</td><td>—</td></tr>
 </table>
-<p>3 040 €/mois sur 220 m² Carrez, soit <strong>13,8 €/m²</strong> quand le marché de Brignoles tourne autour de 11,0 €/m².
-Les loyers portent 25 % de trop face au marché : c'est une explication possible de la vacance, pas une preuve.
+<p>3 040 €/mois sur 220 m² Carrez, soit <strong>13,8 €/m²</strong>. Le loyer médian de la commune ressort à
+<strong>13,1 €/m²</strong> (DHUP 2025, fourchette 10,1 à 16,9) : les baux sont donc à 5 % au-dessus du marché,
+dans le haut de la fourchette mais pas hors marché. Les loyers ne sont pas le problème du dossier.
 Les cinq baux reçus couvrent les cinq lots et aucun ne porte de mention de résiliation : rien dans les pièces ne dit
 qu'un lot est vide. Si deux le sont, c'est une information d'agence qui reste à documenter — congé, état des lieux de sortie, date.
-À la relocation, l'assiette redescend à 2 500-2 600 €/mois pour les cinq lots.</p>
+À la relocation au loyer médian, l'assiette ressort à 2 880 €/mois pour les cinq lots, soit 160 € de moins.</p>
 </section>
 
 <section>
-<h2>Le budget travaux : 20 000 € annoncés, 115 000 € chiffrés</h2>
+<h2>Ce que le marché demande aujourd'hui</h2>
+<table>
+<tr><th>Annonce / source</th><th class="num">Surface</th><th class="num">Loyer</th><th class="num">€/m²</th></tr>
+{marche}
+<tr class="ligne-base"><td>Médiane communale (DHUP 2025)</td><td class="num">—</td><td class="num">—</td><td class="num">13,1 €</td></tr>
+</table>
+<p>La fourchette observée va de 9,5 à 14,9 €/m² selon l'état, l'étage et la surface. Les petites surfaces partent plus cher
+au m², les grands logements moins. Nos cinq lots se situent entre 12,8 et 14,5 €/m² : ils sont dans le marché, en haut de la
+fourchette pour les petites surfaces. <strong>Il n'y a donc pas de marge de revalorisation à attendre de la relocation</strong> —
+au mieux une stabilité, au pire 5 % de moins sur les lots les plus chers au m².</p>
+</section>
+
+<section>
+<h2>Le budget travaux : 20 000 € annoncés, 130 000 € chiffrés</h2>
 <ul>
 <li><strong>Électricité</strong> — les cinq DDT concluent à des anomalies avec recommandation d'agir pour éliminer les dangers. Deux devis de l'électricien Fouassier (Brignoles) : 4 287 € et 4 837 € pour deux logements seulement, soit environ 22 500 € pour les cinq.</li>
 <li><strong>Isolation</strong> — aucune, ni sols, ni murs, ni toiture. Enveloppe 55 000 à 65 000 € sur six logements.</li>
-<li><strong>Aménagement du sixième lot</strong> — 40 000 €, et non 20 000 €.</li>
+<li><strong>Aménagement du sixième lot</strong> — largement au-delà des 20 000 € annoncés, un lot brut à créer coûte 45 000 € avec ses réseaux et sa salle d'eau.</li>
 </ul>
 <p>Total : <strong>{travaux}</strong>. Les 20 000 € annoncés ne couvrent même pas l'électricité des lots existants.</p>
+<p>Et le calendrier compte autant que le montant : <strong>les travaux de l'existant ne se font qu'au départ des locataires</strong>.
+Un logement occupé ne se rénove pas. Le budget s'étale donc sur plusieurs années, au rythme des rotations — ce qui veut dire
+des loyers bloqués en dessous du marché tant que le lot n'a pas été repris, et un chantier qui revient à chaque congé.
+Le sixième lot, lui, peut être fait immédiatement, mais il ne se louera pas sans l'isolation.</p>
 </section>
 
 <section>
@@ -361,17 +395,16 @@ Tous lots loués et le sixième aménagé, on monte à <strong>{ebe_cible}</stro
 <tr><td>Plafond au loyer de marché, sixième lot aménagé</td><td class="num">{plaf_cible}</td><td class="num">{ecart_cible}</td></tr>
 </table>
 <p>Sur les cinq baux en cours, le plafond 5 % net avant IS ressort à <strong>{plaf_base}</strong>, soit <strong>{ecart_base}</strong>
-sur le prix affiché. L'écart est faible — mais ce plafond suppose que les 115 000 € de travaux tiennent et que les loyers
-restent à 13,8 €/m², soit 25 % au-dessus du marché. Ramené au loyer de marché, il tombe à 274 000 €. Et la marge de
+sur le prix affiché. L'écart est faible — mais ce plafond suppose que les 130 000 € de travaux tiennent et que les loyers
+restent à 13,8 €/m², soit 5 % au-dessus de la médiane communale. Ramené au loyer médian, il tombe à 336 000 €. Et la marge de
 sécurité du moteur, qui compare le prix de revient à la valeur de l'actif, plafonne à 292 000 €.</p>
 </section>
 
 <section>
 <h2>Risques</h2>
 <ul>
-<li><strong>Travaux sous-estimés d'un facteur cinq.</strong> La pièce reçue chiffre l'électricité seule à 9 124 € pour deux lots ; le vendeur annonce 20 000 € pour finir un sixième lot sans isolation.</li>
-<li><strong>Loyers au-dessus du marché.</strong> 13,8 €/m² contre 11,0. Reconduire les baux en place, c'est reconduire la vacance.</li>
-<li><strong>Deux lots vides.</strong> L'annonce ne le dit pas. Aucun revenu tant qu'ils ne sont pas reloués, et la taxe foncière de 4 600 € tombe chaque année.</li>
+<li><strong>Travaux sous-estimés d'un facteur six.</strong> La pièce reçue chiffre l'électricité seule à 9 124 € pour deux lots ; le vendeur annonce 20 000 € pour finir un sixième lot sans isolation.</li>
+<li><strong>Occupation non documentée.</strong> Cinq baux signés, mais l'agence évoque trois appartements occupés. Aucun congé fourni : c'est la première question à poser, et elle déplace le dossier de 120 000 €.</li>
 <li><strong>Sixième lot non mesuré.</strong> Le permis de 2012 en prévoyait six ; le dernier n'est ni diagnostiqué ni chiffré.</li>
 <li><strong>Monopropriété SCI.</strong> Pas de charges de copropriété, mais pas de vote pour arbitrer les travaux non plus : tout repose sur le vendeur puis sur nous.</li>
 </ul>
@@ -380,10 +413,10 @@ sécurité du moteur, qui compare le prix de revient à la valeur de l'actif, pl
 <section class="verdict {classe}">
 <h2>Recommandation</h2>
 <p><strong>{verdict} — note {note}/10.</strong></p>
-<p>Sur les cinq baux reçus, le prix affiché est à 4 % du plafond de rendement : c'est une négociation ordinaire, pas un mur.
-Mais ce plafond repose sur deux hypothèses fragiles — des loyers 25 % au-dessus du marché, et des travaux que le vendeur
-a budgétés cinq fois trop bas. Au loyer de marché, le plafond descend à 274 000 €. Si deux lots sont réellement vides,
-il tombe à 125 000 €.</p>
+<p>Sur les cinq baux reçus, le prix affiché dépasse le plafond de rendement de 7 % : c'est une négociation ordinaire, pas un mur.
+Mais ce plafond repose sur deux hypothèses fragiles — des loyers dans le haut du marché, et des travaux que le vendeur
+a budgétés six fois trop bas. Au loyer médian, le plafond descend à 336 000 €. Si deux lots sont réellement vides,
+il tombe à 110 000 €.</p>
 <p>Deux conditions avant toute proposition : un devis isolation et aménagement signé, et l'état locatif exact des cinq lots —
 lesquels sont occupés, lesquels sont vides, et depuis quand. Sans ces pièces, le rendement affiché est une photo qui
 peut se dégrader de moitié.</p>
