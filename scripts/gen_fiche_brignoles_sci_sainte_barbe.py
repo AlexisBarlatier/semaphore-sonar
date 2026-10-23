@@ -281,21 +281,22 @@ Les baux, les mesures Carrez et les diagnostics reçus le 23 octobre 2026 disent
 
 <div class="kpi">
   <div><span>Prix affiché</span><strong>{prix}</strong></div>
-  <div><span>Prix au m² Carrez</span><strong>{prix_m2}</strong></div>
-  <div><span>Surface Carrez mesurée</span><strong>{surface} m²</strong></div>
+  <div><span>Prix au m² (5 lots mesurés)</span><strong>{prix_m2}</strong></div>
+  <div><span>Surface Carrez des 5 lots loués</span><strong>{surface} m²</strong></div>
   <div><span>Prix de revient travaux compris</span><strong>{revient}</strong></div>
 </div>
 </section>
 
 <section>
-<h2>Les trois surfaces, et celle qui fait foi</h2>
+<h2>Les surfaces : quatre chiffres, et un trou</h2>
 <table>
-<tr><th>Source</th><th class="num">Surface</th><th>Ce qu'elle vaut</th></tr>
-<tr><td>Annonce</td><td class="num">350 m²</td><td>Surface commerciale, non opposable</td></tr>
-<tr><td>Baux (surfaces déclarées)</td><td class="num">257,64 m²</td><td>Surface habitable déclarative, majorée</td></tr>
-<tr class="ligne-base"><td>DDT — mesure Loi Carrez</td><td class="num">{surface} m²</td><td>Seul chiffre opposable et comparable au marché</td></tr>
+<tr><th>Source</th><th class="num">Surface</th><th>Ce qu'elle couvre</th></tr>
+<tr><td>Annonce</td><td class="num">350 m²</td><td>Surface commerciale — six logements et communs, non opposable</td></tr>
+<tr><td>Baux — surfaces déclarées</td><td class="num">257,64 m²</td><td>Les cinq lots loués, majorés</td></tr>
+<tr class="ligne-base"><td>DDT — mesure Loi Carrez</td><td class="num">{surface} m²</td><td>Les cinq lots loués seulement, mesurés le 19 septembre 2026</td></tr>
+<tr><td>Sixième lot</td><td class="num">non mesuré</td><td>Brut : ni Carrez, ni DPE, ni diagnostic. Sa surface s'ajoute et reste inconnue</td></tr>
 </table>
-<p>Un tiers de la surface annoncée n'existe pas. Le prix au m² réel est donc <strong>{prix_m2}</strong> et non 1 140 €/m² comme le laisse croire l'annonce.</p>
+<p>Le Carrez ne porte que sur les cinq lots loués. Le sixième, brut, n'a jamais été mesuré ni diagnostiqué — sa surface s'ajoute à celle des autres et personne ne la connaît aujourd'hui. Ce n'est pas un détail : elle décide du prix au m² de l'ensemble. Sur les seuls lots mesurés, le prix ressort à <strong>{prix_m2}</strong> ; ramené aux 350 m² annoncés, il tombe à 1 140 €/m². La vérité est entre les deux, et l'écart se chiffre en dizaines de mètres carrés.</p>
 </section>
 
 <section>
@@ -325,7 +326,8 @@ Les loyers portent 25 % de trop : c'est l'explication des deux départs, avant m
 <table>
 <tr><th>Lot</th><th class="num">Classe</th><th class="num">kWh/m²/an</th><th class="num">GES</th></tr>
 {dpe}
-<tr><td colspan="4">Les trois autres lots sont diagnostiqués mais leur classe n'a pas encore été relevée. Aucune passoire : pas d'échéance réglementaire à court terme.</td></tr>
+<tr><td>Sixième lot</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+<tr><td colspan="4">Les trois autres lots loués sont diagnostiqués mais leur classe n'a pas encore été relevée. Le sixième lot, brut, n'a fait l'objet d'aucun DPE : il en faudra un après aménagement. Aucune passoire parmi les lots mesurés. Pas d'échéance réglementaire à court terme.</td></tr>
 </table>
 </section>
 
