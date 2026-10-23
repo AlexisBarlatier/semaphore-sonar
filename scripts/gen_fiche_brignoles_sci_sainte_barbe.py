@@ -11,6 +11,7 @@ HERMES_TOLERANT=1 liste les écarts au lieu de s'arrêter au premier.
 import copy
 import json
 import os
+import re
 import sys
 
 ICI = os.path.dirname(os.path.abspath(__file__))
@@ -221,6 +222,10 @@ def main():
         ecart_cible=pct((cible["plafond"] - PRIX) / PRIX * 100, 1),
         multiple_base=nfr(PRIX / base["plafond"], 1),
         dessus_cible=pct((PRIX / cible["plafond"] - 1) * 100, 0),
+        valeur_7=eur(cible["ebe"] / 0.07),
+        valeur_75=eur(cible["ebe"] / 0.075),
+        valeur_8=eur(cible["ebe"] / 0.08),
+        perte_8=euro_signe(cible["ebe"] / 0.08 - (PRIX * 0.75 * 1.075 + TRAVAUX)),
         note=nfr(note, 1),
         verdict=libelle_verdict,
         classe=classe,
@@ -240,8 +245,9 @@ def main():
     assert html.count("<section") >= 8, f"structure incomplète : {html.count('<section')} sections"
     assert "noindex" in html
     assert "logic-immo" in html
-    for mot in ("prêt", "emprunt", "crédit", "apport", "mensualité", "levier", "montage"):
+    for mot in ("prêt", "emprunt", "crédit", "mensualité", "levier", "montage"):
         assert mot not in html.lower(), f"mot de financement : {mot}"
+    assert not re.search(r"\bapport\w*", html.lower()), "mot de financement : apport"
 
     sortie = os.path.join(RACINE, "analyses", SLUG, "index.html")
     os.makedirs(os.path.dirname(sortie), exist_ok=True)
@@ -398,6 +404,23 @@ Tous lots loués et le sixième aménagé, on monte à <strong>{ebe_cible}</stro
 sur le prix affiché. L'écart est faible — mais ce plafond suppose que les 130 000 € de travaux tiennent et que les loyers
 restent à 13,8 €/m², soit 5 % au-dessus de la médiane communale. Ramené au loyer médian, il tombe à 336 000 €. Et la marge de
 sécurité du moteur, qui compare le prix de revient à la valeur de l'actif, plafonne à 292 000 €.</p>
+</section>
+
+<section>
+<h2>Et si on revend ?</h2>
+<p>Un immeuble de rapport à Brignoles se capitalise à 8 %, rarement moins : c'est le taux que demande un investisseur local
+pour ce type de produit. Tous lots loués et le sixième aménagé, l'exploitation dégage {ebe_cible} par an.</p>
+<table>
+<tr><th>Taux de capitalisation</th><th class="num">Valeur de l'immeuble</th><th>Ce que ça dit</th></tr>
+<tr><td>7,0 %</td><td class="num">{valeur_7}</td><td>Le revient à 25 % de décote est couvert, sans gain</td></tr>
+<tr><td>7,5 %</td><td class="num">{valeur_75}</td><td>Sous le revient</td></tr>
+<tr class="ligne-base"><td>8,0 %</td><td class="num">{valeur_8}</td><td>Le taux du marché : {perte_8} sous le revient</td></tr>
+</table>
+<p>Conclusion : <strong>ce n'est pas un dossier de revente</strong>. À 8 %, l'immeuble vaut moins que ce qu'il coûte une fois
+acheté et rénové. La sortie ne dégagerait une marge qu'à 7 %, un taux qu'aucun acheteur local n'acceptera sur un immeuble
+de centre ancien sans ascenseur. Et en liquidité, 260 m² à 451 700 € font 1 737 €/m², au-dessus du marché local des immeubles
+de rapport : la revente prendrait douze à vingt-quatre mois, avec décote.</p>
+<p>C'est un dossier de revenu, à garder, pas un dossier de rotation.</p>
 </section>
 
 <section>
