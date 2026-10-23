@@ -34,10 +34,10 @@ CHARGES = {
     "provision_desactivee": True,
 }
 LOYERS = [
-    ("3 lots occupés sur 5 (encaissé)", 1824.0),
-    ("5 lots reloués au loyer de marché (11,5 €/m²)", 2526.0),
-    ("5 lots au marché + 6e lot aménagé à 640 €", 3166.0),
-    ("6 lots aux loyers des baux en place", 3680.0),
+    ("Cinq baux en cours — un par lot (3 040 €/mois)", 3040.0),
+    ("Relocation des cinq lots au loyer de marché (11,5 €/m²)", 2526.0),
+    ("Marché + sixième lot aménagé à 640 €", 3166.0),
+    ("Si deux lots sont réellement vides (à confirmer)", 1824.0),
 ]
 TOLERANT = os.environ.get("HERMES_TOLERANT") == "1"
 ECARTS = []
@@ -110,10 +110,10 @@ def record(loyer):
                 {"libelle": "Travaux réels 5 à 6 fois le budget annoncé", "severite": 5, "bloquant": False,
                  "detail": "20 000 € annoncés pour finir le 6e lot ; électricité seule déjà chiffrée 9 124 € pour deux lots, "
                            "et aucune isolation (sols, murs, toiture). Enveloppe réaliste 115 000 à 130 000 €."},
-                {"libelle": "Loyers 25 % au-dessus du marché, deux lots sans locataire", "severite": 4, "bloquant": False,
-                 "detail": "Cinq baux signés entre 2019 et 2025, mais trois lots occupés : deux lots ne produisent rien aujourd'hui. "
-                           "Le motif n'est pas documenté — départ, congé, ou lot jamais reloué. Les loyers à 13,8 €/m² contre 11,0 de marché "
-                           "sont une explication possible, pas un constat."},
+                {"libelle": "Loyers 25 % au-dessus du marché, occupation à confirmer", "severite": 4, "bloquant": False,
+                 "detail": "Cinq baux signés entre 2019 et 2025 couvrent les cinq lots, mais l'agence évoque trois appartements occupés. "
+                           "Aucun congé ni état des lieux de sortie n'est fourni. Les loyers à 13,8 €/m² contre 11,0 de marché "
+                           "rendent une vacance plausible sans la démontrer."},
                 {"libelle": "Installation électrique dangereuse sur les cinq lots", "severite": 4, "bloquant": False,
                  "detail": "Les cinq DDT concluent à des anomalies avec recommandation d'agir pour éliminer les dangers."},
                 {"libelle": "Sixième logement à créer", "severite": 3, "bloquant": False,
@@ -135,10 +135,12 @@ def main():
     for lab, loy in LOYERS:
         r, c, f = chiffre(loy)
         plaf, contrainte = scoring.prix_plafond(r)
+        plaf5 = (f["ebe"] / 0.05 - TRAVAUX) / 1.075
+        calcule(f"plafond 5 % {loy}", plaf5, (f["ebe"] / 0.05 - TRAVAUX) / 1.075)
         lignes.append({
             "lab": lab, "loyer": loy, "revenus": c["revenus_bruts_annuels"], "ebe": f["ebe"],
             "net": f["net_apres_is"], "sur_revient": c["rendements"]["net_sur_revient_pct"],
-            "sur_valeur": c["rendements"]["net_sur_valeur_pct"], "plafond": plaf, "contrainte": contrainte,
+            "sur_valeur": c["rendements"]["net_sur_valeur_pct"], "plafond": plaf5, "contrainte": contrainte,
         })
 
     base = lignes[0]
@@ -276,8 +278,9 @@ TEMPLATE = """<!DOCTYPE html>
 <div class="alerte">
 <strong>Ce que l'annonce dit, et ce que les pièces disent.</strong>
 L'annonce vend un immeuble de 350 m², six logements loués, 3 100 €/mois, avec 20 000 € pour finir le dernier lot.
-Les baux, les mesures Carrez et les diagnostics reçus le 23 octobre 2026 disent autre chose : <strong>220 m² Carrez</strong>,
-<strong>trois lots occupés sur six</strong>, et une remise en état qui coûte cinq à six fois le budget annoncé.
+Les baux, les mesures Carrez et les diagnostics reçus le 23 octobre 2026 disent autre chose : <strong>220 m² Carrez</strong>
+pour les cinq lots loués, et une remise en état qui coûte cinq à six fois le budget annoncé. Les cinq baux couvrent les cinq lots —
+mais l'agence évoque trois appartements occupés, et aucun document ne tranche. C'est la première question à poser.
 </div>
 
 <div class="kpi">
@@ -309,7 +312,8 @@ Les baux, les mesures Carrez et les diagnostics reçus le 23 octobre 2026 disent
 </table>
 <p>3 040 €/mois sur 220 m² Carrez, soit <strong>13,8 €/m²</strong> quand le marché de Brignoles tourne autour de 11,0 €/m².
 Les loyers portent 25 % de trop face au marché : c'est une explication possible de la vacance, pas une preuve.
-Cinq baux signés et trois lots occupés laissent deux lots sans locataire aujourd'hui, sans que le motif soit documenté.
+Les cinq baux reçus couvrent les cinq lots et aucun ne porte de mention de résiliation : rien dans les pièces ne dit
+qu'un lot est vide. Si deux le sont, c'est une information d'agence qui reste à documenter — congé, état des lieux de sortie, date.
 À la relocation, l'assiette redescend à 2 500-2 600 €/mois pour les cinq lots.</p>
 </section>
 
@@ -336,11 +340,11 @@ Cinq baux signés et trois lots occupés laissent deux lots sans locataire aujou
 <section>
 <h2>Le compte, selon l'assiette de loyers</h2>
 <table>
-<tr><th>Assiette</th><th class="num">Loyer</th><th class="num">EBE</th><th class="num">Net / revient</th><th class="num">Net / valeur</th><th class="num">Prix plafond</th></tr>
+<tr><th>Assiette</th><th class="num">Loyer</th><th class="num">EBE</th><th class="num">Net / revient</th><th class="num">Net / valeur</th><th class="num">Plafond 5 % avant IS</th></tr>
 {lignes}
 </table>
-<p>La ligne surlignée est la seule qui soit encaissée aujourd'hui : <strong>trois lots sur six</strong>.
-Les autres sont des cibles, pas des revenus — et un lot vide ne paie pas sa taxe foncière.</p>
+<p>La ligne surlignée est celle des cinq baux reçus : c'est la seule assiette documentée. La dernière ligne est
+l'hypothèse d'agence, à confirmer par les congés. Les deux du milieu sont des cibles après relocation, pas des revenus.</p>
 <div class="info">
 <strong>Le chiffre à retenir.</strong> Sur l'assiette réelle, l'exploitation dégage <strong>{ebe_base}</strong> par an,
 soit un solde d'exploitation de <strong>{solde_base}/mois</strong>, pour un prix de revient de {revient}.
@@ -353,12 +357,13 @@ Tous lots loués et le sixième aménagé, on monte à <strong>{ebe_cible}</stro
 <table>
 <tr><th>Critère</th><th class="num">Prix</th><th>Écart au prix affiché</th></tr>
 <tr class="ligne-base"><td>Prix affiché</td><td class="num">{prix}</td><td>—</td></tr>
-<tr><td>Plafond sur l'assiette encaissée</td><td class="num">{plaf_base}</td><td class="num">{ecart_base}</td></tr>
-<tr><td>Plafond tous lots loués et sixième aménagé</td><td class="num">{plaf_cible}</td><td class="num">{ecart_cible}</td></tr>
+<tr><td>Plafond sur les cinq baux en cours</td><td class="num">{plaf_base}</td><td class="num">{ecart_base}</td></tr>
+<tr><td>Plafond au loyer de marché, sixième lot aménagé</td><td class="num">{plaf_cible}</td><td class="num">{ecart_cible}</td></tr>
 </table>
-<p>Le plafond le plus haut suppose que la relocation réussisse au loyer de marché, que le sixième lot soit créé
-et que les 115 000 € de travaux tiennent. Il reste <strong>sous le prix affiché</strong>. Ce dossier ne s'achète donc pas
-au prix demandé, quelle que soit la lecture retenue.</p>
+<p>Sur les cinq baux en cours, le plafond 5 % net avant IS ressort à <strong>{plaf_base}</strong>, soit <strong>{ecart_base}</strong>
+sur le prix affiché. L'écart est faible — mais ce plafond suppose que les 115 000 € de travaux tiennent et que les loyers
+restent à 13,8 €/m², soit 25 % au-dessus du marché. Ramené au loyer de marché, il tombe à 274 000 €. Et la marge de
+sécurité du moteur, qui compare le prix de revient à la valeur de l'actif, plafonne à 292 000 €.</p>
 </section>
 
 <section>
@@ -375,14 +380,13 @@ au prix demandé, quelle que soit la lecture retenue.</p>
 <section class="verdict {classe}">
 <h2>Recommandation</h2>
 <p><strong>{verdict} — note {note}/10.</strong></p>
-<p>À {prix}, l'immeuble s'achète <strong>{multiple_base} fois</strong> le plafond calculé sur la seule assiette
-réellement encaissée, et encore <strong>{dessus_cible} au-dessus</strong> de celui qui suppose la relocation réussie
-et le sixième lot créé.
-La négociation n'est pas une question de pourcentage : il faudrait que le vendeur abandonne un quart du prix
-pour qu'un dossier de revenu redevienne un dossier de revenu.</p>
-<p>Deux conditions avant toute proposition : un devis isolation et aménagement signé, et la date de libération
-des deux lots vides avec l'état dans lequel ils seront rendus. Sans ces pièces, le chiffrage restera une estimation
-et les 115 000 € eux-mêmes ne sont pas garantis.</p>
+<p>Sur les cinq baux reçus, le prix affiché est à 4 % du plafond de rendement : c'est une négociation ordinaire, pas un mur.
+Mais ce plafond repose sur deux hypothèses fragiles — des loyers 25 % au-dessus du marché, et des travaux que le vendeur
+a budgétés cinq fois trop bas. Au loyer de marché, le plafond descend à 274 000 €. Si deux lots sont réellement vides,
+il tombe à 125 000 €.</p>
+<p>Deux conditions avant toute proposition : un devis isolation et aménagement signé, et l'état locatif exact des cinq lots —
+lesquels sont occupés, lesquels sont vides, et depuis quand. Sans ces pièces, le rendement affiché est une photo qui
+peut se dégrader de moitié.</p>
 </section>
 
 <footer>
