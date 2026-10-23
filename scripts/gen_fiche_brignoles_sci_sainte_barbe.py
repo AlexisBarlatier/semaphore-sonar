@@ -308,7 +308,7 @@ Les baux, les mesures Carrez et les diagnostics reçus le 23 octobre 2026 disent
 <tr><td><strong>Total</strong></td><td class="num">220,04 m²</td><td class="num"><strong>{total_baux}</strong></td><td class="num">100 €</td><td>—</td></tr>
 </table>
 <p>3 040 €/mois sur 220 m² Carrez, soit <strong>13,8 €/m²</strong> quand le marché de Brignoles tourne autour de 11,0 €/m².
-Les loyers portent 25 % de trop par rapport au marché : c'est une explication possible de la vacance, pas une preuve.
+Les loyers portent 25 % de trop face au marché : c'est une explication possible de la vacance, pas une preuve.
 Cinq baux signés et trois lots occupés laissent deux lots sans locataire aujourd'hui, sans que le motif soit documenté.
 À la relocation, l'assiette redescend à 2 500-2 600 €/mois pour les cinq lots.</p>
 </section>
