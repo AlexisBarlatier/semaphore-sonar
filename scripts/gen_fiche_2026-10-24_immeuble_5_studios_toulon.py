@@ -35,7 +35,7 @@ releve_html = gen.releve_html
 PRIX = 299000.0
 TRAVAUX = 0.0
 VALEUR = 300000.0
-LOYER_STUDIO = 448.6
+LOYER_STUDIO = 410.0
 LOYER_TOTAL = LOYER_STUDIO * 5
 TF = 2000.0
 ENTRETIEN = 3860.0
@@ -79,7 +79,7 @@ GABARIT = gen.TEMPLATE
 for _avant, _apres in [
     ("Analyse générée le 13 octobre 2026", "Analyse générée le 24 octobre 2026"),
     ("Sensibilité au loyer mensuel — prix affiché de {prix_affiche}",
-     "Sensibilité au prix d'achat — loyers annoncés {loyer} €/mois par studio"),
+     "Sensibilité au prix d'achat — loyers annoncés {loyer} €/mois par studio hors charges"),
     ("<th>Loyer mensuel</th><th>EBE / an</th><th>Net après IS</th><th>Solde mensuel net</th>"
      "<th>Rendement net sur revient</th>",
      "<th>Prix d'achat</th><th>EBE / an</th><th>Net après IS</th><th>Solde mensuel net</th>"
@@ -98,7 +98,7 @@ def bloc_cartes(d):
         ("Prix affiché", eur(d["prix"]) + f" ({eur(d['prix'] / gen.SURFACE)}/m² annoncés)"),
         ("Prix de revient", eur(d["revient"])),
         ("Valeur retenue (DVF studios)", eur(VALEUR)),
-        ("Loyers annoncés", eur(LOYER_TOTAL) + "/mois — 9 % bruts, non documentés"),
+        ("Loyers retenus", eur(LOYER_TOTAL) + "/mois hors charges — médiane du quartier"),
         ("Rendement net d'IS (revient / valeur)",
          f"{pct(d['rd']['net_sur_revient_pct'])} / {pct(d['rd']['net_sur_valeur_pct'])}"),
         ("Ratio coût / valeur", nfr(d["c"]["ratio_cout_valeur"], 3)),
@@ -119,10 +119,12 @@ def bloc_identite(d):
         ("Occupation", "Cinq studios meublés loués et un garage, monopropriété. Aucun bail, aucune "
                        "quittance, aucun état des lieux au dossier : la rentabilité de 9 % est une "
                        "annonce, pas un relevé"),
-        ("Loyers retenus", f"{eur(LOYER_STUDIO)}/mois par studio, soit {eur(LOYER_TOTAL)} — c'est "
-                           f"exactement l'assiette qui donne 9 % sur 299 000 €. Plausible au marché "
-                           f"haut des micro-surfaces meublées (24,9 €/m² pour 18 m², contre une "
-                           f"médiane DHUP de 14,4 €/m² et un T1 de 25 m² à 415 €)"),
+        ("Loyers retenus", f"{eur(LOYER_STUDIO)}/mois hors charges par studio, soit "
+                           f"{eur(LOYER_TOTAL)}. C'est la médiane des comparables du quartier "
+                           f"(18 à 22 m² meublés, 428 à 553 € charges comprises, 22,6 €/m² hors "
+                           f"charges), et non le loyer que l'annonce déduit de son 9 % : 448,60 €, "
+                           f"soit 24,9 €/m², au-dessus du prix haut du quartier La Roseraie "
+                           f"(23,3 €/m²)"),
         ("Charges de copropriété", "Aucune — monopropriété. Cinq compteurs d'eau et cinq compteurs "
                                    "d'électricité individuels : le poste de charges collectives, "
                                    "habituellement le poison de ce produit, est neutralisé"),
@@ -199,11 +201,12 @@ def main():
     for sc in (
         {"libelle": "Scénario Base", "classe": "scenario-base", "loyer": LOYER_STUDIO,
          "vacance": 7.0, "travaux": TRAVAUX,
-         "sous_titre": f"Loyers annoncés {eur(LOYER_STUDIO)} par studio — vacance 7 % (cinq baux "
-                       f"meublés) — prix affiché {eur(prix)}"},
-        {"libelle": "Scénario Best", "classe": "scenario-best", "loyer": 480.0,
+         "sous_titre": f"Loyers du quartier {eur(LOYER_STUDIO)} hors charges par studio — vacance "
+                       f"7 % (cinq baux meublés) — prix affiché {eur(prix)}"},
+        {"libelle": "Scénario Best", "classe": "scenario-best", "loyer": 448.6,
          "vacance": 3.0, "travaux": TRAVAUX,
-         "sous_titre": "Loyers 480 € par studio — vacance 3 % — les quittances confirment le 9 %"},
+         "sous_titre": "Loyers ramenés à 448,60 € hors charges — vacance 3 % — les quittances "
+                       "confirment le 9 % annoncé"},
         {"libelle": "Scénario Worst", "classe": "scenario-worst", "loyer": 375.0,
          "vacance": 15.0, "travaux": 6000.0,
          "sous_titre": "Relocation à 375 € par studio — vacance 15 % (deux studios vides en fin "
@@ -258,42 +261,47 @@ def main():
 
     releve = releve_html(
         ["Source", "Chiffre", "Lecture"],
-        [["DVF Toulon, studios de 9 à 20 m²", "288 ventes 2021-2025 — médiane 3 809 €/m², premier "
-          "quartile 3 132, prix médian 64 950 €",
-          "la tranche du produit : un studio de 18 m² vaut environ 68 000 € à Toulon"],
-         ["DVF Toulon, appartements de 20 à 30 m²", "1 032 ventes — médiane 3 106 €/m²",
-          "confirme la prime des micro-surfaces"],
-         ["DVF Toulon, appartements de 60 à 100 m²", "5 971 ventes — médiane 2 396 €/m²",
-          "le même immeuble loué en deux T3 vaudrait 215 000 €, pas 300 000 : la valeur est dans "
-          "le découpage et les baux"],
-         ["Comparables internes, quartiers populaires de l'Est toulonnais", "85 m² à 132 000 € "
-          "(Saint-Jean-du-Var), 77 m² à 160 000 €, 63 m² à 99 000 € (La Rode)",
-          "1 550 à 2 100 €/m² pour le bâti : le prix demandé est 60 % au-dessus des murs"],
-         ["Médiane DHUP 2025, Toulon", "14,4 €/m² (IC 95 % 11,2 à 18,7) — T1 de 25 m² à 415 €",
-          "le repère communal des petites surfaces"],
-         ["Loyers annoncés par le vendeur", "9 % de 299 000 €, soit 2 243 €/mois, 448,60 € par studio",
-          "24,9 €/m² sur 18 m² : au-dessus du haut de la fourchette, plausible seulement si les "
-          "quittances le prouvent"],
-         ["Géographie prioritaire", "Saint-Jean-du-Var : QPV de la liste préfectorale, QVA du contrat "
-          "de ville 2024-2030 de la métropole TPM",
-          "ce n'est pas un critère de confort : c'est le risque de relocation et de revente"],
+        [["Location relevée — studio meublé 18 m², Saint-Jean-du-Var, résidence de 2000, DPE C, "
+          "ascenseur", "428 €/mois CC (374 € HC, 20,8 €/m²)",
+          "le comparable le plus proche du dossier : même quartier, même surface, même classe "
+          "énergétique"],
+         ["Location relevée — studio meublé 20 m², Saint-Jean-du-Var, copropriété de 1900",
+          "440 €/mois CC (410 € HC, 20,5 €/m²)", "même quartier, impasse calme, bâti ancien"],
+         ["Location relevée — studio meublé 21,6 m², Saint-Jean-du-Var, résidence fermée",
+          "553 €/mois CC (513 € HC, 23,8 €/m²)", "le haut du quartier, sur une surface plus grande"],
+         ["Location relevée — studio meublé 21 m², Toulon, immeuble de 2008",
+          "480 €/mois CC (450 € HC, 21,4 €/m²)", "le milieu de la fourchette"],
+         ["Location relevée — studio meublé 20 m², Toulon, DPE B, 2006",
+          "550 €/mois CC (520 € HC, 26 €/m²)", "un studio mieux classé que les nôtres"],
+         ["Location relevée — studio meublé 20 m², Vert Coteau, rénové en 2026, climatisation",
+          "525 €/mois CC (510 € HC, 25,5 €/m²)", "un rénové récent, au-dessus des cinq lots"],
+         ["Médiane des comparables — 18 à 22 m² meublés", "23,8 €/m² CC et 22,6 €/m² HC",
+          "soit environ 407 € hors charges pour un studio de 18 m²"],
+         ["Prix haut du quartier La Roseraie (SeLoger, juillet 2026)", "23,3 €/m² en location",
+          "les 448,60 € par studio font 24,9 €/m² : au-dessus de ce plafond de quartier"],
+         ["Loyer annoncé par le vendeur", "9 % de 299 000 €, soit 2 243 €/mois et 448,60 € par "
+          "studio", "calculé sur le prix demandé, non qualifié charges comprises ou hors charges, "
+          "et non documenté par une quittance"],
+         ["Loyer retenu dans la fiche", f"{eur(LOYER_STUDIO)}/mois hors charges par studio",
+          "la médiane du quartier, conversion des loyers CC en HC faite : c'est le loyer qu'un "
+          "studio de 18 m² de ce quartier encaisse réellement"],
          ["Rendement selon le loyer", f"{pct(c_375['rendements']['net_sur_revient_pct'])} à 375 € — "
-          f"{pct(rd['net_sur_revient_pct'])} à 449 € — "
-          f"{pct(c_480['rendements']['net_sur_revient_pct'])} à 480 €",
-          "les 9 % annoncés tiennent au loyer : c'est la première pièce à exiger"]])
+          f"{pct(rd['net_sur_revient_pct'])} à 410 € — "
+          f"{pct(c_480['rendements']['net_sur_revient_pct'])} à 448,60 €",
+          "l'écart entre le loyer du quartier et le 9 % annoncé vaut 30 000 € de prix"]])
 
-    garde_fous = f"""        <li><strong>Prix plafond : {eur(plafond)}</strong> — {plafond_txt}. Le rendement de 5 % est atteint dès le prix affiché, ce qui est rare dans ce fil : le dossier passe le plancher, il ne passe pas le solde.</li>
+    garde_fous = f"""        <li><strong>Prix plafond : {eur(plafond)}</strong> — {plafond_txt}. Au-dessus, le dossier ne peut plus atteindre le plancher de 5 % ni tenir sa valeur.</li>
         <li><strong>Prix cible : {eur(cible)}</strong>, soit {pct((prix - cible) / prix * 100)} sous l'affichage — le prix auquel le solde mensuel tombe à zéro.</li>
-        <li><strong>Le solde au prix affiché : {euro_signe(d['solde'])} par mois.</strong> C'est le meilleur rendement des quatre dossiers du jour, et il reste négatif de 295 € : 9 % brut ne suffisent pas à couvrir le prix.</li>
-        <li><strong>Les 9 % ne sont pas une quittance :</strong> à 400 € par studio le rendement net tombe à {pct(c_400['rendements']['net_sur_revient_pct'])}, à 375 € à {pct(c_375['rendements']['net_sur_revient_pct'])}. Cinq baux meublés de 18 m² dans un quartier populaire, cela se reloue — mais pas forcément à 449 €.</li>
+        <li><strong>Le solde au prix affiché : {euro_signe(d['solde'])} par mois.</strong> Au loyer du quartier, l'immeuble ne couvre pas son prix : le 9 % de l'annonce devient 8,23 % brut, et 4,59 % net après IS.</li>
+        <li><strong>Le loyer annoncé est au-dessus de son propre quartier :</strong> 448,60 € pour 18 m² font 24,9 €/m², quand les comparables de 18 à 22 m² se louent 428 à 553 € charges comprises, soit 22,6 €/m² hors charges. Le prix haut du quartier La Roseraie est de 23,3 €/m². À 410 € par studio, le rendement net tombe à {pct(rd['net_sur_revient_pct'])} ; à 375 €, à {pct(c_375['rendements']['net_sur_revient_pct'])}.</li>
         <li><strong>Le quartier est un QPV :</strong> Saint-Jean-du-Var figure dans la géographie prioritaire, en QVA du contrat de ville 2024-2030. La Roseraie est un secteur résidentiel plus calme, mais l'adresse exacte n'est pas donnée. Visite du quartier un samedi après-midi, sans l'agent, avant toute offre : hall, caves, qui traîne dans l'impasse, état des communs.</li>
         <li><strong>Pièces à exiger avant toute offre :</strong> les cinq baux et les quittances des douze derniers mois, les cinq états des lieux, l'avis de taxe foncière, les DPE par lot et l'année de construction, le mesurage Carrez par lot, l'état de la toiture et des chauffe-eau, et le contrat du « syndic » — qui n'en est pas un, puisqu'il n'y a pas de copropriété.</li>
-        <li><strong>Point de méthode :</strong> l'assiette est celle annoncée par le vendeur. Aucun loyer n'est documenté, aucun travaux n'est devisé, deux surfaces circulent. Les chiffres publiés disent ce que le bien rend <em>si</em> les quittances confirment les 9 %.</li>"""
+        <li><strong>Point de méthode :</strong> l'assiette retenue est la médiane des comparables du quartier hors charges, pas le 9 % de l'annonce. Aucun bail, aucune quittance, aucune régularisation de charges au dossier, et deux surfaces pour le même immeuble. Les chiffres publiés disent ce que le bien rend <em>si</em> les baux sont au niveau du quartier.</li>"""
 
     projections = "\n\n".join(gen.bloc_scenario(s) for s in scenarios)
 
     t = {
-        "badge": "Le meilleur rendement du fil, sur les baux les moins prouvés",
+        "badge": "Le loyer annoncé est au-dessus de son quartier",
         "strategie": "conservation en bloc de cinq studios meublés et d'un garage",
         "adresse_courte": "Immeuble 5 studios meublés et garage — Toulon (83100)",
         "quartier": "Saint-Jean-du-Var / La Roseraie, Toulon",
@@ -301,19 +309,20 @@ def main():
                              "calme : la demande de petites surfaces meublées y est structurelle — "
                              "3,4 % de vacance communale, 3 000 transactions par an, étudiants, jeunes "
                              "actifs, personnel hospitalier. Mais Saint-Jean-du-Var est un quartier de "
-                             "la politique de la ville, et c'est le prix à payer pour 9 % brut.",
+                             "la politique de la ville, et le loyer annoncé y est au-dessus du marché.",
         "profil": "des étudiants, des jeunes actifs et du personnel en mobilité, pour des studios "
                   "meublés de 18 m² à moins de 450 €. C'est le segment le plus liquide de Toulon, et "
                   "celui qui tourne le plus vite : cinq baux, cinq rotations possibles.",
         "intro_strategie": "Trois lectures : la conservation en meublé avec les cinq baux en place, la "
                           "bascule en location nue, et la revente à la découpe. La première est la "
                           "seule qui tienne le rendement ; la troisième ne couvre pas ses frais.",
-        "lecture": f"C'est le seul dossier du fil qui passe le plancher de 5 % au prix affiché : "
-                   f"{pct(rd['net_sur_revient_pct'])} net après IS, contre 4,55 % à Cuers, 4,76 % à "
-                   f"La Valette et 4,96 % à La Seyne. Mais le solde reste {euro_signe(d['solde'])} par "
-                   f"mois, et le rendement tient à une assiette que personne n'a vue : les 9 % sont "
-                   f"calculés sur le prix demandé, pas relevés sur des quittances. À 375 € par studio, "
-                   f"le dossier retombe à {pct(c_375['rendements']['net_sur_revient_pct'])}.",
+        "lecture": f"Le dossier se joue sur une conversion que l'annonce ne fait pas. Les 448,60 € "
+                   f"par studio qui produisent son 9 % font 24,9 €/m², quand les comparables de 18 à "
+                   f"22 m² du quartier se louent 428 à 553 € charges comprises et que le prix haut de "
+                   f"La Roseraie est de 23,3 €/m². Ramené hors charges, le loyer réel d'un 18 m² de "
+                   f"ce quartier tourne autour de 407 à 410 €. À cette assiette, le rendement net "
+                   f"après IS est de {pct(rd['net_sur_revient_pct'])} et le solde de "
+                   f"{euro_signe(d['solde'])} par mois : le prix ne passe plus.",
         "conf": "Le produit est bien fait : cinq compteurs individuels d'eau et d'électricité — ce qui "
                 "élimine le piège classique des charges collectives —, cinq DPE C ou D, un garage, une "
                 "monopropriété sans syndic, un emplacement à moins de 100 m d'un collège et à quelques "
@@ -322,26 +331,29 @@ def main():
                 "baux sont réels et si le quartier se gère — deux conditions qui se vérifient en une "
                 "demi-journée, et qui ne se rattrapent pas après signature.",
         "intro_projections": f"Les trois scénarios partent du même prix de {eur(prix)} et de la même "
-                             f"assiette de cinq studios. Le Base prend les loyers annoncés par le "
-                             f"vendeur, le Worst la relocation à 375 € — le niveau qu'on observerait "
-                             f"si les 9 % étaient calculés sur des baux anciens.",
+                             f"assiette de cinq studios. Le Base prend le loyer médian du quartier "
+                             f"(410 € hors charges), le Best le 9 % confirmé (448,60 €), le Worst la "
+                             f"relocation à 375 € — le niveau observé sur un studio mal placé ou mal "
+                             f"tenu du même quartier.",
         "releve": releve,
         "garde_fous": garde_fous,
-        "stance": f"On peut essayer, et c'est le dossier du fil qui le mérite le plus sur le rendement. "
-                  f"On offre {eur(cible)} — le prix du solde nul, {pct((prix - cible) / prix * 100)} "
-                  f"sous l'affichage — sous trois conditions qui ne se négocient pas : les cinq "
-                  f"quittances, les cinq baux, et une visite du quartier un samedi après-midi sans "
-                  f"l'agent. Plafond absolu {eur(plafond)}. Si les quittances ne sont pas là, on ne "
-                  f"propose rien, quel que soit le prix.",
+        "stance": f"On peut essayer, mais à un prix que le vendeur n'a pas encore vu : "
+                  f"{eur(cible)} — le solde nul aux loyers du quartier, "
+                  f"{pct((prix - cible) / prix * 100)} sous l'affichage. C'est 29 000 € sous le prix "
+                  f"que donnait le 9 % de l'annonce, et c'est la comparaison de loyers qui le justifie, "
+                  f"pas une intuition. Conditions : les cinq quittances, les cinq baux, et la "
+                  f"qualification du loyer annoncé, charges comprises ou hors charges. Si les "
+                  f"quittances montrent 448,60 € hors charges, le plafond remonte à {eur(plafond)}.",
         "verdict_texte": f"À {eur(prix)}, l'immeuble rend {pct(rd['net_sur_revient_pct'])} net après IS "
-                         f"pour {eur(c['prix_revient_total'])} de prix de revient : au-dessus du "
-                         f"plancher de 5 %, avec un solde de {euro_signe(d['solde'])} par mois. Le "
+                         f"pour {eur(c['prix_revient_total'])} de prix de revient, sous le plancher "
+                         f"de 5 %, avec un solde de {euro_signe(d['solde'])} par mois. Le "
                          f"prix plafond est de {eur(plafond)} et le prix cible — solde nul — de "
                          f"{eur(cible)}, soit {pct((prix - cible) / prix * 100)} sous l'affichage. "
-                         f"Le rendement n'est pas le problème : la preuve du rendement l'est. Cinq "
-                         f"baux meublés annoncés à 9 % sans une quittance, dans un QPV, avec deux "
-                         f"surfaces pour le même immeuble, c'est un dossier qui se visite avant de "
-                         f"s'offrir.",
+                         f"Le problème n'est pas le bien, c'est le loyer retenu par le vendeur : "
+                         f"448,60 € pour 18 m² est au-dessus du prix haut du quartier, et la "
+                         f"comparaison des loyers équivalents ramène l'assiette à 410 € hors charges. "
+                         f"Cinq baux annoncés à 9 % sans une quittance, dans un QPV, avec deux "
+                         f"surfaces pour le même immeuble : dossier à instruire, pas à offrir.",
         "performance": f"{pct(rd['net_sur_revient_pct'])} de rendement net après IS sur un prix de "
                        f"revient de {eur(c['prix_revient_total'])}, pour un plancher de 5 % : "
                        f"performance {nfr(comp['s_performance'], 1)}/10. EBE avant IS : "

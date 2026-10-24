@@ -13395,12 +13395,12 @@
           {
             "lot": "Cinq studios meublés d'environ 18 m²",
             "quantite": 5,
-            "loyer_mensuel_euros": 448.6,
+            "loyer_mensuel_euros": 410.0,
             "occupe": true,
-            "note": "Aucun loyer à l'unité n'est donné : l'annonce affiche « une très belle rentabilité (9 %) », ce qui, sur 299 000 €, vaut 26 910 €/an, soit 2 243 €/mois et 448,60 € par studio. C'est une rentabilité calculée sur le prix demandé, pas un relevé de quittances. Confrontation au marché : médiane DHUP 2025 de Toulon 14,4 €/m², T1 de 25 m² à 415 €/mois (16,6 €/m²). Les 448,60 € pour 18 m² font 24,9 €/m² : la prime de micro-surface existe et se constate sur les petites surfaces meublées, mais elle est au haut de la fourchette. Cinq baux à 450 € dans un quartier populaire de l'Est toulonnais sont plausibles ; cinq baux à ce niveau sans vacance ni impayé le sont moins"
+            "note": "Aucun loyer à l'unité n'est donné : l'annonce affiche « une très belle rentabilité (9 %) », soit 26 910 €/an et 448,60 € par studio, calculés sur le prix demandé. Relevé de comparables du quartier, 18 à 22 m² meublés, au 24/10/2026 : 18 m² à Saint-Jean-du-Var, résidence de 2000, DPE C, ascenseur, 428 € CC (374 € HC, 20,8 €/m²) ; 20 m² à Saint-Jean-du-Var, copropriété de 1900, 440 € CC (410 € HC) ; 21,6 m² à Saint-Jean-du-Var, résidence fermée, 553 € CC (513 € HC, 23,8 €/m²) ; 21 m² à Toulon, 2008, 480 € CC (450 € HC) ; 20 m² à Toulon, 2006, DPE B, 550 € CC (520 € HC) ; 20 m² au Vert Coteau rénové en 2026, 525 € CC (510 € HC). Médiane des comparables : 23,8 €/m² CC et 22,6 €/m² HC, soit 407 € hors charges pour 18 m². Les 448,60 € font 24,9 €/m² : au-dessus du prix haut du quartier La Roseraie (23,3 €/m², SeLoger). Et si ce loyer est charges comprises, comme tous les comparables, l'assiette réelle tombe à 410-420 € par studio. Retenu 410 € hors charges : la médiane du quartier, pas l'annonce"
           }
         ],
-        "notes": "Assiette : la rentabilité annoncée par le vendeur, faute de quittances. Elle est plausible au marché haut des micro-surfaces meublées, et c'est tout le dossier : à 400 € par studio, le brut tombe à 8,03 % ; à 375 €, à 7,53 %. Aucune quittance, aucun bail, aucun état des lieux au dossier."
+        "notes": "Assiette : médiane des comparables du quartier hors charges, et non la rentabilité annoncée. Le vendeur présente 9 % sur un loyer de 448,60 € qui n'est pas qualifié charges comprises ou hors charges ; les comparables du quartier sont tous des loyers CC, dont la conversion donne 374 à 520 € HC selon la surface. À 410 € le brut tombe à 8,23 %, à 400 € à 8,03 %, à 375 € à 7,53 %. Aucune quittance, aucun bail, aucun état des lieux au dossier."
       },
       "hypotheses": {
         "vacance_base_pct": 7.0,
@@ -13434,7 +13434,7 @@
           {
             "strategie": "Conservation en bloc : cinq studios meublés et un garage",
             "lots": 6,
-            "performance": "2 243 €/mois, soit 9 % brut sur le prix affiché, pour un rendement net après IS de 5.14 % sur un prix de revient de 322 920 €. Le brut est réel si les baux le sont : c'est toute la question du dossier",
+            "performance": "2 050 €/mois, soit 9 % brut sur le prix affiché, pour un rendement net après IS de 4.59 % sur un prix de revient de 322 920 €. Le brut est réel si les baux le sont : c'est toute la question du dossier",
             "valeur_sortie": "Revente à l'unité de cinq studios : 5 x 18 m² x 3 809 €/m² = 342 810 €, soit 19 890 € de mieux que le revient — mais à condition de vendre cinq lots meublés loués, ce qui prend du temps et se paie en frais",
             "faisabilite": "Immédiate : cinq baux en place, monopropriété, aucun travaux annoncé",
             "risque": "élevé — la rentabilité annoncée n'est pas documentée et le quartier est un QPV"
@@ -13494,7 +13494,7 @@
           {
             "facteur": "Rentabilité annoncée de 9 % sans une seule quittance",
             "severite": 5,
-            "detail": "Le vendeur annonce 9 % de rentabilité, soit 2 243 €/mois, sans qu'aucune quittance ne soit au dossier. À cette assiette, le rendement net après IS ressort à 5.14 % pour un prix de revient de 322 920 €. À 400 € par studio, il tombe à 4.44 % ; à 375 €, à 4.09 %. Cinq baux de 18 m² dans un QPV se relouent, mais pas forcément à 450 € : le prix ne se paie que sur les quittances."
+            "detail": "Le vendeur annonce 9 % de rentabilité, soit 2 243 €/mois et 448,60 € par studio, calculés sur le prix demandé, sans qu'aucune quittance ne soit au dossier. Or les comparables du quartier, 18 à 22 m² meublés, se louent 428 à 553 € charges comprises, soit une médiane de 22,6 €/m² hors charges et environ 407 € pour 18 m². À l'assiette retenue de 410 € par studio, le rendement net après IS ressort à 4.59 % pour un prix de revient de 322 920 €. À 400 €, il tombe à 4.44 %. Les 448,60 € font 24,9 €/m² : au-dessus du prix haut du quartier La Roseraie (23,3 €/m², SeLoger). Le prix ne se paie que sur les quittances, et elles ne sont pas là."
           },
           {
             "facteur": "Quartier prioritaire : Saint-Jean-du-Var",

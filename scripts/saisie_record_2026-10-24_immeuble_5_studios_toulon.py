@@ -23,7 +23,7 @@ BASE = os.path.join(RACINE, "analyses", "analyses.json")
 PRIX = 299000.0
 FRAIS = 23920.0          # 8 %, régime ancien, honoraires vendeur
 TRAVAUX = 0.0
-LOYER_STUDIO = 448.6     # 9 % de 299 000 / 12 / 5 = 448,50
+LOYER_STUDIO = 410.0     # médiane des comparables du quartier, 18 m², hors charges (449 € annoncés = CC)
 TF = 2000.0
 SURFACE = 90.0
 VALEUR = 300000.0
@@ -112,19 +112,26 @@ def fiche():
                  "loyer_mensuel_euros": LOYER_STUDIO,
                  "occupe": True,
                  "note": "Aucun loyer à l'unité n'est donné : l'annonce affiche « une très belle "
-                         "rentabilité (9 %) », ce qui, sur 299 000 €, vaut 26 910 €/an, soit 2 243 "
-                         "€/mois et 448,60 € par studio. C'est une rentabilité calculée sur le prix "
-                         "demandé, pas un relevé de quittances. Confrontation au marché : médiane DHUP "
-                         "2025 de Toulon 14,4 €/m², T1 de 25 m² à 415 €/mois (16,6 €/m²). Les 448,60 € "
-                         "pour 18 m² font 24,9 €/m² : la prime de micro-surface existe et se constate "
-                         "sur les petites surfaces meublées, mais elle est au haut de la fourchette. "
-                         "Cinq baux à 450 € dans un quartier populaire de l'Est toulonnais sont "
-                         "plausibles ; cinq baux à ce niveau sans vacance ni impayé le sont moins"},
+                         "rentabilité (9 %) », soit 26 910 €/an et 448,60 € par studio, calculés sur "
+                         "le prix demandé. Relevé de comparables du quartier, 18 à 22 m² meublés, au "
+                         "24/10/2026 : 18 m² à Saint-Jean-du-Var, résidence de 2000, DPE C, ascenseur, "
+                         "428 € CC (374 € HC, 20,8 €/m²) ; 20 m² à Saint-Jean-du-Var, copropriété de "
+                         "1900, 440 € CC (410 € HC) ; 21,6 m² à Saint-Jean-du-Var, résidence fermée, "
+                         "553 € CC (513 € HC, 23,8 €/m²) ; 21 m² à Toulon, 2008, 480 € CC (450 € HC) ; "
+                         "20 m² à Toulon, 2006, DPE B, 550 € CC (520 € HC) ; 20 m² au Vert Coteau "
+                         "rénové en 2026, 525 € CC (510 € HC). Médiane des comparables : 23,8 €/m² CC "
+                         "et 22,6 €/m² HC, soit 407 € hors charges pour 18 m². Les 448,60 € font "
+                         "24,9 €/m² : au-dessus du prix haut du quartier La Roseraie (23,3 €/m², "
+                         "SeLoger). Et si ce loyer est charges comprises, comme tous les "
+                         "comparables, l'assiette réelle tombe à 410-420 € par studio. Retenu "
+                         "410 € hors charges : la médiane du quartier, pas l'annonce"},
             ],
-            "notes": "Assiette : la rentabilité annoncée par le vendeur, faute de quittances. Elle est "
-                     "plausible au marché haut des micro-surfaces meublées, et c'est tout le dossier : "
-                     "à 400 € par studio, le brut tombe à 8,03 % ; à 375 €, à 7,53 %. Aucune quittance, "
-                     "aucun bail, aucun état des lieux au dossier.",
+            "notes": "Assiette : médiane des comparables du quartier hors charges, et non la rentabilité "
+                     "annoncée. Le vendeur présente 9 % sur un loyer de 448,60 € qui n'est pas qualifié "
+                     "charges comprises ou hors charges ; les comparables du quartier sont tous des "
+                     "loyers CC, dont la conversion donne 374 à 520 € HC selon la surface. À 410 € le "
+                     "brut tombe à 8,23 %, à 400 € à 8,03 %, à 375 € à 7,53 %. Aucune quittance, aucun "
+                     "bail, aucun état des lieux au dossier.",
         },
         "hypotheses": {
             "vacance_base_pct": 7.0,
@@ -302,13 +309,16 @@ def main():
     ]
 
     r["analyse"]["risques"][0]["detail"] = (
-        f"Le vendeur annonce 9 % de rentabilité, soit {eur(LOYER_STUDIO * 5)}/mois, sans qu'aucune "
-        f"quittance ne soit au dossier. À cette assiette, le rendement net après IS ressort à "
+        f"Le vendeur annonce 9 % de rentabilité, soit 2 243 €/mois et 448,60 € par studio, calculés "
+        f"sur le prix demandé, sans qu'aucune quittance ne soit au dossier. Or les comparables du "
+        f"quartier, 18 à 22 m² meublés, se louent 428 à 553 € charges comprises, soit une médiane de "
+        f"22,6 €/m² hors charges et environ 407 € pour 18 m². À l'assiette retenue de "
+        f"{eur(LOYER_STUDIO)} par studio, le rendement net après IS ressort à "
         f"{c['rendements']['net_sur_revient_pct']:.2f} % pour un prix de revient de "
-        f"{eur(c['prix_revient_total'])}. À 400 € par studio, il tombe à "
-        f"{(c_400['rendements']['net_sur_revient_pct']):.2f} % ; à 375 €, à "
-        f"{(c_375['rendements']['net_sur_revient_pct']):.2f} %. Cinq baux de 18 m² dans un QPV se "
-        f"relouent, mais pas forcément à 450 € : le prix ne se paie que sur les quittances."
+        f"{eur(c['prix_revient_total'])}. À 400 €, il tombe à "
+        f"{(c_400['rendements']['net_sur_revient_pct']):.2f} %. Les 448,60 € font 24,9 €/m² : "
+        f"au-dessus du prix haut du quartier La Roseraie (23,3 €/m², SeLoger). Le prix ne se paie que "
+        f"sur les quittances, et elles ne sont pas là."
     )
 
     errs = schema.validate_record(r)
