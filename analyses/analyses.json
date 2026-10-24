@@ -3,7 +3,7 @@
     "schema": "analyses-v2-entrees",
     "generated_at": "2026-09-10T00:00:00+00:00",
     "source": "saisie-agent",
-    "count": 87
+    "count": 88
   },
   "analyses": [
     {
@@ -12778,6 +12778,191 @@
             "facteur": "Marché de revente étroit",
             "severite": 2,
             "detail": "Un studio sous bail commercial ne s'adresse qu'à des investisseurs, et accepte un seul profil d'acquéreur : celui qui veut le coupon. La sortie la plus liquide est justement le scénario haut, studio libre et loué meublé au marché — même logique que nos dossiers de petits lots : on achète le prix, pas l'exploitation vendue par l'intermédiaire"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "2026-10-24-immeuble-4-t2-cuers-centre",
+      "date_analyse": "2026-10-24",
+      "date_maj": "2026-10-24",
+      "titre": "Immeuble de rapport, 4 T2 loués — cœur de village, Cuers (83390)",
+      "bien": {
+        "type_bien": "immeuble",
+        "sous_type": "immeuble de rapport",
+        "type_detail": "Immeuble de rapport sur 4 niveaux, construit en 1940 et entièrement rénové intérieur et extérieur en 2019 : quatre appartements de type 2 d'environ 29 m² chacun, un par niveau, avec salon-cuisine ouverte équipée, une chambre, une salle d'eau avec WC, climatisation réversible et menuiseries PVC double vitrage. Copropriété de 4 lots, terrain de 80 m². Ni cave ni parking. DPE C (162 kWh/m²/an), GES A (4 kg CO2/m²/an).",
+        "neuf": false,
+        "adresse": {
+          "texte": "Cœur du village, Cuers (83390) — adresse exacte non communiquée par l'agence",
+          "ville": "Cuers",
+          "code_postal": "83390",
+          "quartier": "Centre-ville"
+        },
+        "surfaces": {
+          "texte": "117,56 m² annoncés par Cuers Immobilier, 118 m² Carrez par Capifrance pour la même copropriété : quatre lots d'environ 29,4 m², un par niveau. La cohérence des deux diffusions vaut mesurage à confirmer lot par lot sur les diagnostics"
+        },
+        "lots": {
+          "count": 4,
+          "nature": "Quatre T2 d'environ 29 m², un par niveau, dans une copropriété de 4 lots dont le vendeur détient l'intégralité. Aucune cave, aucun parking, aucun garage",
+          "lots_distincts": 4
+        },
+        "copro": {
+          "charges_annuelles_euros": 2800.0,
+          "charges_source": "Budget prévisionnel annoncé par Capifrance : 2 800 €/an, soit 233 €/mois pour l'ensemble de la copropriété. Le loyer de Cuers Immobilier est donné charges comprises à 2 516,88 €/mois, contre 2 340 € hors charges chez Capifrance : l'écart de 176,88 €/mois est la provision sur charges du locataire, soit 2 123 €/an pour un budget de 2 800 €/an. Reste à la charge du bailleur environ 677 €/an, hors gros travaux"
+        },
+        "travaux": {
+          "montant_euros": 0.0,
+          "nature": "Aucun devis au dossier. L'annonce affirme une rénovation intérieure et extérieure complète en 2019 et « rien à prévoir » : c'est une déclaration du vendeur, pas une pièce. Toiture, façade, évacuations et électricité des communs d'un immeuble de 1940 se vérifient sur les PV d'AG, le carnet d'entretien et le plan pluriannuel de travaux, aucun n'est fourni. Budget retenu à zéro dans le scénario central, 5 000 € en Worst : c'est un choix de lecture, pas un constat"
+        }
+      },
+      "annonce": {
+        "plateforme": "seloger",
+        "url": "https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/cuers-83390/258VMUYNSNEA",
+        "prix_affiche_euros": 365000.0,
+        "prix_retenu_euros": 365000.0,
+        "prix_statut": "affiche",
+        "vendeur": "Cuers Immobilier (Laetitia Martin), réf. 4060v — honoraires à la charge du vendeur. Seconde diffusion : Capifrance, Luc Maridet, réf. 964187, même prix"
+      },
+      "marche": {
+        "valeur": {
+          "basse_euros": 320000.0,
+          "haute_euros": 365000.0,
+          "retenue_euros": 345000.0,
+          "source": "DVF Cuers (83049), appartements de 24 à 36 m², mutations « Vente » 2021-2025 : 26 ventes, médiane 2 378 €/m², premier quartile 1 791, troisième quartile 2 939, prix médian 66 600 € le lot. Sur la tranche 20-40 m² (40 ventes), médiane 2 617 €/m² et prix médian 76 950 €. La tranche 30-45 m² affiche une médiane de 3 384 €/m² mais sa distribution est tirée par une dizaine de ventes à 4 500-8 590 €/m², dont des lots neufs et des lots avec garage : elle ne décrit pas ce produit. Les quatre lots sont donc valorisés au troisième quartile de leur propre tranche, soit 2 939 €/m², pour tenir compte de la rénovation de 2019 et de la climatisation : 4 x 29,4 m² x 2 939 = 345 600 €, retenus 345 000 €. Prix affiché rapporté à cette valeur : 3 105 €/m², soit 5,7 % au-dessus du troisième quartile de la tranche",
+          "confiance": "moyenne"
+        },
+        "loyers": [
+          {
+            "lot": "Quatre T2 d'environ 29 m², loués nus, un par niveau",
+            "quantite": 4,
+            "loyer_mensuel_euros": 629.22,
+            "occupe": true,
+            "note": "Loyer encaissé, charges comprises, reconstitué : Cuers Immobilier annonce 2 516,88 €/mois CC, Capifrance 2 340 €/mois hors charges pour le même immeuble, soit 585 € par lot. Le revenu encaissable retenu par le moteur est le loyer CC moins les charges de copropriété (règle de la fiche « charges comprises ») : 30 203 €/an moins 2 800 €/an. Confrontation au marché du 24/10/2026, cinq annonces actives sur la commune : studio meublé de 30,19 m², 4 place Général de Gaulle, 560 à 620 €/mois CC selon la diffusion ; studio non meublé de 29 m² en centre-ville, 550 €/mois CC (538 € HC), septembre 2026 ; T2 de 42 m² rénové en 2023, 690 €/mois CC (635 € HC), soit 15,1 €/m² ; T2 meublé de 40 m² de caractère, 635 €/mois CC ; T2 de 53 m² meublé avec garage de 26 m², 750 €/mois. Médiane DHUP 2025 de la commune : 13,9 €/m² (IC 95 % 10,7 à 18,0). Les 585 € hors charges par lot représentent 19,9 €/m² : au-dessus du haut de la fourchette des comparables de même surface, et 43 % au-dessus de la médiane communale. Les loyers sont donc encaissés au plafond du marché local, ce qui interdit d'en attendre une progression : la relocation se ferait plutôt 8 à 12 % plus bas"
+          }
+        ],
+        "notes": "Assiette encaissée : quatre baux en place, aucun lot vide annoncé. Le loyer est donné CC par un mandataire et HC par l'autre ; la réconciliation des deux diffusions est faite dans la ligne de loyers. Aucun bail, aucune quittance, aucune régularisation de charges au dossier : le revenu est celui de l'annonce, pas encore celui des pièces."
+      },
+      "hypotheses": {
+        "vacance_base_pct": 5.0,
+        "vacance_best_pct": 2.0,
+        "vacance_worst_pct": 12.0,
+        "taux_placement_reserve_pct": 2.84,
+        "quote_part_bati_pct": 90.0,
+        "vacance_justification": "Quatre micro-lots de 29 m² : la rotation est structurellement plus élevée que sur des T3 familiaux, chaque départ coûte 585 €/mois de loyer et remet un bail en jeu. 5 % en base (soit un lot vide deux mois et demi par an), 2 % en best, 12 % en worst (un lot vide six mois, ou deux lots en décalage)",
+        "charges": {
+          "charges_copro_annuelles_euros": 2800.0,
+          "charges_copro_commentaire": "2 800 €/an, budget prévisionnel annoncé par Capifrance (233 €/mois). Le locataire en paie 2 123 €/an par ses provisions : le solde de 677 €/an reste au bailleur. Le poste est saisi en charges et non déduit deux fois, le loyer étant pris charges comprises",
+          "taxe_fonciere_annuelle_euros": 2470.0,
+          "taxe_fonciere_commentaire": "2 470 €/an, montant annoncé par Capifrance. La commune applique l'un des taux de taxe foncière sur le bâti les plus élevés du Var (53,63 % en 2025) : l'avis réel reste à exiger, c'est le deuxième poste de charges du dossier",
+          "entretien_annuel_euros": 3100.0,
+          "entretien_commentaire": "3 100 €/an : gestion locative déléguée à 6 % des loyers (1 812 €), provision d'impayés à 3 % (906 €, distincte de la vacance) et 400 € d'entretien courant de l'immeuble. Quatre baux, quatre relocations potentielles : le poste de gestion n'est pas marginal sur ce format",
+          "pno_annuelle_euros": 600.0,
+          "comptabilite_annuelle_euros": 0.0
+        },
+        "frais_acquisition_euros": 29200.0,
+        "frais_acquisition_commentaire": "8 % du prix (29 200 €), régime ancien ; honoraires à la charge du vendeur, donc hors base de calcul"
+      },
+      "analyse": {
+        "branche": "residentiel",
+        "type_operation": "locatif",
+        "strategie_retenue": {
+          "nom": "Conservation en bloc des quatre T2 loués nus",
+          "code": "ld-nue",
+          "lots": 4
+        },
+        "strategies_explorees": [
+          {
+            "strategie": "Conservation en bloc des quatre T2 loués nus",
+            "lots": 4,
+            "performance": "629 €/mois par lot charges comprises, soit 30 203 €/an pour les quatre, pour un rendement net après IS de 4.55 % sur un prix de revient de 394 200 €. Le brut affiché est de 8,27 % ; c'est la lecture après charges, taxe foncière et vacance qui décide, et elle passe sous le plancher de 5 %",
+            "valeur_sortie": "Valeur de capitalisation à 8 % de l'EBE : 237 896 € contre 394 200 € de revient, soit une revente à l'équilibre au mieux. Valeur de marché par les lots : 345 000 €, sous le revient",
+            "faisabilite": "Immédiate : quatre baux en place, aucun travaux annoncé, une copropriété de quatre lots déjà constituée",
+            "risque": "modéré en exploitation, élevé en prix — le bien produit, il ne produit pas assez pour ce qu'il coûte"
+          },
+          {
+            "strategie": "Relocation des quatre lots en meublé",
+            "lots": 4,
+            "performance": "684 €/mois par lot, soit +220 €/mois de recettes brutes, pour 0 € de charges supplémentaires et l'ameublement des quatre lots (environ 16 000 €). Rendement net après IS de 4.89 % : le gain de loyer est absorbé par la rotation plus rapide et le mobilier à remplacer",
+            "valeur_sortie": "Aucune prime de valeur à la revente : le meublé se paie au loyer, pas au mètre carré",
+            "faisabilite": "Changement de nature de bail, ameublement complet de quatre lots, gestion des entrées et sorties : c'est un métier, pas un aménagement",
+            "risque": "élevé — le meublé sur 29 m² en bourg vise une clientèle de passage, celle qui part le plus vite, et les loyers actuels sont déjà au plafond"
+          },
+          {
+            "strategie": "Revente à la découpe des quatre lots",
+            "lots": 4,
+            "performance": "La copropriété existe déjà, il n'y a rien à diviser : 279 558 € à 345 509 € de produit brut, moins environ 18 752 € de frais de vente, contre 394 200 € de revient. L'opération perd de l'argent avant portage",
+            "valeur_sortie": "279 558 € à 345 509 € au troisième quartile de la tranche des 24-36 m² (DVF Cuers, 26 ventes 2021-2025)",
+            "faisabilite": "Techniquement simple — quatre lots, quatre acquéreurs — mais 18 à 24 mois de portage, deux jeux de frais et une structure commerciale",
+            "risque": "élevé et sans objet : à ce prix d'entrée, la découpe ne crée pas de marge"
+          }
+        ],
+        "attractivite": [
+          {
+            "dimension": "transports",
+            "score": 7,
+            "justification": "Cœur de village à quelques minutes à pied des arrêts, gare TER Cuers-Pierrefeu à environ trois kilomètres (Toulon à une vingtaine de minutes) et accès A57 immédiat. Quatre lots sans parking dans un bourg où la voiture reste nécessaire : la gare séduit un locataire toulonnais, l'absence de stationnement le retient."
+          },
+          {
+            "dimension": "commerces",
+            "score": 8,
+            "justification": "Hypercentre : place de la Convention, marché hebdomadaire, commerces de proximité, santé et services à pied. C'est le meilleur argument du bien et celui qui tient les loyers au plafond."
+          },
+          {
+            "dimension": "ecoles",
+            "score": 7,
+            "justification": "Écoles primaires, collège La Ferrage et ensemble privé Sainte-Marthe sur la commune. La clientèle existe, mais un T2 de 29 m² en centre ne vise pas une famille : c'est un argument de revente, pas de location."
+          },
+          {
+            "dimension": "securite",
+            "score": 5,
+            "justification": "Commune pavillonnaire sans quartier prioritaire, mais nos dossiers antérieurs sur Cuers relevaient des incivilités et un déficit d'image du centre. Un immeuble de 1940 en cœur de bourg : la tranquillité dépend de la rue et du voisinage immédiat."
+          },
+          {
+            "dimension": "demande_locative",
+            "score": 6,
+            "justification": "Les petites surfaces se relouent : cinq annonces actives de 29 à 53 m² au 24/10/2026, dont deux studios de 29-30 m² à 550 et 620 €/mois. La demande porte sur ce format, pas sur les grands appartements. Le risque n'est pas l'absence de demande, c'est le niveau de loyer : les 585 € HC du dossier sont au-dessus du haut de la fourchette constatée."
+          },
+          {
+            "dimension": "dynamisme",
+            "score": 5,
+            "justification": "Bourg de 12 300 habitants, revenu médian autour de 23 000 €, dépendance à l'emploi toulonnais. Marché sans fièvre : à 3 105 €/m², la plus-value n'est pas le moteur du dossier, et il ne faut pas l'attendre en consolation d'un rendement moyen."
+          }
+        ],
+        "risques": [
+          {
+            "facteur": "Prix au-dessus de la valeur de la tranche et du plancher de rendement",
+            "severite": 5,
+            "detail": "Prix affiché 365 000 €, prix de revient 394 200 € pour un rendement net après IS de 4.55 %, sous le plancher de 5 % de la branche. Ramené à la valeur de la tranche de surface — 2 939 €/m², troisième quartile des 24-36 m² à Cuers —, le bien vaut 345 000 € : le prix affiché est 5,7 % au-dessus, et le prix de revient 14,3 % au-dessus. Le prix qui atteint le plancher ressort à 329 500 €. Ce n'est pas un écart de 40 % qui rendrait le dossier impossible : c'est un écart de 10 % sur un bien au prix du marché, qui se joue sur la négociation ou ne se joue pas."
+          },
+          {
+            "facteur": "Quatre micro-lots de 29 m² : rotation et vacance",
+            "severite": 4,
+            "detail": "Quatre baux de petites surfaces, quatre occasions de départ par cycle. Chaque lot vide coûte 585 €/mois de loyer, plus sa part de charges fixes : sur un an, un seul lot vacant trois mois efface un quart de l'EBE. Le format se loue, mais il se loue vite et se vide vite, et la gestion de quatre baux pèse plus lourd que sur un immeuble de trois lots familiaux."
+          },
+          {
+            "facteur": "Loyers au plafond du marché, sans marge de relocation",
+            "severite": 4,
+            "detail": "585 € hors charges pour 29 m², soit 19,9 €/m², contre 538 à 600 € charges comprises pour des surfaces équivalentes relevées le 24/10/2026 et une médiane communale DHUP de 13,9 €/m². Les loyers en place sont donc au-dessus du marché, pas en dessous : aucune progression à attendre, et une relocation se ferait 8 à 12 % plus bas. Un bail en cours ne se révise pas au-delà de l'IRL, et un locataire qui part emporte le loyer avec lui."
+          },
+          {
+            "facteur": "Charges « eau, électricité et parties communes » incluses dans le loyer",
+            "severite": 3,
+            "detail": "L'annonce de Cuers Immobilier précise que les charges comprises couvrent l'eau, l'électricité et les parties communes. Or la provision du locataire n'est que de 2 123 €/an pour quatre lots, quand la seule consommation d'électricité estimée du bâtiment tourne autour de 2 900 à 3 570 €/an (DPE). Si les compteurs individuels n'existent pas et que le bailleur paie réellement l'électricité des locataires, le poste coûte 2 500 à 3 000 €/an de plus que ce que la provision couvre, et l'EBE tombe de 18 900 à 16 000 €. Réponse à obtenir : compteurs individuels eau et électricité, dernière régularisation de charges, décomposition des baux."
+          },
+          {
+            "facteur": "« Rien à prévoir » sans aucune pièce sur un immeuble de 1940",
+            "severite": 3,
+            "detail": "La rénovation de 2019 est une déclaration d'annonce. Aucun PV d'AG, aucun carnet d'entretien, aucun plan pluriannuel de travaux, aucun devis, aucun diagnostic daté au dossier. Sur un immeuble de 1940 en centre ancien, toiture, façades, évacuations et électricité des communs sont les postes que l'annonce tait, et un ravalement ou une réfection de toiture se paie comptant, sans mutualisation possible puisque la copropriété ne compte que quatre lots, tous détenus par le vendeur."
+          },
+          {
+            "facteur": "Copro de 4 lots : aucun lissage possible",
+            "severite": 3,
+            "detail": "Toute dépense de copropriété retombe à 25 % sur chaque lot, et l'acheteur devient majoritaire de fait dans une copropriété sans historique. Les trois derniers PV d'AG, les appels de fonds des trois dernières années et le carnet d'entretien sont les pièces qui disent si l'immeuble a été entretenu ou seulement repeint en 2019."
+          },
+          {
+            "facteur": "Aucune cave, aucun parking, aucun extérieur",
+            "severite": 2,
+            "detail": "Quatre lots sans annexe : rien à louer séparément, rien à valoriser à la revente, et un frein à la relocation dans un bourg où le stationnement en centre est contraint. C'est aussi ce qui plafonne le prix au mètre carré face aux appartements vendus avec garage."
           }
         ]
       }
