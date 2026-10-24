@@ -55,6 +55,7 @@ for _avant, _apres in [
      "<th>Rendement net sur revient</th>"),
     ("La dernière ligne montre la cible de colocation, hors bail en place.",
      "La ligne en surbrillance est le prix affiché."),
+    ("solde du prix porté sur quinze ans", "solde du prix porté sur vingt ans"),
 ]:
     if _avant not in GABARIT:
         raise SystemExit("chaîne du gabarit absente : " + _avant[:60])
