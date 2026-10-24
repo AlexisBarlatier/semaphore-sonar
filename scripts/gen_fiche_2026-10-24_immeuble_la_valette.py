@@ -32,6 +32,30 @@ eur, nfr, pct, euro_signe = gen.eur, gen.nfr, gen.pct, gen.euro_signe
 calcule = gen.calcule
 releve_html = gen.releve_html
 
+
+def prix_cf_nul(r, lo=50000.0, hi=None):
+    """Prix d'achat auquel le solde mensuel est nul, au standard du groupe
+    (90 % du prix sur 20 ans à 3,80 %, assurance comprise). C'est le prix cible :
+    la note 6,5 ne sert plus de référence."""
+    hi = hi or r["annonce"]["prix_retenu_euros"] * 1.2
+
+    def solde(p):
+        rr = copy.deepcopy(r)
+        rr["annonce"]["prix_retenu_euros"] = p
+        base = p - 15000.0 if "la-valette" in r["slug"] else p
+        rr["hypotheses"]["frais_acquisition_euros"] = round(base * 0.08)
+        cc = engine.compute(rr)
+        travaux = rr["bien"]["travaux"]["montant_euros"] or 0.0
+        return cc["fiscal"]["net_apres_is"] / 12.0 - (p + travaux) * ANNUITE
+
+    for _ in range(80):
+        mid = (lo + hi) / 2
+        if solde(mid) > 0:
+            lo = mid
+        else:
+            hi = mid
+    return round(lo / 500.0) * 500.0
+
 PRIX = 265000.0
 NET_VENDEUR = 250000.0
 TRAVAUX = 0.0
@@ -175,7 +199,7 @@ def main():
     f, rd = c["fiscal"], c["rendements"]
     prix = r["annonce"]["prix_retenu_euros"]
     plafond, contrainte = scoring.prix_plafond(r)
-    cible = scoring.prix_cible(r)
+    cible = prix_cf_nul(r)
 
     c_meuble = engine.compute(variante(r, loyer=950.0, entretien=ENTRETIEN + 900.0))
     c_studios = engine.compute(variante(r, loyer2=1110.0, travaux=45000.0))
@@ -279,7 +303,7 @@ def main():
           "qui compte, et il n'est pas dans l'annonce"]])
 
     garde_fous = f"""        <li><strong>Prix plafond : {eur(plafond)}</strong> (contrainte du moteur : {contrainte}), soit {pct((prix - plafond) / prix * 100)} sous le prix affiché. La négociation nécessaire pour atteindre le plancher de 5 % est de {eur(prix - plafond)} : c'est l'ordre de grandeur d'une discussion ordinaire, pas d'une décote hors marché.</li>
-        <li><strong>Prix cible : {eur(cible)}</strong>, soit {pct((prix - cible) / prix * 100)} sous l'affichage — le prix auquel la note franchit 6,5 et le solde se rapproche de zéro.</li>
+        <li><strong>Prix cible : {eur(cible)}</strong>, soit {pct((prix - cible) / prix * 100)} sous l'affichage — le prix auquel le solde mensuel tombe à zéro. C'est lui qui fixe l'offre, pas le prix d'une note.</li>
         <li><strong>Le solde au prix affiché : {euro_signe(d['solde'])} par mois</strong>, avec des loyers estimés au marché. Sans les baux, ce chiffre peut varier de {euro_signe(c_650['fiscal']['net_apres_is'] / 12.0 - prix * ANNUITE)} à {euro_signe(c_900['fiscal']['net_apres_is'] / 12.0 - prix * ANNUITE)}.</li>
         <li><strong>Le prix au mètre carré est bas, et c'est l'argument du dossier :</strong> {eur(prix / gen.SURFACE)}/m² annoncés contre 2 888 €/m² de médiane DVF sur les appartements de 40 à 70 m². Ratio coût sur valeur : {nfr(c['ratio_cout_valeur'], 2)}. On achète 11 % sous la valeur de la somme des lots, ce qui laisse une vraie sortie par revente à la découpe.</li>
         <li><strong>Mais cette décote a une explication à obtenir :</strong> un immeuble de deux T2 en centre ancien qui se vend 28 % sous le prix des appartements de la commune, sans travaux annoncés, cache soit un état, soit une surface surestimée, soit des baux sous-évalués. Les trois se vérifient avec les mêmes pièces.</li>

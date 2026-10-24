@@ -34,6 +34,30 @@ eur, nfr, pct, euro_signe = gen.eur, gen.nfr, gen.pct, gen.euro_signe
 calcule = gen.calcule
 releve_html = gen.releve_html
 
+
+def prix_cf_nul(r, lo=50000.0, hi=None):
+    """Prix d'achat auquel le solde mensuel est nul, au standard du groupe
+    (90 % du prix sur 20 ans à 3,80 %, assurance comprise). C'est le prix cible :
+    la note 6,5 ne sert plus de référence."""
+    hi = hi or r["annonce"]["prix_retenu_euros"] * 1.2
+
+    def solde(p):
+        rr = copy.deepcopy(r)
+        rr["annonce"]["prix_retenu_euros"] = p
+        base = p - 15000.0 if "la-valette" in r["slug"] else p
+        rr["hypotheses"]["frais_acquisition_euros"] = round(base * 0.08)
+        cc = engine.compute(rr)
+        travaux = rr["bien"]["travaux"]["montant_euros"] or 0.0
+        return cc["fiscal"]["net_apres_is"] / 12.0 - (p + travaux) * ANNUITE
+
+    for _ in range(80):
+        mid = (lo + hi) / 2
+        if solde(mid) > 0:
+            lo = mid
+        else:
+            hi = mid
+    return round(lo / 500.0) * 500.0
+
 PRIX = 365000.0
 TRAVAUX = 0.0
 VALEUR = 345000.0
@@ -179,7 +203,7 @@ def main():
     f, rd = c["fiscal"], c["rendements"]
     prix = r["annonce"]["prix_retenu_euros"]
     plafond, contrainte = scoring.prix_plafond(r)
-    cible = scoring.prix_cible(r)
+    cible = prix_cf_nul(r)
 
     c_hc = engine.compute(variante(r, loyer=LOYER_LOT_HC, charges=677.0))
     c_meuble = engine.compute(variante(r, loyer=LOYER_LOT_CC + 55.0, entretien=ENTRETIEN + 900.0))
