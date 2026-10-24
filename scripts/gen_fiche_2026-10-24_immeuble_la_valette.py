@@ -356,11 +356,13 @@ def main():
                              f"dans un immeuble vendu « avec rapport locatif correct ».",
         "releve": releve,
         "garde_fous": garde_fous,
-        "stance": f"On ne fait pas d'offre avant d'avoir lu les deux baux. Si les loyers sont au "
-                  f"niveau du marché (800 € et plus par T2), on propose {eur(plafond)} honoraires "
-                  f"inclus, pas un euro de plus, et le dossier tient. Si les baux sont à 650 €, le "
-                  f"prix qui tient le plancher tombe sous 220 000 € et il n'y a pas de discussion "
-                  f"possible sur un bien affiché 265 000 €.",
+        "stance": f"On peut essayer, et ce dossier le mérite : acheté 11 % sous la valeur de ses "
+                  f"lots, il se sort par la revente à l'unité si l'exploitation ne tient pas. L'annonce "
+                  f"dit elle-même que « toute proposition sérieuse sera étudiée ». On offre donc "
+                  f"{eur(cible)} honoraires inclus — le prix du solde nul, {pct((prix - cible) / prix * 100)} "
+                  f"sous l'affichage — sous condition des deux baux, du mesurage et de la taxe "
+                  f"foncière. Si le vendeur ne bouge pas, on monte à {eur(plafond)} au maximum, jamais "
+                  f"au-delà. Si les baux sont à 650 €, on ne propose rien.",
         "verdict_texte": f"À {eur(prix)} honoraires inclus, le prix de revient ressort à "
                          f"{eur(c['prix_revient_total'])} et le rendement net après IS à "
                          f"{pct(rd['net_sur_revient_pct'])} avec des loyers estimés au marché, sous "

@@ -366,11 +366,13 @@ def main():
                              f"communale.",
         "releve": releve,
         "garde_fous": garde_fous,
-        "stance": f"On ne propose pas {eur(prix)}. Une offre à {eur(plafond)} tient le plancher de "
-                  f"rendement et reste à {euro_signe(solde_plafond)} par mois ; le prix qui annule le "
-                  f"solde est {eur(cible)}, sous la valeur de marché du bien. Entre les deux, il n'y a "
-                  f"pas de prix qui satisfasse les deux critères : le dossier s'écarte, il ne se "
-                  f"négocie pas.",
+        "stance": f"On ne tente pas. Une offre à {eur(cible)} — le prix du solde nul — serait "
+                  f"{pct((prix - cible) / prix * 100)} sous l'affichage et 25 % sous la valeur du bien : "
+                  f"aucun vendeur ne signe, et le dossier n'a pas d'autre qualité qui justifierait d'y "
+                  f"passer du temps. À {eur(plafond)}, il tient le plancher de rendement mais reste à "
+                  f"{euro_signe(solde_plafond)} par mois : ce n'est pas un achat, c'est une recharge "
+                  f"de trésorerie. On garde le bien au registre et on le rouvre si le prix passe sous "
+                  f"{eur(cible + 20000)}, pas avant.",
         "verdict_texte": f"À {eur(prix)}, l'immeuble rend {pct(rd['net_sur_revient_pct'])} net après "
                          f"IS pour un prix de revient de {eur(c['prix_revient_total'])}, sous le "
                          f"plancher de 5 % de la branche, et il laisse {euro_signe(d['solde'])} par "

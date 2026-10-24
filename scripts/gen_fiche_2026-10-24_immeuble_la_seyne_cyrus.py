@@ -343,11 +343,12 @@ def main():
                              f"la plus fréquente dans un centre ancien.",
         "releve": releve,
         "garde_fous": garde_fous,
-        "stance": f"On ne propose pas {eur(prix)}. Le prix qui annule le solde est {eur(cible)}, soit "
-                  f"{pct((prix - cible) / prix * 100)} sous l'affichage et sous la valeur de la rue : "
-                  f"aucun vendeur ne signe à ce niveau. On demande donc les deux baux avant toute "
-                  f"discussion ; si le local est loué 650 € et le logement 1 050 €, on offre "
-                  f"{eur(plafond)}, pas au-delà. Sinon le dossier s'écarte.",
+        "stance": f"On peut essayer, mais pas à l'aveugle : ici le dossier ne vaut le coup que si le "
+                  f"local est loué. On demande le bail commercial, et si le loyer est de 650 € avec un "
+                  f"logement à 1 050 €, on offre {eur(cible)} — le prix du solde nul, "
+                  f"{pct((prix - cible) / prix * 100)} sous l'affichage — en sachant que c'est sous la "
+                  f"valeur de la rue et qu'il faudra un vendeur pressé. Plafond absolu {eur(plafond)}. "
+                  f"Sans bail, ou avec un bail à 450 €, on ne propose rien.",
         "verdict_texte": f"À {eur(prix)}, l'immeuble rend {pct(rd['net_sur_revient_pct'])} net après "
                          f"IS pour {eur(c['prix_revient_total'])} de prix de revient, sous le "
                          f"plancher de 5 %, avec un solde de {euro_signe(d['solde'])} par mois. Le "
