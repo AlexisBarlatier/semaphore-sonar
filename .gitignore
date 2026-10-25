@@ -12,6 +12,9 @@ Thumbs.db
 analyses/*/documents/*
 !analyses/*/documents/.gitkeep
 
+# Registre des affaires à suivre (prix plafonds + négociation = interne)
+documents/suivi/
+
 # Notes perso
 notes.md
 *.log
@@ -19,3 +22,8 @@ notes.md
 # Python
 __pycache__/
 *.pyc
+
+# Veille enchères : document de projet et données internes (stratégie de financement,
+# prix plafonds) — seul le code est versionné, jamais le PROJET.md ni la base.
+documents/veille/encheres/*
+!documents/veille/encheres/*.py
