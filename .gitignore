@@ -27,3 +27,6 @@ __pycache__/
 # prix plafonds) — seul le code est versionné, jamais le PROJET.md ni la base.
 documents/veille/encheres/*
 !documents/veille/encheres/*.py
+
+# Pièces jointes clients : jamais versionnées (RIB, extraits, avis, signatures).
+inbox_pj/
