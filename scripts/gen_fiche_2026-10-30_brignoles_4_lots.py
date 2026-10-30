@@ -256,7 +256,7 @@ HTML = f"""<!DOCTYPE html>
 {ECHELLE_HTML}
       </tbody>
     </table>
-    <p class="attractiveness-intro">Le prix de solde nul est <strong>{eur(CF_NUL)}</strong>, soit {(1-CF_NUL/PRIX)*100:.1f} % sous l'affichage ; le plafond de rendement du moteur ressort à {eur(PLAFOND)} (contrainte : {PLAFOND_MOTIF}). Au prix demandé, le solde est de {signe(SOLDE)}/mois et le bien est payé {nfr(C['ratio_cout_valeur'],2)} fois sa valeur de marché — au-delà du seuil de 1,10, la note est plafonnée.</p>
+    <p class="attractiveness-intro">Le prix de solde nul est <strong>{eur(CF_NUL)}</strong>, soit {nfr((1-CF_NUL/PRIX)*100,1)} % sous l'affichage ; le plafond de rendement du moteur ressort à {eur(PLAFOND)} (contrainte : {PLAFOND_MOTIF}). Au prix demandé, le solde est de {signe(SOLDE)}/mois et le bien est payé {nfr(C['ratio_cout_valeur'],2)} fois sa valeur de marché — au-delà du seuil de 1,10, la note est plafonnée.</p>
   </section>
 
   <section class="financial-projections">
