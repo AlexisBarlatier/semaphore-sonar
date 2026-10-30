@@ -309,6 +309,49 @@ HTML = f"""<!DOCTYPE html>
 </html>
 """
 
+
+AVIS = f"""<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dossier clos — immeuble 4 lots, Brignoles centre</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="report-header">
+  <nav class="report-breadcrumb"><a href="../../analyses/index.html">← Retour aux analyses</a></nav>
+  <h1>Dossier clos — analyse retirée</h1>
+  <p class="report-address">Immeuble de 4 lots — Centre Vieille Ville, Brignoles (83170)</p>
+  <p class="report-date">Fiche du 30 octobre 2026, retirée le 30 octobre 2026 après correction de l'assiette de loyers</p>
+</header>
+<main>
+  <section class="verdict pass">
+    <h2>Pourquoi la fiche n'est plus en ligne</h2>
+    <div class="verdict-decision">
+      <p class="verdict-stance"><strong>À fuir au prix demandé.</strong> Loyers ramenés à la médiane communale — 13,1 €/m², soit {eur(LOYERS)}/mois — le rendement net après IS tombe à {pc(C['rendements']['net_sur_revient_pct'],2)} sur un prix de revient de {eur(REVIENT)}, sous le plancher de 5 % de la branche, et le bien reste payé {nfr(C['ratio_cout_valeur'],2)} fois sa valeur de marché.</p>
+    </div>
+    <div class="verdict-details">
+      <p><strong>Chiffres arrêtés :</strong> prix demandé {eur(PRIX)} ; revient {eur(REVIENT)} (achat, {eur(20000)} de façade, {eur(12000)} de frais) ; net après IS {eur(C['fiscal']['net_apres_is'])}/an ; solde mensuel {signe(SOLDE)} ; prix de solde nul {eur(CF_NUL)} ; plafond de rendement {eur(PLAFOND)}.</p>
+      <p><strong>Le motif du retrait :</strong> l'analyse initiale retenait les 1 270 €/mois annoncés, soit 15,9 €/m², 21 % au-dessus de la médiane. Un immeuble refait mais sans cachet particulier, sans ascenseur annoncé et avec une façade à reprendre ne justifie pas le haut de fourchette. À la médiane, le dossier ne passe plus.</p>
+      <p><strong>Ce qui le rouvrirait :</strong> quatre baux et quittances confirmant 1 270 €/mois, un devis de ravalement sous 12 000 €, et un prix ramené sous {eur(PLAFOND)} — soit une décote de {nfr((1-PLAFOND/PRIX)*100,0)} % que ce vendeur n'a aucune raison d'accepter aujourd'hui.</p>
+    </div>
+    <div class="verdict-meta">
+      <p><strong>Note :</strong> {nfr(NOTE,1)}/10 — à fuir</p>
+      <p><strong>Suivi :</strong> dossier inscrit au registre interne des affaires à suivre, revue à six mois.</p>
+    </div>
+  </section>
+  <footer class="report-signature">
+    <p>Analyse réalisée par</p>
+    <p class="signature-names">Rémy Barlatier — 06 27 84 53 50 — sarl.spbi@gmail.com</p>
+    <p class="signature-names">Alexis Barlatier — 06 61 26 13 83</p>
+  </footer>
+</main>
+</body>
+</html>
+"""
+
 INTERDITS = ("prêt", "emprunt", "crédit", "apport", "mensualité", "levier")
 
 
@@ -319,9 +362,10 @@ def main():
         if re.search(r"\b" + mot, bas):
             sys.exit(f"Mot de financement interdit : {mot}")
     os.makedirs(os.path.dirname(SORTIE), exist_ok=True)
+    page = HTML if NOTE >= 4.0 else AVIS
     with open(SORTIE, "w", encoding="utf-8") as f:
-        f.write(HTML)
-    print(f"écrit {SORTIE} ({len(HTML)} octets)")
+        f.write(page)
+    print(f"écrit {SORTIE} ({len(page)} octets) — {'fiche' if NOTE >= 4.0 else 'avis de retrait'}")
     print(f"note {NOTE} | revient {REVIENT} | solde {SOLDE:.0f} | cf nul {CF_NUL} | plafond {PLAFOND}")
 
 

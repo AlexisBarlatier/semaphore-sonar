@@ -110,37 +110,38 @@ RECORD = {
             {
                 "lot": "T2 de 29 m², 2e étage",
                 "quantite": 1,
-                "loyer_mensuel_euros": 400.0,
+                "loyer_mensuel_euros": 380.0,
                 "occupe": True,
-                "note": "Répartition estimée : l'annonce ne donne que le total de la paire (610 €/mois pour le T2 et le studio de 15 m²).",
+                "note": "Base = médiane communale (13,1 €/m²), appliquée lot par lot. L'annonce donne 400 € en répartition estimée d'une paire à 610 € : non retenu.",
             },
             {
                 "lot": "Studio de 15 m², 2e étage",
                 "quantite": 1,
-                "loyer_mensuel_euros": 210.0,
+                "loyer_mensuel_euros": 197.0,
                 "occupe": True,
-                "note": "Répartition estimée sur le total de 610 €/mois annoncé pour la paire.",
+                "note": "Base = médiane communale. Le haut de fourchette annoncé (210 €) n'est pas justifié par un cachet particulier.",
             },
             {
                 "lot": "Studio de 23 m², RDC",
                 "quantite": 1,
-                "loyer_mensuel_euros": 360.0,
+                "loyer_mensuel_euros": 300.0,
                 "occupe": True,
-                "note": "Total annoncé de 660 €/mois pour les deux studios du RDC ; répartition estimée 360 / 300.",
+                "note": "Base = médiane communale. L'annonce sort cette paire à 18,9 €/m², soit 44 % au-dessus de la médiane : non retenu.",
             },
             {
                 "lot": "Studio de 12 m², RDC",
                 "quantite": 1,
-                "loyer_mensuel_euros": 300.0,
+                "loyer_mensuel_euros": 171.0,
                 "occupe": True,
-                "note": "Répartition estimée. 12 m² reste au-dessus du seuil de décence (9 m² et 20 m³).",
+                "note": "Base = médiane communale. 12 m² reste au-dessus du seuil de décence (9 m² et 20 m³).",
             },
         ],
         "notes": (
-            "1 270 €/mois annoncés, quatre locataires en place, aucune quittance au dossier. "
-            "15,9 €/m² contre une médiane DHUP 2025 de 13,1 €/m² à Brignoles, soit +21 % : "
-            "les deux studios du RDC sortent à 18,9 €/m². C'est la première pièce à exiger — "
-            "à 13,1 €/m², l'assiette tombe à 1 050 €/mois et le dossier change de camp."
+            "Base retenue : 1 048 €/mois, soit la médiane DHUP 2025 de Brignoles (13,1 €/m²) "
+            "appliquée aux 79,98 m². Les 1 270 €/mois annoncés (15,9 €/m², +21 %) ne sont pas "
+            "retenus : l'immeuble est refait, mais sans cachet particulier, sans ascenseur, sans "
+            "stationnement et avec une façade à reprendre — rien qui justifie le haut de fourchette. "
+            "Les 1 270 € restent la variante haute, à confirmer par les quatre baux et les quittances."
         ),
     },
     "hypotheses": {
