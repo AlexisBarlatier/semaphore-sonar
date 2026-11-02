@@ -73,7 +73,7 @@ def main():
            nfr(s["net_pct"], 2), ("%+.0f €" % s["cf"]).replace("+", "+").replace("-", "−"),
            s["ratio"])
         for lab, s in (("3 studios loués <em>(situation actuelle)</em>", s3),
-                       ("<strong>4 studios loués</strong> <em>(le 4e libéré)</em>", s4))
+                       ("4 studios loués <em>(hypothèse, le 4e libéré)</em>", s4))
     )
     lignes_seuil = "\n".join(
         "        <tr><td>%d %% net sur acte</td><td class=\"num\">%s / mois par studio</td>"
@@ -137,7 +137,7 @@ TEMPLATE = """<!DOCTYPE html>
 {lignes_sc}
       </tbody>
     </table>
-    <p class="scenario-subtitle">Mensualité sur 20 ans à 3,80 % : <strong>{mens3}</strong>, assurance comprise. Le dossier passe de {net3} % à <strong>{net4} %</strong> net quand le quatrième studio se libère — et le cash-flow de <strong>{cf3}</strong> à <strong>{cf4}</strong> par mois.</p>
+    <p class="scenario-subtitle">Mensualité sur 20 ans à 3,80 % : <strong>{mens3}</strong>, assurance comprise. Le chiffrage porte sur les trois loyers en place. Si le quatrième studio se libère et se reloue à 450 €, le dossier passerait de {net3} % à {net4} % net et le cash-flow de {cf3} à {cf4} par mois : c'est un potentiel, pas la base du prix.</p>
   </section>
 
   <section class="strategy-exploration">
