@@ -19,7 +19,7 @@ PRIX = 192000.0
 SURF_TOTALE = 100.0
 NB_STUDIOS = 4
 LOYER_STUDIO = 450.0
-TF = 1800.0          # hypothese, a confirmer par l'avis de taxe fonciere
+TF = 2425.0          # confirmee par la fiche agence VI097 le 02/11/2026 (1800 en hypothese auparavant)
 VACANCE = 0.95
 IS = 0.85
 COEF_ANN = 0.006238  # 20 ans a 3,80 %, assurance comprise
@@ -89,7 +89,9 @@ def main():
         seuil5=eur(seuils[0][1]), seuil7=eur(seuils[2][1]),
         brut3=nfr(s3["brut_pct"], 2), brut4=nfr(s4["brut_pct"], 2),
         net3=nfr(s3["net_pct"], 2), net4=nfr(s4["net_pct"], 2),
+        cf3=("%+.0f €" % s3["cf"]).replace("+", "+").replace("-", "−"),
         cf4=("%+.0f €" % s4["cf"]).replace("+", "+").replace("-", "−"),
+        pm2_hab=eur(PRIX / 78.0),
     )
     reste = re.search(r"\{[a-z_]{3,}\}", html)
     if reste:
@@ -117,13 +119,13 @@ TEMPLATE = """<!DOCTYPE html>
     <p class="report-breadcrumb">Analyse — Sémaphore Patrimoine</p>
     <h1>Brignoles — immeuble en monopropriété, quatre studios meublés</h1>
     <p class="report-address">Brignoles (83170) · {surf} annoncés, {nb} studios d'environ 20 m² avec entrée indépendante · DPE D</p>
-    <p class="report-source">Source : SeLoger, agence Elios Group (Cassilde Mattei), mandat exclusif. Prix affiché {prix}, soit {pm2}/m². Loyers constatés : trois studios loués {loyer} HC/mois, un studio occupé par les propriétaires.</p>
+    <p class="report-source">Source : SeLoger (réf. 26JYBGKX9R3E) et fiche agence Elios Group (réf. 1507 / VI097) — <a href="https://www.elios-group.com/fr/vente/immeuble-100-m2-brignoles-83170,VI097">elios-group.com</a>. Mandat exclusif, Cassilde Mattei. Prix affiché {prix}, soit {pm2}/m² sur la surface annoncée et {pm2_hab}/m² habitables. Loyers constatés : trois studios loués {loyer} HC/mois, un studio occupé par les propriétaires.</p>
   </header>
 
   <section class="strategy-exploration">
     <h2>Le bien</h2>
-    <p>Immeuble entier en <strong>monopropriété</strong> — donc pas de syndic, pas de charges de copropriété, pas d'assemblée générale. Quatre studios meublés d'environ 20 m², chacun avec une pièce de vie avec cuisine, une salle d'eau avec WC, et <strong>une entrée indépendante</strong>. DPE D, GES B, l'annonce indique que les DPE individuels sont disponibles sur demande. Trois étages. Honoraires à la charge du vendeur.</p>
-    <p class="projection-note">Les provisions sur charges sont de <strong>100 €/mois par studio</strong>, et couvrent l'eau, l'électricité et la taxe d'enlèvement des ordures ménagères. Elles sont refacturées aux locataires, donc neutres en résultat. Le seul poste restant à la charge du propriétaire est la taxe foncière, non communiquée : elle est prise ici à <strong>{tf}/an</strong>, à confirmer par l'avis d'imposition. La rentabilité brute annoncée de 8,5 % a été recalculée : elle est exacte.</p>
+    <p>Immeuble entier en <strong>monopropriété</strong> — donc pas de syndic, pas de charges de copropriété, pas d'assemblée générale. Quatre studios meublés d'environ 20 m², chacun avec une pièce de vie avec cuisine, une salle d'eau avec WC, et <strong>une entrée indépendante</strong>. Le détail des pièces de la fiche de l'agence donne 78 m² habitables (18 + 20 + 20 + 20) : les 100 m² annoncés incluent les communs, et le prix au m² habitable ressort à <strong>{pm2_hab}</strong>. DPE D, GES B, l'annonce indique que les DPE individuels sont disponibles sur demande. Trois étages. Honoraires à la charge du vendeur.</p>
+    <p class="projection-note">Les provisions sur charges sont de <strong>100 €/mois par studio</strong>, et couvrent l'eau, l'électricité et la taxe d'enlèvement des ordures ménagères. Elles sont refacturées aux locataires, donc neutres en résultat. Le seul poste restant à la charge du propriétaire est la taxe foncière : <strong>{tf}/an</strong>, montant confirmé par la fiche de l'agence (réf. 1507 / VI097) le 2 novembre 2026, à recouper avec l'avis d'imposition. La rentabilité brute annoncée de 8,5 % a été recalculée : elle est exacte.</p>
   </section>
 
   <section class="financial-projections">
@@ -135,7 +137,7 @@ TEMPLATE = """<!DOCTYPE html>
 {lignes_sc}
       </tbody>
     </table>
-    <p class="scenario-subtitle">Mensualité sur 20 ans à 3,80 % : <strong>{mens3}</strong>, assurance comprise. Le dossier passe de 5,57 % à <strong>{net4} %</strong> net quand le quatrième studio se libère — et le cash-flow de −115 € à <strong>{cf4}</strong> par mois.</p>
+    <p class="scenario-subtitle">Mensualité sur 20 ans à 3,80 % : <strong>{mens3}</strong>, assurance comprise. Le dossier passe de {net3} % à <strong>{net4} %</strong> net quand le quatrième studio se libère — et le cash-flow de <strong>{cf3}</strong> à <strong>{cf4}</strong> par mois.</p>
   </section>
 
   <section class="strategy-exploration">
@@ -157,19 +159,19 @@ TEMPLATE = """<!DOCTYPE html>
       <li><strong>Les charges refacturées</strong> — le même montage que sur La Verrerie : les provisions passent au locataire, seules les taxes foncières restent à notre charge.</li>
       <li><strong>Un DPE D</strong> sur l'immeuble entier. Pas d'épée de Damoclès à 2028 comme sur un logement classé F.</li>
       <li><strong>Quatre logements meublés et la réforme fiscale de 2027</strong> — le régime du meublé est en cours de durcissement. À quatre lots, c'est un vrai sujet à chiffrer avant l'engagement.</li>
-      <li><strong>Le studio occupé par les propriétaires</strong> — tout le rendement se joue là. S'il n'est pas libre à la vente, on retombe à 5,57 % net et un cash-flow négatif.</li>
-      <li><strong>La taxe foncière inconnue</strong> — chiffrée à {tf} par hypothèse. C'est la première donnée à exiger.</li>
+      <li><strong>Le studio occupé par les propriétaires</strong> — tout le rendement se joue là. S'il n'est pas libre à la vente, on retombe à {net3} % net et un cash-flow de {cf3} par mois.</li>
+      <li><strong>La taxe foncière : {tf}/an</strong> — confirmée, et elle pèse : 15 % des loyers encaissés, 1,26 % du prix. Elle coûte 44 € de cash-flow par mois par rapport à l'hypothèse initiale de 1 800 €.</li>
     </ul>
   </section>
 
   <section class="strategy-exploration">
     <h2>Les questions posées à l'agence</h2>
-    <p>Le studio des propriétaires sera-t-il libre à la vente · les DPE individuels des quatre logements · le montant de la taxe foncière pour 2025 · le type et les échéances des baux en cours.</p>
-    <p class="strategy-rationale">Ce sont les quatre réponses qui permettront de passer du chiffrage à une proposition. Rien sur le prix, rien sur notre financement : le dossier se travaille sur la faisabilité d'abord.</p>
+    <p>Taxe foncière : <strong>{tf}/an</strong>, obtenue le 2 novembre 2026 sur la fiche de l'agence (réf. 1507 / VI097). Restent à obtenir : le statut du studio occupé par les propriétaires à la date de l'acte, les quatre baux avec leurs dates d'effet, et les DPE individuels des quatre logements.</p>
+    <p class="strategy-rationale">L'agence avait répondu le 8 octobre que le dossier était vendu dans son réseau ; l'annonce est restée en ligne au même prix, ce qui rouvre la discussion. Rien sur le prix, rien sur notre financement tant que ces trois pièces ne sont pas là : le dossier se travaille sur la faisabilité d'abord.</p>
   </section>
 
   <footer class="report-footer">
-    <p>Fiche produite pour Alexis et Rémy Barlatier — Sémaphore Patrimoine, 8 octobre 2026. Tous les chiffres sont recalculés par <code>scripts/gen_fiche_brignoles_4_studios.py</code> ; modifier un prix, un loyer ou une charge régénère la page.</p>
+    <p>Fiche produite pour Alexis et Rémy Barlatier — Sémaphore Patrimoine, 8 octobre 2026 ; mise à jour le 2 novembre 2026 (taxe foncière portée de 1 800 à {tf}/an sur la fiche de l'agence, surface habitable au détail des pièces). Tous les chiffres sont recalculés par <code>scripts/gen_fiche_brignoles_4_studios.py</code> ; modifier un prix, un loyer ou une charge régénère la page.</p>
   </footer>
 
 </main>
