@@ -119,7 +119,7 @@ TEMPLATE = """<!DOCTYPE html>
     <p class="report-breadcrumb">Analyse — Sémaphore Patrimoine</p>
     <h1>Brignoles — immeuble en monopropriété, quatre studios meublés</h1>
     <p class="report-address">Brignoles (83170) · {surf} annoncés, {nb} studios d'environ 20 m² avec entrée indépendante · DPE D</p>
-    <p class="report-source">Source : SeLoger (réf. 26JYBGKX9R3E) et fiche agence Elios Group (réf. 1507 / VI097) — <a href="https://www.elios-group.com/fr/vente/immeuble-100-m2-brignoles-83170,VI097">elios-group.com</a>. Mandat exclusif, Cassilde Mattei. Prix affiché {prix}, soit {pm2}/m² sur la surface annoncée et {pm2_hab}/m² habitables. Loyers constatés : trois studios loués {loyer} HC/mois, un studio occupé par les propriétaires.</p>
+    <p class="report-source">Source : <a href="https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/brignoles-83170/26JYBGKX9R3E">annonce SeLoger</a> (réf. 26JYBGKX9R3E) et <a href="https://www.elios-group.com/fr/vente/immeuble-100-m2-brignoles-83170,VI097">fiche agence Elios Group</a> (réf. 1507 / VI097). Mandat exclusif, Cassilde Mattei. Prix affiché {prix}, soit {pm2}/m² sur la surface annoncée et {pm2_hab}/m² habitables. Loyers constatés : trois studios loués {loyer} HC/mois, un studio occupé par les propriétaires.</p>
   </header>
 
   <section class="strategy-exploration">
