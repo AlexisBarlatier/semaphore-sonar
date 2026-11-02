@@ -122,8 +122,6 @@ TEMPLATE = """<!DOCTYPE html>
     <p class="report-source">Source : <a href="https://www.seloger.com/annonce/achat/provence-alpes-cote-d-azur/var-83/brignoles-83170/26JYBGKX9R3E">annonce SeLoger</a> (réf. 26JYBGKX9R3E) et <a href="https://www.elios-group.com/fr/vente/immeuble-100-m2-brignoles-83170,VI097">fiche agence Elios Group</a> (réf. 1507 / VI097). Mandat exclusif, Cassilde Mattei. Prix affiché {prix}, soit {pm2}/m² sur la surface annoncée et {pm2_hab}/m² habitables. Loyers constatés : trois studios loués {loyer} HC/mois, un studio occupé par les propriétaires.</p>
   </header>
 
-  <p class="projection-note" style="border-left:4px solid #b03a2e;padding-left:14px"><strong>Sous compromis au 2 novembre 2026.</strong> L'agence avait annoncé le 8 octobre une vente dans son réseau ; il s'agissait d'un compromis, confirmé depuis, et l'annonce reste en ligne au même prix. Le dossier est en veille : aucune offre n'est en cours, et il se rouvre si le compromis échoue.</p>
-
   <section class="strategy-exploration">
     <h2>Le bien</h2>
     <p>Immeuble entier en <strong>monopropriété</strong> — donc pas de syndic, pas de charges de copropriété, pas d'assemblée générale. Quatre studios meublés d'environ 20 m², chacun avec une pièce de vie avec cuisine, une salle d'eau avec WC, et <strong>une entrée indépendante</strong>. Le détail des pièces de la fiche de l'agence donne 78 m² habitables (18 + 20 + 20 + 20) : les 100 m² annoncés incluent les communs, et le prix au m² habitable ressort à <strong>{pm2_hab}</strong>. DPE D, GES B, l'annonce indique que les DPE individuels sont disponibles sur demande. Trois étages. Honoraires à la charge du vendeur.</p>
