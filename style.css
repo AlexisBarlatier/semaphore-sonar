@@ -1,0 +1,1010 @@
+/* =============================================================
+   Sémaphore Sonar — Style d'analyse immobilière
+   Style commun à toutes les pages d'analyse.
+   Évolutif : les modifications profitent à tous les rapports.
+   ============================================================= */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg:        #fafaf9;
+  --color-surface:   #ffffff;
+  --color-border:    #e7e5e4;
+  --color-text:      #292524;
+  --color-text-muted:#78716c;
+  --color-accent:    #1e3a5f;
+  --color-accent-light: #e8edf3;
+  --color-green:     #166534;
+  --color-green-bg:  #dcfce7;
+  --color-red:       #991b1b;
+  --color-red-bg:    #fee2e2;
+  --color-amber:     #92400e;
+  --color-amber-bg:  #fef3c7;
+  --color-blue:      #1e40af;
+  --color-blue-bg:   #dbeafe;
+
+  --radius: 6px;
+  --font: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* --- Typographie --- */
+h1 { font-size: 1.8rem; font-weight: 700; color: var(--color-accent); margin-bottom: 0.5rem; }
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-accent-light);
+}
+h3 { font-size: 1.05rem; font-weight: 600; color: var(--color-text); margin-bottom: 0.5rem; }
+
+/* --- Header --- */
+.report-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--color-border);
+}
+.report-breadcrumb {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+.report-breadcrumb a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+.report-breadcrumb a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.report-address {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+.report-date,
+.report-source {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Lien copiable vers l'annonce originale */
+.report-source-link {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  word-break: break-all;
+}
+.report-source-link a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-family: monospace;
+}
+.report-source-link a:hover {
+  text-decoration: underline;
+}
+
+/* Badge type de bien (Résidentiel / Professionnel) */
+.badge-type {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+.badge-residentiel {
+  background: var(--color-blue-bg);
+  color: var(--color-blue);
+}
+.badge-professionnel {
+  background: var(--color-amber-bg);
+  color: var(--color-amber);
+}
+
+
+/* --- Bannière stratégie --- */
+.strategy-banner {
+  background: var(--color-accent-light);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.strategy-banner strong {
+  color: var(--color-accent);
+}
+.strategy-banner .op-type {
+  display: inline-block;
+  background: var(--color-blue-bg);
+  color: var(--color-blue);
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+/* --- Cards de synthèse --- */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+.card-label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+.card-value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--color-text);
+}
+
+/* Couleurs de verdict sur la carte de note */
+/* Support historique (lettres) */
+.card-verdict.note-A { background: var(--color-green-bg); border-color: var(--color-green); }
+.card-verdict.note-A .card-value { color: var(--color-green); }
+.card-verdict.note-B { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-B .card-value { color: var(--color-blue); }
+.card-verdict.note-C { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-C .card-value { color: var(--color-amber); }
+.card-verdict.note-D, .card-verdict.note-E { background: var(--color-red-bg); border-color: var(--color-red); }
+.card-verdict.note-D .card-value,
+.card-verdict.note-E .card-value { color: var(--color-red); }
+
+/* Support numérique (/10) — mappé par seuils */
+.card-verdict.note-10,
+.card-verdict.note-9,
+.card-verdict.note-8 { background: var(--color-green-bg); border-color: var(--color-green); }
+.card-verdict.note-10 .card-value,
+.card-verdict.note-9 .card-value,
+.card-verdict.note-8 .card-value { color: var(--color-green); }
+
+.card-verdict.note-7 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7 .card-value { color: var(--color-blue); }
+
+.card-verdict.note-6,
+.card-verdict.note-5 { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-6 .card-value,
+.card-verdict.note-5 .card-value { color: var(--color-amber); }
+
+.card-verdict.note-4 { background: var(--color-red-bg); border-color: var(--color-red); }
+.card-verdict.note-4 .card-value { color: var(--color-red); }
+
+.card-verdict.note-3,
+.card-verdict.note-2,
+.card-verdict.note-1 { background: var(--color-red-bg); border-color: var(--color-red); }
+.card-verdict.note-3 .card-value,
+.card-verdict.note-2 .card-value,
+.card-verdict.note-1 .card-value { color: var(--color-red); }
+
+/* Cas particuliers — notes décimales sans le point */
+.card-verdict.note-54 { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-54 .card-value { color: var(--color-amber); }
+.card-verdict.note-6-7 { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-6-7 .card-value { color: var(--color-amber); }
+.card-verdict.note-6-9 { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-6-9 .card-value { color: var(--color-amber); }
+.card-verdict.note-6-4 { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-6-4 .card-value { color: var(--color-amber); }
+
+.card-verdict.note-6-0 { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-6-0 .card-value { color: var(--color-amber); }
+.card-verdict.note-6-1 { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-6-1 .card-value { color: var(--color-amber); }
+.card-verdict.note-4-7 { background: var(--color-red-bg); border-color: var(--color-red); }
+.card-verdict.note-4-7 .card-value { color: var(--color-red); }
+.card-verdict.note-7-1 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7-1 .card-value { color: var(--color-blue); }
+.card-verdict.note-7-2 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7-2 .card-value { color: var(--color-blue); }
+.card-verdict.note-7-3 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7-3 .card-value { color: var(--color-blue); }
+.card-verdict.note-7-4 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7-4 .card-value { color: var(--color-blue); }
+.card-verdict.note-7-5 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7-5 .card-value { color: var(--color-blue); }
+.card-verdict.note-7-6 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7-6 .card-value { color: var(--color-blue); }
+.card-verdict.note-7-7 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7-7 .card-value { color: var(--color-blue); }
+.card-verdict.note-7-8 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7-8 .card-value { color: var(--color-blue); }
+.card-verdict.note-7-9 { background: var(--color-blue-bg); border-color: var(--color-blue); }
+.card-verdict.note-7-9 .card-value { color: var(--color-blue); }
+.card-verdict.note-8-1 { background: var(--color-green-bg); border-color: var(--color-green); }
+.card-verdict.note-8-1 .card-value { color: var(--color-green); }
+.card-verdict.note-9-2 { background: var(--color-green-bg); border-color: var(--color-green); }
+.card-verdict.note-9-2 .card-value { color: var(--color-green); }
+
+/* --- Carte --- */
+.map-section { margin-bottom: 2rem; }
+#map-container {
+  width: 100%;
+  height: 340px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: #f1f5f9;
+}
+.map-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* --- Fiche d'identité --- */
+.identity-sheet { margin-bottom: 2rem; overflow-x: auto; }
+.identity-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.identity-table tr {
+  border-bottom: 1px solid var(--color-border);
+}
+.identity-table td {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+}
+.identity-table td:first-child {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  width: 35%;
+}
+.identity-table td:last-child {
+  color: var(--color-text);
+}
+
+/* --- Attractivité du quartier --- */
+.attractiveness { margin-bottom: 2rem; }
+.attractiveness-intro {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.attractiveness-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.attr-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem 1rem 0.75rem;
+}
+.attr-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+.attr-bar-track {
+  width: 100%;
+  height: 8px;
+  background: #e7e5e4;
+  border-radius: 4px;
+  margin-bottom: 0.35rem;
+  overflow: hidden;
+}
+.attr-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+.attr-bar-fill.score-1, .attr-bar-fill.score-2, .attr-bar-fill.score-3 { background: var(--color-red); }
+.attr-bar-fill.score-4, .attr-bar-fill.score-5, .attr-bar-fill.score-6 { background: var(--color-amber); }
+.attr-bar-fill.score-7, .attr-bar-fill.score-8 { background: var(--color-blue); }
+.attr-bar-fill.score-9, .attr-bar-fill.score-10 { background: var(--color-green); }
+
+.attr-score {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.attr-score strong {
+  color: var(--color-text);
+}
+
+.attractiveness-summary {
+  background: var(--color-accent-light);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+.attractiveness-summary strong {
+  color: var(--color-accent);
+}
+
+/* --- Stratégies d'exploitation --- */
+.strategy-exploration { margin-bottom: 2rem; }
+.strategy-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.strategy-table thead th {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  font-weight: 600;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.strategy-table tbody td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+.strategy-table .strategy-selected {
+  background: #f0f7ee;
+}
+.strategy-table .strategy-selected td:first-child {
+  font-weight: 700;
+}
+.strategy-table .strategy-selected td:first-child::before {
+  content: "✓ ";
+  color: var(--color-green);
+}
+
+.strategy-name {
+  font-weight: 500;
+  color: var(--color-text);
+}
+.strategy-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  display: block;
+  margin-top: 0.15rem;
+}
+
+/* Badges faisabilité / risque */
+.badge-faisabilite,
+.badge-risque,
+.ratio-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.faisabilite-haute  { background: var(--color-green-bg); color: var(--color-green); }
+.faisabilite-moyenne { background: var(--color-amber-bg); color: var(--color-amber); }
+.faisabilite-faible  { background: var(--color-red-bg);   color: var(--color-red); }
+.risque-faible  { background: var(--color-green-bg); color: var(--color-green); }
+.risque-modere   { background: var(--color-amber-bg); color: var(--color-amber); }
+.risque-eleve    { background: var(--color-red-bg);   color: var(--color-red); }
+.ratio-bon     { background: var(--color-green-bg); color: var(--color-green); }
+.ratio-ok      { background: var(--color-blue-bg);  color: var(--color-blue); }
+.ratio-mauvais { background: var(--color-red-bg);   color: var(--color-red); }
+
+.strategy-rationale {
+  background: var(--color-accent-light);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.strategy-rationale strong {
+  color: var(--color-accent);
+}
+
+/* Barre d'adéquation quartier/stratégie */
+.adeq-cell {
+  white-space: nowrap;
+}
+.adeq-bar-track {
+  display: inline-block;
+  width: 50px;
+  height: 6px;
+  background: #e7e5e4;
+  border-radius: 3px;
+  margin-right: 0.4rem;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.adeq-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+.adeq-bar-fill.adeq-high  { background: var(--color-green); }
+.adeq-bar-fill.adeq-mid   { background: var(--color-amber); }
+.adeq-bar-fill.adeq-low   { background: var(--color-red); }
+.adeq-score {
+  font-size: 0.85rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .strategy-exploration {
+    overflow-x: auto;
+  }
+  .strategy-table {
+    min-width: 950px;
+  }
+}
+
+/* --- Projections --- */
+.financial-projections { margin-bottom: 2rem; }
+.projections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.projection-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+.scenario-subtitle {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.projection-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.projection-table tr {
+  border-bottom: 1px solid var(--color-border);
+}
+.projection-table td {
+  padding: 0.4rem 0.5rem;
+}
+.projection-table td:first-child {
+  color: var(--color-text-muted);
+  width: 50%;
+}
+.projection-table td:last-child {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+.projection-table tr.highlight {
+  background: var(--color-green-bg);
+  font-weight: 600;
+}
+.projection-table tr:last-child td {
+  font-weight: 700;
+  color: var(--color-accent);
+  border-top: 2px solid var(--color-accent);
+}
+
+/* Bandes de couleur par scénario */
+.scenario-base  { border-left: 4px solid var(--color-blue); }
+.scenario-best  { border-left: 4px solid var(--color-green); }
+.scenario-worst { border-left: 4px solid var(--color-red); }
+
+/* Tableau comparatif */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.comparison-table thead th {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  font-weight: 600;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+}
+.comparison-table thead th:not(:first-child) {
+  text-align: right;
+}
+.comparison-table tbody td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.comparison-table tbody td:not(:first-child) {
+  text-align: right;
+  font-family: var(--font-mono);
+}
+
+/* --- Projection summary spacing --- */
+.projection-summary-secondary {
+  margin-top: 2rem;
+}
+
+/* --- Note de valorisation --- */
+.valorisation-note {
+  margin-top: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* --- Valorisation institutionnelle (pro uniquement) --- */
+.institutional-valuation {
+  margin-bottom: 2rem;
+}
+.institutional-valuation h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.institutional-valuation .valuation-intro {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.cap-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.cap-table thead th {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  font-weight: 600;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+}
+.cap-table tbody td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+.cap-table tbody td:not(:first-child) {
+  text-align: right;
+  font-family: var(--font-mono);
+}
+.cap-table .cap-selected {
+  background: var(--color-green-bg);
+  font-weight: 600;
+}
+.cap-positive { color: var(--color-green); }
+.cap-negative { color: var(--color-red); }
+
+/* --- Matrice de risques --- */
+.risk-matrix { margin-bottom: 2rem; }
+.risk-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.risk-table thead th {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  font-weight: 600;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+}
+.risk-table tbody td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+.risk-table tbody td:last-child {
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Sévérité */
+.severity {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.severity-1, .severity-2 { background: var(--color-green-bg); color: var(--color-green); }
+.severity-3         { background: var(--color-amber-bg); color: var(--color-amber); }
+.severity-4, .severity-5 { background: var(--color-red-bg); color: var(--color-red); }
+
+/* --- Verdict --- */
+.verdict {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.verdict-stance {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.verdict.buy    { border-left: 5px solid var(--color-green); }
+.verdict.buy    .verdict-stance { color: var(--color-green); }
+.verdict.nego   { border-left: 5px solid var(--color-amber); }
+.verdict.nego   .verdict-stance { color: var(--color-amber); }
+.verdict.pass   { border-left: 5px solid var(--color-red); }
+.verdict.pass   .verdict-stance { color: var(--color-red); }
+
+.verdict-details {
+  margin-bottom: 1rem;
+}
+.verdict-details p {
+  margin-bottom: 0.5rem;
+}
+.verdict-details ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.verdict-details li {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+.verdict-meta {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+.verdict-meta p {
+  margin-bottom: 0.3rem;
+}
+
+/* --- Signature --- */
+.report-signature {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+.report-signature .signature-names {
+  font-weight: 500;
+  color: var(--color-text);
+  margin-top: 0.25rem;
+}
+
+/* --- Utilitaires --- */
+.text-positive { color: var(--color-green); }
+.text-negative { color: var(--color-red); }
+.text-neutral  { color: var(--color-amber); }
+
+/* --- Print --- */
+@media print {
+  body {
+    background: white;
+    max-width: none;
+    padding: 1cm;
+  }
+  .projections-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =============================================================
+   Responsive — Mobile (max-width: 768px)
+   ============================================================= */
+@media (max-width: 768px) {
+  html { font-size: 14px; }
+
+  body {
+    padding: 1.25rem 1rem 3rem;
+  }
+
+  .report-header h1 { font-size: 1.4rem; }
+  .report-address { font-size: 1rem; }
+
+  .summary-cards {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.5rem;
+  }
+  .card {
+    padding: 0.8rem 0.5rem;
+  }
+  .card-value {
+    font-size: 1.1rem;
+  }
+
+  .attractiveness-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
+  .attr-card {
+    padding: 0.75rem;
+  }
+
+  .projections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projection-summary {
+    overflow-x: auto;
+  }
+
+  .risk-matrix {
+    overflow-x: auto;
+  }
+  .risk-table {
+    min-width: 600px;
+  }
+
+  .verdict {
+    padding: 1rem;
+  }
+
+  .listing-hero {
+    padding: 1.5rem 0 1rem;
+  }
+  .listing-hero h1 {
+    font-size: 1.5rem;
+  }
+  .listing-table {
+    min-width: 600px;
+  }
+  main {
+    overflow-x: auto;
+  }
+}
+
+/* =============================================================
+   Page d'accueil — Liste des analyses
+   ============================================================= */
+
+.listing-hero {
+  text-align: center;
+  padding: 2.5rem 0 1.5rem;
+  border-bottom: 2px solid var(--color-accent-light);
+  margin-bottom: 2rem;
+}
+.listing-hero h1 {
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+.listing-hero .hero-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+.listing-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+.listing-stats strong {
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+.listing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.listing-table thead th {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.7rem 0.75rem;
+  text-align: left;
+}
+.listing-table thead th:last-child {
+  text-align: center;
+}
+.listing-table tbody tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.15s;
+}
+.listing-table tbody tr:hover {
+  background: #f8f7f6;
+}
+.listing-table tbody td {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+.listing-table tbody a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.listing-table tbody a:hover {
+  text-decoration: underline;
+}
+
+/* Icône lien annonce originale */
+.listing-src-link {
+  font-size: 0.85rem;
+  text-decoration: none;
+  opacity: 0.6;
+  margin-left: 0.3rem;
+}
+.listing-src-link:hover {
+  opacity: 1;
+}
+
+/* Badge de note /10 dans la liste */
+.listing-badge {
+  display: inline-block;
+  min-width: 36px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  padding: 0 4px;
+}
+.listing-badge.note-high { background: var(--color-green-bg); color: var(--color-green); }
+.listing-badge.note-mid  { background: var(--color-amber-bg); color: var(--color-amber); }
+.listing-badge.note-low  { background: var(--color-red-bg);   color: var(--color-red); }
+
+/* Badge de verdict */
+.listing-verdict {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.listing-verdict.v-acheter    { background: var(--color-green-bg); color: var(--color-green); }
+.listing-verdict.v-negocier   { background: var(--color-amber-bg); color: var(--color-amber); }
+.listing-verdict.v-fuir       { background: var(--color-red-bg);   color: var(--color-red); }
+
+.listing-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-muted);
+}
+.listing-empty p {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+.listing-empty .empty-hint {
+  font-size: 0.85rem;
+}
+
+/* --- Cartes listing (mobile) --- */
+.listing-cards {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .listing-table { display: none; }
+  .listing-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .listing-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+  .listing-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .listing-card-date {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+  .listing-card-title {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+  }
+  .listing-card-title:hover {
+    text-decoration: underline;
+  }
+  .listing-src-link {
+    font-size: 0.85rem;
+    text-decoration: none;
+    opacity: 0.6;
+    margin-left: 0.3rem;
+  }
+  .listing-src-link:hover {
+    opacity: 1;
+  }
+  .listing-card-meta {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-text);
+    margin-bottom: 0.6rem;
+    font-family: var(--font-mono);
+  }
+  .listing-card-meta .meta-sep {
+    color: var(--color-border);
+  }
+  .listing-card-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.card-verdict.note-5-9 { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-5-9 .card-value { color: var(--color-amber); }
+
+.card-verdict.note-5-6 { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-5-6 .card-value { color: var(--color-amber); }
+
+.card-verdict.note-5-8 { background: var(--color-amber-bg); border-color: var(--color-amber); }
+.card-verdict.note-5-8 .card-value { color: var(--color-amber); }
+
+.card-verdict.note-3-9 { background: var(--color-red-bg); border-color: var(--color-red); }
+.card-verdict.note-3-9 .card-value { color: var(--color-red); }
